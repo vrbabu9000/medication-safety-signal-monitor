@@ -1,0 +1,306 @@
+<title>Trials Evidence Atlas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column; each pipeline stage is a numbered block (real order) with 4 fixed parts:
+   what it is · what it looks like (real rows) · what's messy (measured) · decision. Clinical paper + teal ink. */
+:root{
+  --bg:#f5f7f6; --surface:#ffffff; --ink:#15201e; --muted:#5a6966; --line:#d9e1df;
+  --accent:#0d6b66; --accent-soft:#e1efed;
+  --warn:#9a5b00; --warn-soft:#fbf0dc; --bad:#a3262c; --bad-soft:#f8e3e3; --good:#2c6e2f; --good-soft:#e3f1e2;
+  --code-bg:#eef2f1;
+  --f-display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1514; --surface:#162020; --ink:#e4ecea; --muted:#9fb0ac; --line:#2a3836;
+  --accent:#5cc2b9; --accent-soft:#163633;
+  --warn:#f0b65a; --warn-soft:#33270f; --bad:#f08a8f; --bad-soft:#3a1a1c; --good:#8fd18f; --good-soft:#18301a;
+  --code-bg:#111a19; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0f1514; --surface:#162020; --ink:#e4ecea; --muted:#9fb0ac; --line:#2a3836;
+  --accent:#5cc2b9; --accent-soft:#163633;
+  --warn:#f0b65a; --warn-soft:#33270f; --bad:#f08a8f; --bad-soft:#3a1a1c; --good:#8fd18f; --good-soft:#18301a;
+  --code-bg:#111a19; color-scheme:dark }
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding-block:40px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:56px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(2rem,4.5vw,2.8rem)}
+h2{font-size:1.65rem}
+h3{font-size:1.1rem;font-family:var(--f-body);font-weight:700}
+p{margin:0;max-width:68ch}
+.lede{font-size:1.1rem;color:var(--muted);max-width:66ch}
+.eyebrow{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+header{display:grid;gap:14px}
+.meta{font-size:.85rem;color:var(--muted)}
+section{display:grid;gap:18px}
+.stack{display:grid;gap:12px}
+code,.mono{font-family:var(--f-mono);font-size:.86em}
+code{background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{font-family:var(--f-mono);font-size:.78rem;line-height:1.5;background:var(--code-bg);border:1px solid var(--line);border-radius:6px;padding:12px 14px;margin:0;overflow-x:auto;white-space:pre}
+.scroll{overflow-x:auto;min-width:0}
+table{border-collapse:collapse;width:100%;font-size:.88rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+td.n,th.n{text-align:right}
+/* stage block */
+.stage{display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px}
+.num{font-family:var(--f-display);font-size:2.4rem;font-weight:700;color:var(--accent);line-height:1}
+.stage-body{display:grid;gap:18px;min-width:0}
+.part{display:grid;gap:8px;min-width:0}
+.part > .label{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mess{background:var(--warn-soft);border-left:3px solid var(--warn);padding:12px 14px;border-radius:0 6px 6px 0;display:grid;gap:8px}
+.mess .label{color:var(--warn)}
+.decide{background:var(--accent-soft);border-left:3px solid var(--accent);padding:12px 14px;border-radius:0 6px 6px 0;display:grid;gap:6px}
+.decide .label{color:var(--accent)}
+.mess ul,.decide ul,.plain ul{margin:0;padding-left:20px;display:grid;gap:4px}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:.72rem;padding:1px 7px;border-radius:999px;white-space:nowrap}
+.p-good{background:var(--good-soft);color:var(--good)} .p-bad{background:var(--bad-soft);color:var(--bad)}
+.p-warn{background:var(--warn-soft);color:var(--warn)} .p-acc{background:var(--accent-soft);color:var(--accent)}
+.strike{text-decoration:line-through;color:var(--muted)}
+/* funnel */
+.funnel{display:grid;gap:6px}
+.frow{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr) 7.5rem;gap:12px;align-items:center;font-size:.86rem}
+.bar{height:14px;background:var(--accent);border-radius:2px;min-width:2px}
+.frow .v{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:14px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;display:grid;gap:8px;min-width:0}
+.box h3{font-size:.95rem}
+.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem}
+.toc a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+.toc a:hover,.toc a:focus-visible{border-bottom-color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+hr{border:0;border-top:1px solid var(--line);margin:0}
+.pushback{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:grid;gap:10px}
+@media (max-width:640px){
+  .stage{grid-template-columns:1fr;gap:6px}
+  .num{font-size:1.8rem}
+  .frow{grid-template-columns:minmax(0,1fr) 6.5rem}
+  .frow .bar-wrap{grid-column:1 / -1;order:3}
+}
+</style>
+
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Medication Safety Signal Monitor · Data atlas · ClinicalTrials.gov · 2026-10-20</div>
+  <h1>Do clinical trials back up the FAERS signals?</h1>
+  <p class="lede">A 2-hour keep/park test. We pulled every ClinicalTrials.gov study with posted results for our 13 drugs, sorted out the ones that are not really about our drug, and looked for the top FAERS signals in their side-effect tables. Every number was measured on 2026-10-20 by <code>prototypes/explore/ctgov_gate.py</code>.</p>
+  <p class="meta"><b>Verdict:</b> <span class="pill p-good">KEEP-NARROW</span> GLP-1 trials as a one-time snapshot (about 2 h) that adds "seen in trials" evidence to a signal. <span class="pill p-bad">PARK</span> opioid trials. Still first on the cut list (D031).</p>
+  <p class="meta">Daily FAERS (AEMS) check: see the companion page <a href="aems-daily.html">aems-daily.html</a> (<a href="https://claude.ai/artifact/QNBnDFQRxCZs98PkuRah5x">online</a>).</p>
+  <nav class="toc" aria-label="Parts">
+    <a href="#overview">Overview</a><a href="#p1">1 Get it</a><a href="#p2">2 One record</a><a href="#p3">3 Messy</a><a href="#p4">4 Joins + signal test</a><a href="#p5">5 How often it changes</a><a href="#p6">6 Decision</a><a href="#p7">7 What moves forward</a>
+  </nav>
+</header>
+
+<section id="overview">
+  <div class="eyebrow">Overview</div>
+  <h2>From 2,170 search hits to 505 usable trials</h2>
+  <p>Only about 1 in 4 search hits is a trial that tests our drug, ties side effects to it, and has a comparison group.</p>
+  <div class="funnel" role="list">
+    <div class="frow" role="listitem"><span>Studies with posted results (search hits)</span><span class="bar-wrap"><span class="bar" style="display:block;width:100%"></span></span><span class="v">2,170</span></div>
+    <div class="frow" role="listitem"><span>…that actually name our drug in an arm</span><span class="bar-wrap"><span class="bar" style="display:block;width:74.4%"></span></span><span class="v">1,615</span></div>
+    <div class="frow" role="listitem"><span>…not a bioequivalence / PK study</span><span class="bar-wrap"><span class="bar" style="display:block;width:68.8%"></span></span><span class="v">1,494</span></div>
+    <div class="frow" role="listitem"><span>…drug not given to every arm</span><span class="bar-wrap"><span class="bar" style="display:block;width:53.5%"></span></span><span class="v">1,162</span></div>
+    <div class="frow" role="listitem"><span>…drug is the one being tested</span><span class="bar-wrap"><span class="bar" style="display:block;width:34.7%"></span></span><span class="v">754</span></div>
+    <div class="frow" role="listitem"><span>…side effects tied to the drug arm</span><span class="bar-wrap"><span class="bar" style="display:block;width:31.7%"></span></span><span class="v">687</span></div>
+    <div class="frow" role="listitem"><span>…and a control arm to compare against</span><span class="bar-wrap"><span class="bar" style="display:block;width:23.3%"></span></span><span class="v">505</span></div>
+  </div>
+  <p class="meta">GLP-1s keep far more of their hits than opioids: 301 of 489 GLP-1 studies (62%) are about the drug's safety, against 386 of 1,681 opioid studies (23%).</p>
+</section>
+
+<hr>
+
+<section id="p1" class="stage">
+  <div class="num">1</div>
+  <div class="stage-body">
+    <h2>Get it</h2>
+    <div class="part"><div class="label">What it is</div>
+      <p>ClinicalTrials.gov is the US registry of clinical trials. When a sponsor posts results, the record includes an adverse-event table: side effects per arm (drug vs placebo), with how many people were at risk. FAERS has no such denominator.</p>
+    </div>
+    <div class="part"><div class="label">How we pulled it</div>
+<pre>GET https://clinicaltrials.gov/api/v2/studies
+    ?query.intr=semaglutide          ← intervention search (expands synonyms, see part 3)
+    &amp;aggFilters=results:with         ← only studies with posted results
+    &amp;fields=protocolSection.identificationModule,…,resultsSection.adverseEventsModule
+    &amp;pageSize=200 &amp;pageToken=…       ← page until no token</pre>
+      <p>Public, no key, JSON. All 13 drugs: <b>13.1 seconds</b>, <b>33 MB</b> raw, 61,611 side-effect rows.</p>
+    </div>
+    <div class="part"><div class="label">Per drug (measured)</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Drug</th><th class="n">With results</th><th class="n">About our drug's safety</th><th class="n">Share</th><th class="n">Side-effect rows</th></tr></thead>
+        <tbody>
+          <tr><td>morphine</td><td class="n">543</td><td class="n">62</td><td class="n">11%</td><td class="n">10,587</td></tr>
+          <tr><td>fentanyl</td><td class="n">299</td><td class="n">73</td><td class="n">24%</td><td class="n">3,026</td></tr>
+          <tr><td>oxycodone</td><td class="n">224</td><td class="n">37</td><td class="n">17%</td><td class="n">3,389</td></tr>
+          <tr><td>buprenorphine</td><td class="n">223</td><td class="n">97</td><td class="n">43%</td><td class="n">4,091</td></tr>
+          <tr><td>methadone</td><td class="n">140</td><td class="n">36</td><td class="n">26%</td><td class="n">1,230</td></tr>
+          <tr><td>hydromorphone</td><td class="n">113</td><td class="n">39</td><td class="n">35%</td><td class="n">1,161</td></tr>
+          <tr><td>hydrocodone</td><td class="n">72</td><td class="n">19</td><td class="n">26%</td><td class="n">697</td></tr>
+          <tr><td>tramadol</td><td class="n">67</td><td class="n">23</td><td class="n">34%</td><td class="n">1,367</td></tr>
+          <tr><td>liraglutide</td><td class="n">144</td><td class="n">77</td><td class="n">53%</td><td class="n">7,183</td></tr>
+          <tr><td>exenatide</td><td class="n">128</td><td class="n">86</td><td class="n">67%</td><td class="n">3,976</td></tr>
+          <tr><td><b>semaglutide</b></td><td class="n">109</td><td class="n">84</td><td class="n">77%</td><td class="n">12,150</td></tr>
+          <tr><td>dulaglutide</td><td class="n">61</td><td class="n">22</td><td class="n">36%</td><td class="n">7,545</td></tr>
+          <tr><td>tirzepatide</td><td class="n">47</td><td class="n">32</td><td class="n">68%</td><td class="n">5,209</td></tr>
+        </tbody>
+      </table></div>
+      <p class="meta">"About our drug's safety" = our drug is in a tested arm, it is not a PK/bioequivalence study, it is not given to every arm, and at least one side-effect group can be tied to the drug.</p>
+    </div>
+    <div class="decide"><div class="label">Decision to propose</div>
+      <p>Pull is cheap and stable (official v2 API, documented). Cost is not the problem. Relevance is.</p>
+    </div>
+  </div>
+</section>
+
+<section id="p2" class="stage">
+  <div class="num">2</div>
+  <div class="stage-body">
+    <h2>One record</h2>
+    <div class="part"><div class="label">STEP 1 (NCT03548935): semaglutide 2.4 mg vs placebo, 75 weeks</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Arm (eventGroup)</th><th class="n">At risk</th><th class="n">Any serious AE</th><th class="n">Optic ischaemic neuropathy</th></tr></thead>
+        <tbody>
+          <tr><td>EG000 · "Sema 2.4 mg"</td><td class="n">1,306</td><td class="n">128</td><td class="n"><b>2</b></td></tr>
+          <tr><td>EG001 · "Placebo"</td><td class="n">655</td><td class="n">42</td><td class="n">0</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="part"><div class="label">The raw side-effect row</div>
+<pre>resultsSection.adverseEventsModule.seriousEvents[] →
+{ "term": "Optic ischaemic neuropathy",      ← same MedDRA term FAERS uses (394 reports, PRR 112)
+  "organSystem": "Eye disorders",
+  "sourceVocabulary": "MedDRA 22",
+  "assessmentType": "SYSTEMATIC_ASSESSMENT",
+  "stats": [ {"groupId":"EG000","numAffected":2,"numAtRisk":1306},
+             {"groupId":"EG001","numAffected":0,"numAtRisk":655} ] }
+frequencyThreshold: "5"   timeFrame: "week 0 to week 75"</pre>
+      <p>The arm title says "Sema 2.4 mg", not "semaglutide". The drug name only appears in the group description. The placebo arm's intervention is called "Placebo (semaglutide)".</p>
+    </div>
+  </div>
+</section>
+
+<section id="p3" class="stage">
+  <div class="num">3</div>
+  <div class="stage-body">
+    <h2>What's messy</h2>
+    <div class="mess"><div class="label">What's messy (measured)</div>
+      <ul>
+        <li><b>The search returns other drugs.</b> 288 of 543 morphine hits (53%) never name morphine. The search expands to hydromorphone (69 studies), oxymorphone (14) and others. One hit was a multiple sclerosis trial; our guess is that "MS" was read as "morphine sulfate" (unverified).</li>
+        <li><b>Placebo arms carry the drug name.</b> "Placebo (semaglutide)". Our first run took these as drug arms and put 43 semaglutide trials in "drug in every arm". After the fix: 8. A naïve name match hides most placebo-controlled trials.</li>
+        <li><b>Our drug is often background.</b> 332 studies give the drug to every arm (for example, morphine as rescue pain relief in a ketamine trial). Another 121 are bioequivalence / PK / abuse-liability studies. 408 use our drug only as the comparator for a new drug.</li>
+        <li><b>Arms are named loosely.</b> "Sema 2.4 mg", "Group A", "1". In 108 drug-tested studies, no side-effect group could be tied to our drug by name.</li>
+        <li><b>Vocabulary is free text.</b> 201 different spellings of <code>sourceVocabulary</code>. Rows: 50,627 MedDRA (versions 2.0 to 29.0), 7,851 blank, 2,095 CTCAE, 202 COSTART, 396 odd (for example "NAUSEA" or "PLACEBO" typed into the vocabulary field).</li>
+        <li><b>Rare events can be hidden.</b> 851 studies only list non-serious events seen in at least 5% of an arm. Serious events are always listed, which is why NAION shows up.</li>
+        <li><b>Counts are tiny.</b> NAION appears 1 to 2 times per trial. No single trial can show a difference on its own.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="p4" class="stage">
+  <div class="num">4</div>
+  <div class="stage-body">
+    <h2>Joins, and the signal test</h2>
+    <div class="part"><div class="label">How it would join</div>
+      <div class="scroll"><table>
+        <thead><tr><th>From</th><th>To</th><th>How</th><th>Works?</th></tr></thead>
+        <tbody>
+          <tr><td>Trial arm (text)</td><td>Ingredient (RxCUI)</td><td>Name + brand list, strip "placebo (drug)", then RxNorm</td><td><span class="pill p-warn">needs rules</span></td></tr>
+          <tr><td>Trial side-effect term</td><td>FAERS reaction (PT)</td><td>Exact string match on the MedDRA preferred term</td><td><span class="pill p-good">yes</span> both GLP-1 signals matched exactly</td></tr>
+          <tr><td>Trial</td><td>Source link</td><td><code>clinicaltrials.gov/study/NCT…</code></td><td><span class="pill p-good">yes</span> every flag traces back</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="part"><div class="label">Signal test: does any trial list the top FAERS signals?</div>
+      <div class="scroll"><table>
+        <thead><tr><th>FAERS signal</th><th class="n">Trials naming the term</th><th class="n">…that test our drug, case in drug arm</th><th class="n">Useful: more on drug than control</th></tr></thead>
+        <tbody>
+          <tr><td><b>semaglutide · NAION</b> (Optic ischaemic neuropathy)</td><td class="n">7</td><td class="n">6</td><td class="n"><b>5</b></td></tr>
+          <tr><td><b>semaglutide · Impaired gastric emptying</b></td><td class="n">9</td><td class="n">8</td><td class="n"><b>8</b></td></tr>
+          <tr><td>oxycodone · Pain</td><td class="n">16</td><td class="n">2</td><td class="n">0</td></tr>
+          <tr><td>oxycodone · Rash</td><td class="n">14</td><td class="n">2</td><td class="n">1</td></tr>
+          <tr><td>oxycodone · Hypersensitivity (+ "Drug hypersensitivity")</td><td class="n">3</td><td class="n">2</td><td class="n">1</td></tr>
+          <tr><td>oxycodone · Joint swelling</td><td class="n">5</td><td class="n">0</td><td class="n">0</td></tr>
+          <tr><td>oxycodone · Hypertension (+ "Blood pressure increased")</td><td class="n">15</td><td class="n">4</td><td class="n">1</td></tr>
+        </tbody>
+      </table></div>
+      <p class="meta">Oxycodone signals = the 5 most-reported clinical terms that pass the Evans rule after dedup (<code>stage5_prr_oxycodone.csv</code>). Counts are unique trials.</p>
+    </div>
+    <div class="compare">
+      <div class="box">
+        <h3>Semaglutide · NAION, controlled trials</h3>
+        <p class="mono">8 / 13,836 on semaglutide<br>1 / 12,170 on control</p>
+        <p class="meta">5 trials incl. SUSTAIN-6, STEP 1, SELECT. Crude sum across different doses and durations, not a meta-analysis.</p>
+      </div>
+      <div class="box">
+        <h3>Semaglutide · Impaired gastric emptying</h3>
+        <p class="mono">14 / 20,161 on semaglutide<br>1 / 19,606 on control</p>
+        <p class="meta">9 trials incl. SUSTAIN-6, SELECT, SOUL. In PIONEER 6 the single case was on placebo. Same caveat.</p>
+      </div>
+      <div class="box">
+        <h3>Other GLP-1s (class check)</h3>
+        <p class="meta">Useful trials. NAION: tirzepatide 1, dulaglutide 1, liraglutide 0, exenatide 0. Gastric emptying: liraglutide 3, dulaglutide 3, exenatide 2, tirzepatide 1.</p>
+      </div>
+    </div>
+    <div class="mess"><div class="label">Why oxycodone fails</div>
+      <ul><li>Its top FAERS "signals" (rash, joint swelling, rheumatoid arthritis) come from co-medicated rheumatology patients, not from oxycodone. Trials cannot confirm a confounded signal. Pain trials list "Pain" at background rates (1 in 100–360).</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="p5" class="stage">
+  <div class="num">5</div>
+  <div class="stage-body">
+    <h2>How often it changes</h2>
+    <div class="scroll"><table>
+      <thead><tr><th>Window (to 2026-10-20)</th><th class="n">Results first posted</th><th class="n">Record updated</th></tr></thead>
+      <tbody>
+        <tr><td>Last 30 days</td><td class="n">3</td><td class="n">7</td></tr>
+        <tr><td>Last 90 days</td><td class="n">23</td><td class="n">37</td></tr>
+        <tr><td>Last 365 days</td><td class="n">149</td><td class="n">200</td></tr>
+      </tbody>
+    </table></div>
+    <p>Across all 2,170 studies, about 3 new result postings a month. Nothing here answers "what changed since yesterday". A one-time snapshot is enough for the pilot. A weekly refresh is a roadmap item. A daily incremental pipeline would be wasted effort.</p>
+  </div>
+</section>
+
+<section id="p6" class="stage">
+  <div class="num">6</div>
+  <div class="stage-body">
+    <h2>Decision</h2>
+    <div class="decide"><div class="label">Gate rule: 2 or fewer useful hits → PARK</div>
+      <ul>
+        <li><span class="pill p-bad">PARK</span> <b>Opioids.</b> 0 to 1 useful trial per oxycodone signal. Only 23% of opioid hits are about the drug's safety. High cleaning cost, near-zero signal value.</li>
+        <li><span class="pill p-good">KEEP-NARROW</span> <b>GLP-1s.</b> NAION: 5 useful trials. Gastric emptying: 8. The MedDRA terms match FAERS exactly. Scope: 5 GLP-1 drugs (489 studies, 0.5 s per drug), one-time snapshot, serious events only, and only terms that FAERS already flags. It shows as a "Seen in trials" line on the signal card, not as a new signal.</li>
+        <li>Estimated cost: about 2 hours. The script already has the arm rules. Export one CSV, upload it to Foundry, and add a <code>TrialEvidence</code> object linked to Signal. A live weekly pipeline would cost about 4 hours and is not worth it at 110% load. It stays <b>first on the cut list</b>. If cut, the note still says "explored: trials confirm NAION in 5 controlled trials".</li>
+      </ul>
+    </div>
+    <div class="compare">
+      <div class="box"><h3>🩺 PV SME view</h3><p>Trials are a fair second opinion for a serious, rare event like NAION, because serious events are always listed. A handful of cases cannot prove causation. Show counts per trial; never show a pooled rate as if it were a real incidence.</p></div>
+      <div class="box"><h3>💊 Safety officer view</h3><p>"NAION: 394 FAERS reports; also seen in 5 controlled trials (8 on drug vs 1 on control), click for each trial." That line makes the flag easier to trust, and every trial links to its source.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="p7" class="stage">
+  <div class="num">7</div>
+  <div class="stage-body">
+    <h2>What moves forward</h2>
+    <div class="scroll"><table>
+      <thead><tr><th>Into the build</th><th>Left behind</th></tr></thead>
+      <tbody>
+        <tr><td>GLP-1 serious-event rows, one-time snapshot (CSV)</td><td>All opioid trials · a live pipeline · weekly refresh (roadmap)</td></tr>
+        <tr><td>Arm rules: strip "placebo (drug)", drop PK/BE titles, drop drug-in-every-arm</td><td>Non-serious events under the 5% threshold</td></tr>
+        <tr><td>Exact MedDRA PT match to FAERS reactions</td><td>Vocabulary clean-up (CTCAE, COSTART, blank)</td></tr>
+        <tr><td><code>TrialEvidence</code>: signal · NCT · drug n/N · control n/N · link</td><td>Pooled rates, meta-analysis</td></tr>
+      </tbody>
+    </table></div>
+    <p class="meta">Proposed log entries (decision, learnings, data issues, backlog) are in <a href="../source-profiles/05-clinicaltrials.md">05-clinicaltrials.md</a> → "Proposed for the logs". They are not applied yet; they need your approval.</p>
+  </div>
+</section>
+
+</div>

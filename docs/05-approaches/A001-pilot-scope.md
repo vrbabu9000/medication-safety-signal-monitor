@@ -11,7 +11,7 @@
 ## What changed
 | Before | Now | Why |
 |---|---|---|
-| Pilot class = GLP-1 agonists | Pilot class = **opioids (narcotics)** | Boss suggested it. Strong hospital relevance. Clean backtest available |
+| Pilot class = GLP-1 agonists | Pilot class = **opioids (narcotics)** _(superseded 2026-10-20 by A003: 8 opioids + 5 GLP-1)_ | Boss suggested it. Strong hospital relevance. Clean backtest available |
 | Monitoring = stretch goal | Monitoring = **must-have, demo centerpiece** | Boss: "monitoring is the beauty"; show production-side use |
 | Drift = compare label versions / model changes | Drift judged over a **3–4 week window**; ignore 3–4 day swings | Boss guidance (our reading, to confirm) |
 | Goal = working build | Goal = **working build + visible reasoning trail** | Project is a showcase of thinking |

@@ -5,7 +5,7 @@
 | **Date** | 2026-10-19 |
 | **Design-thinking stage** | Define |
 | **Area** | Scope |
-| **Status** | Proposed: needs your (and ideally boss's) yes |
+| **Status** | **Kept** (accepted by user 2026-10-20) |
 | **Replaces** | Opioids-only scope in A001 (D007) |
 
 ## What changed
@@ -29,5 +29,14 @@
 ## Trade-off to say out loud
 Two classes is slightly broader than "one therapeutic class". It's still 13 ingredients, well inside "sane scope". If the boss wants strict single-class, fall back to **opioids-only with rules 1–2** (A001).
 
+## Focus rule (added 2026-10-20, D016)
+Rank what matters to the safety officer: **clinical side effects** and **recalls**. Tag, but don't rank, these buckets:
+| Bucket | Mainly hits | Example terms |
+|---|---|---|
+| Lawyer-filed (reporter = 4) | hydrocodone, hydromorphone (51%), oxycodone (29%) | — |
+| Abuse/overdose | opioids | Drug dependence, Overdose, Withdrawal |
+| Product-use/dose error | GLP-1s (tirzepatide 64k mentions) | Incorrect dose administered, Off label use |
+| Pregnancy/neonatal | hydrocodone, methadone | Neonatal withdrawal, Foetal exposure |
+
 ## Verdict
-Proposed. Accept → D014 becomes Accepted, A001 class row is superseded.
+Kept. Formulary = 13 explicit RxCUIs (D018). Volumes: [06-data-volume](../07-data-quality/source-profiles/06-data-volume-13-ingredients.md).

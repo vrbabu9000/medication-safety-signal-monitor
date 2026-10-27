@@ -1,0 +1,559 @@
+<title>Signal Monitor Data Walkthrough</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column; each pipeline stage is a numbered block (real order) with 4 fixed parts:
+   what it is · what it looks like (real rows) · what's messy (measured) · decision. Clinical paper + teal ink. */
+:root{
+  --bg:#f5f7f6; --surface:#ffffff; --ink:#15201e; --muted:#5a6966; --line:#d9e1df;
+  --accent:#0d6b66; --accent-soft:#e1efed;
+  --warn:#9a5b00; --warn-soft:#fbf0dc; --bad:#a3262c; --bad-soft:#f8e3e3; --good:#2c6e2f; --good-soft:#e3f1e2;
+  --code-bg:#eef2f1;
+  --f-display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1514; --surface:#162020; --ink:#e4ecea; --muted:#9fb0ac; --line:#2a3836;
+  --accent:#5cc2b9; --accent-soft:#163633;
+  --warn:#f0b65a; --warn-soft:#33270f; --bad:#f08a8f; --bad-soft:#3a1a1c; --good:#8fd18f; --good-soft:#18301a;
+  --code-bg:#111a19; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0f1514; --surface:#162020; --ink:#e4ecea; --muted:#9fb0ac; --line:#2a3836;
+  --accent:#5cc2b9; --accent-soft:#163633;
+  --warn:#f0b65a; --warn-soft:#33270f; --bad:#f08a8f; --bad-soft:#3a1a1c; --good:#8fd18f; --good-soft:#18301a;
+  --code-bg:#111a19; color-scheme:dark }
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding-block:40px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:56px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(2rem,4.5vw,2.8rem)}
+h2{font-size:1.65rem}
+h3{font-size:1.1rem;font-family:var(--f-body);font-weight:700}
+p{margin:0;max-width:68ch}
+.lede{font-size:1.1rem;color:var(--muted);max-width:66ch}
+.eyebrow{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+header{display:grid;gap:14px}
+.meta{font-size:.85rem;color:var(--muted)}
+section{display:grid;gap:18px}
+.stack{display:grid;gap:12px}
+code,.mono{font-family:var(--f-mono);font-size:.86em}
+code{background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{font-family:var(--f-mono);font-size:.78rem;line-height:1.5;background:var(--code-bg);border:1px solid var(--line);border-radius:6px;padding:12px 14px;margin:0;overflow-x:auto;white-space:pre}
+.scroll{overflow-x:auto;min-width:0}
+table{border-collapse:collapse;width:100%;font-size:.88rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+td.n,th.n{text-align:right}
+/* stage block */
+.stage{display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px}
+.num{font-family:var(--f-display);font-size:2.4rem;font-weight:700;color:var(--accent);line-height:1}
+.stage-body{display:grid;gap:18px;min-width:0}
+.part{display:grid;gap:8px;min-width:0}
+.part > .label{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mess{background:var(--warn-soft);border-left:3px solid var(--warn);padding:12px 14px;border-radius:0 6px 6px 0;display:grid;gap:8px}
+.mess .label{color:var(--warn)}
+.decide{background:var(--accent-soft);border-left:3px solid var(--accent);padding:12px 14px;border-radius:0 6px 6px 0;display:grid;gap:6px}
+.decide .label{color:var(--accent)}
+.mess ul,.decide ul,.plain ul{margin:0;padding-left:20px;display:grid;gap:4px}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:.72rem;padding:1px 7px;border-radius:999px;white-space:nowrap}
+.p-good{background:var(--good-soft);color:var(--good)} .p-bad{background:var(--bad-soft);color:var(--bad)}
+.p-warn{background:var(--warn-soft);color:var(--warn)} .p-acc{background:var(--accent-soft);color:var(--accent)}
+.strike{text-decoration:line-through;color:var(--muted)}
+/* funnel */
+.funnel{display:grid;gap:6px}
+.frow{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr) 7.5rem;gap:12px;align-items:center;font-size:.86rem}
+.bar{height:14px;background:var(--accent);border-radius:2px;min-width:2px}
+.frow .v{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:14px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;display:grid;gap:8px;min-width:0}
+.box h3{font-size:.95rem}
+.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem}
+.toc a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+.toc a:hover,.toc a:focus-visible{border-bottom-color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+hr{border:0;border-top:1px solid var(--line);margin:0}
+.pushback{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:grid;gap:10px}
+@media (max-width:640px){
+  .stage{grid-template-columns:1fr;gap:6px}
+  .num{font-size:1.8rem}
+  .frow{grid-template-columns:minmax(0,1fr) 6.5rem}
+  .frow .bar-wrap{grid-column:1 / -1;order:3}
+}
+</style>
+
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Medication Safety Signal Monitor · Phase 1 Define · 2026-10-20</div>
+  <h1>From FDA files to a signal, one stage at a time</h1>
+  <p class="lede">This page follows real data through every step we will build: download, drug identity, dedup, counting, the ontology, then Part B (the AI reading the label). Every number below was measured on the two latest FAERS quarterly files (2026 Q1 + Q2, 819,683 reports) by <code>prototypes/explore/faers_bulk_walkthrough.py</code>. Nothing is illustrative unless it says so.</p>
+  <p class="meta">Running example: <b>semaglutide</b> (Ozempic, Wegovy, Rybelsus) and the eye condition <b>NAION</b> (sudden vision loss from poor blood flow to the optic nerve). Second example: <b>oxycodone</b>.</p>
+  <nav class="toc" aria-label="Stages">
+    <a href="#overview">Overview</a><a href="#s1">1 Get</a><a href="#s2">2 Identity</a><a href="#s3">3 Role</a><a href="#s4">4 Versions</a><a href="#s5">5 Duplicates</a><a href="#s6">6 Reporter drift</a><a href="#s7">7 Count</a><a href="#s8">8 Ontology</a><a href="#s9">9 Part B</a><a href="#s10">10 Compare</a><a href="#decisions">Decisions</a><a href="#pushback">Pushback</a>
+  </nav>
+</header>
+
+<section id="overview">
+  <div class="eyebrow">Overview</div>
+  <h2>The shape of the whole thing</h2>
+  <p>Part A turns raw FAERS reports into one number per drug and reaction: "how many reports, and how unusual is that?" Part B turns a label document into a list: "which reactions does the label already mention?" The app shows the reactions that are frequent and unusual in Part A but missing from Part B's list.</p>
+  <p>The funnel below is what happens to FAERS rows on their way through Part A. Each stage throws away or corrects something, and every one of those choices is a design decision.</p>
+  <div class="funnel" role="list" aria-label="Row counts through the FAERS pipeline">
+    <div class="frow" role="listitem"><span>Drug rows in 2 quarters (all drugs)</span><span class="bar-wrap"><span class="bar" style="display:block;width:100%"></span></span><span class="v">3,330,435</span></div>
+    <div class="frow" role="listitem"><span>Reports in 2 quarters</span><span class="bar-wrap"><span class="bar" style="display:block;width:24.6%"></span></span><span class="v">819,683</span></div>
+    <div class="frow" role="listitem"><span>Unique cases after version dedup + deletes</span><span class="bar-wrap"><span class="bar" style="display:block;width:23.8%"></span></span><span class="v">792,346</span></div>
+    <div class="frow" role="listitem"><span>Cases where one of our 13 drugs is suspect</span><span class="bar-wrap"><span class="bar" style="display:block;width:2.2%"></span></span><span class="v">73,829</span></div>
+    <div class="frow" role="listitem"><span>Semaglutide suspect reports</span><span class="bar-wrap"><span class="bar" style="display:block;width:0.63%"></span></span><span class="v">21,034</span></div>
+    <div class="frow" role="listitem"><span>…that mention NAION</span><span class="bar-wrap"><span class="bar" style="display:block;width:0.05%"></span></span><span class="v">394</span></div>
+  </div>
+  <p class="meta">After the hidden-duplicate fold in stage 5, 73,829 becomes 72,541.</p>
+</section>
+
+<hr>
+
+<!-- STAGE 1 -->
+<section id="s1" class="stage">
+  <div class="num">1</div>
+  <div class="stage-body">
+    <h2>Get the data</h2>
+    <div class="part"><div class="label">What it is</div>
+      <p>FDA publishes FAERS as one zip per quarter (about 63 MB). Each zip holds 7 linked tables and a delete list. This is what the pipeline ingests (decision D004). The openFDA API we explored earlier is a different, pre-processed copy and stopped updating on 2026-07-30. The bulk files still arrived for Q1 and Q2 2026.</p>
+    </div>
+    <div class="part"><div class="label">What it actually looks like (2026 Q2)</div>
+      <div class="scroll"><table>
+        <thead><tr><th>File</th><th>One row =</th><th class="n">Rows</th><th>Key columns</th></tr></thead>
+        <tbody>
+          <tr><td><code>DEMO</code></td><td>one report (case + version)</td><td class="n">422,459</td><td><code>primaryid, caseid, caseversion, age, sex, occp_cod, occr_country, fda_dt</code></td></tr>
+          <tr><td><code>DRUG</code></td><td>one drug in a report</td><td class="n">1,627,225</td><td><code>drug_seq, role_cod, drugname, prod_ai, nda_num, route, dose</code></td></tr>
+          <tr><td><code>REAC</code></td><td>one reaction in a report</td><td class="n">1,394,751</td><td><code>pt</code> (MedDRA preferred term)</td></tr>
+          <tr><td><code>INDI</code></td><td>why a drug was taken</td><td class="n">1,124,333</td><td><code>indi_drug_seq, indi_pt</code></td></tr>
+          <tr><td><code>OUTC</code></td><td>one outcome</td><td class="n">303,705</td><td><code>outc_cod</code> (DE death, HO hospital, LT life-threatening…)</td></tr>
+          <tr><td><code>THER</code></td><td>therapy dates</td><td class="n">326,027</td><td><code>start_dt, end_dt</code></td></tr>
+          <tr><td><code>RPSR</code></td><td>report source</td><td class="n">11,295</td><td><code>rpsr_cod</code></td></tr>
+          <tr><td><code>DELETE</code></td><td>a case FDA withdrew</td><td class="n">4,217</td><td><code>caseid</code> only, no header</td></tr>
+        </tbody>
+      </table></div>
+      <p>The raw text, exactly as it arrives. Columns are separated by <code>$</code>:</p>
+<pre>primaryid$caseid$caseversion$i_f_code$event_dt$mfr_dt$init_fda_dt$fda_dt$rept_cod$...$age$age_cod$sex$...$occp_cod$reporter_country$occr_country
+264121221$26412122$1$I$$...$20260219$20260219$PER$...$61$YR$F$...$CN$US$US</pre>
+      <p>One report is spread across the tables, joined by <code>primaryid</code>. Here is case <b>26412122</b> as it stood in Q1:</p>
+<pre>DEMO  caseid 26412122  version 1  female 61  reporter CN (consumer)  sender NOVO NORDISK
+DRUG  seq 1  SS (secondary suspect)  OZEMPIC     prod_ai SEMAGLUTIDE
+DRUG  seq 2  PS (primary suspect)    VICTOZA     prod_ai LIRAGLUTIDE
+DRUG  seq 3  SS                      TRULICITY   prod_ai DULAGLUTIDE
+DRUG  seq 4  SS                      MOUNJARO    prod_ai TIRZEPATIDE
+REAC  Impaired gastric emptying
+INDI  Type 2 diabetes mellitus (x4)
+OUTC  HO (hospitalised), OT (other)</pre>
+    </div>
+    <div class="mess"><div class="label">What's messy (measured)</div>
+      <ul>
+        <li>Files are <code>$</code>-separated with Windows line endings and Latin-1 text. A standard CSV read breaks.</li>
+        <li>The delete file has no header and starts with a blank line.</li>
+        <li><b>No <code>openfda</code> block in bulk files.</b> No RxCUI and no label setid. Our earlier docs said "FAERS links straight to the label". That is only true in the API copy.</li>
+        <li>The useful bridge is <code>nda_num</code>, the FDA application number. It is filled on 79% of semaglutide rows and separates products cleanly: 209637 = Ozempic injection (10,800 rows), 215256 = Wegovy (5,580), 213051 = Rybelsus (532). <code>route</code> is blank on 89% of them.</li>
+      </ul>
+    </div>
+    <div class="decide"><div class="label">Decision to propose</div>
+      <ul>
+        <li>Land each quarter's zip untouched in a raw dataset, one partition per quarter. Parse with an explicit schema (delimiter, encoding, all columns as text).</li>
+        <li>Link FAERS rows to labels through <code>nda_num</code> → application number on the label. Do not rely on openFDA enrichment.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 2 -->
+<section id="s2" class="stage">
+  <div class="num">2</div>
+  <div class="stage-body">
+    <h2>Drug identity: which rows are "our" drugs?</h2>
+    <div class="part"><div class="label">What it is</div>
+      <p>Every drug row has two name fields: <code>drugname</code> (what the reporter typed) and <code>prod_ai</code> (the active ingredient FDA coded). We must turn both into one of our 13 ingredients. This happens once, in one place, for all sources. The brief grades exactly that.</p>
+    </div>
+    <div class="part"><div class="label">What it actually looks like</div>
+      <p>Distinct spellings of one ingredient in a single quarter: oxycodone <b>77</b>, tramadol <b>66</b>, hydrocodone <b>63</b>, morphine <b>53</b>. A sample for oxycodone:</p>
+<pre>OXYCODONE                                   2,861 rows
+OXYCODONE HYDROCHLORIDE                     2,001
+ACETAMINOPHEN\OXYCODONE HYDROCHLORIDE         572   ← combination product, "\" separates ingredients
+OXYCONTIN                                     518   ← brand
+OXYCODONE TEREPHTHALATE                       478   ← different salt
+PERCOCET                                      380
+NALOXONE HYDROCHLORIDE\OXYCODONE HYDROCHLORIDE 125</pre>
+    </div>
+    <div class="mess"><div class="label">What's messy (measured)</div>
+      <ul>
+        <li><b>A simple "contains the word" match is wrong.</b> "morphine" also matches <b>apomorphine</b>, a Parkinson's drug (ONAPGO 1,021 rows, APOKYN 478), and <b>heroin</b> (coded DIAMORPHINE, 117). Morphine rows in Q2: 5,058 by substring vs 3,362 by exact ingredient. <b>That is 50% false hits.</b></li>
+        <li>"fentanyl" also matches parafluorofentanyl, an illicit street analogue. "methadone" also matches levomethadone.</li>
+        <li>Compounded mixes appear: <code>CYANOCOBALAMIN\SEMAGLUTIDE</code>, <code>PYRIDOXINE\TIRZEPATIDE</code>. These are pharmacy-made, not FDA-approved products.</li>
+        <li><code>prod_ai</code> is blank on 342 of our rows per quarter. Those need the brand or <code>drugname</code> as a fallback.</li>
+      </ul>
+    </div>
+    <div class="decide"><div class="label">Decision to propose</div>
+      <ul>
+        <li>Split <code>prod_ai</code> on <code>\</code>, strip salt words, then match the <b>exact</b> ingredient through RxNorm. Never use substring matching.</li>
+        <li>A combination product counts for each of our ingredients in it and carries a <span class="pill p-acc">combo</span> tag. Compounded mixes carry a <span class="pill p-warn">compounded</span> tag.</li>
+        <li>Output: one <code>drug_identity</code> table (raw string → ingredient RxCUI, plus how it was matched). Recalls and labels reuse the same table.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 3 -->
+<section id="s3" class="stage">
+  <div class="num">3</div>
+  <div class="stage-body">
+    <h2>Drug role: was our drug blamed?</h2>
+    <div class="part"><div class="label">What it is</div>
+      <p>Each drug row has a role: <code>PS</code> primary suspect, <code>SS</code> secondary suspect, <code>C</code> concomitant (just also being taken), <code>I</code> interacting. A report lists everything the patient took, so most drugs on it are bystanders.</p>
+    </div>
+    <div class="part"><div class="label">What it actually looks like</div>
+<pre>case 26453439 (Q1)
+DRUG seq 1  PS  OZEMPIC  SEMAGLUTIDE
+DRUG seq 2  SS  OZEMPIC  SEMAGLUTIDE     ← the same drug listed twice
+case 26496412 (Q1)
+DRUG seq 1  PS  OZEMPIC  2 mg /WK
+DRUG seq 1  PS  OZEMPIC  0.25 mg /WK     ← dose titration = two rows, same drug_seq</pre>
+    </div>
+    <div class="mess"><div class="label">What's messy (measured)</div>
+      <ul>
+        <li>In Q1, <b>31,381 of 45,160</b> SS rows for our drugs (69%) are the same ingredient that is already PS in the same report. SS often just means "the same drug again".</li>
+        <li>Our ingredient appears more than once in the same report 14,063 times in Q1. Counting rows instead of reports would double-count.</li>
+        <li>Tirzepatide has more SS rows (28,389) than PS rows (19,703) in Q1. "PS only" would throw away real reports.</li>
+      </ul>
+    </div>
+    <div class="decide"><div class="label">Decision to propose</div>
+      <ul><li><b>Suspect = PS, SS or I.</b> Count each ingredient <b>once per report</b>. Concomitant is kept in the data but never counted toward a signal.</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 4 -->
+<section id="s4" class="stage">
+  <div class="num">4</div>
+  <div class="stage-body">
+    <h2>Case versions and deletes: the incremental step</h2>
+    <div class="part"><div class="label">What it is</div>
+      <p>A case gets follow-up reports. Each follow-up is a new <code>caseversion</code> and gets a new <code>primaryid</code>. A follow-up can arrive in a later quarter. The newest version replaces the old one completely; it is not added on top. FDA also withdraws cases through the delete list.</p>
+    </div>
+    <div class="part"><div class="label">What it actually looks like: case 26412122, Q1 → Q2</div>
+      <div class="compare">
+        <div class="box"><h3>Q1 · version 1 · consumer</h3>
+<pre>PS  VICTOZA    liraglutide
+SS  OZEMPIC    semaglutide
+SS  TRULICITY  dulaglutide
+SS  MOUNJARO   tirzepatide
+REAC Impaired gastric emptying</pre></div>
+        <div class="box"><h3>Q2 · version 3 · reporter blank</h3>
+<pre>PS  OZEMPIC 1 mg     semaglutide
+PS  OZEMPIC 0.25 mg  semaglutide
+C   METFORMIN, FARXIGA, DULOXETINE,
+    ONDANSETRON, MONTELUKAST,
+    NEBIVOLOL, ESZOPICLONE
+REAC Off label use
+REAC Impaired gastric emptying</pre></div>
+      </div>
+      <p>In Q2, Victoza, Trulicity and Mounjaro are gone. If we simply append Q2 to Q1, liraglutide, dulaglutide and tirzepatide each keep a <b>phantom report</b> that the reporter has since corrected.</p>
+    </div>
+    <div class="part"><div class="label">The incremental build, step by step</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Step</th><th>Q1 run</th><th>Q2 run (incremental)</th></tr></thead>
+        <tbody>
+          <tr><td>New cases inserted</td><td class="n">397,224</td><td class="n">395,777</td></tr>
+          <tr><td>Existing cases replaced by a newer version</td><td class="n">0</td><td class="n">26,681</td></tr>
+          <tr><td>…of which our drug's suspect list changed</td><td class="n">0</td><td class="n">75</td></tr>
+          <tr><td>…of which our suspects or reactions changed</td><td class="n">0</td><td class="n">617</td></tr>
+          <tr><td>Delete IDs in the file</td><td class="n">6,135</td><td class="n">4,217</td></tr>
+          <tr><td>Deletes that hit a case we hold</td><td class="n">0</td><td class="n">655</td></tr>
+          <tr><td>Cases held after the run</td><td class="n">397,224</td><td class="n">792,346</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="mess"><div class="label">What's messy (measured)</div>
+      <ul>
+        <li><b>Append vs replace:</b> appending each quarter gives <b>422,872</b> drug-reaction rows for our drugs. Replacing by case gives <b>389,074</b>. That is 33,798 phantom rows (+8.7%) after only two quarters, and it grows every quarter.</li>
+        <li>Of 4,217 delete IDs in Q2, only 655 point at Q1. The rest point at older quarters. <b>Deletes reach back into all of history.</b></li>
+        <li>One case is on version <b>46</b>.</li>
+      </ul>
+    </div>
+    <div class="decide"><div class="label">Decision to propose</div>
+      <ul>
+        <li><b>Incremental = upsert by <code>caseid</code></b>: keep the highest <code>caseversion</code>, then apply every delete file against the full case table.</li>
+        <li>Raw quarters are append-only (cheap, incremental). The <code>faers_case_latest</code> table is a snapshot that updates only the changed cases. Counts are recomputed on top (small).</li>
+        <li>Optimization log entry: "append vs upsert" with these before/after numbers.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 5 -->
+<section id="s5" class="stage">
+  <div class="num">5</div>
+  <div class="stage-body">
+    <h2>Hidden duplicates: one patient, hundreds of case IDs</h2>
+    <div class="part"><div class="label">What it is</div>
+      <p>Dedup by <code>caseid</code> assumes one patient has one case. That breaks when many companies each file the same patient, often from a published paper. FDA gives each filing its own <code>caseid</code>.</p>
+    </div>
+    <div class="part"><div class="label">What it actually looks like</div>
+      <p>Before this step, oxycodone's "top signals" were these:</p>
+      <div class="scroll"><table>
+        <thead><tr><th>Reaction</th><th class="n">Reports</th><th class="n">PRR</th><th>Plausible for an opioid?</th></tr></thead>
+        <tbody>
+          <tr><td>Duodenal ulcer perforation</td><td class="n">514</td><td class="n">306</td><td><span class="pill p-bad">no</span></td></tr>
+          <tr><td>Pemphigus (blistering skin disease)</td><td class="n">589</td><td class="n">240</td><td><span class="pill p-bad">no</span></td></tr>
+          <tr><td>Hand deformity</td><td class="n">526</td><td class="n">225</td><td><span class="pill p-bad">no</span></td></tr>
+          <tr><td>Glossodynia (burning tongue)</td><td class="n">590</td><td class="n">154</td><td><span class="pill p-bad">no</span></td></tr>
+        </tbody>
+      </table></div>
+      <p>Each one traces to <b>a 43-year-old woman in Canada</b>, filed by Sandoz, Novartis, Amgen, Teva, Haleon, Celltrion and others. There are 332 case IDs in Q1 and 370 in Q2. Each filing lists 40–150 drugs and 24–59 reactions, with no event date.</p>
+    </div>
+    <div class="mess"><div class="label">What's messy (measured)</div>
+      <ul>
+        <li>Rule tested: same age + sex + country + event date, 30 or more drugs, 50 or more filings = one patient. It found <b>7 such patients, all in Canada</b>, and folded <b>1,530 reports</b> into one each.</li>
+        <li>Effect on suspect reports: oxycodone 4,464 → <b>3,408 (−24%)</b> · tramadol 3,032 → 2,470 (−19%) · hydromorphone 1,298 → 1,023 (−21%) · buprenorphine −13% · morphine −10% · all GLP-1s 0%.</li>
+        <li>After the fold, oxycodone's top list makes sense: drug dependence (506), drug diversion (467), pain, overdose. Some residue remains: rheumatoid arthritis (219) and joint swelling (233), from the same woman recorded as age 44. The rule catches most of it, not all.</li>
+      </ul>
+    </div>
+    <div class="decide"><div class="label">Decision to propose</div>
+      <ul>
+        <li>Add a cross-case duplicate step after the version dedup. Keep the simple rule for the pilot. Show the residue honestly; fuzzy matching goes on the roadmap.</li>
+        <li>Monitoring: alert when one "person key" exceeds 50 filings in a quarter.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 6 -->
+<section id="s6" class="stage">
+  <div class="num">6</div>
+  <div class="stage-body">
+    <h2>A field changed meaning between quarters</h2>
+    <div class="part"><div class="label">What it is</div>
+      <p><code>occp_cod</code> says who reported: MD doctor, PH pharmacist, HP other health professional, CN consumer, LW lawyer. We planned to tag lawyer-filed reports with it (D016).</p>
+    </div>
+    <div class="part"><div class="label">What it actually looks like (all reports)</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Reporter type</th><th class="n">2026 Q1</th><th class="n">2026 Q2</th></tr></thead>
+        <tbody>
+          <tr><td>blank</td><td class="n">139,395 (35%)</td><td class="n"><b>304,677 (72%)</b></td></tr>
+          <tr><td>CN consumer</td><td class="n">104,588</td><td class="n"><b>11,998</b></td></tr>
+          <tr><td>MD doctor</td><td class="n">76,890</td><td class="n">70,419</td></tr>
+          <tr><td>HP other health prof.</td><td class="n">53,090</td><td class="n">4,054</td></tr>
+          <tr><td>LW lawyer</td><td class="n">3,739</td><td class="n">10,747</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="mess"><div class="label">What's messy</div>
+      <ul><li>Consumer reports did not drop by 90% in real life. The field stopped being filled, most likely because of FDA's March 2026 switch to its new AEMS system. Any rule built on this field quietly breaks from Q2 on. This is exactly the drift the boss wants monitoring to catch.</li></ul>
+    </div>
+    <div class="decide"><div class="label">Decision to propose</div>
+      <ul>
+        <li>Monitoring tracks the <b>fill rate of every key field per quarter</b> and alerts on a jump. This is a ready-made demo moment for Part D.</li>
+        <li>The lawyer tag uses <code>occp_cod</code> where it is filled and is shown as "unknown" where it is not. We do not guess.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 7 -->
+<section id="s7" class="stage">
+  <div class="num">7</div>
+  <div class="stage-body">
+    <h2>Explode, tag, count, score</h2>
+    <div class="part"><div class="label">What it is</div>
+      <p>Each clean case becomes one row per <b>(our suspect ingredient × reaction)</b>. Each reaction gets a bucket tag. Then we count reports per ingredient and reaction, and compute the <b>PRR</b>.</p>
+      <p><b>PRR</b> (proportional reporting ratio): among semaglutide reports, what share mention NAION, divided by that share among all other reports. 1 means normal. The standard screen (Evans) flags PRR ≥ 2 with at least 3 reports and χ² ≥ 4.</p>
+    </div>
+    <div class="part"><div class="label">What it actually looks like: case 26412122 after Q2</div>
+<pre>caseid    ingredient   reaction                    bucket
+26412122  semaglutide  Impaired gastric emptying   clinical
+26412122  semaglutide  Off label use               product_use_error</pre>
+      <p>The PRR is built from a 2×2 table, here for semaglutide + NAION, 2026 H1:</p>
+<pre>                          NAION     no NAION
+semaglutide suspect         394       20,640     (21,034 reports)
+all other reports           129      769,653     (769,782 reports, after the stage 5 fold)
+PRR = (394 / 21,034) / (129 / 769,782) = 112</pre>
+      <p>Semaglutide's most-reported reactions, with their real PRR and bucket:</p>
+      <div class="scroll"><table>
+        <thead><tr><th>Reaction</th><th class="n">Reports</th><th class="n">PRR</th><th>Bucket</th></tr></thead>
+        <tbody>
+          <tr><td>Nausea</td><td class="n">3,306</td><td class="n">4.0</td><td>clinical</td></tr>
+          <tr><td>Vomiting</td><td class="n">2,477</td><td class="n">5.0</td><td>clinical</td></tr>
+          <tr><td>Off label use</td><td class="n">1,949</td><td class="n">1.5</td><td><span class="pill p-warn">product use</span></td></tr>
+          <tr><td>Impaired gastric emptying</td><td class="n">1,883</td><td class="n">69.3</td><td>clinical</td></tr>
+          <tr><td>Weight loss poor</td><td class="n">702</td><td class="n">128.7</td><td><span class="pill p-warn">efficacy</span></td></tr>
+          <tr><td>Device leakage</td><td class="n">606</td><td class="n">7.1</td><td><span class="pill p-warn">product use</span></td></tr>
+          <tr><td>Headache</td><td class="n">594</td><td class="n">0.9</td><td>clinical</td></tr>
+          <tr><td>Optic ischaemic neuropathy (NAION)</td><td class="n">394</td><td class="n">112</td><td>clinical</td></tr>
+          <tr><td>Optic neuritis</td><td class="n">34</td><td class="n">5.9</td><td>clinical</td></tr>
+          <tr><td>Optic atrophy · optic neuropathy · optic disc oedema</td><td class="n">10 · 10 · 9</td><td class="n">5.5 · 4.2 · 7.2</td><td>clinical</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="mess"><div class="label">What's messy (measured)</div>
+      <ul>
+        <li>A high PRR is not always a safety issue. "Weight loss poor" (PRR 129) means the drug did not work. "Device leakage" is a pen problem. Without bucket tags, these would top the list.</li>
+        <li>One eye problem is spread over about 10 different MedDRA terms. Counting them one at a time understates it. We cannot use MedDRA's own grouping without a licence, so we need our own small term groups for the pilot.</li>
+        <li>Headache has 594 reports but PRR 0.9. It is common with every drug. Raw counts alone would rank it high.</li>
+      </ul>
+    </div>
+    <div class="decide"><div class="label">Decision to propose</div>
+      <ul>
+        <li>Rank on PRR + Evans criteria (D006), only within the <span class="pill p-acc">clinical</span> bucket. Other buckets are visible but not ranked (D016).</li>
+        <li>Keep a small hand-made term-group list (e.g. "optic nerve disorders"). Write the licensing reason down.</li>
+        <li>Counts per quarter, so "what changed since last time" is a simple difference.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 8 -->
+<section id="s8" class="stage">
+  <div class="num">8</div>
+  <div class="stage-body">
+    <h2>What becomes the ontology</h2>
+    <div class="part"><div class="label">What it is</div>
+      <p>Datasets are tables. The ontology turns the rows the safety officer clicks on into <b>objects</b> with links between them. Rule of thumb: if she needs to click it, open it, or change it, it is an object. If it only feeds a number, it stays a dataset.</p>
+    </div>
+    <div class="part"><div class="label">What it actually looks like</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Object</th><th>One object =</th><th>Real example</th><th>Built from</th></tr></thead>
+        <tbody>
+          <tr><td><b>Drug</b></td><td>one ingredient</td><td>semaglutide · RxCUI 1991302 · class GLP-1</td><td><code>drug_identity</code> (RxNorm)</td></tr>
+          <tr><td><b>Product</b></td><td>one FDA application</td><td>NDA 209637 · Ozempic injection</td><td>FAERS <code>nda_num</code> + labels</td></tr>
+          <tr><td><b>AdverseEventStat</b></td><td>drug × reaction × quarter</td><td>semaglutide · NAION · 2026 H1 · 394 reports · PRR 112</td><td>stage 7 counts</td></tr>
+          <tr><td><b>Label</b></td><td>one label version</td><td>Ozempic injection · setid adec4fd2 · v20 · 2026-06-10</td><td>DailyMed</td></tr>
+          <tr><td><b>LabeledReaction</b></td><td>one reaction found on a label</td><td>Pancreatitis acute · §5 · quote</td><td>Part B (LLM)</td></tr>
+          <tr><td><b>Recall</b></td><td>one recall event</td><td>D-0646-2023 · fentanyl/ropivacaine bag · Class II</td><td>FDA enforcement</td></tr>
+          <tr><td><b>Signal</b></td><td>drug × reaction, flagged</td><td>semaglutide · NAION · New</td><td>stage 10</td></tr>
+          <tr><td><b>TriageDecision</b></td><td>one click by the officer</td><td>Escalate to P&amp;T · note · who · when</td><td>Workshop write-back</td></tr>
+        </tbody>
+      </table></div>
+      <p>Stays a dataset (not an object): raw quarters, <code>faers_case_latest</code>, the exploded drug × reaction rows. A Signal stores the exact case IDs behind its count, so "show me the 394" still works.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 9 -->
+<section id="s9" class="stage">
+  <div class="num">9</div>
+  <div class="stage-body">
+    <h2>Part B: the AI reads the label</h2>
+    <div class="part"><div class="label">What it is</div>
+      <p>Part A tells us what people report. Part B tells us what the label already says. Labels are long XML documents with prose, bullets and tables. The LLM reads the safety sections and returns one row per reaction, with the exact quote it came from.</p>
+    </div>
+    <div class="part"><div class="label">Step 9a · pick the right label</div>
+      <p>DailyMed has 7 labels named "Ozempic". Two matter:</p>
+<pre>27f15fac…  v14  2026-08-19  OZEMPIC (ORAL SEMAGLUTIDE) TABLET / RYBELSUS TABLET
+adec4fd2…  v20  2026-06-10  OZEMPIC (SEMAGLUTIDE) INJECTION        ← the one most FAERS reports are about
+(+5 repackager copies from A-S Medication Solutions)</pre>
+      <p>The tablet label says nothing about injection sites. The injection label mentions them 20 times. Compare against the wrong label and "injection site pain" turns into a false signal (DQ33). The bridge is FAERS <code>nda_num</code> 209637 → the injection label.</p>
+    </div>
+    <div class="part"><div class="label">Step 9b · cut out the safety sections</div>
+      <p>Sections carry LOINC codes. The raw XML of the Adverse Reactions section:</p>
+<pre>&lt;section&gt;&lt;code code="34084-4" displayName="ADVERSE REACTIONS SECTION"/&gt;   ← found by code
+  &lt;section&gt;&lt;code code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/&gt;
+    &lt;title&gt;6.2 Postmarketing Experience&lt;/title&gt;                              ← generic code!
+    &lt;item&gt;&lt;content&gt;Gastrointestinal&lt;/content&gt;: acute pancreatitis and necrotizing
+          pancreatitis…; ileus, intestinal obstruction…&lt;/item&gt;</pre>
+      <p>Subsections 6.1 and 6.2 use the generic code <code>42229-5</code>, so searching by code alone misses them. We take everything nested under the four parent codes: Boxed Warning, Contraindications, Warnings &amp; Precautions, Adverse Reactions. Tables come out as rows:</p>
+<pre>Adverse Reaction | Placebo (N=362) % | 7 mg (N=356) % | 14 mg (N=356) %
+Nausea           | 6                 | 11             | 20
+Abdominal Pain   | 4                 | 10             | 11
+Diarrhea         | 4                 | 9              | 10</pre>
+    </div>
+    <div class="part"><div class="label">Step 9c · what we send and what comes back</div>
+      <div class="compare">
+        <div class="box"><h3>In: one section's text</h3>
+<pre>setid adec4fd2 · v20 · §6.2
+"Gastrointestinal: acute pancreatitis
+and necrotizing pancreatitis, sometimes
+resulting in death; ileus, intestinal
+obstruction… Hepatobiliary: cholecystitis,
+cholecystectomy  Neurologic: dysesthesia,
+headache … Skin: alopecia"</pre></div>
+        <div class="box"><h3>Out: one row per reaction</h3>
+<pre>term            | MedDRA PT          | quote
+acute pancreat. | Pancreatitis acute | "acute pancreatitis and…"
+ileus           | Ileus              | "ileus, intestinal…"
+cholecystitis   | Cholecystitis      | "Hepatobiliary:cholecystitis"
+headache        | Headache           | "Neurologic:dysesthesia, headache"
+alopecia        | Alopecia           | "Skin…:alopecia"</pre></div>
+      </div>
+    </div>
+    <div class="mess"><div class="label">Why a plain word search fails (real text from this label)</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Words in the label</th><th>Word search says</th><th>Truth</th></tr></thead>
+        <tbody>
+          <tr><td>"blurred vision"</td><td><span class="pill p-good">on label</span></td><td>Listed as a <b>symptom of low blood sugar</b>, not a side effect of the drug</td></tr>
+          <tr><td>"gastroparesis"</td><td><span class="pill p-good">on label</span></td><td>"not recommended in patients <b>with</b> severe gastroparesis": an existing condition</td></tr>
+          <tr><td>"delays gastric emptying"</td><td><span class="pill p-good">on label</span></td><td>How the drug works (said in §5.10 and §7), not a listed adverse reaction. FAERS "Impaired gastric emptying" has 1,883 reports, PRR 69. Needs a rule.</td></tr>
+          <tr><td>"diarrhea"</td><td><span class="pill p-bad">no match</span> for FAERS "Diarrhoea"</td><td>Same thing, US vs UK spelling. Normalize both to MedDRA.</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="decide"><div class="label">Decision to propose</div>
+      <ul>
+        <li>The LLM returns each reaction with its section, its <b>context</b> (adverse reaction / symptom of something else / pre-existing condition / mechanism) and a quote. Only "adverse reaction" counts as labeled.</li>
+        <li><b>Grounding check:</b> code confirms that each quote exists word for word in the label. A quote that doesn't exist is a hallucination and is counted.</li>
+        <li><b>Gold set:</b> you hand-list reactions for about 10 labels. LLM vs you gives precision, recall and F1 (target 0.85, D015).</li>
+        <li><b>Incremental:</b> DailyMed publishes daily and weekly update zips. Re-run the LLM only for a new (setid, version). Cache by (setid, version, section, prompt version, model). Note: this label's history lists version 13 twice (May 18 and May 20), so the version number alone is not a safe key; include the publish date.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 10 -->
+<section id="s10" class="stage">
+  <div class="num">10</div>
+  <div class="stage-body">
+    <h2>Compare: what the safety officer sees</h2>
+    <div class="part"><div class="label">Semaglutide, 2026 H1, against the injection label v20</div>
+      <div class="scroll"><table>
+        <thead><tr><th>FAERS reaction</th><th class="n">Reports</th><th class="n">PRR</th><th>On label?</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td>Nausea</td><td class="n">3,306</td><td class="n">4.0</td><td>yes, §6 table</td><td><span class="pill p-good">no signal</span></td></tr>
+          <tr><td>Off label use</td><td class="n">1,949</td><td class="n">1.5</td><td>n/a</td><td><span class="pill p-warn">tagged, not ranked</span></td></tr>
+          <tr><td>Impaired gastric emptying</td><td class="n">1,883</td><td class="n">69.3</td><td>only as mechanism</td><td><span class="pill p-warn">needs rule + PV review</span></td></tr>
+          <tr><td>Headache</td><td class="n">594</td><td class="n">0.9</td><td>yes, §6.2</td><td><span class="pill p-good">no signal</span></td></tr>
+          <tr><td>NAION (+ 76 rows in related optic terms)</td><td class="n">394</td><td class="n">112</td><td><b>no</b> (0 mentions, tablet and injection labels)</td><td><span class="pill p-bad">Signal · New</span></td></tr>
+        </tbody>
+      </table></div>
+      <p>The NAION signal card shows: 394 case IDs (clickable), the 2×2 table, label setid adec4fd2 v20 with the 4 sections searched, and the caveat "reported, not on the US label; not proof of cause". She chooses Escalate, Monitor or Dismiss. That choice is written back as a TriageDecision.</p>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section id="decisions">
+  <div class="eyebrow">What this gives us to propose</div>
+  <h2>Eight decisions the data forced</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>#</th><th>Decision</th><th>Evidence</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Exact ingredient match via RxNorm; no substring matching</td><td>Morphine +50% false rows (apomorphine, heroin)</td></tr>
+      <tr><td>2</td><td>Suspect = PS + SS + I, once per report</td><td>69% of SS rows repeat the PS drug</td></tr>
+      <tr><td>3</td><td>Incremental = upsert by caseid + deletes against all history</td><td>+8.7% phantom rows from append in 2 quarters</td></tr>
+      <tr><td>4</td><td>Cross-case duplicate fold</td><td>Oxycodone −24%; 7 patients, 1,530 filings</td></tr>
+      <tr><td>5</td><td>Monitor field fill rates per quarter</td><td>Reporter blank 35% → 72% at the AEMS switch</td></tr>
+      <tr><td>6</td><td>FAERS → label through <code>nda_num</code>; one reference label per product</td><td>Bulk has no openfda; tablet vs injection label</td></tr>
+      <tr><td>7</td><td>Label sections = everything nested under 4 parent codes</td><td>§6.1/6.2 coded 42229-5</td></tr>
+      <tr><td>8</td><td>LLM returns context + quote; grounding check; small term groups</td><td>"blurred vision", "gastroparesis", 10 optic terms</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="pushback">
+  <div class="eyebrow">Your question</div>
+  <h2>You're right, with two limits</h2>
+  <div class="pushback">
+    <p><b>You're right:</b> B, C and D all depend on how well we understand the data. This pass proves it. The first real look at the bulk files overturned three things we had written down: the FAERS→label link, the "suspect only" rule, and the reporter-type tagging. That would have surfaced mid-build otherwise.</p>
+    <p><b>Limit 1, depth where the signal lives.</b> FAERS, labels and drug identity are the spine of every flag. They deserve this depth. Recalls need a half-day pass (NDC parsing, "ongoing" meaning). ClinicalTrials.gov is optional; it can stay light. Equal depth everywhere would eat Week 1.</p>
+    <p><b>Limit 2, depth must become the build.</b> The script behind this page already <i>is</i> the FAERS pipeline in plain Python: same stages, same rules. Moving it into Foundry transforms is translation, not new design. Timebox the remaining understanding to the label (Part B) walk and recalls, then build.</p>
+  </div>
+</section>
+
+</div>

@@ -1,0 +1,318 @@
+<title>Drugs@FDA Product Atlas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column; each pipeline stage is a numbered block (real order) with 4 fixed parts:
+   what it is · what it looks like (real rows) · what's messy (measured) · decision. Clinical paper + teal ink. */
+:root{
+  --bg:#f5f7f6; --surface:#ffffff; --ink:#15201e; --muted:#5a6966; --line:#d9e1df;
+  --accent:#0d6b66; --accent-soft:#e1efed;
+  --warn:#9a5b00; --warn-soft:#fbf0dc; --bad:#a3262c; --bad-soft:#f8e3e3; --good:#2c6e2f; --good-soft:#e3f1e2;
+  --code-bg:#eef2f1;
+  --f-display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1514; --surface:#162020; --ink:#e4ecea; --muted:#9fb0ac; --line:#2a3836;
+  --accent:#5cc2b9; --accent-soft:#163633;
+  --warn:#f0b65a; --warn-soft:#33270f; --bad:#f08a8f; --bad-soft:#3a1a1c; --good:#8fd18f; --good-soft:#18301a;
+  --code-bg:#111a19; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0f1514; --surface:#162020; --ink:#e4ecea; --muted:#9fb0ac; --line:#2a3836;
+  --accent:#5cc2b9; --accent-soft:#163633;
+  --warn:#f0b65a; --warn-soft:#33270f; --bad:#f08a8f; --bad-soft:#3a1a1c; --good:#8fd18f; --good-soft:#18301a;
+  --code-bg:#111a19; color-scheme:dark }
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding-block:40px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:56px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(2rem,4.5vw,2.8rem)}
+h2{font-size:1.65rem}
+h3{font-size:1.1rem;font-family:var(--f-body);font-weight:700}
+p{margin:0;max-width:68ch}
+.lede{font-size:1.1rem;color:var(--muted);max-width:66ch}
+.eyebrow{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+header{display:grid;gap:14px}
+.meta{font-size:.85rem;color:var(--muted)}
+section{display:grid;gap:18px}
+.stack{display:grid;gap:12px}
+code,.mono{font-family:var(--f-mono);font-size:.86em}
+code{background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{font-family:var(--f-mono);font-size:.78rem;line-height:1.5;background:var(--code-bg);border:1px solid var(--line);border-radius:6px;padding:12px 14px;margin:0;overflow-x:auto;white-space:pre}
+.scroll{overflow-x:auto;min-width:0}
+table{border-collapse:collapse;width:100%;font-size:.88rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+td.n,th.n{text-align:right}
+/* stage block */
+.stage{display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px}
+.num{font-family:var(--f-display);font-size:2.4rem;font-weight:700;color:var(--accent);line-height:1}
+.stage-body{display:grid;gap:18px;min-width:0}
+.part{display:grid;gap:8px;min-width:0}
+.part > .label{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mess{background:var(--warn-soft);border-left:3px solid var(--warn);padding:12px 14px;border-radius:0 6px 6px 0;display:grid;gap:8px}
+.mess .label{color:var(--warn)}
+.decide{background:var(--accent-soft);border-left:3px solid var(--accent);padding:12px 14px;border-radius:0 6px 6px 0;display:grid;gap:6px}
+.decide .label{color:var(--accent)}
+.mess ul,.decide ul,.plain ul{margin:0;padding-left:20px;display:grid;gap:4px}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:.72rem;padding:1px 7px;border-radius:999px;white-space:nowrap}
+.p-good{background:var(--good-soft);color:var(--good)} .p-bad{background:var(--bad-soft);color:var(--bad)}
+.p-warn{background:var(--warn-soft);color:var(--warn)} .p-acc{background:var(--accent-soft);color:var(--accent)}
+.strike{text-decoration:line-through;color:var(--muted)}
+/* funnel */
+.funnel{display:grid;gap:6px}
+.frow{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr) 7.5rem;gap:12px;align-items:center;font-size:.86rem}
+.bar{height:14px;background:var(--accent);border-radius:2px;min-width:2px}
+.frow .v{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:14px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;display:grid;gap:8px;min-width:0}
+.box h3{font-size:.95rem}
+.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem}
+.toc a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+.toc a:hover,.toc a:focus-visible{border-bottom-color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+hr{border:0;border-top:1px solid var(--line);margin:0}
+.pushback{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:grid;gap:10px}
+@media (max-width:640px){
+  .stage{grid-template-columns:1fr;gap:6px}
+  .num{font-size:1.8rem}
+  .frow{grid-template-columns:minmax(0,1fr) 6.5rem}
+  .frow .bar-wrap{grid-column:1 / -1;order:3}
+}
+</style>
+
+
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Medication Safety Signal Monitor · Data atlas · Drugs@FDA · 2026-10-20</div>
+  <h1>Drugs@FDA: from a FAERS report to a Product and its label</h1>
+  <p class="lede">Drugs@FDA is FDA's list of every approved application: <b>NDA</b> (new drug, usually a brand), <b>ANDA</b> (generic) and <b>BLA</b> (biologic). Each application has its products, strengths and sponsor. FAERS carries the application number in <code>nda_num</code>, so this is the bridge from a report to a <b>Product</b>, and from the Product to its label. Every number was measured on 2026-10-20 by <code>prototypes/explore/identity_atlas.py</code> on the 2026 Q1 + Q2 bulk FAERS files and the Drugs@FDA file of 2026-10-20.</p>
+  <p class="meta"><b>Verdict:</b> <span class="pill p-good">KEEP</span> as the Product source. It reaches a Product for <b>72.8%</b> of our suspect rows (82.6% with a brand-name fallback), but only <b>37–40% for opioids</b>. And <code>nda_num</code> is not always the product the patient used: 40,597 Zepbound rows carry Mounjaro's number. Signals stay at Drug level; Product is a drill-down. Companion page: <a href="rxnorm.html">rxnorm.html</a> (Drug level).</p>
+  <nav class="toc" aria-label="Parts">
+    <a href="#overview">Overview</a><a href="#p1">1 Get it</a><a href="#p2">2 One record</a><a href="#p3">3 Messy</a><a href="#p4">4 Joins + labels</a><a href="#p5">5 How often it changes</a><a href="#p6">6 Decision</a><a href="#p7">7 What moves forward</a>
+  </nav>
+</header>
+
+<section id="overview">
+  <div class="eyebrow">Overview</div>
+  <h2>How many of our FAERS rows reach a Product, then a label</h2>
+  <p>Start: every FAERS drug row in 2 quarters where one of our 13 ingredients is a suspect (PS, SS or I), after the RxNorm step. Rows, not reports.</p>
+  <div class="funnel" role="list" aria-label="Suspect rows reaching a Product and a label">
+    <div class="frow" role="listitem"><span>Suspect rows of our 13</span><span class="bar-wrap"><span class="bar" style="display:block;width:100%"></span></span><span class="v">142,035</span></div>
+    <div class="frow" role="listitem"><span><code>nda_num</code> filled</span><span class="bar-wrap"><span class="bar" style="display:block;width:73.1%"></span></span><span class="v">103,807</span></div>
+    <div class="frow" role="listitem"><span>…found in Drugs@FDA, same ingredient = Product</span><span class="bar-wrap"><span class="bar" style="display:block;width:72.8%"></span></span><span class="v">103,349</span></div>
+    <div class="frow" role="listitem"><span>…that Product has a DailyMed label</span><span class="bar-wrap"><span class="bar" style="display:block;width:72.1%"></span></span><span class="v">102,445</span></div>
+    <div class="frow" role="listitem"><span>Blank <code>nda_num</code>, but brand name fits exactly 1 application</span><span class="bar-wrap"><span class="bar" style="display:block;width:9.9%"></span></span><span class="v">+14,009</span></div>
+  </div>
+  <p class="meta">Label step: 904 reached rows sit on 40 applications with no DailyMed label (99.1% of reached rows have one).</p>
+</section>
+
+<hr>
+
+<section id="p1" class="stage">
+  <div class="num">1</div>
+  <div class="stage-body">
+    <h2>Get it</h2>
+    <div class="part"><div class="label">Two copies of the same data</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Route</th><th>Format</th><th>Size</th><th>Freshness today</th></tr></thead>
+        <tbody>
+          <tr><td><b>fda.gov "Drugs@FDA Data Files"</b></td><td>One zip, 12 tab-separated tables, CRLF line ends</td><td>6.1 MB (<code>datdaf20261020.zip</code>)</td><td>Files stamped 19 Oct 14:30. FDA says "updated each morning, Monday through Friday".</td></tr>
+          <tr><td>openFDA <code>drug/drugsfda</code></td><td>One JSON file, nested, plus an <code>openfda</code> block</td><td>8.8 MB zipped, 124 MB unzipped, 29,390 records</td><td>last_updated 2026-10-16</td></tr>
+        </tbody>
+      </table></div>
+      <p>We use the fda.gov zip. It is fresher, flat, and small enough to reload in full every day. The openFDA copy adds harmonised fields, but they are empty for our biggest products (part 3).</p>
+    </div>
+    <div class="part"><div class="label">The tables we need</div>
+      <div class="scroll"><table>
+        <thead><tr><th>File</th><th>One row =</th><th class="n">Rows</th><th>Key columns</th></tr></thead>
+        <tbody>
+          <tr><td><code>Applications</code></td><td>one application</td><td class="n">29,405</td><td><code>ApplNo, ApplType, SponsorName</code> (NDA 5,905 · ANDA 23,015 · BLA 485)</td></tr>
+          <tr><td><code>Products</code></td><td>one strength + form in an application</td><td class="n">51,904</td><td><code>ApplNo, ProductNo, Form, Strength, DrugName, ActiveIngredient</code></td></tr>
+          <tr><td><code>MarketingStatus</code></td><td>status of one product</td><td class="n">52,513</td><td>1 Prescription · 2 OTC · 3 Discontinued · 4 None (tentative)</td></tr>
+          <tr><td><code>Submissions</code></td><td>one FDA action (approval of an original or supplement)</td><td class="n">194,236</td><td><code>SubmissionType, SubmissionNo, SubmissionClassCodeID, SubmissionStatusDate</code></td></tr>
+          <tr><td><code>ApplicationDocs</code></td><td>one letter or label PDF</td><td class="n">81,303</td><td><code>ApplicationDocsURL, ApplicationDocsDate</code></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+</section>
+
+<section id="p2" class="stage">
+  <div class="num">2</div>
+  <div class="stage-body">
+    <h2>What one record looks like</h2>
+    <div class="part"><div class="label">FAERS row → application 209637, exactly as the files hold it</div>
+<pre>FAERS DRUG   165743083$16574308$1$PS$OZEMPIC$SEMAGLUTIDE$1$$0.5 mg, qw$...$209637$0.5$MG$Solution for injection$/WK
+                                                                    ^ nda_num
+Applications 209637  NDA   (no notes)  NOVO
+Products     209637  001  SOLUTION;SUBCUTANEOUS  2MG/1.5ML (1.34MG/ML)  OZEMPIC  SEMAGLUTIDE   → Discontinued
+Products     209637  002  SOLUTION;SUBCUTANEOUS  4MG/3ML (1.34MG/ML)    OZEMPIC  SEMAGLUTIDE   → Prescription
+Products     209637  003  SOLUTION;SUBCUTANEOUS  8MG/3ML (2.68MG/ML)    OZEMPIC  SEMAGLUTIDE   → Prescription
+             … 7 products in this application
+Submissions  209637  LABELING  SUPPL 44  AP  2026-08-27
+Submissions  209637  LABELING  SUPPL 38  AP  2026-06-01</pre>
+      <p>FAERS names the application, never the product line. So one Product in our ontology = one application (e.g. "NDA 209637 · Ozempic injection · Novo"), not one strength.</p>
+    </div>
+    <div class="part"><div class="label">Application → label, two ways (real responses)</div>
+<pre>DailyMed  GET /services/v2/spls.json?application_number=NDA209637
+  → 6 labels:  adec4fd2…  v20  2026-06-10  OZEMPIC … [NOVO NORDISK PHARMACEUTICAL INDUSTRIES, LP]   ← sponsor's own
+               42bdd912…  v1   2026-07-31  OZEMPIC … [A-S MEDICATION SOLUTIONS]                        ← repackager
+               + 4 more A-S Medication Solutions copies
+
+Label XML  &lt;approval&gt;&lt;id extension="NDA209637" root="2.16.840.1.113883.3.150"/&gt;
+             &lt;code code="C73594" displayName="NDA"/&gt; …&lt;/approval&gt;</pre>
+    </div>
+  </div>
+</section>
+
+<section id="p3" class="stage">
+  <div class="num">3</div>
+  <div class="stage-body">
+    <h2>What's messy (measured)</h2>
+    <div class="mess"><div class="label">Opioid reports mostly don't say which product</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Ingredient</th><th class="n">Suspect rows</th><th class="n">Reach a Product via <code>nda_num</code></th><th class="n"><code>nda_num</code> blank</th><th class="n">+ brand fallback</th></tr></thead>
+        <tbody>
+          <tr><td>buprenorphine</td><td class="n">3,963</td><td class="n">56.8%</td><td class="n">42.4%</td><td class="n">71.8%</td></tr>
+          <tr><td>fentanyl</td><td class="n">3,132</td><td class="n">46.1%</td><td class="n">53.8%</td><td class="n">46.2%</td></tr>
+          <tr><td>hydrocodone</td><td class="n">1,074</td><td class="n">58.6%</td><td class="n">37.8%</td><td class="n">68.3%</td></tr>
+          <tr><td>hydromorphone</td><td class="n">3,584</td><td class="n"><b>18.9%</b></td><td class="n">80.7%</td><td class="n">19.1%</td></tr>
+          <tr><td>methadone</td><td class="n">899</td><td class="n">35.5%</td><td class="n">64.4%</td><td class="n">35.5%</td></tr>
+          <tr><td>morphine</td><td class="n">4,153</td><td class="n">29.6%</td><td class="n">69.9%</td><td class="n">30.8%</td></tr>
+          <tr><td>oxycodone</td><td class="n">9,112</td><td class="n">37.6%</td><td class="n">61.6%</td><td class="n">38.5%</td></tr>
+          <tr><td>tramadol</td><td class="n">4,398</td><td class="n">30.8%</td><td class="n">68.9%</td><td class="n">31.1%</td></tr>
+          <tr><td><b>8 opioids</b></td><td class="n"><b>30,315</b></td><td class="n"><b>37.4%</b></td><td class="n">—</td><td class="n"><b>40.2%</b></td></tr>
+          <tr><td>semaglutide</td><td class="n">29,692</td><td class="n">77.5%</td><td class="n">22.1%</td><td class="n">79.6%</td></tr>
+          <tr><td>liraglutide</td><td class="n">1,980</td><td class="n">74.9%</td><td class="n">25.1%</td><td class="n">96.8%</td></tr>
+          <tr><td>dulaglutide</td><td class="n">4,334</td><td class="n">80.6%</td><td class="n">19.3%</td><td class="n">99.1%</td></tr>
+          <tr><td>exenatide</td><td class="n">30</td><td class="n">16.7%</td><td class="n">80.0%</td><td class="n">63.3%</td></tr>
+          <tr><td>tirzepatide</td><td class="n">75,685</td><td class="n">84.6%*</td><td class="n">15.2%</td><td class="n">99.5%</td></tr>
+          <tr><td><b>5 GLP-1</b></td><td class="n"><b>111,721</b></td><td class="n"><b>82.4%</b></td><td class="n">—</td><td class="n"><b>94.1%</b></td></tr>
+        </tbody>
+      </table></div>
+      <p>Brand fallback = blank <code>nda_num</code>, and the reported name equals a Drugs@FDA product name that belongs to exactly one application of the same ingredient (MOUNJARO 6,185 rows, ZEPBOUND 5,069, TRULICITY 798). It barely helps opioids: their blank rows say <code>OXYCODONE</code> (2,624 rows, no exact product name) or <code>HYDROMORPHONE HYDROCHLORIDE</code> (1,423 rows, 25 generic applications). <b>Which generic maker is unknowable.</b> * see the Zepbound problem below.</p>
+    </div>
+    <div class="mess"><div class="label">The number is not always the product the patient used</div>
+      <ul>
+        <li><b>ZEPBOUND rows carry Mounjaro's number.</b> 40,597 suspect rows named ZEPBOUND or ZEPBOUND KWIKPEN have <code>nda_num</code> 215866 (Mounjaro, diabetes). Zepbound has its own application, 217806 (weight loss). Across all ZEPBOUND rows: 40,610 say 215866, <b>1</b> says 217806, 5,853 are blank. Same ingredient, so Drug counts are fine. But the Product and the reference label would be wrong for 54% of all tirzepatide suspect rows.</li>
+        <li>Smaller cases of the same thing: VICTOZA rows on Saxenda's number (58), SUBUTEX on Suboxone's (13), NORSPAN on Butrans's (9).</li>
+        <li><b>Wrong application entirely: 64 rows.</b> The number exists but holds a different ingredient: 050273 Achromycin (tetracycline) on 29 buprenorphine rows; 072169 ibuprofen on 31 oxycodone/tramadol rows. This is why we check that the application's ingredient matches.</li>
+      </ul>
+    </div>
+    <div class="mess"><div class="label">Number format</div>
+      <ul>
+        <li>FAERS drops leading zeros. Across all FAERS rows, 61,336 five-digit numbers match only after padding to 6 digits (559 still don't). <b>Pad to 6.</b></li>
+        <li><code>99</code> is a placeholder: 263 of our rows (tirzepatide 136, semaglutide 123). Other unknown numbers: 29038 on 43 oxycodone rows, 059175 on 39 hydrocodone rows, 38424 on 15 hydromorphone rows. Not in Drugs@FDA; cause unverified.</li>
+        <li>387 rows carry a number Drugs@FDA doesn't know; 7 are longer than 6 digits (e.g. <code>20210014</code>).</li>
+      </ul>
+    </div>
+    <div class="mess"><div class="label">One brand, many applications; one label, many applications</div>
+      <ul>
+        <li>The name OZEMPIC belongs to 2 applications: 209637 (injection) and 213051 (the tablet, also sold as Rybelsus). WEGOVY to 2: 215256 (injection) and 218316 (tablet, approved 2025-12-22). A name alone can't pick the product, and <code>route</code> is blank on 89% of semaglutide rows (walkthrough).</li>
+        <li>The Wegovy label <code>ee06186f…</code> lists <b>both</b> NDA215256 and NDA218316 in its <code>&lt;approval&gt;</code> blocks. Label ↔ application is many-to-many.</li>
+        <li>Drugs@FDA holds <b>664 applications</b> for our 13. Hydrocodone alone has 205 (192 generics, 199 combinations, 81 sponsors). FAERS rows reach 241 of them.</li>
+      </ul>
+    </div>
+    <div class="mess"><div class="label">openFDA's harmonised fields are empty where it matters</div>
+      <ul>
+        <li><code>openfda.spl_set_id</code> is filled for 11,885 of 29,390 applications, and for 161 of the 241 we reach. It is <b>empty</b> for Ozempic (NDA209637), Wegovy (NDA215256, NDA218316), Hysingla (NDA206627) and Actiq (NDA020747).</li>
+        <li>openFDA's label search by <code>openfda.application_number:"NDA209637"</code> returns 3 repackager labels and <b>misses Novo's own label</b>, whose <code>openfda</code> block is empty.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="p4" class="stage">
+  <div class="num">4</div>
+  <div class="stage-body">
+    <h2>How it joins to the others</h2>
+    <div class="part"><div class="label">The chain</div>
+<pre>FAERS nda_num "209637" ──pad to 6──▶ Applications.ApplNo 209637 ──ApplType──▶ "NDA209637"
+                                         │                                    │
+                     Products.ActiveIngredient "SEMAGLUTIDE"         DailyMed spls.json?application_number=
+                                         │                           = label &lt;approval&gt;&lt;id extension=…&gt;
+                          salt strip → RxNorm IN 1991302                       │
+                                   (Drug)                               setid adec4fd2… (Label)</pre>
+    </div>
+    <div class="part"><div class="label">Application → DailyMed label: % with a label</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Applications</th><th class="n">Count</th><th class="n">With ≥1 label</th><th class="n">Weighted by FAERS rows</th><th class="n">More than 1 label</th></tr></thead>
+        <tbody>
+          <tr><td>Reached from FAERS</td><td class="n">241</td><td class="n">201 (83.4%)</td><td class="n"><b>99.1%</b></td><td class="n">128</td></tr>
+          <tr><td>…NDA</td><td class="n">49</td><td class="n">43 (87.8%)</td><td class="n">99.9%</td><td class="n">27</td></tr>
+          <tr><td>…ANDA (generic)</td><td class="n">190</td><td class="n">156 (82.1%)</td><td class="n">85.6%</td><td class="n">100</td></tr>
+          <tr><td>…BLA</td><td class="n">2</td><td class="n">2</td><td class="n">100%</td><td class="n">1</td></tr>
+          <tr><td>All still-marketed applications for our 13</td><td class="n">256</td><td class="n">237 (92.6%)</td><td class="n">—</td><td class="n">145</td></tr>
+        </tbody>
+      </table></div>
+      <ul>
+        <li>Of the 40 reached applications with no label, <b>35 are discontinued</b>. Biggest: ANDA 205257 Mylan tramadol ER (398 rows), ANDA 210162 Mylan buprenorphine patch (133). Reports outlive products.</li>
+        <li>128 of 201 have more than one label, mostly repackagers. A first-word match of labeler to sponsor finds the sponsor's own label for 138 of 201. <span class="pill p-warn">crude</span> the other 63 need a better rule; not checked by hand.</li>
+        <li>The application number really is in the label: 6 of 6 label files checked carry it in <code>&lt;approval&gt;</code>.</li>
+        <li>Drugs@FDA → Drug: <code>ActiveIngredient</code> split on <code>;</code>, salt-stripped. It needed two words the walkthrough list lacked: <code>SYNTHETIC</code> (all exenatide products are "EXENATIDE SYNTHETIC") and <code>POLISTIREX</code> (hydrocodone). Without them, exenatide had 0 applications.</li>
+        <li>Drugs@FDA → recalls: through the NDC Directory's application number. <span class="pill p-warn">recalls session</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="p5" class="stage">
+  <div class="num">5</div>
+  <div class="stage-body">
+    <h2>How often it changes</h2>
+    <div class="part">
+      <div class="scroll"><table>
+        <thead><tr><th>What</th><th>Measured</th></tr></thead>
+        <tbody>
+          <tr><td>File published</td><td>Every weekday morning (FDA page). Today's file: <code>datdaf20261020.zip</code>, tables stamped 19 Oct. Newest action date inside: 2026-10-16.</td></tr>
+          <tr><td>openFDA copy</td><td>last_updated 2026-10-16: at least 4 days behind</td></tr>
+          <tr><td>Whole database</td><td>1,191 FDA actions in the last 90 days (1,150 approvals, 41 tentative), 46–208 a week, 4 on weekends</td></tr>
+          <tr><td><b>Our 13</b></td><td><b>715 actions in 365 days</b> on 349 applications: 396 labeling, 284 REMS (risk-management programme), 17 new applications. 714 are approvals (AP), 1 a tentative approval (TA).</td></tr>
+        </tbody>
+      </table></div>
+      <p><b>Our slice changes in waves.</b> A normal month has 4–35 actions on our 13. Two class-wide waves hit the opioids: <b>22 Dec 2025</b>, 195 labeling approvals in one day (307 in the month across 230 applications), and <b>18 Jun 2026</b>, 255 REMS approvals in one day. A "what changed" screen must group these, or the officer gets 255 identical alerts.</p>
+      <p>New applications in the last year: 7 generic liraglutide ANDAs, Wegovy tablets (NDA 218316, 2025-12-22), 5 buprenorphine generics (latest ANDA 221145, Gland, 2026-10-15), one generic each for hydrocodone, morphine and tramadol, and a generic semaglutide that is only <b>tentatively</b> approved (ANDA 220314, Apotex, 2026-04-07: it can't be sold yet, so it must not show as a new product).</p>
+      <p><b>A lag to check:</b> Ozempic's labeling supplement 44 was approved 2026-08-27 (label PDF posted 08-28), but Novo's DailyMed label is still v20 of 2026-06-10. One example, not a census. <span class="pill p-warn">labels session</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="p6" class="stage">
+  <div class="num">6</div>
+  <div class="stage-body">
+    <h2>Decision to propose</h2>
+    <div class="decide"><div class="label">Proposed</div>
+      <ul>
+        <li><b>Product = one FDA application</b> (<code>ApplType + ApplNo</code>, e.g. NDA209637). Not strength-level: FAERS can't reach it.</li>
+        <li><b>FAERS → Product rule:</b> pad <code>nda_num</code> to 6 digits; accept only if the application's ingredient matches the row's RxNorm ingredient. <code>99</code>, blank, unknown or mismatched → Product = unknown, Drug still known.</li>
+        <li><b>Brand beats number:</b> if the reported name is a brand owned by exactly one application of the same ingredient, and <code>nda_num</code> points elsewhere, use the brand's application. Tag <span class="pill p-warn">nda overridden</span>. Fixes the 40,597 Zepbound rows.</li>
+        <li><b>Blank number:</b> use the unique-brand fallback (+14,009 rows). Otherwise leave Product unknown. Don't guess a generic maker.</li>
+        <li><b>Signals stay at Drug level</b> (D027). The Product view is a drill-down that shows "% of reports with a known product" (opioids ~40%, GLP-1 ~94%).</li>
+        <li><b>Application → label:</b> read the application numbers from each label's <code>&lt;approval&gt;</code> block (the label pipeline parses the XML anyway); DailyMed's <code>application_number</code> search as a cross-check. Store as a many-to-many link. Reference label = the sponsor's own label, else the newest. Don't use openFDA's harmonised fields.</li>
+        <li><b>Ingest:</b> reload the 6 MB zip in full each weekday (a snapshot, no incremental logic needed). Diff <code>Submissions</code> day to day to emit ChangeEvents, grouped by date + submission class.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="p7" class="stage">
+  <div class="num">7</div>
+  <div class="stage-body">
+    <h2>What moves forward</h2>
+    <div class="part plain">
+      <ul>
+        <li><b>Into the build:</b> <code>product</code> (one row per application: type, number, sponsor, brand names, forms, marketed yes/no) · <code>product_ingredient</code> (application → IN RxCUI) · <code>product_label</code> (application ↔ setid, many-to-many, sponsor flag) · on each FAERS drug row: <code>product_id</code> + how it was set (nda / brand override / brand fallback / unknown).</li>
+        <li><b>Into monitoring:</b> % of suspect rows with a known product, per ingredient per quarter · count of overridden numbers · count of unknown numbers (<code>99</code> and others).</li>
+        <li><b>Into ChangeEvent:</b> new application approved, labeling supplement approved, REMS change, product discontinued. Grouped per day and class.</li>
+        <li><b>Open questions:</b> is the Zepbound → 215866 pattern a reporter convention we should ask FDA about? · a better reference-label rule for the 63 unclear cases · approval → DailyMed lag (labels session).</li>
+        <li><b>Your hand-check:</b> open <a href="https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&amp;ApplNo=215866">Drugs@FDA 215866</a> and <a href="https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&amp;ApplNo=217806">217806</a>: Mounjaro and Zepbound are separate applications.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</div>

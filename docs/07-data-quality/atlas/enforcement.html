@@ -1,0 +1,453 @@
+<title>FDA Recalls Atlas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column; each pipeline stage is a numbered block (real order) with 4 fixed parts:
+   what it is · what it looks like (real rows) · what's messy (measured) · decision. Clinical paper + teal ink. */
+:root{
+  --bg:#f5f7f6; --surface:#ffffff; --ink:#15201e; --muted:#5a6966; --line:#d9e1df;
+  --accent:#0d6b66; --accent-soft:#e1efed;
+  --warn:#9a5b00; --warn-soft:#fbf0dc; --bad:#a3262c; --bad-soft:#f8e3e3; --good:#2c6e2f; --good-soft:#e3f1e2;
+  --code-bg:#eef2f1;
+  --f-display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1514; --surface:#162020; --ink:#e4ecea; --muted:#9fb0ac; --line:#2a3836;
+  --accent:#5cc2b9; --accent-soft:#163633;
+  --warn:#f0b65a; --warn-soft:#33270f; --bad:#f08a8f; --bad-soft:#3a1a1c; --good:#8fd18f; --good-soft:#18301a;
+  --code-bg:#111a19; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0f1514; --surface:#162020; --ink:#e4ecea; --muted:#9fb0ac; --line:#2a3836;
+  --accent:#5cc2b9; --accent-soft:#163633;
+  --warn:#f0b65a; --warn-soft:#33270f; --bad:#f08a8f; --bad-soft:#3a1a1c; --good:#8fd18f; --good-soft:#18301a;
+  --code-bg:#111a19; color-scheme:dark }
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding-block:40px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:56px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(2rem,4.5vw,2.8rem)}
+h2{font-size:1.65rem}
+h3{font-size:1.1rem;font-family:var(--f-body);font-weight:700}
+p{margin:0;max-width:68ch}
+.lede{font-size:1.1rem;color:var(--muted);max-width:66ch}
+.eyebrow{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+header{display:grid;gap:14px}
+.meta{font-size:.85rem;color:var(--muted)}
+section{display:grid;gap:18px}
+.stack{display:grid;gap:12px}
+code,.mono{font-family:var(--f-mono);font-size:.86em}
+code{background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{font-family:var(--f-mono);font-size:.78rem;line-height:1.5;background:var(--code-bg);border:1px solid var(--line);border-radius:6px;padding:12px 14px;margin:0;overflow-x:auto;white-space:pre}
+.scroll{overflow-x:auto;min-width:0}
+table{border-collapse:collapse;width:100%;font-size:.88rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+td.n,th.n{text-align:right}
+/* stage block */
+.stage{display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px}
+.num{font-family:var(--f-display);font-size:2.4rem;font-weight:700;color:var(--accent);line-height:1}
+.stage-body{display:grid;gap:18px;min-width:0}
+.part{display:grid;gap:8px;min-width:0}
+.part > .label{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mess{background:var(--warn-soft);border-left:3px solid var(--warn);padding:12px 14px;border-radius:0 6px 6px 0;display:grid;gap:8px}
+.mess .label{color:var(--warn)}
+.decide{background:var(--accent-soft);border-left:3px solid var(--accent);padding:12px 14px;border-radius:0 6px 6px 0;display:grid;gap:6px}
+.decide .label{color:var(--accent)}
+.mess ul,.decide ul,.plain ul{margin:0;padding-left:20px;display:grid;gap:4px}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:.72rem;padding:1px 7px;border-radius:999px;white-space:nowrap}
+.p-good{background:var(--good-soft);color:var(--good)} .p-bad{background:var(--bad-soft);color:var(--bad)}
+.p-warn{background:var(--warn-soft);color:var(--warn)} .p-acc{background:var(--accent-soft);color:var(--accent)}
+.strike{text-decoration:line-through;color:var(--muted)}
+/* funnel */
+.funnel{display:grid;gap:6px}
+.frow{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr) 7.5rem;gap:12px;align-items:center;font-size:.86rem}
+.bar{height:14px;background:var(--accent);border-radius:2px;min-width:2px}
+.frow .v{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:14px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;display:grid;gap:8px;min-width:0}
+.box h3{font-size:.95rem}
+.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem}
+.toc a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+.toc a:hover,.toc a:focus-visible{border-bottom-color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+hr{border:0;border-top:1px solid var(--line);margin:0}
+.pushback{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:grid;gap:10px}
+@media (max-width:640px){
+  .stage{grid-template-columns:1fr;gap:6px}
+  .num{font-size:1.8rem}
+  .frow{grid-template-columns:minmax(0,1fr) 6.5rem}
+  .frow .bar-wrap{grid-column:1 / -1;order:3}
+}
+</style>
+<style>
+/* Additions for the atlas: a 53-week strip chart (bars = new recall rows, dot = a recall closed that week). */
+.weeks{display:grid;gap:6px}
+.strip{display:flex;align-items:flex-end;gap:2px;height:110px;border-bottom:1px solid var(--line);position:relative}
+.wk{flex:1 1 0;min-width:0;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;position:relative}
+.wk i{display:block;width:100%;height:var(--h);background:var(--accent);border-radius:2px 2px 0 0}
+.wk.z i{height:2px;background:var(--line)}
+.wk b{position:absolute;bottom:-12px;width:7px;height:7px;border-radius:50%;background:var(--bad)}
+.axis{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);padding-top:10px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.8rem;color:var(--muted)}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px;border-radius:2px;background:var(--accent)}
+.legend span.dot::before{border-radius:50%;background:var(--bad)}
+.quote{border-left:3px solid var(--line);padding:4px 0 4px 14px;color:var(--ink);font-style:italic;max-width:66ch}
+</style>
+
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Data atlas · Recalls · Phase 1 Define · 2026-10-20</div>
+  <h1>FDA recalls: which of our 13 drugs have an active recall?</h1>
+  <p class="lede">This is the safety officer's question 2. The data that answers it is the FDA Enforcement Report (the weekly list of drug recalls). This page walks every recall that mentions one of our 13 ingredients, from download to what we would show her. Every number was measured by <code>prototypes/explore/recalls_ndc_atlas.py</code> on the openFDA bulk file exported 2026-10-14. Nothing is illustrative unless it says so.</p>
+  <p class="meta">Companion page: <a href="ndc-directory.html">NDC Directory atlas</a> (the product list we use to look up recalled packages). Earlier profile: <a href="../source-profiles/03-enforcement.md">03-enforcement.md</a>.</p>
+  <nav class="toc" aria-label="Parts">
+    <a href="#overview">Overview</a><a href="#s1">1 Get it</a><a href="#s2">2 One record</a><a href="#s3">3 Messy</a><a href="#s4">4 Joins</a><a href="#s5">5 How often it changes</a><a href="#s6">6 Decision</a><a href="#s7">7 What moves forward</a>
+  </nav>
+</header>
+
+<section id="overview">
+  <div class="eyebrow">Overview</div>
+  <h2>From 18,010 drug recalls to the ones she needs to see</h2>
+  <p>A recall row is one recalled product. One recall <b>event</b> (one firm, one problem) can hold many products. The funnel shows how many rows survive each step. The last two rows are what the proposed "active" rule in part 6 leaves on her screen.</p>
+  <div class="funnel" role="list" aria-label="Recall rows through the pipeline">
+    <div class="frow" role="listitem"><span>Drug recall rows, all drugs, 2012–2026</span><span class="bar-wrap"><span class="bar" style="display:block;width:100%"></span></span><span class="v">18,010</span></div>
+    <div class="frow" role="listitem"><span>…that name one of our 13 ingredients</span><span class="bar-wrap"><span class="bar" style="display:block;width:4.94%"></span></span><span class="v">890</span></div>
+    <div class="frow" role="listitem"><span>…with an NDC (package code) in the text</span><span class="bar-wrap"><span class="bar" style="display:block;width:2.93%"></span></span><span class="v">527</span></div>
+    <div class="frow" role="listitem"><span>…whose NDC RxNorm or the NDC Directory knows</span><span class="bar-wrap"><span class="bar" style="display:block;width:2.30%"></span></span><span class="v">414</span></div>
+    <div class="frow" role="listitem"><span>Status "Ongoing" (any NDC or none)</span><span class="bar-wrap"><span class="bar" style="display:block;width:0.64%"></span></span><span class="v">116</span></div>
+    <div class="frow" role="listitem"><span>Active by the proposed rule (rows)</span><span class="bar-wrap"><span class="bar" style="display:block;width:0.37%"></span></span><span class="v">66</span></div>
+    <div class="frow" role="listitem"><span>…as recall events (what she reads)</span><span class="bar-wrap"><span class="bar" style="display:block;width:0.16%"></span></span><span class="v">29</span></div>
+  </div>
+</section>
+
+<hr>
+
+<!-- 1 GET IT -->
+<section id="s1" class="stage">
+  <div class="num">1</div>
+  <div class="stage-body">
+    <h2>Get it</h2>
+    <div class="part"><div class="label">What it is</div>
+      <p>FDA publishes the Enforcement Report every <b>Wednesday</b>. openFDA (FDA's public API) serves the same rows as an API and as one bulk file. The bulk file holds every drug recall since 2012. It is small: 4.0 MB zipped, 28 MB unzipped. So the pipeline can reload all of it every week.</p>
+      <div class="scroll"><table>
+        <thead><tr><th>Route</th><th>Address</th><th>What you get</th><th>Measured</th></tr></thead>
+        <tbody>
+          <tr><td>Bulk (proposed)</td><td><code>download.open.fda.gov/drug/enforcement/drug-enforcement-0001-of-0001.json.zip</code></td><td>All 18,010 drug recalls, one JSON file</td><td>Export 2026-10-14 · newest report 2026-10-07</td></tr>
+          <tr><td>API</td><td><code>api.fda.gov/drug/enforcement.json?search=…</code></td><td>Same rows, 1,000 per call max</td><td><code>last_updated</code> 2026-10-07</td></tr>
+          <tr><td>FDA web</td><td>accessdata.fda.gov Enforcement Report</td><td>Human search, weekly report</td><td>Hand-check only</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="part"><div class="label">How we pick "our" recalls</div>
+      <p>The drug is named only in free text (<code>product_description</code>). We match the 13 ingredient names as <b>whole words</b>, ignoring case. That keeps apomorphine out of morphine (2 apomorphine recalls excluded). Tall-man spellings such as "fentaNYL" and "HYDROmorphone" still match. Adding brand names (Percocet, Norco, Ozempic…) found only <b>1</b> extra recall (a Percocet row). So ingredient words are enough.</p>
+    </div>
+    <div class="mess"><div class="label">What's messy (measured)</div>
+      <ul>
+        <li>The newest report in the bulk file is 2026-10-07. Today is 2026-10-20. The data is <b>13 days old</b>, and the 2026-10-14 report is not in it yet.</li>
+        <li>A recall reaches the report a median <b>42 days</b> after the firm started it (<code>recall_initiation_date</code> → <code>report_date</code>).</li>
+      </ul>
+    </div>
+    <div class="decide"><div class="label">Decision to propose</div>
+      <ul>
+        <li>Load the bulk file once a week (Thursday). Keep each weekly file as a raw snapshot. Show the "as of" date on screen (D028).</li>
+        <li>Select our recalls by whole-word ingredient match on <code>product_description</code>. Brands are not needed.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 2 ONE RECORD -->
+<section id="s2" class="stage">
+  <div class="num">2</div>
+  <div class="stage-body">
+    <h2>What one record looks like (real rows)</h2>
+    <div class="part"><div class="label">A Class I recall from a big manufacturer</div>
+      <p>Class I means the product could cause serious harm or death. This is the newest Class I recall for our drugs. A box labelled morphine held a syringe of Dilaudid (hydromorphone).</p>
+<pre>{ "recall_number": "D-0788-2026",  "event_id": "99533",
+  "status": "Ongoing",  "classification": "Class I",
+  "recalling_firm": "Fresenius Kabi USA, LLC",
+  "product_description": "Morphine Sulfate Injection, USP, 2 mg /mL, 1 mL single-dose Simplist prefilled
+     syringes, ... Unit of Use NDC Number 76045-004-01; Unit of Sale NDC Number 76045-004-11",
+  "reason_for_recall": "Labeling: Label Mixup: MicroVault labeled as Morphine 2 mg/1 mL, contains a
+     Prefilled Syringe of Dilaudid 0.5 mg/0.5 mL.",
+  "code_info": "Lot #: 6402820, Exp. Date 12/2028",
+  "recall_initiation_date": "20260804",  "report_date": "20260826",  "termination_date": null,
+  "openfda": { "application_number": ["NDA204223"], "rxcui": ["894912", ...], "spl_set_id": [...] } }</pre>
+      <p>Traced by the script: 2 NDCs found in the text → RxNorm says <code>ACTIVE</code>, RxCUI 998212 "1 ML morphine sulfate 2 MG/ML Prefilled Syringe" → NDC Directory says NDA204223, Fresenius Kabi. Lot expires 12/2028, so it is still on shelves.</p>
+    </div>
+    <div class="part"><div class="label">A compounded semaglutide recall (the common case)</div>
+<pre>{ "recall_number": "D-0748-2026",  "event_id": "99505",
+  "status": "Ongoing",  "classification": "Class II",
+  "recalling_firm": "Apollo Care, LLC",
+  "product_description": "SEMAGLUTIDE 2.25MG (0.9 mg/mL), 2.5 mL Sterile Multi-Dose Vial, Rx Only,
+     For Subcutaneous Injection Only, APOLLO care, ... Columbia, MO 65202 NDC 71170-811-02",
+  "reason_for_recall": "Presence of Particulate Matter; identified as a nylon/polyamide and
+     silk/proteinaceous-type material",
+  "code_info": "Lot: AC-017114, Exp. 11/24/2026; AC-017164, AC-017204, AC-017205, Exp. 12/31/2026.",
+  "recall_initiation_date": "20260729",  "report_date": "20260819",
+  "openfda": {} }</pre>
+      <p>Traced: 1 NDC → RxNorm does <b>not</b> know it → found only in FDA's list of outsourcing-facility (503B) compounded products. No application number exists, because compounded drugs are not FDA-approved. The <code>openfda</code> block is empty.</p>
+    </div>
+    <div class="part"><div class="label">What to notice</div>
+      <ul class="plain">
+        <li>One row = one product. Apollo Care's event 99505 alone is 11 rows (11 vial sizes and strengths).</li>
+        <li>The useful identifiers (NDC, strength, firm) sit inside free text.</li>
+        <li><code>code_info</code> holds lot numbers and expiry dates. That is how we can tell if a product is still on shelves.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 3 MESSY -->
+<section id="s3" class="stage">
+  <div class="num">3</div>
+  <div class="stage-body">
+    <h2>What's messy (measured)</h2>
+    <div class="part"><div class="label">Categories, our 13 ingredients (890 rows, 238 events)</div>
+      <div class="compare">
+        <div class="box"><h3>Status</h3>
+          <div class="scroll"><table><tbody>
+            <tr><td>Terminated (FDA closed it)</td><td class="n">767</td></tr>
+            <tr><td>Ongoing</td><td class="n">116</td></tr>
+            <tr><td>Completed (firm done, FDA not yet closed)</td><td class="n">7</td></tr>
+          </tbody></table></div>
+        </div>
+        <div class="box"><h3>Class</h3>
+          <div class="scroll"><table><tbody>
+            <tr><td>Class I (serious harm)</td><td class="n">48</td><td class="n">6 ongoing</td></tr>
+            <tr><td>Class II</td><td class="n">780</td><td class="n">104 ongoing</td></tr>
+            <tr><td>Class III (unlikely harm)</td><td class="n">62</td><td class="n">6 ongoing</td></tr>
+          </tbody></table></div>
+        </div>
+        <div class="box"><h3>Reason (first match)</h3>
+          <div class="scroll"><table><tbody>
+            <tr><td>Sterility / contamination</td><td class="n">608</td></tr>
+            <tr><td>Potency (too weak / strong)</td><td class="n">69</td></tr>
+            <tr><td>Particulate / foreign matter</td><td class="n">57</td></tr>
+            <tr><td>Labeling / mix-up</td><td class="n">52</td></tr>
+            <tr><td>Impurity / degradation</td><td class="n">34</td></tr>
+            <tr><td>cGMP · container · dissolution · other</td><td class="n">70</td></tr>
+          </tbody></table></div>
+        </div>
+      </div>
+      <p>By year the firm started the recall: 2015 (158) and 2016 (134) are the peaks, from hospital compounders such as PharMEDium. Then 2019 (108), 2023 (93), 2025 (52), 2026 so far (34). All 890 are "Voluntary: Firm initiated".</p>
+      <div class="scroll"><table>
+        <thead><tr><th>Ingredient</th><th class="n">Rows</th><th class="n">Events</th><th class="n">Ongoing</th><th class="n">Class I</th><th class="n">Compounded</th><th class="n">With NDC</th><th class="n">Since 2024</th></tr></thead>
+        <tbody>
+          <tr><td>fentanyl</td><td class="n">357</td><td class="n">90</td><td class="n">22</td><td class="n">18</td><td class="n">258</td><td class="n">248</td><td class="n">18</td></tr>
+          <tr><td>hydromorphone</td><td class="n">189</td><td class="n">54</td><td class="n">3</td><td class="n">12</td><td class="n">140</td><td class="n">84</td><td class="n">2</td></tr>
+          <tr><td>morphine</td><td class="n">189</td><td class="n">68</td><td class="n">7</td><td class="n">15</td><td class="n">127</td><td class="n">65</td><td class="n">7</td></tr>
+          <tr><td>semaglutide</td><td class="n">54</td><td class="n">20</td><td class="n">47</td><td class="n">0</td><td class="n">33</td><td class="n">30</td><td class="n">43</td></tr>
+          <tr><td>buprenorphine</td><td class="n">32</td><td class="n">26</td><td class="n">6</td><td class="n">0</td><td class="n">7</td><td class="n">24</td><td class="n">5</td></tr>
+          <tr><td>oxycodone</td><td class="n">25</td><td class="n">23</td><td class="n">4</td><td class="n">1</td><td class="n">0</td><td class="n">24</td><td class="n">3</td></tr>
+          <tr><td>hydrocodone</td><td class="n">22</td><td class="n">20</td><td class="n">1</td><td class="n">4</td><td class="n">0</td><td class="n">22</td><td class="n">0</td></tr>
+          <tr><td>tirzepatide</td><td class="n">21</td><td class="n">8</td><td class="n">21</td><td class="n">1</td><td class="n">10</td><td class="n">8</td><td class="n">20</td></tr>
+          <tr><td>tramadol</td><td class="n">12</td><td class="n">12</td><td class="n">2</td><td class="n">0</td><td class="n">1</td><td class="n">11</td><td class="n">3</td></tr>
+          <tr><td>methadone</td><td class="n">11</td><td class="n">6</td><td class="n">1</td><td class="n">0</td><td class="n">7</td><td class="n">4</td><td class="n">1</td></tr>
+          <tr><td>liraglutide</td><td class="n">4</td><td class="n">2</td><td class="n">1</td><td class="n">1</td><td class="n">0</td><td class="n">4</td><td class="n">1</td></tr>
+          <tr><td>dulaglutide</td><td class="n">3</td><td class="n">2</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">3</td><td class="n">0</td></tr>
+          <tr><td>exenatide</td><td class="n">1</td><td class="n">1</td><td class="n">1</td><td class="n">0</td><td class="n">0</td><td class="n">1</td><td class="n">1</td></tr>
+        </tbody>
+      </table></div>
+      <p class="meta">A row can name two of our ingredients (30 rows do, e.g. fentanyl + morphine kits), so ingredient rows add up to more than 890.</p>
+    </div>
+    <div class="mess"><div class="label">What's messy (measured)</div>
+      <ul>
+        <li><b>The <code>openfda</code> block is nearly empty.</b> Filled on 74 of 890 rows (8.3%) and 18 of 116 Ongoing. For all drugs it is 17.4%. We cannot rely on FDA's own enrichment.</li>
+        <li><b>Only 59% carry an NDC.</b> 527 of 890 rows have an NDC in the text. 2015 is the worst year (14 of 158): PharMEDium used its own "Product code 2T6165" instead. Since 2021 most years are above 70%, but 2025 drops to 24 of 52.</li>
+        <li><b>Five NDC shapes.</b> 5-3-2 (313), 5-4-2 (158), 4-4-2 (91), 5-4-1 (63) and 10 written without dashes. 4 of those are 10 digits with no dashes, which can be split 3 ways. 63 rows list 2 or more NDCs (one per pack size).</li>
+        <li><b>Most of it is compounded.</b> 557 of 890 rows (63%) are from compounders: 527 say so in the text, 82 have an NDC whose labeler is on FDA's 503B list, 52 both. Of the 116 Ongoing, 64 are compounded.</li>
+        <li><b>Combination products.</b> 297 rows mix one of ours with another drug (fentanyl + bupivacaine, semaglutide + cyanocobalamin, tirzepatide + niacinamide). The other ingredient is not one of our 13, but the recall still counts for ours.</li>
+        <li><b>One event, many rows.</b> 238 events for 890 rows. The largest event has 103 rows (The Compounding Pharmacy of America). 140 events have just 1.</li>
+        <li><b>"Ongoing" lasts years.</b> The median Ongoing recall started 459 days ago. The oldest, D-057-2013, started in September 2012. Part 4 below has the full spread.</li>
+        <li><b>"Completed" has no end date.</b> All 7 Completed rows have <code>termination_date</code> empty. Every Terminated row has one.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 4 JOINS -->
+<section id="s4" class="stage">
+  <div class="num">4</div>
+  <div class="stage-body">
+    <h2>How it joins to the others</h2>
+    <div class="part"><div class="label">The chain we try, in order</div>
+<pre>recall text ──parse──▶ NDC ──RxNorm ndcstatus──▶ RxCUI ──▶ ingredient (Drug)
+                          └──NDC Directory──▶ product ──▶ application no. (Product) ──▶ label
+recall text ──whole-word ingredient match──▶ ingredient (Drug)          ← fallback, always works</pre>
+      <p>D027 says a recall belongs to a <b>Product</b> (application number), and Products roll up to a <b>Drug</b> (ingredient RxCUI). The table shows how far each step gets, for the 527 rows that have an NDC.</p>
+      <div class="scroll"><table>
+        <thead><tr><th>Step</th><th class="n">Rows</th><th class="n">Share</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>NDC → RxNorm gives any RxCUI</td><td class="n">396</td><td class="n">75%</td><td>207 of these are status <code>ALIEN</code> (known only from non-FDA sources), 114 <code>ACTIVE</code>, 75 <code>OBSOLETE</code></td></tr>
+          <tr><td>…and RxNorm's name confirms our ingredient</td><td class="n">315</td><td class="n">60%</td><td>78 come back named "PROPRIETARY": a licensed source we cannot show or check</td></tr>
+          <tr><td>NDC → NDC Directory (package or product)</td><td class="n">193</td><td class="n">37%</td><td>listed 89 · excluded/delisted 75 · 503B list 24 · unfinished 5</td></tr>
+          <tr><td>…with an application number</td><td class="n">150</td><td class="n">28%</td><td>The Product key. Compounded products have none</td></tr>
+          <tr><td>RxNorm <b>or</b> NDC Directory</td><td class="n">414</td><td class="n">79%</td><td>221 only via RxNorm, 18 only via the directory</td></tr>
+          <tr><td>Fails everywhere</td><td class="n">113</td><td class="n">21%</td><td>106 distinct NDCs · 81 compounded · <b>28 Ongoing</b></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="part"><div class="label">Compounded vs not</div>
+      <div class="scroll"><table>
+        <thead><tr><th></th><th class="n">Rows with NDC</th><th class="n">RxNorm RxCUI</th><th class="n">NDC Directory</th></tr></thead>
+        <tbody>
+          <tr><td>Compounded</td><td class="n">283</td><td class="n">190 (67%)</td><td class="n">26 (9%)</td></tr>
+          <tr><td>Not compounded</td><td class="n">244</td><td class="n">206 (84%)</td><td class="n">167 (68%)</td></tr>
+        </tbody>
+      </table></div>
+      <p>For compounded products the directory route almost never works, and RxNorm's answer is usually <code>ALIEN</code> or "PROPRIETARY". For the active set it is worse: of 116 Ongoing rows, 80 have an NDC, 36 get an RxCUI and 52 get any match (45%).</p>
+    </div>
+    <div class="part"><div class="label">Who fails everywhere</div>
+      <p>Top firms: Pharmakon (27 rows), ProRx (14), SCA Pharmaceuticals (9), Apollo Care (8). All 8 Ongoing examples the script lists are Apollo Care semaglutide vials (<code>71170-810-01</code>, <code>71170-724-04</code>, …). These are the same family as DQ29's <code>71170-950-25</code>. The labeler (first 5 digits) is known for 20 of the 113.</p>
+    </div>
+    <div class="part"><div class="label">Text-only fallback</div>
+      <p>The whole-word match finds the ingredient for all 494 rows that RxNorm's NDC lookup misses. It is how we selected the rows, so it never fails at the <b>Drug</b> level. Going further, to a strength or a clinical drug, does not work from text. We sent the first words of each description to RxNorm's approximate search:</p>
+      <ul class="plain">
+        <li>Top answer names our ingredient: 386 of 494 (78%).</li>
+        <li>Top answer has the right strength: 96 of 239 that state one (40%). "SEMAGLUTIDE 0.9mg" came back as "semaglutide 9 MG".</li>
+        <li>175 top answers are retired RxNorm concepts (143 not current, 32 obsolete).</li>
+      </ul>
+    </div>
+    <div class="mess"><div class="label">What's messy (measured)</div>
+      <ul>
+        <li><b>NDCs get reused.</b> D-0153-2017 is Hospira fentanyl, NDC <code>0409-4093-32</code>. Today the NDC Directory has that code on a chromium product. A recall NDC must be matched with its date in mind.</li>
+        <li>75 of the 193 directory hits are only in the <b>excluded</b> file (discontinued or inactivated products). Using the main file alone would lose 39% of directory matches.</li>
+        <li>11-digit NDCs written 5-4-2 cannot be turned back into the 10-digit form without a lookup. We compare everything as 11 digits.</li>
+      </ul>
+    </div>
+    <div class="decide"><div class="label">Decision to propose</div>
+      <ul>
+        <li>Identity order for a recall: <b>NDC → NDC Directory (all four files)</b> for Product, <b>NDC → RxNorm</b> for RxCUI, <b>whole-word text match</b> for the ingredient. Store which route matched.</li>
+        <li>Link a recall to a <b>Drug always</b>, to a <b>Product when found</b>. Do not use text matching to guess a Product or strength.</li>
+        <li>Accept RxNorm <code>ALIEN</code> only when its name confirms the ingredient. Treat "PROPRIETARY" as no match.</li>
+        <li>Rows with no NDC match go on a <b>review list</b> with a <span class="pill p-warn">compounded</span> tag where it applies. Never drop them.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 5 CHANGES -->
+<section id="s5" class="stage">
+  <div class="num">5</div>
+  <div class="stage-body">
+    <h2>How often it changes</h2>
+    <div class="part"><div class="label">New recall rows per week, our 13 drugs, last 53 weeks</div>
+      <div class="weeks" role="img" aria-label="Weekly new recall rows for our 13 drugs: 49 rows in 53 weeks, 33 weeks with none, one spike of 11 in the week of 17 August 2026. Red dots mark the 4 terminations, in February and March 2026.">
+        <div class="strip"><span class="wk" style="--h:18.2%" title="Week of Oct 20 2025: 2 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Oct 27 2025: 0 new, 0 closed"><i></i></span><span class="wk" style="--h:63.6%" title="Week of Nov 03 2025: 7 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Nov 10 2025: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Nov 17 2025: 0 new, 0 closed"><i></i></span><span class="wk" style="--h:9.1%" title="Week of Nov 24 2025: 1 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Dec 01 2025: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Dec 08 2025: 0 new, 0 closed"><i></i></span><span class="wk" style="--h:9.1%" title="Week of Dec 15 2025: 1 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Dec 22 2025: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Dec 29 2025: 0 new, 0 closed"><i></i></span><span class="wk" style="--h:18.2%" title="Week of Jan 05 2026: 2 new, 0 closed"><i></i></span><span class="wk" style="--h:18.2%" title="Week of Jan 12 2026: 2 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Jan 19 2026: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Jan 26 2026: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Feb 02 2026: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Feb 09 2026: 0 new, 0 closed"><i></i></span><span class="wk" style="--h:9.1%" title="Week of Feb 16 2026: 1 new, 3 closed"><i></i><b></b></span><span class="wk z" style="--h:0.0%" title="Week of Feb 23 2026: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Mar 02 2026: 0 new, 1 closed"><i></i><b></b></span><span class="wk" style="--h:54.5%" title="Week of Mar 09 2026: 6 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Mar 16 2026: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Mar 23 2026: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Mar 30 2026: 0 new, 0 closed"><i></i></span><span class="wk" style="--h:9.1%" title="Week of Apr 06 2026: 1 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Apr 13 2026: 0 new, 0 closed"><i></i></span><span class="wk" style="--h:9.1%" title="Week of Apr 20 2026: 1 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Apr 27 2026: 0 new, 0 closed"><i></i></span><span class="wk" style="--h:45.5%" title="Week of May 04 2026: 5 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of May 11 2026: 0 new, 0 closed"><i></i></span><span class="wk" style="--h:9.1%" title="Week of May 18 2026: 1 new, 0 closed"><i></i></span><span class="wk" style="--h:18.2%" title="Week of May 25 2026: 2 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Jun 01 2026: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Jun 08 2026: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Jun 15 2026: 0 new, 0 closed"><i></i></span><span class="wk" style="--h:9.1%" title="Week of Jun 22 2026: 1 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Jun 29 2026: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Jul 06 2026: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Jul 13 2026: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Jul 20 2026: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Jul 27 2026: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Aug 03 2026: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Aug 10 2026: 0 new, 0 closed"><i></i></span><span class="wk" style="--h:100.0%" title="Week of Aug 17 2026: 11 new, 0 closed"><i></i></span><span class="wk" style="--h:9.1%" title="Week of Aug 24 2026: 1 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Aug 31 2026: 0 new, 0 closed"><i></i></span><span class="wk" style="--h:9.1%" title="Week of Sep 07 2026: 1 new, 0 closed"><i></i></span><span class="wk" style="--h:9.1%" title="Week of Sep 14 2026: 1 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Sep 21 2026: 0 new, 0 closed"><i></i></span><span class="wk" style="--h:9.1%" title="Week of Sep 28 2026: 1 new, 0 closed"><i></i></span><span class="wk" style="--h:9.1%" title="Week of Oct 05 2026: 1 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Oct 12 2026: 0 new, 0 closed"><i></i></span><span class="wk z" style="--h:0.0%" title="Week of Oct 19 2026: 0 new, 0 closed"><i></i></span></div>
+        <div class="axis"><span>Oct 2025</span><span>Feb 2026</span><span>Jun 2026</span><span>Oct 2026</span></div>
+        <div class="legend"><span>new recall rows (tallest = 11)</span><span class="dot">a recall closed that week</span></div>
+      </div>
+      <div class="scroll"><table>
+        <thead><tr><th>Measure (last 52 weeks)</th><th class="n">Our 13</th><th class="n">All drugs</th></tr></thead>
+        <tbody>
+          <tr><td>New recall rows</td><td class="n">49</td><td class="n">809</td></tr>
+          <tr><td>New recall events</td><td class="n">22</td><td class="n">—</td></tr>
+          <tr><td>Mean new rows per week</td><td class="n">0.9</td><td class="n">15.3</td></tr>
+          <tr><td>Weeks with nothing new</td><td class="n">33 of 53</td><td class="n">4 of 53</td></tr>
+          <tr><td>Busiest week</td><td class="n">11 (one event)</td><td class="n">52</td></tr>
+          <tr><td>Recalls closed (terminated)</td><td class="n">4</td><td class="n">—</td></tr>
+        </tbody>
+      </table></div>
+      <p>Over 3 years the pattern holds: 125 new rows in 157 weeks, mean 0.8. Every <code>report_date</code> is a Wednesday.</p>
+    </div>
+    <div class="mess"><div class="label">What's messy (measured)</div>
+      <ul>
+        <li><b>Updates land on old rows.</b> The 4 recent closures (D-0296/0304/0308-2023, D-0385-2025) were reported in 2023 and 2025 and closed in 2026. Their <code>report_date</code> did not move. A load that only takes "new <code>report_date</code>" would never see them close.</li>
+        <li>No row has a "last modified" field. The only way to see a change is to compare this week's file to last week's.</li>
+        <li>Our earlier API pull (485 rows, data of 2026-10-07) vs the bulk file (2026-10-14): <b>0 rows changed</b>. Changes are rare, which makes each one worth a ChangeEvent.</li>
+      </ul>
+    </div>
+    <div class="decide"><div class="label">Decision to propose</div>
+      <ul>
+        <li>Weekly <b>full snapshot + diff</b> on <code>recall_number</code>, not an append by <code>report_date</code>. The file is 28 MB; a full reload costs nothing.</li>
+        <li>ChangeEvents from recalls: <code>RecallNew</code>, <code>RecallStatusChanged</code>, <code>RecallClassChanged</code>. Expect about 1 a week for our 13, with bursts of 10+ when one compounder recalls many vials. Group them by event in the feed.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 6 DECISION -->
+<section id="s6" class="stage">
+  <div class="num">6</div>
+  <div class="stage-body">
+    <h2>Decision: what counts as "active"?</h2>
+    <div class="part"><div class="label">How long "Ongoing" lasts (116 Ongoing rows, age from initiation)</div>
+      <div class="funnel" role="list" aria-label="Age of Ongoing recalls">
+        <div class="frow" role="listitem"><span>&lt; 3 months</span><span class="bar-wrap"><span class="bar" style="display:block;width:33.3%"></span></span><span class="v">16</span></div>
+        <div class="frow" role="listitem"><span>3–6 months</span><span class="bar-wrap"><span class="bar" style="display:block;width:6.3%"></span></span><span class="v">3</span></div>
+        <div class="frow" role="listitem"><span>6–12 months</span><span class="bar-wrap"><span class="bar" style="display:block;width:41.7%"></span></span><span class="v">20</span></div>
+        <div class="frow" role="listitem"><span>1–2 years</span><span class="bar-wrap"><span class="bar" style="display:block;width:100%"></span></span><span class="v">48</span></div>
+        <div class="frow" role="listitem"><span>2–3 years</span><span class="bar-wrap"><span class="bar" style="display:block;width:31.3%"></span></span><span class="v">15</span></div>
+        <div class="frow" role="listitem"><span>&gt; 3 years</span><span class="bar-wrap"><span class="bar" style="display:block;width:29.2%"></span></span><span class="v">14</span></div>
+      </div>
+      <p>For comparison, the 767 recalls FDA did close took a median of <b>591 days</b> (75% within 707 days, 90% within 1,046 days). So "Ongoing" mostly means "FDA has not done the paperwork yet". Age alone cannot tell us if the product is still around.</p>
+    </div>
+    <div class="part"><div class="label">The expiry dates tell us more</div>
+      <p>The script reads expiry and beyond-use dates out of <code>code_info</code>. It finds one for 65% of all rows. For the 116 Ongoing rows:</p>
+      <div class="scroll"><table>
+        <thead><tr><th>What <code>code_info</code> says</th><th class="n">Rows</th><th>Proposed view</th></tr></thead>
+        <tbody>
+          <tr><td>Every lot has expired</td><td class="n">50</td><td><span class="pill p-warn">Ongoing · lots expired</span></td></tr>
+          <tr><td>At least one lot not yet expired</td><td class="n">28</td><td><span class="pill p-bad">Active</span></td></tr>
+          <tr><td>"All lots" (whole product line)</td><td class="n">18</td><td><span class="pill p-bad">Active</span></td></tr>
+          <tr><td>No expiry date found</td><td class="n">20</td><td><span class="pill p-bad">Active</span> (we can't rule it out)</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="pushback">
+      <p><b>Safety officer lens (persona view, not a real interview).</b></p>
+      <p class="quote">If every lot expired in 2022, it isn't on my shelf. Don't put it in my morning count. But don't hide it either: I may still have patients who received it, and I need it when someone asks.</p>
+      <p class="quote">Tell me the class, how old it is, and whether we could still have it. Show me one line per recall, not ten lines for ten vial sizes.</p>
+    </div>
+    <div class="decide"><div class="label">Rule to propose</div>
+      <ul>
+        <li><span class="pill p-bad">Active</span> = status Ongoing <b>and</b> (any lot unexpired, or "all lots", or no expiry found). Show class, age and the newest lot expiry.</li>
+        <li><span class="pill p-warn">Ongoing · lots expired</span> = Ongoing, every parsed lot expired. Listed under the active list, collapsed. Not in the headline count.</li>
+        <li><span class="pill p-good">Closed</span> = Terminated or Completed. History only.</li>
+        <li>Count and show <b>events</b>, with the product rows inside. Class I sorts first. A <span class="pill p-acc">new</span> badge marks anything that changed since her last review (D028).</li>
+      </ul>
+      <p>Result today: 116 Ongoing rows → <b>66 Active rows = 29 recall events</b>; 50 rows move to "lots expired". Active rows by ingredient: semaglutide 31, tirzepatide 12, fentanyl 7, buprenorphine 5, oxycodone 3, hydromorphone 2, morphine 2, and 1 each for methadone, tramadol, liraglutide and exenatide. 2 Active rows are Class I.</p>
+      <p class="meta">Assumption: the expiry parser is a regex, not checked by hand. 3 Active rows are over 3 years old: 2 Akorn "all lots" recalls and 1 Apollo Care row with no expiry. Hand-check these before the demo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7 FORWARD -->
+<section id="s7" class="stage">
+  <div class="num">7</div>
+  <div class="stage-body">
+    <h2>What moves forward</h2>
+    <div class="part"><div class="label">Into the ontology</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Object</th><th>Key</th><th>Main fields</th><th>Links</th></tr></thead>
+        <tbody>
+          <tr><td><b>RecallEvent</b></td><td><code>event_id</code></td><td>firm, class (worst of its rows), officer view (Active / lots expired / Closed), first report date</td><td>has many Recall</td></tr>
+          <tr><td><b>Recall</b></td><td><code>recall_number</code></td><td>status, class, reason group, text, lots, newest expiry, compounded flag, match route</td><td>→ Package (NDC, when found) → Product (application no., when found) → Drug (always)</td></tr>
+          <tr><td><b>ChangeEvent</b></td><td>source + key + week</td><td>type (new / status / class), before, after, as-of date</td><td>→ Recall, → Drug</td></tr>
+          <tr><td>Review list</td><td><code>recall_number</code></td><td>why unmatched, NDC text, firm</td><td>→ Drug (from text)</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="part"><div class="label">Proposed for the logs (renumber when merged)</div>
+      <ul class="plain">
+        <li>Decisions: weekly full snapshot + diff · identity order NDC → Directory → RxNorm → text · Drug-level link from text only · "Active" rule above · show events, not rows.</li>
+        <li>Data issues: NDC reuse (fentanyl → chromium) · 21% of recall NDCs unknown everywhere (28 Ongoing) · RxNorm "PROPRIETARY" and <code>ALIEN</code> answers · updates on old rows with no change date · 13-day data lag · 3 Active rows over 3 years old to hand-check.</li>
+        <li>Full text: <a href="../source-profiles/03-enforcement.md">03-enforcement.md</a> → "Proposed for the logs".</li>
+      </ul>
+    </div>
+    <div class="part"><div class="label">Hand-check before the demo (you)</div>
+      <ul class="plain">
+        <li>Open D-0788-2026 and D-0748-2026 on the FDA Enforcement Report site. Does the text match?</li>
+        <li>Check 5 "lots expired" rows by eye: are the dates really expiry dates?</li>
+        <li>Look up <code>71170-811-02</code> in RxNav: expect "UNKNOWN".</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</div>

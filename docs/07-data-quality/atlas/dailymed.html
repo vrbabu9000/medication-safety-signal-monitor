@@ -1,0 +1,339 @@
+<title>DailyMed Label Atlas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column; the data atlas template: 7 numbered parts per dataset
+   (get it · one record · messy · joins · how often it changes · decision · what moves forward). Clinical paper + teal ink. */
+:root{
+  --bg:#f5f7f6; --surface:#ffffff; --ink:#15201e; --muted:#5a6966; --line:#d9e1df;
+  --accent:#0d6b66; --accent-soft:#e1efed;
+  --warn:#9a5b00; --warn-soft:#fbf0dc; --bad:#a3262c; --bad-soft:#f8e3e3; --good:#2c6e2f; --good-soft:#e3f1e2;
+  --code-bg:#eef2f1;
+  --f-display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1514; --surface:#162020; --ink:#e4ecea; --muted:#9fb0ac; --line:#2a3836;
+  --accent:#5cc2b9; --accent-soft:#163633;
+  --warn:#f0b65a; --warn-soft:#33270f; --bad:#f08a8f; --bad-soft:#3a1a1c; --good:#8fd18f; --good-soft:#18301a;
+  --code-bg:#111a19; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0f1514; --surface:#162020; --ink:#e4ecea; --muted:#9fb0ac; --line:#2a3836;
+  --accent:#5cc2b9; --accent-soft:#163633;
+  --warn:#f0b65a; --warn-soft:#33270f; --bad:#f08a8f; --bad-soft:#3a1a1c; --good:#8fd18f; --good-soft:#18301a;
+  --code-bg:#111a19; color-scheme:dark }
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding-block:40px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:56px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(2rem,4.5vw,2.8rem)}
+h2{font-size:1.65rem}
+h3{font-size:1.1rem;font-family:var(--f-body);font-weight:700}
+p{margin:0;max-width:68ch}
+.lede{font-size:1.1rem;color:var(--muted);max-width:66ch}
+.eyebrow{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+header{display:grid;gap:14px}
+.meta{font-size:.85rem;color:var(--muted)}
+section{display:grid;gap:18px}
+.stack{display:grid;gap:12px}
+code,.mono{font-family:var(--f-mono);font-size:.86em}
+code{background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{font-family:var(--f-mono);font-size:.78rem;line-height:1.5;background:var(--code-bg);border:1px solid var(--line);border-radius:6px;padding:12px 14px;margin:0;overflow-x:auto;white-space:pre}
+.scroll{overflow-x:auto;min-width:0}
+table{border-collapse:collapse;width:100%;font-size:.88rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+td.n,th.n{text-align:right}
+/* stage block */
+.stage{display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px}
+.num{font-family:var(--f-display);font-size:2.4rem;font-weight:700;color:var(--accent);line-height:1}
+.stage-body{display:grid;gap:18px;min-width:0}
+.part{display:grid;gap:8px;min-width:0}
+.part > .label{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mess{background:var(--warn-soft);border-left:3px solid var(--warn);padding:12px 14px;border-radius:0 6px 6px 0;display:grid;gap:8px}
+.mess .label{color:var(--warn)}
+.decide{background:var(--accent-soft);border-left:3px solid var(--accent);padding:12px 14px;border-radius:0 6px 6px 0;display:grid;gap:6px}
+.decide .label{color:var(--accent)}
+.mess ul,.decide ul,.plain ul{margin:0;padding-left:20px;display:grid;gap:4px}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:.72rem;padding:1px 7px;border-radius:999px;white-space:nowrap}
+.p-good{background:var(--good-soft);color:var(--good)} .p-bad{background:var(--bad-soft);color:var(--bad)}
+.p-warn{background:var(--warn-soft);color:var(--warn)} .p-acc{background:var(--accent-soft);color:var(--accent)}
+.strike{text-decoration:line-through;color:var(--muted)}
+/* funnel */
+.funnel{display:grid;gap:6px}
+.frow{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr) 7.5rem;gap:12px;align-items:center;font-size:.86rem}
+.bar{height:14px;background:var(--accent);border-radius:2px;min-width:2px}
+.frow .v{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:14px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;display:grid;gap:8px;min-width:0}
+.box h3{font-size:.95rem}
+.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem}
+.toc a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+.toc a:hover,.toc a:focus-visible{border-bottom-color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+hr{border:0;border-top:1px solid var(--line);margin:0}
+.pushback{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:grid;gap:10px}
+@media (max-width:640px){
+  .stage{grid-template-columns:1fr;gap:6px}
+  .num{font-size:1.8rem}
+  .frow{grid-template-columns:minmax(0,1fr) 6.5rem}
+  .frow .bar-wrap{grid-column:1 / -1;order:3}
+}
+</style>
+
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Medication Safety Signal Monitor · Data atlas · DailyMed · 2026-10-20</div>
+  <h1>DailyMed: the label text Part B reads</h1>
+  <p class="lede">DailyMed is the National Library of Medicine's home for official US drug labels (SPL, Structured Product Labeling: one XML document per product per company). Part B (the AI step) reads these labels to learn which reactions are already mentioned. This page picks one reference label per ingredient, measures its structure, and counts how often our labels change. Every number was measured on 2026-10-20 by <code>prototypes/explore/label_atlas.py</code> (steps <code>refs</code>, <code>sections</code>, <code>census</code>, <code>dailyzip</code>) against the live DailyMed API, one daily update file and the 2026 Q1 + Q2 FAERS bulk files.</p>
+  <p class="meta"><b>Verdict:</b> <span class="pill p-good">KEEP</span> DailyMed stays the label truth (D019). Two rules change: the reference label is picked through the FAERS application number, and a new label version is <b>not</b> a change event until the 4 safety sections actually change. One reference label (methadone) is stale and needs a flag. Companion pages: <a href="srlc.html">srlc.html</a> (when a reaction was added) · <a href="onsides.html">onsides.html</a> (benchmark).</p>
+  <nav class="toc" aria-label="Parts">
+    <a href="#overview">Overview</a><a href="#p1">1 Get it</a><a href="#p2">2 One record</a><a href="#p3">3 Messy</a><a href="#p4">4 Joins</a><a href="#p5">5 How often it changes</a><a href="#p6">6 Decision</a><a href="#p7">7 What moves forward</a><a href="#logs">Proposed for the logs</a>
+  </nav>
+</header>
+
+<section id="overview">
+  <div class="eyebrow">Overview</div>
+  <h2>One reference label per ingredient</h2>
+  <p>Each ingredient has dozens to hundreds of labels (brand, generics, repackagers). Part B needs one label to compare against. The rule we tested: take the product FAERS names most often as the primary suspect (its application number, <code>nda_num</code>), then take that application owner's own label. If that product is a generic and the brand's label still exists, use the brand label for the same route.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Ingredient</th><th>Reference label (company)</th><th>Application</th><th>Version · date</th><th class="n">FAERS PS reports for it</th><th>How chosen</th></tr></thead>
+    <tbody>
+      <tr><td>buprenorphine</td><td>Brixadi injection (Braeburn)</td><td>NDA210136</td><td>v6 · Jan 06, 2026</td><td class="n">379 of 1,379</td><td>Most reported</td></tr>
+      <tr><td>fentanyl</td><td>Fentanyl patch (Mylan)</td><td>ANDA076258</td><td>v27 · Feb 25, 2026</td><td class="n">742 of 1,276</td><td><span class="pill p-warn">generic</span> Duragesic label gone</td></tr>
+      <tr><td>hydrocodone</td><td>Hysingla ER tablet (Knoa)</td><td>NDA206627</td><td>v17 · Jun 18, 2026</td><td class="n">110 of 141</td><td>Most reported</td></tr>
+      <tr><td>hydromorphone</td><td>Hydromorphone tablet + solution (Rhodes)</td><td>NDA019892</td><td>v20 · May 20, 2026</td><td class="n">155 of 232</td><td>Most reported</td></tr>
+      <tr><td>methadone</td><td>Methadone tablet (Ascend)</td><td>ANDA090635</td><td>v11 · <b>Jun 15, 2022</b></td><td class="n">48 of 212</td><td><span class="pill p-bad">stale generic</span> Dolophine label gone</td></tr>
+      <tr><td>morphine</td><td>MS Contin ER tablet (Rhodes)</td><td>NDA019516</td><td>v18 · Aug 19, 2026</td><td class="n">377 of 716</td><td>Most reported</td></tr>
+      <tr><td>oxycodone</td><td>OxyContin ER tablet (Knoa)</td><td>NDA022272</td><td>v44 · Jun 26, 2026</td><td class="n">1,496 of 2,173</td><td>Most reported</td></tr>
+      <tr><td>tramadol</td><td>Tramadol tablet (Teva)</td><td>ANDA075977</td><td>v6 · Jan 29, 2026</td><td class="n">168 of 875</td><td><span class="pill p-warn">generic</span> Ultram label gone</td></tr>
+      <tr><td>semaglutide</td><td>Ozempic injection (Novo Nordisk)</td><td>NDA209637</td><td>v20 · Jun 10, 2026</td><td class="n">11,614 of 22,634</td><td>Most reported</td></tr>
+      <tr><td>liraglutide</td><td>Victoza injection (Novo Nordisk)</td><td>NDA022341</td><td>v31 · Nov 17, 2025</td><td class="n">561 of 1,183</td><td>Most reported</td></tr>
+      <tr><td>dulaglutide</td><td>Trulicity injection (Eli Lilly)</td><td>BLA125469</td><td>v62 · Aug 10, 2026</td><td class="n">2,605 of 2,631</td><td>Most reported</td></tr>
+      <tr><td>exenatide</td><td>Byetta injection (AstraZeneca)</td><td>NDA021773</td><td>v26 · Sep 08, 2025</td><td class="n">4 of 4</td><td>Generic most reported → brand label</td></tr>
+      <tr><td>tirzepatide</td><td>Mounjaro injection (Eli Lilly)</td><td>NDA215866</td><td>v40 · Sep 02, 2026</td><td class="n">40,937 of 42,575</td><td>Most reported</td></tr>
+    </tbody>
+  </table></div>
+  <p class="meta">"FAERS PS reports" = drug rows in 2026 Q1 + Q2 where the drug is the primary suspect, it is single-ingredient, and <code>nda_num</code> names this application, out of all such single-ingredient rows. Exenatide has only 4 such rows in six months.</p>
+</section>
+
+<hr>
+
+<section id="p1" class="stage">
+  <div class="num">1</div>
+  <div class="stage-body">
+    <h2>Get it</h2>
+    <div class="part"><div class="label">API calls we use (no key, no account)</div>
+<pre>GET services/v2/spls.json?drug_name=oxycodone                     every label naming the ingredient (263)
+GET services/v2/spls.json?application_number=NDA209637            labels on one application (6: Novo + 5 repackagers)
+GET services/v2/spls.json?drug_name=oxycodone&amp;published_date=2026-10-12                                   exactly that day
+GET services/v2/spls.json?drug_name=oxycodone&amp;published_date=2026-07-22&amp;published_date_comparison=gte   since that day
+GET services/v2/spls/{setid}.xml                                   the current version of one label
+GET services/v2/spls/{setid}/history.json                          every version with its publish date</pre>
+      <p>The date filter means "exactly this day" unless you add <code>published_date_comparison</code>. It only sees each label's <b>current</b> version. A label that changed twice in the window shows once; <code>history.json</code> gives the rest.</p>
+    </div>
+    <div class="part"><div class="label">Bulk update files offered today</div>
+      <div class="scroll"><table>
+        <thead><tr><th>File type</th><th class="n">Files listed</th><th class="n">Size each</th><th>Covers</th></tr></thead>
+        <tbody>
+          <tr><td>Daily update</td><td class="n">1</td><td class="n">165 MB</td><td>One day. Only the latest day is listed.</td></tr>
+          <tr><td>Weekly update</td><td class="n">3</td><td class="n">389–473 MB</td><td>Monday to Friday (e.g. <code>092826_100226</code> = Sep 28 to Oct 2)</td></tr>
+          <tr><td>Monthly update</td><td class="n">7</td><td class="n">1,645–1,862 MB</td><td>One month (Mar to Sep 2026 listed)</td></tr>
+        </tbody>
+      </table></div>
+      <p>Inside the Oct 19 daily file: <b>381 labels</b> (207 prescription, 151 OTC, 13 animal, 7 homeopathic, 3 other). Each label is its own zip: the XML plus its images. The liraglutide label <code>bb66a46c</code> is 1 XML (354 KB) and 28 JPGs. <b>3 of the 381 were ours.</b></p>
+    </div>
+  </div>
+</section>
+
+<section id="p2" class="stage">
+  <div class="num">2</div>
+  <div class="stage-body">
+    <h2>What one record looks like</h2>
+    <div class="part"><div class="label">The list API row and the history row (real)</div>
+<pre>{"spl_version": 20, "published_date": "Jun 10, 2026",
+ "title": "OZEMPIC (SEMAGLUTIDE) INJECTION, SOLUTION [NOVO NORDISK PHARMACEUTICAL INDUSTRIES, LP]",
+ "setid": "adec4fd2-6858-4c99-91d4-531f5f2a2d79"}
+
+history: [{"spl_version": 20, "published_date": "Jun 10, 2026"},
+          {"spl_version": 19, "published_date": "May 21, 2026"},
+          {"spl_version": 18, "published_date": "Jan 26, 2026"}, …]</pre>
+    </div>
+    <div class="part"><div class="label">The safety sections inside the XML (Ozempic v20)</div>
+<pre>structuredBody
+├── [34066-1] WARNING: RISK OF THYROID C-CELL TUMORS          1,695 chars
+├── [34070-3] 4 CONTRAINDICATIONS                                570 chars
+├── [43685-7] 5 WARNINGS AND PRECAUTIONS                       8,702 chars
+│   ├── [43685-7] 5.1 Risk of Thyroid C-Cell Tumors    ← child reuses the parent code
+│   ├── [42229-5] 5.7 Severe Gastrointestinal Adverse Reactions   ← generic code
+│   └── … 10 subsections
+└── [34084-4] 6 ADVERSE REACTIONS                              9,688 chars, 2 tables
+    ├── [34084-4] 6.1 Clinical Trials Experience
+    └── [34084-4] 6.2 Postmarketing Experience
+        "Gastrointestinal : acute pancreatitis and necrotizing pancreatitis, sometimes
+         resulting in death; ileus, intestinal obstruction, severe constipation …"</pre>
+    </div>
+    <div class="part"><div class="label">The 4 safety sections of all 13 reference labels</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Ingredient</th><th class="n">Boxed</th><th class="n">Contra.</th><th class="n">W&amp;P</th><th class="n">Adv. reactions</th><th class="n">Total chars</th><th class="n">Tables</th><th class="n">Merged cells</th><th class="n">Depth</th><th>Subsection codes</th></tr></thead>
+        <tbody>
+          <tr><td>buprenorphine</td><td class="n">1,220</td><td class="n">297</td><td class="n">20,895</td><td class="n">8,736</td><td class="n">31,148</td><td class="n">2</td><td class="n">0</td><td class="n">3</td><td>42229-5, 90374-0, 90375-7</td></tr>
+          <tr><td>fentanyl</td><td class="n">5,684</td><td class="n">1,350</td><td class="n">28,318</td><td class="n">11,947</td><td class="n">47,299</td><td class="n">3</td><td class="n">0</td><td class="n">3</td><td>42229-5</td></tr>
+          <tr><td>hydrocodone</td><td class="n">4,688</td><td class="n">781</td><td class="n">23,310</td><td class="n">9,201</td><td class="n">37,980</td><td class="n">2</td><td class="n">1</td><td class="n">2</td><td>42229-5, 90374-0, 90375-7</td></tr>
+          <tr><td>hydromorphone</td><td class="n">4,813</td><td class="n">1,013</td><td class="n">23,000</td><td class="n">7,786</td><td class="n">36,612</td><td class="n">0</td><td class="n">0</td><td class="n">3</td><td>42229-5, 90374-0, 90375-7</td></tr>
+          <tr><td>methadone</td><td class="n">8,370</td><td class="n">778</td><td class="n">24,630</td><td class="n">3,728</td><td class="n">37,506</td><td class="n">0</td><td class="n">0</td><td class="n">2</td><td>42229-5</td></tr>
+          <tr><td>morphine</td><td class="n">3,908</td><td class="n">1,001</td><td class="n">19,385</td><td class="n">7,819</td><td class="n">32,113</td><td class="n">0</td><td class="n">0</td><td class="n">2</td><td>42229-5, 90374-0, 90375-7</td></tr>
+          <tr><td>oxycodone</td><td class="n">4,683</td><td class="n">740</td><td class="n">22,423</td><td class="n">11,682</td><td class="n">39,528</td><td class="n">2</td><td class="n">1</td><td class="n">2</td><td>42229-5, 90374-0, 90375-7</td></tr>
+          <tr><td>tramadol</td><td class="n">6,344</td><td class="n">1,544</td><td class="n">32,685</td><td class="n">11,027</td><td class="n">51,600</td><td class="n">1</td><td class="n">2</td><td class="n">2</td><td>42229-5</td></tr>
+          <tr><td>semaglutide</td><td class="n">1,695</td><td class="n">570</td><td class="n">8,702</td><td class="n">9,688</td><td class="n">20,655</td><td class="n">2</td><td class="n">3</td><td class="n">2</td><td>parent code repeated, 42229-5</td></tr>
+          <tr><td>liraglutide</td><td class="n">1,748</td><td class="n">746</td><td class="n">8,231</td><td class="n">11,927</td><td class="n">22,652</td><td class="n">2</td><td class="n">0</td><td class="n">2</td><td>42229-5</td></tr>
+          <tr><td>dulaglutide</td><td class="n">1,725</td><td class="n">739</td><td class="n">9,452</td><td class="n">13,764</td><td class="n">25,680</td><td class="n">3</td><td class="n">11</td><td class="n">5</td><td>42229-5, 90374-0, 90375-7</td></tr>
+          <tr><td>exenatide</td><td class="n">none</td><td class="n">732</td><td class="n">7,375</td><td class="n">13,368</td><td class="n">21,475</td><td class="n">5</td><td class="n">11</td><td class="n">2</td><td>parent code repeated, 42229-5</td></tr>
+          <tr><td>tirzepatide</td><td class="n">1,711</td><td class="n">697</td><td class="n">8,159</td><td class="n">14,922</td><td class="n">25,489</td><td class="n">3</td><td class="n">7</td><td class="n">6</td><td>42229-5, 90374-0, 90375-7</td></tr>
+        </tbody>
+      </table></div>
+      <p class="meta">All 13 use the newer "Warnings and Precautions" code 43685-7; none uses the old 34071-1. Byetta has no Boxed Warning, which is correct for that product. Depth = levels of nested sections (1 = no subsections).</p>
+    </div>
+  </div>
+</section>
+
+<section id="p3" class="stage">
+  <div class="num">3</div>
+  <div class="stage-body">
+    <h2>What's messy (measured)</h2>
+    <div class="mess"><div class="label">Found on the 13 reference labels</div>
+      <ul>
+        <li><b>Three ways to code a subsection.</b> All 13 use the generic code 42229-5 somewhere. 7 also use the specific codes 90374-0 (clinical trials) and 90375-7 (postmarketing). Ozempic and Byetta repeat the parent code on the child. A filter on child codes would miss parts of every label. Taking everything nested under the 4 parent codes works for all 13.</li>
+        <li><b>Brand labels that no longer exist.</b> Duragesic: only a 2011 repackager copy remains. Dolophine: only 4 repackager copies, the newest from 2020. Ultram: no label at all. Fentanyl, methadone and tramadol therefore fall back to the most-reported generic label.</li>
+        <li><b>A stale reference label.</b> The methadone generic (Ascend, v11, Jun 2022) lacks two class-wide opioid additions that SrLC dates to Dec 2023 (hyperalgesia) and Dec 2025 (esophageal dysfunction). The 6 other opioid analgesic references have both. Against this label, both reactions would show as false "unlabeled" signals. (Brixadi lacks "hyperalgesia"; it treats opioid use disorder, not pain, so that may be correct. Unverified.)</li>
+        <li><b>Version numbers skip and repeat.</b> Trulicity's history lists 39 versions with numbers up to 62. MS Contin (our morphine reference) lists version 16 twice, and the Ozempic tablet label lists version 13 twice.</li>
+        <li><b>Tables with merged cells.</b> 11 merged cells in Trulicity and in Byetta, 7 in Mounjaro. Flattening a table row by row breaks when a cell spans rows.</li>
+        <li><b>Deep nesting.</b> Mounjaro's Adverse Reactions goes 6 levels deep and has 19 subsections.</li>
+        <li><b>Size.</b> The 4 safety sections run from 20,655 characters (Ozempic) to 51,600 (tramadol). The opioid labels are about twice the GLP-1 labels, mostly Warnings &amp; Precautions.</li>
+        <li><b>FAERS rows with no application number.</b> 2,552 of 22,634 single-ingredient semaglutide primary-suspect rows (11%) have a blank <code>nda_num</code>. Tirzepatide: 1,548 of 42,575 (4%). Those rows need the ingredient-level reference label.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="p4" class="stage">
+  <div class="num">4</div>
+  <div class="stage-body">
+    <h2>How it joins to the others</h2>
+    <div class="part"><div class="label">Keys</div>
+      <div class="scroll"><table>
+        <thead><tr><th>From</th><th>To</th><th>Key</th><th>Measured</th></tr></thead>
+        <tbody>
+          <tr><td>FAERS drug row</td><td>DailyMed label</td><td><code>nda_num</code> → <code>application_number</code> (add NDA/BLA/ANDA prefix, pad to 6 digits)</td><td>12 of 13 top applications have a label. Tramadol's top one (205257, 335 reports) has none, so the second (ANDA075977) was used.</td></tr>
+          <tr><td>Application</td><td>The owner's label</td><td>Drugs@FDA sponsor name inside the label title</td><td>Matched for 10 of 13. MS Contin: application held by Knoa, label published by Rhodes. Methadone: held by ThePharmaNetwork, label by Ascend. Hysingla: the Drugs@FDA lookup returned nothing. For these 3 the highest version was taken.</td></tr>
+          <tr><td>DailyMed label</td><td>SrLC</td><td>Application number</td><td>See <a href="srlc.html">srlc.html</a></td></tr>
+          <tr><td>DailyMed label</td><td>OnSIDES</td><td><code>setid.version</code></td><td>See <a href="onsides.html">onsides.html</a></td></tr>
+        </tbody>
+      </table></div>
+      <p>Repackagers reuse the owner's application number: 6 labels sit on NDA209637 (Novo + 5 from A-S Medication). Route lives in the product, not in FAERS (route is blank on 89% of semaglutide rows, DQ39), so the application number is how a patch report finds the patch label.</p>
+    </div>
+  </div>
+</section>
+
+<section id="p5" class="stage">
+  <div class="num">5</div>
+  <div class="stage-body">
+    <h2>How often it changes</h2>
+    <div class="part"><div class="label">Change census: label versions published for our 13 ingredients, Jul 22 to Oct 20, 2026</div>
+      <div class="funnel" role="list" aria-label="Label versions per week">
+        <div class="frow" role="listitem"><span>Week of Jul 20 (from Jul 22)</span><span class="bar-wrap"><span class="bar" style="display:block;width:0%"></span></span><span class="v">0</span></div>
+        <div class="frow" role="listitem"><span>Week of Jul 27</span><span class="bar-wrap"><span class="bar" style="display:block;width:100%"></span></span><span class="v">22</span></div>
+        <div class="frow" role="listitem"><span>Week of Aug 3</span><span class="bar-wrap"><span class="bar" style="display:block;width:59.1%"></span></span><span class="v">13</span></div>
+        <div class="frow" role="listitem"><span>Week of Aug 10</span><span class="bar-wrap"><span class="bar" style="display:block;width:54.5%"></span></span><span class="v">12</span></div>
+        <div class="frow" role="listitem"><span>Week of Aug 17</span><span class="bar-wrap"><span class="bar" style="display:block;width:27.3%"></span></span><span class="v">6</span></div>
+        <div class="frow" role="listitem"><span>Week of Aug 24</span><span class="bar-wrap"><span class="bar" style="display:block;width:59.1%"></span></span><span class="v">13</span></div>
+        <div class="frow" role="listitem"><span>Week of Aug 31</span><span class="bar-wrap"><span class="bar" style="display:block;width:31.8%"></span></span><span class="v">7</span></div>
+        <div class="frow" role="listitem"><span>Week of Sep 7</span><span class="bar-wrap"><span class="bar" style="display:block;width:18.2%"></span></span><span class="v">4</span></div>
+        <div class="frow" role="listitem"><span>Week of Sep 14</span><span class="bar-wrap"><span class="bar" style="display:block;width:13.6%"></span></span><span class="v">3</span></div>
+        <div class="frow" role="listitem"><span>Week of Sep 21</span><span class="bar-wrap"><span class="bar" style="display:block;width:18.2%"></span></span><span class="v">4</span></div>
+        <div class="frow" role="listitem"><span>Week of Sep 28</span><span class="bar-wrap"><span class="bar" style="display:block;width:18.2%"></span></span><span class="v">4</span></div>
+        <div class="frow" role="listitem"><span>Week of Oct 5</span><span class="bar-wrap"><span class="bar" style="display:block;width:13.6%"></span></span><span class="v">3</span></div>
+        <div class="frow" role="listitem"><span>Week of Oct 12</span><span class="bar-wrap"><span class="bar" style="display:block;width:36.4%"></span></span><span class="v">8</span></div>
+        <div class="frow" role="listitem"><span>Week of Oct 19 (2 days)</span><span class="bar-wrap"><span class="bar" style="display:block;width:13.6%"></span></span><span class="v">3</span></div>
+      </div>
+      <div class="scroll"><table>
+        <thead><tr><th>Measure (90 days)</th><th class="n">Value</th></tr></thead>
+        <tbody>
+          <tr><td>Labels for our 13 ingredients today</td><td class="n">1,324</td></tr>
+          <tr><td>Label versions published</td><td class="n">102</td></tr>
+          <tr><td>Labels that changed at least once</td><td class="n">94</td></tr>
+          <tr><td>Days with no change at all</td><td class="n">50 of 91</td></tr>
+          <tr><td>Busiest day</td><td class="n">10</td></tr>
+          <tr><td>Saturday + Sunday versions</td><td class="n">0</td></tr>
+          <tr><td>Reference labels that changed</td><td class="n">3 of 13 (Trulicity Aug 10, MS Contin Aug 19, Mounjaro Sep 2)</td></tr>
+          <tr><td>FDA safety label changes for our 13 (SrLC)</td><td class="n">1 (Mounjaro, approved Aug 27, in DailyMed Sep 2)</td></tr>
+        </tbody>
+      </table></div>
+      <p>By ingredient: morphine 21 versions, oxycodone 18, tramadol 13, buprenorphine 12, tirzepatide 8 (all 8 of its labels changed), exenatide 0. Reference labels changed 0 to 7 times in the past year (Mounjaro 7, MS Contin 6, OxyContin 5).</p>
+      <p><b>Cross-check:</b> the Oct 19 daily file holds 3 of our labels (1 buprenorphine, 2 liraglutide). The API census also counts 3 for Oct 19. The file names inside carry the processing date (Oct 17 or 18), not the publish date.</p>
+    </div>
+    <div class="mess"><div class="label">What this means for "what changed since yesterday"</div>
+      <p>About 1 label version per weekday reaches our 13 ingredients, almost all generics and repackagers. In the same 90 days FDA approved exactly 1 safety change for them. If every new version raised a change event, the officer would see about 100 events in 90 days, and only 1 would be a safety change.</p>
+    </div>
+  </div>
+</section>
+
+<section id="p6" class="stage">
+  <div class="num">6</div>
+  <div class="stage-body">
+    <h2>Decision</h2>
+    <div class="decide"><div class="label">Proposed</div>
+      <ul>
+        <li><b>Reference label:</b> for each FAERS application, its owner's label; for each ingredient, the most-reported application's label (table above). When the brand label is gone, use the generic and show "generic reference" on screen.</li>
+        <li><b>Freshness check:</b> flag a reference label that is older than the latest SrLC change for that ingredient. Methadone is flagged today. Option to test: pick the most recently updated generic among the top 3 applications instead.</li>
+        <li><b>Extraction scope:</b> everything nested under 34066-1, 34070-3, 43685-7 (or 34071-1) and 34084-4. Never filter on child codes. Tables are flattened with merged cells expanded.</li>
+        <li><b>Change detection:</b> a daily job asks the API for each ingredient's labels published that day (13 calls). For reference labels only, it fetches the new XML, hashes each of the 4 sections, and raises a ChangeEvent only when a hash changes. Other versions are logged, not shown.</li>
+        <li><b>Missed days:</b> only the latest daily file is listed, so recovery uses the weekly file (Mon to Fri) or the API's <code>gte</code> filter plus <code>history.json</code>.</li>
+        <li><b>Cache key</b> for Part B results: setid + version + publish date + section hash.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="p7" class="stage">
+  <div class="num">7</div>
+  <div class="stage-body">
+    <h2>What moves forward</h2>
+    <div class="scroll"><table>
+      <thead><tr><th>Object</th><th>One row =</th><th>Key fields</th><th class="n">Pilot size</th></tr></thead>
+      <tbody>
+        <tr><td><b>Label</b></td><td>one label (setid)</td><td>setid, title, company, application number, route, is_reference</td><td class="n">1,324 (13 reference)</td></tr>
+        <tr><td><b>LabelVersion</b></td><td>one published version</td><td>setid, version, published_date, 4 section hashes</td><td class="n">~100 per 90 days</td></tr>
+        <tr><td><b>LabelSection</b></td><td>one safety section of a reference version</td><td>setid, version, parent code, subsection title, text, tables</td><td class="n">13 × 4 (12 labels have a Boxed Warning)</td></tr>
+        <tr><td><b>ChangeEvent</b></td><td>a reference label whose safety text changed</td><td>source = DailyMed, setid, old/new version, sections changed, date</td><td class="n">3 reference versions in 90 days (safety text changed: not yet measured)</td></tr>
+      </tbody>
+    </table></div>
+    <p>Part B input: 13 labels, 20,655 to 51,600 characters each (about 5,000 to 13,000 tokens at 4 characters per token, an estimate). The gold-set draft for Ozempic and OxyContin is in <a href="gold-set-draft-v1.csv">gold-set-draft-v1.csv</a> (264 rows, every quote checked word for word against the label XML).</p>
+  </div>
+</section>
+
+<hr>
+
+<section id="logs">
+  <div class="eyebrow">For the merge into DECISIONS and the data-issues register</div>
+  <h2>Proposed for the logs</h2>
+  <p class="meta">Temporary IDs. Whoever merges assigns the next D and DQ numbers (sibling atlas sessions are also proposing D032+ and DQ42+).</p>
+  <div class="scroll"><table>
+    <thead><tr><th>ID</th><th>Proposal</th><th>Evidence</th></tr></thead>
+    <tbody>
+      <tr><td>LD1</td><td>Reference label = owner's label of the most-reported FAERS application; generic fallback flagged</td><td>13/13 resolved; 3 brand labels gone</td></tr>
+      <tr><td>LD2</td><td>Label ChangeEvent only when a safety-section hash changes on a reference label</td><td>102 versions vs 1 SrLC change in 90 days</td></tr>
+      <tr><td>LD3</td><td>Reference freshness flag vs latest SrLC date</td><td>Methadone label lacks Dec 2023 + Dec 2025 additions</td></tr>
+      <tr><td>LQ1</td><td>Subsection coding varies 3 ways (42229-5, 90374-0/90375-7, parent repeated)</td><td>13/13, 7/13, 2/13</td></tr>
+      <tr><td>LQ2</td><td>Brand labels missing from DailyMed (Duragesic, Dolophine, Ultram)</td><td>Application lookups</td></tr>
+      <tr><td>LQ3</td><td>API date filter = exact day unless a comparison is given; it sees current versions only</td><td>Probe calls</td></tr>
+      <tr><td>LQ4</td><td>Only the latest daily update file is listed</td><td>Download page: 1 daily, 3 weekly, 7 monthly</td></tr>
+      <tr><td>LQ5</td><td>History version numbers skip and repeat</td><td>Trulicity 39 listed up to v62; MS Contin v16 twice</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+</div>

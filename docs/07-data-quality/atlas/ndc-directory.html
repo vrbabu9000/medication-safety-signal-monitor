@@ -1,0 +1,344 @@
+<title>NDC Directory Atlas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column; each pipeline stage is a numbered block (real order) with 4 fixed parts:
+   what it is · what it looks like (real rows) · what's messy (measured) · decision. Clinical paper + teal ink. */
+:root{
+  --bg:#f5f7f6; --surface:#ffffff; --ink:#15201e; --muted:#5a6966; --line:#d9e1df;
+  --accent:#0d6b66; --accent-soft:#e1efed;
+  --warn:#9a5b00; --warn-soft:#fbf0dc; --bad:#a3262c; --bad-soft:#f8e3e3; --good:#2c6e2f; --good-soft:#e3f1e2;
+  --code-bg:#eef2f1;
+  --f-display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1514; --surface:#162020; --ink:#e4ecea; --muted:#9fb0ac; --line:#2a3836;
+  --accent:#5cc2b9; --accent-soft:#163633;
+  --warn:#f0b65a; --warn-soft:#33270f; --bad:#f08a8f; --bad-soft:#3a1a1c; --good:#8fd18f; --good-soft:#18301a;
+  --code-bg:#111a19; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0f1514; --surface:#162020; --ink:#e4ecea; --muted:#9fb0ac; --line:#2a3836;
+  --accent:#5cc2b9; --accent-soft:#163633;
+  --warn:#f0b65a; --warn-soft:#33270f; --bad:#f08a8f; --bad-soft:#3a1a1c; --good:#8fd18f; --good-soft:#18301a;
+  --code-bg:#111a19; color-scheme:dark }
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding-block:40px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:56px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(2rem,4.5vw,2.8rem)}
+h2{font-size:1.65rem}
+h3{font-size:1.1rem;font-family:var(--f-body);font-weight:700}
+p{margin:0;max-width:68ch}
+.lede{font-size:1.1rem;color:var(--muted);max-width:66ch}
+.eyebrow{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+header{display:grid;gap:14px}
+.meta{font-size:.85rem;color:var(--muted)}
+section{display:grid;gap:18px}
+.stack{display:grid;gap:12px}
+code,.mono{font-family:var(--f-mono);font-size:.86em}
+code{background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{font-family:var(--f-mono);font-size:.78rem;line-height:1.5;background:var(--code-bg);border:1px solid var(--line);border-radius:6px;padding:12px 14px;margin:0;overflow-x:auto;white-space:pre}
+.scroll{overflow-x:auto;min-width:0}
+table{border-collapse:collapse;width:100%;font-size:.88rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+td.n,th.n{text-align:right}
+/* stage block */
+.stage{display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px}
+.num{font-family:var(--f-display);font-size:2.4rem;font-weight:700;color:var(--accent);line-height:1}
+.stage-body{display:grid;gap:18px;min-width:0}
+.part{display:grid;gap:8px;min-width:0}
+.part > .label{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mess{background:var(--warn-soft);border-left:3px solid var(--warn);padding:12px 14px;border-radius:0 6px 6px 0;display:grid;gap:8px}
+.mess .label{color:var(--warn)}
+.decide{background:var(--accent-soft);border-left:3px solid var(--accent);padding:12px 14px;border-radius:0 6px 6px 0;display:grid;gap:6px}
+.decide .label{color:var(--accent)}
+.mess ul,.decide ul,.plain ul{margin:0;padding-left:20px;display:grid;gap:4px}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:.72rem;padding:1px 7px;border-radius:999px;white-space:nowrap}
+.p-good{background:var(--good-soft);color:var(--good)} .p-bad{background:var(--bad-soft);color:var(--bad)}
+.p-warn{background:var(--warn-soft);color:var(--warn)} .p-acc{background:var(--accent-soft);color:var(--accent)}
+.strike{text-decoration:line-through;color:var(--muted)}
+/* funnel */
+.funnel{display:grid;gap:6px}
+.frow{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr) 7.5rem;gap:12px;align-items:center;font-size:.86rem}
+.bar{height:14px;background:var(--accent);border-radius:2px;min-width:2px}
+.frow .v{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:14px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;display:grid;gap:8px;min-width:0}
+.box h3{font-size:.95rem}
+.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem}
+.toc a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+.toc a:hover,.toc a:focus-visible{border-bottom-color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+hr{border:0;border-top:1px solid var(--line);margin:0}
+.pushback{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:grid;gap:10px}
+@media (max-width:640px){
+  .stage{grid-template-columns:1fr;gap:6px}
+  .num{font-size:1.8rem}
+  .frow{grid-template-columns:minmax(0,1fr) 6.5rem}
+  .frow .bar-wrap{grid-column:1 / -1;order:3}
+}
+</style>
+
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Data atlas · NDC Directory · Phase 1 Define · 2026-10-20</div>
+  <h1>NDC Directory: from a package code to a product</h1>
+  <p class="lede">An NDC (National Drug Code) is the code printed on every US drug package. The NDC Directory is FDA's list of them. We need it for one job: a recall names a package; the directory tells us which <b>product</b> (application number) and which <b>ingredient</b> that package is. Every number below was measured by <code>prototypes/explore/recalls_ndc_atlas.py</code> on FDA's files of 2026-10-20 and openFDA's copy of 2026-10-16.</p>
+  <p class="meta">Companion page: <a href="enforcement.html">FDA Recalls atlas</a>. Profile: <a href="../source-profiles/08-ndc-directory.md">08-ndc-directory.md</a>.</p>
+  <nav class="toc" aria-label="Parts">
+    <a href="#overview">Overview</a><a href="#s1">1 Get it</a><a href="#s2">2 One record</a><a href="#s3">3 Messy</a><a href="#s4">4 Joins</a><a href="#s5">5 How often it changes</a><a href="#s6">6 Decision</a><a href="#s7">7 What moves forward</a>
+  </nav>
+</header>
+
+<section id="overview">
+  <div class="eyebrow">Overview</div>
+  <h2>Four lists, not one</h2>
+  <p>FDA splits the directory into four files. A recalled package can sit in any of them. The main file alone found 89 of the 193 recall rows the directory could place; the other three found the rest.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>List</th><th>What is in it</th><th class="n">Our 13: products</th><th class="n">Recall rows it placed</th></tr></thead>
+    <tbody>
+      <tr><td><b>Listed</b> (main)</td><td>Finished drugs on the market now</td><td class="n">1,344</td><td class="n">89</td></tr>
+      <tr><td><b>Excluded</b></td><td>Discontinued, inactivated or expired listings</td><td class="n">2,408+</td><td class="n">75</td></tr>
+      <tr><td><b>Compounders (503B)</b></td><td>Products made by outsourcing facilities (large compounders)</td><td class="n">224</td><td class="n">24</td></tr>
+      <tr><td><b>Unfinished</b></td><td>Bulk powders and drugs for further processing</td><td class="n">464</td><td class="n">5</td></tr>
+    </tbody>
+  </table></div>
+  <p class="meta">"2,408+" because the excluded file has no ingredient column; we can only match by product name, so this is a lower bound.</p>
+</section>
+
+<hr>
+
+<!-- 1 GET IT -->
+<section id="s1" class="stage">
+  <div class="num">1</div>
+  <div class="stage-body">
+    <h2>Get it</h2>
+    <div class="part"><div class="label">What it is</div>
+      <p>FDA posts the files as zips on accessdata.fda.gov, rebuilt every day (time stamp 04:12 today). openFDA serves a JSON copy (listed + unfinished) with some extra fields. No login. All six downloads together are about 78 MB.</p>
+      <div class="scroll"><table>
+        <thead><tr><th>File</th><th>One row =</th><th class="n">Rows</th><th>Dated</th><th class="n">Lines not UTF-8</th></tr></thead>
+        <tbody>
+          <tr><td><code>ndctext.zip</code> → product.txt</td><td>one product</td><td class="n">116,501</td><td>2026-10-20</td><td class="n">342</td></tr>
+          <tr><td>… package.txt</td><td>one package</td><td class="n">219,045</td><td>2026-10-20</td><td class="n">0</td></tr>
+          <tr><td><code>ndc_excluded.zip</code> → Products_excluded</td><td>one removed product</td><td class="n">206,937</td><td>2026-10-20</td><td class="n">694</td></tr>
+          <tr><td>… Packages_excluded</td><td>one removed package</td><td class="n">385,271</td><td>2026-10-20</td><td class="n">0</td></tr>
+          <tr><td><code>ndc_unfinished.zip</code> → product / package</td><td>one bulk product / package</td><td class="n">21,701 / 37,612</td><td>2026-10-20</td><td class="n">97</td></tr>
+          <tr><td><code>compounders_ndc_directory.zip</code></td><td>one package per half-year report</td><td class="n">4,836</td><td>2026-09-18</td><td class="n">0</td></tr>
+          <tr><td>openFDA <code>drug-ndc-0001-of-0001.json.zip</code></td><td>one product with its packages</td><td class="n">138,319</td><td>2026-10-16</td><td class="n">—</td></tr>
+        </tbody>
+      </table></div>
+      <p>All FDA text files are tab-separated with a header row. Each zip also holds an <code>.xls</code> copy; we ignore it.</p>
+    </div>
+    <div class="decide"><div class="label">Decision to propose</div>
+      <ul>
+        <li>Land all four FDA text files (not the openFDA JSON) as raw datasets. Read them as Latin-1, all columns as text. The JSON is the same data, older, and lacks the excluded and compounder lists.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 2 ONE RECORD -->
+<section id="s2" class="stage">
+  <div class="num">2</div>
+  <div class="stage-body">
+    <h2>What one record looks like (real rows)</h2>
+    <div class="part"><div class="label">Listed: one product (an Ozempic pen, 1.34 mg/mL) and its package</div>
+<pre>product.txt
+PRODUCTNDC  0169-4130          PROPRIETARYNAME  Ozempic        NONPROPRIETARYNAME  semaglutide
+DOSAGEFORM  INJECTION, SOLUTION   ROUTE  SUBCUTANEOUS          MARKETINGCATEGORY   NDA
+APPLICATIONNUMBER  NDA209637   LABELER  Novo Nordisk Pharmaceutical Industries, LP
+SUBSTANCENAME  SEMAGLUTIDE     STRENGTH  1.34 mg/mL            NDC_EXCLUDE_FLAG  N
+LISTING_RECORD_CERTIFIED_THROUGH  20271231
+
+package.txt
+NDCPACKAGECODE  0169-4130-13
+PACKAGEDESCRIPTION  1 SYRINGE, PLASTIC in 1 CARTON (0169-4130-13) / 3 mL in 1 SYRINGE, PLASTIC (0169-4130-01)
+STARTMARKETINGDATE  20210103    ENDMARKETINGDATE  (blank)    SAMPLE_PACKAGE  N</pre>
+      <p>Note that the package text names a second code, <code>0169-4130-01</code>, for the inner syringe. Recalls sometimes quote that inner code (the Fresenius morphine recall quotes both "unit of use" and "unit of sale").</p>
+    </div>
+    <div class="part"><div class="label">Compounders (503B): one semaglutide vial</div>
+<pre>PRODUCTNDC 81375-600   PRODUCTTYPENAME  HUMAN COMPOUNDED DRUG   NONPROPRIETARYNAME  Semaglutide 2.5mg/mL
+MARKETINGCATEGORYNAME  OUTSOURCING FACILITY COMPOUNDED HUMAN DRUG PRODUCT (EXEMPT FROM APPROVAL REQUIREMENTS)
+LABELERNAME  PQ Pharmacy LLC   SUBSTANCENAME  SEMAGLUTIDE   ACTIVEINGREDIENTSINFO  2.5 mg/1 mL
+NDCPACKAGECODE  81375-600-03   PACKAGEDESCRIPTION  3 mL in 1 VIAL, MULTI-DOSE   REPORTINGPERIOD  2024-2</pre>
+      <p>No application number column at all. Strength is free text. One row per package per half-year report.</p>
+    </div>
+    <div class="part"><div class="label">Excluded: a hydrocodone + acetaminophen product FDA inactivated</div>
+<pre>PRODUCTNDC 0440-7605   PROPRIETARYNAME  Hydrocodone Bitartrate And Acetaminophen
+NONPROPRIETARYNAME (blank)   DOSAGEFORMNAME (blank)   SUBSTANCENAME (blank)
+MARKETINGCATEGORYNAME  ANDA   APPLICATIONNUMBER  ANDA040655   LABELERNAME  Liberty Pharmaceuticals, Inc.
+NDC_EXCLUDE_FLAG  I    LISTING_RECORD_CERTIFIED_THROUGH  20181231</pre>
+    </div>
+    <div class="part"><div class="label">Unfinished: semaglutide powder sold for compounding</div>
+<pre>PRODUCTNDC 14335-790   PRODUCTTYPENAME  BULK INGREDIENT   DOSAGEFORMNAME  POWDER
+MARKETINGCATEGORYNAME  BULK INGREDIENT FOR HUMAN PRESCRIPTION COMPOUNDING
+LABELERNAME  Hainan Poly Pharm. Co., Ltd.   SUBSTANCENAME  SEMAGLUTIDE   STRENGTH  1 kg/kg</pre>
+    </div>
+  </div>
+</section>
+
+<!-- 3 MESSY -->
+<section id="s3" class="stage">
+  <div class="num">3</div>
+  <div class="stage-body">
+    <h2>What's messy (measured)</h2>
+    <div class="part"><div class="label">Our 13 ingredients in each list (products)</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Ingredient</th><th class="n">Listed</th><th class="n">Excluded (name match)</th><th class="n">503B compounded</th><th class="n">Unfinished (bulk)</th></tr></thead>
+        <tbody>
+          <tr><td>oxycodone</td><td class="n">298</td><td class="n">476</td><td class="n">1</td><td class="n">15</td></tr>
+          <tr><td>hydrocodone</td><td class="n">244</td><td class="n">761</td><td class="n">0</td><td class="n">18</td></tr>
+          <tr><td>buprenorphine</td><td class="n">211</td><td class="n">109</td><td class="n">1</td><td class="n">45</td></tr>
+          <tr><td>morphine</td><td class="n">154</td><td class="n">277</td><td class="n">23</td><td class="n">13</td></tr>
+          <tr><td>tramadol</td><td class="n">143</td><td class="n">360</td><td class="n">0</td><td class="n">22</td></tr>
+          <tr><td>hydromorphone</td><td class="n">74</td><td class="n">97</td><td class="n">36</td><td class="n">19</td></tr>
+          <tr><td>fentanyl</td><td class="n">54</td><td class="n">257</td><td class="n">85</td><td class="n">30</td></tr>
+          <tr><td>tirzepatide</td><td class="n">54</td><td class="n">0</td><td class="n">33</td><td class="n">114</td></tr>
+          <tr><td>methadone</td><td class="n">50</td><td class="n">71</td><td class="n">3</td><td class="n">12</td></tr>
+          <tr><td>semaglutide</td><td class="n">24</td><td class="n">0</td><td class="n">38</td><td class="n">119</td></tr>
+          <tr><td>liraglutide</td><td class="n">23</td><td class="n">0</td><td class="n">4</td><td class="n">40</td></tr>
+          <tr><td>dulaglutide</td><td class="n">11</td><td class="n">0</td><td class="n">0</td><td class="n">8</td></tr>
+          <tr><td>exenatide</td><td class="n">4</td><td class="n">0</td><td class="n">0</td><td class="n">9</td></tr>
+        </tbody>
+      </table></div>
+      <p>Listed products by type: ANDA (generic) 1,064 · NDA 227 · NDA authorized generic 26 · unapproved 15 · BLA 12. DEA schedule: CII 874, CIII 211, CIV 143. 141 labelers, 246 application numbers.</p>
+    </div>
+    <div class="mess"><div class="label">What's messy (measured)</div>
+      <ul>
+        <li><b>Not clean text.</b> 342 lines of product.txt, 694 of the excluded file and 97 of unfinished are not valid UTF-8. A default read fails. Latin-1 reads them all.</li>
+        <li><b>The excluded file is stripped.</b> Ingredient, generic name and dosage form are blank on 100% of its 206,937 products. Only brand name, labeler and application number stay. Our flags there: discontinued by the firm (D) 1,803, inactivated by FDA (I) 602, listing expired (U) 3.</li>
+        <li><b>Compounded products live apart.</b> 0 of the 287 compounder package codes for our 13 appear in the main file. RxNorm gives an RxCUI for 147 of them, all as <code>ALIEN</code>; 140 are <code>UNKNOWN</code>. They have no application number.</li>
+        <li><b>The same package repeats.</b> The compounder list has 720 rows for our 13 but only 287 distinct packages (224 products, 33 firms). Each half-year report (2024-2 to 2026-1) lists them again.</li>
+        <li><b>Bulk GLP-1 powder is common.</b> 119 semaglutide and 114 tirzepatide products in the unfinished file. 105 of all our bulk products are labelled "for human prescription compounding". This is the supply behind the compounded recalls, not something a hospital dispenses.</li>
+        <li><b>Combinations.</b> 483 of 1,344 listed products have 2+ ingredients: hydrocodone + acetaminophen 202, oxycodone + acetaminophen 128, buprenorphine + naloxone 96.</li>
+        <li><b>Codes get reused.</b> Recall D-0153-2017 printed <code>0409-4093-32</code> for Hospira fentanyl. Today that code belongs to a chromium product.</li>
+        <li><b>Three 10-digit shapes</b> (4-4-2, 5-3-2, 5-4-1). Billing systems use an 11-digit form (5-4-2) with a zero added. We compare everything as 11 digits.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 4 JOINS -->
+<section id="s4" class="stage">
+  <div class="num">4</div>
+  <div class="stage-body">
+    <h2>How it joins to the others</h2>
+    <div class="part"><div class="label">The chain</div>
+<pre>recall NDC ──▶ package (11-digit) ──▶ product ──▶ APPLICATIONNUMBER ──▶ Product object ──▶ label (Drugs@FDA / DailyMed)
+                                         │                 ▲
+                                         └─▶ SUBSTANCENAME │ FAERS nda_num lands here too
+                                                ──▶ RxNorm ingredient ──▶ Drug object</pre>
+      <p>The application number is the key that ties recalls, FAERS (<code>nda_num</code>) and labels to the same Product (D027). It is filled on <b>98.9%</b> of our listed products; the 15 blanks are all "unapproved drug other".</p>
+    </div>
+    <div class="part"><div class="label">Does RxNorm know the directory's codes? (one package per product)</div>
+      <div class="scroll"><table>
+        <thead><tr><th>List</th><th class="n">Codes checked</th><th class="n">RxCUI found</th><th>RxNorm status</th></tr></thead>
+        <tbody>
+          <tr><td>Listed</td><td class="n">1,332</td><td class="n">1,329 (99.8%)</td><td>ACTIVE 1,328 · UNKNOWN 2 · ALIEN 1 · OBSOLETE 1</td></tr>
+          <tr><td>503B compounded (all packages)</td><td class="n">287</td><td class="n">147 (51%)</td><td>ALIEN 146 · UNKNOWN 140 · OBSOLETE 1</td></tr>
+          <tr><td>Unfinished</td><td class="n">463</td><td class="n">50 (11%)</td><td>ALIEN 460 · OBSOLETE 2 · UNKNOWN 1</td></tr>
+        </tbody>
+      </table></div>
+      <p>For approved products, RxNorm and the directory agree almost fully. The gap is entirely compounded and bulk products.</p>
+    </div>
+    <div class="part"><div class="label">openFDA's JSON copy, our 1,344 finished products</div>
+      <p>The JSON adds an <code>openfda</code> block: RxCUI filled on 95.5%, label set ID (<code>spl_set_id</code>) on 95.8%, empty on 56 products. That set ID is a direct link to the DailyMed label. The FDA text files do not carry it.</p>
+    </div>
+    <div class="part"><div class="label">Recalls placed by the directory (527 recall rows with an NDC)</div>
+      <p>193 placed (37%): listed 89, excluded 75, 503B list 24, unfinished 5. Of these, 183 name the same ingredient as the recall text. The 10 that don't are mostly brand-only names in the excluded file (examples: Norco, Endocet, Oxecta), plus the reused chromium code. 150 carry an application number.</p>
+    </div>
+    <div class="decide"><div class="label">Decision to propose</div>
+      <ul>
+        <li>Build one <code>ndc_reference</code> table from all four files: 11-digit NDC, the code as printed, product NDC, application number, ingredients, labeler, list (listed / excluded D·I·U·E / 503B / unfinished), start and end dates.</li>
+        <li>Use it as the <b>Package → Product</b> bridge for recalls. Use RxNorm for <b>Product → Drug</b>. For the label, prefer the application number (D027); use openFDA's <code>spl_set_id</code> only as a cross-check.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 5 CHANGES -->
+<section id="s5" class="stage">
+  <div class="num">5</div>
+  <div class="stage-body">
+    <h2>How often it changes</h2>
+    <div class="part"><div class="label">Measured</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Measure</th><th class="n">Value</th><th>How</th></tr></thead>
+        <tbody>
+          <tr><td>Product listings that appeared, all drugs, in 4 days</td><td class="n">514</td><td rowspan="2">FDA text files (Oct 20) vs openFDA JSON (Oct 16), by product ID</td></tr>
+          <tr><td>…that disappeared</td><td class="n">631</td></tr>
+          <tr><td>Same, our 13 (appeared / disappeared)</td><td class="n">6 / 6</td><td>same compare</td></tr>
+          <tr><td>New packages for our 13, last 52 weeks</td><td class="n">393</td><td><code>STARTMARKETINGDATE</code>; 7.6 a week, 44 of 52 weeks had one</td></tr>
+          <tr><td>Listed products with an end date set</td><td class="n">30</td><td>all in the future (planned stops)</td></tr>
+          <tr><td>Listings certified only to 2026-12-31</td><td class="n">315</td><td>will drop to "excluded U" unless renewed</td></tr>
+          <tr><td>Compounder list refresh</td><td class="n">2× a year</td><td>periods 2024-2 · 2025-1 · 2025-2 · 2026-1; file of 2026-09-18</td></tr>
+        </tbody>
+      </table></div>
+      <p>A product ID includes the label version, so a label update shows up as one ID gone and one new. Counted by product code instead, only <b>91</b> codes are new and <b>208</b> are gone in those 4 days. The rest are new label versions of existing products.</p>
+    </div>
+    <div class="decide"><div class="label">Decision to propose</div>
+      <ul>
+        <li>Load weekly, together with recalls. A daily load buys nothing for the officer: about one change a day for our 13, and none of it is a safety event.</li>
+        <li>Keep each weekly snapshot, so a recall code can be resolved as of the recall date (the chromium case). Directory changes are not ChangeEvents on her screen.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 6 DECISION -->
+<section id="s6" class="stage">
+  <div class="num">6</div>
+  <div class="stage-body">
+    <h2>Decision</h2>
+    <div class="decide"><div class="label">To propose</div>
+      <ul>
+        <li><b>Add the NDC Directory as a reference source</b> (four FDA files, weekly). Its job is identity only: Package → Product → application number.</li>
+        <li><b>Compounded products are Products too.</b> Key = labeler + product code, category "503B compounded", no application number, tagged <span class="pill p-warn">compounded</span>. They link to a Drug through the ingredient name, since RxNorm mostly doesn't know them.</li>
+        <li><b>Excluded listings stay.</b> They are where old recalls point. Mark them "no longer marketed" rather than drop them.</li>
+        <li><b>Unfinished (bulk) products</b> stay in the reference table for recall lookups but never appear as products on her screen.</li>
+      </ul>
+    </div>
+    <div class="pushback">
+      <p><b>Safety officer lens (persona view, not a real interview).</b> She thinks in what is on her shelf: brand, strength, pack. The directory is how a recall line "NDC 71170-811-02" becomes "Apollo Care semaglutide 2.25 mg vial, compounded, not FDA-approved". That sentence is what makes the recall card trustworthy, and it must show where it came from: "from the FDA 503B list, report 2026-1".</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7 FORWARD -->
+<section id="s7" class="stage">
+  <div class="num">7</div>
+  <div class="stage-body">
+    <h2>What moves forward</h2>
+    <div class="part"><div class="label">Into the ontology</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Object</th><th>Key</th><th>Fields from the directory</th><th>Links</th></tr></thead>
+        <tbody>
+          <tr><td><b>Package</b></td><td>11-digit NDC</td><td>code as printed, description, start/end date, list (listed / excluded / 503B / unfinished)</td><td>→ Product · ← Recall</td></tr>
+          <tr><td><b>Product</b></td><td>application number; for 503B: labeler + product code</td><td>brand, dosage form, route, DEA schedule, category, labeler, compounded flag</td><td>→ Drug (1 or more ingredients) · ← FAERS (<code>nda_num</code>) · → label</td></tr>
+          <tr><td><code>drug_identity</code> rows</td><td>raw string</td><td>NDC and substance strings → ingredient RxCUI, with the route that matched</td><td>shared with FAERS and labels</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="part"><div class="label">Proposed for the logs (renumber when merged)</div>
+      <ul class="plain">
+        <li>Decisions: NDC Directory = identity reference (four files, weekly snapshots) · compounded = Product without application number · excluded listings kept.</li>
+        <li>Data issues: Latin-1 bytes · excluded file has no ingredient · 503B codes outside RxNorm (49% unknown) · codes reused across products · compounder rows repeat per half-year.</li>
+        <li>Full text: <a href="../source-profiles/08-ndc-directory.md">08-ndc-directory.md</a> → "Proposed for the logs".</li>
+      </ul>
+    </div>
+    <div class="part"><div class="label">Hand-check (you)</div>
+      <ul class="plain">
+        <li>Search <code>0169-4130</code> on FDA's NDC Directory web search: Ozempic, NDA209637?</li>
+        <li>Search <code>0409-4093</code>: what product is it today?</li>
+        <li>Open the compounder file and find PQ Pharmacy semaglutide <code>81375-600-03</code>.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</div>

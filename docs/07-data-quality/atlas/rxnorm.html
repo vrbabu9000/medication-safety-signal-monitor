@@ -1,0 +1,301 @@
+<title>RxNorm Identity Atlas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column; each pipeline stage is a numbered block (real order) with 4 fixed parts:
+   what it is · what it looks like (real rows) · what's messy (measured) · decision. Clinical paper + teal ink. */
+:root{
+  --bg:#f5f7f6; --surface:#ffffff; --ink:#15201e; --muted:#5a6966; --line:#d9e1df;
+  --accent:#0d6b66; --accent-soft:#e1efed;
+  --warn:#9a5b00; --warn-soft:#fbf0dc; --bad:#a3262c; --bad-soft:#f8e3e3; --good:#2c6e2f; --good-soft:#e3f1e2;
+  --code-bg:#eef2f1;
+  --f-display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1514; --surface:#162020; --ink:#e4ecea; --muted:#9fb0ac; --line:#2a3836;
+  --accent:#5cc2b9; --accent-soft:#163633;
+  --warn:#f0b65a; --warn-soft:#33270f; --bad:#f08a8f; --bad-soft:#3a1a1c; --good:#8fd18f; --good-soft:#18301a;
+  --code-bg:#111a19; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0f1514; --surface:#162020; --ink:#e4ecea; --muted:#9fb0ac; --line:#2a3836;
+  --accent:#5cc2b9; --accent-soft:#163633;
+  --warn:#f0b65a; --warn-soft:#33270f; --bad:#f08a8f; --bad-soft:#3a1a1c; --good:#8fd18f; --good-soft:#18301a;
+  --code-bg:#111a19; color-scheme:dark }
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding-block:40px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:56px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(2rem,4.5vw,2.8rem)}
+h2{font-size:1.65rem}
+h3{font-size:1.1rem;font-family:var(--f-body);font-weight:700}
+p{margin:0;max-width:68ch}
+.lede{font-size:1.1rem;color:var(--muted);max-width:66ch}
+.eyebrow{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+header{display:grid;gap:14px}
+.meta{font-size:.85rem;color:var(--muted)}
+section{display:grid;gap:18px}
+.stack{display:grid;gap:12px}
+code,.mono{font-family:var(--f-mono);font-size:.86em}
+code{background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{font-family:var(--f-mono);font-size:.78rem;line-height:1.5;background:var(--code-bg);border:1px solid var(--line);border-radius:6px;padding:12px 14px;margin:0;overflow-x:auto;white-space:pre}
+.scroll{overflow-x:auto;min-width:0}
+table{border-collapse:collapse;width:100%;font-size:.88rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+td.n,th.n{text-align:right}
+/* stage block */
+.stage{display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px}
+.num{font-family:var(--f-display);font-size:2.4rem;font-weight:700;color:var(--accent);line-height:1}
+.stage-body{display:grid;gap:18px;min-width:0}
+.part{display:grid;gap:8px;min-width:0}
+.part > .label{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mess{background:var(--warn-soft);border-left:3px solid var(--warn);padding:12px 14px;border-radius:0 6px 6px 0;display:grid;gap:8px}
+.mess .label{color:var(--warn)}
+.decide{background:var(--accent-soft);border-left:3px solid var(--accent);padding:12px 14px;border-radius:0 6px 6px 0;display:grid;gap:6px}
+.decide .label{color:var(--accent)}
+.mess ul,.decide ul,.plain ul{margin:0;padding-left:20px;display:grid;gap:4px}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:.72rem;padding:1px 7px;border-radius:999px;white-space:nowrap}
+.p-good{background:var(--good-soft);color:var(--good)} .p-bad{background:var(--bad-soft);color:var(--bad)}
+.p-warn{background:var(--warn-soft);color:var(--warn)} .p-acc{background:var(--accent-soft);color:var(--accent)}
+.strike{text-decoration:line-through;color:var(--muted)}
+/* funnel */
+.funnel{display:grid;gap:6px}
+.frow{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr) 7.5rem;gap:12px;align-items:center;font-size:.86rem}
+.bar{height:14px;background:var(--accent);border-radius:2px;min-width:2px}
+.frow .v{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:14px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;display:grid;gap:8px;min-width:0}
+.box h3{font-size:.95rem}
+.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem}
+.toc a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+.toc a:hover,.toc a:focus-visible{border-bottom-color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+hr{border:0;border-top:1px solid var(--line);margin:0}
+.pushback{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:grid;gap:10px}
+@media (max-width:640px){
+  .stage{grid-template-columns:1fr;gap:6px}
+  .num{font-size:1.8rem}
+  .frow{grid-template-columns:minmax(0,1fr) 6.5rem}
+  .frow .bar-wrap{grid-column:1 / -1;order:3}
+}
+</style>
+
+
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Medication Safety Signal Monitor · Data atlas · RxNorm · 2026-10-20</div>
+  <h1>RxNorm: one ID for each of our 13 drugs</h1>
+  <p class="lede">RxNorm is the US National Library of Medicine's drug dictionary. It gives every drug concept one ID, the <b>RxCUI</b>. We use the ingredient-level ID as the key of the <b>Drug</b> object. This page measures how well it turns the ingredient text in real FAERS rows into our 13 IDs. Every number was measured on 2026-10-20 by <code>prototypes/explore/identity_atlas.py</code> on the 2026 Q1 + Q2 bulk FAERS files, against RxNorm release 05-Oct-2026.</p>
+  <p class="meta"><b>Verdict:</b> <span class="pill p-good">KEEP</span> RxNorm exact lookup reaches the Drug for <b>171,166 of 171,171</b> rows that are really ours (99.997%). Adding one salt word ("trihydrate") gets the last 5. The FAERS ingredient field is already clean, so RxNorm's real value is a stable ID and the drug family graph, not better matching. Companion page: <a href="drugsatfda.html">drugsatfda.html</a> (Product level).</p>
+  <nav class="toc" aria-label="Parts">
+    <a href="#overview">Overview</a><a href="#p1">1 Get it</a><a href="#p2">2 One record</a><a href="#p3">3 Messy</a><a href="#p4">4 Joins</a><a href="#p5">5 How often it changes</a><a href="#p6">6 Decision</a><a href="#p7">7 What moves forward</a>
+  </nav>
+</header>
+
+<section id="overview">
+  <div class="eyebrow">Overview</div>
+  <h2>From FAERS drug rows to our 13 ingredient IDs</h2>
+  <p>We cast a wide net first: every FAERS drug row whose names contain one of our 13 words, or one of our brand names. Then RxNorm decides which rows are really ours. The net is wide on purpose, so we can see what RxNorm throws out.</p>
+  <div class="funnel" role="list" aria-label="Row counts from FAERS to RxNorm ingredient IDs">
+    <div class="frow" role="listitem"><span>FAERS drug rows, 2 quarters (all drugs)</span><span class="bar-wrap"><span class="bar" style="display:block;width:100%"></span></span><span class="v">3,330,435</span></div>
+    <div class="frow" role="listitem"><span>Rows in the wide net (name contains one of ours)</span><span class="bar-wrap"><span class="bar" style="display:block;width:5.24%"></span></span><span class="v">174,654</span></div>
+    <div class="frow" role="listitem"><span>…with the coded ingredient field <code>prod_ai</code> filled</span><span class="bar-wrap"><span class="bar" style="display:block;width:5.22%"></span></span><span class="v">173,987</span></div>
+    <div class="frow" role="listitem"><span>…that RxNorm maps to one of our 13</span><span class="bar-wrap"><span class="bar" style="display:block;width:5.14%"></span></span><span class="v">171,171</span></div>
+    <div class="frow" role="listitem"><span>…that RxNorm maps to a different drug (apomorphine, heroin…)</span><span class="bar-wrap"><span class="bar" style="display:block;width:0.08%"></span></span><span class="v">2,773</span></div>
+    <div class="frow" role="listitem"><span>…that RxNorm does not know (street analogues, metabolites)</span><span class="bar-wrap"><span class="bar" style="display:block;width:0.01%"></span></span><span class="v">43</span></div>
+    <div class="frow" role="listitem"><span><code>prod_ai</code> blank: free text only</span><span class="bar-wrap"><span class="bar" style="display:block;width:0.02%"></span></span><span class="v">667</span></div>
+  </div>
+  <p class="meta">All roles counted here (suspect and concomitant). Rows, not reports. The suspect-only view is on the Drugs@FDA page. "≥" in the combination table = sum of the top named strings only.</p>
+</section>
+
+<hr>
+
+<section id="p1" class="stage">
+  <div class="num">1</div>
+  <div class="stage-body">
+    <h2>Get it</h2>
+    <div class="part"><div class="label">Two ways in</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Route</th><th>What you get</th><th>Access</th><th>Use it for</th></tr></thead>
+        <tbody>
+          <tr><td><b>RxNav REST API</b></td><td>JSON answers: name → RxCUI, RxCUI → related concepts, history</td><td>No key, no account. Limit 20 calls per second.</td><td>The pilot. This run needed 1,046 calls, all cached on disk.</td></tr>
+          <tr><td><b>Current Prescribable Content</b></td><td>Monthly zip of pipe-separated tables (<code>RXNCONSO.RRF</code> names, <code>RXNREL.RRF</code> links). File today: <code>RxNorm_full_prescribe_10052026.zip</code></td><td>No licence needed</td><td>Scale: load into Foundry, join locally, no API calls</td></tr>
+          <tr><td>RxNorm Full release</td><td>Same tables plus all source vocabularies</td><td>Free UMLS account</td><td>Not needed for us</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="part"><div class="label">The three calls we use</div>
+<pre>GET /REST/rxcui.json?name=OXYCODONE HYDROCHLORIDE&amp;search=0     exact name → RxCUI
+GET /REST/rxcui/82063/related.json?tty=IN                      any RxCUI → its ingredient (IN)
+GET /REST/approximateTerm.json?term=TRAMADOL HCL ER&amp;maxEntries=1 messy free text → best guess</pre>
+    </div>
+  </div>
+</section>
+
+<section id="p2" class="stage">
+  <div class="num">2</div>
+  <div class="stage-body">
+    <h2>What one record looks like</h2>
+    <div class="part"><div class="label">RxNorm is a graph, not a table</div>
+      <p>One FAERS row: <code>…$PS$OXYCONTIN$OXYCODONE HYDROCHLORIDE$…</code>. The coded ingredient goes to RxNorm. These are the real responses:</p>
+<pre>rxcui.json?name=OXYCODONE HYDROCHLORIDE   → {"idGroup":{"rxnormId":["82063"]}}
+rxcui/82063/properties.json               → {"rxcui":"82063","name":"oxycodone hydrochloride","tty":"PIN"}
+rxcui/82063/related.json?tty=IN           → {"tty":"IN","conceptProperties":[{"rxcui":"7804","name":"oxycodone"}]}</pre>
+      <p><code>tty</code> is the concept type. <b>IN</b> = ingredient (our Drug key). <b>PIN</b> = precise ingredient, a salt form of an IN. Below them sit clinical drugs (SCD), branded drugs (SBD) and package codes (NDC).</p>
+    </div>
+    <div class="part"><div class="label">The FAERS ingredient strings with the most rows</div>
+      <div class="scroll"><table>
+        <thead><tr><th>FAERS <code>prod_ai</code> part</th><th class="n">Rows</th><th>RxCUI</th><th>→ Ingredient</th></tr></thead>
+        <tbody>
+          <tr><td>TIRZEPATIDE</td><td class="n">78,545</td><td>2601723</td><td>tirzepatide</td></tr>
+          <tr><td>SEMAGLUTIDE</td><td class="n">33,140</td><td>1991302</td><td>semaglutide</td></tr>
+          <tr><td>OXYCODONE HYDROCHLORIDE</td><td class="n">8,421</td><td>82063 (PIN)</td><td>oxycodone 7804</td></tr>
+          <tr><td>OXYCODONE</td><td class="n">5,806</td><td>7804</td><td>oxycodone</td></tr>
+          <tr><td>DULAGLUTIDE</td><td class="n">5,073</td><td>1551291</td><td>dulaglutide</td></tr>
+          <tr><td>TRAMADOL HYDROCHLORIDE</td><td class="n">4,486</td><td>82110 (PIN)</td><td>tramadol 10689</td></tr>
+          <tr><td>MORPHINE SULFATE</td><td class="n">3,722</td><td>30236 (PIN)</td><td>morphine 7052</td></tr>
+          <tr><td>APOMORPHINE HYDROCHLORIDE</td><td class="n">2,407</td><td>71225</td><td><span class="pill p-bad">apomorphine</span> not ours</td></tr>
+          <tr><td>OXYCODONE TEREPHTHALATE</td><td class="n">1,056</td><td>159821 (PIN)</td><td>oxycodone 7804</td></tr>
+          <tr><td>DIAMORPHINE</td><td class="n">282</td><td>3304</td><td><span class="pill p-bad">heroin</span> not ours</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="part"><div class="label">Our 13 ingredient IDs, checked against RxNorm history today</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Ingredient</th><th>RxCUI</th><th>Status</th><th>Active since</th><th class="n">Spellings in FAERS</th></tr></thead>
+        <tbody>
+          <tr><td>buprenorphine</td><td>1819</td><td>Active · IN</td><td>04/2005</td><td class="n">2</td></tr>
+          <tr><td>fentanyl</td><td>4337</td><td>Active · IN</td><td>04/2005</td><td class="n">3</td></tr>
+          <tr><td>hydrocodone</td><td>5489</td><td>Active · IN</td><td>04/2005</td><td class="n">2</td></tr>
+          <tr><td>hydromorphone</td><td>3423</td><td>Active · IN</td><td>04/2005</td><td class="n">2</td></tr>
+          <tr><td>methadone</td><td>6813</td><td>Active · IN</td><td>04/2005</td><td class="n">1</td></tr>
+          <tr><td>morphine</td><td>7052</td><td>Active · IN</td><td>04/2005</td><td class="n">3</td></tr>
+          <tr><td>oxycodone</td><td>7804</td><td>Active · IN</td><td>04/2005</td><td class="n">3 (+1 RxNorm misses)</td></tr>
+          <tr><td>tramadol</td><td>10689</td><td>Active · IN</td><td>04/2005</td><td class="n">2</td></tr>
+          <tr><td>semaglutide</td><td>1991302</td><td>Active · IN</td><td>01/2018</td><td class="n">1</td></tr>
+          <tr><td>liraglutide</td><td>475968</td><td>Active · IN</td><td>02/2010</td><td class="n">1</td></tr>
+          <tr><td>dulaglutide</td><td>1551291</td><td>Active · IN</td><td>11/2014</td><td class="n">1</td></tr>
+          <tr><td>exenatide</td><td>60548</td><td>Active · IN</td><td>02/2006</td><td class="n">1</td></tr>
+          <tr><td>tirzepatide</td><td>2601723</td><td>Active · IN</td><td>06/2022</td><td class="n">1</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+</section>
+
+<section id="p3" class="stage">
+  <div class="num">3</div>
+  <div class="stage-body">
+    <h2>What's messy (measured)</h2>
+    <div class="mess"><div class="label">The coded field is clean; the edges are not</div>
+      <ul>
+        <li><b>Only 41 distinct ingredient strings</b> in <code>prod_ai</code> contain one of our 13 words, across 2 quarters. FDA codes this field. Compare the free-text <code>drugname</code>: 77 spellings of oxycodone alone in one quarter (walkthrough page).</li>
+        <li><b>30 of 41 strings are in RxNorm by exact name.</b> RxNorm already knows the salt forms (PIN), so stripping salt words found <b>nothing extra</b> with the walkthrough's salt list. One string was found only after also stripping "trihydrate": <code>OXYCODONE HYDROCHLORIDE TRIHYDRATE</code>, 5 rows. The walkthrough rule misses those 5 too.</li>
+        <li><b>11 strings RxNorm does not know (43 rows):</b> street analogues and metabolites. Parafluorofentanyl 15, nicomorphine 8, desmetramadol 6, norbuprenorphine 5, norfentanyl 2, 6-acetylmorphine 2, despropionylfentanyl 2, and 4 single rows. None of them is one of our drugs. Today they drop out as "unknown". They should drop out as "not ours, tagged".</li>
+        <li><b>Look-alikes RxNorm correctly separates (2,773 rows):</b> apomorphine 2,478 (a Parkinson's drug), heroin coded as DIAMORPHINE 282, levomethadone 8, ethylmorphine 2, and <b>benzhydrocodone 3</b>. Benzhydrocodone (Apadaz) turns into hydrocodone in the body, but RxNorm files it as its own ingredient. <span class="pill p-warn">open</span> PV call: count it as hydrocodone or not?</li>
+      </ul>
+    </div>
+    <div class="mess"><div class="label">Combination products are common for 4 opioids</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Ingredient</th><th class="n">Rows</th><th class="n">In a combination</th><th>Main partner</th></tr></thead>
+        <tbody>
+          <tr><td>hydrocodone</td><td class="n">4,526</td><td class="n"><b>3,386 (75%)</b></td><td>acetaminophen (≥3,281)</td></tr>
+          <tr><td>buprenorphine</td><td class="n">4,843</td><td class="n">1,185 (24%)</td><td>naloxone (≥1,183)</td></tr>
+          <tr><td>oxycodone</td><td class="n">15,100</td><td class="n">3,151 (21%)</td><td>acetaminophen (≥2,854), naloxone (≥256)</td></tr>
+          <tr><td>tramadol</td><td class="n">9,196</td><td class="n">1,221 (13%)</td><td>acetaminophen (≥1,194)</td></tr>
+          <tr><td>liraglutide</td><td class="n">2,223</td><td class="n">125 (6%)</td><td>insulin degludec (Xultophy)</td></tr>
+          <tr><td>other 8</td><td class="n">—</td><td class="n">0–66 each</td><td>mostly compounded mixes</td></tr>
+        </tbody>
+      </table></div>
+      <p>Compounded mixes (pharmacy-made, not FDA-approved): cyanocobalamin + tirzepatide 19 rows, cyanocobalamin + semaglutide 18, pyridoxine + tirzepatide 14, niacinamide + tirzepatide 9, glycine + tirzepatide 9, glycine + semaglutide 8. At least 90 rows in the top 10 mixes.</p>
+    </div>
+    <div class="mess"><div class="label">Blank ingredient field: free text only (667 rows, 0.4%)</div>
+      <ul>
+        <li>471 distinct free-text names, e.g. <code>TRAMADOL HCL ER</code>, <code>HYDROCODONE-ACETAMINOPH</code>, <code>OZEMPIC (2 MG/DOSE) SUBCUTANEOUS SO</code> (cut off by the form).</li>
+        <li>RxNorm's best-guess search (<code>approximateTerm</code>, top 1) finds one of ours for <b>512 rows (77%)</b>. The walkthrough's word + brand rule finds <b>654 (98%)</b>. They agree on 507.</li>
+        <li>The best guess fails on cut-off and hyphenated text. The word rule fails on typos like <code>ITRAMADOL HCL</code>, which the best guess gets.</li>
+      </ul>
+    </div>
+    <div class="mess"><div class="label">The surprise</div>
+      <p>On the 173,987 rows with <code>prod_ai</code> filled, RxNorm and the walkthrough's hand-written rule give <b>the same answer on every row except 5</b> (the trihydrate case). The rule is not wrong today. RxNorm earns its place as the stable ID, the link to labels and packages, and a safe answer for strings nobody has seen yet.</p>
+    </div>
+  </div>
+</section>
+
+<section id="p4" class="stage">
+  <div class="num">4</div>
+  <div class="stage-body">
+    <h2>How it joins to the others</h2>
+    <div class="part"><div class="label">The IN RxCUI is the Drug key. Every source reaches it a different way.</div>
+      <div class="scroll"><table>
+        <thead><tr><th>Source</th><th>Field</th><th>Path to the ingredient RxCUI</th><th>Measured</th></tr></thead>
+        <tbody>
+          <tr><td>FAERS</td><td><code>prod_ai</code></td><td>split on <code>\</code> → exact name → IN</td><td><span class="pill p-good">this page</span> 99.997% (100% with "trihydrate")</td></tr>
+          <tr><td>FAERS (blank <code>prod_ai</code>)</td><td><code>drugname</code></td><td>word + brand rule, then <code>approximateTerm</code></td><td><span class="pill p-good">this page</span> 98% / 77%</td></tr>
+          <tr><td>Drugs@FDA</td><td><code>Products.ActiveIngredient</code></td><td>split on <code>;</code> → salt strip → IN name</td><td><a href="drugsatfda.html">drugsatfda.html</a></td></tr>
+          <tr><td>DailyMed labels</td><td>setid</td><td>DailyMed's setid → RxCUI mapping file</td><td><span class="pill p-warn">labels session</span></td></tr>
+          <tr><td>Recalls / NDC Directory</td><td>NDC in free text</td><td><code>ndcstatus.json?ndc=</code> → product RxCUI → IN</td><td><span class="pill p-warn">recalls session</span></td></tr>
+        </tbody>
+      </table></div>
+      <p>The bridge from Drug to Product is not in RxNorm. FAERS gives the FDA application number, and Drugs@FDA turns that into a Product. See the companion page.</p>
+    </div>
+  </div>
+</section>
+
+<section id="p5" class="stage">
+  <div class="num">5</div>
+  <div class="stage-body">
+    <h2>How often it changes</h2>
+    <div class="part">
+      <div class="scroll"><table>
+        <thead><tr><th>What</th><th>Clock</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr><td>RxNorm full release</td><td><b>Monthly</b>, first Monday (or the next working day)</td><td>NLM files page: releases dated 03 Aug, 08 Sep, 05 Oct 2026</td></tr>
+          <tr><td>RxNorm weekly updates</td><td>Weekly, between releases</td><td>Same page lists weekly update files (documented; their dates not measured)</td></tr>
+          <tr><td>RxNav API</td><td>Follows the release</td><td><code>version.json</code> today: <code>05-Oct-2026</code></td></tr>
+          <tr><td>Our 13 ingredient IDs</td><td><b>Have never changed</b></td><td>History: all Active, no end date, no remap. Oldest since 04/2005.</td></tr>
+        </tbody>
+      </table></div>
+      <p>What changes for us is below the ingredient: new strengths, brands and package codes. Our keys stay put. A new FAERS spelling is the realistic change, and today there are only 41.</p>
+    </div>
+  </div>
+</section>
+
+<section id="p6" class="stage">
+  <div class="num">6</div>
+  <div class="stage-body">
+    <h2>Decision to propose</h2>
+    <div class="decide"><div class="label">Proposed</div>
+      <ul>
+        <li><b>Drug key = ingredient RxCUI (tty IN).</b> The formulary stays an explicit list of 13 RxCUIs (D018).</li>
+        <li><b>One <code>drug_identity</code> table, keyed by the raw string</b>: raw string → IN RxCUI, match method (exact / salt-stripped / best guess / word rule / none), RxNorm version used. Seed it with today's 41 strings plus the blank-field names. Look up only strings it has not seen.</li>
+        <li><b>Order of matching:</b> RxNorm exact → RxNorm after salt strip (add "trihydrate") → for blank <code>prod_ai</code>, word + brand rule → <code>approximateTerm</code>. Never substring.</li>
+        <li><b>Unknown strings are tagged, not dropped silently:</b> <span class="pill p-warn">analogue / metabolite</span> or <span class="pill p-warn">unresolved</span>. Monitoring counts new unresolved strings per quarter.</li>
+        <li><b>Combinations</b> count for each of our ingredients in them and carry a <span class="pill p-acc">combo</span> tag with the partner list. <b>Compounded mixes</b> carry <span class="pill p-warn">compounded</span>.</li>
+        <li><b>Refresh</b> the table monthly, after the RxNorm release. Use the API in the pilot; load the no-licence monthly zip for scale.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="p7" class="stage">
+  <div class="num">7</div>
+  <div class="stage-body">
+    <h2>What moves forward</h2>
+    <div class="part plain">
+      <ul>
+        <li><b>Into the build:</b> the <code>drug_identity</code> table spec above and its seed (41 strings + 471 free-text names, from <code>prototypes/data/_identity/cache/rxnav.json</code>).</li>
+        <li><b>Into monitoring:</b> share of our rows resolved per quarter (today 100% with the extended salt list), count of new unresolved strings, count of free-text-only rows (today 667).</li>
+        <li><b>Into the ontology:</b> Drug object = 13 rows, one per IN RxCUI, with name, class (opioid / GLP-1) and RxNorm version.</li>
+        <li><b>Open questions:</b> benzhydrocodone as hydrocodone (PV call, 3 rows) · do we show street analogues anywhere (43 rows)?</li>
+        <li><b>Your hand-check:</b> in RxNav, look up <code>OXYCODONE HYDROCHLORIDE TRIHYDRATE</code> (expect no match) and <code>DIAMORPHINE</code> (expect heroin, 3304).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</div>

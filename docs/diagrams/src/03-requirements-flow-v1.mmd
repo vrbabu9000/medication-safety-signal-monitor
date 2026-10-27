@@ -1,0 +1,10 @@
+flowchart LR
+  F[FAERS<br/>side-effect reports] --> S{{Signal engine}}
+  L[DailyMed labels] -->|LLM extracts<br/>labeled reactions| S
+  R[FDA recalls] --> A[Recall alerts]
+  X[RxNorm] -->|one drug identity| S
+  X --> A
+  C[ClinicalTrials.gov] -.second opinion.-> S
+  S --> U[(Safety officer<br/>morning screen)]
+  A --> U
+  U -->|triage action| W[(Writes back to ontology)]

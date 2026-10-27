@@ -28,10 +28,7 @@ Numbers first. Before → after.
 Keep / drop / park, and the one-line reason.
 
 ## Diagram (if structure changed)
-```mermaid
-flowchart LR
-  A --> B
-```
+_Diagram (if structure changed): add `docs/diagrams/src/NN-topic-vX.mmd`, run `bash tools/render_diagrams.sh`, then link the PNG + PDF here._
 
 ## Persona check
 - 🩺 PV SME:

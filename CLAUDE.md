@@ -52,6 +52,13 @@ Rules:
 - Update the **Pick up here** box (last session, where we are, next 3 actions, waiting on).
 - Add a dated entry at the top of the log: what was done, decisions made, files created (linked).
 
+## 2c. Decisions, learnings and compass versions (mandatory)
+
+- **Never edit a decision in place.** A changed decision gets a new version (`D### vN`) or a superseding D-number. Log it in the **Decision changes** table at the top of `docs/06-decisions/DECISIONS.md` (date · before · now · trigger/evidence · compass version).
+- Anything realised on the fly goes in the **Learnings** table in the same file, linked to the decision or data issue it changed.
+- **COMPASS is versioned.** On any change to phase, step, blocker, schedule, cut list or a decision: copy COMPASS.md to `docs/00-compass/history/COMPASS-vNN.md`, bump the version, and add a change-log row (version · date · what moved · decisions changed).
+- **Time is tracked** in `docs/10-delivery/BACKLOG.md` (owner · hours · due · status). Run the ⏱️ Delivery Lead (`.claude/agents/delivery-lead.md`) at the end of each working session, or when the user asks.
+
 ## 3. Every new approach gets a .md file
 
 Whenever we try a new approach (design, pipeline strategy, model/prompt, ontology shape, UI flow):
@@ -74,11 +81,13 @@ Design-thinking artifacts live in `docs/02-design-thinking/`. The end user is th
 
 ## 5. Diagrams (Visio-ready)
 
-Whenever architecture, data flow, ontology or a process is discussed, produce a diagram:
-- **Mermaid** inside the .md file (renders on GitHub and in VS Code) for quick views.
-- **draw.io source** (`docs/04-architecture/diagrams/*.drawio`) for editable, presentation-grade diagrams.
-  These open in diagrams.net / draw.io desktop and export to **Visio (.vsdx)** via *File → Export as → VSDX*.
-- Name diagrams `NN-topic-vX.drawio`. Bump the version on change and keep the old one.
+Whenever a diagram would help understanding (architecture, data flow, ontology, process, data shapes, numbers), make one.
+**Diagrams are separate files the user can open: PNG + PDF. Never put diagram code inside a .md file** (D017).
+- Source: `docs/diagrams/src/NN-topic-vX.mmd` (Mermaid; charts use `xychart-beta`).
+- Render: `bash tools/render_diagrams.sh` → `docs/diagrams/png/`, `docs/diagrams/pdf/`, and `docs/diagrams/diagram-book.pdf` (all diagrams in one PDF).
+- In .md files, only **link** to the PNG and PDF.
+- Editable for Visio: `docs/diagrams/drawio/*.drawio` → open in draw.io → *File → Export as → VSDX*.
+- Bump the version on change and keep the old one. Look at the rendered PNG before telling the user it's done.
 
 ## 6. Personas (agent lenses)
 
@@ -96,6 +105,7 @@ user asks (e.g. "ask the safety officer persona", "run the reviewer").
 | 🎨 Design-Thinking Lead | `design-lead.md` | Empathy, problem framing, prototypes, user tests |
 | 🛡️ Compliance & Security | `compliance.md` | No-PHI, data licensing (MedDRA!), audit, production readiness |
 | 🧐 Evaluator / Red Team | `evaluator.md` | Scores work against the Soragence rubric; finds holes |
+| ⏱️ Delivery Lead | `delivery-lead.md` | Time left vs work left, late tasks, cut list, compass version bumps (runs as a subagent at session end) |
 
 ## 7. Project guardrails (from the brief)
 

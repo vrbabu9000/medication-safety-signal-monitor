@@ -5,18 +5,7 @@ _Stage: Empathize → Define · Status: Draft v0 (before boss answers)_
 ## 1. What exactly are we building?
 A **signal monitor**, not a database. It turns four messy public feeds into a short, ranked to-do list for one person.
 
-```mermaid
-flowchart LR
-  F[FAERS<br/>side-effect reports] --> S{{Signal engine}}
-  L[DailyMed labels] -->|LLM extracts<br/>labeled reactions| S
-  R[FDA recalls] --> A[Recall alerts]
-  X[RxNorm] -->|one drug identity| S
-  X --> A
-  C[ClinicalTrials.gov] -.second opinion.-> S
-  S --> U[(Safety officer<br/>morning screen)]
-  A --> U
-  U -->|triage action| W[(Writes back to ontology)]
-```
+📊 **Diagram:** [03-requirements-flow-v1.png](../diagrams/png/03-requirements-flow-v1.png) · [PDF](../diagrams/pdf/03-requirements-flow-v1.pdf) · _source: [03-requirements-flow-v1.mmd](../diagrams/src/03-requirements-flow-v1.mmd)_
 
 ## 2. Requirements, made testable
 

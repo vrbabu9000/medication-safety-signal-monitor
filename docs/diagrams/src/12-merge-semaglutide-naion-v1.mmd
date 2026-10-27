@@ -1,0 +1,27 @@
+---
+title: "Example B — semaglutide + NAION: reported but not on the US label"
+---
+flowchart LR
+  subgraph F["FAERS (openFDA, run 2026-10-20)"]
+    direction TB
+    F1["semaglutide reports: 100,679<br/>(by active ingredient field)"]
+    F2["with 'Optic ischaemic neuropathy': 869<br/>2023: 1 · 2024: 94 · 2025: 429 · 2026: 340"]
+    F3["PRR ≈ 67 (any role, not deduped)<br/>ILLUSTRATIVE ONLY"]
+    F1 --> F2 --> F3
+  end
+  subgraph L["DailyMed label (Ozempic/Rybelsus v14, Aug 19 2026)"]
+    direction TB
+    L1["Boxed Warning · Warnings & Precautions ·<br/>Adverse Reactions (2 tables)"]
+    L2["LLM extracts labeled reactions<br/>+ grounding check"]
+    L3["'optic' / 'NAION' found: 0 times"]
+    L1 --> L2 --> L3
+  end
+  subgraph M["Match on Drug = semaglutide (RxCUI)"]
+    direction TB
+    M1{"Reaction on label?"}
+  end
+  F3 --> M1
+  L3 --> M1
+  M1 -- "No" --> S["SIGNAL · semaglutide · NAION<br/>status: New<br/>evidence: FAERS query + counts,<br/>label setid + version, sections searched<br/>caveat: 2024 spike follows media coverage<br/>wording: 'reported, not on US label'"]
+  M1 -- "Yes" --> N["No signal"]
+  S --> T["Safety officer triages:<br/>Escalate / Monitor / Dismiss + note<br/>→ writes back to ontology"]

@@ -1,0 +1,16 @@
+---
+title: "Join keys — what links the sources"
+---
+flowchart TB
+  RX(["RxNorm ingredient RxCUI<br/>THE one drug key"])
+  FA["FAERS<br/>patient.drug[].openfda.rxcui (product level)<br/>openfda.spl_set_id · product_ndc<br/>medicinalproduct (free text)"]
+  LB["DailyMed label<br/>setid · spl_version<br/>openfda.rxcui"]
+  RC["Recalls<br/>NDC parsed from product_description<br/>openfda.rxcui (almost always empty)"]
+  CT["ClinicalTrials.gov<br/>intervention name (text only)"]
+  FA -- "rxcui roll-up to IN" --> RX
+  FA -- "spl_set_id = setid (direct link to label)" --> LB
+  LB -- "rxcui roll-up" --> RX
+  RC -- "NDC → RxNorm; else text match" --> RX
+  CT -- "name → approximateTerm" --> RX
+  FA -. "reaction term (MedDRA)" .- CT
+  FA -. "reaction term vs LLM-extracted label text" .- LB

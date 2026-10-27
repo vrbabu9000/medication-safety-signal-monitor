@@ -1,0 +1,66 @@
+<mxfile host="app.diagrams.net" agent="Claude" version="24.0.0">
+  <diagram id="merge-v1" name="Merge example v1">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t" value="Merge example v1 — three sources, three shapes, one Drug (fentanyl)" style="text;html=1;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="10" width="900" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L1" value="1 · Raw" style="swimlane;startSize=30;fillColor=#f1f5f9;strokeColor=#64748b;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="380" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" value="&lt;b&gt;RECALL&lt;/b&gt; D-0646-2023 · Ongoing · Class II&lt;br&gt;product_description (free text):&lt;br&gt;'FentaNYL 500 mcg + Ropivacaine in 0.9% NaCl … NDC 71170-950-25'&lt;br&gt;openfda: EMPTY" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#b91c1c;align=left;spacingLeft=8;" vertex="1" parent="L1">
+          <mxGeometry x="20" y="50" width="340" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="&lt;b&gt;FAERS&lt;/b&gt; report 10007491&lt;br&gt;drug[0] VERSED · role 1 suspect&lt;br&gt;drug[1] FENTANYL · role 2 concomitant&lt;br&gt;openfda.rxcui = 8 product IDs&lt;br&gt;reaction: Respiratory depression" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#1d4ed8;align=left;spacingLeft=8;" vertex="1" parent="L1">
+          <mxGeometry x="20" y="230" width="340" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="&lt;b&gt;LABEL&lt;/b&gt; (DailyMed SPL XML)&lt;br&gt;Fentanyl Citrate Inj. [Hospira] · setid … v35&lt;br&gt;34066-1 Boxed Warning: respiratory depression&lt;br&gt;34084-4 Adverse Reactions …" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#15803d;align=left;spacingLeft=8;" vertex="1" parent="L1">
+          <mxGeometry x="20" y="410" width="340" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="L2" value="2 · Drug identity (RxNorm, once)" style="swimlane;startSize=30;fillColor=#fef3c7;strokeColor=#b45309;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="60" width="380" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="i1" value="NDC 71170-950-25 → UNKNOWN (compounded)&lt;br&gt;text match → 1009056&lt;br&gt;→ fentanyl 4337 + ropivacaine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" vertex="1" parent="L2">
+          <mxGeometry x="20" y="70" width="340" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="i2" value="product rxcui[] → roll up → IN 4337&lt;br&gt;role filter: suspect only" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" vertex="1" parent="L2">
+          <mxGeometry x="20" y="250" width="340" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="i3" value="openfda.rxcui → IN 4337" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" vertex="1" parent="L2">
+          <mxGeometry x="20" y="430" width="340" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="L3" value="3 · Ontology" style="swimlane;startSize=30;fillColor=#eef2ff;strokeColor=#4338ca;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="60" width="420" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="d" value="&lt;b&gt;Drug&lt;/b&gt;&lt;br&gt;fentanyl · RxCUI 4337" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fde68a;strokeColor=#b45309;strokeWidth=2;" vertex="1" parent="L3">
+          <mxGeometry x="20" y="250" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="o1" value="Recall D-0646-2023&lt;br&gt;ACTIVE · compounded" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;" vertex="1" parent="L3">
+          <mxGeometry x="230" y="70" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="o2" value="AdverseEventStat&lt;br&gt;respiratory depression" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;" vertex="1" parent="L3">
+          <mxGeometry x="230" y="260" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="o3" value="Label v35&lt;br&gt;resp. depression = LABELED" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;" vertex="1" parent="L3">
+          <mxGeometry x="230" y="450" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="out" value="&lt;b&gt;Safety officer sees&lt;/b&gt;&lt;br&gt;1 active recall&lt;br&gt;0 new signals (reaction is labeled)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e293b;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="300" width="250" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="r1" target="i1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="r2" target="i2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="r3" target="i3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#b45309;strokeWidth=2;" edge="1" parent="1" source="i1" target="d"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#b45309;strokeWidth=2;" edge="1" parent="1" source="i2" target="d"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#b45309;strokeWidth=2;" edge="1" parent="1" source="i3" target="d"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" style="html=1;endArrow=none;" edge="1" parent="1" source="d" target="o1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" style="html=1;endArrow=none;" edge="1" parent="1" source="d" target="o2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" style="html=1;endArrow=none;" edge="1" parent="1" source="d" target="o3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e10" value="on label → no signal" style="html=1;dashed=1;" edge="1" parent="1" source="o2" target="o3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e11" value="recall alert" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#b91c1c;strokeWidth=2;" edge="1" parent="1" source="o1" target="out"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

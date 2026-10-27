@@ -1,0 +1,14 @@
+flowchart LR
+  subgraph FDA["FDA (open.fda.gov + fis.fda.gov)"]
+    A[FAERS<br/>adverse event reports]
+    C[Enforcement<br/>recalls]
+  end
+  subgraph NLM["National Library of Medicine"]
+    B[DailyMed<br/>drug labels]
+    D[RxNorm / RxNav<br/>drug IDs + classes]
+    F[PubMed<br/>optional]
+  end
+  E[ClinicalTrials.gov<br/>trial side effects]
+  G[CMS Part D<br/>usage, optional]
+  H[FDA Safety Labeling Changes<br/>+ Drug Safety Communications<br/>ground truth, optional]
+  D -->|joins everything| A & B & C & E

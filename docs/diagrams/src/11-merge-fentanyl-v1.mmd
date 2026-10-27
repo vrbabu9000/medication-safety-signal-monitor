@@ -1,0 +1,31 @@
+---
+title: "Example A — fentanyl: three sources, three shapes, one Drug"
+---
+flowchart LR
+  subgraph RAW["1 · Raw (each source names the drug differently)"]
+    direction TB
+    A1["RECALL D-0646-2023 · Ongoing · Class II<br/>'FentaNYL 500 mcg + Ropivacaine in 0.9% NaCl,<br/>Apollo Care ... NDC 71170-950-25'<br/>reason: lack of assurance of sterility"]
+    A2["FAERS report 10007491<br/>drug[0] VERSED role 1 suspect<br/>drug[1] FENTANYL role 2 concomitant<br/>reaction: Respiratory depression"]
+    A3["DailyMed label · Fentanyl Citrate Inj (Hospira)<br/>setid ... v35 · Aug 25 2026<br/>Boxed Warning mentions respiratory depression"]
+  end
+  subgraph ID["2 · Drug identity (RxNorm, done ONCE)"]
+    direction TB
+    B1["recall: NDC 71170-950-25 → UNKNOWN in RxNorm (compounded)<br/>fallback text match → 'fentanyl / ropivacaine / NaCl' 1009056<br/>→ ingredients: fentanyl 4337 + ropivacaine"]
+    B2["FAERS: openfda.rxcui (product IDs) → roll up → IN 4337"]
+    B3["label: openfda.rxcui → roll up → IN 4337"]
+  end
+  subgraph ONT["3 · Ontology"]
+    direction TB
+    D(("Drug<br/>fentanyl · RxCUI 4337"))
+    RC["Recall D-0646-2023<br/>ACTIVE · compounded · combo product"]
+    LB["Label v35<br/>respiratory depression = LABELED"]
+    AE["AdverseEventStat<br/>respiratory depression<br/>role filter: suspect only"]
+    D --- RC
+    D --- LB
+    D --- AE
+  end
+  A1 --> B1 --> D
+  A2 --> B2 --> D
+  A3 --> B3 --> D
+  AE -. "on label → NO signal" .-> LB
+  RC == "→ Recall alert on morning screen" ==> OUT["Safety officer sees:<br/>1 active recall · 0 new signals"]

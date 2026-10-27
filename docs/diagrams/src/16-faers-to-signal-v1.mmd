@@ -1,0 +1,26 @@
+---
+title: "One FAERS report → List 1 · One label → List 2 (Part B) · Compare → Signal"
+---
+flowchart LR
+  subgraph F["LIST 1 · What people report (FAERS, plain code)"]
+    direction TB
+    F0["Report 14891719<br/>4 drugs × 2 reactions<br/>Ozempic (suspect) · Humalog (suspect)<br/>metformin · Invokana (concomitant)<br/>Hypoglycaemia · Road traffic accident"]
+    F1["A · Explode → 8 rows<br/>drug × reaction<br/>drug_identity adds ingredient RxCUI"]
+    F2["Filter: our 13 drugs + suspect only<br/>+ latest report version<br/>8 rows → 2 rows"]
+    F3["B · Count by drug × reaction × quarter<br/>= AdverseEventStat<br/>Nausea 10,674 · NAION 869 · Depression 1,122"]
+    F0 --> F1 --> F2 --> F3
+  end
+  subgraph L["LIST 2 · What the label says (DailyMed + LLM = Part B)"]
+    direction TB
+    L0["Label setid 27f15fac v14<br/>4 sections: Boxed · Contraindications ·<br/>Warnings & Precautions · Adverse Reactions"]
+    L1["LLM reads text → one row per reaction<br/>term · MedDRA term · section · quote"]
+    L2["Grounding check: quote must exist in label<br/>Gold set check: F1 ≥ 0.85"]
+    L3["= LabeledReaction<br/>Nausea ✓ · Pancreatitis acute ✓ · Alopecia ✓<br/>NOT 'blurred vision' (low-sugar symptom)"]
+    L0 --> L1 --> L2 --> L3
+  end
+  F3 --> C{"C · Compare on<br/>Drug + MedDRA term<br/>On label?"}
+  L3 --> C
+  C -- "Yes (Nausea)" --> N["No signal"]
+  C -- "No + reported often<br/>(NAION, PRR high)" --> S["SIGNAL<br/>'reported, not on label'<br/>evidence: FAERS query + report IDs,<br/>label setid + version + sections"]
+  C -- "Not a reaction<br/>(Off label use)" --> T["Tagged, not ranked"]
+  S --> W["Safety officer triage<br/>→ TriageDecision (write-back)"]

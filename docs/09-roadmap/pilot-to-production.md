@@ -3,11 +3,7 @@
 The pilot proves the pattern on one drug class. Production makes it safe, multi-tenant and supported.
 **Nothing here enters pilot scope.** It feeds the "what I'd do with another month" part of the demo.
 
-```mermaid
-flowchart LR
-  P[Pilot<br/>1 class · 1 user · manual refresh] --> B[Beta<br/>full formulary upload · scheduled builds · alerts]
-  B --> PR[Production<br/>multi-hospital · SLAs · validated AI · audit]
-```
+📊 **Diagram:** [05-pilot-to-production-v1.png](../diagrams/png/05-pilot-to-production-v1.png) · [PDF](../diagrams/pdf/05-pilot-to-production-v1.pdf) · _source: [05-pilot-to-production-v1.mmd](../diagrams/src/05-pilot-to-production-v1.mmd)_
 
 | Dimension | Pilot (3 weeks) | Beta | Production |
 |---|---|---|---|

@@ -1,0 +1,43 @@
+---
+title: "How each source is shaped (one record = one box)"
+---
+flowchart LR
+  subgraph FAERS["FAERS report (JSON, nested)"]
+    direction TB
+    F1["safetyreportid, receivedate, serious"]
+    F2["primarysource.qualification<br/>1 doctor 2 pharmacist 3 other HCP<br/>4 LAWYER 5 consumer"]
+    F3["patient.drug[ ] — MANY drugs per report<br/>median 6-10, max 138<br/>medicinalproduct = free text<br/>drugcharacterization 1 suspect / 2 concomitant<br/>openfda.rxcui / spl_set_id / product_ndc"]
+    F4["patient.reaction[ ]<br/>reactionmeddrapt = MedDRA term"]
+    F1 --> F2 --> F3 --> F4
+  end
+  subgraph LABEL["DailyMed label (SPL XML, versioned)"]
+    direction TB
+    L1["setid + spl_version + published_date"]
+    L2["section code 34066-1 Boxed Warning"]
+    L3["section 43685-7 or 34071-1 Warnings"]
+    L4["section 34084-4 Adverse Reactions<br/>prose + tables"]
+    L1 --> L2 --> L3 --> L4
+  end
+  subgraph RECALL["Recall (JSON, flat)"]
+    direction TB
+    R1["recall_number, status, classification I/II/III"]
+    R2["product_description = FREE TEXT<br/>drug name + strength + NDC inside text"]
+    R3["reason_for_recall, code_info lots"]
+    R4["openfda = EMPTY in 99 of 100"]
+    R1 --> R2 --> R3 --> R4
+  end
+  subgraph RX["RxNorm (concept graph)"]
+    direction TB
+    X1["IN ingredient: fentanyl 4337"]
+    X2["PIN salt: fentanyl citrate"]
+    X3["BN brand: Actiq, Subsys"]
+    X4["SCD/SBD products + NDCs"]
+    X1 --- X2 --- X3 --- X4
+  end
+  subgraph CT["ClinicalTrials.gov study (JSON)"]
+    direction TB
+    C1["nctId, interventions = names only"]
+    C2["adverseEventsModule.eventGroups<br/>arms: drug vs placebo, numAtRisk"]
+    C3["otherEvents / seriousEvents<br/>term = MedDRA, counts per arm"]
+    C1 --> C2 --> C3
+  end

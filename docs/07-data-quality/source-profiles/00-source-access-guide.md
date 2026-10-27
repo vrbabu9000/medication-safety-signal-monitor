@@ -3,22 +3,7 @@
 _Stage: Define · Every link and API call below was **tested live on 2026-10-19** (all returned HTTP 200). No login or key is needed for any of them._
 
 ## Map
-```mermaid
-flowchart LR
-  subgraph FDA["FDA (open.fda.gov + fis.fda.gov)"]
-    A[FAERS<br/>adverse event reports]
-    C[Enforcement<br/>recalls]
-  end
-  subgraph NLM["National Library of Medicine"]
-    B[DailyMed<br/>drug labels]
-    D[RxNorm / RxNav<br/>drug IDs + classes]
-    F[PubMed<br/>optional]
-  end
-  E[ClinicalTrials.gov<br/>trial side effects]
-  G[CMS Part D<br/>usage, optional]
-  H[FDA Safety Labeling Changes<br/>+ Drug Safety Communications<br/>ground truth, optional]
-  D -->|joins everything| A & B & C & E
-```
+📊 **Diagram:** [04-source-map-v1.png](../../diagrams/png/04-source-map-v1.png) · [PDF](../../diagrams/pdf/04-source-map-v1.pdf) · _source: [04-source-map-v1.mmd](../../diagrams/src/04-source-map-v1.mmd)_
 
 ## Three ways into each source
 | Way | When to use | Tool |

@@ -30,3 +30,10 @@
 
 ## Verdict
 Trying. Complete when all 5 profile files are filled.
+
+## Update 2026-10-20
+| Before | Now | Why |
+|---|---|---|
+| Empty profile files with checklists | **Structure reports for all 5 sources** (shape, real example, categories, join keys, mess, how to use) + volumes for 13 drugs + 2 worked merges | User: understand structure, navigation, volumes and joins before building |
+
+Reports: [01 FAERS](../07-data-quality/source-profiles/01-faers.md) · [02 DailyMed](../07-data-quality/source-profiles/02-dailymed.md) · [03 Recalls](../07-data-quality/source-profiles/03-enforcement.md) · [04 RxNorm](../07-data-quality/source-profiles/04-rxnorm.md) · [05 Trials](../07-data-quality/source-profiles/05-clinicaltrials.md) · [06 Volumes](../07-data-quality/source-profiles/06-data-volume-13-ingredients.md) · [Merge walkthrough](../04-architecture/merge-walkthrough-v1.md). New data issues DQ23–DQ32.

@@ -7,11 +7,13 @@ One file per source: `NN-source-name.md`. New problems go into [data-issues-regi
 | # | Source | File | Status |
 |---|---|---|---|
 | 0 | **Where + how to access every source** | [00-source-access-guide.md](00-source-access-guide.md) | ✅ Done (tested 2026-10-19) |
-| 1 | FAERS (adverse event reports) | [01-faers.md](01-faers.md) | ⚪ Not started |
-| 2 | DailyMed labels (SPL XML) | [02-dailymed.md](02-dailymed.md) | ⚪ |
-| 3 | FDA enforcement (recalls) | [03-enforcement.md](03-enforcement.md) | ⚪ |
-| 4 | RxNorm (drug IDs) | [04-rxnorm.md](04-rxnorm.md) | ⚪ |
-| 5 | ClinicalTrials.gov | [05-clinicaltrials.md](05-clinicaltrials.md) | ⚪ |
+| 1 | FAERS (adverse event reports) | [01-faers.md](01-faers.md) | 🟡 Claude profiled 2026-10-20 · your hand-check pending |
+| 2 | DailyMed labels (SPL XML) | [02-dailymed.md](02-dailymed.md) | 🟡 Claude profiled 2026-10-20 · your hand-check pending |
+| 3 | FDA enforcement (recalls) | [03-enforcement.md](03-enforcement.md) | 🟡 Claude profiled 2026-10-20 · your hand-check pending |
+| 4 | RxNorm (drug IDs) | [04-rxnorm.md](04-rxnorm.md) | 🟡 Claude profiled 2026-10-20 · your hand-check pending |
+| 5 | ClinicalTrials.gov | [05-clinicaltrials.md](05-clinicaltrials.md) | 🟡 Claude profiled 2026-10-20 · your hand-check pending |
+| 6 | **Data volumes, 13 ingredients** | [06-data-volume-13-ingredients.md](06-data-volume-13-ingredients.md) | ✅ 2026-10-20 |
+| — | **Worked merge examples** | [merge-walkthrough-v1.md](../../04-architecture/merge-walkthrough-v1.md) | ✅ 2026-10-20 |
 
 ## Checklist per source (copy into each file)
 1. **Access:** URL, format, auth, rate limits, file size, update clock.

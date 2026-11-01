@@ -1,0 +1,566 @@
+{
+  "dataset_id": "MSSM-30-v1",
+  "purpose": "Candidate system reference set, not a clinician-approved gold standard.",
+  "independence": "Shared evidence/cases; answers produced independently. Do not inspect codex/ or this build script before freezing Claude answers.",
+  "selection_limits": "Purposive sample: 12 context cases from three opioid product labels, plus source/identity/abstention checks. Not representative of clinical safety or full-label recall.",
+  "case_counts": {
+    "DailyMed": 12,
+    "RxNorm": 4,
+    "FAERS": 4,
+    "FDA enforcement": 4,
+    "Drugs@FDA": 2,
+    "NDC Directory": 2,
+    "SrLC": 1,
+    "ClinicalTrials.gov": 1
+  },
+  "cases": [
+    {
+      "case_id": "G01",
+      "category": "DailyMed",
+      "question": "In the specified passage only, classify respiratory depression.",
+      "source_ids": [
+        "dm_oxy"
+      ],
+      "evidence_locators": {
+        "dm_oxy": "HL7 v3 XML //section whose title is '5.2 Life-Threatening Respiratory Depression'; direct section text; derived section_index=18"
+      },
+      "answer_format": "One allowed_classes string; explain the context separately.",
+      "input_scope": {
+        "section_index": 18,
+        "heading": "5.2 Life-Threatening Respiratory Depression",
+        "target_phrase": "respiratory depression",
+        "derived_view": "evidence/dm_oxy.sections.json",
+        "allowed_classes": [
+          "reaction_or_warning",
+          "underlying_condition_or_risk_factor",
+          "symptom_of_other_condition",
+          "administration_instruction",
+          "contraindicated_population",
+          "exposure_factor",
+          "co_medication_risk_factor"
+        ]
+      }
+    },
+    {
+      "case_id": "G02",
+      "category": "DailyMed",
+      "question": "In the specified passage only, classify opioid-induced esophageal dysfunction.",
+      "source_ids": [
+        "dm_oxy"
+      ],
+      "evidence_locators": {
+        "dm_oxy": "HL7 v3 XML //section whose title is '5.13 Risks of Gastrointestinal Complications'; direct section text; derived section_index=29"
+      },
+      "answer_format": "One allowed_classes string; explain the context separately.",
+      "input_scope": {
+        "section_index": 29,
+        "heading": "5.13 Risks of Gastrointestinal Complications",
+        "target_phrase": "opioid-induced esophageal dysfunction",
+        "derived_view": "evidence/dm_oxy.sections.json",
+        "allowed_classes": [
+          "reaction_or_warning",
+          "underlying_condition_or_risk_factor",
+          "symptom_of_other_condition",
+          "administration_instruction",
+          "contraindicated_population",
+          "exposure_factor",
+          "co_medication_risk_factor"
+        ]
+      }
+    },
+    {
+      "case_id": "G03",
+      "category": "DailyMed",
+      "question": "In the specified passage only, classify esophageal cancer.",
+      "source_ids": [
+        "dm_oxy"
+      ],
+      "evidence_locators": {
+        "dm_oxy": "HL7 v3 XML //section whose title is '5.12 Difficulty in Swallowing and Risk for Obstruction in Patients at Risk for a Small Gastrointestinal Lumen'; direct section text; derived section_index=28"
+      },
+      "answer_format": "One allowed_classes string; explain the context separately.",
+      "input_scope": {
+        "section_index": 28,
+        "heading": "5.12 Difficulty in Swallowing and Risk for Obstruction in Patients at Risk for a Small Gastrointestinal Lumen",
+        "target_phrase": "esophageal cancer",
+        "derived_view": "evidence/dm_oxy.sections.json",
+        "allowed_classes": [
+          "reaction_or_warning",
+          "underlying_condition_or_risk_factor",
+          "symptom_of_other_condition",
+          "administration_instruction",
+          "contraindicated_population",
+          "exposure_factor",
+          "co_medication_risk_factor"
+        ]
+      }
+    },
+    {
+      "case_id": "G04",
+      "category": "DailyMed",
+      "question": "In the specified passage only, classify nausea.",
+      "source_ids": [
+        "dm_oxy"
+      ],
+      "evidence_locators": {
+        "dm_oxy": "HL7 v3 XML //section whose title is '5.9 Adrenal Insufficiency'; direct section text; derived section_index=25"
+      },
+      "answer_format": "One allowed_classes string; explain the context separately.",
+      "input_scope": {
+        "section_index": 25,
+        "heading": "5.9 Adrenal Insufficiency",
+        "target_phrase": "nausea",
+        "derived_view": "evidence/dm_oxy.sections.json",
+        "allowed_classes": [
+          "reaction_or_warning",
+          "underlying_condition_or_risk_factor",
+          "symptom_of_other_condition",
+          "administration_instruction",
+          "contraindicated_population",
+          "exposure_factor",
+          "co_medication_risk_factor"
+        ]
+      }
+    },
+    {
+      "case_id": "G05",
+      "category": "DailyMed",
+      "question": "In the specified passage only, classify the direction not to pre-soak, lick or wet tablets.",
+      "source_ids": [
+        "dm_oxy"
+      ],
+      "evidence_locators": {
+        "dm_oxy": "HL7 v3 XML //section whose title is '5.12 Difficulty in Swallowing and Risk for Obstruction in Patients at Risk for a Small Gastrointestinal Lumen'; direct section text; derived section_index=28"
+      },
+      "answer_format": "One allowed_classes string; explain the context separately.",
+      "input_scope": {
+        "section_index": 28,
+        "heading": "5.12 Difficulty in Swallowing and Risk for Obstruction in Patients at Risk for a Small Gastrointestinal Lumen",
+        "target_phrase": "the direction not to pre-soak, lick or wet tablets",
+        "derived_view": "evidence/dm_oxy.sections.json",
+        "allowed_classes": [
+          "reaction_or_warning",
+          "underlying_condition_or_risk_factor",
+          "symptom_of_other_condition",
+          "administration_instruction",
+          "contraindicated_population",
+          "exposure_factor",
+          "co_medication_risk_factor"
+        ]
+      }
+    },
+    {
+      "case_id": "G06",
+      "category": "DailyMed",
+      "question": "In the specified passage only, classify opioid-induced hyperalgesia.",
+      "source_ids": [
+        "dm_oxy"
+      ],
+      "evidence_locators": {
+        "dm_oxy": "HL7 v3 XML //section whose title is '5.7 Opioid-Induced Hyperalgesia and Allodynia'; direct section text; derived section_index=23"
+      },
+      "answer_format": "One allowed_classes string; explain the context separately.",
+      "input_scope": {
+        "section_index": 23,
+        "heading": "5.7 Opioid-Induced Hyperalgesia and Allodynia",
+        "target_phrase": "opioid-induced hyperalgesia",
+        "derived_view": "evidence/dm_oxy.sections.json",
+        "allowed_classes": [
+          "reaction_or_warning",
+          "underlying_condition_or_risk_factor",
+          "symptom_of_other_condition",
+          "administration_instruction",
+          "contraindicated_population",
+          "exposure_factor",
+          "co_medication_risk_factor"
+        ]
+      }
+    },
+    {
+      "case_id": "G07",
+      "category": "DailyMed",
+      "question": "In the specified passage only, classify external heat exposure.",
+      "source_ids": [
+        "dm_fentanyl_patch"
+      ],
+      "evidence_locators": {
+        "dm_fentanyl_patch": "HL7 v3 XML //section whose title is '5.8 Risk of Increased Fentanyl Absorption with Application of External Heat'; direct section text; derived section_index=24"
+      },
+      "answer_format": "One allowed_classes string; explain the context separately.",
+      "input_scope": {
+        "section_index": 24,
+        "heading": "5.8 Risk of Increased Fentanyl Absorption with Application of External Heat",
+        "target_phrase": "external heat exposure",
+        "derived_view": "evidence/dm_fentanyl_patch.sections.json",
+        "allowed_classes": [
+          "reaction_or_warning",
+          "underlying_condition_or_risk_factor",
+          "symptom_of_other_condition",
+          "administration_instruction",
+          "contraindicated_population",
+          "exposure_factor",
+          "co_medication_risk_factor"
+        ]
+      }
+    },
+    {
+      "case_id": "G08",
+      "category": "DailyMed",
+      "question": "In the specified passage only, classify respiratory depression.",
+      "source_ids": [
+        "dm_fentanyl_patch"
+      ],
+      "evidence_locators": {
+        "dm_fentanyl_patch": "HL7 v3 XML //section whose title is '5.2 Life-Threatening Respiratory Depression'; direct section text; derived section_index=18"
+      },
+      "answer_format": "One allowed_classes string; explain the context separately.",
+      "input_scope": {
+        "section_index": 18,
+        "heading": "5.2 Life-Threatening Respiratory Depression",
+        "target_phrase": "respiratory depression",
+        "derived_view": "evidence/dm_fentanyl_patch.sections.json",
+        "allowed_classes": [
+          "reaction_or_warning",
+          "underlying_condition_or_risk_factor",
+          "symptom_of_other_condition",
+          "administration_instruction",
+          "contraindicated_population",
+          "exposure_factor",
+          "co_medication_risk_factor"
+        ]
+      }
+    },
+    {
+      "case_id": "G09",
+      "category": "DailyMed",
+      "question": "In the specified passage only, classify patients who are not opioid-tolerant.",
+      "source_ids": [
+        "dm_fentanyl_patch"
+      ],
+      "evidence_locators": {
+        "dm_fentanyl_patch": "HL7 v3 XML //section whose title is '4 CONTRAINDICATIONS'; direct section text; derived section_index=15"
+      },
+      "answer_format": "One allowed_classes string; explain the context separately.",
+      "input_scope": {
+        "section_index": 15,
+        "heading": "4 CONTRAINDICATIONS",
+        "target_phrase": "patients who are not opioid-tolerant",
+        "derived_view": "evidence/dm_fentanyl_patch.sections.json",
+        "allowed_classes": [
+          "reaction_or_warning",
+          "underlying_condition_or_risk_factor",
+          "symptom_of_other_condition",
+          "administration_instruction",
+          "contraindicated_population",
+          "exposure_factor",
+          "co_medication_risk_factor"
+        ]
+      }
+    },
+    {
+      "case_id": "G10",
+      "category": "DailyMed",
+      "question": "In the specified passage only, classify the listed serotonergic drugs.",
+      "source_ids": [
+        "dm_fentanyl_patch"
+      ],
+      "evidence_locators": {
+        "dm_fentanyl_patch": "HL7 v3 XML //section whose title is '5.11 Serotonin Syndrome with Concomitant Use of Serotonergic Drugs'; direct section text; derived section_index=27"
+      },
+      "answer_format": "One allowed_classes string; explain the context separately.",
+      "input_scope": {
+        "section_index": 27,
+        "heading": "5.11 Serotonin Syndrome with Concomitant Use of Serotonergic Drugs",
+        "target_phrase": "the listed serotonergic drugs",
+        "derived_view": "evidence/dm_fentanyl_patch.sections.json",
+        "allowed_classes": [
+          "reaction_or_warning",
+          "underlying_condition_or_risk_factor",
+          "symptom_of_other_condition",
+          "administration_instruction",
+          "contraindicated_population",
+          "exposure_factor",
+          "co_medication_risk_factor"
+        ]
+      }
+    },
+    {
+      "case_id": "G11",
+      "category": "DailyMed",
+      "question": "In the specified passage only, classify serotonin syndrome.",
+      "source_ids": [
+        "dm_tramadol"
+      ],
+      "evidence_locators": {
+        "dm_tramadol": "HL7 v3 XML //section whose title is '5.9 Serotonin Syndrome with Concomitant Use of Serotonergic Drugs'; direct section text; derived section_index=21"
+      },
+      "answer_format": "One allowed_classes string; explain the context separately.",
+      "input_scope": {
+        "section_index": 21,
+        "heading": "5.9 Serotonin Syndrome with Concomitant Use of Serotonergic Drugs",
+        "target_phrase": "serotonin syndrome",
+        "derived_view": "evidence/dm_tramadol.sections.json",
+        "allowed_classes": [
+          "reaction_or_warning",
+          "underlying_condition_or_risk_factor",
+          "symptom_of_other_condition",
+          "administration_instruction",
+          "contraindicated_population",
+          "exposure_factor",
+          "co_medication_risk_factor"
+        ]
+      }
+    },
+    {
+      "case_id": "G12",
+      "category": "DailyMed",
+      "question": "In the specified passage only, classify seizures.",
+      "source_ids": [
+        "dm_tramadol"
+      ],
+      "evidence_locators": {
+        "dm_tramadol": "HL7 v3 XML //section whose title is '5.10 Increased Risk of Seizures'; direct section text; derived section_index=22"
+      },
+      "answer_format": "One allowed_classes string; explain the context separately.",
+      "input_scope": {
+        "section_index": 22,
+        "heading": "5.10 Increased Risk of Seizures",
+        "target_phrase": "seizures",
+        "derived_view": "evidence/dm_tramadol.sections.json",
+        "allowed_classes": [
+          "reaction_or_warning",
+          "underlying_condition_or_risk_factor",
+          "symptom_of_other_condition",
+          "administration_instruction",
+          "contraindicated_population",
+          "exposure_factor",
+          "co_medication_risk_factor"
+        ]
+      }
+    },
+    {
+      "case_id": "G13",
+      "category": "RxNorm",
+      "question": "What ingredient RxCUI does the captured exact-name request for oxycodone return?",
+      "source_ids": [
+        "rx_oxycodone"
+      ],
+      "evidence_locators": {
+        "rx_oxycodone": "/idGroup/rxnormId/0"
+      },
+      "answer_format": "Identifier string."
+    },
+    {
+      "case_id": "G14",
+      "category": "RxNorm",
+      "question": "What ingredient RxCUI does the captured exact-name request for morphine return?",
+      "source_ids": [
+        "rx_morphine"
+      ],
+      "evidence_locators": {
+        "rx_morphine": "/idGroup/rxnormId/0"
+      },
+      "answer_format": "Identifier string."
+    },
+    {
+      "case_id": "G15",
+      "category": "RxNorm",
+      "question": "Do the captured apomorphine and morphine requests return the same RxCUI?",
+      "source_ids": [
+        "rx_apomorphine",
+        "rx_morphine"
+      ],
+      "evidence_locators": {
+        "rx_apomorphine": "/idGroup/rxnormId/0",
+        "rx_morphine": "/idGroup/rxnormId/0"
+      },
+      "answer_format": "Boolean."
+    },
+    {
+      "case_id": "G16",
+      "category": "RxNorm",
+      "question": "Which ingredient names and RxCUIs are returned for the captured Percocet brand relationship lookup?",
+      "source_ids": [
+        "rx_percocet",
+        "rx_percocet_ingredients"
+      ],
+      "evidence_locators": {
+        "rx_percocet": "/idGroup/rxnormId/0",
+        "rx_percocet_ingredients": "/relatedGroup/conceptGroup/*[tty=IN]/conceptProperties"
+      },
+      "answer_format": "Array of {rxcui,name}, sorted by name."
+    },
+    {
+      "case_id": "G17",
+      "category": "FAERS",
+      "question": "What last_updated date does the captured unfiltered FAERS aggregate response report?",
+      "source_ids": [
+        "faers_counts_unfiltered"
+      ],
+      "evidence_locators": {
+        "faers_counts_unfiltered": "/meta/last_updated"
+      },
+      "answer_format": "YYYY-MM-DD string."
+    },
+    {
+      "case_id": "G18",
+      "category": "FAERS",
+      "question": "What term and count are returned by the captured unfiltered, limit=1 reaction-count request?",
+      "source_ids": [
+        "faers_counts_unfiltered"
+      ],
+      "evidence_locators": {
+        "faers_counts_unfiltered": "/results/0"
+      },
+      "answer_format": "Object {term,count}."
+    },
+    {
+      "case_id": "G19",
+      "category": "FAERS",
+      "question": "Does this unfiltered aggregate establish an oxycodone-specific count for the returned term?",
+      "source_ids": [
+        "faers_counts_unfiltered"
+      ],
+      "evidence_locators": {
+        "faers_counts_unfiltered": "manifest.requested_url; /results/0"
+      },
+      "answer_format": "Boolean."
+    },
+    {
+      "case_id": "G20",
+      "category": "FAERS",
+      "question": "Does a reported adverse-event count alone establish causation or an incidence rate?",
+      "source_ids": [
+        "docs_faers"
+      ],
+      "evidence_locators": {
+        "docs_faers": "About FAERS data; Responsible use of the data; Disclaimer"
+      },
+      "answer_format": "Boolean."
+    },
+    {
+      "case_id": "G21",
+      "category": "FDA enforcement",
+      "question": "What reason_for_recall is recorded for D-0338-2026?",
+      "source_ids": [
+        "recall_0338"
+      ],
+      "evidence_locators": {
+        "recall_0338": "/results/0/reason_for_recall"
+      },
+      "answer_format": "Exact source string."
+    },
+    {
+      "case_id": "G22",
+      "category": "FDA enforcement",
+      "question": "What status is reported in the captured record D-0338-2026?",
+      "source_ids": [
+        "recall_0338"
+      ],
+      "evidence_locators": {
+        "recall_0338": "/results/0/status"
+      },
+      "answer_format": "Exact source string."
+    },
+    {
+      "case_id": "G23",
+      "category": "FDA enforcement",
+      "question": "Can current active recall status be established from the captured reported status alone? Answer yes/no/unknown for current active status.",
+      "source_ids": [
+        "recall_0338",
+        "docs_recalls"
+      ],
+      "evidence_locators": {
+        "recall_0338": "/results/0/status",
+        "docs_recalls": "Disclaimer; status not updated after classification"
+      },
+      "answer_format": "One of yes, no, unknown for current active status, not a boolean about inferability."
+    },
+    {
+      "case_id": "G24",
+      "category": "FDA enforcement",
+      "question": "With no hospital inventory or lot records supplied, is hospital exposure to D-0338-2026 established? Answer yes/no/unknown.",
+      "source_ids": [
+        "recall_0338"
+      ],
+      "evidence_locators": {
+        "recall_0338": "/results/0/product_description; /results/0/code_info"
+      },
+      "answer_format": "One of yes, no, unknown."
+    },
+    {
+      "case_id": "G25",
+      "category": "Drugs@FDA",
+      "question": "What sponsor_name does the captured Drugs@FDA record for NDA022272 give?",
+      "source_ids": [
+        "drugsfda_oxy"
+      ],
+      "evidence_locators": {
+        "drugsfda_oxy": "/results/0/sponsor_name"
+      },
+      "answer_format": "Exact source string."
+    },
+    {
+      "case_id": "G26",
+      "category": "Drugs@FDA",
+      "question": "For NDA022272 product_number 001, return brand, dosage form, route and active ingredient/strength.",
+      "source_ids": [
+        "drugsfda_oxy"
+      ],
+      "evidence_locators": {
+        "drugsfda_oxy": "/results/0/products/1"
+      },
+      "answer_format": "Object with brand_name,dosage_form,route,active_ingredients exactly as recorded."
+    },
+    {
+      "case_id": "G27",
+      "category": "NDC Directory",
+      "question": "What package description is recorded for package_ndc 59011-410-10?",
+      "source_ids": [
+        "ndc_oxy"
+      ],
+      "evidence_locators": {
+        "ndc_oxy": "/results/0/packaging/0/description"
+      },
+      "answer_format": "Exact source string."
+    },
+    {
+      "case_id": "G28",
+      "category": "NDC Directory",
+      "question": "Is carton NDC 68084-354-01 named in recall D-0338-2026 the same package as the selected OxyContin package 59011-410-10?",
+      "source_ids": [
+        "recall_0338",
+        "ndc_oxy"
+      ],
+      "evidence_locators": {
+        "recall_0338": "/results/0/product_description",
+        "ndc_oxy": "/results/0/packaging/0/package_ndc"
+      },
+      "answer_format": "Boolean."
+    },
+    {
+      "case_id": "G29",
+      "category": "SrLC",
+      "question": "Does the OXYCONTIN NDA-022272 entry dated 12/22/2025 (SUPPL-52), section 5.13, include opioid-induced esophageal dysfunction?",
+      "source_ids": [
+        "srlc_oxy_verified"
+      ],
+      "evidence_locators": {
+        "srlc_oxy_verified": "OXYCONTIN (NDA-022272) > 12/22/2025 (SUPPL-52) > 5.13 Risks of Gastrointestinal Complications"
+      },
+      "answer_format": "Boolean."
+    },
+    {
+      "case_id": "G30",
+      "category": "ClinicalTrials.gov",
+      "question": "For NCT01162304 adverse-event group EG000, what serious-adverse-event affected and at-risk counts are reported? Preserve the group title.",
+      "source_ids": [
+        "trial_oxy"
+      ],
+      "evidence_locators": {
+        "trial_oxy": "/resultsSection/adverseEventsModule/eventGroups/0"
+      },
+      "answer_format": "Object with group_id,group_title,seriousNumAffected,seriousNumAtRisk."
+    }
+  ]
+}

@@ -1,0 +1,578 @@
+{
+  "capture_policy": "Original public evidence; no expected answers. Source metadata is not retrieval time.",
+  "sources": [
+    {
+      "source_id": "dm_fentanyl_patch",
+      "requested_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/e15a7e9b-8025-49dd-9a6d-bafcccf1959f.xml",
+      "method": "GET",
+      "kind": "xml",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/e15a7e9b-8025-49dd-9a6d-bafcccf1959f.xml",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "application/xml",
+        "Date": "Sat, 31 Oct 2026 22:04:09 GMT"
+      },
+      "source_metadata": {
+        "setId": {
+          "root": "e15a7e9b-8025-49dd-9a6d-bafcccf1959f"
+        },
+        "versionNumber": {
+          "value": "58"
+        },
+        "effectiveTime": {
+          "value": "20260430"
+        },
+        "title": "These highlights do not include all the information needed to use FENTANYL TRANSDERMAL SYSTEM\u00a0safely and effectively. See full prescribing information for FENTANYL TRANSDERMAL SYSTEM. \n      FENTANYL transdermal system, CII\n      Initial U.S. Approval: 1968 \n      \n   "
+      },
+      "status": "captured",
+      "evidence_file": "evidence/dm_fentanyl_patch.xml",
+      "sha256": "6ef07bed29a2f03e7dccdfd44f3f149c3b61d1561cd5dc981c31c4bcaaed96b0",
+      "bytes": 468579,
+      "retrieved_at_utc": "2026-10-31T22:04:09.247530+00:00"
+    },
+    {
+      "source_id": "dm_oxy",
+      "requested_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/bfdfe235-d717-4855-a3c8-a13d26dadede.xml",
+      "method": "GET",
+      "kind": "xml",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/bfdfe235-d717-4855-a3c8-a13d26dadede.xml",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "application/xml",
+        "Date": "Sat, 31 Oct 2026 22:04:09 GMT"
+      },
+      "source_metadata": {
+        "setId": {
+          "root": "bfdfe235-d717-4855-a3c8-a13d26dadede"
+        },
+        "versionNumber": {
+          "value": "44"
+        },
+        "effectiveTime": {
+          "value": "20260624"
+        },
+        "title": "These highlights do not include all the information needed to use OXYCONTIN\u00ae safely and effectively. See full prescribing information for OXYCONTIN. \n       OXYCONTIN\u00ae (oxycodone hydrochloride) extended-release tablets, for oral use, CII  Initial U.S. Approval: 1950"
+      },
+      "status": "captured",
+      "evidence_file": "evidence/dm_oxy.xml",
+      "sha256": "9bda5469e52f775c1e1d3a74da28301ff37e61414b4ebe2e76fc30246193d495",
+      "bytes": 359562,
+      "retrieved_at_utc": "2026-10-31T22:04:09.226986+00:00"
+    },
+    {
+      "source_id": "dm_tramadol",
+      "requested_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/83367367-5654-4078-831a-69ade48bc795.xml",
+      "method": "GET",
+      "kind": "xml",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/83367367-5654-4078-831a-69ade48bc795.xml",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "application/xml",
+        "Date": "Sat, 31 Oct 2026 22:04:09 GMT"
+      },
+      "source_metadata": {
+        "setId": {
+          "root": "83367367-5654-4078-831a-69ade48bc795"
+        },
+        "versionNumber": {
+          "value": "8"
+        },
+        "effectiveTime": {
+          "value": "20261012"
+        },
+        "title": "These highlights do not include all the information needed to use TRAMADOL HYDROCHLORIDE EXTENDED-RELEASE TABLETS safely and effectively. See full prescribing information for TRAMADOL HYDROCHLORIDE EXTENDED-RELEASE TABLETS.\n      TRAMADOL hydrochloride extended-release tablets for oral use, C IVInitial U.S. Approval: 1995"
+      },
+      "status": "captured",
+      "evidence_file": "evidence/dm_tramadol.xml",
+      "sha256": "00560ee1d174c6d7e38fd18ad00c7408f9669ddc7830b6718bdb37eb6c628e73",
+      "bytes": 328705,
+      "retrieved_at_utc": "2026-10-31T22:04:09.237623+00:00"
+    },
+    {
+      "source_id": "docs_dailymed",
+      "requested_url": "https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm",
+      "method": "GET",
+      "kind": "html",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Sat, 31 Oct 2026 22:04:12 GMT"
+      },
+      "status": "captured",
+      "evidence_file": "evidence/docs_dailymed.html",
+      "sha256": "58c59571a2cc98bd9890f02a767dd5e6882f559bfd88744ed6cdf71801fbdd53",
+      "bytes": 112038,
+      "retrieved_at_utc": "2026-10-31T22:04:12.880497+00:00"
+    },
+    {
+      "source_id": "docs_drugsfda",
+      "requested_url": "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "method": "GET",
+      "kind": "html",
+      "final_url": "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Last-Modified": "Sat, 31 Oct 2026 07:16:46 GMT",
+        "ETag": "\"1793431006\"",
+        "Date": "Sat, 31 Oct 2026 22:04:12 GMT"
+      },
+      "status": "captured",
+      "evidence_file": "evidence/docs_drugsfda.html",
+      "sha256": "c61454b5d103a8bc70585a0bed27978ca9f44c2c274dbcc0fccb71834c1a57e5",
+      "bytes": 34361,
+      "retrieved_at_utc": "2026-10-31T22:04:12.318688+00:00"
+    },
+    {
+      "source_id": "docs_faers",
+      "requested_url": "https://open.fda.gov/apis/drug/event/",
+      "method": "GET",
+      "kind": "html",
+      "final_url": "https://open.fda.gov/apis/drug/event/",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Last-Modified": "Fri, 09 Oct 2026 15:48:34 GMT",
+        "ETag": "\"417765c9e9fc0ae2d23975fbd0d38ad4\"",
+        "Date": "Sat, 31 Oct 2026 22:04:12 GMT"
+      },
+      "status": "captured",
+      "evidence_file": "evidence/docs_faers.html",
+      "sha256": "e14ece0ccb4054d2264500052320fa86ceeadd8283fb270806cf309b787345b9",
+      "bytes": 130852,
+      "retrieved_at_utc": "2026-10-31T22:04:11.937840+00:00"
+    },
+    {
+      "source_id": "docs_ndc",
+      "requested_url": "https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory",
+      "method": "GET",
+      "kind": "html",
+      "final_url": "https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Last-Modified": "Sat, 31 Oct 2026 16:09:43 GMT",
+        "ETag": "\"1793462983\"",
+        "Date": "Sat, 31 Oct 2026 22:04:12 GMT"
+      },
+      "status": "captured",
+      "evidence_file": "evidence/docs_ndc.html",
+      "sha256": "27d26d908a2a1eb505b92070282686f3ebc1effd7abfaddd379a936cd7dd8ffd",
+      "bytes": 36149,
+      "retrieved_at_utc": "2026-10-31T22:04:12.164747+00:00"
+    },
+    {
+      "source_id": "docs_recalls",
+      "requested_url": "https://open.fda.gov/apis/drug/enforcement/",
+      "method": "GET",
+      "kind": "html",
+      "final_url": "https://open.fda.gov/apis/drug/enforcement/",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Last-Modified": "Fri, 09 Oct 2026 15:48:34 GMT",
+        "ETag": "\"830c87858525e3f3a14f50fabbe3d2ba\"",
+        "Date": "Sat, 31 Oct 2026 22:02:51 GMT"
+      },
+      "status": "captured",
+      "evidence_file": "evidence/docs_recalls.html",
+      "sha256": "2173d35e4240000dea08a386a104336236e737cfe88c3f2bb94cd3ac95f99590",
+      "bytes": 130914,
+      "retrieved_at_utc": "2026-10-31T22:04:12.073878+00:00"
+    },
+    {
+      "source_id": "docs_rx_api",
+      "requested_url": "https://lhncbc.nlm.nih.gov/RxNav/APIs/",
+      "method": "GET",
+      "kind": "html",
+      "final_url": "https://lhncbc.nlm.nih.gov/RxNav/APIs/",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "text/html",
+        "Last-Modified": "Mon, 26 Oct 2026 17:29:33 GMT",
+        "ETag": "\"0834569732669426429d5e40ef60cf69\"",
+        "Date": "Sat, 31 Oct 2026 22:04:15 GMT"
+      },
+      "status": "captured",
+      "evidence_file": "evidence/docs_rx_api.html",
+      "sha256": "09a808d76c395326df8586341adeb31ec837b9d4a64a60c59d739120ed58292d",
+      "bytes": 19370,
+      "retrieved_at_utc": "2026-10-31T22:04:15.110114+00:00"
+    },
+    {
+      "source_id": "docs_rxnorm",
+      "requested_url": "https://www.nlm.nih.gov/research/umls/rxnorm/overview.html",
+      "method": "GET",
+      "kind": "html",
+      "final_url": "https://www.nlm.nih.gov/research/umls/rxnorm/overview.html",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "text/html",
+        "Last-Modified": "Mon, 24 Aug 2026 03:38:37 GMT",
+        "ETag": "\"475f1f6d2fc1c193d99fdb961c286747\"",
+        "Date": "Sat, 31 Oct 2026 22:04:13 GMT"
+      },
+      "status": "captured",
+      "evidence_file": "evidence/docs_rxnorm.html",
+      "sha256": "b415e71a34429fc69a62a154df4e42f66b948ce803d4fd108f23df871e6903c9",
+      "bytes": 63911,
+      "retrieved_at_utc": "2026-10-31T22:04:12.607252+00:00"
+    },
+    {
+      "source_id": "docs_srlc",
+      "requested_url": "https://www.fda.gov/drugs/drug-safety-and-availability/drug-safety-related-labeling-changes-srlc-database-overview-updates-safety-information-fda-approved",
+      "method": "GET",
+      "kind": "html",
+      "final_url": "https://www.fda.gov/drugs/drug-safety-and-availability/drug-safety-related-labeling-changes-srlc-database-overview-updates-safety-information-fda-approved",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Last-Modified": "Sat, 31 Oct 2026 17:35:56 GMT",
+        "ETag": "\"1793468156\"",
+        "Date": "Sat, 31 Oct 2026 22:04:13 GMT"
+      },
+      "status": "captured",
+      "evidence_file": "evidence/docs_srlc.html",
+      "sha256": "9452faea0f06530961e2caf487bebaa8d656df09a2a52be49c9281f991193d16",
+      "bytes": 42238,
+      "retrieved_at_utc": "2026-10-31T22:04:13.795521+00:00"
+    },
+    {
+      "source_id": "docs_trials",
+      "requested_url": "https://clinicaltrials.gov/data-api/api",
+      "method": "GET",
+      "kind": "html",
+      "final_url": "https://clinicaltrials.gov/data-api/api",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "text/html",
+        "Last-Modified": "Wed, 28 Oct 2026 15:02:21 GMT",
+        "ETag": "\"6ae20e7d-1702b\"",
+        "Date": "Sat, 31 Oct 2026 22:04:13 GMT"
+      },
+      "status": "captured",
+      "evidence_file": "evidence/docs_trials.html",
+      "sha256": "66ba04e716eacfbd0601c980c442969da345a33403ec67c077e993a22710c74a",
+      "bytes": 94251,
+      "retrieved_at_utc": "2026-10-31T22:04:13.332311+00:00"
+    },
+    {
+      "source_id": "drugsfda_oxy",
+      "requested_url": "https://api.fda.gov/drug/drugsfda.json?search=application_number%3A%22NDA022272%22&limit=1",
+      "method": "GET",
+      "kind": "json",
+      "final_url": "https://api.fda.gov/drug/drugsfda.json?search=application_number%3A%22NDA022272%22&limit=1",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"7f9b-lwpLgTb+CvzkbHgy4g2i50s3yo0\"",
+        "Date": "Sat, 31 Oct 2026 22:04:10 GMT"
+      },
+      "source_metadata": {
+        "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+        "terms": "https://open.fda.gov/terms/",
+        "license": "https://open.fda.gov/license/",
+        "last_updated": "2026-10-30",
+        "results": {
+          "skip": 0,
+          "limit": 1,
+          "total": 1
+        }
+      },
+      "status": "captured",
+      "evidence_file": "evidence/drugsfda_oxy.json",
+      "sha256": "af5b96dfd46b0f9055735a77366b03f4190cc9713f48b0b378a4aad5c4a6fd00",
+      "bytes": 32667,
+      "retrieved_at_utc": "2026-10-31T22:04:11.125051+00:00"
+    },
+    {
+      "source_id": "faers_counts_unfiltered",
+      "requested_url": "https://api.fda.gov/drug/event.json?count=patient.reaction.reactionmeddrapt.exact&limit=1",
+      "method": "GET",
+      "kind": "json",
+      "final_url": "https://api.fda.gov/drug/event.json?count=patient.reaction.reactionmeddrapt.exact&limit=1",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"207-10USb7BOMNpOvwpdOlKfx99V8ic\"",
+        "Date": "Sat, 31 Oct 2026 22:12:36 GMT"
+      },
+      "source_metadata": {
+        "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+        "terms": "https://open.fda.gov/terms/",
+        "license": "https://open.fda.gov/license/",
+        "last_updated": "2026-07-30"
+      },
+      "status": "captured",
+      "evidence_file": "evidence/faers_counts_unfiltered.json",
+      "sha256": "b9e50ca6b1ceb40ae7ac9210f255cbc8b78c5387d7cfbbe6fb2358bc87a78583",
+      "bytes": 519,
+      "retrieved_at_utc": "2026-10-31T22:12:36.769886+00:00"
+    },
+    {
+      "source_id": "faers_oxy_counts",
+      "requested_url": "https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name%3A%22oxycodone%22+AND+receivedate%3A%5B20260101+TO+20260630%5D&count=patient.reaction.reactionmeddrapt.exact&limit=1000",
+      "method": "GET",
+      "kind": "json",
+      "error_evidence_file": "evidence/faers_oxy_counts.http-error.txt",
+      "status": "fetch_failed",
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "retrieved_at_utc": "2026-10-31T22:12:37.977201+00:00"
+    },
+    {
+      "source_id": "faers_oxy_counts_alltime",
+      "requested_url": "https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name%3A%22oxycodone%22&count=patient.reaction.reactionmeddrapt.exact&limit=1000",
+      "method": "GET",
+      "kind": "json",
+      "error_evidence_file": "evidence/faers_oxy_counts_alltime.http-error.txt",
+      "status": "fetch_failed",
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "retrieved_at_utc": "2026-10-31T22:12:37.971546+00:00"
+    },
+    {
+      "source_id": "ndc_oxy",
+      "requested_url": "https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2259011-410%22&limit=5",
+      "method": "GET",
+      "kind": "json",
+      "final_url": "https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2259011-410%22&limit=5",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"b05-u2QZxIUPQvksXB823JoBUm1cr80\"",
+        "Date": "Sat, 31 Oct 2026 22:04:11 GMT"
+      },
+      "source_metadata": {
+        "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+        "terms": "https://open.fda.gov/terms/",
+        "license": "https://open.fda.gov/license/",
+        "last_updated": "2026-10-30",
+        "results": {
+          "skip": 0,
+          "limit": 5,
+          "total": 1
+        }
+      },
+      "status": "captured",
+      "evidence_file": "evidence/ndc_oxy.json",
+      "sha256": "cb78f7ce64f78db13692bada28f6d8785dceb7d40a18f77ce2b8ebfc4d6be6d8",
+      "bytes": 2821,
+      "retrieved_at_utc": "2026-10-31T22:04:11.456590+00:00"
+    },
+    {
+      "source_id": "recall_0338",
+      "requested_url": "https://api.fda.gov/drug/enforcement.json?search=recall_number%3A%22D-0338-2026%22&limit=1",
+      "method": "GET",
+      "kind": "json",
+      "final_url": "https://api.fda.gov/drug/enforcement.json?search=recall_number%3A%22D-0338-2026%22&limit=1",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"c84-sGbHlSOTsYHeydrXh1ceh9NSRcU\"",
+        "Date": "Sat, 31 Oct 2026 22:04:10 GMT"
+      },
+      "source_metadata": {
+        "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+        "terms": "https://open.fda.gov/terms/",
+        "license": "https://open.fda.gov/license/",
+        "last_updated": "2026-10-21",
+        "results": {
+          "skip": 0,
+          "limit": 1,
+          "total": 1
+        }
+      },
+      "status": "captured",
+      "evidence_file": "evidence/recall_0338.json",
+      "sha256": "be4a81d80c88daf637af85414b46b4298bdd1bad8b952d9b4ea67f8c5c9ee056",
+      "bytes": 3204,
+      "retrieved_at_utc": "2026-10-31T22:04:11.015190+00:00"
+    },
+    {
+      "source_id": "rx_apomorphine",
+      "requested_url": "https://rxnav.nlm.nih.gov/REST/rxcui.json?name=apomorphine",
+      "method": "GET",
+      "kind": "json",
+      "final_url": "https://rxnav.nlm.nih.gov/REST/rxcui.json?name=apomorphine",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "application/json;charset=utf-8",
+        "ETag": "W/\"20AA_261005F;1790782671;3.1.356\"",
+        "Date": "Sat, 31 Oct 2026 22:04:10 GMT"
+      },
+      "source_metadata": {},
+      "status": "captured",
+      "evidence_file": "evidence/rx_apomorphine.json",
+      "sha256": "60cf750637d290e0cfb42e75d1ec120ee239c6c7639c3604cfbb45029963d36e",
+      "bytes": 33,
+      "retrieved_at_utc": "2026-10-31T22:04:10.407363+00:00"
+    },
+    {
+      "source_id": "rx_morphine",
+      "requested_url": "https://rxnav.nlm.nih.gov/REST/rxcui.json?name=morphine",
+      "method": "GET",
+      "kind": "json",
+      "final_url": "https://rxnav.nlm.nih.gov/REST/rxcui.json?name=morphine",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "application/json;charset=utf-8",
+        "ETag": "W/\"20AA_261005F;1790782671;3.1.356\"",
+        "Date": "Sat, 31 Oct 2026 22:04:10 GMT"
+      },
+      "source_metadata": {},
+      "status": "captured",
+      "evidence_file": "evidence/rx_morphine.json",
+      "sha256": "3951244924b09e324af6fc25dfdc3a48b171de5c39a3522e549fc8c8d6011552",
+      "bytes": 33,
+      "retrieved_at_utc": "2026-10-31T22:04:10.428002+00:00"
+    },
+    {
+      "source_id": "rx_oxycodone",
+      "requested_url": "https://rxnav.nlm.nih.gov/REST/rxcui.json?name=oxycodone",
+      "method": "GET",
+      "kind": "json",
+      "final_url": "https://rxnav.nlm.nih.gov/REST/rxcui.json?name=oxycodone",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "application/json;charset=utf-8",
+        "ETag": "W/\"20AA_261005F;1790782671;3.1.356\"",
+        "Date": "Sat, 31 Oct 2026 22:04:10 GMT"
+      },
+      "source_metadata": {},
+      "status": "captured",
+      "evidence_file": "evidence/rx_oxycodone.json",
+      "sha256": "c58134e86ca727c6d4b884a5ee884090bf40de0163622c380432f40a70e5dfdd",
+      "bytes": 33,
+      "retrieved_at_utc": "2026-10-31T22:04:10.423951+00:00"
+    },
+    {
+      "source_id": "rx_percocet",
+      "requested_url": "https://rxnav.nlm.nih.gov/REST/rxcui.json?name=Percocet",
+      "method": "GET",
+      "kind": "json",
+      "final_url": "https://rxnav.nlm.nih.gov/REST/rxcui.json?name=Percocet",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "application/json;charset=utf-8",
+        "ETag": "W/\"20AA_261005F;1790782671;3.1.356\"",
+        "Date": "Sat, 31 Oct 2026 22:04:10 GMT"
+      },
+      "source_metadata": {},
+      "status": "captured",
+      "evidence_file": "evidence/rx_percocet.json",
+      "sha256": "a143caff3d88bb455c6ec35e62f16e748e031ff40081de09c2fd9d8f8b34ba96",
+      "bytes": 34,
+      "retrieved_at_utc": "2026-10-31T22:04:10.547548+00:00"
+    },
+    {
+      "source_id": "rx_percocet_ingredients",
+      "requested_url": "https://rxnav.nlm.nih.gov/REST/rxcui/42844/related.json?tty=IN",
+      "method": "GET",
+      "kind": "json",
+      "final_url": "https://rxnav.nlm.nih.gov/REST/rxcui/42844/related.json?tty=IN",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "application/json;charset=utf-8",
+        "ETag": "W/\"20AA_261005F;1790782671;3.1.356\"",
+        "Date": "Sat, 31 Oct 2026 22:04:16 GMT"
+      },
+      "source_metadata": {},
+      "status": "captured",
+      "evidence_file": "evidence/rx_percocet_ingredients.json",
+      "sha256": "b6c95bec655b972465a26b4c3eee2c1edc9719edb6343a98e8016dc9e9ca32ce",
+      "bytes": 296,
+      "retrieved_at_utc": "2026-10-31T22:04:16.426367+00:00"
+    },
+    {
+      "source_id": "rx_version",
+      "requested_url": "https://rxnav.nlm.nih.gov/REST/version.json",
+      "method": "GET",
+      "kind": "json",
+      "final_url": "https://rxnav.nlm.nih.gov/REST/version.json",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "application/json;charset=utf-8",
+        "ETag": "W/\"20AA_261005F;1790782671;3.1.356\"",
+        "Date": "Sat, 31 Oct 2026 22:04:10 GMT"
+      },
+      "source_metadata": {},
+      "status": "captured",
+      "evidence_file": "evidence/rx_version.json",
+      "sha256": "f8155f29c123d26e71c9e4aed23750e5df462150440e29b43b9b148c09dd3445",
+      "bytes": 48,
+      "retrieved_at_utc": "2026-10-31T22:04:10.556080+00:00"
+    },
+    {
+      "source_id": "srlc_oxy",
+      "requested_url": "https://www.accessdata.fda.gov/scripts/cder/safetylabelingchanges/index.cfm?event=searchdetail.page&DrugNameID=2183",
+      "method": "GET",
+      "kind": "html",
+      "final_url": "https://www.accessdata.fda.gov/scripts/cder/safetylabelingchanges/index.cfm?event=searchdetail.page&DrugNameID=2183",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "text/html;charset=UTF-8",
+        "Date": "Sat, 31 Oct 2026 22:04:11 GMT"
+      },
+      "status": "captured",
+      "evidence_file": "evidence/srlc_oxy.html",
+      "sha256": "e1343124d1d8097cacae6a2044ab5cc64c2fb1499933758801847ca46f2ce4c7",
+      "bytes": 79333,
+      "retrieved_at_utc": "2026-10-31T22:04:11.894733+00:00"
+    },
+    {
+      "source_id": "srlc_oxy_verified",
+      "requested_url": "https://www.accessdata.fda.gov/scripts/cder/safetylabelingchanges/index.cfm?event=searchdetail.page&DrugNameID=685",
+      "method": "GET",
+      "kind": "html",
+      "final_url": "https://www.accessdata.fda.gov/scripts/cder/safetylabelingchanges/index.cfm?event=searchdetail.page&DrugNameID=685",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "text/html;charset=UTF-8",
+        "Date": "Sat, 31 Oct 2026 22:12:33 GMT"
+      },
+      "status": "captured",
+      "evidence_file": "evidence/srlc_oxy_verified.html",
+      "sha256": "0b711647c0f3300c45d1e65ddbe260eca6ce0a230d09bcb45459fc1ef626a2ae",
+      "bytes": 112230,
+      "retrieved_at_utc": "2026-10-31T22:12:33.137359+00:00"
+    },
+    {
+      "source_id": "trial_oxy",
+      "requested_url": "https://clinicaltrials.gov/api/v2/studies/NCT01162304",
+      "method": "GET",
+      "kind": "json",
+      "final_url": "https://clinicaltrials.gov/api/v2/studies/NCT01162304",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "application/json",
+        "ETag": "\"174f08d/0.34.1/mvuqrkf4\"",
+        "Date": "Sat, 31 Oct 2026 22:04:11 GMT"
+      },
+      "source_metadata": {},
+      "status": "captured",
+      "evidence_file": "evidence/trial_oxy.json",
+      "sha256": "e1af63944f837336b1bd14282221ecb19435c0899a4c322eaf12afdcbef3d822",
+      "bytes": 22256,
+      "retrieved_at_utc": "2026-10-31T22:04:11.385136+00:00"
+    },
+    {
+      "source_id": "trial_version",
+      "requested_url": "https://clinicaltrials.gov/api/v2/version",
+      "method": "GET",
+      "kind": "json",
+      "final_url": "https://clinicaltrials.gov/api/v2/version",
+      "http_status": 200,
+      "http_headers": {
+        "Content-Type": "application/json",
+        "ETag": "\"174f08d/0.34.1/mvuqrkf4\"",
+        "Date": "Sat, 31 Oct 2026 22:04:11 GMT"
+      },
+      "source_metadata": {},
+      "status": "captured",
+      "evidence_file": "evidence/trial_version.json",
+      "sha256": "29d9582e9bb670968bdc5d8a1814bbd36c0e6a1cb1681fb3fa524de01f489547",
+      "bytes": 71,
+      "retrieved_at_utc": "2026-10-31T22:04:11.523232+00:00"
+    }
+  ]
+}

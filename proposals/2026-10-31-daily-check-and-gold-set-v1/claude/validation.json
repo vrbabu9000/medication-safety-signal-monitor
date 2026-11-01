@@ -1,0 +1,82 @@
+{
+  "dataset_id": "MSSM-30-v1",
+  "annotator": "claude",
+  "generated_from": "shared/ frozen pack only; no live lookups used in answers",
+  "pack_sha256_from_READY": "2652cbbe5a08210cc9268b956401f21fd169a05c3647035ac7b83caf345be481",
+  "case_count_in_cases_json": 30,
+  "answer_record_count": 30,
+  "unique_answer_ids": 30,
+  "duplicate_ids": [],
+  "ids_match_cases_json_exactly": true,
+  "missing_ids": [],
+  "extra_ids": [],
+  "hash_verification": {
+    "READY_sha256_by_file": {
+      "files_checked": 45,
+      "matched": 45,
+      "mismatched": []
+    },
+    "manifest_source_sha256": {
+      "sources_checked": 26,
+      "matched": 26,
+      "mismatched": [],
+      "failed_fetches_without_manifest_sha256": {
+        "faers_oxy_counts": "evidence/faers_oxy_counts.http-error.txt",
+        "faers_oxy_counts_alltime": "evidence/faers_oxy_counts_alltime.http-error.txt"
+      },
+      "note": "Failed fetches have no manifest sha256; their error bodies are covered by READY sha256_by_file."
+    },
+    "answer_hashes_equal_manifest": true
+  },
+  "resolved_count": 30,
+  "unresolved_count": 0,
+  "intentional_unknown_answers": [
+    "G23",
+    "G24"
+  ],
+  "per_category_totals": {
+    "DailyMed": 12,
+    "RxNorm": 4,
+    "FAERS": 4,
+    "FDA enforcement": 4,
+    "Drugs@FDA": 2,
+    "NDC Directory": 2,
+    "SrLC": 1,
+    "ClinicalTrials.gov": 1
+  },
+  "per_category_expected": {
+    "DailyMed": 12,
+    "RxNorm": 4,
+    "FAERS": 4,
+    "FDA enforcement": 4,
+    "Drugs@FDA": 2,
+    "NDC Directory": 2,
+    "SrLC": 1,
+    "ClinicalTrials.gov": 1
+  },
+  "per_category_match": true,
+  "per_check_type_totals": {
+    "label_interpretation": 12,
+    "source_lookup": 12,
+    "cross_source_comparison": 2,
+    "evidence_interpretation": 4
+  },
+  "all_resolved_have_locator_and_evidence": true,
+  "all_human_review_pending": true,
+  "capture_failures_in_manifest": {
+    "faers_oxy_counts": {
+      "status": "fetch_failed",
+      "url": "https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name%3A%22oxycodone%22+AND+receivedate%3A%5B20260101+TO+20260630%5D&count=patient.reaction.reactionmeddrapt.exact&limit=1000"
+    },
+    "faers_oxy_counts_alltime": {
+      "status": "fetch_failed",
+      "url": "https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name%3A%22oxycodone%22&count=patient.reaction.reactionmeddrapt.exact&limit=1000"
+    }
+  },
+  "notes": [
+    "Self-check only; not an independent human evaluation.",
+    "Candidate system reference set; not a clinician-adjudicated gold standard and not a 30-item label-extraction benchmark."
+  ],
+  "answers_jsonl_sha256": "d33088a1dce3d6825da82e1e6099a7d53f45c292c510c8c33d6ee6e8a6216965",
+  "answers_frozen_at_utc": "2026-10-31T22:21:11Z"
+}

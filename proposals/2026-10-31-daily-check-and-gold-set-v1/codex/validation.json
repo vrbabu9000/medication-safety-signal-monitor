@@ -1,0 +1,47 @@
+{
+  "dataset_id": "MSSM-30-v1",
+  "annotator": "codex",
+  "cases": 30,
+  "unique_case_ids": 30,
+  "category_counts": {
+    "DailyMed": 12,
+    "RxNorm": 4,
+    "FAERS": 4,
+    "FDA enforcement": 4,
+    "Drugs@FDA": 2,
+    "NDC Directory": 2,
+    "SrLC": 1,
+    "ClinicalTrials.gov": 1
+  },
+  "resolved_cases": 30,
+  "unresolved_cases": 0,
+  "intentional_unknown_cases": [
+    "G23",
+    "G24"
+  ],
+  "source_hashes_verified": 26,
+  "label_quote_anchors_verified": 12,
+  "source_family_count": 8,
+  "live_drug_filtered_faers_available": false,
+  "source_failures": [
+    {
+      "source_id": "faers_oxy_counts",
+      "requested_url": "https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name%3A%22oxycodone%22+AND+receivedate%3A%5B20260101+TO+20260630%5D&count=patient.reaction.reactionmeddrapt.exact&limit=1000",
+      "status": "fetch_failed",
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "error_evidence_file": "evidence/faers_oxy_counts.http-error.txt"
+    },
+    {
+      "source_id": "faers_oxy_counts_alltime",
+      "requested_url": "https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name%3A%22oxycodone%22&count=patient.reaction.reactionmeddrapt.exact&limit=1000",
+      "status": "fetch_failed",
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "error_evidence_file": "evidence/faers_oxy_counts_alltime.http-error.txt"
+    }
+  ],
+  "all_human_reviews": "pending",
+  "interpretation_review": "Codex source review only; no independent human/clinical adjudication",
+  "claude_answers_seen": false,
+  "clinical_accuracy_claim": null,
+  "full_label_recall_claim": null
+}

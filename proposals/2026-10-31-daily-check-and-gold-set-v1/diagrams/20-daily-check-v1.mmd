@@ -1,0 +1,14 @@
+flowchart TD
+  A[06:00 ET daily check] --> B[Read source version and relevant manifests]
+  B --> C{Fetch complete and valid?}
+  C -- No --> D[Keep last good data and show failure or staleness]
+  C -- Yes --> E{Meaningful source or configuration change?}
+  E -- No --> F[Record checked and unchanged; reuse data and AI]
+  E -- Yes --> G[Store immutable capture and clean affected data]
+  G --> H[Refresh identity links and dependent views]
+  H --> I[AI only for changed complete input or extraction settings]
+  I --> J[Validate outputs and compare successful snapshots]
+  F --> K[Publish latest evidence and unresolved review queue]
+  J --> K
+  D --> K
+  L[09:15 ET trial-source follow-up] --> B

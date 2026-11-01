@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17" type="device">
+  <diagram name="Daily source check">
+    <mxGraphModel page="1" pageWidth="1320" pageHeight="1050" grid="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a" value="06:00 ET | Proposed daily source check" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf1f8;strokeColor=#476783;fontSize=16;spacing=10;">
+          <mxGeometry as="geometry" x="380" y="40" width="520" height="65" />
+        </mxCell>
+        <mxCell id="b" value="Compare publisher versions, content and request completeness" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf1f8;strokeColor=#476783;fontSize=16;spacing=10;">
+          <mxGeometry as="geometry" x="380" y="150" width="520" height="70" />
+        </mxCell>
+        <mxCell id="c" value="Failure / partial capture&#10;Keep last complete good data; show warning" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf1f8;strokeColor=#476783;fontSize=16;spacing=10;">
+          <mxGeometry as="geometry" x="30" y="290" width="360" height="85" />
+        </mxCell>
+        <mxCell id="d" value="No meaningful change&#10;Record checked; reuse data and AI results" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf1f8;strokeColor=#476783;fontSize=16;spacing=10;">
+          <mxGeometry as="geometry" x="470" y="290" width="360" height="85" />
+        </mxCell>
+        <mxCell id="e" value="Changed source / configuration&#10;Save immutable evidence and clean affected rows" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf1f8;strokeColor=#476783;fontSize=16;spacing=10;">
+          <mxGeometry as="geometry" x="910" y="290" width="360" height="85" />
+        </mxCell>
+        <mxCell id="f" value="Rejoin current identity and reference context" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf1f8;strokeColor=#476783;fontSize=16;spacing=10;">
+          <mxGeometry as="geometry" x="910" y="440" width="360" height="70" />
+        </mxCell>
+        <mxCell id="g" value="AI for changed complete inputs only&#10;Validate quotes and clinical context" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf1f8;strokeColor=#476783;fontSize=16;spacing=10;">
+          <mxGeometry as="geometry" x="910" y="570" width="360" height="85" />
+        </mxCell>
+        <mxCell id="h" value="Compare compatible successful captures&#10;Keep source changes separate from model changes" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf1f8;strokeColor=#476783;fontSize=16;spacing=10;">
+          <mxGeometry as="geometry" x="910" y="720" width="360" height="85" />
+        </mxCell>
+        <mxCell id="i" value="Latest evidence + unresolved review queue&#10;Source date / check time / build time" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf1f8;strokeColor=#476783;fontSize=16;spacing=10;">
+          <mxGeometry as="geometry" x="380" y="910" width="520" height="85" />
+        </mxCell>
+        <mxCell id="j" value="09:15 ET | Trial update follow-up&#10;Check source version; no timing guarantee" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf1f8;strokeColor=#476783;fontSize=16;spacing=10;">
+          <mxGeometry as="geometry" x="30" y="530" width="360" height="85" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="a" target="b" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#476783;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="b" target="c" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#476783;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="b" target="d" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#476783;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="b" target="e" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#476783;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="c" target="i" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#476783;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="d" target="i" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#476783;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="e" target="f" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#476783;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="f" target="g" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#476783;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="g" target="h" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#476783;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="h" target="i" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#476783;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="j" target="b" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#476783;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

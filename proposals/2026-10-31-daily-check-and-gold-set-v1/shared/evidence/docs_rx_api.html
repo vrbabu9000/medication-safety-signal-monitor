@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC ""
+    "">
+
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>APIs</title>
+  <link rel="stylesheet" href="/assets/uswds-2.4.0/css/uswds.min.css" />
+  <link rel="stylesheet" href="/assets/stylesheets/LHC_main.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/RxNav/assets/stylesheets/lhncbc-apidocs.css" />
+
+  <link rel="stylesheet" href="https://lhncbc.nlm.nih.gov/assets/footer/1.2/lhcFooter-Classes.css" />
+
+ <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-59GQ6JK');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59GQ6JK" height="0" width="0" style="display:none;visibility:hidden" title="googletagmanager"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <div class="usa-overlay"></div>
+<section class="usa-banner site-banner" aria-label="Official website of the United States government">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img aria-hidden="true" class="usa-banner__header-flag" src="/assets/img/us_flag_small.png" alt="" />
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">
+            An official website of the United States government
+          </p>
+          <p class="usa-banner__header-action">Here’s how you know</p>
+        </div>
+        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner">
+          <span class="usa-banner__button-text">Here’s how you know</span>
+        </button>
+      </div>
+    </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner" hidden="">
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="/assets/img/icon-dot-gov.svg" alt="" aria-hidden="true" />
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Official websites use .gov</strong><br />A
+              <strong>.gov</strong> website belongs to an official government
+              organization in the United States.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="/assets/img/icon-https.svg" alt="" aria-hidden="true" />
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Secure .gov websites use HTTPS</strong><br />A
+              <strong>lock</strong> (
+              <span class="icon-lock"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewbox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-description" focusable="false">
+                  <title id="banner-lock-title">Lock</title>
+                  <desc id="banner-lock-description">Locked padlock icon</desc>
+                  <path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"></path>
+                </svg> </span>) or <strong>https://</strong> means you’ve safely connected to
+              the .gov website. Share sensitive information only on official,
+              secure websites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div class="mor_status_spot"></div>
+  <header class="usa-header usa-header--extended insertheader">
+
+
+
+
+
+
+
+
+
+
+   <div class="usa-nav-layout grid-row">
+     <div class="usa-logo grid-col-10" id="extended-logo">
+
+      <div class="header-logo" style="line-height:1rem;">
+        <div class="display-flex flex-row flex-align-center">
+            <div>
+              <a href="https://www.nih.gov"><img src="/assets/images/logo-NIH-block.png" title="NIH logo chevron" /></a>
+            </div>
+            <div class="display-flex flex-column">
+              <a href="https://www.nlm.nih.gov">
+                <img src="/assets/images/logo-NLM-block.png" title="portion of logo that reads National Library of Medicine" />
+              </a>
+              <a href="/index.html">
+                <img src="/assets/images/logo-LHC-block.png" title="portion of logo that reads Lister Hill National Center for Biomedical Communications" />
+              </a>
+            </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="LHC-menu grid-col-2 display-flex flex-row flex-justify-end flex-align-center">
+      <button class="usa-menu-btn"><i class="fas fa-bars fa-2x" title="3 bar menu button"></i></button>
+    </div>
+  </div>
+
+
+    <nav aria-label="Primary navigation" class="usa-nav">
+      <div class="usa-nav__inner">
+        <button class="usa-nav__close"><img src="/assets/images/close.svg" alt="close" /></button>
+        <div class="nav-container">
+          <ul class="usa-nav__primary usa-accordion">
+            <li class="usa-nav__primary-item usa-current">
+              <a href="/RxNav/index.html" class="usa-nav__link homeButton"><span class="subproject-navtitle">RxNav:</span></a>
+            </li>
+            <li class="usa-nav__primary-item">
+              <button class="usa-accordion__button usa-nav__link usa-current apiButton" aria-expanded="false" aria-controls="extended-nav-section-one"><span>APIs</span>
+              </button>
+              <ul id="extended-nav-section-one" class="usa-nav__submenu" hidden="">
+                <li class="usa-nav__submenu-item">
+                  <a href="/RxNav/APIs/index.html">Overview</a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href="/RxNav/APIs/RxNormAPIs.html">RxNorm API</a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href="/RxNav/APIs/RxTermsAPIs.html">RxTerms API</a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href="/RxNav/APIs/PrescribableAPIs.html">Prescribable API</a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href="/RxNav/APIs/RxClassAPIs.html">RxClass API</a>
+                </li>
+                <!--<li class="usa-nav__submenu-item">
+                  <a href="/RxNav/APIs/InteractionAPIs.html">Drug Interaction API</a>
+                </li>-->
+              </ul>
+            </li>
+
+
+ <li class="usa-nav__primary-item">
+               <button class="usa-accordion__button usa-nav__link applicationsButton" aria-expanded="false" aria-controls="extended-nav-section-two"><span>Applications</span>
+               </button>
+               <ul id="extended-nav-section-two" class="usa-nav__submenu" hidden="">
+                 <li class="usa-nav__submenu-item">
+                   <a href="/RxNav/applications/RxNavDoc.html">RxNav Overview</a>
+                 </li>
+                 <li class="usa-nav__submenu-item">
+                   <a href="/RxNav/applications/RxMixTutorial.html">RxMix Tutorial</a>
+                 </li>
+                 <li class="usa-nav__submenu-item">
+                   <a href="/RxNav/applications/RxClassIntro.html">RxClass Overview</a>
+                 </li>
+                 <li class="usa-nav__submenu-item">
+                   <a href="/RxNav/applications/RxNav-in-a-Box.html">RxNav-in-a-box</a>
+                 </li>
+               </ul>
+ </li>
+
+ <li class="usa-nav__primary-item">
+               <button class="usa-accordion__button usa-nav__link informationButton" aria-expanded="false" aria-controls="extended-nav-section-three"><span>More Information</span>
+               </button>
+               <ul id="extended-nav-section-three" class="usa-nav__submenu" hidden="">
+                 <li class="usa-nav__submenu-item">
+                   <a href="/RxNav/information/DataSources.html">Data Sources</a>
+                 </li>
+                 <li class="usa-nav__submenu-item">
+                   <a href="https://mor.nlm.nih.gov/pubs/rxnav.html">Publications</a>
+                 </li>
+                 <li class="usa-nav__submenu-item">
+                   <a href="/RxNav/information/FAQs.html">FAQ</a>
+                 </li>
+               </ul>
+            </li>
+
+ <li class="usa-nav__primary-item">
+     <a class="usa-nav__link termsButton" href="/RxNav/TermsofService.html"><span>Terms of Service</span></a>
+ </li>
+
+
+
+
+
+          </ul>
+        </div>
+
+        <div class="usa-nav__secondary">
+
+
+                     <form class="usa-search usa-search--small" method="GET" action="/search-results.html" target="_self" name="search" id="search" onsubmit="try{return velocityFormSubmit(this, event);}catch(e){}">
+                <div role="search">
+                  <label class="usa-sr-only" for="extended-search-field-small">Search small</label>
+                  <input class="usa-input" id="extended-search-field-small" type="search" name="query" />
+                  <button class="usa-button bg-accent-warm" type="submit"><span class="usa-sr-only">Search</span></button>
+                </div>
+              </form>
+
+                  </div>
+      </div>
+    </nav>
+
+  </header>
+
+
+
+<div id="content"><div class="rxapi"><div class="front_page"><div class="usa-layout padding-y-4"><div class="grid-row grid-gap"><div class="LHC-sidenav tablet:grid-col-3"><h6 class="usa-heading-alt"><a href="index.html">APIs</a></h6><nav aria-label="Secondary navigation"><ul class="usa-sidenav"><li class="usa-sidenav__item"><a class="usa-current" href="index.html">Overview</a></li><li class="usa-sidenav__item"><a href="RxNormAPIs.html">RxNorm API</a></li><li class="usa-sidenav__item"><a href="RxTermsAPIs.html">RxTerms API</a></li><li class="usa-sidenav__item"><a href="PrescribableAPIs.html">Prescribable RxNorm API</a></li><li class="usa-sidenav__item"><a href="RxClassAPIs.html">RxClass API</a></li></ul></nav></div><div class="desktop:grid-col-9"><p><a href="index.html">APIs</a></p><div class="grid-container pt-2 px-0"><div class="pt-2"><h1>APIs</h1><div class="rxapi-simplesect"><p>Application programming interfaces (APIs) are available to users to retrieve data from several drug information sources, including RxNorm, MED-RT and RxTerms. Currently these APIs are available:</p><ul><li><a class="rxapi-xref" href="RxNormAPIs.html">RxNorm API</a> for retrieving data from the <a href="http://www.nlm.nih.gov/research/umls/rxnorm/" target="_blank">RxNorm</a> data set</li><li><a class="rxapi-xref" href="PrescribableAPIs.html">Prescribable RxNorm API</a> for retrieving data from the <a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/prescribe.html" target="_blank">RxNorm Current Prescribable Content</a></li><li><a class="rxapi-xref" href="RxTermsAPIs.html">RxTerms API</a> for retrieving data for the <a href="https://mor.nlm.nih.gov/RxTerms/" target="_blank">RxTerms</a> data set</li><li><a class="rxapi-xref" href="RxClassAPIs.html">RxClass API</a> for retrieving drug classes and drug members from a number of different drug class types</li></ul><p>The APIs are also available as part of
+          <a href="/RxNav/applications/RxNav-in-a-Box.html" target="_blank" rel="noopener noreferrer">RxNav-in-a-Box</a>, which provides users with a locally-installable version of RxNav, RxClass, and the APIs.</p><p>The API resources can also be used interactively or in batch mode with RxMix.</p><p>We invite you to develop computer and mobile applications using National Library of Medicine (NLM) resources. We request that any application that makes use of NLM data include the following statement:</p><blockquote class="rxapi-blockquote"><p>"This product uses publicly available data from the U.S. National Library of Medicine (NLM), National Institutes of Health, Department of Health and Human Services; NLM is not responsible for the product and does not endorse or recommend this or any other product."</p></blockquote></div><div class="rxapi-simplesect" id="programmatic-usage"><h4>Programmatic usage</h4><p>Each API-function documentation page indicates the function's web address (URL) template and parameters, and illustrates
+          combining those parts in a complete sample URL.</p><p>The APIs are accessed via the HTTP "GET" method, which is the usual (default) method of web browsers and common tools like "curl". For example:</p><pre class="rxapi-programlisting">curl https://rxnav.nlm.nih.gov/REST/sourcetypes.json</pre><p>prints out:</p><pre class="rxapi-programlisting">{"sourceTypeList":{"sourceName":["ATC","CVX","DRUGBANK","GS","MDDB","MMSL","MMX","MSH","MTHCMSFRF","MTHSPL","NDDF","RXNORM","SNOMEDCT_US","USP","VANDF"]}}</pre></div><div class="rxapi-simplesect"><h4>Rate limit</h4><p>RxNav's <a href="https://lhncbc.nlm.nih.gov/RxNav/TermsofService.html">Terms of Service</a> may limit the number of requests per second. A higher rate limit may apply to requests that provide an API key (see below).</p><p>To avoid rate-limit errors, your program may wait or "sleep" briefly between requests.</p><p>Your program may also cache the results from the APIs, and refer to the cache instead of making a second request for the same thing. The APIs are updated following each RxNorm full monthly release. The RxNorm release schedule can be found at the <a href="https://www.nlm.nih.gov/research/umls/rxnorm/overview.html#how-often-is-rxnorm-released" target="_blank">RxNorm Overview</a>.</p></div><div class="rxapi-simplesect" id="api-keys"><h4>API keys</h4><p>A higher rate limit may apply to requests that provide a UMLS API key, as described in RxNav's <a href="https://lhncbc.nlm.nih.gov/RxNav/TermsofService.html">Terms of Service</a>.</p><p>Additionally, an API key allows functions <a class="rxapi-xref" href="api-RxNorm.getProprietaryInformation.html">getProprietaryInformation</a> and <a class="rxapi-xref" href="api-RxNorm.getApproximateMatch.html">getApproximateMatch</a> to return information from RxNorm source vocabularies that require a UMLS license.</p><p>RxNav accepts API keys provided by the NLM Unified Medical Language System (UMLS) Terminology Services (UTS). (The same API keys can also be used to <a href="https://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html">download RxNorm files</a>.)</p><p>How to get an API key:</p><ol><li><p>Sign up for a UTS account at <a href="https://uts.nlm.nih.gov/uts/signup-login">https://uts.nlm.nih.gov/uts/signup-login</a>.</p></li><li><p>View or rotate your API key: Go to <a href="https://uts.nlm.nih.gov/">https://uts.nlm.nih.gov/</a>, Sign In, and choose My Profile</p></li></ol><p>How to use your API key with the RxNav APIs:</p><p>When sending a request to the APIs, specify your API key with the "Authorization" request header. Include your key after the word "Bearer". For example, the "curl" tool takes a --header option:</p><pre class="rxapi-programlisting">curl --header 'Authorization: Bearer 8a23xx8x-49x7-3x8x-80x8-25x6x9j697x7' 'https://rxnav.nlm.nih.gov/REST/approximateTerm.json?term=atarvastatin'</pre></div></div></div><div class="grid-container padding-top-4"></div></div></div></div></div></div></div>
+
+  <footer class="bg-primary text-white insertfooter">
+
+
+  <div class="container-fluid">
+  <div class="container pt-5">
+    <div class="row mt-3">
+      <div class="col-md-3 col-sm-6 col-6">
+        <p><a href="https://www.nlm.nih.gov/socialmedia/index.html" class="text-white">Connect with NLM</a></p>
+        <ul class="list-inline social_media">
+          <li class="list-inline-item"><a title="External link: please review our privacy policy." href="https://twitter.com/NLM_NIH"><img src="//www.nlm.nih.gov/images/Twitter_W.svg" class="img-fluid" alt="Twitter" /></a></li>
+          <li class="list-inline-item"><a title="External link: please review our privacy policy." href="https://www.facebook.com/nationallibraryofmedicine"><img src="//www.nlm.nih.gov/images/Facebook_W.svg" class="img-fluid" alt="Facebook" /></a></li>
+          <li class="list-inline-item"><a title="External link: please review our privacy policy." href="https://www.youtube.com/user/NLMNIH"><img src="//www.nlm.nih.gov/images/YouTube_W.svg" class="img-fluid" alt="You Tube" /></a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
+        <p class="address_footer text-white"> National Library of Medicine <br />
+          <a href="https://www.google.com/maps/place/8600+Rockville+Pike,+Bethesda,+MD+20894/@38.9959508,-77.101021,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c95e25765ddb:0x19156f88b27635b8!8m2!3d38.9959508!4d-77.0988323" class="text-white"> 8600 Rockville Pike <br />
+          Bethesda, MD 20894 </a></p>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
+        <p><a href="https://www.nlm.nih.gov/web_policies.html" class="text-white"> Web Policies </a><br />
+          <a href="https://www.nih.gov/institutes-nih/nih-office-director/office-communications-public-liaison/freedom-information-act-office" class="text-white"> FOIA </a><br /><a href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html" class="text-white">HHS Vulnerability Disclosure</a></p>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
+        <p><a class="supportLink text-white" href="//support.nlm.nih.gov?from="> NLM Support Center </a> <br />
+          <a href="https://www.nlm.nih.gov/accessibility.html" class="text-white"> Accessibility </a><br />
+          <a href="https://www.nlm.nih.gov/careers/careers.html" class="text-white"> Careers </a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="mt-2 text-center"> <a class="text-white" href="//www.nlm.nih.gov/">NLM</a> | <a class="text-white" href="https://www.nih.gov/">NIH</a> | <a class="text-white" href="https://www.hhs.gov/">HHS</a> | <a class="text-white" href="https://www.usa.gov/">USA.gov</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+   </footer>
+<script>
+var dynHeader = "/RxNav/lhcHeader.frag";
+</script>
+<script src="https://assets.nlm.nih.gov/jquery/jquery-latest.min.js"></script>
+<script src="/assets/javascript/popper-1.14.7.min.js"></script>
+<script src="/assets/uswds-2.4.0/js/uswds.min.js"></script>
+<script src="/assets/javascript/headerfooter.js"></script>
+<script src="/assets/javascript/supportLink.js"></script>
+
+<script src="/RxNav/assets/javascript/apidoc.js" type="text/javascript"></script>
+<script>var LHCSupportCategory="rxnav";</script><script src="https://lhncbc.nlm.nih.gov/assets/footer/1.2/lhc-Footer.js"></script>
+
+</body></html>

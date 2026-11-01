@@ -1,0 +1,14 @@
+{
+  "quote_anchor_checks": "passed for all quotes supplied in Codex answers",
+  "source_hash_checks": "passed: 26 captured originals",
+  "case_ids": "passed: G01-G30 exactly once",
+  "shared_archive_excludes_answers": "passed",
+  "comparison_tool_checks": [
+    "one deliberate mismatch detected",
+    "duplicate IDs rejected",
+    "missing IDs rejected"
+  ],
+  "comparison_fixtures": "synthetic temporary fixtures; not Claude outputs",
+  "claude_run_performed": false,
+  "human_review_performed": false
+}

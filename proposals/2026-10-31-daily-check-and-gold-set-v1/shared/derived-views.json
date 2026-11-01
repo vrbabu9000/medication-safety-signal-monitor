@@ -1,0 +1,19 @@
+{
+  "description": "Deterministic parsing aids only; original bytes and manifest are authoritative. No expected answers.",
+  "views": {
+    "dm_fentanyl_patch": "evidence/dm_fentanyl_patch.sections.json",
+    "dm_oxy": "evidence/dm_oxy.sections.json",
+    "dm_tramadol": "evidence/dm_tramadol.sections.json",
+    "docs_dailymed": "evidence/docs_dailymed.text.txt",
+    "docs_drugsfda": "evidence/docs_drugsfda.text.txt",
+    "docs_faers": "evidence/docs_faers.text.txt",
+    "docs_ndc": "evidence/docs_ndc.text.txt",
+    "docs_recalls": "evidence/docs_recalls.text.txt",
+    "docs_rx_api": "evidence/docs_rx_api.text.txt",
+    "docs_rxnorm": "evidence/docs_rxnorm.text.txt",
+    "docs_srlc": "evidence/docs_srlc.text.txt",
+    "docs_trials": "evidence/docs_trials.text.txt",
+    "srlc_oxy": "evidence/srlc_oxy.text.txt",
+    "srlc_oxy_verified": "evidence/srlc_oxy_verified.text.txt"
+  }
+}

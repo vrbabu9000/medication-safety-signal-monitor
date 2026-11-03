@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "50474-594",
+      "generic_name": "levetiracetam",
+      "labeler_name": "UCB, Inc.",
+      "brand_name": "Keppra",
+      "active_ingredients": [
+        {
+          "name": "LEVETIRACETAM",
+          "strength": "250 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "50474-594-40",
+          "description": "120 TABLET, FILM COATED in 1 BOTTLE, PLASTIC (50474-594-40)",
+          "marketing_start_date": "20000424",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20271231",
+      "openfda": {
+        "manufacturer_name": [
+          "UCB, Inc."
+        ],
+        "rxcui": [
+          "261335",
+          "261336",
+          "284391",
+          "311288",
+          "311289",
+          "311290",
+          "387003",
+          "403884",
+          "404595",
+          "630807"
+        ],
+        "spl_set_id": [
+          "3ca9df05-a506-4ec8-a4fe-320f1219ab21"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0350474595404"
+        ],
+        "nui": [
+          "N0000008486"
+        ],
+        "pharm_class_pe": [
+          "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+        ],
+        "unii": [
+          "44YRR34555"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET, FILM COATED",
+      "spl_id": "4974b225-87ca-610e-e063-6294a90ad20a",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20000424",
+      "product_id": "50474-594_4974b225-87ca-610e-e063-6294a90ad20a",
+      "application_number": "NDA021035",
+      "brand_name_base": "Keppra",
+      "pharm_class": [
+        "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+      ]
+    }
+  ]
+}

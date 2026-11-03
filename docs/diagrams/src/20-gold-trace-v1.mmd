@@ -1,0 +1,11 @@
+flowchart LR
+    S1[S1 RxNorm\nbrand to ingredient\nRxCUI + reverse check] -->|ingredient| S2[S2 NDC Directory\npackage, labeler,\napplication no.]
+    S2 -->|same application no.| S3[S3 Drugs at FDA\nsponsor, products,\nstrengths]
+    S3 -->|spl_set_id from S2| S4[S4 DailyMed label\nclassify one phrase\nin one passage]
+    S4 -->|is the change\nin this label?| S5[S5 SrLC\nlatest safety-label\nchange]
+    S5 -->|top terms checked\nagainst S4 label| S6[S6 FAERS counts\nbrand vs substance\nreports]
+    S6 -->|does the recall name\nthe S2 package?| S7[S7 FDA enforcement\nlatest recall]
+    S7 -->|arm names the\nS1 ingredient| S8[S8 ClinicalTrials.gov\none arm: serious AEs\naffected / at risk]
+    S8 --> R[(answers.jsonl\n30 traces x 8 steps\nreview pending)]
+    G[Every capture: identity guard\n+ sha256 + retrieval time] -.-> S1
+    V[verify_trace.py re-derives\nevery answer from raw bytes] -.-> R

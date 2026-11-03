@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 3
+    }
+  },
+  "results": [
+    {
+      "status": "Terminated",
+      "city": "Plainsboro",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202928"
+        ],
+        "brand_name": [
+          "CLOPIDOGREL"
+        ],
+        "generic_name": [
+          "CLOPIDOGREL"
+        ],
+        "manufacturer_name": [
+          "Macleods Pharmaceuticals Limited"
+        ],
+        "product_ndc": [
+          "33342-060"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "CLOPIDOGREL BISULFATE"
+        ],
+        "rxcui": [
+          "309362"
+        ],
+        "spl_id": [
+          "05355b6d-3802-4542-bda2-cd6a17e57266"
+        ],
+        "spl_set_id": [
+          "063cd1eb-98fd-422e-8145-bba04c497efe"
+        ],
+        "package_ndc": [
+          "33342-060-07",
+          "33342-060-15",
+          "33342-060-12",
+          "33342-060-10",
+          "33342-060-44"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0333342060440",
+          "0333342060075",
+          "0333342060105"
+        ],
+        "unii": [
+          "08I79HTP27"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "88391",
+      "recalling_firm": "Macleods Pharma Usa Inc",
+      "address_1": "666 Plainsboro Rd Bldg 200 Ste 230",
+      "address_2": "N/A",
+      "postal_code": "08536-0009",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed nationwide.",
+      "recall_number": "D-0787-2021",
+      "product_description": "Clopidogrel Tablets, USP, 75 mg, 500-count bottle, Rx only, Manufactured for: Macleods Pharma USA, Inc., Plainsboro, NJ 08536, Manufactured by: Macleods Pharmaceutical Ltd., Baddi, Himachal, Pradesh, INDIA  NDC 33342-060-15",
+      "product_quantity": "444,000 tablets / 888 unit packs of 500 count",
+      "reason_for_recall": "Presence of foreign matter",
+      "recall_initiation_date": "20210802",
+      "center_classification_date": "20210831",
+      "termination_date": "20221202",
+      "report_date": "20210908",
+      "code_info": "Lot # BCA82021A, Exp 06/2023"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA091023"
+        ],
+        "brand_name": [
+          "CLOPIDOGREL BISULFATE"
+        ],
+        "generic_name": [
+          "CLOPIDOGREL BISULFATE"
+        ],
+        "manufacturer_name": [
+          "Dr.Reddy's Laboratories Limited"
+        ],
+        "product_ndc": [
+          "55111-671"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "CLOPIDOGREL BISULFATE"
+        ],
+        "rxcui": [
+          "749196"
+        ],
+        "spl_id": [
+          "e74780f8-a035-e6a0-b457-c04edd4162bf"
+        ],
+        "spl_set_id": [
+          "4da4da53-91ae-4d4f-145f-255c5db443a5"
+        ],
+        "package_ndc": [
+          "55111-671-30",
+          "55111-671-90",
+          "55111-671-01",
+          "55111-671-05",
+          "55111-671-48",
+          "55111-671-79",
+          "55111-671-81",
+          "55111-671-06",
+          "55111-671-31",
+          "55111-671-78"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "08I79HTP27"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "81748",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed to 4 major distributors who distributed the product throughout the United States.",
+      "recall_number": "D-0294-2019",
+      "product_description": "Clopidogrel Tablets, USP, 300 mg, 30 (5 x 6 unit-dose) count blister pack, Rx only, Manufactured by Dr. Reddy's Laboratories Limited, Srikakulam - 532 409, India, NDC 55111-671-31",
+      "product_quantity": "4,404 (30 count blister packs)",
+      "reason_for_recall": "Failed dissolution specification -Two additional lots being recalled due to Out-of-Specification results observed for dissolution at 18th month stability testing.",
+      "recall_initiation_date": "20181210",
+      "center_classification_date": "20181211",
+      "termination_date": "20200625",
+      "report_date": "20181219",
+      "code_info": "Lot #: T700423, Exp 08/2019; T800310, Exp 03/2020"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA091023"
+        ],
+        "brand_name": [
+          "CLOPIDOGREL BISULFATE"
+        ],
+        "generic_name": [
+          "CLOPIDOGREL BISULFATE"
+        ],
+        "manufacturer_name": [
+          "Dr.Reddy's Laboratories Limited"
+        ],
+        "product_ndc": [
+          "55111-671"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "CLOPIDOGREL BISULFATE"
+        ],
+        "rxcui": [
+          "749196"
+        ],
+        "spl_id": [
+          "e74780f8-a035-e6a0-b457-c04edd4162bf"
+        ],
+        "spl_set_id": [
+          "4da4da53-91ae-4d4f-145f-255c5db443a5"
+        ],
+        "package_ndc": [
+          "55111-671-30",
+          "55111-671-90",
+          "55111-671-01",
+          "55111-671-05",
+          "55111-671-48",
+          "55111-671-79",
+          "55111-671-81",
+          "55111-671-06",
+          "55111-671-31",
+          "55111-671-78"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "08I79HTP27"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "81530",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "U.S.A.nationwide",
+      "recall_number": "D-0283-2019",
+      "product_description": "Clopidogrel Tablets, USP, 300 mg, 30 (5 x 6 unit-dose) count blister pack, Rx only, Manufactured by Dr. Reddy's Laboratories Limited, Srikakulam - 532 409, India, NDC 55111-671-31",
+      "product_quantity": "4,212 (30-count blister pack)",
+      "reason_for_recall": "Failed Dissolution Specification: Out-of-Specification results were observed for dissolution at 18th month stability testing.",
+      "recall_initiation_date": "20181107",
+      "center_classification_date": "20181127",
+      "termination_date": "20200519",
+      "report_date": "20181128",
+      "code_info": "Lot #: T600530, Exp 11/18",
+      "more_code_info": ""
+    }
+  ]
+}

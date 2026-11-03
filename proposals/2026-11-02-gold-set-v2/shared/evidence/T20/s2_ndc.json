@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "0069-3120",
+      "generic_name": "azithromycin dihydrate",
+      "labeler_name": "Pfizer Laboratories Div Pfizer Inc",
+      "brand_name": "Zithromax",
+      "active_ingredients": [
+        {
+          "name": "AZITHROMYCIN DIHYDRATE",
+          "strength": "200 mg/5mL"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "0069-3120-19",
+          "description": "1 BOTTLE in 1 CARTON (0069-3120-19)  / 15 mL in 1 BOTTLE",
+          "marketing_start_date": "19951019",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20271231",
+      "openfda": {
+        "manufacturer_name": [
+          "Pfizer Laboratories Div Pfizer Inc"
+        ],
+        "rxcui": [
+          "105260",
+          "141963",
+          "211307",
+          "212446",
+          "226827",
+          "248656",
+          "308459",
+          "308460",
+          "749780",
+          "749783",
+          "750149",
+          "750157"
+        ],
+        "spl_set_id": [
+          "db52b91e-79f7-4cc1-9564-f2eee8e31c45"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0300693060306",
+          "0300693070305"
+        ],
+        "unii": [
+          "5FD1131I7S"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "POWDER, FOR SUSPENSION",
+      "spl_id": "1c5f0fcc-88ce-47e9-a128-b7326b7a5a02",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "19951019",
+      "product_id": "0069-3120_1c5f0fcc-88ce-47e9-a128-b7326b7a5a02",
+      "application_number": "NDA050710",
+      "brand_name_base": "Zithromax",
+      "pharm_class": [
+        "Macrolide Antimicrobial [EPC]",
+        "Macrolides [CS]"
+      ]
+    }
+  ]
+}

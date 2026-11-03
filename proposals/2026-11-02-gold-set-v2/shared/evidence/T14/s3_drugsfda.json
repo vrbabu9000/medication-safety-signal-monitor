@@ -1,0 +1,546 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "submissions": [
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "19",
+          "submission_status": "AP",
+          "submission_status_date": "20220617",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "71378",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2022/207932Orig1s019, s020ltr.pdf",
+              "date": "20220621",
+              "type": "Letter"
+            },
+            {
+              "id": "71405",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/207932s019s020lbl.pdf",
+              "date": "20220621",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "3",
+          "submission_status": "AP",
+          "submission_status_date": "20160930",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "45451",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2016/207932Orig1s003ltr.pdf",
+              "date": "20161003",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "20160420",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "10633",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2016/207932Orig1s001ltr.pdf",
+              "date": "20160422",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "23",
+          "submission_status": "AP",
+          "submission_status_date": "20231215",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "76960",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2023/207932s023lbl.pdf",
+              "date": "20231218",
+              "type": "Label"
+            },
+            {
+              "id": "77001",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/207932s023lbl.pdf#page=40",
+              "date": "20231219",
+              "type": "Medication Guide"
+            },
+            {
+              "id": "77078",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2023/207932Orig1s023ltr.pdf",
+              "date": "20231219",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "15",
+          "submission_status": "AP",
+          "submission_status_date": "20210304",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "66614",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2021/207932Orig1s015ltr.pdf",
+              "date": "20210308",
+              "type": "Letter"
+            },
+            {
+              "id": "66654",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2021/207932s015lbl.pdf",
+              "date": "20210308",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "8",
+          "submission_status": "AP",
+          "submission_status_date": "20180918",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "55536",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2018/207932s008s009lbl.pdf",
+              "date": "20180921",
+              "type": "Label"
+            },
+            {
+              "id": "55696",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2018/207932Orig1s008s009ltr.pdf",
+              "date": "20181001",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "6",
+          "submission_status": "AP",
+          "submission_status_date": "20170526",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "48589",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2017/207932Orig1s006ltr.pdf",
+              "date": "20170531",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "2",
+          "submission_status": "AP",
+          "submission_status_date": "20161216",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "46314",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2016/207932s002lbl.pdf",
+              "date": "20161220",
+              "type": "Label"
+            },
+            {
+              "id": "46446",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2016/207932Orig1s002ltr.pdf",
+              "date": "20161221",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "30",
+          "submission_status": "AP",
+          "submission_status_date": "20260618",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "86328",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/207932Orig1s030ltr.pdf",
+              "date": "20260623",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "20",
+          "submission_status": "AP",
+          "submission_status_date": "20220617",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "71379",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2022/207932Orig1s019, s020ltr.pdf",
+              "date": "20220621",
+              "type": "Letter"
+            },
+            {
+              "id": "71403",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2022/207932s019s020lbl.pdf",
+              "date": "20220621",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "12",
+          "submission_status": "AP",
+          "submission_status_date": "20191007",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "60372",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2019/207932Orig1s012ltr.pdf",
+              "date": "20191008",
+              "type": "Letter"
+            },
+            {
+              "id": "60430",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2019/207932s012lbl.pdf",
+              "date": "20191009",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "10",
+          "submission_status": "AP",
+          "submission_status_date": "20191016",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "60575",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2019/207932Orig1s010ltr.pdf",
+              "date": "20191017",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "ORIG",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "20151023",
+          "review_priority": "STANDARD",
+          "submission_class_code": "TYPE 3",
+          "submission_class_code_description": "Type 3 - New Dosage Form",
+          "application_docs": [
+            {
+              "id": "40600",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2015/207932s000lbl.pdf",
+              "date": "20151026",
+              "type": "Label"
+            },
+            {
+              "id": "57715",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2015/207932Orig1s000TOC.html",
+              "date": "20190220",
+              "type": "Review"
+            },
+            {
+              "id": "10632",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2015/207932Orig1s000ltr.pdf",
+              "date": "20151026",
+              "type": "Letter"
+            },
+            {
+              "id": "24131",
+              "title": "REMS",
+              "url": "http://www.accessdata.fda.gov/scripts/cder/rems/index.cfm?event=RemsDetails.page&REMS=17",
+              "date": "20151028",
+              "type": "Other"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "9",
+          "submission_status": "AP",
+          "submission_status_date": "20180918",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "55537",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2018/207932s008s009lbl.pdf",
+              "date": "20180921",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "29",
+          "submission_status": "AP",
+          "submission_status_date": "20251222",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "84580",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2025/207932Orig1s029ltr.pdf",
+              "date": "20251229",
+              "type": "Letter"
+            },
+            {
+              "id": "84631",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2026/207932s029lbl.pdf",
+              "date": "20260105",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "27",
+          "submission_status": "AP",
+          "submission_status_date": "20241031",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "80084",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2024/207932Orig1s027ltr.pdf",
+              "date": "20241104",
+              "type": "Letter"
+            }
+          ]
+        }
+      ],
+      "application_number": "NDA207932",
+      "sponsor_name": "BDSI",
+      "openfda": {
+        "application_number": [
+          "NDA207932"
+        ],
+        "brand_name": [
+          "BELBUCA"
+        ],
+        "generic_name": [
+          "BUPRENORPHINE HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "BioDelivery Sciences International Inc"
+        ],
+        "product_ndc": [
+          "59385-021",
+          "59385-022",
+          "59385-023",
+          "59385-024",
+          "59385-025",
+          "59385-026",
+          "59385-027"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "BUCCAL"
+        ],
+        "substance_name": [
+          "BUPRENORPHINE HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "1716057",
+          "1716063",
+          "1716065",
+          "1716067",
+          "1716069",
+          "1716071",
+          "1716073",
+          "1716075",
+          "1716077",
+          "1716079",
+          "1716081",
+          "1716083",
+          "1716086",
+          "1716090"
+        ],
+        "spl_id": [
+          "16403e7a-5881-43d2-990c-a7d673971c3d"
+        ],
+        "spl_set_id": [
+          "bc2b7a3d-72cf-497c-95b0-ba2b71f63c64"
+        ],
+        "package_ndc": [
+          "59385-021-01",
+          "59385-021-60",
+          "59385-022-01",
+          "59385-022-60",
+          "59385-023-01",
+          "59385-023-60",
+          "59385-024-01",
+          "59385-024-60",
+          "59385-025-01",
+          "59385-025-60",
+          "59385-026-01",
+          "59385-026-60",
+          "59385-027-01",
+          "59385-027-60"
+        ],
+        "unii": [
+          "56W8MW3EN1"
+        ]
+      },
+      "products": [
+        {
+          "product_number": "003",
+          "reference_drug": "Yes",
+          "brand_name": "BELBUCA",
+          "active_ingredients": [
+            {
+              "name": "BUPRENORPHINE HYDROCHLORIDE",
+              "strength": "EQ 0.3MG BASE"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "FILM",
+          "route": "BUCCAL",
+          "marketing_status": "Prescription"
+        },
+        {
+          "product_number": "001",
+          "reference_drug": "Yes",
+          "brand_name": "BELBUCA",
+          "active_ingredients": [
+            {
+              "name": "BUPRENORPHINE HYDROCHLORIDE",
+              "strength": "EQ 0.075MG BASE"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "FILM",
+          "route": "BUCCAL",
+          "marketing_status": "Prescription"
+        },
+        {
+          "product_number": "006",
+          "reference_drug": "Yes",
+          "brand_name": "BELBUCA",
+          "active_ingredients": [
+            {
+              "name": "BUPRENORPHINE HYDROCHLORIDE",
+              "strength": "EQ 0.75MG BASE"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "FILM",
+          "route": "BUCCAL",
+          "marketing_status": "Prescription"
+        },
+        {
+          "product_number": "004",
+          "reference_drug": "Yes",
+          "brand_name": "BELBUCA",
+          "active_ingredients": [
+            {
+              "name": "BUPRENORPHINE HYDROCHLORIDE",
+              "strength": "EQ 0.45MG BASE"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "FILM",
+          "route": "BUCCAL",
+          "marketing_status": "Prescription"
+        },
+        {
+          "product_number": "002",
+          "reference_drug": "Yes",
+          "brand_name": "BELBUCA",
+          "active_ingredients": [
+            {
+              "name": "BUPRENORPHINE HYDROCHLORIDE",
+              "strength": "EQ 0.15MG BASE"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "FILM",
+          "route": "BUCCAL",
+          "marketing_status": "Prescription"
+        },
+        {
+          "product_number": "007",
+          "reference_drug": "Yes",
+          "brand_name": "BELBUCA",
+          "active_ingredients": [
+            {
+              "name": "BUPRENORPHINE HYDROCHLORIDE",
+              "strength": "EQ 0.9MG BASE"
+            }
+          ],
+          "reference_standard": "Yes",
+          "dosage_form": "FILM",
+          "route": "BUCCAL",
+          "marketing_status": "Prescription"
+        },
+        {
+          "product_number": "005",
+          "reference_drug": "Yes",
+          "brand_name": "BELBUCA",
+          "active_ingredients": [
+            {
+              "name": "BUPRENORPHINE HYDROCHLORIDE",
+              "strength": "EQ 0.6MG BASE"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "FILM",
+          "route": "BUCCAL",
+          "marketing_status": "Prescription"
+        }
+      ]
+    }
+  ]
+}

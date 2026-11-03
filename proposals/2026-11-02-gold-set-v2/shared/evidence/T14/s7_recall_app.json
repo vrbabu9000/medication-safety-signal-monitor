@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 2
+    }
+  },
+  "results": [
+    {
+      "status": "Terminated",
+      "city": "Dublin",
+      "state": "OH",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "NDA207932"
+        ],
+        "brand_name": [
+          "BELBUCA"
+        ],
+        "generic_name": [
+          "BUPRENORPHINE HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "BioDelivery Sciences International Inc"
+        ],
+        "product_ndc": [
+          "59385-021",
+          "59385-022",
+          "59385-023",
+          "59385-024",
+          "59385-025",
+          "59385-026",
+          "59385-027"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "BUCCAL"
+        ],
+        "substance_name": [
+          "BUPRENORPHINE HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "1716057",
+          "1716063",
+          "1716065",
+          "1716067",
+          "1716069",
+          "1716071",
+          "1716073",
+          "1716075",
+          "1716077",
+          "1716079",
+          "1716081",
+          "1716083",
+          "1716086",
+          "1716090"
+        ],
+        "spl_id": [
+          "16403e7a-5881-43d2-990c-a7d673971c3d"
+        ],
+        "spl_set_id": [
+          "bc2b7a3d-72cf-497c-95b0-ba2b71f63c64"
+        ],
+        "package_ndc": [
+          "59385-021-01",
+          "59385-021-60",
+          "59385-022-01",
+          "59385-022-60",
+          "59385-023-01",
+          "59385-023-60",
+          "59385-024-01",
+          "59385-024-60",
+          "59385-025-01",
+          "59385-025-60",
+          "59385-026-01",
+          "59385-026-60",
+          "59385-027-01",
+          "59385-027-60"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "56W8MW3EN1"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "87512",
+      "recalling_firm": "Cardinal Health Inc.",
+      "address_1": "7000 Cardinal Pl",
+      "address_2": "N/A",
+      "postal_code": "43017-1091",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "FL, GA, SC",
+      "recall_number": "D-0448-2021",
+      "product_description": "Belbuca (buprenorphine hydrochloride) buccal film 300 mcg 60 pouches containing 1 buccal film each Rx only NDC 59385-023-60 Manufactured for: BioDelivery Sciences International, Inc. Raleigh, NC 27612.",
+      "product_quantity": "96 cartons",
+      "reason_for_recall": "CGMP Deviations: Intermittent exposure to temperature excursion during storage.",
+      "recall_initiation_date": "20210315",
+      "center_classification_date": "20210524",
+      "termination_date": "20240617",
+      "report_date": "20210602",
+      "code_info": "37674B"
+    },
+    {
+      "status": "Terminated",
+      "city": "Dublin",
+      "state": "OH",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "NDA207932"
+        ],
+        "brand_name": [
+          "BELBUCA"
+        ],
+        "generic_name": [
+          "BUPRENORPHINE HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "BioDelivery Sciences International Inc"
+        ],
+        "product_ndc": [
+          "59385-021",
+          "59385-022",
+          "59385-023",
+          "59385-024",
+          "59385-025",
+          "59385-026",
+          "59385-027"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "BUCCAL"
+        ],
+        "substance_name": [
+          "BUPRENORPHINE HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "1716057",
+          "1716063",
+          "1716065",
+          "1716067",
+          "1716069",
+          "1716071",
+          "1716073",
+          "1716075",
+          "1716077",
+          "1716079",
+          "1716081",
+          "1716083",
+          "1716086",
+          "1716090"
+        ],
+        "spl_id": [
+          "16403e7a-5881-43d2-990c-a7d673971c3d"
+        ],
+        "spl_set_id": [
+          "bc2b7a3d-72cf-497c-95b0-ba2b71f63c64"
+        ],
+        "package_ndc": [
+          "59385-021-01",
+          "59385-021-60",
+          "59385-022-01",
+          "59385-022-60",
+          "59385-023-01",
+          "59385-023-60",
+          "59385-024-01",
+          "59385-024-60",
+          "59385-025-01",
+          "59385-025-60",
+          "59385-026-01",
+          "59385-026-60",
+          "59385-027-01",
+          "59385-027-60"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "56W8MW3EN1"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "87512",
+      "recalling_firm": "Cardinal Health Inc.",
+      "address_1": "7000 Cardinal Pl",
+      "address_2": "N/A",
+      "postal_code": "43017-1091",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "FL, GA, SC",
+      "recall_number": "D-0449-2021",
+      "product_description": "Belbuca (buprenorphine hydrochloride) buccal film 600 mcg 60 pouches containing 1 buccal film each Rx only NDC 59385-025-60 Manufactured for: BioDelivery Sciences International, Inc. Raleigh, NC 27612 USA",
+      "product_quantity": "47 cartons",
+      "reason_for_recall": "CGMP Deviations: Intermittent exposure to temperature excursion during storage.",
+      "recall_initiation_date": "20210315",
+      "center_classification_date": "20210524",
+      "termination_date": "20240617",
+      "report_date": "20210602",
+      "code_info": "BL6002004"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "HEADACHE",
+      "count": 64
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 57
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 52
+    },
+    {
+      "term": "NAUSEA",
+      "count": 48
+    },
+    {
+      "term": "FATIGUE",
+      "count": 45
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 44
+    },
+    {
+      "term": "PAIN",
+      "count": 43
+    },
+    {
+      "term": "ARTHRALGIA",
+      "count": 40
+    },
+    {
+      "term": "DRUG INTOLERANCE",
+      "count": 38
+    },
+    {
+      "term": "HYPERSENSITIVITY",
+      "count": 37
+    }
+  ]
+}

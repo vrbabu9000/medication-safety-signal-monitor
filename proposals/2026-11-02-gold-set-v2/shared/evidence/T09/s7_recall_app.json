@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "status": "Terminated",
+      "city": "Plainsboro",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "NDA022341"
+        ],
+        "brand_name": [
+          "VICTOZA"
+        ],
+        "generic_name": [
+          "LIRAGLUTIDE"
+        ],
+        "manufacturer_name": [
+          "Novo Nordisk"
+        ],
+        "product_ndc": [
+          "0169-4060"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "SUBCUTANEOUS"
+        ],
+        "substance_name": [
+          "LIRAGLUTIDE"
+        ],
+        "rxcui": [
+          "897122",
+          "897126"
+        ],
+        "spl_id": [
+          "0d10d10e-0fe0-47ee-b9da-628e34907e98"
+        ],
+        "spl_set_id": [
+          "5a9ef4ea-c76a-4d34-a604-27c5b505f5a4"
+        ],
+        "package_ndc": [
+          "0169-4060-13",
+          "0169-4060-12",
+          "0169-4060-90",
+          "0169-4060-97",
+          "0169-4060-98",
+          "0169-4060-99"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "nui": [
+          "N0000178480",
+          "M0160181",
+          "N0000020058"
+        ],
+        "pharm_class_epc": [
+          "GLP-1 Receptor Agonist [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Glucagon-Like Peptide 1 [CS]"
+        ],
+        "pharm_class_moa": [
+          "Glucagon-like Peptide-1 (GLP-1) Agonists [MoA]"
+        ],
+        "unii": [
+          "839I73S42A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "87537",
+      "recalling_firm": "Novo Nordisk Inc",
+      "address_1": "800 Scudders Mill Rd",
+      "address_2": "N/A",
+      "postal_code": "08536-1606",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the USA",
+      "recall_number": "D-0622-2021",
+      "product_description": "ViCTOZA (liraglutide) injection, 18 mg/3 mL (6 mg/mL), contains: 1 Victoza Pen, Sample Not for Resale, Rx only, Manufactured by: Novo Nordisk A/S, Bagesvaerd, Denmark  NDC 0169-4060-90 (Pen), 0169-4060-99 (Kit)",
+      "product_quantity": "N/A",
+      "reason_for_recall": "Temperature Abuse: product samples were stored at temperatures below 32* F which is not in accordance with storage requirements that could cause a lack of efficacy and damage to the cartridge and pen-injectors.",
+      "recall_initiation_date": "20210322",
+      "center_classification_date": "20210610",
+      "termination_date": "20221209",
+      "report_date": "20210421",
+      "code_info": "I2419A (Kit); JS68K86 (Pen) exp 05/31/2021"
+    }
+  ]
+}

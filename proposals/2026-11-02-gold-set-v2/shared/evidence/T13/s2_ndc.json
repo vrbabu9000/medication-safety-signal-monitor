@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "59011-410",
+      "generic_name": "oxycodone hydrochloride",
+      "labeler_name": "Knoa Pharma LLC",
+      "dea_schedule": "CII",
+      "brand_name": "OxyContin",
+      "active_ingredients": [
+        {
+          "name": "OXYCODONE HYDROCHLORIDE",
+          "strength": "10 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "59011-410-10",
+          "description": "100 TABLET, FILM COATED, EXTENDED RELEASE in 1 BOTTLE (59011-410-10)",
+          "marketing_start_date": "20100808",
+          "sample": false
+        },
+        {
+          "package_ndc": "59011-410-20",
+          "description": "2 BLISTER PACK in 1 CARTON (59011-410-20)  / 10 TABLET, FILM COATED, EXTENDED RELEASE in 1 BLISTER PACK",
+          "marketing_start_date": "20100808",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20271231",
+      "openfda": {
+        "manufacturer_name": [
+          "Knoa Pharma LLC"
+        ],
+        "rxcui": [
+          "1049504",
+          "1049545",
+          "1049565",
+          "1049576",
+          "1049586",
+          "1049595",
+          "1049601",
+          "1860127",
+          "1860129",
+          "1860137",
+          "1860148",
+          "1860151",
+          "1860154",
+          "1860157"
+        ],
+        "spl_set_id": [
+          "bfdfe235-d717-4855-a3c8-a13d26dadede"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0359011410101",
+          "0359011420100",
+          "0359011480104",
+          "0359011440108",
+          "0359011415106",
+          "0359011460106",
+          "0359011430109"
+        ],
+        "unii": [
+          "C1ENJ2TE6C"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET, FILM COATED, EXTENDED RELEASE",
+      "spl_id": "47b30347-ae1d-4b54-8ccd-594eb7bdbd75",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20100808",
+      "product_id": "59011-410_47b30347-ae1d-4b54-8ccd-594eb7bdbd75",
+      "application_number": "NDA022272",
+      "brand_name_base": "OxyContin",
+      "pharm_class": [
+        "Full Opioid Agonists [MoA]",
+        "Opioid Agonist [EPC]"
+      ]
+    }
+  ]
+}

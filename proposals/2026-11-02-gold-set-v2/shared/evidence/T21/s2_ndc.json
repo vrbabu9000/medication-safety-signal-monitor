@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "0310-0271",
+      "marketing_end_date": "20270630",
+      "generic_name": "quetiapine",
+      "labeler_name": "AstraZeneca Pharmaceuticals LP",
+      "brand_name": "SEROQUEL",
+      "active_ingredients": [
+        {
+          "name": "QUETIAPINE FUMARATE",
+          "strength": "100 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "0310-0271-10",
+          "description": "100 TABLET, FILM COATED in 1 BOTTLE (0310-0271-10)",
+          "marketing_start_date": "19971001",
+          "marketing_end_date": "20270630",
+          "sample": false
+        }
+      ],
+      "openfda": {
+        "manufacturer_name": [
+          "AstraZeneca Pharmaceuticals LP"
+        ],
+        "rxcui": [
+          "153638",
+          "153639",
+          "153640",
+          "284509",
+          "312743",
+          "312744",
+          "312745",
+          "317174",
+          "616483",
+          "616485",
+          "616487",
+          "616489"
+        ],
+        "spl_set_id": [
+          "0584dda8-bc3c-48fe-1a90-79608f78e8a0"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "2S3PL1B6UJ"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET, FILM COATED",
+      "spl_id": "aef69992-4a20-4d55-b85c-7c0799619ce6",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "19971001",
+      "product_id": "0310-0271_aef69992-4a20-4d55-b85c-7c0799619ce6",
+      "application_number": "NDA020639",
+      "brand_name_base": "SEROQUEL",
+      "pharm_class": [
+        "Atypical Antipsychotic [EPC]"
+      ]
+    }
+  ]
+}

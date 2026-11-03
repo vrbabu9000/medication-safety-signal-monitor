@@ -1,0 +1,982 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 11
+    }
+  },
+  "results": [
+    {
+      "status": "Ongoing",
+      "city": "Columbus",
+      "state": "OH",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA091393"
+        ],
+        "brand_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "generic_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "American Health Packaging"
+        ],
+        "product_ndc": [
+          "68084-354",
+          "68084-968",
+          "68084-975",
+          "68084-983"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "1049611",
+          "1049618",
+          "1049621",
+          "1049683"
+        ],
+        "spl_id": [
+          "4160b55c-48e1-5cb4-e063-6294a90a1d7d"
+        ],
+        "spl_set_id": [
+          "aa7ac2bf-d9ed-445d-b394-4d3fe39780ca"
+        ],
+        "package_ndc": [
+          "68084-354-11",
+          "68084-354-01",
+          "68084-968-11",
+          "68084-968-01",
+          "68084-975-11",
+          "68084-975-01",
+          "68084-983-11",
+          "68084-983-01"
+        ],
+        "original_packager_product_ndc": [
+          "10702-018",
+          "10702-056",
+          "10702-008",
+          "10702-009"
+        ],
+        "unii": [
+          "C1ENJ2TE6C"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "98308",
+      "recalling_firm": "Amerisource Health Services LLC",
+      "address_1": "2550 John Glenn Ave Ste A",
+      "address_2": "N/A",
+      "postal_code": "43217-1188",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the USA",
+      "recall_number": "D-0338-2026",
+      "product_description": "Oxycodone Hydrochloride Tablets, USP (CII), 5 mg,  100-Count (10 x 10) blister cards per carton,  Rx Only, The drug product contained in this package is from NDC # 10702-018, KVK-Tech Inc.  Distributed by: American Health Packaging, Columbus, Ohio 43217, Carton NDC 68084-354-01; Blister NDC 68084-354-11",
+      "product_quantity": "31,676 packages",
+      "reason_for_recall": "Defective container: card seal defects (weak/non-existent seals), leading to the tablets falling out of their cavities.",
+      "recall_initiation_date": "20260114",
+      "center_classification_date": "20260213",
+      "report_date": "20260218",
+      "code_info": "Lots #: 1027932, Exp Date 06/30/2027, 1028360, Exp Date 08/31/2027"
+    },
+    {
+      "status": "Ongoing",
+      "city": "Webster Groves",
+      "state": "MO",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA087463"
+        ],
+        "brand_name": [
+          "OXYCODONE AND ACETAMINOPHEN"
+        ],
+        "generic_name": [
+          "OXYCODONE HYDROCHLORIDE AND ACETAMINOPHEN"
+        ],
+        "manufacturer_name": [
+          "SpecGx LLC"
+        ],
+        "product_ndc": [
+          "0406-0512",
+          "0406-0522",
+          "0406-0523"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "OXYCODONE HYDROCHLORIDE",
+          "ACETAMINOPHEN"
+        ],
+        "rxcui": [
+          "1049214",
+          "1049221",
+          "1049225"
+        ],
+        "spl_id": [
+          "5237fd51-c605-4a02-a1ee-c79ddddcb5de"
+        ],
+        "spl_set_id": [
+          "f2137f1a-b49a-40bd-97ac-cd6b36e295f4"
+        ],
+        "package_ndc": [
+          "0406-0512-01",
+          "0406-0512-05",
+          "0406-0512-62",
+          "0406-0512-23",
+          "0406-0512-91",
+          "0406-0522-01",
+          "0406-0522-62",
+          "0406-0522-05",
+          "0406-0522-23",
+          "0406-0523-01",
+          "0406-0523-62",
+          "0406-0523-05",
+          "0406-0523-23"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0304060522053",
+          "0304060523050",
+          "0304060512054"
+        ],
+        "unii": [
+          "362O9ITL9D",
+          "C1ENJ2TE6C"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "98136",
+      "recalling_firm": "SpecGx, LLC",
+      "address_1": "385 Marshall Ave",
+      "address_2": "",
+      "postal_code": "63119-1831",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "E-Mail",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-0254-2026",
+      "product_description": "Oxycodone and Acetaminophen CII Tablets USP, 10mg/325 mg, 100 tablets, Rx only, SpecGx LLC, Webster Groves, MO 63119, NDC 0406-0523-01.",
+      "product_quantity": "287,988 Bottles.",
+      "reason_for_recall": "Failed Tablet/Capsule Specification: There is a potential for the imprint to be missing on tablets.",
+      "recall_initiation_date": "20251216",
+      "center_classification_date": "20260107",
+      "report_date": "20260114",
+      "code_info": "Lot: 0523J23904, expires: 05/2027; 0523J24426, 0523J24427, expires: 06/2027.",
+      "more_code_info": ""
+    },
+    {
+      "status": "Ongoing",
+      "city": "Webster Groves",
+      "state": "MO",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA087463"
+        ],
+        "brand_name": [
+          "OXYCODONE AND ACETAMINOPHEN"
+        ],
+        "generic_name": [
+          "OXYCODONE HYDROCHLORIDE AND ACETAMINOPHEN"
+        ],
+        "manufacturer_name": [
+          "SpecGx LLC"
+        ],
+        "product_ndc": [
+          "0406-0512",
+          "0406-0522",
+          "0406-0523"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "OXYCODONE HYDROCHLORIDE",
+          "ACETAMINOPHEN"
+        ],
+        "rxcui": [
+          "1049214",
+          "1049221",
+          "1049225"
+        ],
+        "spl_id": [
+          "5237fd51-c605-4a02-a1ee-c79ddddcb5de"
+        ],
+        "spl_set_id": [
+          "f2137f1a-b49a-40bd-97ac-cd6b36e295f4"
+        ],
+        "package_ndc": [
+          "0406-0512-01",
+          "0406-0512-05",
+          "0406-0512-62",
+          "0406-0512-23",
+          "0406-0512-91",
+          "0406-0522-01",
+          "0406-0522-62",
+          "0406-0522-05",
+          "0406-0522-23",
+          "0406-0523-01",
+          "0406-0523-62",
+          "0406-0523-05",
+          "0406-0523-23",
+          "0406052201"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0304060522053",
+          "0304060523050",
+          "0304060512054"
+        ],
+        "unii": [
+          "362O9ITL9D",
+          "C1ENJ2TE6C"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "98136",
+      "recalling_firm": "SpecGx, LLC",
+      "address_1": "385 Marshall Ave",
+      "address_2": "",
+      "postal_code": "63119-1831",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "E-Mail",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-0255-2026",
+      "product_description": "Oxycodone and Acetaminophen CII Tablets USP, 7.5 mg/325 mg, 100 tablets, Rx only, SpecGx LLC, Webster Groves, MO 63119, NDC 0406-0522-01.  Case label: SpecGx LLC, NDC 0406052201, Exp. 2027/03, Lot: 0522J23493",
+      "product_quantity": "74,544 bottles",
+      "reason_for_recall": "Failed Tablet/Capsule Specification: There is a potential for the imprint to be missing on tablets.",
+      "recall_initiation_date": "20251216",
+      "center_classification_date": "20260107",
+      "report_date": "20260114",
+      "code_info": "Lot: 0522J23493, expires: 03/2027.",
+      "more_code_info": ""
+    },
+    {
+      "status": "Ongoing",
+      "city": "Lake Forest",
+      "state": "IL",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "NDA202080"
+        ],
+        "brand_name": [
+          "OXAYDO"
+        ],
+        "generic_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "Zyla Life Sciences US LLC"
+        ],
+        "product_ndc": [
+          "69344-113",
+          "69344-213"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "1049621",
+          "1113314",
+          "1664448",
+          "1664634"
+        ],
+        "spl_id": [
+          "5ab321c4-697f-4614-87bb-ec31a1429ef8"
+        ],
+        "spl_set_id": [
+          "cff0c64a-63f5-4b3c-909a-cdecf6755cbe"
+        ],
+        "package_ndc": [
+          "69344-113-11",
+          "69344-213-11"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0369344213119",
+          "0369344113112"
+        ],
+        "unii": [
+          "C1ENJ2TE6C"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "93254",
+      "recalling_firm": "Zyla Life Sciences US Inc.",
+      "address_1": "100 Saunders Rd",
+      "address_2": "Ste 300",
+      "postal_code": "60045-2502",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-0094-2024",
+      "product_description": "Oxaydo (oxycodone HCl, USP) tablets, 7.5 mg, 100 Tablets per bottle, Rx only, Distributed by: Zyla Life Sciences US Inc., Wayne, PA 19087.  NDC: 69344-213-11",
+      "product_quantity": "3,792 bottles",
+      "reason_for_recall": "Sub-potent Drug: Lower potency than labeled.",
+      "recall_initiation_date": "20231020",
+      "center_classification_date": "20231108",
+      "report_date": "20231115",
+      "code_info": "Lot 22W02, Exp 01/31/2025",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Columbus",
+      "state": "OH",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA204037"
+        ],
+        "brand_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "generic_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "American Health Packaging"
+        ],
+        "product_ndc": [
+          "60687-406"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "1049604"
+        ],
+        "spl_id": [
+          "30ca5ab4-1e96-888b-e063-6294a90abae0"
+        ],
+        "spl_set_id": [
+          "0a6b0659-6816-4f44-81bd-9bac4da5380d"
+        ],
+        "package_ndc": [
+          "60687-406-40",
+          "60687-406-46",
+          "60687-406-77",
+          "60687-406-67"
+        ],
+        "original_packager_product_ndc": [
+          "0054-0390"
+        ],
+        "unii": [
+          "C1ENJ2TE6C"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "89670",
+      "recalling_firm": "American Health Packaging",
+      "address_1": "2550 John Glenn Ave Ste A",
+      "address_2": "N/A",
+      "postal_code": "43217-1188",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the USA",
+      "recall_number": "D-0652-2022",
+      "product_description": "Oxycodone Hydrochloride Oral Solution, USP (C-II), 5 mg/5 mL, Delivers 5 mL per Cup, 1 Tray of 10 Cups, Rx Only, For Institutional Use Only, American Health Packaging, Columbus, OH 43217.  UPC (01) 003 60687 406 40 4; Case NDC#: 60687-406-77, Unit Dose NDC#: 60687-406-40",
+      "product_quantity": "89,880 unit-dose cups",
+      "reason_for_recall": "Impurity failure at 0-time of the repackaged lot.",
+      "recall_initiation_date": "20220222",
+      "center_classification_date": "20220311",
+      "termination_date": "20230716",
+      "report_date": "20220316",
+      "code_info": "Lot#  1004276, Exp 11/30/2022"
+    },
+    {
+      "status": "Terminated",
+      "city": "Baltimore",
+      "state": "MD",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA204021"
+        ],
+        "brand_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "generic_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "Lupin Pharmaceuticals,Inc."
+        ],
+        "product_ndc": [
+          "43386-430",
+          "43386-432",
+          "43386-433",
+          "43386-434",
+          "43386-431"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "1049611",
+          "1049618",
+          "1049621",
+          "1049683",
+          "1049686"
+        ],
+        "spl_id": [
+          "78c8a4dc-d475-41ca-acf7-9078e9c36c7f"
+        ],
+        "spl_set_id": [
+          "801cb437-c189-44f5-83eb-a51c365d8a6b"
+        ],
+        "package_ndc": [
+          "43386-432-01",
+          "43386-432-03",
+          "43386-432-05",
+          "43386-433-01",
+          "43386-433-03",
+          "43386-433-05",
+          "43386-430-01",
+          "43386-430-05",
+          "43386-430-03",
+          "43386-434-01",
+          "43386-434-05",
+          "43386-434-03",
+          "43386-431-01",
+          "43386-431-03",
+          "43386-431-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343386434015",
+          "0343386434039",
+          "0343386430031",
+          "0343386432059",
+          "0343386431052",
+          "0343386430017",
+          "0343386433032",
+          "0343386433018",
+          "0343386431038",
+          "0343386432011",
+          "0343386432035",
+          "0343386431014"
+        ],
+        "unii": [
+          "C1ENJ2TE6C"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "89324",
+      "recalling_firm": "Lupin Pharmaceuticals Inc.",
+      "address_1": "Harborplace Tower",
+      "address_2": "111 S Calvert St Fl 21st",
+      "postal_code": "21202-6174",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product Distributed in NY and OH.",
+      "recall_number": "D-0358-2022",
+      "product_description": "Oxycodone Hydrochloride Tablets, USP C-II, 5 mg, 100 count bottles, Rx Only, Manufactured for: Lupin Pharmaceuticals, Inc. Baltimore, MD 21202. Manufactured by: Novel Laboratories, Inc. Somerset, NJ 08873. NDC 43386-432-01",
+      "product_quantity": "23,965 100 count bottles",
+      "reason_for_recall": "Out-of-specification impurity test result observed at 18-month long term stability time point.",
+      "recall_initiation_date": "20211229",
+      "center_classification_date": "20220105",
+      "termination_date": "20220823",
+      "report_date": "20220112",
+      "code_info": "Lot # S000268, Exp. date January 2022"
+    },
+    {
+      "status": "Terminated",
+      "city": "Coventry",
+      "state": "RI",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA091490"
+        ],
+        "brand_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "generic_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "Rhodes Pharmaceuticals LLC"
+        ],
+        "product_ndc": [
+          "42858-001",
+          "42858-002",
+          "42858-003",
+          "42858-004",
+          "42858-005"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "1049611",
+          "1049618",
+          "1049621",
+          "1049683",
+          "1049686"
+        ],
+        "spl_id": [
+          "d95a9c89-1435-4594-be8b-e19e23d07c0a"
+        ],
+        "spl_set_id": [
+          "a5162476-1217-41c0-bc7e-0a0f123f069f"
+        ],
+        "package_ndc": [
+          "42858-001-01",
+          "42858-001-10",
+          "42858-002-01",
+          "42858-002-10",
+          "42858-003-01",
+          "42858-004-01",
+          "42858-005-01"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0342858002011",
+          "0342858005012",
+          "0342858004015",
+          "0342858001014",
+          "0342858003018"
+        ],
+        "unii": [
+          "C1ENJ2TE6C"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "88506",
+      "recalling_firm": "Rhodes Pharmaceuticals, L.P.",
+      "address_1": "498 Washington St",
+      "address_2": "N/A",
+      "postal_code": "02816-5467",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed nationwide.",
+      "recall_number": "D-0794-2021",
+      "product_description": "Oxycodone Hydrochloride Tablets, USP, 10 mg, 100 count bottle, Rx only,  Marketed by: Rhodes Pharmaceuticals L.P., Coventry RI 02816, Manufactured by: Purdue Pharma L.P., Stanford, CT 06901  NDC 42858-002-01",
+      "product_quantity": "55,344/100 count bottles",
+      "reason_for_recall": "Presence of Foreign Tablets/Capsules; A single foreign tablet Hydrochlorothiazide/Lisinopril 25/20 was found in one bottle",
+      "recall_initiation_date": "20210819",
+      "center_classification_date": "20210913",
+      "termination_date": "20230307",
+      "report_date": "20210922",
+      "code_info": "Lot # WP5K0Y, exp. date 02/28/2023",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Allentown",
+      "state": "PA",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "NDA200535"
+        ],
+        "brand_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "generic_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "Genus Lifesciences Inc."
+        ],
+        "product_ndc": [
+          "64950-354",
+          "64950-353"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "1049604",
+          "1049615"
+        ],
+        "spl_id": [
+          "75ee6920-096a-4dd9-ae98-6991ab84daff"
+        ],
+        "spl_set_id": [
+          "6869fec9-1837-4221-afd8-5cc6fadd025d"
+        ],
+        "package_ndc": [
+          "64950-353-03",
+          "64950-353-01",
+          "64950-353-91",
+          "64950-353-51",
+          "64950-353-02",
+          "64950-353-92",
+          "64950-353-52",
+          "64950-354-10",
+          "64950-354-50",
+          "64950-354-05",
+          "64950-354-55",
+          "64950-354-45"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0364950353037",
+          "0364950354058"
+        ],
+        "unii": [
+          "C1ENJ2TE6C"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "87044",
+      "recalling_firm": "Genus Lifesciences Inc.",
+      "address_1": "514 N 12th St",
+      "address_2": "N/A",
+      "postal_code": "18102-2756",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Distributed Nationwide in the USA",
+      "recall_number": "D-0231-2021",
+      "product_description": "Oxycodone Hydrochloride Oral Solution, USP 5 mg/5mL unit dose cups, Rx Only, Genus Lifesciences Inc. NDC 64950-354-05 Case NDC: 64950-354-450(40 unit dose cups) Case NDC 64950-354-55 (50 unit dose cups)",
+      "product_quantity": "1,171,550 cups",
+      "reason_for_recall": "Presence of Foreign Substance: Particulate matter was found in multiple lots of product.",
+      "recall_initiation_date": "20201223",
+      "center_classification_date": "20210115",
+      "termination_date": "20211105",
+      "report_date": "20210120",
+      "code_info": "Lot # 35400119A, 35400219A, 35400319A, 35400419A , 35400519A , 35400619A, EXP 12/31/20; 35400719A, 35400819A, EXP 1/31/21;  35400919A, 35401019A, 35401119A, EXP 2/28/21; 35401219A, 35401319A, EXP 4/30/21; 35401419A, 35401519A, 35401619A, EXP 5/31/21; 35401719A,  35401819A, EXP 7/31/21; 35401919A, 35402019A, EXP 8/31/21; 35402119A,  35402219A, 35402319A, 35402419A, EXP 9/30/21; 35402519A, EXP 10/31/21;  35402619A, 35402719A, EXP 11/30/21; 35400120A, 35400220A,   35400320A, 35400420B, EXP 12/31/21; 35400520A, EXP 1/31/22, 35400620A, EXP 1/31/22."
+    },
+    {
+      "status": "Terminated",
+      "city": "East Windsor",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA201972"
+        ],
+        "brand_name": [
+          "OXYCODONE AND ACETAMINOPHEN"
+        ],
+        "generic_name": [
+          "OXYCODONE AND ACETAMINOPHEN"
+        ],
+        "manufacturer_name": [
+          "Aurolife Pharma, LLC"
+        ],
+        "product_ndc": [
+          "13107-043",
+          "13107-044",
+          "13107-045",
+          "13107-046"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "OXYCODONE HYDROCHLORIDE",
+          "ACETAMINOPHEN"
+        ],
+        "rxcui": [
+          "1049214",
+          "1049221",
+          "1049225",
+          "1049635"
+        ],
+        "spl_id": [
+          "c86ebd1a-f32c-4a67-9a1b-ff0a3861c124"
+        ],
+        "spl_set_id": [
+          "69df20d9-b1d5-47dc-9ff0-29987284f8c7"
+        ],
+        "package_ndc": [
+          "13107-043-30",
+          "13107-043-01",
+          "13107-043-05",
+          "13107-043-99",
+          "13107-044-30",
+          "13107-044-01",
+          "13107-044-05",
+          "13107-044-99",
+          "13107-045-30",
+          "13107-045-01",
+          "13107-045-05",
+          "13107-045-99",
+          "13107-046-30",
+          "13107-046-01",
+          "13107-046-05",
+          "13107-046-99"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0313107046018"
+        ],
+        "unii": [
+          "362O9ITL9D",
+          "C1ENJ2TE6C"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "85183",
+      "recalling_firm": "Aurobindo Pharma USA Inc.",
+      "address_1": "279 Princeton Hightstown Rd",
+      "address_2": "",
+      "postal_code": "08520-1401",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide within the United States",
+      "recall_number": "D-1237-2020",
+      "product_description": "Oxycodone and Acetaminophen Tablets, USP 10 mg*/325 mg 100-count bottles, Rx Only, Distributed by: Aurobindo Pharma USA, Inc. Dayton, NJ 08810, NDC 13107-046-01",
+      "product_quantity": "14707 units",
+      "reason_for_recall": "CGMP Deviations: Products were manufactured in a processing area in which water leakage was observed",
+      "recall_initiation_date": "20200318",
+      "center_classification_date": "20200413",
+      "termination_date": "20240325",
+      "report_date": "20200422",
+      "code_info": "Lot #: 046180056A, Exp. Date 05/2020",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Central Islip",
+      "state": "NY",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA207418"
+        ],
+        "brand_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "generic_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "Camber Pharmaceuticals Inc"
+        ],
+        "product_ndc": [
+          "31722-484",
+          "31722-485",
+          "31722-917",
+          "31722-486",
+          "31722-918"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "1049611",
+          "1049618",
+          "1049621",
+          "1049683",
+          "1049686"
+        ],
+        "spl_id": [
+          "a506a2bf-6041-4ed7-bf7c-ffe50b1b3c2e"
+        ],
+        "spl_set_id": [
+          "01db4606-d49c-4b10-a78a-1cf41880a9fb"
+        ],
+        "package_ndc": [
+          "31722-484-01",
+          "31722-484-05",
+          "31722-485-01",
+          "31722-485-05",
+          "31722-917-01",
+          "31722-917-05",
+          "31722-486-01",
+          "31722-486-05",
+          "31722-918-01",
+          "31722-918-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0331722917018",
+          "0331722485050",
+          "0331722486019",
+          "0331722918053",
+          "0331722484053",
+          "0331722486057",
+          "0331722485012",
+          "0331722917056",
+          "0331722484015",
+          "0331722918015"
+        ],
+        "unii": [
+          "C1ENJ2TE6C"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "78990",
+      "recalling_firm": "Ascent Pharmaceuticals, Inc.",
+      "address_1": "550 S Research Pl",
+      "address_2": "",
+      "postal_code": "11722-4415",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-0248-2018",
+      "product_description": "Oxycodone Hydrochloride Tablets, USP 15 mg, 100 count bottles, Rx only, Manufactured for Camber Pharmaceuticals, Inc., Piscataway, NJ, Manufactured by: Ascent Pharmaceuticals, Inc., Central Islip, NY --- NDC 31722-917-01",
+      "product_quantity": "45,875 bottles",
+      "reason_for_recall": "Labeling; Label Error Not Elsewhere Classified; label missing controlled substance CII symbol",
+      "recall_initiation_date": "20180122",
+      "center_classification_date": "20180201",
+      "termination_date": "20180423",
+      "report_date": "20180207",
+      "code_info": "Lot Numbers: 17080591 and 17080619,  exp 07/19; 17110907 and 17110908, exp 10/19; and 17120986, exp 11/19",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Columbus",
+      "state": "OH",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA204037"
+        ],
+        "brand_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "generic_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "Hikma Pharmceuticals USA Inc."
+        ],
+        "product_ndc": [
+          "0054-0390"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "1049604"
+        ],
+        "spl_id": [
+          "47e856d4-de7d-49aa-8671-d1b4a35bad4d"
+        ],
+        "spl_set_id": [
+          "d8e87c66-f872-4e1d-9ade-ef11490af63b"
+        ],
+        "package_ndc": [
+          "0054-0390-41",
+          "0054-0390-63"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "C1ENJ2TE6C"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "74253",
+      "recalling_firm": "West-Ward Columbus Inc",
+      "address_1": "1809 Wilson Rd",
+      "address_2": "",
+      "postal_code": "43228-9579",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1441-2016",
+      "product_description": "Oxycodone HCl, Oral Solution USP, 5 mg/5 mL, 15 mL bottles, Rx only, Boehringer Ingelheim Roxane, Inc., Columbus, OH --- NDC 0054-0390-41",
+      "product_quantity": "1,182 bottles",
+      "reason_for_recall": "Failed Impurities/Degradation Specification; 9 month stability",
+      "recall_initiation_date": "20160519",
+      "center_classification_date": "20160714",
+      "termination_date": "20170202",
+      "report_date": "20160720",
+      "code_info": "Lot #560185A; Exp. 6/30/2017",
+      "more_code_info": ""
+    }
+  ]
+}

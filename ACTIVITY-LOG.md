@@ -3,15 +3,28 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-10-27 (planning only; nothing done Oct 21–26) |
-| **Where we are** | Exploration + design done. **Nothing built in Foundry yet.** New plan: build Thu Oct 29 → Mon Nov 2, demo **Wed Nov 4** → [game plan v1](docs/10-delivery/game-plan-v1-oct27-to-nov4.md) |
-| **Next 3 actions** | 1. (you) Text boss: demo Wed Nov 4 · 2. (Claude) Build the ready-to-run kit Oct 27–28 · 3. (you, Oct 28, optional 1 h) approve sheet + Foundry/AIP smoke test |
-| **Waiting on** | Boss OK on Nov 4 · AIP on Developer Tier (unverified) |
-| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, then run the delivery lead."_ |
+| **Last session** | 2026-11-02 — Reference set v2: 30 verified cross-source drug traces (A008, D037) |
+| **Where we are** | Reference set v2 built and verified against sources ([findings](proposals/2026-11-02-gold-set-v2/claude/findings.md), [cards](proposals/2026-11-02-gold-set-v2/cards/)); pharmacist review pending. Foundry build completion still unverified. [Start here](docs/04-architecture/foundry-conventions/README.md) |
+| **Next 3 actions** | 1. (you) Name a pharmacist reviewer and send [review-notes](proposals/2026-11-02-gold-set-v2/claude/review-notes.md) · 2. (you) Verify Foundry/AIP/Action access and current build status · 3. (you + Claude) Build one drug → source evidence → saved triage flow, using a formulary trace (T13 OxyContin) as the test case |
+| **Waiting on** | Pharmacist review · hands-on capability evidence · domain decision review · boss OK on Nov 4 demo |
+| **Say this to Codex to restart** | _"Read ACTIVITY-LOG and COMPASS, then follow step 1 of the Foundry build order."_ |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-02 — Reference set v2: 30 cross-source drug traces (Compass v12)
+- **Why:** the v1 30-case pack wasn't defensible. Codex wrote the questions and its own answers in one pass, the FAERS oxycodone capture failed, and one SrLC file was really Ozempic.
+- **Built:** [proposals/2026-11-02-gold-set-v2/](proposals/2026-11-02-gold-set-v2/). 62 drugs screened → 35 eligible → 30 traced through RxNorm, NDC, Drugs@FDA, DailyMed, SrLC, FAERS, enforcement and ClinicalTrials.gov (240 answers). Questions frozen before answers; identity guard on every capture; independent verifier (3,403/3,403 checks pass); live re-check (530/530 identical, 30/30 answers unchanged); 30 [case cards](proposals/2026-11-02-gold-set-v2/cards/); diagram [20-gold-trace-v1](docs/diagrams/png/20-gold-trace-v1.png).
+- **Found:** the v1 403 was openFDA requiring a key for count queries with `limit>100`. The key now lives in your shell profile and is redacted in saved URLs. Other findings: FAERS substance queries mix products (Chantix vs Tyrvaya); the recall `openfda.package_ndc` list is application-wide; Lyrica's DailyMed label (effective 2020) lags a 2025 SrLC change.
+- **Decided (proposed):** D037 plus the dataset's "label mentions" rule; 4 learnings. Approach [A008](docs/05-approaches/A008-gold-set-v2-cross-source-traces.md). v1 superseded. Snapshot: [Compass v11](docs/00-compass/history/COMPASS-v11.md).
+- **Not done:** pharmacist review of S4 calls and S6 synonyms; BACKLOG hours not updated; Delivery Lead not run.
+
+### 2026-10-31 — Foundry conventions and project learning/build roadmap (Compass v11)
+- **Research:** inspected Data Forge's 11-video introductory playlist; read auto-generated transcripts for episodes 3 (folders), 6 (medallion pipeline), and 9 (Ontology Manager); cross-checked official Palantir docs. Other video content is not claimed reviewed.
+- **Created:** [reference entry point](docs/04-architecture/foundry-conventions/README.md), [conventions](docs/04-architecture/foundry-conventions/conventions-v1.md), [12-step build order](docs/04-architecture/foundry-conventions/project-build-order-v1.md), [source/timestamp notes](docs/04-architecture/foundry-conventions/tutorial-research-2026-10-31.md), [A007](docs/05-approaches/A007-foundry-medallion-conventions.md), medallion and ontology diagrams (Mermaid, PNG/PDF, editable draw.io).
+- **Decided:** D036 — keep the existing local raw/clean/ontology layout; explain bronze/silver/gold responsibilities; use explicit naming and grain/key contracts and a dependency roadmap. This is a documentation standard, not approval of proposed clinical/source/scope decisions.
+- **Status:** no Foundry build performed; no speed/cost result claimed. Oct 27 capacity estimate marked historical. Parked A006 / D032–D035 are not adopted. Snapshot: [Compass v10](docs/00-compass/history/COMPASS-v10.md).
 
 ### 2026-10-27 — Restart after a lost week (Compass v10)
 - **Status:** no work Oct 21–26. Exploration was finished early, so the thinking is intact; the Foundry build has not started.

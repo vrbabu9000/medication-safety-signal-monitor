@@ -1,0 +1,955 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "submissions": [
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "47",
+          "submission_status": "AP",
+          "submission_status_date": "20211028",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "69151",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2021/022272Orig1s047ltr.pdf",
+              "date": "20211029",
+              "type": "Letter"
+            },
+            {
+              "id": "69174",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2021/022272s047lbl.pdf",
+              "date": "20211029",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "39",
+          "submission_status": "AP",
+          "submission_status_date": "20180926",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "55630",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2018/022272s039lbl.pdf",
+              "date": "20180927",
+              "type": "Label"
+            },
+            {
+              "id": "55758",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2018/022272Orig1s039ltr.pdf",
+              "date": "20181001",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "53",
+          "submission_status": "AP",
+          "submission_status_date": "20260618",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "86314",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/022272Orig1s053ltr.pdf",
+              "date": "20260623",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "ORIG",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "20100405",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "TYPE 5",
+          "submission_class_code_description": "Type 5 - New Formulation or New Manufacturer",
+          "application_docs": [
+            {
+              "id": "44179",
+              "url": "http://www.fda.gov/Drugs/DrugSafety/PostmarketDrugSafetyInformationforPatientsandProviders/ucm207173.htm",
+              "date": "20130215",
+              "type": "Other Important Information from FDA"
+            },
+            {
+              "id": "44493",
+              "title": "REMS",
+              "url": "http://www.accessdata.fda.gov/scripts/cder/rems/index.cfm?event=RemsDetails.page&REMS=17",
+              "date": "20100806",
+              "type": "Other"
+            },
+            {
+              "id": "44723",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2010/022272s000SumR.pdf",
+              "date": "20110217",
+              "type": "Summary Review"
+            },
+            {
+              "id": "51534",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/22272 oxycodone clinical bpca.pdf",
+              "date": "19000101",
+              "type": "Pediatric Medical Review"
+            },
+            {
+              "id": "51535",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/22272  oxycodone clinpharm bpca.pdf",
+              "date": "19000101",
+              "type": "Pediatric Clinical Pharmacology Review"
+            },
+            {
+              "id": "51536",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/22272 oxycodone statistical bpca.pdf",
+              "date": "19000101",
+              "type": "Pediatric Statistical Review"
+            },
+            {
+              "id": "7145",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2010/022272s000ltr.pdf",
+              "date": "20100409",
+              "type": "Letter"
+            },
+            {
+              "id": "17176",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2010/022272lbl.pdf",
+              "date": "20100406",
+              "type": "Label"
+            },
+            {
+              "id": "21975",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2010/022272s000TOC.html",
+              "date": "20100929",
+              "type": "Review"
+            },
+            {
+              "id": "24023",
+              "title": "FDA has determined that this product has abuse-deterrent properties",
+              "url": "http://www.fda.gov/Drugs/DrugSafety/InformationbyDrugClass/ucm440121.htm",
+              "date": "20151104",
+              "type": "Other"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "37",
+          "submission_status": "AP",
+          "submission_status_date": "20170526",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "48567",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2017/022272Orig1s037ltr.pdf",
+              "date": "20170530",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "29",
+          "submission_status": "AP",
+          "submission_status_date": "20150910",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "43",
+          "submission_status": "AP",
+          "submission_status_date": "20191007",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "60380",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2019/022272s043lbl.pdf",
+              "date": "20191008",
+              "type": "Label"
+            },
+            {
+              "id": "60442",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2019/022272Orig1s043ltr.pdf",
+              "date": "20191009",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "27",
+          "submission_status": "AP",
+          "submission_status_date": "20150813",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "42477",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2015/022272Orig1s027TOC.html",
+              "date": "20150929",
+              "type": "Review"
+            },
+            {
+              "id": "17180",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2015/022272s027lbl.pdf",
+              "date": "20150813",
+              "type": "Label"
+            },
+            {
+              "id": "29504",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2015/022272Orig1s027ltr.pdf",
+              "date": "20150813",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "41",
+          "submission_status": "AP",
+          "submission_status_date": "20180918",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "55699",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2018/022272Orig1s040s041ltr.pdf",
+              "date": "20181001",
+              "type": "Letter"
+            },
+            {
+              "id": "55775",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2018/022272s040s041lbl.pdf",
+              "date": "20181001",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "33",
+          "submission_status": "AP",
+          "submission_status_date": "20160420",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "6",
+          "submission_status": "AP",
+          "submission_status_date": "20101115",
+          "review_priority": "UNKNOWN",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "38478",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2010/022272s006lbl.pdf",
+              "date": "20101126",
+              "type": "Label"
+            },
+            {
+              "id": "7147",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2010/022272s006ltr.pdf",
+              "date": "20101122",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "25",
+          "submission_status": "AP",
+          "submission_status_date": "20141013",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "17",
+          "submission_status": "AP",
+          "submission_status_date": "20130415",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "29501",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2013/022272Orig1s017ltr.pdf",
+              "date": "20130416",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "31",
+          "submission_status": "AP",
+          "submission_status_date": "20160325",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "23",
+          "submission_status": "AP",
+          "submission_status_date": "20141022",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "17179",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2014/022272Orig1s023lbl.pdf",
+              "date": "20141030",
+              "type": "Label"
+            },
+            {
+              "id": "29502",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2014/019516Orig1s043,022272Orig1s023ltr.pdf",
+              "date": "20141030",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "15",
+          "submission_status": "AP",
+          "submission_status_date": "20140204",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "11",
+          "submission_status": "AP",
+          "submission_status_date": "20120709",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "38480",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2012/022272s011lbl.pdf",
+              "date": "20120713",
+              "type": "Label"
+            },
+            {
+              "id": "7150",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2012/022272Orig1s011ltr.pdf",
+              "date": "20120711",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "48",
+          "submission_status": "AP",
+          "submission_status_date": "20231215",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "76929",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2023/022272s048lbl.pdf",
+              "date": "20231218",
+              "type": "Label"
+            },
+            {
+              "id": "76930",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/022272s048lbl.pdf#page=49",
+              "date": "20231218",
+              "type": "Medication Guide"
+            },
+            {
+              "id": "77031",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2023/022272Orig1s048ltr.pdf",
+              "date": "20231219",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "46",
+          "submission_status": "AP",
+          "submission_status_date": "20210304",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "66558",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2021/022272Orig1s046ltr.pdf",
+              "date": "20210305",
+              "type": "Letter"
+            },
+            {
+              "id": "66606",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2021/022272s046lbl.pdf",
+              "date": "20210308",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "52",
+          "submission_status": "AP",
+          "submission_status_date": "20251222",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "84610",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2025/022272Orig1s052ltr.pdf",
+              "date": "20251231",
+              "type": "Letter"
+            },
+            {
+              "id": "84662",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2025/022272s052lbl.pdf",
+              "date": "20260106",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "36",
+          "submission_status": "AP",
+          "submission_status_date": "20160930",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "45466",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2016/022272Orig1s036ltr.pdf",
+              "date": "20161004",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "9",
+          "submission_status": "AP",
+          "submission_status_date": "20111005",
+          "review_priority": "UNKNOWN",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "7148",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2011/022272s009ltr.pdf",
+              "date": "20111011",
+              "type": "Letter"
+            },
+            {
+              "id": "17177",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2011/022272s009lbl.pdf",
+              "date": "20111012",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "28",
+          "submission_status": "AP",
+          "submission_status_date": "20150626",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "7153",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2015/022272Orig1s028ltr.pdf",
+              "date": "20150706",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "42",
+          "submission_status": "AP",
+          "submission_status_date": "20191114",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "60848",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2019/022272Orig1s042ltr.pdf",
+              "date": "20191115",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "34",
+          "submission_status": "AP",
+          "submission_status_date": "20161216",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "46299",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2016/022272Orig1s034ltr.pdf",
+              "date": "20161220",
+              "type": "Letter"
+            },
+            {
+              "id": "46341",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2016/022272s034lbl.pdf",
+              "date": "20161221",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "40",
+          "submission_status": "AP",
+          "submission_status_date": "20180918",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "55700",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2018/022272Orig1s040s041ltr.pdf",
+              "date": "20181001",
+              "type": "Letter"
+            },
+            {
+              "id": "55774",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2018/022272s040s041lbl.pdf",
+              "date": "20181001",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "32",
+          "submission_status": "AP",
+          "submission_status_date": "20160328",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "5",
+          "submission_status": "AP",
+          "submission_status_date": "20100629",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "38477",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2010/022272s005lbl.pdf",
+              "date": "20100701",
+              "type": "Label"
+            },
+            {
+              "id": "7146",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2010/022272s005ltr.pdf",
+              "date": "20100701",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "24",
+          "submission_status": "AP",
+          "submission_status_date": "20140819",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "29503",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2014/022272Orig1s024ltr.pdf",
+              "date": "20140820",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "16",
+          "submission_status": "AP",
+          "submission_status_date": "20130111",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "7151",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2013/020553Orig1s065,022272Orig1s016ltr.pdf",
+              "date": "20130114",
+              "type": "Letter"
+            },
+            {
+              "id": "38482",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2013/022272s016lbl.pdf",
+              "date": "20130115",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "30",
+          "submission_status": "AP",
+          "submission_status_date": "20151112",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "22",
+          "submission_status": "AP",
+          "submission_status_date": "20140416",
+          "review_priority": "901 REQUIRED",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "7152",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2014/022272Orig1s022ltr.pdf",
+              "date": "20140417",
+              "type": "Letter"
+            },
+            {
+              "id": "17178",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2014/022272s022lbl.pdf",
+              "date": "20140416",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "14",
+          "submission_status": "AP",
+          "submission_status_date": "20130416",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "42476",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2013/022272Orig1s014TOC.html",
+              "date": "20130426",
+              "type": "Review"
+            },
+            {
+              "id": "29500",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2013/022272Orig1s014Ltr.pdf",
+              "date": "20130416",
+              "type": "Letter"
+            },
+            {
+              "id": "38481",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2013/022272Orig1s014lbl.pdf",
+              "date": "20130416",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "20",
+          "submission_status": "AP",
+          "submission_status_date": "20140131",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "10",
+          "submission_status": "AP",
+          "submission_status_date": "20120709",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "38479",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2012/022272s010lbl.pdf",
+              "date": "20120712",
+              "type": "Label"
+            },
+            {
+              "id": "7149",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2012/022272Orig1s010ltr.pdf",
+              "date": "20120711",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "49",
+          "submission_status": "AP",
+          "submission_status_date": "20241031",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "80074",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2024/022272Orig1s049ltr.pdf",
+              "date": "20241104",
+              "type": "Letter"
+            }
+          ]
+        }
+      ],
+      "application_number": "NDA022272",
+      "sponsor_name": "KNOA PHARMA",
+      "openfda": {
+        "application_number": [
+          "NDA022272"
+        ],
+        "brand_name": [
+          "OXYCONTIN",
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "generic_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "Knoa Pharma LLC",
+          "Amneal Pharmaceuticals of New York LLC"
+        ],
+        "product_ndc": [
+          "59011-410",
+          "59011-415",
+          "59011-420",
+          "59011-430",
+          "59011-440",
+          "59011-460",
+          "59011-480",
+          "0115-1560",
+          "0115-1556",
+          "0115-1557",
+          "0115-1558",
+          "0115-1559",
+          "0115-1561",
+          "0115-1562"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "OXYCODONE HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "1049504",
+          "1049545",
+          "1049565",
+          "1049576",
+          "1049586",
+          "1049595",
+          "1049601",
+          "1860127",
+          "1860129",
+          "1860137",
+          "1860148",
+          "1860151",
+          "1860154",
+          "1860157"
+        ],
+        "spl_id": [
+          "47b30347-ae1d-4b54-8ccd-594eb7bdbd75",
+          "335215a2-fcba-4158-bccb-79e026e05467"
+        ],
+        "spl_set_id": [
+          "bfdfe235-d717-4855-a3c8-a13d26dadede",
+          "c2c57ae7-86b9-47bb-a31b-ed1c4327ce7f"
+        ],
+        "package_ndc": [
+          "59011-410-10",
+          "59011-410-20",
+          "59011-415-10",
+          "59011-415-20",
+          "59011-420-10",
+          "59011-420-20",
+          "59011-430-10",
+          "59011-430-20",
+          "59011-440-10",
+          "59011-440-20",
+          "59011-460-10",
+          "59011-460-20",
+          "59011-480-20",
+          "59011-480-10",
+          "0115-1556-01",
+          "0115-1557-01",
+          "0115-1558-01",
+          "0115-1559-01",
+          "0115-1560-01",
+          "0115-1561-01",
+          "0115-1562-01"
+        ],
+        "unii": [
+          "C1ENJ2TE6C"
+        ]
+      },
+      "products": [
+        {
+          "product_number": "003",
+          "reference_drug": "Yes",
+          "brand_name": "OXYCONTIN",
+          "active_ingredients": [
+            {
+              "name": "OXYCODONE HYDROCHLORIDE",
+              "strength": "20MG"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET, EXTENDED RELEASE",
+          "route": "ORAL",
+          "marketing_status": "Prescription"
+        },
+        {
+          "product_number": "001",
+          "reference_drug": "Yes",
+          "brand_name": "OXYCONTIN",
+          "active_ingredients": [
+            {
+              "name": "OXYCODONE HYDROCHLORIDE",
+              "strength": "10MG"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET, EXTENDED RELEASE",
+          "route": "ORAL",
+          "marketing_status": "Prescription"
+        },
+        {
+          "product_number": "006",
+          "reference_drug": "Yes",
+          "brand_name": "OXYCONTIN",
+          "active_ingredients": [
+            {
+              "name": "OXYCODONE HYDROCHLORIDE",
+              "strength": "60MG"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET, EXTENDED RELEASE",
+          "route": "ORAL",
+          "marketing_status": "Prescription"
+        },
+        {
+          "product_number": "004",
+          "reference_drug": "Yes",
+          "brand_name": "OXYCONTIN",
+          "active_ingredients": [
+            {
+              "name": "OXYCODONE HYDROCHLORIDE",
+              "strength": "30MG"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET, EXTENDED RELEASE",
+          "route": "ORAL",
+          "marketing_status": "Prescription"
+        },
+        {
+          "product_number": "002",
+          "reference_drug": "Yes",
+          "brand_name": "OXYCONTIN",
+          "active_ingredients": [
+            {
+              "name": "OXYCODONE HYDROCHLORIDE",
+              "strength": "15MG"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET, EXTENDED RELEASE",
+          "route": "ORAL",
+          "marketing_status": "Prescription"
+        },
+        {
+          "product_number": "007",
+          "reference_drug": "Yes",
+          "brand_name": "OXYCONTIN",
+          "active_ingredients": [
+            {
+              "name": "OXYCODONE HYDROCHLORIDE",
+              "strength": "80MG"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET, EXTENDED RELEASE",
+          "route": "ORAL",
+          "marketing_status": "Prescription"
+        },
+        {
+          "product_number": "005",
+          "reference_drug": "Yes",
+          "brand_name": "OXYCONTIN",
+          "active_ingredients": [
+            {
+              "name": "OXYCODONE HYDROCHLORIDE",
+              "strength": "40MG"
+            }
+          ],
+          "reference_standard": "Yes",
+          "dosage_form": "TABLET, EXTENDED RELEASE",
+          "route": "ORAL",
+          "marketing_status": "Prescription"
+        }
+      ]
+    }
+  ]
+}

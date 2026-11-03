@@ -1,0 +1,601 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "submissions": [
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "38",
+          "submission_status": "AP",
+          "submission_status_date": "20240220",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "77586",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2024/021402Orig1s038ltr.pdf",
+              "date": "20240221",
+              "type": "Letter"
+            },
+            {
+              "id": "77590",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2024/021402s038lbl.pdf",
+              "date": "20240220",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "36",
+          "submission_status": "AP",
+          "submission_status_date": "20220830",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "71974",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2022/021402Orig1s036Correctedltr.pdf",
+              "date": "20220916",
+              "type": "Letter"
+            },
+            {
+              "id": "71979",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2022/021402Orig1s036Correctedlbl.pdf",
+              "date": "20220831",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "28",
+          "submission_status": "AP",
+          "submission_status_date": "20170223",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "47325",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2017/021402s024s028lbl.pdf",
+              "date": "20170224",
+              "type": "Label"
+            },
+            {
+              "id": "47414",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2017/021402Orig1s024,s028ltr.pdf",
+              "date": "20170302",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "34",
+          "submission_status": "AP",
+          "submission_status_date": "20200715",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "63938",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2020/021402s034lbl.pdf",
+              "date": "20200716",
+              "type": "Label"
+            },
+            {
+              "id": "63965",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2020/021402Orig1s034ltr.pdf",
+              "date": "20200720",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "26",
+          "submission_status": "AP",
+          "submission_status_date": "20140408",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "24",
+          "submission_status": "AP",
+          "submission_status_date": "20170223",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "47324",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2017/021402s024s028lbl.pdf",
+              "date": "20170224",
+              "type": "Label"
+            },
+            {
+              "id": "47413",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2017/021402Orig1s024,s028ltr.pdf",
+              "date": "20170302",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "30",
+          "submission_status": "AP",
+          "submission_status_date": "20160513",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "20",
+          "submission_status": "AP",
+          "submission_status_date": "20110114",
+          "review_priority": "UNKNOWN",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "5258",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2011/021402s020ltr.pdf",
+              "date": "20121002",
+              "type": "Letter"
+            },
+            {
+              "id": "15373",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2011/021402s020lbl.pdf",
+              "date": "20140115",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "29",
+          "submission_status": "AP",
+          "submission_status_date": "20151125",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "27",
+          "submission_status": "AP",
+          "submission_status_date": "20150415",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "25",
+          "submission_status": "AP",
+          "submission_status_date": "20140527",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "17",
+          "submission_status": "AP",
+          "submission_status_date": "20080714",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "15372",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2008/021402s017lbl.pdf",
+              "date": "20080715",
+              "type": "Label"
+            },
+            {
+              "id": "27675",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2008/021402s017ltr.pdf",
+              "date": "20080715",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "ORIG",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "20020724",
+          "review_priority": "STANDARD",
+          "submission_class_code": "TYPE 5",
+          "submission_class_code_description": "Type 5 - New Formulation or New Manufacturer",
+          "application_docs": [
+            {
+              "id": "42138",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2002/21-402_Synthroid.html",
+              "date": "20021125",
+              "type": "Review"
+            },
+            {
+              "id": "15371",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2002/21402lbl.pdf",
+              "date": "20020724",
+              "type": "Label"
+            },
+            {
+              "id": "27674",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2002/21402ltr.pdf",
+              "date": "20020724",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "11",
+          "submission_status": "AP",
+          "submission_status_date": "20080420",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "36822",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2008/021402s011lbl.pdf",
+              "date": "20080605",
+              "type": "Label"
+            }
+          ]
+        }
+      ],
+      "application_number": "NDA021402",
+      "sponsor_name": "ABBVIE",
+      "openfda": {
+        "application_number": [
+          "NDA021402"
+        ],
+        "brand_name": [
+          "SYNTHROID"
+        ],
+        "generic_name": [
+          "LEVOTHYROXINE SODIUM"
+        ],
+        "manufacturer_name": [
+          "AbbVie Inc."
+        ],
+        "product_ndc": [
+          "0074-3727",
+          "0074-4341",
+          "0074-4552",
+          "0074-5182",
+          "0074-6594",
+          "0074-6624",
+          "0074-9296",
+          "0074-7068",
+          "0074-7069",
+          "0074-7070",
+          "0074-7148",
+          "0074-7149"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LEVOTHYROXINE SODIUM"
+        ],
+        "rxcui": [
+          "892246",
+          "892251",
+          "892255",
+          "966158",
+          "966171",
+          "966185",
+          "966191",
+          "966201",
+          "966205",
+          "966218",
+          "966220",
+          "966221",
+          "966222",
+          "966224",
+          "966225",
+          "966247",
+          "966248",
+          "966249",
+          "966250",
+          "966251",
+          "966253",
+          "966270",
+          "966271",
+          "966282"
+        ],
+        "spl_id": [
+          "b85ab7fa-ba96-43cd-b736-44b3924e644c"
+        ],
+        "spl_set_id": [
+          "1e11ad30-1041-4520-10b0-8f9d30d30fcc"
+        ],
+        "package_ndc": [
+          "0074-4341-13",
+          "0074-4341-90",
+          "0074-4341-19",
+          "0074-4341-72",
+          "0074-4552-13",
+          "0074-4552-90",
+          "0074-4552-19",
+          "0074-4552-11",
+          "0074-4552-71",
+          "0074-4552-72",
+          "0074-5182-13",
+          "0074-5182-90",
+          "0074-5182-71",
+          "0074-5182-19",
+          "0074-5182-11",
+          "0074-5182-72",
+          "0074-6594-13",
+          "0074-6594-90",
+          "0074-6594-71",
+          "0074-6594-19",
+          "0074-6594-72",
+          "0074-6624-13",
+          "0074-6624-90",
+          "0074-6624-19",
+          "0074-6624-11",
+          "0074-6624-71",
+          "0074-6624-72",
+          "0074-9296-13",
+          "0074-9296-90",
+          "0074-9296-19",
+          "0074-9296-71",
+          "0074-9296-72",
+          "0074-7068-13",
+          "0074-7068-90",
+          "0074-7068-71",
+          "0074-7068-19",
+          "0074-7068-11",
+          "0074-7068-72",
+          "0074-3727-13",
+          "0074-3727-90",
+          "0074-3727-71",
+          "0074-3727-19",
+          "0074-3727-72",
+          "0074-7069-90",
+          "0074-7069-71",
+          "0074-7069-19",
+          "0074-7069-11",
+          "0074-7069-72",
+          "0074-7070-13",
+          "0074-7070-90",
+          "0074-7070-71",
+          "0074-7070-19",
+          "0074-7070-72",
+          "0074-7148-90",
+          "0074-7148-19",
+          "0074-7148-71",
+          "0074-7148-11",
+          "0074-7148-72",
+          "0074-7149-90",
+          "0074-7149-19"
+        ],
+        "unii": [
+          "9J765S329G"
+        ]
+      },
+      "products": [
+        {
+          "product_number": "008",
+          "reference_drug": "Yes",
+          "brand_name": "SYNTHROID",
+          "active_ingredients": [
+            {
+              "name": "LEVOTHYROXINE SODIUM",
+              "strength": "0.137MG **See current Annual Edition, 1.8 Description of Special Situations, Levothyroxine Sodium"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB2"
+        },
+        {
+          "product_number": "006",
+          "reference_drug": "Yes",
+          "brand_name": "SYNTHROID",
+          "active_ingredients": [
+            {
+              "name": "LEVOTHYROXINE SODIUM",
+              "strength": "0.112MG **See current Annual Edition, 1.8 Description of Special Situations, Levothyroxine Sodium"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB2"
+        },
+        {
+          "product_number": "012",
+          "reference_drug": "Yes",
+          "brand_name": "SYNTHROID",
+          "active_ingredients": [
+            {
+              "name": "LEVOTHYROXINE SODIUM",
+              "strength": "0.2MG **See current Annual Edition, 1.8 Description of Special Situations, Levothyroxine Sodium"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB2"
+        },
+        {
+          "product_number": "004",
+          "reference_drug": "Yes",
+          "brand_name": "SYNTHROID",
+          "active_ingredients": [
+            {
+              "name": "LEVOTHYROXINE SODIUM",
+              "strength": "0.088MG **See current Annual Edition, 1.8 Description of Special Situations, Levothyroxine Sodium"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB2"
+        },
+        {
+          "product_number": "010",
+          "reference_drug": "Yes",
+          "brand_name": "SYNTHROID",
+          "active_ingredients": [
+            {
+              "name": "LEVOTHYROXINE SODIUM",
+              "strength": "0.175MG **See current Annual Edition, 1.8 Description of Special Situations, Levothyroxine Sodium"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB2"
+        },
+        {
+          "product_number": "002",
+          "reference_drug": "Yes",
+          "brand_name": "SYNTHROID",
+          "active_ingredients": [
+            {
+              "name": "LEVOTHYROXINE SODIUM",
+              "strength": "0.05MG **See current Annual Edition, 1.8 Description of Special Situations, Levothyroxine Sodium"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB2"
+        },
+        {
+          "product_number": "009",
+          "reference_drug": "Yes",
+          "brand_name": "SYNTHROID",
+          "active_ingredients": [
+            {
+              "name": "LEVOTHYROXINE SODIUM",
+              "strength": "0.15MG **See current Annual Edition, 1.8 Description of Special Situations, Levothyroxine Sodium"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB2"
+        },
+        {
+          "product_number": "007",
+          "reference_drug": "Yes",
+          "brand_name": "SYNTHROID",
+          "active_ingredients": [
+            {
+              "name": "LEVOTHYROXINE SODIUM",
+              "strength": "0.125MG **See current Annual Edition, 1.8 Description of Special Situations, Levothyroxine Sodium"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB2"
+        },
+        {
+          "product_number": "005",
+          "reference_drug": "Yes",
+          "brand_name": "SYNTHROID",
+          "active_ingredients": [
+            {
+              "name": "LEVOTHYROXINE SODIUM",
+              "strength": "0.1MG **See current Annual Edition, 1.8 Description of Special Situations, Levothyroxine Sodium"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB2"
+        },
+        {
+          "product_number": "011",
+          "reference_drug": "Yes",
+          "brand_name": "SYNTHROID",
+          "active_ingredients": [
+            {
+              "name": "LEVOTHYROXINE SODIUM",
+              "strength": "0.3MG **See current Annual Edition, 1.8 Description of Special Situations, Levothyroxine Sodium"
+            }
+          ],
+          "reference_standard": "Yes",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB2"
+        },
+        {
+          "product_number": "003",
+          "reference_drug": "Yes",
+          "brand_name": "SYNTHROID",
+          "active_ingredients": [
+            {
+              "name": "LEVOTHYROXINE SODIUM",
+              "strength": "0.075MG **See current Annual Edition, 1.8 Description of Special Situations, Levothyroxine Sodium"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB2"
+        },
+        {
+          "product_number": "001",
+          "reference_drug": "Yes",
+          "brand_name": "SYNTHROID",
+          "active_ingredients": [
+            {
+              "name": "LEVOTHYROXINE SODIUM",
+              "strength": "0.025MG **See current Annual Edition, 1.8 Description of Special Situations, Levothyroxine Sodium"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB2"
+        }
+      ]
+    }
+  ]
+}

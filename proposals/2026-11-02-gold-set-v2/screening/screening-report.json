@@ -1,0 +1,2704 @@
+{
+ "generated_at_utc": "2026-11-02T17:50:11.874478+00:00",
+ "openfda_api_key_used": false,
+ "faers_window": [
+  "20250101",
+  "20251231"
+ ],
+ "rule": "Eligible only if all 8 sources return usable evidence; see screen() in tools/screen_candidates.py",
+ "candidates": [
+  {
+   "brand": "Xarelto",
+   "class": "anticoagulant",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "1114199",
+     "ingredients": [
+      [
+       "1114195",
+       "rivaroxaban"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA022406",
+     "product_ndc": "50458-577",
+     "labeler": "Janssen Pharmaceuticals, Inc.",
+     "spl_set_id": "10db92f9-2300-4a80-836b-673e1ae91610",
+     "n_products": 5
+    },
+    "drugsfda": {
+     "sponsor": "JANSSEN PHARMS",
+     "n_products": 4
+    },
+    "dailymed": {
+     "set_id": "10db92f9-2300-4a80-836b-673e1ae91610",
+     "latest_version": 65,
+     "published": "Sep 11, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "287",
+     "header": {
+      "brand": "XARELTO",
+      "appl_type": "NDA",
+      "appl_no": "022406"
+     },
+     "n_entries": 18,
+     "n_entries_with_underlined_4_5_6": 14,
+     "latest": "03/24/2026"
+    },
+    "faers": {
+     "active_substance": "RIVAROXABAN",
+     "reports_in_window": 7028
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 0
+    }
+   },
+   "reasons": [
+    "Enforcement: no recall record for application or ingredient"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Eliquis",
+   "class": "anticoagulant",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "1364436",
+     "ingredients": [
+      [
+       "1364430",
+       "apixaban"
+      ]
+     ]
+    }
+   },
+   "reasons": [
+    "NDC: no original-packager NDA listing with this exact brand"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Pradaxa",
+   "class": "anticoagulant",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "1037046",
+     "ingredients": [
+      [
+       "1037042",
+       "dabigatran etexilate"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA214358",
+     "product_ndc": "0597-0425",
+     "labeler": "Boehringer Ingelheim Pharmaceuticals, Inc.",
+     "spl_set_id": "9ac0a64a-8666-45f7-9d4f-40fd894f7e6d",
+     "n_products": 6
+    },
+    "drugsfda": {
+     "sponsor": "BOEHRINGER INGELHEIM",
+     "n_products": 6
+    },
+    "dailymed": {
+     "set_id": "9ac0a64a-8666-45f7-9d4f-40fd894f7e6d",
+     "latest_version": 7,
+     "published": "Jul 02, 2025"
+    },
+    "srlc": {
+     "drug_name_id": "2876",
+     "header": {
+      "brand": "PRADAXA",
+      "appl_type": "NDA",
+      "appl_no": "214358"
+     },
+     "n_entries": 2,
+     "n_entries_with_underlined_4_5_6": 1,
+     "latest": "06/17/2025"
+    },
+    "faers": {
+     "active_substance": "DABIGATRAN ETEXILATE MESYLATE",
+     "reports_in_window": 680
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 9
+    },
+    "ctgov": {
+     "studies_with_results": 110
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Plavix",
+   "class": "antiplatelet",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "174742",
+     "ingredients": [
+      [
+       "32968",
+       "clopidogrel"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA020839",
+     "product_ndc": "0024-1171",
+     "labeler": "Sanofi-Aventis U.S. LLC",
+     "spl_set_id": "de8b0b67-eb25-4684-83b5-7ad785314227",
+     "n_products": 2
+    },
+    "drugsfda": {
+     "sponsor": "SANOFI AVENTIS US",
+     "n_products": 2
+    },
+    "dailymed": {
+     "set_id": "de8b0b67-eb25-4684-83b5-7ad785314227",
+     "latest_version": 5,
+     "published": "Jun 11, 2025"
+    },
+    "srlc": {
+     "drug_name_id": "432",
+     "header": {
+      "brand": "PLAVIX",
+      "appl_type": "NDA",
+      "appl_no": "020839"
+     },
+     "n_entries": 9,
+     "n_entries_with_underlined_4_5_6": 3,
+     "latest": "09/16/2022"
+    },
+    "faers": {
+     "active_substance": "CLOPIDOGREL BISULFATE",
+     "reports_in_window": 9064
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 3
+    },
+    "ctgov": {
+     "studies_with_results": 148
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Brilinta",
+   "class": "antiplatelet",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "1116636",
+     "ingredients": [
+      [
+       "1116632",
+       "ticagrelor"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA022433",
+     "product_ndc": "0186-0776",
+     "labeler": "AstraZeneca Pharmaceuticals LP",
+     "spl_set_id": "f7b3f443-e83d-4bf2-0e96-023448fed9a8",
+     "n_products": 2
+    },
+    "drugsfda": {
+     "sponsor": "ASTRAZENECA",
+     "n_products": 2
+    },
+    "dailymed": {
+     "set_id": "f7b3f443-e83d-4bf2-0e96-023448fed9a8",
+     "latest_version": 56,
+     "published": "Aug 07, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "339",
+     "header": {
+      "brand": "BRILINTA",
+      "appl_type": "NDA",
+      "appl_no": "022433"
+     },
+     "n_entries": 13,
+     "n_entries_with_underlined_4_5_6": 4,
+     "latest": "05/07/2026"
+    },
+    "faers": {
+     "active_substance": "TICAGRELOR",
+     "reports_in_window": 1700
+    },
+    "enforcement": {
+     "app_level_records": 2,
+     "ingredient_level_records": 2
+    },
+    "ctgov": {
+     "studies_with_results": 98
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Lipitor",
+   "class": "statin",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "153165",
+     "ingredients": [
+      [
+       "83367",
+       "atorvastatin"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA020702",
+     "product_ndc": "58151-155",
+     "labeler": "Viatris Specialty LLC",
+     "spl_set_id": "a60cc18b-0631-4cf0-b021-9f52224ece65",
+     "n_products": 4
+    },
+    "drugsfda": {
+     "sponsor": "UPJOHN",
+     "n_products": 4
+    },
+    "dailymed": {
+     "set_id": "a60cc18b-0631-4cf0-b021-9f52224ece65",
+     "latest_version": 8,
+     "published": "Jul 15, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "1117",
+     "header": {
+      "brand": "LIPITOR",
+      "appl_type": "NDA",
+      "appl_no": "020702"
+     },
+     "n_entries": 9,
+     "n_entries_with_underlined_4_5_6": 6,
+     "latest": "04/02/2024"
+    },
+    "faers": {
+     "active_substance": "ATORVASTATIN CALCIUM",
+     "reports_in_window": 11221
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 41
+    },
+    "ctgov": {
+     "studies_with_results": 211
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Crestor",
+   "class": "statin",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "320864",
+     "ingredients": [
+      [
+       "301542",
+       "rosuvastatin"
+      ]
+     ]
+    }
+   },
+   "reasons": [
+    "NDC: no original-packager NDA listing with this exact brand"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Zocor",
+   "class": "statin",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "196503",
+     "ingredients": [
+      [
+       "36567",
+       "simvastatin"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA019766",
+     "product_ndc": "78206-180",
+     "labeler": "Organon LLC",
+     "spl_set_id": "8f55d5de-5a4f-4a39-8c84-c53976dd6af9",
+     "n_products": 3
+    },
+    "drugsfda": {
+     "sponsor": "ORGANON",
+     "n_products": 5
+    },
+    "dailymed": {
+     "set_id": "8f55d5de-5a4f-4a39-8c84-c53976dd6af9",
+     "latest_version": 11,
+     "published": "Apr 03, 2025"
+    },
+    "srlc": {
+     "drug_name_id": "1462",
+     "header": {
+      "brand": "ZOCOR",
+      "appl_type": "NDA",
+      "appl_no": "019766"
+     },
+     "n_entries": 8,
+     "n_entries_with_underlined_4_5_6": 5,
+     "latest": "08/09/2023"
+    },
+    "faers": {
+     "active_substance": "SIMVASTATIN",
+     "reports_in_window": 6151
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 17
+    },
+    "ctgov": {
+     "studies_with_results": 145
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Vytorin",
+   "class": "statin combination",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "495215",
+     "ingredients": [
+      [
+       "341248",
+       "ezetimibe"
+      ],
+      [
+       "36567",
+       "simvastatin"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA021687",
+     "product_ndc": "78206-174",
+     "labeler": "Organon LLC",
+     "spl_set_id": "89b860d2-de83-468e-b7e8-76aeec2edca2",
+     "n_products": 4
+    },
+    "drugsfda": {
+     "sponsor": "ORGANON",
+     "n_products": 4
+    },
+    "dailymed": {
+     "set_id": "89b860d2-de83-468e-b7e8-76aeec2edca2",
+     "latest_version": 9,
+     "published": "Jan 23, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "1460",
+     "header": {
+      "brand": "VYTORIN",
+      "appl_type": "NDA",
+      "appl_no": "021687"
+     },
+     "n_entries": 8,
+     "n_entries_with_underlined_4_5_6": 6,
+     "latest": "03/28/2024"
+    },
+    "faers": {
+     "active_substance": "EZETIMIBE\\SIMVASTATIN",
+     "reports_in_window": 291
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 9
+    },
+    "ctgov": {
+     "studies_with_results": 54
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Jardiance",
+   "class": "SGLT2",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "1545659",
+     "ingredients": [
+      [
+       "1545653",
+       "empagliflozin"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA204629",
+     "product_ndc": "0597-0152",
+     "labeler": "Boehringer Ingelheim Pharmaceuticals, Inc.",
+     "spl_set_id": "faf3dd6a-9cd0-39c2-0d2e-232cb3f67565",
+     "n_products": 2
+    },
+    "drugsfda": {
+     "sponsor": "BOEHRINGER INGELHEIM",
+     "n_products": 2
+    },
+    "dailymed": {
+     "set_id": "faf3dd6a-9cd0-39c2-0d2e-232cb3f67565",
+     "latest_version": 31,
+     "published": "Feb 02, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "323",
+     "header": {
+      "brand": "JARDIANCE",
+      "appl_type": "NDA",
+      "appl_no": "204629"
+     },
+     "n_entries": 15,
+     "n_entries_with_underlined_4_5_6": 12,
+     "latest": "10/24/2025"
+    },
+    "faers": {
+     "active_substance": "EMPAGLIFLOZIN",
+     "reports_in_window": 9604
+    },
+    "enforcement": {
+     "app_level_records": 2,
+     "ingredient_level_records": 6
+    },
+    "ctgov": {
+     "studies_with_results": 129
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Farxiga",
+   "class": "SGLT2",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "1486972",
+     "ingredients": [
+      [
+       "1488564",
+       "dapagliflozin"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA202293",
+     "product_ndc": "0310-6205",
+     "labeler": "AstraZeneca Pharmaceuticals LP",
+     "spl_set_id": "72ad22ae-efe6-4cd6-a302-98aaee423d69",
+     "n_products": 2
+    },
+    "drugsfda": {
+     "sponsor": "ASTRAZENECA AB",
+     "n_products": 2
+    },
+    "dailymed": {
+     "set_id": "72ad22ae-efe6-4cd6-a302-98aaee423d69",
+     "latest_version": 49,
+     "published": "Sep 11, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "105",
+     "header": {
+      "brand": "FARXIGA",
+      "appl_type": "NDA",
+      "appl_no": "202293"
+     },
+     "n_entries": 16,
+     "n_entries_with_underlined_4_5_6": 8,
+     "latest": "06/03/2026"
+    },
+    "faers": {
+     "active_substance": "DAPAGLIFLOZIN PROPANEDIOL",
+     "reports_in_window": 3258
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 2
+    },
+    "ctgov": {
+     "studies_with_results": 126
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Invokana",
+   "class": "SGLT2",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "1373464",
+     "ingredients": [
+      [
+       "1373458",
+       "canagliflozin"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA204042",
+     "product_ndc": "50458-140",
+     "labeler": "Janssen Pharmaceuticals, Inc.",
+     "spl_set_id": "b9057d3b-b104-4f09-8a61-c61ef9d4a3f3",
+     "n_products": 2
+    },
+    "drugsfda": {
+     "sponsor": "JANSSEN PHARMS",
+     "n_products": 2
+    },
+    "dailymed": {
+     "set_id": "b9057d3b-b104-4f09-8a61-c61ef9d4a3f3",
+     "latest_version": 32,
+     "published": "Jun 15, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "71",
+     "header": {
+      "brand": "INVOKANA",
+      "appl_type": "NDA",
+      "appl_no": "204042"
+     },
+     "n_entries": 16,
+     "n_entries_with_underlined_4_5_6": 9,
+     "latest": "06/03/2026"
+    },
+    "faers": {
+     "active_substance": "CANAGLIFLOZIN",
+     "reports_in_window": 475
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 1
+    },
+    "ctgov": {
+     "studies_with_results": 43
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Ozempic",
+   "class": "GLP-1",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "1991307",
+     "ingredients": [
+      [
+       "1991302",
+       "semaglutide"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA213051",
+     "product_ndc": "0169-1704",
+     "labeler": "Novo Nordisk Pharmaceutical Industries, LP",
+     "spl_set_id": "27f15fac-7d98-4114-a2ec-92494a91da98",
+     "n_products": 3
+    },
+    "drugsfda": {
+     "sponsor": "NOVO",
+     "n_products": 6
+    },
+    "dailymed": {
+     "set_id": "27f15fac-7d98-4114-a2ec-92494a91da98",
+     "latest_version": 14,
+     "published": "Aug 19, 2026"
+    }
+   },
+   "reasons": [
+    "SrLC: no row with matching application number"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Victoza",
+   "class": "GLP-1",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "897123",
+     "ingredients": [
+      [
+       "475968",
+       "liraglutide"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA022341",
+     "product_ndc": "0169-4060",
+     "labeler": "Novo Nordisk",
+     "spl_set_id": "5a9ef4ea-c76a-4d34-a604-27c5b505f5a4",
+     "n_products": 1
+    },
+    "drugsfda": {
+     "sponsor": "NOVO NORDISK INC",
+     "n_products": 1
+    },
+    "dailymed": {
+     "set_id": "5a9ef4ea-c76a-4d34-a604-27c5b505f5a4",
+     "latest_version": 31,
+     "published": "Nov 17, 2025"
+    },
+    "srlc": {
+     "drug_name_id": "171",
+     "header": {
+      "brand": "VICTOZA",
+      "appl_type": "NDA",
+      "appl_no": "022341"
+     },
+     "n_entries": 10,
+     "n_entries_with_underlined_4_5_6": 7,
+     "latest": "10/14/2025"
+    },
+    "faers": {
+     "active_substance": "LIRAGLUTIDE",
+     "reports_in_window": 1992
+    },
+    "enforcement": {
+     "app_level_records": 1,
+     "ingredient_level_records": 4
+    },
+    "ctgov": {
+     "studies_with_results": 137
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Rybelsus",
+   "class": "GLP-1",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "2200645",
+     "ingredients": [
+      [
+       "1991302",
+       "semaglutide"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA213051",
+     "product_ndc": "0169-4303",
+     "labeler": "Novo Nordisk Pharmaceutical Industries, LP",
+     "spl_set_id": "27f15fac-7d98-4114-a2ec-92494a91da98",
+     "n_products": 3
+    },
+    "drugsfda": {
+     "sponsor": "NOVO",
+     "n_products": 6
+    },
+    "dailymed": {
+     "set_id": "27f15fac-7d98-4114-a2ec-92494a91da98",
+     "latest_version": 14,
+     "published": "Aug 19, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "2456",
+     "header": {
+      "brand": "RYBELSUS",
+      "appl_type": "NDA",
+      "appl_no": "213051"
+     },
+     "n_entries": 10,
+     "n_entries_with_underlined_4_5_6": 9,
+     "latest": "01/30/2026"
+    },
+    "faers": {
+     "active_substance": "SEMAGLUTIDE",
+     "reports_in_window": 27462
+    },
+    "enforcement": {
+     "app_level_records": 1,
+     "ingredient_level_records": 1
+    },
+    "ctgov": {
+     "studies_with_results": 107
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Januvia",
+   "class": "DPP-4",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "638596",
+     "ingredients": [
+      [
+       "593411",
+       "sitagliptin"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA021995",
+     "product_ndc": "0006-0112",
+     "labeler": "Merck Sharp & Dohme LLC",
+     "spl_set_id": "f85a48d0-0407-4c50-b0fa-7673a160bf01",
+     "n_products": 3
+    },
+    "drugsfda": {
+     "sponsor": "MSD",
+     "n_products": 3
+    },
+    "dailymed": {
+     "set_id": "f85a48d0-0407-4c50-b0fa-7673a160bf01",
+     "latest_version": 71,
+     "published": "Nov 17, 2025"
+    },
+    "srlc": {
+     "drug_name_id": "799",
+     "header": {
+      "brand": "JANUVIA",
+      "appl_type": "NDA",
+      "appl_no": "021995"
+     },
+     "n_entries": 7,
+     "n_entries_with_underlined_4_5_6": 5,
+     "latest": "06/21/2022"
+    },
+    "faers": {
+     "active_substance": "SITAGLIPTIN PHOSPHATE",
+     "reports_in_window": 1817
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 1
+    },
+    "ctgov": {
+     "studies_with_results": 214
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Janumet",
+   "class": "DPP-4 combination",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "1372738",
+     "ingredients": [
+      [
+       "6809",
+       "metformin"
+      ],
+      [
+       "593411",
+       "sitagliptin"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA022044",
+     "product_ndc": "0006-0575",
+     "labeler": "Merck Sharp & Dohme LLC",
+     "spl_set_id": "d19c7ed0-ad5c-426e-b2df-722508f97d67",
+     "n_products": 2
+    },
+    "drugsfda": {
+     "sponsor": "MSD SUB MERCK",
+     "n_products": 2
+    },
+    "dailymed": {
+     "set_id": "d19c7ed0-ad5c-426e-b2df-722508f97d67",
+     "latest_version": 61,
+     "published": "Aug 27, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "801",
+     "header": {
+      "brand": "JANUMET",
+      "appl_type": "NDA",
+      "appl_no": "022044"
+     },
+     "n_entries": 9,
+     "n_entries_with_underlined_4_5_6": 5,
+     "latest": "08/11/2026"
+    },
+    "faers": {
+     "active_substance": "METFORMIN HYDROCHLORIDE\\SITAGLIPTIN PHOSPHATE",
+     "reports_in_window": 704
+    },
+    "enforcement": {
+     "app_level_records": 1,
+     "ingredient_level_records": 1
+    },
+    "ctgov": {
+     "studies_with_results": 113
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Glucophage",
+   "class": "biguanide",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "151827",
+     "ingredients": [
+      [
+       "6809",
+       "metformin"
+      ]
+     ]
+    }
+   },
+   "reasons": [
+    "NDC: no original-packager NDA listing with this exact brand"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Actos",
+   "class": "thiazolidinedione",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "261442",
+     "ingredients": [
+      [
+       "33738",
+       "pioglitazone"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA021073",
+     "product_ndc": "64764-151",
+     "labeler": "Takeda Pharmaceuticals America, Inc.",
+     "spl_set_id": "d2ddc491-88a9-4063-9150-443b4fa4330c",
+     "n_products": 3
+    },
+    "drugsfda": {
+     "sponsor": "TAKEDA PHARMS USA",
+     "n_products": 3
+    },
+    "dailymed": {
+     "set_id": "d2ddc491-88a9-4063-9150-443b4fa4330c",
+     "latest_version": 20,
+     "published": "Apr 09, 2025"
+    },
+    "srlc": {
+     "drug_name_id": "586",
+     "header": {
+      "brand": "ACTOS",
+      "appl_type": "NDA",
+      "appl_no": "021073"
+     },
+     "n_entries": 2,
+     "n_entries_with_underlined_4_5_6": 1,
+     "latest": "12/21/2017"
+    },
+    "faers": {
+     "active_substance": "PIOGLITAZONE HYDROCHLORIDE",
+     "reports_in_window": 276
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 2
+    },
+    "ctgov": {
+     "studies_with_results": 162
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "OxyContin",
+   "class": "opioid",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "218986",
+     "ingredients": [
+      [
+       "7804",
+       "oxycodone"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA022272",
+     "product_ndc": "59011-410",
+     "labeler": "Knoa Pharma LLC",
+     "spl_set_id": "bfdfe235-d717-4855-a3c8-a13d26dadede",
+     "n_products": 7
+    },
+    "drugsfda": {
+     "sponsor": "KNOA PHARMA",
+     "n_products": 7
+    },
+    "dailymed": {
+     "set_id": "bfdfe235-d717-4855-a3c8-a13d26dadede",
+     "latest_version": 44,
+     "published": "Jun 26, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "685",
+     "header": {
+      "brand": "OXYCONTIN",
+      "appl_type": "NDA",
+      "appl_no": "022272"
+     },
+     "n_entries": 6,
+     "n_entries_with_underlined_4_5_6": 6,
+     "latest": "12/22/2025"
+    },
+    "faers": {
+     "active_substance": "OXYCODONE HYDROCHLORIDE",
+     "reports_in_window": 5323
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 11
+    },
+    "ctgov": {
+     "studies_with_results": 178
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Percocet",
+   "class": "opioid combination",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "42844",
+     "ingredients": [
+      [
+       "161",
+       "acetaminophen"
+      ],
+      [
+       "7804",
+       "oxycodone"
+      ]
+     ]
+    }
+   },
+   "reasons": [
+    "NDC: no original-packager NDA listing with this exact brand"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Ultram",
+   "class": "opioid",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "220606",
+     "ingredients": [
+      [
+       "10689",
+       "tramadol"
+      ]
+     ]
+    }
+   },
+   "reasons": [
+    "NDC: no original-packager NDA listing with this exact brand"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Nucynta",
+   "class": "opioid",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "854137",
+     "ingredients": [
+      [
+       "787390",
+       "tapentadol"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA022304",
+     "product_ndc": "24510-050",
+     "labeler": "Collegium Pharmaceutical, Inc.",
+     "spl_set_id": "80938c30-9fe3-4c7d-9d9c-5476638cfb2d",
+     "n_products": 3
+    },
+    "drugsfda": {
+     "sponsor": "COLLEGIUM PHARM INC",
+     "n_products": 3
+    },
+    "dailymed": {
+     "set_id": "80938c30-9fe3-4c7d-9d9c-5476638cfb2d",
+     "latest_version": 7,
+     "published": "Jan 06, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "667",
+     "header": {
+      "brand": "NUCYNTA",
+      "appl_type": "NDA",
+      "appl_no": "022304"
+     },
+     "n_entries": 7,
+     "n_entries_with_underlined_4_5_6": 7,
+     "latest": "12/22/2025"
+    },
+    "faers": {
+     "active_substance": "TAPENTADOL HYDROCHLORIDE",
+     "reports_in_window": 419
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 0
+    }
+   },
+   "reasons": [
+    "Enforcement: no recall record for application or ingredient"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Belbuca",
+   "class": "opioid",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "1716058",
+     "ingredients": [
+      [
+       "1819",
+       "buprenorphine"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA207932",
+     "product_ndc": "59385-021",
+     "labeler": "BioDelivery Sciences International Inc",
+     "spl_set_id": "bc2b7a3d-72cf-497c-95b0-ba2b71f63c64",
+     "n_products": 7
+    },
+    "drugsfda": {
+     "sponsor": "BDSI",
+     "n_products": 7
+    },
+    "dailymed": {
+     "set_id": "bc2b7a3d-72cf-497c-95b0-ba2b71f63c64",
+     "latest_version": 18,
+     "published": "Jan 06, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "757",
+     "header": {
+      "brand": "BELBUCA",
+      "appl_type": "NDA",
+      "appl_no": "207932"
+     },
+     "n_entries": 7,
+     "n_entries_with_underlined_4_5_6": 7,
+     "latest": "12/22/2025"
+    },
+    "faers": {
+     "active_substance": "BUPRENORPHINE HYDROCHLORIDE",
+     "reports_in_window": 898
+    },
+    "enforcement": {
+     "app_level_records": 2,
+     "ingredient_level_records": 15
+    },
+    "ctgov": {
+     "studies_with_results": 199
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Lamictal",
+   "class": "antiepileptic",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "196502",
+     "ingredients": [
+      [
+       "28439",
+       "lamotrigine"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA020241",
+     "product_ndc": "0173-0594",
+     "labeler": "GlaxoSmithKline LLC",
+     "spl_set_id": "d7e3572d-56fe-4727-2bb4-013ccca22678",
+     "n_products": 6
+    },
+    "drugsfda": {
+     "sponsor": "GLAXOSMITHKLINE LLC",
+     "n_products": 6
+    },
+    "dailymed": {
+     "set_id": "d7e3572d-56fe-4727-2bb4-013ccca22678",
+     "latest_version": 45,
+     "published": "Aug 20, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "1624",
+     "header": {
+      "brand": "LAMICTAL",
+      "appl_type": "NDA",
+      "appl_no": "020241"
+     },
+     "n_entries": 11,
+     "n_entries_with_underlined_4_5_6": 7,
+     "latest": "10/10/2025"
+    },
+    "faers": {
+     "active_substance": "LAMOTRIGINE",
+     "reports_in_window": 7913
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 5
+    },
+    "ctgov": {
+     "studies_with_results": 66
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Keppra",
+   "class": "antiepileptic",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "261547",
+     "ingredients": [
+      [
+       "114477",
+       "levetiracetam"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA021035",
+     "product_ndc": "50474-594",
+     "labeler": "UCB, Inc.",
+     "spl_set_id": "3ca9df05-a506-4ec8-a4fe-320f1219ab21",
+     "n_products": 4
+    },
+    "drugsfda": {
+     "sponsor": "UCB INC",
+     "n_products": 4
+    },
+    "dailymed": {
+     "set_id": "3ca9df05-a506-4ec8-a4fe-320f1219ab21",
+     "latest_version": 36,
+     "published": "Jan 29, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "501",
+     "header": {
+      "brand": "KEPPRA",
+      "appl_type": "NDA",
+      "appl_no": "021035"
+     },
+     "n_entries": 7,
+     "n_entries_with_underlined_4_5_6": 6,
+     "latest": "03/12/2024"
+    },
+    "faers": {
+     "active_substance": "LEVETIRACETAM",
+     "reports_in_window": 8907
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 9
+    },
+    "ctgov": {
+     "studies_with_results": 79
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Topamax",
+   "class": "antiepileptic",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "220343",
+     "ingredients": [
+      [
+       "38404",
+       "topiramate"
+      ]
+     ]
+    }
+   },
+   "reasons": [
+    "NDC: no original-packager NDA listing with this exact brand"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Depakote",
+   "class": "antiepileptic",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "216459",
+     "ingredients": [
+      [
+       "40254",
+       "valproate"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA018723",
+     "product_ndc": "0074-7325",
+     "labeler": "AbbVie Inc.",
+     "spl_set_id": "08a65cf4-7749-4ceb-6895-8f4805e2b01f",
+     "n_products": 3
+    },
+    "drugsfda": {
+     "sponsor": "ABBVIE",
+     "n_products": 3
+    },
+    "dailymed": {
+     "set_id": "08a65cf4-7749-4ceb-6895-8f4805e2b01f",
+     "latest_version": 1621,
+     "published": "Apr 14, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "53",
+     "header": {
+      "brand": "DEPAKOTE",
+      "appl_type": "NDA",
+      "appl_no": "018723"
+     },
+     "n_entries": 13,
+     "n_entries_with_underlined_4_5_6": 8,
+     "latest": "03/31/2026"
+    },
+    "faers": {
+     "active_substance": "DIVALPROEX SODIUM",
+     "reports_in_window": 2048
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 0
+    }
+   },
+   "reasons": [
+    "Enforcement: no recall record for application or ingredient"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Lyrica",
+   "class": "antiepileptic",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "593441",
+     "ingredients": [
+      [
+       "187832",
+       "pregabalin"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA021446",
+     "product_ndc": "0071-1018",
+     "labeler": "Parke-Davis Div of Pfizer Inc",
+     "spl_set_id": "60185c88-ecfd-46f9-adb9-b97c6b00a553",
+     "n_products": 9
+    },
+    "drugsfda": {
+     "sponsor": "UPJOHN",
+     "n_products": 8
+    },
+    "dailymed": {
+     "set_id": "60185c88-ecfd-46f9-adb9-b97c6b00a553",
+     "latest_version": 59,
+     "published": "Sep 29, 2025"
+    },
+    "srlc": {
+     "drug_name_id": "637",
+     "header": {
+      "brand": "LYRICA",
+      "appl_type": "NDA",
+      "appl_no": "021446"
+     },
+     "n_entries": 6,
+     "n_entries_with_underlined_4_5_6": 3,
+     "latest": "04/25/2025"
+    },
+    "faers": {
+     "active_substance": "PREGABALIN",
+     "reports_in_window": 12995
+    },
+    "enforcement": {
+     "app_level_records": 2,
+     "ingredient_level_records": 5
+    },
+    "ctgov": {
+     "studies_with_results": 143
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Zoloft",
+   "class": "SSRI",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "82728",
+     "ingredients": [
+      [
+       "36437",
+       "sertraline"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA019839",
+     "product_ndc": "58151-574",
+     "labeler": "Viatris Specialty LLC",
+     "spl_set_id": "fda754f6-d0f3-4dce-a17a-927d64f912f7",
+     "n_products": 3
+    },
+    "drugsfda": {
+     "sponsor": "VIATRIS",
+     "n_products": 5
+    },
+    "dailymed": {
+     "set_id": "fda754f6-d0f3-4dce-a17a-927d64f912f7",
+     "latest_version": 7,
+     "published": "Jul 24, 2025"
+    },
+    "srlc": {
+     "drug_name_id": "640",
+     "header": {
+      "brand": "ZOLOFT",
+      "appl_type": "NDA",
+      "appl_no": "019839"
+     },
+     "n_entries": 9,
+     "n_entries_with_underlined_4_5_6": 6,
+     "latest": "08/18/2023"
+    },
+    "faers": {
+     "active_substance": "SERTRALINE HYDROCHLORIDE",
+     "reports_in_window": 14104
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 2
+    },
+    "ctgov": {
+     "studies_with_results": 117
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Lexapro",
+   "class": "SSRI",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "352741",
+     "ingredients": [
+      [
+       "321988",
+       "escitalopram"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA021323",
+     "product_ndc": "0456-2005",
+     "labeler": "Allergan, Inc.",
+     "spl_set_id": "13bb8267-1cab-43e5-acae-55a4d957630a",
+     "n_products": 3
+    },
+    "drugsfda": {
+     "sponsor": "ABBVIE",
+     "n_products": 3
+    },
+    "dailymed": {
+     "set_id": "13bb8267-1cab-43e5-acae-55a4d957630a",
+     "latest_version": 45,
+     "published": "Jan 01, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "713",
+     "header": {
+      "brand": "LEXAPRO",
+      "appl_type": "NDA",
+      "appl_no": "021323"
+     },
+     "n_entries": 7,
+     "n_entries_with_underlined_4_5_6": 4,
+     "latest": "04/19/2024"
+    },
+    "faers": {
+     "active_substance": "ESCITALOPRAM OXALATE",
+     "reports_in_window": 9485
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 0
+    }
+   },
+   "reasons": [
+    "Enforcement: no recall record for application or ingredient"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Paxil",
+   "class": "SSRI",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "114228",
+     "ingredients": [
+      [
+       "32937",
+       "paroxetine"
+      ]
+     ]
+    }
+   },
+   "reasons": [
+    "NDC: no original-packager NDA listing with this exact brand"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Cymbalta",
+   "class": "SNRI",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "482574",
+     "ingredients": [
+      [
+       "72625",
+       "duloxetine"
+      ]
+     ]
+    }
+   },
+   "reasons": [
+    "NDC: no original-packager NDA listing with this exact brand"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Effexor XR",
+   "class": "SNRI",
+   "checks": {},
+   "reasons": [
+    "RxNorm: brand name not found"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Wellbutrin XL",
+   "class": "antidepressant",
+   "checks": {},
+   "reasons": [
+    "RxNorm: brand name not found"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Cipro",
+   "class": "fluoroquinolone",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "203563",
+     "ingredients": [
+      [
+       "2551",
+       "ciprofloxacin"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA019537",
+     "product_ndc": "50419-754",
+     "labeler": "Bayer HealthCare Pharmaceuticals Inc.",
+     "spl_set_id": "888dc7f9-ad9c-4c00-8d50-8ddfd9bd27c0",
+     "n_products": 2
+    },
+    "drugsfda": {
+     "sponsor": "BAYER HLTHCARE",
+     "n_products": 3
+    },
+    "dailymed": {
+     "set_id": "888dc7f9-ad9c-4c00-8d50-8ddfd9bd27c0",
+     "latest_version": 32,
+     "published": "Mar 04, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "348",
+     "header": {
+      "brand": "CIPRO",
+      "appl_type": "NDA",
+      "appl_no": "019537"
+     },
+     "n_entries": 8,
+     "n_entries_with_underlined_4_5_6": 3,
+     "latest": "09/20/2024"
+    },
+    "faers": {
+     "active_substance": "CIPROFLOXACIN HYDROCHLORIDE",
+     "reports_in_window": 1061
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 9
+    },
+    "ctgov": {
+     "studies_with_results": 62
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Levaquin",
+   "class": "fluoroquinolone",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "217992",
+     "ingredients": [
+      [
+       "82122",
+       "levofloxacin"
+      ]
+     ]
+    }
+   },
+   "reasons": [
+    "NDC: no original-packager NDA listing with this exact brand"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Avelox",
+   "class": "fluoroquinolone",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "261456",
+     "ingredients": [
+      [
+       "139462",
+       "moxifloxacin"
+      ]
+     ]
+    }
+   },
+   "reasons": [
+    "NDC: no original-packager NDA listing with this exact brand"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Augmentin",
+   "class": "antibiotic combination",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "151392",
+     "ingredients": [
+      [
+       "723",
+       "amoxicillin"
+      ],
+      [
+       "48203",
+       "clavulanate"
+      ]
+     ]
+    }
+   },
+   "reasons": [
+    "NDC: no original-packager NDA listing with this exact brand"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Zithromax",
+   "class": "macrolide",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "196474",
+     "ingredients": [
+      [
+       "18631",
+       "azithromycin"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA050710",
+     "product_ndc": "0069-3120",
+     "labeler": "Pfizer Laboratories Div Pfizer Inc",
+     "spl_set_id": "db52b91e-79f7-4cc1-9564-f2eee8e31c45",
+     "n_products": 3
+    },
+    "drugsfda": {
+     "sponsor": "PFIZER",
+     "n_products": 2
+    },
+    "dailymed": {
+     "set_id": "db52b91e-79f7-4cc1-9564-f2eee8e31c45",
+     "latest_version": 49,
+     "published": "Jul 29, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "244",
+     "header": {
+      "brand": "ZITHROMAX",
+      "appl_type": "NDA",
+      "appl_no": "050710"
+     },
+     "n_entries": 6,
+     "n_entries_with_underlined_4_5_6": 3,
+     "latest": "07/13/2026"
+    },
+    "faers": {
+     "active_substance": "AZITHROMYCIN DIHYDRATE",
+     "reports_in_window": 545
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 2
+    },
+    "ctgov": {
+     "studies_with_results": 112
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Seroquel",
+   "class": "antipsychotic",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "83553",
+     "ingredients": [
+      [
+       "51272",
+       "quetiapine"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA020639",
+     "product_ndc": "0310-0271",
+     "labeler": "AstraZeneca Pharmaceuticals LP",
+     "spl_set_id": "0584dda8-bc3c-48fe-1a90-79608f78e8a0",
+     "n_products": 12
+    },
+    "drugsfda": {
+     "sponsor": "CHEPLAPHARM",
+     "n_products": 7
+    },
+    "dailymed": {
+     "set_id": "0584dda8-bc3c-48fe-1a90-79608f78e8a0",
+     "latest_version": 50,
+     "published": "Mar 12, 2025"
+    },
+    "srlc": {
+     "drug_name_id": "141",
+     "header": {
+      "brand": "SEROQUEL",
+      "appl_type": "NDA",
+      "appl_no": "020639"
+     },
+     "n_entries": 8,
+     "n_entries_with_underlined_4_5_6": 4,
+     "latest": "01/22/2025"
+    },
+    "faers": {
+     "active_substance": "QUETIAPINE FUMARATE",
+     "reports_in_window": 5052
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 5
+    },
+    "ctgov": {
+     "studies_with_results": 100
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Abilify",
+   "class": "antipsychotic",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "352393",
+     "ingredients": [
+      [
+       "89013",
+       "aripiprazole"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA021436",
+     "product_ndc": "59148-006",
+     "labeler": "Otsuka America Pharmaceutical, Inc.",
+     "spl_set_id": "c040bd1d-45b7-49f2-93ea-aed7220b30ac",
+     "n_products": 6
+    },
+    "drugsfda": {
+     "sponsor": "OTSUKA",
+     "n_products": 6
+    },
+    "dailymed": {
+     "set_id": "c040bd1d-45b7-49f2-93ea-aed7220b30ac",
+     "latest_version": 73,
+     "published": "Feb 03, 2025"
+    },
+    "srlc": {
+     "drug_name_id": "38",
+     "header": {
+      "brand": "ABILIFY",
+      "appl_type": "NDA",
+      "appl_no": "021436"
+     },
+     "n_entries": 8,
+     "n_entries_with_underlined_4_5_6": 4,
+     "latest": "01/22/2025"
+    },
+    "faers": {
+     "active_substance": "ARIPIPRAZOLE",
+     "reports_in_window": 5887
+    },
+    "enforcement": {
+     "app_level_records": 5,
+     "ingredient_level_records": 18
+    },
+    "ctgov": {
+     "studies_with_results": 138
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Zyprexa",
+   "class": "antipsychotic",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "135423",
+     "ingredients": [
+      [
+       "61381",
+       "olanzapine"
+      ]
+     ]
+    }
+   },
+   "reasons": [
+    "NDC: no original-packager NDA listing with this exact brand"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Risperdal",
+   "class": "antipsychotic",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "152318",
+     "ingredients": [
+      [
+       "35636",
+       "risperidone"
+      ]
+     ]
+    }
+   },
+   "reasons": [
+    "NDC: no original-packager NDA listing with this exact brand"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Latuda",
+   "class": "antipsychotic",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "1040032",
+     "ingredients": [
+      [
+       "1040028",
+       "lurasidone"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA200603",
+     "product_ndc": "63402-302",
+     "labeler": "Sumitomo Pharma America, Inc.",
+     "spl_set_id": "afad3051-9df2-4c54-9684-e8262a133af8",
+     "n_products": 5
+    },
+    "drugsfda": {
+     "sponsor": "SUNOVION PHARMS INC",
+     "n_products": 5
+    },
+    "dailymed": {
+     "set_id": "afad3051-9df2-4c54-9684-e8262a133af8",
+     "latest_version": 37,
+     "published": "Jan 14, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "773",
+     "header": {
+      "brand": "LATUDA",
+      "appl_type": "NDA",
+      "appl_no": "200603"
+     },
+     "n_entries": 8,
+     "n_entries_with_underlined_4_5_6": 7,
+     "latest": "01/22/2025"
+    },
+    "faers": {
+     "active_substance": "LURASIDONE HYDROCHLORIDE",
+     "reports_in_window": 547
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 2
+    },
+    "ctgov": {
+     "studies_with_results": 51
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Nexium",
+   "class": "PPI",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "284799",
+     "ingredients": [
+      [
+       "283742",
+       "esomeprazole"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA021957",
+     "product_ndc": "0186-4020",
+     "labeler": "AstraZeneca Pharmaceuticals LP",
+     "spl_set_id": "f4853677-1622-4037-688b-fdf533a11d96",
+     "n_products": 4
+    },
+    "drugsfda": {
+     "sponsor": "ASTRAZENECA",
+     "n_products": 4
+    },
+    "dailymed": {
+     "set_id": "f4853677-1622-4037-688b-fdf533a11d96",
+     "latest_version": 74,
+     "published": "Apr 13, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "523",
+     "header": {
+      "brand": "NEXIUM",
+      "appl_type": "NDA",
+      "appl_no": "021957"
+     },
+     "n_entries": 7,
+     "n_entries_with_underlined_4_5_6": 5,
+     "latest": "07/18/2023"
+    },
+    "faers": {
+     "active_substance": "ESOMEPRAZOLE MAGNESIUM",
+     "reports_in_window": 3841
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 11
+    },
+    "ctgov": {
+     "studies_with_results": 83
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Protonix",
+   "class": "PPI",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "261624",
+     "ingredients": [
+      [
+       "40790",
+       "pantoprazole"
+      ]
+     ]
+    }
+   },
+   "reasons": [
+    "NDC: no original-packager NDA listing with this exact brand"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Prilosec",
+   "class": "PPI",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "203345",
+     "ingredients": [
+      [
+       "7646",
+       "omeprazole"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA022056",
+     "product_ndc": "70515-610",
+     "labeler": "Covis Pharma US, Inc",
+     "spl_set_id": "b6761f84-53ac-4745-a8c8-1e5427d7e179",
+     "n_products": 2
+    },
+    "drugsfda": {
+     "sponsor": "AZURITY",
+     "n_products": 2
+    },
+    "dailymed": {
+     "set_id": "b6761f84-53ac-4745-a8c8-1e5427d7e179",
+     "latest_version": 8,
+     "published": "Mar 19, 2024"
+    },
+    "srlc": {
+     "drug_name_id": "532",
+     "header": {
+      "brand": "PRILOSEC",
+      "appl_type": "NDA",
+      "appl_no": "022056"
+     },
+     "n_entries": 6,
+     "n_entries_with_underlined_4_5_6": 4,
+     "latest": "07/18/2023"
+    },
+    "faers": {
+     "active_substance": "OMEPRAZOLE MAGNESIUM",
+     "reports_in_window": 1737
+    },
+    "enforcement": {
+     "app_level_records": 1,
+     "ingredient_level_records": 4
+    },
+    "ctgov": {
+     "studies_with_results": 176
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Diovan",
+   "class": "ARB",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "216652",
+     "ingredients": [
+      [
+       "69749",
+       "valsartan"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA021283",
+     "product_ndc": "0078-0358",
+     "labeler": "Novartis Pharmaceuticals Corporation",
+     "spl_set_id": "5ddba454-f3e6-43c2-a7a6-58365d297213",
+     "n_products": 7
+    },
+    "drugsfda": {
+     "sponsor": "NOVARTIS",
+     "n_products": 4
+    },
+    "dailymed": {
+     "set_id": "5ddba454-f3e6-43c2-a7a6-58365d297213",
+     "latest_version": 32,
+     "published": "Aug 13, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "823",
+     "header": {
+      "brand": "DIOVAN",
+      "appl_type": "NDA",
+      "appl_no": "021283"
+     },
+     "n_entries": 3,
+     "n_entries_with_underlined_4_5_6": 3,
+     "latest": "04/19/2021"
+    },
+    "faers": {
+     "active_substance": "VALSARTAN",
+     "reports_in_window": 4192
+    },
+    "enforcement": {
+     "app_level_records": 1,
+     "ingredient_level_records": 48
+    },
+    "ctgov": {
+     "studies_with_results": 103
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Cozaar",
+   "class": "ARB",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "151558",
+     "ingredients": [
+      [
+       "52175",
+       "losartan"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA020386",
+     "product_ndc": "78206-121",
+     "labeler": "Organon LLC",
+     "spl_set_id": "9949448f-c3b9-44ee-94ed-c1aca8c90f39",
+     "n_products": 3
+    },
+    "drugsfda": {
+     "sponsor": "ORGANON",
+     "n_products": 3
+    },
+    "dailymed": {
+     "set_id": "9949448f-c3b9-44ee-94ed-c1aca8c90f39",
+     "latest_version": 9,
+     "published": "Jan 21, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "1696",
+     "header": {
+      "brand": "COZAAR",
+      "appl_type": "NDA",
+      "appl_no": "020386"
+     },
+     "n_entries": 3,
+     "n_entries_with_underlined_4_5_6": 3,
+     "latest": "06/20/2025"
+    },
+    "faers": {
+     "active_substance": "LOSARTAN POTASSIUM",
+     "reports_in_window": 5713
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 35
+    },
+    "ctgov": {
+     "studies_with_results": 82
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Benicar",
+   "class": "ARB",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "327503",
+     "ingredients": [
+      [
+       "321064",
+       "olmesartan"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA021286",
+     "product_ndc": "0713-0860",
+     "labeler": "Cosette Pharmaceuticals, Inc.",
+     "spl_set_id": "5b6f8a18-8f8a-4521-81c3-3a39c73c6646",
+     "n_products": 6
+    },
+    "drugsfda": {
+     "sponsor": "COSETTE",
+     "n_products": 3
+    },
+    "dailymed": {
+     "set_id": "5b6f8a18-8f8a-4521-81c3-3a39c73c6646",
+     "latest_version": 3,
+     "published": "Jul 13, 2023"
+    },
+    "srlc": {
+     "drug_name_id": "547",
+     "header": {
+      "brand": "BENICAR",
+      "appl_type": "NDA",
+      "appl_no": "021286"
+     },
+     "n_entries": 2,
+     "n_entries_with_underlined_4_5_6": 0,
+     "latest": "10/17/2019"
+    }
+   },
+   "reasons": [
+    "SrLC: no entry with underlined text in sections 4/5/6/Boxed"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Entresto",
+   "class": "ARB combination",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "1656341",
+     "ingredients": [
+      [
+       "1656328",
+       "sacubitril"
+      ],
+      [
+       "69749",
+       "valsartan"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA207620",
+     "product_ndc": "0078-0659",
+     "labeler": "Novartis Pharmaceuticals Corporation",
+     "spl_set_id": "000dc81d-ab91-450c-8eae-8eb74e72296f",
+     "n_products": 5
+    },
+    "drugsfda": {
+     "sponsor": "NOVARTIS PHARMS CORP",
+     "n_products": 3
+    },
+    "dailymed": {
+     "set_id": "000dc81d-ab91-450c-8eae-8eb74e72296f",
+     "latest_version": 25,
+     "published": "Jul 07, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "1374",
+     "header": {
+      "brand": "ENTRESTO",
+      "appl_type": "NDA",
+      "appl_no": "207620"
+     },
+     "n_entries": 4,
+     "n_entries_with_underlined_4_5_6": 3,
+     "latest": "04/12/2024"
+    },
+    "faers": {
+     "active_substance": "SACUBITRIL\\VALSARTAN",
+     "reports_in_window": 4393
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 0
+    }
+   },
+   "reasons": [
+    "Enforcement: no recall record for application or ingredient"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Zestril",
+   "class": "ACE inhibitor",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "196472",
+     "ingredients": [
+      [
+       "29046",
+       "lisinopril"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA019777",
+     "product_ndc": "24979-238",
+     "labeler": "Upsher-Smith Laboratories, LLC",
+     "spl_set_id": "838c2d78-d2d8-4981-9ec9-e50ef9e1a5d8",
+     "n_products": 6
+    },
+    "drugsfda": {
+     "sponsor": "TWI PHARMS",
+     "n_products": 6
+    },
+    "dailymed": {
+     "set_id": "838c2d78-d2d8-4981-9ec9-e50ef9e1a5d8",
+     "latest_version": 2,
+     "published": "May 05, 2025"
+    },
+    "srlc": {
+     "drug_name_id": "168",
+     "header": {
+      "brand": "ZESTRIL",
+      "appl_type": "NDA",
+      "appl_no": "019777"
+     },
+     "n_entries": 2,
+     "n_entries_with_underlined_4_5_6": 1,
+     "latest": "07/21/2017"
+    },
+    "faers": {
+     "active_substance": "LISINOPRIL",
+     "reports_in_window": 13664
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 14
+    },
+    "ctgov": {
+     "studies_with_results": 37
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Norvasc",
+   "class": "calcium channel blocker",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "58927",
+     "ingredients": [
+      [
+       "17767",
+       "amlodipine"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA019787",
+     "product_ndc": "0069-1520",
+     "labeler": "PFIZER LABORATORIES DIV PFIZER INC",
+     "spl_set_id": "abd6a2ca-40c2-485c-bc53-db1c652505ed",
+     "n_products": 6
+    },
+    "drugsfda": {
+     "sponsor": "VIATRIS",
+     "n_products": 3
+    },
+    "dailymed": {
+     "set_id": "abd6a2ca-40c2-485c-bc53-db1c652505ed",
+     "latest_version": 29,
+     "published": "Jun 09, 2025"
+    },
+    "srlc": {
+     "drug_name_id": "941",
+     "header": {
+      "brand": "NORVASC",
+      "appl_type": "NDA",
+      "appl_no": "019787"
+     },
+     "n_entries": 1,
+     "n_entries_with_underlined_4_5_6": 0,
+     "latest": "03/30/2017"
+    }
+   },
+   "reasons": [
+    "SrLC: no entry with underlined text in sections 4/5/6/Boxed"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Lasix",
+   "class": "loop diuretic",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "202991",
+     "ingredients": [
+      [
+       "4603",
+       "furosemide"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA016273",
+     "product_ndc": "30698-060",
+     "labeler": "Validus Pharmaceuticals LLC",
+     "spl_set_id": "2c9b4d8f-0770-482d-a9e6-9c616a440b1a",
+     "n_products": 3
+    },
+    "drugsfda": {
+     "sponsor": "VALIDUS PHARMS",
+     "n_products": 3
+    },
+    "dailymed": {
+     "set_id": "2c9b4d8f-0770-482d-a9e6-9c616a440b1a",
+     "latest_version": 7,
+     "published": "Oct 02, 2025"
+    }
+   },
+   "reasons": [
+    "SrLC: no row with matching application number"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Synthroid",
+   "class": "thyroid",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "224920",
+     "ingredients": [
+      [
+       "10582",
+       "levothyroxine"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA021402",
+     "product_ndc": "0074-3727",
+     "labeler": "AbbVie Inc.",
+     "spl_set_id": "1e11ad30-1041-4520-10b0-8f9d30d30fcc",
+     "n_products": 12
+    },
+    "drugsfda": {
+     "sponsor": "ABBVIE",
+     "n_products": 12
+    },
+    "dailymed": {
+     "set_id": "1e11ad30-1041-4520-10b0-8f9d30d30fcc",
+     "latest_version": 1537,
+     "published": "Feb 29, 2024"
+    },
+    "srlc": {
+     "drug_name_id": "859",
+     "header": {
+      "brand": "SYNTHROID",
+      "appl_type": "NDA",
+      "appl_no": "021402"
+     },
+     "n_entries": 5,
+     "n_entries_with_underlined_4_5_6": 2,
+     "latest": "02/20/2024"
+    },
+    "faers": {
+     "active_substance": "LEVOTHYROXINE SODIUM",
+     "reports_in_window": 16477
+    },
+    "enforcement": {
+     "app_level_records": 5,
+     "ingredient_level_records": 96
+    },
+    "ctgov": {
+     "studies_with_results": 38
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Singulair",
+   "class": "leukotriene antagonist",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "153889",
+     "ingredients": [
+      [
+       "88249",
+       "montelukast"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA020830",
+     "product_ndc": "78206-170",
+     "labeler": "Organon LLC",
+     "spl_set_id": "482dcc92-b47f-4ea6-854a-f5ac2aea7842",
+     "n_products": 2
+    },
+    "drugsfda": {
+     "sponsor": "ORGANON",
+     "n_products": 2
+    },
+    "dailymed": {
+     "set_id": "482dcc92-b47f-4ea6-854a-f5ac2aea7842",
+     "latest_version": 5,
+     "published": "Jun 25, 2025"
+    },
+    "srlc": {
+     "drug_name_id": "625",
+     "header": {
+      "brand": "SINGULAIR",
+      "appl_type": "NDA",
+      "appl_no": "020830"
+     },
+     "n_entries": 6,
+     "n_entries_with_underlined_4_5_6": 6,
+     "latest": "02/22/2021"
+    },
+    "faers": {
+     "active_substance": "MONTELUKAST SODIUM",
+     "reports_in_window": 7702
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 6
+    },
+    "ctgov": {
+     "studies_with_results": 82
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Chantix",
+   "class": "smoking cessation",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "636230",
+     "ingredients": [
+      [
+       "591622",
+       "varenicline"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA021928",
+     "product_ndc": "0069-0468",
+     "labeler": "Pfizer Laboratories Div Pfizer Inc",
+     "spl_set_id": "f0ff4f27-5185-4881-a749-c6b7a0ca5696",
+     "n_products": 3
+    },
+    "drugsfda": {
+     "sponsor": "PF PRISM CV",
+     "n_products": 2
+    },
+    "dailymed": {
+     "set_id": "f0ff4f27-5185-4881-a749-c6b7a0ca5696",
+     "latest_version": 49,
+     "published": "Jan 23, 2026"
+    },
+    "srlc": {
+     "drug_name_id": "388",
+     "header": {
+      "brand": "CHANTIX",
+      "appl_type": "NDA",
+      "appl_no": "021928"
+     },
+     "n_entries": 6,
+     "n_entries_with_underlined_4_5_6": 2,
+     "latest": "02/22/2019"
+    },
+    "faers": {
+     "active_substance": "VARENICLINE TARTRATE",
+     "reports_in_window": 527
+    },
+    "enforcement": {
+     "app_level_records": 7,
+     "ingredient_level_records": 8
+    },
+    "ctgov": {
+     "studies_with_results": 184
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Truvada",
+   "class": "antiretroviral combination",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "495430",
+     "ingredients": [
+      [
+       "276237",
+       "emtricitabine"
+      ],
+      [
+       "300195",
+       "tenofovir disoproxil"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA021752",
+     "product_ndc": "61958-0701",
+     "labeler": "Gilead Sciences, Inc",
+     "spl_set_id": "54e82b13-a037-49ed-b4b3-030b37c0ecdd",
+     "n_products": 4
+    },
+    "drugsfda": {
+     "sponsor": "GILEAD",
+     "n_products": 4
+    },
+    "dailymed": {
+     "set_id": "54e82b13-a037-49ed-b4b3-030b37c0ecdd",
+     "latest_version": 32,
+     "published": "Jul 25, 2025"
+    },
+    "srlc": {
+     "drug_name_id": "59",
+     "header": {
+      "brand": "TRUVADA",
+      "appl_type": "NDA",
+      "appl_no": "021752"
+     },
+     "n_entries": 5,
+     "n_entries_with_underlined_4_5_6": 3,
+     "latest": "06/23/2020"
+    },
+    "faers": {
+     "active_substance": "EMTRICITABINE\\TENOFOVIR DISOPROXIL FUMARATE",
+     "reports_in_window": 1506
+    },
+    "enforcement": {
+     "app_level_records": 1,
+     "ingredient_level_records": 1
+    },
+    "ctgov": {
+     "studies_with_results": 271
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Xeljanz",
+   "class": "JAK inhibitor",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "1357542",
+     "ingredients": [
+      [
+       "1357536",
+       "tofacitinib"
+      ]
+     ]
+    }
+   },
+   "reasons": [
+    "NDC: no original-packager NDA listing with this exact brand"
+   ],
+   "eligible": false
+  },
+  {
+   "brand": "Ambien",
+   "class": "hypnotic",
+   "checks": {
+    "rxnorm": {
+     "brand_rxcui": "131725",
+     "ingredients": [
+      [
+       "39993",
+       "zolpidem"
+      ]
+     ]
+    },
+    "ndc": {
+     "application_number": "NDA019908",
+     "product_ndc": "0024-5401",
+     "labeler": "Sanofi-Aventis U.S. LLC",
+     "spl_set_id": "c36cadf4-65a4-4466-b409-c82020b42452",
+     "n_products": 3
+    },
+    "drugsfda": {
+     "sponsor": "COSETTE",
+     "n_products": 2
+    },
+    "dailymed": {
+     "set_id": "c36cadf4-65a4-4466-b409-c82020b42452",
+     "latest_version": 26,
+     "published": "Apr 18, 2025"
+    },
+    "srlc": {
+     "drug_name_id": "264",
+     "header": {
+      "brand": "AMBIEN",
+      "appl_type": "NDA",
+      "appl_no": "019908"
+     },
+     "n_entries": 9,
+     "n_entries_with_underlined_4_5_6": 3,
+     "latest": "02/23/2022"
+    },
+    "faers": {
+     "active_substance": "ZOLPIDEM TARTRATE",
+     "reports_in_window": 5046
+    },
+    "enforcement": {
+     "app_level_records": 0,
+     "ingredient_level_records": 2
+    },
+    "ctgov": {
+     "studies_with_results": 44
+    }
+   },
+   "reasons": [],
+   "eligible": true
+  },
+  {
+   "brand": "Adderall XR",
+   "class": "stimulant",
+   "checks": {},
+   "reasons": [
+    "RxNorm: brand name not found"
+   ],
+   "eligible": false
+  }
+ ]
+}

@@ -1,0 +1,738 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "submissions": [
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "8",
+          "submission_status": "AP",
+          "submission_status_date": "20130329",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "17586",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2013/022433s008lbl.pdf",
+              "date": "20130401",
+              "type": "Label"
+            },
+            {
+              "id": "29728",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2013/022433Orig1s008ltr.pdf",
+              "date": "20130401",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "28",
+          "submission_status": "AP",
+          "submission_status_date": "20200528",
+          "review_priority": "STANDARD",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "63346",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2020/022433s028lbl.pdf",
+              "date": "20200529",
+              "type": "Label"
+            },
+            {
+              "id": "63356",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2020/022433Orig1s028ltr.pdf",
+              "date": "20200601",
+              "type": "Letter"
+            },
+            {
+              "id": "63612",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2020/022433Orig1s028.pdf",
+              "date": "20200618",
+              "type": "Review"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "6",
+          "submission_status": "AP",
+          "submission_status_date": "20130124",
+          "review_priority": "UNKNOWN",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "7390",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2013/022433Orig1s006ltr.pdf",
+              "date": "20130128",
+              "type": "Letter"
+            },
+            {
+              "id": "17585",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2013/022433s006lbl.pdf",
+              "date": "20130130",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "34",
+          "submission_status": "AP",
+          "submission_status_date": "20220509",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "71032",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2022/022433Orig1s034ltr.pdf",
+              "date": "20220510",
+              "type": "Letter"
+            },
+            {
+              "id": "71046",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2022/022433s034lbl.pdf",
+              "date": "20220511",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "4",
+          "submission_status": "AP",
+          "submission_status_date": "20121205",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "18",
+          "submission_status": "AP",
+          "submission_status_date": "20160722",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "7396",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2016/022433Orig1s018ltr.pdf",
+              "date": "20160726",
+              "type": "Letter"
+            },
+            {
+              "id": "38710",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2016/022433s018lbl.pdf",
+              "date": "20160725",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "32",
+          "submission_status": "AP",
+          "submission_status_date": "20210810",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "68338",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2021/022433Orig1s032ltr.pdf",
+              "date": "20210811",
+              "type": "Letter"
+            },
+            {
+              "id": "68343",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2021/022433s032lbl.pdf",
+              "date": "20210811",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "16",
+          "submission_status": "AP",
+          "submission_status_date": "20150916",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "30",
+          "submission_status": "AP",
+          "submission_status_date": "20200915",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "64581",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2020/022433Orig1s030ltr.pdf",
+              "date": "20200916",
+              "type": "Letter"
+            },
+            {
+              "id": "64588",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2020/022433s030lbl.pdf",
+              "date": "20200917",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "22",
+          "submission_status": "AP",
+          "submission_status_date": "20180309",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "52940",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2018/022433s022lbl.pdf",
+              "date": "20180313",
+              "type": "Label"
+            },
+            {
+              "id": "52992",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2018/022433Orig1s022ltr.pdf",
+              "date": "20180315",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "14",
+          "submission_status": "AP",
+          "submission_status_date": "20150624",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "20",
+          "submission_status": "AP",
+          "submission_status_date": "20160923",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "45395",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2016/022433Orig1s020ltr.pdf",
+              "date": "20160926",
+              "type": "Letter"
+            },
+            {
+              "id": "45418",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2016/022433s020lbl.pdf",
+              "date": "20160929",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "12",
+          "submission_status": "AP",
+          "submission_status_date": "20140718",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "10",
+          "submission_status": "AP",
+          "submission_status_date": "20131213",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "7392",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2013/022433Orig1s010ltr.pdf",
+              "date": "20131217",
+              "type": "Letter"
+            },
+            {
+              "id": "17587",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2013/022433s010lbl.pdf",
+              "date": "20131217",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "ORIG",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "20110720",
+          "review_priority": "STANDARD",
+          "submission_class_code": "TYPE 1",
+          "submission_class_code_description": "Type 1 - New Molecular Entity",
+          "application_docs": [
+            {
+              "id": "38707",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2011/022433s000lbl.pdf",
+              "date": "20110720",
+              "type": "Label"
+            },
+            {
+              "id": "42525",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2011/022433Orig1s000TOC.html",
+              "date": "20110823",
+              "type": "Review"
+            },
+            {
+              "id": "7389",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2011/022433Orig1s000ltr.pdf",
+              "date": "20110720",
+              "type": "Letter"
+            },
+            {
+              "id": "24307",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2011/022433Orig1s000SumR.pdf",
+              "date": "20110823",
+              "type": "Summary Review"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "39",
+          "submission_status": "AP",
+          "submission_status_date": "20260507",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "85867",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/022433Orig1s039ltr.pdf",
+              "date": "20260511",
+              "type": "Letter"
+            },
+            {
+              "id": "85929",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/022433s039lbl.pdf",
+              "date": "20260518",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "9",
+          "submission_status": "AP",
+          "submission_status_date": "20131030",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "7391",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2013/022433Orig1s009ltr.pdf",
+              "date": "20131031",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "37",
+          "submission_status": "AP",
+          "submission_status_date": "20241104",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "80149",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2024/022433s037lbl.pdf",
+              "date": "20241105",
+              "type": "Label"
+            },
+            {
+              "id": "80150",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/022433s037lbl.pdf#page=34",
+              "date": "20241105",
+              "type": "Medication Guide"
+            },
+            {
+              "id": "80172",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2024/022433Orig1s037ltr.pdf",
+              "date": "20241105",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "29",
+          "submission_status": "AP",
+          "submission_status_date": "20201105",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "65163",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2020/022433s029lbl.pdf",
+              "date": "20201109",
+              "type": "Label"
+            },
+            {
+              "id": "65169",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2020/022433Orig1s029ltr.pdf",
+              "date": "20201109",
+              "type": "Letter"
+            },
+            {
+              "id": "86188",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2026/022433Orig1s029.pdf",
+              "date": "20260608",
+              "type": "Review"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "35",
+          "submission_status": "AP",
+          "submission_status_date": "20240322",
+          "review_priority": "STANDARD",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "77934",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2024/022433Orig1s035ltr.pdf",
+              "date": "20240325",
+              "type": "Letter"
+            },
+            {
+              "id": "77960",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2024/022433s035lbl.pdf",
+              "date": "20240325",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "5",
+          "submission_status": "AP",
+          "submission_status_date": "20121109",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "19",
+          "submission_status": "AP",
+          "submission_status_date": "20160811",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "45090",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2016/022433Orig1s019lbl.pdf",
+              "date": "20160822",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "25",
+          "submission_status": "AP",
+          "submission_status_date": "20191024",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "60667",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2019/022433Orig1s025ltr.pdf",
+              "date": "20191025",
+              "type": "Letter"
+            },
+            {
+              "id": "60674",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2019/022433s025lbl.pdf",
+              "date": "20191025",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "17",
+          "submission_status": "AP",
+          "submission_status_date": "20150921",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "7395",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2015/022433Orig1s017ltr.pdf",
+              "date": "20150922",
+              "type": "Letter"
+            },
+            {
+              "id": "38709",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2015/022433s017lbl.pdf",
+              "date": "20150923",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "31",
+          "submission_status": "AP",
+          "submission_status_date": "20210217",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "66286",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2021/022433Orig1s031ltr.pdf",
+              "date": "20210218",
+              "type": "Letter"
+            },
+            {
+              "id": "66294",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2021/022433s031lbl.pdf",
+              "date": "20210218",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "23",
+          "submission_status": "AP",
+          "submission_status_date": "20190403",
+          "review_priority": "STANDARD",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "58205",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2019/022433Orig1s023ltr.pdf",
+              "date": "20190404",
+              "type": "Letter"
+            },
+            {
+              "id": "58235",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2019/022433s023lbl.pdf",
+              "date": "20190405",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "15",
+          "submission_status": "AP",
+          "submission_status_date": "20150903",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "42526",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2015/022433Orig1s015TOC.html",
+              "date": "20160210",
+              "type": "Review"
+            },
+            {
+              "id": "44504",
+              "title": "Priority 3 Approval Package",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2015/022433Orig1s015(2).pdf",
+              "date": "20160728",
+              "type": "Other"
+            },
+            {
+              "id": "7394",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2015/022433Orig1s015ltr.pdf",
+              "date": "20150908",
+              "type": "Letter"
+            },
+            {
+              "id": "38708",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2015/022433s015lbl.pdf",
+              "date": "20150908",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "13",
+          "submission_status": "AP",
+          "submission_status_date": "20150326",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "7393",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2015/022433Orig1s013ltr.pdf",
+              "date": "20150327",
+              "type": "Letter"
+            },
+            {
+              "id": "17588",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2015/022433s013lbl.pdf",
+              "date": "20150327",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "11",
+          "submission_status": "AP",
+          "submission_status_date": "20140307",
+          "review_priority": "N/A",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        }
+      ],
+      "application_number": "NDA022433",
+      "sponsor_name": "ASTRAZENECA",
+      "openfda": {
+        "application_number": [
+          "NDA022433"
+        ],
+        "brand_name": [
+          "BRILINTA"
+        ],
+        "generic_name": [
+          "TICAGRELOR"
+        ],
+        "manufacturer_name": [
+          "AstraZeneca Pharmaceuticals LP"
+        ],
+        "product_ndc": [
+          "0186-0776",
+          "0186-0777"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "TICAGRELOR"
+        ],
+        "rxcui": [
+          "1116635",
+          "1116639",
+          "1666332",
+          "1666334"
+        ],
+        "spl_id": [
+          "a9148b29-a2e9-4222-bf15-b55045ac1fe2"
+        ],
+        "spl_set_id": [
+          "f7b3f443-e83d-4bf2-0e96-023448fed9a8"
+        ],
+        "package_ndc": [
+          "0186-0777-08",
+          "0186-0777-60",
+          "0186-0777-18",
+          "0186-0777-39",
+          "0186-0777-28",
+          "0186-0776-60",
+          "0186-0776-94"
+        ],
+        "nui": [
+          "N0000182142",
+          "N0000008832",
+          "N0000182143",
+          "N0000182141",
+          "N0000185503"
+        ],
+        "pharm_class_epc": [
+          "P2Y12 Platelet Inhibitor [EPC]"
+        ],
+        "pharm_class_pe": [
+          "Decreased Platelet Aggregation [PE]"
+        ],
+        "pharm_class_moa": [
+          "P2Y12 Receptor Antagonists [MoA]",
+          "Cytochrome P450 3A4 Inhibitors [MoA]",
+          "P-Glycoprotein Inhibitors [MoA]"
+        ],
+        "unii": [
+          "GLH0314RVC"
+        ]
+      },
+      "products": [
+        {
+          "product_number": "002",
+          "reference_drug": "Yes",
+          "brand_name": "BRILINTA",
+          "active_ingredients": [
+            {
+              "name": "TICAGRELOR",
+              "strength": "60MG"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        },
+        {
+          "product_number": "001",
+          "reference_drug": "Yes",
+          "brand_name": "BRILINTA",
+          "active_ingredients": [
+            {
+              "name": "TICAGRELOR",
+              "strength": "90MG"
+            }
+          ],
+          "reference_standard": "Yes",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        }
+      ]
+    }
+  ]
+}

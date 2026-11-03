@@ -1,0 +1,283 @@
+{
+ "dataset_id": "MSSM-30-v2",
+ "annotator": "claude",
+ "answers_jsonl_sha256": "4a98a386be4bdb6567901b0d109db92b425fee0d04d826391fd6b3612fd95198",
+ "traces": 30,
+ "steps_answered": 240,
+ "unique_case_ids": 240,
+ "duplicate_case_ids": [],
+ "every_trace_has_S1_to_S8": true,
+ "evidence_files": 530,
+ "all_manifest_hashes_match": true,
+ "all_captures_status_captured": true,
+ "identity_guards_passed": 530,
+ "identity_guards_rejected": 0,
+ "api_key_in_any_saved_url": false,
+ "openfda_requests_with_key": 227,
+ "resolved": 240,
+ "unresolved": 0,
+ "intentional_abstentions": [],
+ "per_source_totals": {
+  "RxNorm": 30,
+  "NDC Directory": 30,
+  "Drugs@FDA": 30,
+  "DailyMed": 30,
+  "SrLC": 30,
+  "FAERS (openFDA)": 30,
+  "FDA enforcement": 30,
+  "ClinicalTrials.gov": 30
+ },
+ "per_check_type_totals": {
+  "source_lookup": 180,
+  "label_interpretation": 30,
+  "cross_source_comparison": 30
+ },
+ "s4_class_totals": {
+  "underlying_condition_or_risk_factor": 7,
+  "co_medication_risk_factor": 4,
+  "reaction_or_warning": 7,
+  "contraindicated_population": 4,
+  "symptom_of_other_condition": 3,
+  "administration_instruction": 3,
+  "exposure_factor": 2
+ },
+ "link_checks_evaluated": 270,
+ "link_checks_true": 227,
+ "link_checks_false": [
+  "T02-S7: S7 package named in record text",
+  "T02-S7: S7 package in openfda harmonized list (not proof)",
+  "T03-S7: S7 package named in record text",
+  "T03-S7: S7 package in openfda harmonized list (not proof)",
+  "T05-S7: S7 package named in record text",
+  "T05-S7: S7 package in openfda harmonized list (not proof)",
+  "T06-S7: S7 package named in record text",
+  "T06-S7: S7 package in openfda harmonized list (not proof)",
+  "T07-S7: S7 package named in record text",
+  "T08-S7: S7 package named in record text",
+  "T08-S7: S7 package in openfda harmonized list (not proof)",
+  "T09-S7: S7 package named in record text",
+  "T10-S7: S7 package named in record text",
+  "T11-S7: S7 package named in record text",
+  "T11-S7: S7 package in openfda harmonized list (not proof)",
+  "T13-S7: S7 package named in record text",
+  "T13-S7: S7 package in openfda harmonized list (not proof)",
+  "T14-S7: S7 package named in record text",
+  "T15-S7: S7 package named in record text",
+  "T15-S7: S7 package in openfda harmonized list (not proof)",
+  "T16-S7: S7 package named in record text",
+  "T16-S7: S7 package in openfda harmonized list (not proof)",
+  "T17-S5: S5.underlined_passage present in S4 label",
+  "T17-S7: S7 package named in record text",
+  "T18-S7: S7 package named in record text",
+  "T18-S7: S7 package in openfda harmonized list (not proof)",
+  "T19-S7: S7 package named in record text",
+  "T19-S7: S7 package in openfda harmonized list (not proof)",
+  "T20-S7: S7 package named in record text",
+  "T20-S7: S7 package in openfda harmonized list (not proof)",
+  "T21-S7: S7 package named in record text",
+  "T21-S7: S7 package in openfda harmonized list (not proof)",
+  "T22-S7: S7 package named in record text",
+  "T23-S7: S7 package named in record text",
+  "T23-S7: S7 package in openfda harmonized list (not proof)",
+  "T25-S7: S7 package named in record text",
+  "T26-S7: S7 package named in record text",
+  "T26-S7: S7 package in openfda harmonized list (not proof)",
+  "T27-S7: S7 package named in record text",
+  "T28-S7: S7 package named in record text",
+  "T28-S7: S7 package in openfda harmonized list (not proof)",
+  "T30-S7: S7 package named in record text",
+  "T30-S7: S7 package in openfda harmonized list (not proof)"
+ ],
+ "automated_verification": {
+  "T01": {
+   "passed": 113,
+   "total": 113,
+   "failed": 0
+  },
+  "T02": {
+   "passed": 112,
+   "total": 112,
+   "failed": 0
+  },
+  "T03": {
+   "passed": 112,
+   "total": 112,
+   "failed": 0
+  },
+  "T04": {
+   "passed": 110,
+   "total": 110,
+   "failed": 0
+  },
+  "T05": {
+   "passed": 113,
+   "total": 113,
+   "failed": 0
+  },
+  "T06": {
+   "passed": 119,
+   "total": 119,
+   "failed": 0
+  },
+  "T07": {
+   "passed": 108,
+   "total": 108,
+   "failed": 0
+  },
+  "T08": {
+   "passed": 113,
+   "total": 113,
+   "failed": 0
+  },
+  "T09": {
+   "passed": 110,
+   "total": 110,
+   "failed": 0
+  },
+  "T10": {
+   "passed": 111,
+   "total": 111,
+   "failed": 0
+  },
+  "T11": {
+   "passed": 113,
+   "total": 113,
+   "failed": 0
+  },
+  "T12": {
+   "passed": 114,
+   "total": 114,
+   "failed": 0
+  },
+  "T13": {
+   "passed": 114,
+   "total": 114,
+   "failed": 0
+  },
+  "T14": {
+   "passed": 110,
+   "total": 110,
+   "failed": 0
+  },
+  "T15": {
+   "passed": 112,
+   "total": 112,
+   "failed": 0
+  },
+  "T16": {
+   "passed": 116,
+   "total": 116,
+   "failed": 0
+  },
+  "T17": {
+   "passed": 112,
+   "total": 112,
+   "failed": 0
+  },
+  "T18": {
+   "passed": 117,
+   "total": 117,
+   "failed": 0
+  },
+  "T19": {
+   "passed": 116,
+   "total": 116,
+   "failed": 0
+  },
+  "T20": {
+   "passed": 117,
+   "total": 117,
+   "failed": 0
+  },
+  "T21": {
+   "passed": 115,
+   "total": 115,
+   "failed": 0
+  },
+  "T22": {
+   "passed": 113,
+   "total": 113,
+   "failed": 0
+  },
+  "T23": {
+   "passed": 114,
+   "total": 114,
+   "failed": 0
+  },
+  "T24": {
+   "passed": 112,
+   "total": 112,
+   "failed": 0
+  },
+  "T25": {
+   "passed": 111,
+   "total": 111,
+   "failed": 0
+  },
+  "T26": {
+   "passed": 118,
+   "total": 118,
+   "failed": 0
+  },
+  "T27": {
+   "passed": 111,
+   "total": 111,
+   "failed": 0
+  },
+  "T28": {
+   "passed": 117,
+   "total": 117,
+   "failed": 0
+  },
+  "T29": {
+   "passed": 113,
+   "total": 113,
+   "failed": 0
+  },
+  "T30": {
+   "passed": 117,
+   "total": 117,
+   "failed": 0
+  }
+ },
+ "automated_checks_total": 3403,
+ "automated_checks_failed": 0,
+ "questions_sha256": {
+  "T01": "13057e00088601988dbd42b5ac376ca09488ea9d9b2fa410ddeddbd8c3855a32",
+  "T02": "e22e2d316edd0cdfe80d3f4583cab6e6a4f1f54c99ab30678fe07be7907228b4",
+  "T03": "0d564f5f8eab243a4e0c743f521653b4439ebe8c3a476106bdcbd3c28f973ba3",
+  "T04": "7a09958f4f8a4eaf643b7103f64eb853120e3586669f3d0dacd7634ee8014c29",
+  "T05": "4a1fd2b82b7a2c295b2c5f780a1bbecefd96c51ce84d2113b6c7d0abcc7b0323",
+  "T06": "867ce6c18a4f83a0c70969842e112ab8b2153594a4bea5c3abe1aabe8a86901d",
+  "T07": "d9def5b43a392635f45e0abafa2149ac40aa3b850784852fc5a74a9e24f59ce5",
+  "T08": "e05fb6707c1ff83f4fae95eae4d12310fc5f1583bd1bc913ef8aee7357df0db3",
+  "T09": "2e3ec3c97d07eb03e41a7b2e8fbaea1db7e079eeb377478209a70c1325b1c651",
+  "T10": "54925005a6febceb45bc30364c57dc8127833807339cca6677050c7c33a0039e",
+  "T11": "2dc15d248a6c0a081bd6c1722df3896d2a174d561b8c39ce94041a1752010f60",
+  "T12": "5f4e69582ca178a419a79f1c9ca3c2283657280295e4ae3b9bb938ac37a65601",
+  "T13": "d5f1b13a1a0024b9be6d2b74ebb5edc2c26fbcc8cad351dc6e8e7f261ccf8aa6",
+  "T14": "a392fc324038620195f6f055520f39698a4396ef923d616f3af60b7042d5e42b",
+  "T15": "2135fba3bd695d9d726f2444f0534c43b58aac6fc9595640f88a5d46496b08d3",
+  "T16": "4b697257cfff8cba07a0d80d05d09252f3fa835542a59b5a63b0455df09cfe0f",
+  "T17": "811ecb7bebe1745e767713ecda6f2230720a1e8a8fb345935f50ffad010f356e",
+  "T18": "46e54a3a91cab487149ee4adabaac2721979ff4498e253033989473e7be791cf",
+  "T19": "fd10ef9ac76d5ec6cff0ea29a52fc8d9ce722fff54098fcb4c8f42c20e4c8f82",
+  "T20": "d5eecdfa9c41c5e875158c46ebdb694337f23ce009262a488f1326e97d3cdbfa",
+  "T21": "a99b312a56c61ed838a1ad7693d00119f247c52a31dff5daa1e2eaedc43adce8",
+  "T22": "296a369d43907b078bee93397c9ccaa2657aed6bf046cc7e68c941608cd31400",
+  "T23": "a62d0813954c12afc817ca6e3397b9d76aaba098c3cf164f0fe3c8cf1abf251b",
+  "T24": "5daaba4d89d8e3971114a1082bf56fe708b6635ed28adfa3edae669c1d7c81ab",
+  "T25": "af4e354adbf6f2ebbaaafcde3ecdf0dbf8a43c300154da77bafb28f038ebafc0",
+  "T26": "d86ccc0b31108facd2435d16c66f043847cf484cd82a9033f37727414dd2fde4",
+  "T27": "6eca768d23799822ba79ed50665c9dfce8002e2e880545f8fcf9846895af9bca",
+  "T28": "54b92f09b3f4674f8dc2a3567b211fe0f67e7ae9edbc16d8900f3fd0afd9eaeb",
+  "T29": "9e8370910349e4534fe2f2084d5757e9ff004bfa136d269f58b8ade9b52354bf",
+  "T30": "8889c370938e1d2fe1e682cdef1d3fcf3d3c0059ba44a8b8e0dfdb999bf0f6e4"
+ },
+ "all_human_review_pending": true,
+ "notes": [
+  "Self-verification by code against source bytes; not an independent human or clinical evaluation.",
+  "Candidate reference set; not a clinician-adjudicated gold standard and not a label-extraction benchmark.",
+  "FAERS evidence is aggregate counts only (limit=0 totals and count queries); no report records are stored."
+ ]
+}

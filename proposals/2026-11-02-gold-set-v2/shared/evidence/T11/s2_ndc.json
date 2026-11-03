@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "0006-0112",
+      "generic_name": "sitagliptin",
+      "labeler_name": "Merck Sharp & Dohme LLC",
+      "brand_name": "JANUVIA",
+      "active_ingredients": [
+        {
+          "name": "SITAGLIPTIN PHOSPHATE",
+          "strength": "50 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "0006-0112-28",
+          "description": "100 BLISTER PACK in 1 CARTON (0006-0112-28)  / 1 TABLET, FILM COATED in 1 BLISTER PACK (0006-0112-01)",
+          "marketing_start_date": "20061016",
+          "sample": false
+        },
+        {
+          "package_ndc": "0006-0112-31",
+          "description": "30 TABLET, FILM COATED in 1 BOTTLE (0006-0112-31)",
+          "marketing_start_date": "20061016",
+          "sample": false
+        },
+        {
+          "package_ndc": "0006-0112-54",
+          "description": "90 TABLET, FILM COATED in 1 BOTTLE (0006-0112-54)",
+          "marketing_start_date": "20061016",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20261231",
+      "openfda": {
+        "manufacturer_name": [
+          "Merck Sharp & Dohme LLC"
+        ],
+        "rxcui": [
+          "665036",
+          "665040",
+          "665044",
+          "2709603",
+          "2709608",
+          "2709612"
+        ],
+        "spl_set_id": [
+          "f85a48d0-0407-4c50-b0fa-7673a160bf01"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0300060112317",
+          "0300060221316",
+          "0300060277313"
+        ],
+        "unii": [
+          "TS63EW8X6F"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET, FILM COATED",
+      "spl_id": "71d449de-955b-4711-9a44-1e1f66e2e9eb",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20061016",
+      "product_id": "0006-0112_71d449de-955b-4711-9a44-1e1f66e2e9eb",
+      "application_number": "NDA021995",
+      "brand_name_base": "JANUVIA",
+      "pharm_class": [
+        "Dipeptidyl Peptidase 4 Inhibitor [EPC]",
+        "Dipeptidyl Peptidase 4 Inhibitors [MoA]"
+      ]
+    }
+  ]
+}

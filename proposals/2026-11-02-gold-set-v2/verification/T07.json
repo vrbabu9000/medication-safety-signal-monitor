@@ -1,0 +1,562 @@
+{
+ "trace_id": "T07",
+ "questions_sha256": "d9def5b43a392635f45e0abafa2149ac40aa3b850784852fc5a74a9e24f59ce5",
+ "checks": [
+  {
+   "check": "8 steps answered",
+   "pass": true,
+   "detail": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8"
+   ]
+  },
+  {
+   "check": "hash T07.s1_rx_brand",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s1_rx_brand",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T07.s1_rx_brand_props",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s1_rx_brand_props",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T07.s1_rx_ingredients",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s1_rx_ingredients",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T07.s1_rx_reverse_1545653",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s1_rx_reverse_1545653",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T07.s2_ndc",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s2_ndc",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T07.s3_drugsfda",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s3_drugsfda",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T07.s4_label",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s4_label",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T07.s5_srlc_detail",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s5_srlc_detail",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T07.s5_srlc_search",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s5_srlc_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T07.s6_faers_brand_reactions",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s6_faers_brand_reactions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T07.s6_faers_brand_total",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s6_faers_brand_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T07.s6_faers_substance",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s6_faers_substance",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T07.s6_faers_total",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s6_faers_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T07.s7_recall_app",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s7_recall_app",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T07.s8_trial",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s8_trial",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T07.s8_trials_search",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s8_trials_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T07.s8_trials_version",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T07.s8_trials_version",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S1 cites manifest hash for T07.s1_rx_brand",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S1 cites manifest hash for T07.s1_rx_brand_props",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S1 cites manifest hash for T07.s1_rx_ingredients",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S1 cites manifest hash for T07.s1_rx_reverse_1545653",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S1 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S2 cites manifest hash for T07.s2_ndc",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S2 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S3 cites manifest hash for T07.s3_drugsfda",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S3 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S4 cites manifest hash for T07.s4_label",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S4 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S5 cites manifest hash for T07.s5_srlc_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S5 cites manifest hash for T07.s5_srlc_detail",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S5 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S6 cites manifest hash for T07.s6_faers_substance",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S6 cites manifest hash for T07.s6_faers_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S6 cites manifest hash for T07.s6_faers_brand_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S6 cites manifest hash for T07.s6_faers_brand_reactions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S6 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S7 cites manifest hash for T07.s7_recall_app",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S7 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S8 cites manifest hash for T07.s8_trials_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S8 cites manifest hash for T07.s8_trial",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S8 cites manifest hash for T07.s8_trials_version",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T07-S8 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S1 brand rxcui",
+   "pass": true,
+   "detail": "1545659"
+  },
+  {
+   "check": "S1 tty",
+   "pass": true,
+   "detail": "BN"
+  },
+  {
+   "check": "S1 ingredients",
+   "pass": true,
+   "detail": [
+    [
+     "1545653",
+     "empagliflozin"
+    ]
+   ]
+  },
+  {
+   "check": "S1 multi flag",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S1 reverse IN 1545653 -> brand",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S2 labeler/category/app",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S2 package description",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S2 set id link",
+   "pass": true,
+   "detail": "faf3dd6a-9cd0-39c2-0d2e-232cb3f67565"
+  },
+  {
+   "check": "S3 sponsor",
+   "pass": true,
+   "detail": "BOEHRINGER INGELHEIM"
+  },
+  {
+   "check": "S3 products",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S3 app link",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S4 section found once by id",
+   "pass": true,
+   "detail": "67433f02-6618-45b1-8c6d-29e256f03971"
+  },
+  {
+   "check": "S4 heading matches",
+   "pass": true,
+   "detail": "5.2 Volume Depletion"
+  },
+  {
+   "check": "S4 quote verbatim in passage",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S4 target phrase in passage",
+   "pass": true,
+   "detail": "elderly patients"
+  },
+  {
+   "check": "S4 class allowed",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S5 page header names application",
+   "pass": true,
+   "detail": "NDA204629"
+  },
+  {
+   "check": "S5 passage is underlined text on the page",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S5 entry date + supplement on page",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S5 no newer entry with underlined Boxed/4/5/6 text",
+   "pass": true,
+   "detail": []
+  },
+  {
+   "check": "S5 presence in S4 label",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 substance",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 substance total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 brand total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 s6_faers_total holds no report records",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 s6_faers_brand_total holds no report records",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 terms and counts",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'NAUSEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'NAUSEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'DIARRHOEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'FATIGUE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'VOMITING'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'VOMITING'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'OFF LABEL USE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'DYSPNOEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'IMPAIRED GASTRIC EMPTYING'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'DIZZINESS'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'HEADACHE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'CONSTIPATION'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'CONSTIPATION'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S7 most recent record",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S7 fields",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S7 package named in record text",
+   "pass": true,
+   "detail": "0597-0152-07"
+  },
+  {
+   "check": "S8 nct + status",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S8 group values",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S8 study is in captured search",
+   "pass": true,
+   "detail": 0
+  },
+  {
+   "check": "S8 group title names drug",
+   "pass": true,
+   "detail": "Empagliflozin 10 mg"
+  },
+  {
+   "check": "S8 no earlier study in search order qualifies",
+   "pass": true,
+   "detail": []
+  }
+ ],
+ "passed": 108,
+ "failed": []
+}

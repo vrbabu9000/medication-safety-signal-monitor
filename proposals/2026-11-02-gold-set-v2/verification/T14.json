@@ -1,0 +1,572 @@
+{
+ "trace_id": "T14",
+ "questions_sha256": "a392fc324038620195f6f055520f39698a4396ef923d616f3af60b7042d5e42b",
+ "checks": [
+  {
+   "check": "8 steps answered",
+   "pass": true,
+   "detail": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8"
+   ]
+  },
+  {
+   "check": "hash T14.s1_rx_brand",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s1_rx_brand",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T14.s1_rx_brand_props",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s1_rx_brand_props",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T14.s1_rx_ingredients",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s1_rx_ingredients",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T14.s1_rx_reverse_1819",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s1_rx_reverse_1819",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T14.s2_ndc",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s2_ndc",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T14.s3_drugsfda",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s3_drugsfda",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T14.s4_label",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s4_label",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T14.s5_srlc_detail",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s5_srlc_detail",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T14.s5_srlc_search",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s5_srlc_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T14.s6_faers_brand_reactions",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s6_faers_brand_reactions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T14.s6_faers_brand_total",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s6_faers_brand_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T14.s6_faers_substance",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s6_faers_substance",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T14.s6_faers_total",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s6_faers_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T14.s7_recall_app",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s7_recall_app",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T14.s8_trial",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s8_trial",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T14.s8_trials_search",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s8_trials_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T14.s8_trials_version",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T14.s8_trials_version",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S1 cites manifest hash for T14.s1_rx_brand",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S1 cites manifest hash for T14.s1_rx_brand_props",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S1 cites manifest hash for T14.s1_rx_ingredients",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S1 cites manifest hash for T14.s1_rx_reverse_1819",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S1 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S2 cites manifest hash for T14.s2_ndc",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S2 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S3 cites manifest hash for T14.s3_drugsfda",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S3 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S4 cites manifest hash for T14.s4_label",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S4 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S5 cites manifest hash for T14.s5_srlc_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S5 cites manifest hash for T14.s5_srlc_detail",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S5 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S6 cites manifest hash for T14.s6_faers_substance",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S6 cites manifest hash for T14.s6_faers_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S6 cites manifest hash for T14.s6_faers_brand_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S6 cites manifest hash for T14.s6_faers_brand_reactions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S6 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S7 cites manifest hash for T14.s7_recall_app",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S7 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S8 cites manifest hash for T14.s8_trials_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S8 cites manifest hash for T14.s8_trial",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S8 cites manifest hash for T14.s8_trials_version",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T14-S8 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S1 brand rxcui",
+   "pass": true,
+   "detail": "1716058"
+  },
+  {
+   "check": "S1 tty",
+   "pass": true,
+   "detail": "BN"
+  },
+  {
+   "check": "S1 ingredients",
+   "pass": true,
+   "detail": [
+    [
+     "1819",
+     "buprenorphine"
+    ]
+   ]
+  },
+  {
+   "check": "S1 multi flag",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S1 reverse IN 1819 -> brand",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S2 labeler/category/app",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S2 package description",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S2 set id link",
+   "pass": true,
+   "detail": "bc2b7a3d-72cf-497c-95b0-ba2b71f63c64"
+  },
+  {
+   "check": "S3 sponsor",
+   "pass": true,
+   "detail": "BDSI"
+  },
+  {
+   "check": "S3 products",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S3 app link",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S4 section found once by id",
+   "pass": true,
+   "detail": "4f034688-fda5-468a-8e53-7d07a0c6999f"
+  },
+  {
+   "check": "S4 heading matches",
+   "pass": true,
+   "detail": "5.14 Dental Adverse Events"
+  },
+  {
+   "check": "S4 quote verbatim in passage",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S4 target phrase in passage",
+   "pass": true,
+   "detail": "wait for at least one hour after taking BELBUCA before brushing teeth"
+  },
+  {
+   "check": "S4 class allowed",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S5 page header names application",
+   "pass": true,
+   "detail": "NDA207932"
+  },
+  {
+   "check": "S5 passage is underlined text on the page",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S5 entry date + supplement on page",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S5 no newer entry with underlined Boxed/4/5/6 text",
+   "pass": true,
+   "detail": []
+  },
+  {
+   "check": "S5 presence in S4 label",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 substance",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 substance total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 brand total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 s6_faers_total holds no report records",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 s6_faers_brand_total holds no report records",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 terms and counts",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'PRODUCT ADHESION ISSUE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'PRODUCT SOLUBILITY ABNORMAL'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'DRUG INEFFECTIVE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'DENTAL CARIES'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'DENTAL CARIES'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'THERAPEUTIC RESPONSE DECREASED'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'OFF LABEL USE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'NAUSEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'NAUSEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'PAIN'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'PAIN'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'FATIGUE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'FATIGUE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'HEADACHE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'HEADACHE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S7 most recent record",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S7 fields",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S7 package named in record text",
+   "pass": true,
+   "detail": "59385-021-60"
+  },
+  {
+   "check": "S8 nct + status",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S8 group values",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S8 study is in captured search",
+   "pass": true,
+   "detail": 2
+  },
+  {
+   "check": "S8 group title names drug",
+   "pass": true,
+   "detail": "Buprenorphine/Nx"
+  },
+  {
+   "check": "S8 no earlier study in search order qualifies",
+   "pass": true,
+   "detail": []
+  }
+ ],
+ "passed": 110,
+ "failed": []
+}

@@ -1,0 +1,182 @@
+{
+ "T01": {
+  "class": "underlying_condition_or_risk_factor",
+  "quote": "Weigh this potential risk against the potential benefits before prescribing CHANTIX in patients with a history of seizures or other factors that can lower the seizure threshold.",
+  "rationale": "A history of seizures is a pre-existing patient condition that raises the seizure risk the section warns about; the label asks prescribers to weigh it before prescribing. It is not an event caused by Chantix.",
+  "uncertainty": "Context trap: the same passage reports seizures as an adverse event in patients treated with Chantix (a reaction). Not a contraindication: the label says 'weigh this potential risk', not 'contraindicated'."
+ },
+ "T02": {
+  "class": "co_medication_risk_factor",
+  "quote": "The concomitant use of PRADAXA with P-gp inducers (e.g., rifampin) reduces exposure to dabigatran and should generally be avoided",
+  "rationale": "P-gp inducers are concomitant medicines that lower dabigatran exposure; the label says to avoid them.",
+  "uncertainty": "The risk is loss of effect (lower exposure), not a new adverse reaction. Same passage names impaired renal function, a patient factor, which is a different class."
+ },
+ "T03": {
+  "class": "underlying_condition_or_risk_factor",
+  "quote": "The metabolism of clopidogrel to its active metabolite can be impaired by genetic variations in CYP2C19",
+  "rationale": "A patient's CYP2C19 genotype is a pre-existing characteristic that reduces Plavix activation and its antiplatelet effect.",
+  "uncertainty": "Context trap: omeprazole and esomeprazole in the same passage are co-medication risk factors, a different class. The outcome is reduced effect, not a reaction."
+ },
+ "T04": {
+  "class": "reaction_or_warning",
+  "quote": "of patients treated with BRILINTA developed dyspnea",
+  "rationale": "Dyspnea is reported in patients treated with Brilinta, with trial rates given; it is the warned-about effect.",
+  "uncertainty": "Low ambiguity. Pulmonary function testing in the same passage found no adverse effect on lung function; that does not change the class."
+ },
+ "T05": {
+  "class": "reaction_or_warning",
+  "quote": "LIPITOR may cause myopathy (muscle pain, tenderness, or weakness associated with elevated creatine kinase [CK]) and rhabdomyolysis.",
+  "rationale": "The label states Lipitor may cause rhabdomyolysis, with fatal cases reported in statin-treated patients.",
+  "uncertainty": "Muscle pain in the same sentence is part of the definition of myopathy (a symptom of it), not the target."
+ },
+ "T06": {
+  "class": "contraindicated_population",
+  "quote": "Acute liver failure or decompensated cirrhosis [see Warnings and Precautions (5.3)].",
+  "rationale": "Patients with acute liver failure or decompensated cirrhosis are listed in the CONTRAINDICATIONS section: Vytorin must not be used in them.",
+  "uncertainty": "Could be read as an underlying condition; it is classed by the section's explicit 'contraindicated' wording. Strong CYP3A4 inhibitors in the same list are contraindicated co-medications, a different class."
+ },
+ "T07": {
+  "class": "underlying_condition_or_risk_factor",
+  "quote": "Patients with impaired renal function (eGFR less than 60 mL/min/1.73 m2), elderly patients, or patients on loop diuretics may be at increased risk for volume depletion or hypotension.",
+  "rationale": "Older age is a patient characteristic named as raising the risk of volume depletion or hypotension.",
+  "uncertainty": "Loop diuretics in the same sentence are a co-medication risk factor, a different class."
+ },
+ "T08": {
+  "class": "symptom_of_other_condition",
+  "quote": "Signs and symptoms are consistent with dehydration and severe metabolic acidosis and include nausea, vomiting, abdominal pain, generalized malaise, and shortness of breath.",
+  "rationale": "Here abdominal pain is listed as a presenting sign of ketoacidosis, not as a separate reaction to Farxiga.",
+  "uncertainty": "Debatable: ketoacidosis itself is the drug-related warning, so a reviewer may treat its symptoms as reactions. Pancreatic disorders in the same passage are risk factors."
+ },
+ "T09": {
+  "class": "administration_instruction",
+  "quote": "VICTOZA pens must never be shared between patients, even if the needle is changed.",
+  "rationale": "This is a handling instruction for the pen; the harm it prevents (blood-borne infection) is separate.",
+  "uncertainty": "Low ambiguity."
+ },
+ "T10": {
+  "class": "exposure_factor",
+  "quote": "undergoing elective surgeries or procedures requiring general anesthesia or deep sedation",
+  "rationale": "General anesthesia or deep sedation is a procedural exposure during which pulmonary aspiration was reported in patients on GLP-1 receptor agonists.",
+  "uncertainty": "Pulmonary aspiration is the outcome (a reaction); the procedure is the exposure. The label says data are insufficient to recommend mitigation."
+ },
+ "T11": {
+  "class": "reaction_or_warning",
+  "quote": "There have been postmarketing reports of acute pancreatitis, including fatal and non-fatal hemorrhagic or necrotizing pancreatitis, in patients taking JANUVIA.",
+  "rationale": "Acute pancreatitis is reported in patients taking Januvia and is the warned-about event.",
+  "uncertainty": "Context trap: 'history of pancreatitis' in the same passage is a possible risk factor, but the label says it is unknown whether it increases risk."
+ },
+ "T12": {
+  "class": "underlying_condition_or_risk_factor",
+  "quote": "Certain individuals (those with inadequate vitamin B12 or calcium intake or absorption) appear to be predisposed to developing subnormal vitamin B12 levels.",
+  "rationale": "Low B12 or calcium intake or absorption is a pre-existing patient factor that predisposes to the B12 decrease linked to metformin.",
+  "uncertainty": "The reaction in this passage is the vitamin B12 decrease; the target is the predisposing factor. Applies to the metformin component of this combination product."
+ },
+ "T13": {
+  "class": "reaction_or_warning",
+  "quote": "Neonatal opioid withdrawal syndrome, unlike opioid withdrawal syndrome in adults, may be life-threatening if not recognized and treated",
+  "rationale": "Neonatal opioid withdrawal syndrome is a harmful effect of prolonged OxyContin use in pregnancy, occurring in the newborn.",
+  "uncertainty": "The affected person is the neonate, not the patient taking the drug; a reviewer may want that qualifier kept."
+ },
+ "T14": {
+  "class": "administration_instruction",
+  "quote": "Advise patients to wait for at least one hour after taking BELBUCA before brushing teeth",
+  "rationale": "This is an instruction on how to use the product to protect oral health.",
+  "uncertainty": "Context trap: dental caries, tooth fracture and tooth loss in the same passage are reactions; the instruction is not."
+ },
+ "T15": {
+  "class": "co_medication_risk_factor",
+  "quote": "Some estrogen-containing oral contraceptives have been shown to decrease serum concentrations of lamotrigine",
+  "rationale": "Estrogen-containing oral contraceptives are concomitant medicines that change lamotrigine levels and need dose adjustment.",
+  "uncertainty": "Dizziness, ataxia and diplopia in the same passage are reactions to raised lamotrigine levels, a different class."
+ },
+ "T16": {
+  "class": "reaction_or_warning",
+  "quote": "KEPPRA may cause somnolence and fatigue.",
+  "rationale": "The label states Keppra may cause somnolence.",
+  "uncertainty": "Low ambiguity. The driving advice in the same passage is an instruction."
+ },
+ "T17": {
+  "class": "co_medication_risk_factor",
+  "quote": "associating LYRICA with serious, life-threatening, or fatal respiratory depression when co-administered with central nervous system (CNS) depressants, including opioids",
+  "rationale": "CNS depressants, including opioids, are co-administered medicines that raise the risk of respiratory depression with Lyrica.",
+  "uncertainty": "Underlying respiratory impairment in the same sentence is a patient risk factor, a different class. The label also notes more limited evidence without either factor."
+ },
+ "T18": {
+  "class": "underlying_condition_or_risk_factor",
+  "quote": "may trigger an angle closure attack in a patient with anatomically narrow angles who does not have a patent iridectomy",
+  "rationale": "Anatomically narrow angles is a pre-existing eye anatomy that lets antidepressant-induced pupil dilation trigger angle closure.",
+  "uncertainty": "Could be read as contraindicated_population ('Avoid use ... in patients with untreated anatomically narrow angles'), but the label says 'avoid', not 'contraindicated'."
+ },
+ "T19": {
+  "class": "exposure_factor",
+  "quote": "can be associated with the use of quinolones including CIPRO after sun or UV light exposure",
+  "rationale": "Sun or UV light is an environmental exposure that, with Cipro, can lead to photosensitivity or phototoxicity.",
+  "uncertainty": "The reaction is photosensitivity/phototoxicity; 'avoid excessive exposure' is the related instruction."
+ },
+ "T20": {
+  "class": "symptom_of_other_condition",
+  "quote": "Direct parents and caregivers to contact their physician if vomiting or irritability with feeding occurs.",
+  "rationale": "These are warning signs of infantile hypertrophic pyloric stenosis that parents should act on, not separate reactions.",
+  "uncertainty": "Debatable like G04-type cases: IHPS is the azithromycin-associated event, so a reviewer may class its signs as reactions."
+ },
+ "T21": {
+  "class": "symptom_of_other_condition",
+  "quote": "Clinical manifestations of NMS are hyperpyrexia, muscle rigidity, altered mental status, and evidence of autonomic instability",
+  "rationale": "Muscle rigidity is listed as a clinical manifestation of neuroleptic malignant syndrome, not a separate reaction.",
+  "uncertainty": "NMS itself is the reaction; a reviewer may class its manifestations as reactions."
+ },
+ "T22": {
+  "class": "reaction_or_warning",
+  "quote": "patients can experience intense urges, particularly for gambling, and the inability to control these urges while taking aripiprazole",
+  "rationale": "Gambling urges are reported in patients taking aripiprazole and may stop on dose reduction.",
+  "uncertainty": "The label notes impulse-control symptoms can be associated with the underlying disorder, so causality is not certain in every case."
+ },
+ "T23": {
+  "class": "underlying_condition_or_risk_factor",
+  "quote": "symptomatic response to therapy with NEXIUM does not preclude the presence of gastric malignancy",
+  "rationale": "Gastric malignancy is a pre-existing condition whose symptoms Nexium may mask; the label does not say Nexium causes it.",
+  "uncertainty": "Not a classic risk factor for a reaction; it is a condition that may be hidden. The class list has no 'masked condition' option, so this is the closest fit."
+ },
+ "T24": {
+  "class": "co_medication_risk_factor",
+  "quote": "Drugs which induce CYP2C19 or CYP3A4 (such as St. John’s Wort or rifampin) can substantially decrease omeprazole concentrations",
+  "rationale": "St. John's Wort is a concomitant product that lowers omeprazole levels; the label says to avoid it.",
+  "uncertainty": "The risk is reduced effect, not a new reaction. The source uses a curly apostrophe."
+ },
+ "T25": {
+  "class": "reaction_or_warning",
+  "quote": "In patients with an activated renin-angiotensin system, such as volume- and/or salt-depleted patients receiving high doses of diuretics, symptomatic hypotension may occur.",
+  "rationale": "Symptomatic hypotension is the effect that may occur with Diovan, especially in volume- or salt-depleted patients.",
+  "uncertainty": "Context trap: the volume- or salt-depleted patients in the same sentence are a risk factor, a different class."
+ },
+ "T26": {
+  "class": "contraindicated_population",
+  "quote": "COZAAR is contraindicated: In patients who are hypersensitive to any component of this product.",
+  "rationale": "Patients hypersensitive to any component are named in the CONTRAINDICATIONS section.",
+  "uncertainty": "The second item (aliskiren in patients with diabetes) combines a co-medication and a population; it is not the target."
+ },
+ "T27": {
+  "class": "administration_instruction",
+  "quote": "Treat patients with adrenal insufficiency with replacement glucocorticoids prior to initiating treatment with SYNTHROID",
+  "rationale": "This is an ordering instruction: start glucocorticoid replacement before Synthroid.",
+  "uncertainty": "Adrenal insufficiency in the same sentence is an underlying condition; acute adrenal crisis is the harm."
+ },
+ "T28": {
+  "class": "underlying_condition_or_risk_factor",
+  "quote": "Phenylalanine can be harmful to patients with phenylketonuria (PKU).",
+  "rationale": "PKU is a pre-existing condition that makes the aspartame (phenylalanine) in the chewable tablets harmful.",
+  "uncertainty": "Applies to the chewable tablet forms; the label asks prescribers to consider total phenylalanine intake, not 'contraindicated'."
+ },
+ "T29": {
+  "class": "contraindicated_population",
+  "quote": "TRUVADA for HIV-1 PrEP is contraindicated in individuals with unknown or positive HIV-1 status",
+  "rationale": "People with unknown or positive HIV-1 status must not receive Truvada for PrEP.",
+  "uncertainty": "Scoped to the PrEP indication only; Truvada is used for HIV-1 treatment in positive patients."
+ },
+ "T30": {
+  "class": "contraindicated_population",
+  "quote": "AMBIEN is contraindicated in patients who have experienced complex sleep behaviors after taking AMBIEN",
+  "rationale": "Patients with a prior complex sleep behavior on Ambien are a contraindicated population.",
+  "uncertainty": "Context trap: complex sleep behaviors are themselves a reaction (boxed warning); here the target is the population defined by a past reaction."
+ }
+}

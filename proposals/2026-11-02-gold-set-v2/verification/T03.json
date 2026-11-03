@@ -1,0 +1,582 @@
+{
+ "trace_id": "T03",
+ "questions_sha256": "0d564f5f8eab243a4e0c743f521653b4439ebe8c3a476106bdcbd3c28f973ba3",
+ "checks": [
+  {
+   "check": "8 steps answered",
+   "pass": true,
+   "detail": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8"
+   ]
+  },
+  {
+   "check": "hash T03.s1_rx_brand",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s1_rx_brand",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s1_rx_brand_props",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s1_rx_brand_props",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s1_rx_ingredients",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s1_rx_ingredients",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s1_rx_reverse_32968",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s1_rx_reverse_32968",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s2_ndc",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s2_ndc",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s3_drugsfda",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s3_drugsfda",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s4_label",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s4_label",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s5_srlc_detail",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s5_srlc_detail",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s5_srlc_search",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s5_srlc_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s6_faers_brand_reactions",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s6_faers_brand_reactions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s6_faers_brand_total",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s6_faers_brand_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s6_faers_substance",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s6_faers_substance",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s6_faers_total",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s6_faers_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s7_recall_app",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s7_recall_app",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s7_recall_ingredient",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s7_recall_ingredient",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s8_trial",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s8_trial",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s8_trials_search",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s8_trials_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T03.s8_trials_version",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T03.s8_trials_version",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S1 cites manifest hash for T03.s1_rx_brand",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S1 cites manifest hash for T03.s1_rx_brand_props",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S1 cites manifest hash for T03.s1_rx_ingredients",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S1 cites manifest hash for T03.s1_rx_reverse_32968",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S1 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S2 cites manifest hash for T03.s2_ndc",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S2 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S3 cites manifest hash for T03.s3_drugsfda",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S3 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S4 cites manifest hash for T03.s4_label",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S4 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S5 cites manifest hash for T03.s5_srlc_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S5 cites manifest hash for T03.s5_srlc_detail",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S5 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S6 cites manifest hash for T03.s6_faers_substance",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S6 cites manifest hash for T03.s6_faers_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S6 cites manifest hash for T03.s6_faers_brand_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S6 cites manifest hash for T03.s6_faers_brand_reactions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S6 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S7 cites manifest hash for T03.s7_recall_ingredient",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S7 cites manifest hash for T03.s7_recall_app",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S7 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S8 cites manifest hash for T03.s8_trials_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S8 cites manifest hash for T03.s8_trial",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S8 cites manifest hash for T03.s8_trials_version",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T03-S8 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S1 brand rxcui",
+   "pass": true,
+   "detail": "174742"
+  },
+  {
+   "check": "S1 tty",
+   "pass": true,
+   "detail": "BN"
+  },
+  {
+   "check": "S1 ingredients",
+   "pass": true,
+   "detail": [
+    [
+     "32968",
+     "clopidogrel"
+    ]
+   ]
+  },
+  {
+   "check": "S1 multi flag",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S1 reverse IN 32968 -> brand",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S2 labeler/category/app",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S2 package description",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S2 set id link",
+   "pass": true,
+   "detail": "de8b0b67-eb25-4684-83b5-7ad785314227"
+  },
+  {
+   "check": "S3 sponsor",
+   "pass": true,
+   "detail": "SANOFI AVENTIS US"
+  },
+  {
+   "check": "S3 products",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S3 app link",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S4 section found once by id",
+   "pass": true,
+   "detail": "1dac6112-0067-42da-b688-19ec67729889"
+  },
+  {
+   "check": "S4 heading matches",
+   "pass": true,
+   "detail": "5.1 Diminished Antiplatelet Activity in Patients with Impaired CYP2C19 Function"
+  },
+  {
+   "check": "S4 quote verbatim in passage",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S4 target phrase in passage",
+   "pass": true,
+   "detail": "genetic variations in CYP2C19"
+  },
+  {
+   "check": "S4 class allowed",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S5 page header names application",
+   "pass": true,
+   "detail": "NDA020839"
+  },
+  {
+   "check": "S5 passage is underlined text on the page",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S5 entry date + supplement on page",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S5 no newer entry with underlined Boxed/4/5/6 text",
+   "pass": true,
+   "detail": []
+  },
+  {
+   "check": "S5 presence in S4 label",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 substance",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 substance total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 brand total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 s6_faers_total holds no report records",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 s6_faers_brand_total holds no report records",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 terms and counts",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'FATIGUE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'DIARRHOEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'DIARRHOEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'DYSPNOEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'NAUSEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'OFF LABEL USE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'DIZZINESS'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'ASTHENIA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'PRODUCT DOSE OMISSION ISSUE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'DEATH'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'DEATH'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'HEADACHE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'HEADACHE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S7 most recent record",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S7 fields",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S7 package named in record text",
+   "pass": true,
+   "detail": "0024-1171-90"
+  },
+  {
+   "check": "S7 application-level query was empty",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S8 nct + status",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S8 group values",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S8 study is in captured search",
+   "pass": true,
+   "detail": 1
+  },
+  {
+   "check": "S8 group title names drug",
+   "pass": true,
+   "detail": "Clopidogrel 300/75/75 mg + ASA Low Dose"
+  },
+  {
+   "check": "S8 no earlier study in search order qualifies",
+   "pass": true,
+   "detail": []
+  }
+ ],
+ "passed": 112,
+ "failed": []
+}

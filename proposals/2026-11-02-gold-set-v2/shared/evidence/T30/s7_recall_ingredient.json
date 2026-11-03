@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 2
+    }
+  },
+  "results": [
+    {
+      "status": "Completed",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA204170"
+        ],
+        "brand_name": [
+          "ZOLPIDEM TARTRATE"
+        ],
+        "generic_name": [
+          "ZOLPIDEM TARTRATE"
+        ],
+        "manufacturer_name": [
+          "Sun Pharmaceutical Industries, Inc."
+        ],
+        "product_ndc": [
+          "47335-307",
+          "47335-308"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ZOLPIDEM TARTRATE"
+        ],
+        "rxcui": [
+          "854880",
+          "854894"
+        ],
+        "spl_id": [
+          "4a5c474b-e752-4d01-be37-a66e7c9bf62e"
+        ],
+        "spl_set_id": [
+          "0c64bc71-2e7f-4b15-a8e1-acb8de04395f"
+        ],
+        "package_ndc": [
+          "47335-307-88",
+          "47335-307-13",
+          "47335-308-88",
+          "47335-308-13"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0347335307887",
+          "0347335308884"
+        ],
+        "unii": [
+          "WY6W63843K"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "93820",
+      "recalling_firm": "SUN PHARMACEUTICAL INDUSTRIES INC",
+      "address_1": "2 Independence Way",
+      "address_2": "N/A",
+      "postal_code": "08540-6620",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the USA",
+      "recall_number": "D-0272-2024",
+      "product_description": "Zolpidem Tartrate Extended-Release Tablets, USP 12.5mg, Rx Only, 100 Tablets per bottle, Distributed by: Sun Pharmaceutical Industries, Inc., Cranbury, NJ 08512, Manufactured by: Sun Pharmaceutical Industries Limited, Survey No. 259/15, Dadra-396 191, (U.T. of D & NH), INDIA, NDC 47335-308-88.",
+      "product_quantity": "14,568 bottles",
+      "reason_for_recall": "CGMP Deviations: Microbial contamination was reported in stagnant water in the duct of the manufacturing equipment.",
+      "recall_initiation_date": "20240118",
+      "center_classification_date": "20240125",
+      "report_date": "20240131",
+      "code_info": "Lot #: DNE0893A Expires 07/31/2026"
+    },
+    {
+      "status": "Completed",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA204170"
+        ],
+        "brand_name": [
+          "ZOLPIDEM TARTRATE"
+        ],
+        "generic_name": [
+          "ZOLPIDEM TARTRATE"
+        ],
+        "manufacturer_name": [
+          "Sun Pharmaceutical Industries, Inc."
+        ],
+        "product_ndc": [
+          "47335-307",
+          "47335-308"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ZOLPIDEM TARTRATE"
+        ],
+        "rxcui": [
+          "854880",
+          "854894"
+        ],
+        "spl_id": [
+          "4a5c474b-e752-4d01-be37-a66e7c9bf62e"
+        ],
+        "spl_set_id": [
+          "0c64bc71-2e7f-4b15-a8e1-acb8de04395f"
+        ],
+        "package_ndc": [
+          "47335-307-88",
+          "47335-307-13",
+          "47335-308-88",
+          "47335-308-13"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0347335307887",
+          "0347335308884"
+        ],
+        "unii": [
+          "WY6W63843K"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "93820",
+      "recalling_firm": "SUN PHARMACEUTICAL INDUSTRIES INC",
+      "address_1": "2 Independence Way",
+      "address_2": "N/A",
+      "postal_code": "08540-6620",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the USA",
+      "recall_number": "D-0271-2024",
+      "product_description": "Zolpidem Tartrate Extended-Release Tablets, USP 6.25 mg, Rx Only, 100 Tablets per bottle, Distributed by: Sun Pharmaceutical Industries, Inc., Cranbury, NJ 08512, Manufactured by: Sun Pharmaceutical Industries Limited, Survey No. 259/15, Dadra-396 191, (U.T. of D & NH), INDIA, NDC 47335-307-88.",
+      "product_quantity": "1220 bottles",
+      "reason_for_recall": "CGMP Deviations: Microbial contamination was reported in stagnant water in the duct of the manufacturing equipment.",
+      "recall_initiation_date": "20240118",
+      "center_classification_date": "20240125",
+      "report_date": "20240131",
+      "code_info": "Lot #: DNE0892A Exp. 07/31/2026"
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 2
+    }
+  },
+  "results": [
+    {
+      "status": "Terminated",
+      "city": "New York",
+      "state": "NY",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "NDA021446"
+        ],
+        "brand_name": [
+          "LYRICA"
+        ],
+        "generic_name": [
+          "PREGABALIN"
+        ],
+        "manufacturer_name": [
+          "Parke-Davis Div of Pfizer Inc"
+        ],
+        "product_ndc": [
+          "0071-1018",
+          "0071-1012",
+          "0071-1013",
+          "0071-1014",
+          "0071-1015",
+          "0071-1016",
+          "0071-1017",
+          "0071-1019",
+          "0071-1020"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "PREGABALIN"
+        ],
+        "rxcui": [
+          "483438",
+          "483440",
+          "483442",
+          "483444",
+          "483446",
+          "483448",
+          "483450",
+          "577127",
+          "607018",
+          "607020",
+          "607022",
+          "607024",
+          "607026",
+          "607028",
+          "607033",
+          "607038",
+          "898715",
+          "898718"
+        ],
+        "spl_id": [
+          "e7c79058-03ba-4e7f-9a31-9ec5ce245161"
+        ],
+        "spl_set_id": [
+          "60185c88-ecfd-46f9-adb9-b97c6b00a553"
+        ],
+        "package_ndc": [
+          "0071-1012-68",
+          "0071-1013-41",
+          "0071-1013-68",
+          "0071-1014-41",
+          "0071-1014-68",
+          "0071-1015-41",
+          "0071-1015-68",
+          "0071-1016-41",
+          "0071-1016-68",
+          "0071-1017-68",
+          "0071-1019-68",
+          "0071-1018-68",
+          "0071-1020-01"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0300711012683"
+        ],
+        "unii": [
+          "55JG375S6M"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "73043",
+      "recalling_firm": "Pfizer Inc.",
+      "address_1": "235 East 42nd Street",
+      "address_2": "N/A",
+      "postal_code": "10017-5703",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide and Puerto Rico",
+      "recall_number": "D-0649-2016",
+      "product_description": "Lyrica (pregabalin) capsules, 75 mg, 90-count bottle, Rx only, Distributed by: Parke-Davis, Division of Pfizer Inc., NY, NY 10017, NDC 0071-1014-68",
+      "product_quantity": "116,400 bottles",
+      "reason_for_recall": "FAILED TABLET/CAPSULE SPECIFICATIONS: Firm is recalling specific lots of pregabalin capsules due to the potential presence of deformed or damaged capsules.",
+      "recall_initiation_date": "20160111",
+      "center_classification_date": "20160201",
+      "termination_date": "20170424",
+      "report_date": "20160210",
+      "code_info": "Lot #: M07862, Exp 05/2018;  M07865, Exp 06/2018",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "New York",
+      "state": "NY",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "NDA021446"
+        ],
+        "brand_name": [
+          "LYRICA"
+        ],
+        "generic_name": [
+          "PREGABALIN"
+        ],
+        "manufacturer_name": [
+          "Parke-Davis Div of Pfizer Inc"
+        ],
+        "product_ndc": [
+          "0071-1018",
+          "0071-1012",
+          "0071-1013",
+          "0071-1014",
+          "0071-1015",
+          "0071-1016",
+          "0071-1017",
+          "0071-1019",
+          "0071-1020"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "PREGABALIN"
+        ],
+        "rxcui": [
+          "483438",
+          "483440",
+          "483442",
+          "483444",
+          "483446",
+          "483448",
+          "483450",
+          "577127",
+          "607018",
+          "607020",
+          "607022",
+          "607024",
+          "607026",
+          "607028",
+          "607033",
+          "607038",
+          "898715",
+          "898718"
+        ],
+        "spl_id": [
+          "e7c79058-03ba-4e7f-9a31-9ec5ce245161"
+        ],
+        "spl_set_id": [
+          "60185c88-ecfd-46f9-adb9-b97c6b00a553"
+        ],
+        "package_ndc": [
+          "0071-1012-68",
+          "0071-1013-41",
+          "0071-1013-68",
+          "0071-1014-41",
+          "0071-1014-68",
+          "0071-1015-41",
+          "0071-1015-68",
+          "0071-1016-41",
+          "0071-1016-68",
+          "0071-1017-68",
+          "0071-1019-68",
+          "0071-1018-68",
+          "0071-1020-01"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0300711012683"
+        ],
+        "unii": [
+          "55JG375S6M"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "73043",
+      "recalling_firm": "Pfizer Inc.",
+      "address_1": "235 East 42nd Street",
+      "address_2": "N/A",
+      "postal_code": "10017-5703",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide and Puerto Rico",
+      "recall_number": "D-0648-2016",
+      "product_description": "Lyrica (pregabalin) capsules, 50 mg, 90-count bottle, Rx only, Distributed by: Parke-Davis, Division of Pfizer Inc., NY, NY 10017, NDC 0071-1013-68",
+      "product_quantity": "30,672 bottles",
+      "reason_for_recall": "FAILED TABLET/CAPSULE SPECIFICATIONS: Firm is recalling specific lots of pregabalin capsules due to the potential presence of deformed or damaged capsules.",
+      "recall_initiation_date": "20160111",
+      "center_classification_date": "20160201",
+      "termination_date": "20170424",
+      "report_date": "20160210",
+      "code_info": "Lot #: M07861, Exp 05/2018",
+      "more_code_info": ""
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "70515-610",
+      "generic_name": "omeprazole magnesium",
+      "labeler_name": "Covis Pharma US, Inc",
+      "brand_name": "Prilosec",
+      "active_ingredients": [
+        {
+          "name": "OMEPRAZOLE MAGNESIUM",
+          "strength": "10 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "70515-610-01",
+          "description": "30 GRANULE, DELAYED RELEASE in 1 CARTON (70515-610-01)",
+          "marketing_start_date": "20170825",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20261231",
+      "openfda": {
+        "manufacturer_name": [
+          "Covis Pharma US, Inc"
+        ],
+        "rxcui": [
+          "797058",
+          "797061",
+          "797063",
+          "797065"
+        ],
+        "spl_set_id": [
+          "b6761f84-53ac-4745-a8c8-1e5427d7e179"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "426QFE7XLK"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "GRANULE, DELAYED RELEASE",
+      "spl_id": "296db0e8-af6e-4053-874d-2a7c8f7aba50",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20170825",
+      "product_id": "70515-610_296db0e8-af6e-4053-874d-2a7c8f7aba50",
+      "application_number": "NDA022056",
+      "brand_name_base": "Prilosec",
+      "pharm_class": [
+        "Cytochrome P450 2C19 Inhibitors [MoA]",
+        "Proton Pump Inhibitor [EPC]",
+        "Proton Pump Inhibitors [MoA]"
+      ]
+    }
+  ]
+}

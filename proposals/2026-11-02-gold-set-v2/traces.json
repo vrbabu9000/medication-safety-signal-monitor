@@ -1,0 +1,403 @@
+{
+ "dataset_id": "MSSM-30-v2",
+ "selection_rule": "Eligible in screening (all 8 sources usable), at most 3 per class; pilot first",
+ "left_out_eligible": {
+  "Actos": "weakest SrLC evidence (1 entry with underlined text) and fewest FAERS reports",
+  "Zestril": "weakest SrLC evidence (1 entry with underlined text)",
+  "Invokana": "third SGLT2; fewest FAERS reports in class",
+  "Latuda": "third antipsychotic; fewest FAERS reports in class",
+  "Zocor": "simvastatin is already covered by Vytorin; Lipitor covers statins"
+ },
+ "traces": [
+  {
+   "trace_id": "T01",
+   "brand": "Chantix",
+   "class": "smoking cessation",
+   "application_number": "NDA021928",
+   "product_ndc": "0069-0468",
+   "spl_set_id": "f0ff4f27-5185-4881-a749-c6b7a0ca5696",
+   "srlc_drug_name_id": "388",
+   "s4": {
+    "ordinal": 11,
+    "target": "a history of seizures"
+   }
+  },
+  {
+   "trace_id": "T02",
+   "brand": "Pradaxa",
+   "class": "anticoagulant",
+   "application_number": "NDA214358",
+   "product_ndc": "0597-0425",
+   "spl_set_id": "9ac0a64a-8666-45f7-9d4f-40fd894f7e6d",
+   "srlc_drug_name_id": "2876",
+   "s4": {
+    "ordinal": 26,
+    "target": "P-gp inducers"
+   }
+  },
+  {
+   "trace_id": "T03",
+   "brand": "Plavix",
+   "class": "antiplatelet",
+   "application_number": "NDA020839",
+   "product_ndc": "0024-1171",
+   "spl_set_id": "de8b0b67-eb25-4684-83b5-7ad785314227",
+   "srlc_drug_name_id": "432",
+   "s4": {
+    "ordinal": 14,
+    "target": "genetic variations in CYP2C19"
+   }
+  },
+  {
+   "trace_id": "T04",
+   "brand": "Brilinta",
+   "class": "antiplatelet",
+   "application_number": "NDA022433",
+   "product_ndc": "0186-0776",
+   "spl_set_id": "f7b3f443-e83d-4bf2-0e96-023448fed9a8",
+   "srlc_drug_name_id": "339",
+   "s4": {
+    "ordinal": 19,
+    "target": "dyspnea"
+   }
+  },
+  {
+   "trace_id": "T05",
+   "brand": "Lipitor",
+   "class": "statin",
+   "application_number": "NDA020702",
+   "product_ndc": "58151-155",
+   "spl_set_id": "a60cc18b-0631-4cf0-b021-9f52224ece65",
+   "srlc_drug_name_id": "1117",
+   "s4": {
+    "ordinal": 13,
+    "target": "rhabdomyolysis"
+   }
+  },
+  {
+   "trace_id": "T06",
+   "brand": "Vytorin",
+   "class": "statin combination",
+   "application_number": "NDA021687",
+   "product_ndc": "78206-174",
+   "spl_set_id": "89b860d2-de83-468e-b7e8-76aeec2edca2",
+   "srlc_drug_name_id": "1460",
+   "s4": {
+    "ordinal": 10,
+    "target": "decompensated cirrhosis"
+   }
+  },
+  {
+   "trace_id": "T07",
+   "brand": "Jardiance",
+   "class": "SGLT2",
+   "application_number": "NDA204629",
+   "product_ndc": "0597-0152",
+   "spl_set_id": "faf3dd6a-9cd0-39c2-0d2e-232cb3f67565",
+   "srlc_drug_name_id": "323",
+   "s4": {
+    "ordinal": 13,
+    "target": "elderly patients"
+   }
+  },
+  {
+   "trace_id": "T08",
+   "brand": "Farxiga",
+   "class": "SGLT2",
+   "application_number": "NDA202293",
+   "product_ndc": "0310-6205",
+   "spl_set_id": "72ad22ae-efe6-4cd6-a302-98aaee423d69",
+   "srlc_drug_name_id": "105",
+   "s4": {
+    "ordinal": 12,
+    "target": "abdominal pain"
+   }
+  },
+  {
+   "trace_id": "T09",
+   "brand": "Victoza",
+   "class": "GLP-1",
+   "application_number": "NDA022341",
+   "product_ndc": "0169-4060",
+   "spl_set_id": "5a9ef4ea-c76a-4d34-a604-27c5b505f5a4",
+   "srlc_drug_name_id": "171",
+   "s4": {
+    "ordinal": 13,
+    "target": "must never be shared between patients"
+   }
+  },
+  {
+   "trace_id": "T10",
+   "brand": "Rybelsus",
+   "class": "GLP-1",
+   "application_number": "NDA213051",
+   "product_ndc": "0169-4303",
+   "spl_set_id": "27f15fac-7d98-4114-a2ec-92494a91da98",
+   "srlc_drug_name_id": "2456",
+   "s4": {
+    "ordinal": 20,
+    "target": "general anesthesia or deep sedation"
+   }
+  },
+  {
+   "trace_id": "T11",
+   "brand": "Januvia",
+   "class": "DPP-4",
+   "application_number": "NDA021995",
+   "product_ndc": "0006-0112",
+   "spl_set_id": "f85a48d0-0407-4c50-b0fa-7673a160bf01",
+   "srlc_drug_name_id": "799",
+   "s4": {
+    "ordinal": 9,
+    "target": "acute pancreatitis"
+   }
+  },
+  {
+   "trace_id": "T12",
+   "brand": "Janumet",
+   "class": "DPP-4 combination",
+   "application_number": "NDA022044",
+   "product_ndc": "0006-0575",
+   "spl_set_id": "d19c7ed0-ad5c-426e-b2df-722508f97d67",
+   "srlc_drug_name_id": "801",
+   "s4": {
+    "ordinal": 23,
+    "target": "inadequate vitamin B12 or calcium intake or absorption"
+   }
+  },
+  {
+   "trace_id": "T13",
+   "brand": "OxyContin",
+   "class": "opioid",
+   "application_number": "NDA022272",
+   "product_ndc": "59011-410",
+   "spl_set_id": "bfdfe235-d717-4855-a3c8-a13d26dadede",
+   "srlc_drug_name_id": "685",
+   "s4": {
+    "ordinal": 20,
+    "target": "Neonatal opioid withdrawal syndrome"
+   }
+  },
+  {
+   "trace_id": "T14",
+   "brand": "Belbuca",
+   "class": "opioid",
+   "application_number": "NDA207932",
+   "product_ndc": "59385-021",
+   "spl_set_id": "bc2b7a3d-72cf-497c-95b0-ba2b71f63c64",
+   "srlc_drug_name_id": "757",
+   "s4": {
+    "ordinal": 42,
+    "target": "wait for at least one hour after taking BELBUCA before brushing teeth"
+   }
+  },
+  {
+   "trace_id": "T15",
+   "brand": "Lamictal",
+   "class": "antiepileptic",
+   "application_number": "NDA020241",
+   "product_ndc": "0173-0594",
+   "spl_set_id": "d7e3572d-56fe-4727-2bb4-013ccca22678",
+   "srlc_drug_name_id": "1624",
+   "s4": {
+    "ordinal": 27,
+    "target": "estrogen-containing oral contraceptives"
+   }
+  },
+  {
+   "trace_id": "T16",
+   "brand": "Keppra",
+   "class": "antiepileptic",
+   "application_number": "NDA021035",
+   "product_ndc": "50474-594",
+   "spl_set_id": "3ca9df05-a506-4ec8-a4fe-320f1219ab21",
+   "srlc_drug_name_id": "501",
+   "s4": {
+    "ordinal": 30,
+    "target": "somnolence"
+   }
+  },
+  {
+   "trace_id": "T17",
+   "brand": "Lyrica",
+   "class": "antiepileptic",
+   "application_number": "NDA021446",
+   "product_ndc": "0071-1018",
+   "spl_set_id": "60185c88-ecfd-46f9-adb9-b97c6b00a553",
+   "srlc_drug_name_id": "637",
+   "s4": {
+    "ordinal": 17,
+    "target": "central nervous system (CNS) depressants"
+   }
+  },
+  {
+   "trace_id": "T18",
+   "brand": "Zoloft",
+   "class": "SSRI",
+   "application_number": "NDA019839",
+   "product_ndc": "58151-574",
+   "spl_set_id": "fda754f6-d0f3-4dce-a17a-927d64f912f7",
+   "srlc_drug_name_id": "640",
+   "s4": {
+    "ordinal": 21,
+    "target": "anatomically narrow angles"
+   }
+  },
+  {
+   "trace_id": "T19",
+   "brand": "Cipro",
+   "class": "fluoroquinolone",
+   "application_number": "NDA019537",
+   "product_ndc": "50419-754",
+   "spl_set_id": "888dc7f9-ad9c-4c00-8d50-8ddfd9bd27c0",
+   "srlc_drug_name_id": "348",
+   "s4": {
+    "ordinal": 56,
+    "target": "sun or UV light exposure"
+   }
+  },
+  {
+   "trace_id": "T20",
+   "brand": "Zithromax",
+   "class": "macrolide",
+   "application_number": "NDA050710",
+   "product_ndc": "0069-3120",
+   "spl_set_id": "db52b91e-79f7-4cc1-9564-f2eee8e31c45",
+   "srlc_drug_name_id": "244",
+   "s4": {
+    "ordinal": 18,
+    "target": "vomiting or irritability with feeding"
+   }
+  },
+  {
+   "trace_id": "T21",
+   "brand": "Seroquel",
+   "class": "antipsychotic",
+   "application_number": "NDA020639",
+   "product_ndc": "0310-0271",
+   "spl_set_id": "0584dda8-bc3c-48fe-1a90-79608f78e8a0",
+   "srlc_drug_name_id": "141",
+   "s4": {
+    "ordinal": 22,
+    "target": "muscle rigidity"
+   }
+  },
+  {
+   "trace_id": "T22",
+   "brand": "Abilify",
+   "class": "antipsychotic",
+   "application_number": "NDA021436",
+   "product_ndc": "59148-006",
+   "spl_set_id": "c040bd1d-45b7-49f2-93ea-aed7220b30ac",
+   "srlc_drug_name_id": "38",
+   "s4": {
+    "ordinal": 41,
+    "target": "urges, particularly for gambling"
+   }
+  },
+  {
+   "trace_id": "T23",
+   "brand": "Nexium",
+   "class": "PPI",
+   "application_number": "NDA021957",
+   "product_ndc": "0186-4020",
+   "spl_set_id": "f4853677-1622-4037-688b-fdf533a11d96",
+   "srlc_drug_name_id": "523",
+   "s4": {
+    "ordinal": 15,
+    "target": "gastric malignancy"
+   }
+  },
+  {
+   "trace_id": "T24",
+   "brand": "Prilosec",
+   "class": "PPI",
+   "application_number": "NDA022056",
+   "product_ndc": "70515-610",
+   "spl_set_id": "b6761f84-53ac-4745-a8c8-1e5427d7e179",
+   "srlc_drug_name_id": "532",
+   "s4": {
+    "ordinal": 25,
+    "target": "St. John’s Wort"
+   }
+  },
+  {
+   "trace_id": "T25",
+   "brand": "Diovan",
+   "class": "ARB",
+   "application_number": "NDA021283",
+   "product_ndc": "0078-0358",
+   "spl_set_id": "5ddba454-f3e6-43c2-a7a6-58365d297213",
+   "srlc_drug_name_id": "823",
+   "s4": {
+    "ordinal": 17,
+    "target": "symptomatic hypotension"
+   }
+  },
+  {
+   "trace_id": "T26",
+   "brand": "Cozaar",
+   "class": "ARB",
+   "application_number": "NDA020386",
+   "product_ndc": "78206-121",
+   "spl_set_id": "9949448f-c3b9-44ee-94ed-c1aca8c90f39",
+   "srlc_drug_name_id": "1696",
+   "s4": {
+    "ordinal": 15,
+    "target": "patients who are hypersensitive to any component of this product"
+   }
+  },
+  {
+   "trace_id": "T27",
+   "brand": "Synthroid",
+   "class": "thyroid",
+   "application_number": "NDA021402",
+   "product_ndc": "0074-3727",
+   "spl_set_id": "1e11ad30-1041-4520-10b0-8f9d30d30fcc",
+   "srlc_drug_name_id": "859",
+   "s4": {
+    "ordinal": 15,
+    "target": "replacement glucocorticoids prior to initiating treatment with SYNTHROID"
+   }
+  },
+  {
+   "trace_id": "T28",
+   "brand": "Singulair",
+   "class": "leukotriene antagonist",
+   "application_number": "NDA020830",
+   "product_ndc": "78206-170",
+   "spl_set_id": "482dcc92-b47f-4ea6-854a-f5ac2aea7842",
+   "srlc_drug_name_id": "625",
+   "s4": {
+    "ordinal": 22,
+    "target": "phenylketonuria"
+   }
+  },
+  {
+   "trace_id": "T29",
+   "brand": "Truvada",
+   "class": "antiretroviral combination",
+   "application_number": "NDA021752",
+   "product_ndc": "61958-0701",
+   "spl_set_id": "54e82b13-a037-49ed-b4b3-030b37c0ecdd",
+   "srlc_drug_name_id": "59",
+   "s4": {
+    "ordinal": 15,
+    "target": "individuals with unknown or positive HIV-1 status"
+   }
+  },
+  {
+   "trace_id": "T30",
+   "brand": "Ambien",
+   "class": "hypnotic",
+   "application_number": "NDA019908",
+   "product_ndc": "0024-5401",
+   "spl_set_id": "c36cadf4-65a4-4466-b409-c82020b42452",
+   "srlc_drug_name_id": "264",
+   "s4": {
+    "ordinal": 10,
+    "target": "patients who have experienced complex sleep behaviors after taking AMBIEN"
+   }
+  }
+ ]
+}

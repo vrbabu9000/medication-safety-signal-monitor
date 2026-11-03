@@ -1,0 +1,1279 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "submissions": [
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "54",
+          "submission_status": "AP",
+          "submission_status_date": "20110708",
+          "review_priority": "UNKNOWN",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "20802",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2011/020639_seroquel_toc.html",
+              "date": "20120307",
+              "type": "Review"
+            },
+            {
+              "id": "25424",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2011/020639s049,020639s054ltr.pdf",
+              "date": "20110712",
+              "type": "Letter"
+            },
+            {
+              "id": "35062",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2011/020639s049s054lbl.pdf",
+              "date": "20110712",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "46",
+          "submission_status": "AP",
+          "submission_status_date": "20091202",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "35059",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2009/020639s045s046lbl.pdf",
+              "date": "20091211",
+              "type": "Label"
+            },
+            {
+              "id": "58919",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2019/020639Orig1s046.pdf",
+              "date": "20190603",
+              "type": "Review"
+            },
+            {
+              "id": "2980",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2009/020639s045s046ltr.pdf",
+              "date": "20100127",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "60",
+          "submission_status": "AP",
+          "submission_status_date": "20181129",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "56590",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2018/020639s060s063lbl.pdf",
+              "date": "20181130",
+              "type": "Label"
+            },
+            {
+              "id": "56813",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2018/020639Orig1s060, s063, 022047Orig1s033, s037ltr.pdf",
+              "date": "20181220",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "3",
+          "submission_status": "AP",
+          "submission_status_date": "19981220",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "38",
+          "submission_status": "AP",
+          "submission_status_date": "20080513",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "2977",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2008/020639s025,se1-037,s038,s040ltr.pdf",
+              "date": "20080514",
+              "type": "Letter"
+            },
+            {
+              "id": "35057",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2008/020639s025s037s038s040lbl.pdf",
+              "date": "20080605",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "52",
+          "submission_status": "AP",
+          "submission_status_date": "20101201",
+          "review_priority": "901 REQUIRED",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "12912",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2010/020639s052lbl.pdf",
+              "date": "20101204",
+              "type": "Label"
+            },
+            {
+              "id": "2982",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2010/020639s052ltr.pdf",
+              "date": "20101206",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "19980223",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "ORIG",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "19970926",
+          "review_priority": "STANDARD",
+          "submission_class_code": "TYPE 1",
+          "submission_class_code_description": "Type 1 - New Molecular Entity",
+          "application_docs": [
+            {
+              "id": "41514",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/97/20639_seroquel_toc.html",
+              "date": "20070717",
+              "type": "Review"
+            },
+            {
+              "id": "44456",
+              "title": "Other Important Information from FDA",
+              "url": "http://www.fda.gov/Drugs/DrugSafety/PostmarketDrugSafetyInformationforPatientsandProviders/ucm094303.htm",
+              "date": "20111222",
+              "type": "Other"
+            },
+            {
+              "id": "64053",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/020639_quetiapine_Original_WR.pdf",
+              "date": "19000101",
+              "type": "Pediatric Written Request"
+            },
+            {
+              "id": "64054",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/020639_quetiapine_amendment.pdf",
+              "date": "19000101",
+              "type": "Pediatric Amendment 1"
+            },
+            {
+              "id": "23587",
+              "url": "http://www.fda.gov/Drugs/DrugSafety/InformationbyDrugClass/UCM096273",
+              "date": "20070509",
+              "type": "Other Important Information from FDA"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "26",
+          "submission_status": "AP",
+          "submission_status_date": "20061020",
+          "review_priority": "UNKNOWN",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "12909",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2006/020639s026lbl.pdf",
+              "date": "20061023",
+              "type": "Label"
+            },
+            {
+              "id": "2974",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2006/020639s026ltr.pdf",
+              "date": "20061023",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "40",
+          "submission_status": "AP",
+          "submission_status_date": "20080513",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "2978",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2008/020639s025,se1-037,s038,s040ltr.pdf",
+              "date": "20080514",
+              "type": "Letter"
+            },
+            {
+              "id": "35058",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2008/020639s025s037s038s040lbl.pdf",
+              "date": "20080605",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "16",
+          "submission_status": "AP",
+          "submission_status_date": "20040112",
+          "review_priority": "STANDARD",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "41515",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2004/020639_S016&S017_SEROQUEL TABLETS.pdf",
+              "date": "20071119",
+              "type": "Review"
+            },
+            {
+              "id": "12907",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2004/20639se1-017,016_seroquel_lbl.pdf",
+              "date": "20040115",
+              "type": "Label"
+            },
+            {
+              "id": "2971",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2004/20639se1-017,016ltr.pdf",
+              "date": "20040114",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "30",
+          "submission_status": "AP",
+          "submission_status_date": "20081024",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "25418",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2008/020639s030ltr.pdf",
+              "date": "20081028",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "69",
+          "submission_status": "AP",
+          "submission_status_date": "20200205",
+          "review_priority": "901 REQUIRED",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "61802",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2020/020639Orig1s069, 022047Orig1s043ltr.pdf",
+              "date": "20200206",
+              "type": "Letter"
+            },
+            {
+              "id": "61839",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2020/020639s069lbl.pdf",
+              "date": "20200207",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "20",
+          "submission_status": "AP",
+          "submission_status_date": "20040721",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "2972",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2004/20639s020ltr.pdf",
+              "date": "20040721",
+              "type": "Letter"
+            },
+            {
+              "id": "35055",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2004/20639s020lbl.pdf",
+              "date": "20040721",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "59",
+          "submission_status": "AP",
+          "submission_status_date": "20130430",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "25426",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2013/020639Orig1s053,s057,s058,s059;022047s026,029,s030,s031ltr.pdf",
+              "date": "20130502",
+              "type": "Letter"
+            },
+            {
+              "id": "35064",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2013/020639s053s057s058s059lbl.pdf",
+              "date": "20130501",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "12",
+          "submission_status": "AP",
+          "submission_status_date": "20010319",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "65",
+          "submission_status": "AP",
+          "submission_status_date": "20170223",
+          "review_priority": "901 REQUIRED",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "47305",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2017/020639s065lbl.pdf",
+              "date": "20170224",
+              "type": "Label"
+            },
+            {
+              "id": "47373",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2017/020639Orig1s065,022047Orig1s039ltr.pdf",
+              "date": "20170302",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "57",
+          "submission_status": "AP",
+          "submission_status_date": "20130430",
+          "review_priority": "STANDARD",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "35063",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2013/020639s053s057s058s059lbl.pdf",
+              "date": "20130501",
+              "type": "Label"
+            },
+            {
+              "id": "51625",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/020639_quetiapine fumarate_seroquel CDTL review prea.pdf",
+              "date": "19000101",
+              "type": "Pediatric CDTL Review"
+            },
+            {
+              "id": "51626",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/020639_quetiapine fumarate_seroquel clinical prea.pdf",
+              "date": "19000101",
+              "type": "Pediatric Medical Review"
+            },
+            {
+              "id": "51627",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/020639_quetiapine fumarate_seroquel clinpharm prea.pdf",
+              "date": "19000101",
+              "type": "Pediatric Clinical Pharmacology Review"
+            },
+            {
+              "id": "51629",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/020639_quetiapine fumarate_seroquel statistical prea.pdf",
+              "date": "19000101",
+              "type": "Pediatric Statistical Review"
+            },
+            {
+              "id": "2984",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2013/020639Orig1s053,s057,s058,s059;022047s026,029,s030,s031ltr.pdf",
+              "date": "20130502",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "8",
+          "submission_status": "AP",
+          "submission_status_date": "20000707",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "10",
+          "submission_status": "AP",
+          "submission_status_date": "20001106",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "49",
+          "submission_status": "AP",
+          "submission_status_date": "20110708",
+          "review_priority": "UNKNOWN",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "20801",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2011/020639_seroquel_toc.html",
+              "date": "20120307",
+              "type": "Review"
+            },
+            {
+              "id": "25422",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2011/020639s049,020639s054ltr.pdf",
+              "date": "20110712",
+              "type": "Letter"
+            },
+            {
+              "id": "35060",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2011/020639s049s054lbl.pdf",
+              "date": "20110712",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "63",
+          "submission_status": "AP",
+          "submission_status_date": "20181129",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "56589",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2018/020639s060s063lbl.pdf",
+              "date": "20181130",
+              "type": "Label"
+            },
+            {
+              "id": "56814",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2018/020639Orig1s060, s063, 022047Orig1s033, s037ltr.pdf",
+              "date": "20181220",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "55",
+          "submission_status": "AP",
+          "submission_status_date": "20111109",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "2983",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2011/020639s055ltr.pdf",
+              "date": "20111114",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "61",
+          "submission_status": "AP",
+          "submission_status_date": "20131029",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "12915",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2013/020639s061lbl.pdf",
+              "date": "20131031",
+              "type": "Label"
+            },
+            {
+              "id": "25427",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2013/020639Orig1s061,022047Orig1s034ltr.pdf",
+              "date": "20131030",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "39",
+          "submission_status": "AP",
+          "submission_status_date": "20080128",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "25420",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2008/020639s039ltr.pdf",
+              "date": "20080130",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "53",
+          "submission_status": "AP",
+          "submission_status_date": "20130430",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "12913",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2013/020639s053s057s058s059lbl.pdf",
+              "date": "20130501",
+              "type": "Label"
+            },
+            {
+              "id": "25423",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2013/020639Orig1s053,s057,s058,s059;022047s026,029,s030,s031ltr.pdf",
+              "date": "20130502",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "45",
+          "submission_status": "AP",
+          "submission_status_date": "20091202",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "53021",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/020639_quetiapine fumarate_seroquel statistical prea.pdf",
+              "date": "19000101",
+              "type": "Pediatric Statistical Review"
+            },
+            {
+              "id": "53022",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/020639_quetiapine fumarate_seroquel clinical prea.pdf",
+              "date": "19000101",
+              "type": "Pediatric Medical Review"
+            },
+            {
+              "id": "53023",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/020639_quetiapine fumarate_seroquel CDTL review prea.pdf",
+              "date": "19000101",
+              "type": "Pediatric CDTL Review"
+            },
+            {
+              "id": "53024",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/020639_quetiapine fumarate_seroquel clinpharm prea.pdf",
+              "date": "19000101",
+              "type": "Pediatric Clinical Pharmacology Review"
+            },
+            {
+              "id": "53025",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/020639_quetiapine fumarate_seroquel clinpharm secondary review prea.pdf",
+              "date": "19000101",
+              "type": "Pediatric Clinical Pharmacology Addendum"
+            },
+            {
+              "id": "12911",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2009/020639s045s046lbl.pdf",
+              "date": "20091211",
+              "type": "Label"
+            },
+            {
+              "id": "25421",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2009/020639s045s046ltr.pdf",
+              "date": "20100127",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "2",
+          "submission_status": "AP",
+          "submission_status_date": "19980508",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "37",
+          "submission_status": "AP",
+          "submission_status_date": "20080513",
+          "review_priority": "STANDARD",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "41516",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2008/020639s037.pdf",
+              "date": "20110922",
+              "type": "Review"
+            },
+            {
+              "id": "12910",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2008/020639s025s037s038s040lbl.pdf",
+              "date": "20080605",
+              "type": "Label"
+            },
+            {
+              "id": "2976",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2008/020639s025,se1-037,s038,s040ltr.pdf",
+              "date": "20080514",
+              "type": "Letter"
+            },
+            {
+              "id": "24179",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/summary_review/2008/020639se1-037_SUMR.pdf",
+              "date": "20080716",
+              "type": "Summary Review"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "51",
+          "submission_status": "AP",
+          "submission_status_date": "20110517",
+          "review_priority": "UNKNOWN",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "2981",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2011/020639s051ltr.pdf",
+              "date": "20110519",
+              "type": "Letter"
+            },
+            {
+              "id": "35061",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2011/020639s051lbl.pdf",
+              "date": "20110523",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "43",
+          "submission_status": "AP",
+          "submission_status_date": "20080814",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "2979",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2008/020639s043ltr.pdf",
+              "date": "20080819",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "35",
+          "submission_status": "AP",
+          "submission_status_date": "20070730",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "25419",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2007/020639s035ltr.pdf",
+              "date": "20070802",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "25",
+          "submission_status": "AP",
+          "submission_status_date": "20080513",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "25417",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2008/020639s025,se1-037,s038,s040ltr.pdf",
+              "date": "20080514",
+              "type": "Letter"
+            },
+            {
+              "id": "35056",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2008/020639s025s037s038s040lbl.pdf",
+              "date": "20080605",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "17",
+          "submission_status": "AP",
+          "submission_status_date": "20040112",
+          "review_priority": "STANDARD",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "20800",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2004/020639_S016&S017_SEROQUEL TABLETS.pdf",
+              "date": "20071119",
+              "type": "Review"
+            },
+            {
+              "id": "25415",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2004/20639se1-017,016ltr.pdf",
+              "date": "20040114",
+              "type": "Letter"
+            },
+            {
+              "id": "35054",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2004/20639se1-017,016_seroquel_lbl.pdf",
+              "date": "20040115",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "31",
+          "submission_status": "AP",
+          "submission_status_date": "20080128",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "2975",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2008/020639s031ltr.pdf",
+              "date": "20080130",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "23",
+          "submission_status": "AP",
+          "submission_status_date": "20060920",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "12908",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2006/020639s023lbl.pdf",
+              "date": "20060921",
+              "type": "Label"
+            },
+            {
+              "id": "2973",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2006/020639s023ltr.pdf",
+              "date": "20060925",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "15",
+          "submission_status": "AP",
+          "submission_status_date": "20021206",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "68",
+          "submission_status": "AP",
+          "submission_status_date": "20200327",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "62363",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2020/020639Orig1s068ltr.pdf",
+              "date": "20200330",
+              "type": "Letter"
+            },
+            {
+              "id": "62710",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2020/020639Orig1s068lbl.pdf",
+              "date": "20200428",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "21",
+          "submission_status": "AP",
+          "submission_status_date": "20060207",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)",
+          "application_docs": [
+            {
+              "id": "25416",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2006/020639s021ltr.pdf",
+              "date": "20060208",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "74",
+          "submission_status": "AP",
+          "submission_status_date": "20250122",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "80940",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2025/020639s074lbl.pdf",
+              "date": "20250205",
+              "type": "Label"
+            },
+            {
+              "id": "80941",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/020639s074lbl.pdf#page=49",
+              "date": "20250205",
+              "type": "Medication Guide"
+            },
+            {
+              "id": "81060",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2025/020639Orig1s074,022047Orig1s048ltr.pdf",
+              "date": "20250206",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "13",
+          "submission_status": "AP",
+          "submission_status_date": "20011116",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "66",
+          "submission_status": "AP",
+          "submission_status_date": "20190826",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "59848",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2019/020639Orig1s066, 022047Orig1s040ltr.pdf",
+              "date": "20190827",
+              "type": "Letter"
+            },
+            {
+              "id": "59851",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2019/020639s066lbl.pdf",
+              "date": "20190827",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "58",
+          "submission_status": "AP",
+          "submission_status_date": "20130430",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "12914",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2013/020639s053s057s058s059lbl.pdf",
+              "date": "20130501",
+              "type": "Label"
+            },
+            {
+              "id": "25425",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2013/020639Orig1s053,s057,s058,s059;022047s026,029,s030,s031ltr.pdf",
+              "date": "20130502",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "72",
+          "submission_status": "AP",
+          "submission_status_date": "20220127",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "69994",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2022/020639Orig1s072; 022047Orig1s046ltr.pdf",
+              "date": "20220131",
+              "type": "Letter"
+            },
+            {
+              "id": "70008",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2022/020639s072lbl.pdf",
+              "date": "20220131",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "9",
+          "submission_status": "AP",
+          "submission_status_date": "20010124",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "11",
+          "submission_status": "AP",
+          "submission_status_date": "20010327",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "2970",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2001/20639S11LTR.PDF",
+              "date": "20010327",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "64",
+          "submission_status": "AP",
+          "submission_status_date": "20160617",
+          "review_priority": "901 REQUIRED",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "12916",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2016/020639s064lbl.pdf",
+              "date": "20160621",
+              "type": "Label"
+            },
+            {
+              "id": "2985",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2016/020639Orig1s064,022047Orig1s038ltr.pdf",
+              "date": "20160621",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "7",
+          "submission_status": "AP",
+          "submission_status_date": "20000726",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "70",
+          "submission_status": "AP",
+          "submission_status_date": "20200918",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "64632",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2020/020639Orig1sS070, 022047Orig1s041, 022047s044ltr.pdf",
+              "date": "20200921",
+              "type": "Letter"
+            },
+            {
+              "id": "64653",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2020/020639s070lbl.pdf",
+              "date": "20200922",
+              "type": "Label"
+            }
+          ]
+        }
+      ],
+      "application_number": "NDA020639",
+      "sponsor_name": "CHEPLAPHARM",
+      "openfda": {
+        "application_number": [
+          "NDA020639"
+        ],
+        "brand_name": [
+          "SEROQUEL"
+        ],
+        "generic_name": [
+          "QUETIAPINE"
+        ],
+        "manufacturer_name": [
+          "H2-Pharma, LLC",
+          "AstraZeneca Pharmaceuticals LP"
+        ],
+        "product_ndc": [
+          "61269-250",
+          "61269-251",
+          "61269-252",
+          "61269-253",
+          "61269-254",
+          "61269-255",
+          "0310-0271",
+          "0310-0275",
+          "0310-0278",
+          "0310-0272",
+          "0310-0274",
+          "0310-0279"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "QUETIAPINE FUMARATE"
+        ],
+        "rxcui": [
+          "153638",
+          "153639",
+          "153640",
+          "284509",
+          "312743",
+          "312744",
+          "312745",
+          "317174",
+          "616483",
+          "616485",
+          "616487",
+          "616489"
+        ],
+        "spl_id": [
+          "1fc7d584-a2f0-47f7-9506-5ecb2bfebb65",
+          "aef69992-4a20-4d55-b85c-7c0799619ce6"
+        ],
+        "spl_set_id": [
+          "8ae62aaf-f8c5-417f-baac-0098369ca322",
+          "0584dda8-bc3c-48fe-1a90-79608f78e8a0"
+        ],
+        "package_ndc": [
+          "61269-250-10",
+          "61269-251-10",
+          "61269-252-10",
+          "61269-253-10",
+          "61269-254-60",
+          "61269-255-10",
+          "0310-0275-10",
+          "0310-0275-34",
+          "0310-0275-39",
+          "0310-0278-10",
+          "0310-0278-34",
+          "0310-0278-39",
+          "0310-0271-10",
+          "0310-0271-39",
+          "0310-0272-10",
+          "0310-0272-39",
+          "0310-0274-60",
+          "0310-0274-39",
+          "0310-0279-10",
+          "0310-0279-39"
+        ],
+        "unii": [
+          "2S3PL1B6UJ"
+        ]
+      },
+      "products": [
+        {
+          "product_number": "007",
+          "reference_drug": "Yes",
+          "brand_name": "SEROQUEL",
+          "active_ingredients": [
+            {
+              "name": "QUETIAPINE FUMARATE",
+              "strength": "EQ 50MG BASE"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        },
+        {
+          "product_number": "005",
+          "reference_drug": "Yes",
+          "brand_name": "SEROQUEL",
+          "active_ingredients": [
+            {
+              "name": "QUETIAPINE FUMARATE",
+              "strength": "EQ 300MG BASE"
+            }
+          ],
+          "reference_standard": "Yes",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        },
+        {
+          "product_number": "003",
+          "reference_drug": "Yes",
+          "brand_name": "SEROQUEL",
+          "active_ingredients": [
+            {
+              "name": "QUETIAPINE FUMARATE",
+              "strength": "EQ 200MG BASE"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        },
+        {
+          "product_number": "001",
+          "reference_drug": "Yes",
+          "brand_name": "SEROQUEL",
+          "active_ingredients": [
+            {
+              "name": "QUETIAPINE FUMARATE",
+              "strength": "EQ 25MG BASE"
+            }
+          ],
+          "reference_standard": "Yes",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        },
+        {
+          "product_number": "006",
+          "reference_drug": "Yes",
+          "brand_name": "SEROQUEL",
+          "active_ingredients": [
+            {
+              "name": "QUETIAPINE FUMARATE",
+              "strength": "EQ 400MG BASE"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        },
+        {
+          "product_number": "004",
+          "reference_drug": "Yes",
+          "brand_name": "SEROQUEL",
+          "active_ingredients": [
+            {
+              "name": "QUETIAPINE FUMARATE",
+              "strength": "EQ 150MG BASE **Federal Register determination that product was not discontinued or withdrawn for safety or effectiveness reasons**"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Discontinued"
+        },
+        {
+          "product_number": "002",
+          "reference_drug": "Yes",
+          "brand_name": "SEROQUEL",
+          "active_ingredients": [
+            {
+              "name": "QUETIAPINE FUMARATE",
+              "strength": "EQ 100MG BASE"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "TABLET",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        }
+      ]
+    }
+  ]
+}

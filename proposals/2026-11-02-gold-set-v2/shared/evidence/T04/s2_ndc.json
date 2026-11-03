@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "0186-0776",
+      "generic_name": "Ticagrelor",
+      "labeler_name": "AstraZeneca Pharmaceuticals LP",
+      "brand_name": "BRILINTA",
+      "active_ingredients": [
+        {
+          "name": "TICAGRELOR",
+          "strength": "60 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "0186-0776-60",
+          "description": "60 TABLET in 1 BOTTLE (0186-0776-60)",
+          "marketing_start_date": "20150904",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20271231",
+      "openfda": {
+        "manufacturer_name": [
+          "AstraZeneca Pharmaceuticals LP"
+        ],
+        "rxcui": [
+          "1116635",
+          "1116639",
+          "1666332",
+          "1666334"
+        ],
+        "spl_set_id": [
+          "f7b3f443-e83d-4bf2-0e96-023448fed9a8"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "nui": [
+          "N0000182142",
+          "N0000008832",
+          "N0000182143",
+          "N0000182141",
+          "N0000185503"
+        ],
+        "pharm_class_epc": [
+          "P2Y12 Platelet Inhibitor [EPC]"
+        ],
+        "pharm_class_pe": [
+          "Decreased Platelet Aggregation [PE]"
+        ],
+        "pharm_class_moa": [
+          "P2Y12 Receptor Antagonists [MoA]",
+          "Cytochrome P450 3A4 Inhibitors [MoA]",
+          "P-Glycoprotein Inhibitors [MoA]"
+        ],
+        "unii": [
+          "GLH0314RVC"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET",
+      "spl_id": "a9148b29-a2e9-4222-bf15-b55045ac1fe2",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20150904",
+      "product_id": "0186-0776_a9148b29-a2e9-4222-bf15-b55045ac1fe2",
+      "application_number": "NDA022433",
+      "brand_name_base": "BRILINTA",
+      "pharm_class": [
+        "Cytochrome P450 3A4 Inhibitors [MoA]",
+        "Decreased Platelet Aggregation [PE]",
+        "P-Glycoprotein Inhibitors [MoA]",
+        "P2Y12 Platelet Inhibitor [EPC]",
+        "P2Y12 Receptor Antagonists [MoA]"
+      ]
+    }
+  ]
+}

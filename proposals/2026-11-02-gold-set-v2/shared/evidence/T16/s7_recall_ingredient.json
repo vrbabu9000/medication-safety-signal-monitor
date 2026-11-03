@@ -1,0 +1,786 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 9
+    }
+  },
+  "results": [
+    {
+      "status": "Ongoing",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class I",
+      "openfda": {
+        "application_number": [
+          "ANDA206880"
+        ],
+        "brand_name": [
+          "LEVETIRACETAM"
+        ],
+        "generic_name": [
+          "LEVETIRACETAM INJECTION"
+        ],
+        "manufacturer_name": [
+          "Dr.Reddy's Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-636",
+          "43598-635",
+          "43598-637"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "INTRAVENOUS"
+        ],
+        "substance_name": [
+          "LEVETIRACETAM"
+        ],
+        "rxcui": [
+          "1193358",
+          "1193360",
+          "1193362"
+        ],
+        "spl_id": [
+          "f5cfc6e1-79f3-bd25-5f66-9ea05bc47def"
+        ],
+        "spl_set_id": [
+          "0a9234b7-46b1-8e6c-a992-90f86cfb6e00"
+        ],
+        "package_ndc": [
+          "43598-635-52",
+          "43598-635-10",
+          "43598-636-52",
+          "43598-636-10",
+          "43598-637-52",
+          "43598-637-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "nui": [
+          "N0000008486"
+        ],
+        "pharm_class_pe": [
+          "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+        ],
+        "unii": [
+          "44YRR34555"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "96470",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "",
+      "distribution_pattern": "Nationwide in the USA",
+      "recall_number": "D-0365-2025",
+      "product_description": "Levetiracetam 0.75% in Sodium Chloride Injection 1,000 mg/100 mL (10 mg/mL), 1 x 100mL, Rx Only, Manufactured by: Gland Pharma Limited, Hyderabad, - 500 043 INDIA, Distributor: Dr. Reddy's Laboratories Inc., Princeton, NJ 08540, NDC 43598-636-52",
+      "product_quantity": "4,010 bags",
+      "reason_for_recall": "LABELING: LABEL MIX-UP: The infusion bag is incorrectly labeled as Levetiracetam in 0.82% Sodium Chloride Injection 500 mg/100 mL, while the aluminum overwrap packaging correctly identifies the product as Levetiracetam in 0.75% Sodium Chloride Injection 1,000 mg/100 mL.",
+      "recall_initiation_date": "20250313",
+      "center_classification_date": "20250416",
+      "report_date": "20250423",
+      "code_info": "Lot: A1540076, Exp 08/31/2026",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "East Windsor",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA078993"
+        ],
+        "brand_name": [
+          "LEVETIRACETAM"
+        ],
+        "generic_name": [
+          "LEVETIRACETAM"
+        ],
+        "manufacturer_name": [
+          "Aurobindo Pharma Limited"
+        ],
+        "product_ndc": [
+          "65862-245",
+          "65862-246",
+          "65862-247",
+          "65862-315"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LEVETIRACETAM"
+        ],
+        "rxcui": [
+          "311288",
+          "311289",
+          "311290",
+          "387003"
+        ],
+        "spl_id": [
+          "61244070-03c7-41d1-a784-b46dfc93fcbc"
+        ],
+        "spl_set_id": [
+          "2471ee03-d747-4113-86d0-1aa93c8f3eba"
+        ],
+        "package_ndc": [
+          "65862-245-08",
+          "65862-245-05",
+          "65862-246-08",
+          "65862-246-05",
+          "65862-247-08",
+          "65862-247-05",
+          "65862-315-30",
+          "65862-315-60",
+          "65862-315-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "nui": [
+          "N0000008486"
+        ],
+        "pharm_class_pe": [
+          "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+        ],
+        "unii": [
+          "44YRR34555"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "85183",
+      "recalling_firm": "Aurobindo Pharma USA Inc.",
+      "address_1": "279 Princeton Hightstown Rd",
+      "address_2": "",
+      "postal_code": "08520-1401",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide within the United States",
+      "recall_number": "D-1233-2020",
+      "product_description": "Levetiracetam Tablets USP 750 mg 120-count bottles,  Rx Only,  Distributed by: Aurobindo Pharma USA, Inc. 279 Princeton-Hightstown Road East Windsor, NJ 08520, NDC 65862-247-08",
+      "product_quantity": "8040 units",
+      "reason_for_recall": "CGMP Deviations: Products were manufactured in a processing area in which water leakage was observed",
+      "recall_initiation_date": "20200318",
+      "center_classification_date": "20200413",
+      "termination_date": "20240325",
+      "report_date": "20200422",
+      "code_info": "Lot #: 24719001A1, Exp. Date 03/2021",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Smyrna",
+      "state": "GA",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "NDA021505"
+        ],
+        "brand_name": [
+          "KEPPRA"
+        ],
+        "generic_name": [
+          "LEVETIRACETAM"
+        ],
+        "manufacturer_name": [
+          "UCB, Inc."
+        ],
+        "product_ndc": [
+          "50474-001",
+          "50474-594",
+          "50474-595",
+          "50474-596",
+          "50474-597"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LEVETIRACETAM"
+        ],
+        "rxcui": [
+          "261335",
+          "261336",
+          "284391",
+          "311288",
+          "311289",
+          "311290",
+          "387003",
+          "403884",
+          "404595",
+          "630807"
+        ],
+        "spl_id": [
+          "4974b225-87ca-610e-e063-6294a90ad20a"
+        ],
+        "spl_set_id": [
+          "3ca9df05-a506-4ec8-a4fe-320f1219ab21"
+        ],
+        "package_ndc": [
+          "50474-594-40",
+          "50474-595-40",
+          "50474-596-40",
+          "50474-597-66",
+          "50474-001-48"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0350474595404"
+        ],
+        "nui": [
+          "N0000008486"
+        ],
+        "pharm_class_pe": [
+          "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+        ],
+        "unii": [
+          "44YRR34555"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "83368",
+      "recalling_firm": "Ucb, Inc",
+      "address_1": "1950 Lake Park Dr Se",
+      "address_2": "N/A",
+      "postal_code": "30080-7648",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Telephone",
+      "distribution_pattern": "TN",
+      "recall_number": "D-1838-2019",
+      "product_description": "Keppra (levetiracetam) 1000 mg tablets, 60 tablets per bottle,  Rx only, Manufactured for UCB, Inc. Smyrna, GA 30080, NDC 50474-597-66.",
+      "product_quantity": "2088 bottles",
+      "reason_for_recall": "Failed Dissolution Specifications.",
+      "recall_initiation_date": "20190718",
+      "center_classification_date": "20190821",
+      "termination_date": "20200124",
+      "report_date": "20190731",
+      "code_info": "Lot: 908946 Exp. 02/2022"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class I",
+      "openfda": {
+        "application_number": [
+          "ANDA206880"
+        ],
+        "brand_name": [
+          "LEVETIRACETAM"
+        ],
+        "generic_name": [
+          "LEVETIRACETAM INJECTION"
+        ],
+        "manufacturer_name": [
+          "Dr.Reddy's Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-636",
+          "43598-635",
+          "43598-637"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "INTRAVENOUS"
+        ],
+        "substance_name": [
+          "LEVETIRACETAM"
+        ],
+        "rxcui": [
+          "1193358",
+          "1193360",
+          "1193362"
+        ],
+        "spl_id": [
+          "f5cfc6e1-79f3-bd25-5f66-9ea05bc47def"
+        ],
+        "spl_set_id": [
+          "0a9234b7-46b1-8e6c-a992-90f86cfb6e00"
+        ],
+        "package_ndc": [
+          "43598-635-52",
+          "43598-635-10",
+          "43598-636-52",
+          "43598-636-10",
+          "43598-637-52",
+          "43598-637-10",
+          "3435986375"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "nui": [
+          "N0000008486"
+        ],
+        "pharm_class_pe": [
+          "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+        ],
+        "unii": [
+          "44YRR34555"
+        ],
+        "upc": [
+          "343598637525"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "81441",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-0485-2019",
+      "product_description": "Levetiracetam in 0.54 % Sodium Chloride Injection 1,500/mg/100mL (15mg/mL), For intravenous Infusion Only, 1 x 100 mL Infusion bag, Manufactured by: Gland Pharma Limited Hyderabad - 500 043, India Distributor: Dr. Reddy's Laboratories Inc., Princeton, NJ 08540 UPC 343598637525 ---- NDC 43598-637-52",
+      "product_quantity": "2770 bags; 277 selling units",
+      "reason_for_recall": "Labeling: Label Error on Declared Strength; the pre-printed text on the primary infusion bag and the NDC incorrectly identifies the product as Levetiracetam in 0.75% Sodium Chloride (1000 mg/100 mL) however, the external foil pouch correctly identifies the product as Levetiracetam in 0.54% Sodium Chloride Injection (1,500/100 mL).",
+      "recall_initiation_date": "20181026",
+      "center_classification_date": "20190211",
+      "termination_date": "20230404",
+      "report_date": "20190220",
+      "code_info": "ABD807, exp 05/2020"
+    },
+    {
+      "status": "Terminated",
+      "city": "East Windsor",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA207160"
+        ],
+        "brand_name": [
+          "LEVETIRACETAM"
+        ],
+        "generic_name": [
+          "LEVETIRACETAM IN SODIUM CHLORIDE"
+        ],
+        "manufacturer_name": [
+          "Eugia US LLC"
+        ],
+        "product_ndc": [
+          "55150-246",
+          "55150-247",
+          "55150-248"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "INTRAVENOUS"
+        ],
+        "substance_name": [
+          "LEVETIRACETAM"
+        ],
+        "rxcui": [
+          "1193358",
+          "1193360",
+          "1193362"
+        ],
+        "spl_id": [
+          "2e0b32db-b6e3-4a68-a752-e4923f4bd84a"
+        ],
+        "spl_set_id": [
+          "e5eb4c89-8ee9-4474-9cb1-c3b3dc262a4a"
+        ],
+        "package_ndc": [
+          "55150-246-47",
+          "55150-247-47",
+          "55150-248-47"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0355150248476"
+        ],
+        "nui": [
+          "N0000008486"
+        ],
+        "pharm_class_pe": [
+          "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+        ],
+        "unii": [
+          "44YRR34555"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "79772",
+      "recalling_firm": "AuroMedics Pharma LLC",
+      "address_1": "279 Princeton Hightstown Rd",
+      "address_2": "N/A",
+      "postal_code": "08520-1401",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "US Nationwide",
+      "recall_number": "D-0707-2018",
+      "product_description": "Levetiracetam in 0.54% Sodium Chloride Injection, 1,500 mg per 100 mL (15 mg/mL), For Intravenous Infusion Only, Distributed By: AuroMedics Pharma LLC, E. Windsor, NJ 08520, NDC 55150-248-47.",
+      "product_quantity": "67300 bags",
+      "reason_for_recall": "Lack of Assurance of Sterility; confirmed customer report of a leaking bags and mold found between the outer bag and the overwrap",
+      "recall_initiation_date": "20180327",
+      "center_classification_date": "20180503",
+      "termination_date": "20220218",
+      "report_date": "20180509",
+      "code_info": "Lot/Batch #'s:    CLV160004, CLV160005, and CLV160006 exp September 2018; CLV170011,   CLV170015, CLV170016 exp June 2019"
+    },
+    {
+      "status": "Terminated",
+      "city": "East Windsor",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA207160"
+        ],
+        "brand_name": [
+          "LEVETIRACETAM"
+        ],
+        "generic_name": [
+          "LEVETIRACETAM IN SODIUM CHLORIDE"
+        ],
+        "manufacturer_name": [
+          "Eugia US LLC"
+        ],
+        "product_ndc": [
+          "55150-246",
+          "55150-247",
+          "55150-248"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "INTRAVENOUS"
+        ],
+        "substance_name": [
+          "LEVETIRACETAM"
+        ],
+        "rxcui": [
+          "1193358",
+          "1193360",
+          "1193362"
+        ],
+        "spl_id": [
+          "2e0b32db-b6e3-4a68-a752-e4923f4bd84a"
+        ],
+        "spl_set_id": [
+          "e5eb4c89-8ee9-4474-9cb1-c3b3dc262a4a"
+        ],
+        "package_ndc": [
+          "55150-246-47",
+          "55150-247-47",
+          "55150-248-47"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0355150248476"
+        ],
+        "nui": [
+          "N0000008486"
+        ],
+        "pharm_class_pe": [
+          "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+        ],
+        "unii": [
+          "44YRR34555"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "79772",
+      "recalling_firm": "AuroMedics Pharma LLC",
+      "address_1": "279 Princeton Hightstown Rd",
+      "address_2": "N/A",
+      "postal_code": "08520-1401",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "US Nationwide",
+      "recall_number": "D-0705-2018",
+      "product_description": "Levetiracetam in 0.82% Sodium Chloride Injection, 500 mg per 100 mL (5 mg/mL), For Intravenous Infusion Only, Distributed By: AuroMedics Pharma LLC, E. Windsor, NJ 08520, NDC 55150-246-47.",
+      "product_quantity": "261250 bags",
+      "reason_for_recall": "Lack of Assurance of Sterility; confirmed customer report of a leaking bags and mold found between the outer bag and the overwrap",
+      "recall_initiation_date": "20180327",
+      "center_classification_date": "20180503",
+      "termination_date": "20220218",
+      "report_date": "20180509",
+      "code_info": "Lot/Batch #'s:  CLV160016, CLV160017, and CLV160018, exp Sept 2018, CLV160019, exp Oct 2018, CLV160020, CLV160021, and CLV160031, exp Nov 2018; CLV160032 and CLV170001, exp 12/18; CLV170008 and CLV170009, exp April 2019, CLV170020, CLV170021 and CLV170022, exp Oct 2019"
+    },
+    {
+      "status": "Terminated",
+      "city": "East Windsor",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA207160"
+        ],
+        "brand_name": [
+          "LEVETIRACETAM"
+        ],
+        "generic_name": [
+          "LEVETIRACETAM IN SODIUM CHLORIDE"
+        ],
+        "manufacturer_name": [
+          "Eugia US LLC"
+        ],
+        "product_ndc": [
+          "55150-246",
+          "55150-247",
+          "55150-248"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "INTRAVENOUS"
+        ],
+        "substance_name": [
+          "LEVETIRACETAM"
+        ],
+        "rxcui": [
+          "1193358",
+          "1193360",
+          "1193362"
+        ],
+        "spl_id": [
+          "2e0b32db-b6e3-4a68-a752-e4923f4bd84a"
+        ],
+        "spl_set_id": [
+          "e5eb4c89-8ee9-4474-9cb1-c3b3dc262a4a"
+        ],
+        "package_ndc": [
+          "55150-246-47",
+          "55150-247-47",
+          "55150-248-47"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0355150248476"
+        ],
+        "nui": [
+          "N0000008486"
+        ],
+        "pharm_class_pe": [
+          "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+        ],
+        "unii": [
+          "44YRR34555"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "79772",
+      "recalling_firm": "AuroMedics Pharma LLC",
+      "address_1": "279 Princeton Hightstown Rd",
+      "address_2": "N/A",
+      "postal_code": "08520-1401",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "US Nationwide",
+      "recall_number": "D-0706-2018",
+      "product_description": "Levetiracetam in 0.75% Sodium Chloride Injection, 1000 mg per 100 mL (10 mg/mL), For Intravenous Infusion Only, Distributed By: AuroMedics Pharma LLC, E. Windsor, NJ 08520, NDC 55150-247-47.",
+      "product_quantity": "188941 bags",
+      "reason_for_recall": "Lack of Assurance of Sterility; confirmed customer report of a leaking bags and mold found between the outer bag and the overwrap",
+      "recall_initiation_date": "20180327",
+      "center_classification_date": "20180503",
+      "termination_date": "20220218",
+      "report_date": "20180509",
+      "code_info": "Lot/Batch #'s:  CLV160013, CLV160014 and CLV160015, exp Sept 2018; CLV160022, CLV160023, CLV160024, CLV160025, CLV160026, CLV160027, CLV160028, CLV160029, CLV160030 exp Oct 2018; CLV170002, Dec 2018; CLV170010, exp April 2019; CLV170027, CLV170028, CLV170029 and CLV170030 exp Oct 2019"
+    },
+    {
+      "status": "Terminated",
+      "city": "Hyderabad",
+      "state": "N/A",
+      "country": "India",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA203052"
+        ],
+        "brand_name": [
+          "LEVETIRACETAM"
+        ],
+        "generic_name": [
+          "LEVETIRACETAM ORAL"
+        ],
+        "manufacturer_name": [
+          "Camber Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "31722-574"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LEVETIRACETAM"
+        ],
+        "rxcui": [
+          "403884"
+        ],
+        "spl_id": [
+          "230b2750-8691-425b-9fe3-176b46e01e78"
+        ],
+        "spl_set_id": [
+          "0bc8468f-832c-4e71-95a2-db464d4d54bc"
+        ],
+        "package_ndc": [
+          "31722-574-47"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0331722574471"
+        ],
+        "nui": [
+          "N0000008486"
+        ],
+        "pharm_class_pe": [
+          "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+        ],
+        "unii": [
+          "44YRR34555"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "78287",
+      "recalling_firm": "Hetero Labs, Ltd. - Unit III",
+      "address_1": "Plot 22-110, Part Ii, Ida",
+      "address_2": "Rangareddy, Jeedimetla",
+      "postal_code": "N/A",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "NJ",
+      "recall_number": "D-0099-2018",
+      "product_description": "Levetiracetam Oral Solution, USP, 100 mg/mL, packaged in a 16 fl oz (473 mL) bottle, Rx only, Manufactured for: Camber Pharmaceuticals, Inc., Piscataway, NJ 08854, By: Hetero, Hetero Labs Limited, Jeedimetla,Hyderabad - 500 055, India, NDC 31722-574-47",
+      "product_quantity": "4050 bottles",
+      "reason_for_recall": "Presence of foreign substance (screw)",
+      "recall_initiation_date": "20171012",
+      "center_classification_date": "20171129",
+      "termination_date": "20200903",
+      "report_date": "20171206",
+      "code_info": "Lot # E170346, Exp 02/19"
+    },
+    {
+      "status": "Terminated",
+      "city": "Morgantown",
+      "state": "WV",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA076919"
+        ],
+        "brand_name": [
+          "LEVETIRACETAM"
+        ],
+        "generic_name": [
+          "LEVETIRACETAM"
+        ],
+        "manufacturer_name": [
+          "Mylan Pharmaceuticals Inc."
+        ],
+        "product_ndc": [
+          "0378-5615",
+          "0378-5617",
+          "0378-5619"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LEVETIRACETAM"
+        ],
+        "rxcui": [
+          "311289",
+          "311290",
+          "387003"
+        ],
+        "spl_id": [
+          "8eaa3318-fe96-4d3e-9f49-3286cb04bfbf"
+        ],
+        "spl_set_id": [
+          "0a987d59-560f-4650-96ec-31aec81953b5"
+        ],
+        "package_ndc": [
+          "0378-5615-78",
+          "0378-5615-05",
+          "0378-5617-78",
+          "0378-5617-05",
+          "0378-5619-91"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "nui": [
+          "N0000008486"
+        ],
+        "pharm_class_pe": [
+          "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+        ],
+        "unii": [
+          "44YRR34555"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "62885",
+      "recalling_firm": "Mylan Pharmaceuticals Inc.",
+      "address_1": "781 Chestnut Ridge Rd",
+      "address_2": "N/A",
+      "postal_code": "26505-2730",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "The product was distributed to KY.",
+      "recall_number": "D-1702-2012",
+      "product_description": "Levetiracetam Tablets, USP 500 mg, 500 count bottle, Rx only, Manufactured for: Mylan Pharmaceuticals Inc. Morgantown, WV 26505 USA, NDC 0378-5615-05",
+      "product_quantity": "960 bottles",
+      "reason_for_recall": "Adulterated Presence of Foreign Tablets: Pharmaceutical manufacturer may have distributed foreign tablets in bottles of Levetiracetam Tablets, USP 500 mg.",
+      "recall_initiation_date": "20120727",
+      "center_classification_date": "20120927",
+      "termination_date": "20130521",
+      "report_date": "20121003",
+      "code_info": "Lot ZLMM12063, Exp March 2014",
+      "more_code_info": ""
+    }
+  ]
+}

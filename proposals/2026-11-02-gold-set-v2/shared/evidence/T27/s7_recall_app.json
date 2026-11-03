@@ -1,0 +1,888 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 5
+    }
+  },
+  "results": [
+    {
+      "status": "Ongoing",
+      "city": "North Chicago",
+      "state": "IL",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "NDA021402"
+        ],
+        "brand_name": [
+          "SYNTHROID"
+        ],
+        "generic_name": [
+          "LEVOTHYROXINE SODIUM"
+        ],
+        "manufacturer_name": [
+          "AbbVie Inc."
+        ],
+        "product_ndc": [
+          "0074-3727",
+          "0074-4341",
+          "0074-4552",
+          "0074-5182",
+          "0074-6594",
+          "0074-6624",
+          "0074-9296",
+          "0074-7068",
+          "0074-7069",
+          "0074-7070",
+          "0074-7148",
+          "0074-7149"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LEVOTHYROXINE SODIUM"
+        ],
+        "rxcui": [
+          "892246",
+          "892251",
+          "892255",
+          "966158",
+          "966171",
+          "966185",
+          "966191",
+          "966201",
+          "966205",
+          "966218",
+          "966220",
+          "966221",
+          "966222",
+          "966224",
+          "966225",
+          "966247",
+          "966248",
+          "966249",
+          "966250",
+          "966251",
+          "966253",
+          "966270",
+          "966271",
+          "966282"
+        ],
+        "spl_id": [
+          "b85ab7fa-ba96-43cd-b736-44b3924e644c"
+        ],
+        "spl_set_id": [
+          "1e11ad30-1041-4520-10b0-8f9d30d30fcc"
+        ],
+        "package_ndc": [
+          "0074-4341-13",
+          "0074-4341-90",
+          "0074-4341-19",
+          "0074-4341-72",
+          "0074-4552-13",
+          "0074-4552-90",
+          "0074-4552-19",
+          "0074-4552-11",
+          "0074-4552-71",
+          "0074-4552-72",
+          "0074-5182-13",
+          "0074-5182-90",
+          "0074-5182-71",
+          "0074-5182-19",
+          "0074-5182-11",
+          "0074-5182-72",
+          "0074-6594-13",
+          "0074-6594-90",
+          "0074-6594-71",
+          "0074-6594-19",
+          "0074-6594-72",
+          "0074-6624-13",
+          "0074-6624-90",
+          "0074-6624-19",
+          "0074-6624-11",
+          "0074-6624-71",
+          "0074-6624-72",
+          "0074-9296-13",
+          "0074-9296-90",
+          "0074-9296-19",
+          "0074-9296-71",
+          "0074-9296-72",
+          "0074-7068-13",
+          "0074-7068-90",
+          "0074-7068-71",
+          "0074-7068-19",
+          "0074-7068-11",
+          "0074-7068-72",
+          "0074-3727-13",
+          "0074-3727-90",
+          "0074-3727-71",
+          "0074-3727-19",
+          "0074-3727-72",
+          "0074-7069-90",
+          "0074-7069-71",
+          "0074-7069-19",
+          "0074-7069-11",
+          "0074-7069-72",
+          "0074-7070-13",
+          "0074-7070-90",
+          "0074-7070-71",
+          "0074-7070-19",
+          "0074-7070-72",
+          "0074-7148-90",
+          "0074-7148-19",
+          "0074-7148-71",
+          "0074-7148-11",
+          "0074-7148-72",
+          "0074-7149-90",
+          "0074-7149-19"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0300747149902",
+          "0300747068197",
+          "0300744341194",
+          "0300745182192",
+          "0300747070190",
+          "0300747069903",
+          "0300749296192",
+          "0300743727906",
+          "0300747148905",
+          "0300746624905"
+        ],
+        "unii": [
+          "9J765S329G"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "93202",
+      "recalling_firm": "AbbVie Inc.",
+      "address_1": "1 N Waukegan Rd",
+      "address_2": "",
+      "postal_code": "60064-1802",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Distributed in the US. No government or foreign consignees.",
+      "recall_number": "D-0088-2024",
+      "product_description": "Synthroid, Levothyroxine Sodium Tablets, USP 125mcg (0.125mg), 100-count bottle, Rx Only AbbVie Inc. North Chicago, IL 60064, U.S.A. NDC 0074-7068-11",
+      "product_quantity": "864 cartons",
+      "reason_for_recall": "Labeling: Wrong Barcode- One (1) of every forty (40) unit dose blister will contain incorrect barcode information that causes a 125mcg unit dose is scanned as 200mcg unit dose.",
+      "recall_initiation_date": "20231017",
+      "center_classification_date": "20231105",
+      "report_date": "20231115",
+      "code_info": "Lot # 1187435 exp date: 02/2024",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Abbott Park",
+      "state": "IL",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "NDA021402"
+        ],
+        "brand_name": [
+          "SYNTHROID"
+        ],
+        "generic_name": [
+          "LEVOTHYROXINE SODIUM"
+        ],
+        "manufacturer_name": [
+          "AbbVie Inc."
+        ],
+        "product_ndc": [
+          "0074-3727",
+          "0074-4341",
+          "0074-4552",
+          "0074-5182",
+          "0074-6594",
+          "0074-6624",
+          "0074-9296",
+          "0074-7068",
+          "0074-7069",
+          "0074-7070",
+          "0074-7148",
+          "0074-7149"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LEVOTHYROXINE SODIUM"
+        ],
+        "rxcui": [
+          "892246",
+          "892251",
+          "892255",
+          "966158",
+          "966171",
+          "966185",
+          "966191",
+          "966201",
+          "966205",
+          "966218",
+          "966220",
+          "966221",
+          "966222",
+          "966224",
+          "966225",
+          "966247",
+          "966248",
+          "966249",
+          "966250",
+          "966251",
+          "966253",
+          "966270",
+          "966271",
+          "966282"
+        ],
+        "spl_id": [
+          "b85ab7fa-ba96-43cd-b736-44b3924e644c"
+        ],
+        "spl_set_id": [
+          "1e11ad30-1041-4520-10b0-8f9d30d30fcc"
+        ],
+        "package_ndc": [
+          "0074-4341-13",
+          "0074-4341-90",
+          "0074-4341-19",
+          "0074-4341-72",
+          "0074-4552-13",
+          "0074-4552-90",
+          "0074-4552-19",
+          "0074-4552-11",
+          "0074-4552-71",
+          "0074-4552-72",
+          "0074-5182-13",
+          "0074-5182-90",
+          "0074-5182-71",
+          "0074-5182-19",
+          "0074-5182-11",
+          "0074-5182-72",
+          "0074-6594-13",
+          "0074-6594-90",
+          "0074-6594-71",
+          "0074-6594-19",
+          "0074-6594-72",
+          "0074-6624-13",
+          "0074-6624-90",
+          "0074-6624-19",
+          "0074-6624-11",
+          "0074-6624-71",
+          "0074-6624-72",
+          "0074-9296-13",
+          "0074-9296-90",
+          "0074-9296-19",
+          "0074-9296-71",
+          "0074-9296-72",
+          "0074-7068-13",
+          "0074-7068-90",
+          "0074-7068-71",
+          "0074-7068-19",
+          "0074-7068-11",
+          "0074-7068-72",
+          "0074-3727-13",
+          "0074-3727-90",
+          "0074-3727-71",
+          "0074-3727-19",
+          "0074-3727-72",
+          "0074-7069-90",
+          "0074-7069-71",
+          "0074-7069-19",
+          "0074-7069-11",
+          "0074-7069-72",
+          "0074-7070-13",
+          "0074-7070-90",
+          "0074-7070-71",
+          "0074-7070-19",
+          "0074-7070-72",
+          "0074-7148-90",
+          "0074-7148-19",
+          "0074-7148-71",
+          "0074-7148-11",
+          "0074-7148-72",
+          "0074-7149-90",
+          "0074-7149-19"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0300747149902",
+          "0300747068197",
+          "0300744341194",
+          "0300745182192",
+          "0300747070190",
+          "0300747069903",
+          "0300749296192",
+          "0300743727906",
+          "0300747148905",
+          "0300746624905"
+        ],
+        "unii": [
+          "9J765S329G"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "63791",
+      "recalling_firm": "Abbott Laboratories",
+      "address_1": "100 Abbott Park Rd",
+      "address_2": "N/A",
+      "postal_code": "60064-3502",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "US Nationwide and Puerto Rico",
+      "recall_number": "D-107-2013",
+      "product_description": "Synthroid (Levothyroxine Sodium) tablets, 150 mcg (0.15 mg), 90 tablets per bottle, Rx Only, NDC 0074-7069-90; ABBOTT LABORATORIES NORTH CHICAGO, IL 60064 U.S.A.",
+      "product_quantity": "28, 524 bottles",
+      "reason_for_recall": "Labeling: Error on Declared Strength. Product labeled to contain 150 mcg tablets actually contained 75 mcg tablets.",
+      "recall_initiation_date": "20121204",
+      "center_classification_date": "20121228",
+      "termination_date": "20150710",
+      "report_date": "20130109",
+      "code_info": "LOT # 18262A8  Exp. 09/13"
+    },
+    {
+      "status": "Terminated",
+      "city": "Abbott Park",
+      "state": "IL",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "NDA021402"
+        ],
+        "brand_name": [
+          "SYNTHROID"
+        ],
+        "generic_name": [
+          "LEVOTHYROXINE SODIUM"
+        ],
+        "manufacturer_name": [
+          "AbbVie Inc."
+        ],
+        "product_ndc": [
+          "0074-3727",
+          "0074-4341",
+          "0074-4552",
+          "0074-5182",
+          "0074-6594",
+          "0074-6624",
+          "0074-9296",
+          "0074-7068",
+          "0074-7069",
+          "0074-7070",
+          "0074-7148",
+          "0074-7149"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LEVOTHYROXINE SODIUM"
+        ],
+        "rxcui": [
+          "892246",
+          "892251",
+          "892255",
+          "966158",
+          "966171",
+          "966185",
+          "966191",
+          "966201",
+          "966205",
+          "966218",
+          "966220",
+          "966221",
+          "966222",
+          "966224",
+          "966225",
+          "966247",
+          "966248",
+          "966249",
+          "966250",
+          "966251",
+          "966253",
+          "966270",
+          "966271",
+          "966282"
+        ],
+        "spl_id": [
+          "b85ab7fa-ba96-43cd-b736-44b3924e644c"
+        ],
+        "spl_set_id": [
+          "1e11ad30-1041-4520-10b0-8f9d30d30fcc"
+        ],
+        "package_ndc": [
+          "0074-4341-13",
+          "0074-4341-90",
+          "0074-4341-19",
+          "0074-4341-72",
+          "0074-4552-13",
+          "0074-4552-90",
+          "0074-4552-19",
+          "0074-4552-11",
+          "0074-4552-71",
+          "0074-4552-72",
+          "0074-5182-13",
+          "0074-5182-90",
+          "0074-5182-71",
+          "0074-5182-19",
+          "0074-5182-11",
+          "0074-5182-72",
+          "0074-6594-13",
+          "0074-6594-90",
+          "0074-6594-71",
+          "0074-6594-19",
+          "0074-6594-72",
+          "0074-6624-13",
+          "0074-6624-90",
+          "0074-6624-19",
+          "0074-6624-11",
+          "0074-6624-71",
+          "0074-6624-72",
+          "0074-9296-13",
+          "0074-9296-90",
+          "0074-9296-19",
+          "0074-9296-71",
+          "0074-9296-72",
+          "0074-7068-13",
+          "0074-7068-90",
+          "0074-7068-71",
+          "0074-7068-19",
+          "0074-7068-11",
+          "0074-7068-72",
+          "0074-3727-13",
+          "0074-3727-90",
+          "0074-3727-71",
+          "0074-3727-19",
+          "0074-3727-72",
+          "0074-7069-90",
+          "0074-7069-71",
+          "0074-7069-19",
+          "0074-7069-11",
+          "0074-7069-72",
+          "0074-7070-13",
+          "0074-7070-90",
+          "0074-7070-71",
+          "0074-7070-19",
+          "0074-7070-72",
+          "0074-7148-90",
+          "0074-7148-19",
+          "0074-7148-71",
+          "0074-7148-11",
+          "0074-7148-72",
+          "0074-7149-90",
+          "0074-7149-19"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0300747149902",
+          "0300747068197",
+          "0300744341194",
+          "0300745182192",
+          "0300747070190",
+          "0300747069903",
+          "0300749296192",
+          "0300743727906",
+          "0300747148905",
+          "0300746624905"
+        ],
+        "unii": [
+          "9J765S329G"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "62674",
+      "recalling_firm": "Abbott Laboratories",
+      "address_1": "100 Abbott Park Rd",
+      "address_2": "N/A",
+      "postal_code": "60064-3502",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1696-2012",
+      "product_description": "Synthroid (levothyroxine sodium) Tablets USP, 112 mcg, Rx Only, 90-Count Bottle, Abbott Laboratories, North Chicago, IL 60064, NDC: 0074-9296-90",
+      "product_quantity": "40,464 Bottles",
+      "reason_for_recall": "Defective Container: A number of Synthroid bottles have a localized thin wall defect on the bottom which may potentially impact the stability of the tablets.",
+      "recall_initiation_date": "20120719",
+      "center_classification_date": "20120926",
+      "termination_date": "20131101",
+      "report_date": "20121003",
+      "code_info": "Lot: 18355A8, Exp. 09/26/13",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Abbott Park",
+      "state": "IL",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "NDA021402"
+        ],
+        "brand_name": [
+          "SYNTHROID"
+        ],
+        "generic_name": [
+          "LEVOTHYROXINE SODIUM"
+        ],
+        "manufacturer_name": [
+          "AbbVie Inc."
+        ],
+        "product_ndc": [
+          "0074-3727",
+          "0074-4341",
+          "0074-4552",
+          "0074-5182",
+          "0074-6594",
+          "0074-6624",
+          "0074-9296",
+          "0074-7068",
+          "0074-7069",
+          "0074-7070",
+          "0074-7148",
+          "0074-7149"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LEVOTHYROXINE SODIUM"
+        ],
+        "rxcui": [
+          "892246",
+          "892251",
+          "892255",
+          "966158",
+          "966171",
+          "966185",
+          "966191",
+          "966201",
+          "966205",
+          "966218",
+          "966220",
+          "966221",
+          "966222",
+          "966224",
+          "966225",
+          "966247",
+          "966248",
+          "966249",
+          "966250",
+          "966251",
+          "966253",
+          "966270",
+          "966271",
+          "966282"
+        ],
+        "spl_id": [
+          "b85ab7fa-ba96-43cd-b736-44b3924e644c"
+        ],
+        "spl_set_id": [
+          "1e11ad30-1041-4520-10b0-8f9d30d30fcc"
+        ],
+        "package_ndc": [
+          "0074-4341-13",
+          "0074-4341-90",
+          "0074-4341-19",
+          "0074-4341-72",
+          "0074-4552-13",
+          "0074-4552-90",
+          "0074-4552-19",
+          "0074-4552-11",
+          "0074-4552-71",
+          "0074-4552-72",
+          "0074-5182-13",
+          "0074-5182-90",
+          "0074-5182-71",
+          "0074-5182-19",
+          "0074-5182-11",
+          "0074-5182-72",
+          "0074-6594-13",
+          "0074-6594-90",
+          "0074-6594-71",
+          "0074-6594-19",
+          "0074-6594-72",
+          "0074-6624-13",
+          "0074-6624-90",
+          "0074-6624-19",
+          "0074-6624-11",
+          "0074-6624-71",
+          "0074-6624-72",
+          "0074-9296-13",
+          "0074-9296-90",
+          "0074-9296-19",
+          "0074-9296-71",
+          "0074-9296-72",
+          "0074-7068-13",
+          "0074-7068-90",
+          "0074-7068-71",
+          "0074-7068-19",
+          "0074-7068-11",
+          "0074-7068-72",
+          "0074-3727-13",
+          "0074-3727-90",
+          "0074-3727-71",
+          "0074-3727-19",
+          "0074-3727-72",
+          "0074-7069-90",
+          "0074-7069-71",
+          "0074-7069-19",
+          "0074-7069-11",
+          "0074-7069-72",
+          "0074-7070-13",
+          "0074-7070-90",
+          "0074-7070-71",
+          "0074-7070-19",
+          "0074-7070-72",
+          "0074-7148-90",
+          "0074-7148-19",
+          "0074-7148-71",
+          "0074-7148-11",
+          "0074-7148-72",
+          "0074-7149-90",
+          "0074-7149-19"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0300747149902",
+          "0300747068197",
+          "0300744341194",
+          "0300745182192",
+          "0300747070190",
+          "0300747069903",
+          "0300749296192",
+          "0300743727906",
+          "0300747148905",
+          "0300746624905"
+        ],
+        "unii": [
+          "9J765S329G"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "62674",
+      "recalling_firm": "Abbott Laboratories",
+      "address_1": "100 Abbott Park Rd",
+      "address_2": "N/A",
+      "postal_code": "60064-3502",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1695-2012",
+      "product_description": "Synthroid (levothyroxine sodium) Tablets USP, 75 mcg, Rx Only, 90-Count Bottle, Abbott Laboratories, North Chicago, IL 60064, NDC: 0074-5182-90.",
+      "product_quantity": "42,596 Bottles",
+      "reason_for_recall": "Defective Container: A number of Synthroid bottles have a localized thin wall defect on the bottom which may potentially impact the stability of the tablets.",
+      "recall_initiation_date": "20120719",
+      "center_classification_date": "20120926",
+      "termination_date": "20131101",
+      "report_date": "20121003",
+      "code_info": "Lot: 18353A8, Exp 08/31/2013",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Abbott Park",
+      "state": "IL",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "NDA021402"
+        ],
+        "brand_name": [
+          "SYNTHROID"
+        ],
+        "generic_name": [
+          "LEVOTHYROXINE SODIUM"
+        ],
+        "manufacturer_name": [
+          "AbbVie Inc."
+        ],
+        "product_ndc": [
+          "0074-3727",
+          "0074-4341",
+          "0074-4552",
+          "0074-5182",
+          "0074-6594",
+          "0074-6624",
+          "0074-9296",
+          "0074-7068",
+          "0074-7069",
+          "0074-7070",
+          "0074-7148",
+          "0074-7149"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LEVOTHYROXINE SODIUM"
+        ],
+        "rxcui": [
+          "892246",
+          "892251",
+          "892255",
+          "966158",
+          "966171",
+          "966185",
+          "966191",
+          "966201",
+          "966205",
+          "966218",
+          "966220",
+          "966221",
+          "966222",
+          "966224",
+          "966225",
+          "966247",
+          "966248",
+          "966249",
+          "966250",
+          "966251",
+          "966253",
+          "966270",
+          "966271",
+          "966282"
+        ],
+        "spl_id": [
+          "b85ab7fa-ba96-43cd-b736-44b3924e644c"
+        ],
+        "spl_set_id": [
+          "1e11ad30-1041-4520-10b0-8f9d30d30fcc"
+        ],
+        "package_ndc": [
+          "0074-4341-13",
+          "0074-4341-90",
+          "0074-4341-19",
+          "0074-4341-72",
+          "0074-4552-13",
+          "0074-4552-90",
+          "0074-4552-19",
+          "0074-4552-11",
+          "0074-4552-71",
+          "0074-4552-72",
+          "0074-5182-13",
+          "0074-5182-90",
+          "0074-5182-71",
+          "0074-5182-19",
+          "0074-5182-11",
+          "0074-5182-72",
+          "0074-6594-13",
+          "0074-6594-90",
+          "0074-6594-71",
+          "0074-6594-19",
+          "0074-6594-72",
+          "0074-6624-13",
+          "0074-6624-90",
+          "0074-6624-19",
+          "0074-6624-11",
+          "0074-6624-71",
+          "0074-6624-72",
+          "0074-9296-13",
+          "0074-9296-90",
+          "0074-9296-19",
+          "0074-9296-71",
+          "0074-9296-72",
+          "0074-7068-13",
+          "0074-7068-90",
+          "0074-7068-71",
+          "0074-7068-19",
+          "0074-7068-11",
+          "0074-7068-72",
+          "0074-3727-13",
+          "0074-3727-90",
+          "0074-3727-71",
+          "0074-3727-19",
+          "0074-3727-72",
+          "0074-7069-90",
+          "0074-7069-71",
+          "0074-7069-19",
+          "0074-7069-11",
+          "0074-7069-72",
+          "0074-7070-13",
+          "0074-7070-90",
+          "0074-7070-71",
+          "0074-7070-19",
+          "0074-7070-72",
+          "0074-7148-90",
+          "0074-7148-19",
+          "0074-7148-71",
+          "0074-7148-11",
+          "0074-7148-72",
+          "0074-7149-90",
+          "0074-7149-19"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0300747149902",
+          "0300747068197",
+          "0300744341194",
+          "0300745182192",
+          "0300747070190",
+          "0300747069903",
+          "0300749296192",
+          "0300743727906",
+          "0300747148905",
+          "0300746624905"
+        ],
+        "unii": [
+          "9J765S329G"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "62674",
+      "recalling_firm": "Abbott Laboratories",
+      "address_1": "100 Abbott Park Rd",
+      "address_2": "N/A",
+      "postal_code": "60064-3502",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1694-2012",
+      "product_description": "Synthroid (levothyroxine sodium) Tablets USP, 50 mcg, Rx Only, 90-Count Bottle, Abbott Laboratories, North Chicago, IL 60064, NDC: 0074-4552-90.",
+      "product_quantity": "53,448 Bottles",
+      "reason_for_recall": "Defective Container: A number of Synthroid bottles have a localized thin wall defect on the bottom which may potentially impact the stability of the tablets.",
+      "recall_initiation_date": "20120719",
+      "center_classification_date": "20120926",
+      "termination_date": "20131101",
+      "report_date": "20121003",
+      "code_info": "18265A8, Exp 09/20/2013",
+      "more_code_info": ""
+    }
+  ]
+}

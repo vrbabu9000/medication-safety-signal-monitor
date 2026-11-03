@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "FATIGUE",
+      "count": 345
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 319
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 296
+    },
+    {
+      "term": "NAUSEA",
+      "count": 271
+    },
+    {
+      "term": "HEADACHE",
+      "count": 241
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 220
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 198
+    },
+    {
+      "term": "PAIN",
+      "count": 184
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 182
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 182
+    }
+  ]
+}

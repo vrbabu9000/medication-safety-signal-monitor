@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "PRODUCT DOSE OMISSION ISSUE",
+      "count": 43
+    },
+    {
+      "term": "LACTIC ACIDOSIS",
+      "count": 39
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 34
+    },
+    {
+      "term": "ACUTE KIDNEY INJURY",
+      "count": 32
+    },
+    {
+      "term": "NAUSEA",
+      "count": 32
+    },
+    {
+      "term": "FATIGUE",
+      "count": 28
+    },
+    {
+      "term": "VOMITING",
+      "count": 28
+    },
+    {
+      "term": "HYPOGLYCAEMIA",
+      "count": 24
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 24
+    },
+    {
+      "term": "BLOOD GLUCOSE INCREASED",
+      "count": 23
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "0006-0575",
+      "generic_name": "SITAGLIPTIN and METFORMIN HYDROCHLORIDE",
+      "labeler_name": "Merck Sharp & Dohme LLC",
+      "brand_name": "JANUMET",
+      "active_ingredients": [
+        {
+          "name": "SITAGLIPTIN PHOSPHATE",
+          "strength": "50 mg/1"
+        },
+        {
+          "name": "METFORMIN HYDROCHLORIDE",
+          "strength": "500 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "0006-0575-03",
+          "description": "2 BOTTLE in 1 CARTON (0006-0575-03)  / 14 TABLET, FILM COATED in 1 BOTTLE (0006-0575-02)",
+          "marketing_start_date": "20070330",
+          "sample": true
+        },
+        {
+          "package_ndc": "0006-0575-56",
+          "description": "4 POUCH in 1 CARTON (0006-0575-56)  / 2 BLISTER PACK in 1 POUCH / 7 TABLET, FILM COATED in 1 BLISTER PACK",
+          "marketing_start_date": "20070330",
+          "sample": true
+        },
+        {
+          "package_ndc": "0006-0575-61",
+          "description": "60 TABLET, FILM COATED in 1 BOTTLE (0006-0575-61)",
+          "marketing_start_date": "20070330",
+          "sample": false
+        },
+        {
+          "package_ndc": "0006-0575-62",
+          "description": "180 TABLET, FILM COATED in 1 BOTTLE (0006-0575-62)",
+          "marketing_start_date": "20070330",
+          "sample": false
+        },
+        {
+          "package_ndc": "0006-0575-82",
+          "description": "1000 TABLET, FILM COATED in 1 BOTTLE (0006-0575-82)",
+          "marketing_start_date": "20070330",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20271231",
+      "openfda": {
+        "manufacturer_name": [
+          "Merck Sharp & Dohme LLC"
+        ],
+        "rxcui": [
+          "861771",
+          "861821",
+          "2709488",
+          "2709491"
+        ],
+        "spl_set_id": [
+          "d19c7ed0-ad5c-426e-b2df-722508f97d67"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0300060575617",
+          "0300060577611"
+        ],
+        "unii": [
+          "TS63EW8X6F",
+          "786Z46389E"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET, FILM COATED",
+      "spl_id": "61bde692-38c6-42dc-aaac-503cc7e1d8f8",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20070330",
+      "product_id": "0006-0575_61bde692-38c6-42dc-aaac-503cc7e1d8f8",
+      "application_number": "NDA022044",
+      "brand_name_base": "JANUMET",
+      "pharm_class": [
+        "Biguanide [EPC]",
+        "Biguanides [CS]",
+        "Dipeptidyl Peptidase 4 Inhibitor [EPC]",
+        "Dipeptidyl Peptidase 4 Inhibitors [MoA]"
+      ]
+    }
+  ]
+}

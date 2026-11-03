@@ -1,0 +1,511 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 6
+    }
+  },
+  "results": [
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA201581"
+        ],
+        "brand_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "generic_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "manufacturer_name": [
+          "Dr.Reddy's Laboratories Limited"
+        ],
+        "product_ndc": [
+          "55111-593",
+          "55111-725",
+          "55111-594"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "rxcui": [
+          "200224",
+          "242438",
+          "311759"
+        ],
+        "spl_id": [
+          "8bc013e8-5324-099d-e603-d78012b126bd"
+        ],
+        "spl_set_id": [
+          "3d4451a9-d73d-b9de-68ec-853bfeff6e4b"
+        ],
+        "package_ndc": [
+          "55111-725-30",
+          "55111-725-90",
+          "55111-725-01",
+          "55111-725-10",
+          "55111-725-79",
+          "55111-725-78",
+          "55111-593-30",
+          "55111-593-90",
+          "55111-593-05",
+          "55111-593-79",
+          "55111-593-78",
+          "55111-594-30",
+          "55111-594-90",
+          "55111-594-05",
+          "55111-594-79",
+          "55111-594-78"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "U1O3J18SFL"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "93225",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-0086-2024",
+      "product_description": "Montelukast Sodium Tablets, USP 10 mg, Rx Only, 1000 count bottle, Distributed by: Dr. Reddy's Laboratories., Princeton, NJ 08540, Made in India, NDC# 55111-725-10.",
+      "product_quantity": "1,656 bottles",
+      "reason_for_recall": "Presence of Foreign Tablet(s)/Capsule(s): A foreign tablet was found in a bottle of Montelukast Sodium Tablets, USP 10mg, identified as metoprolol 25 mg.",
+      "recall_initiation_date": "20231013",
+      "center_classification_date": "20231103",
+      "termination_date": "20240909",
+      "report_date": "20231115",
+      "code_info": "Lot # C2305569, Exp. date 03/31/2026",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Durham",
+      "state": "NC",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202717"
+        ],
+        "brand_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "generic_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "manufacturer_name": [
+          "Accord Healthcare Inc."
+        ],
+        "product_ndc": [
+          "16729-119"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "rxcui": [
+          "200224"
+        ],
+        "spl_id": [
+          "d481e75b-ffed-a218-e053-2995a90a19c5"
+        ],
+        "spl_set_id": [
+          "6eea668f-a2fa-447f-b2d5-4c754d13d9fa"
+        ],
+        "package_ndc": [
+          "16729-119-10",
+          "16729-119-15",
+          "16729-119-17"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0316729119108",
+          "316729119108",
+          "316729119153",
+          "316729119177"
+        ],
+        "unii": [
+          "U1O3J18SFL"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "91657",
+      "recalling_firm": "Accord Healthcare, Inc.",
+      "address_1": "1009 Slater Rd Ste 210B",
+      "address_2": "N/A",
+      "postal_code": "27703-8446",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "United States including Puerto Rico and Canada",
+      "recall_number": "D-0400-2023",
+      "product_description": "Montelukast Sodium Tablets, USP, 10 mg* Rx Only, Packaged as: a) 30-count bottle NDC 16729-119-10 UPC 3 16729 11910 8; b) 90-count bottle NDC 16729-119-15 UPC 3 16729 11915 3; c) 1,000-count bottle NDC 16729-119-17 UPC 3 16729 11917 7; Manufactured for: Accord Healthcare, Inc., Durham, NC 27703. Manufactured by: Intas Pharmaceuticals Limited, Pharmez, Ahmedabad-382 213, INDIA",
+      "product_quantity": "665,469 bottles",
+      "reason_for_recall": "CGMP Deviations: recalling drug products following an FDA inspection.",
+      "recall_initiation_date": "20230207",
+      "center_classification_date": "20230302",
+      "termination_date": "20240422",
+      "report_date": "20230308",
+      "code_info": "Batches: a) R2000831, Exp. Date 11/30/2023; R2000832, Exp. Date 11/30/2023; R2200661, Exp. Date 5/31/2025;  b)R2000836, R2000837, R2000838, R2000840, R2000842, R2000835, R2000841, R2000833, Exp. Date 11/30/2023; R2100310, R2100311, R2100314, R2100312, R2100313, R2100315, R2100316, R2100317, R2100318, Exp. Date 2/29/2024; R2100859, Exp. Date 5/31/2024; R2100940, R2100993, Exp. Date 7/31/2024;  c) R2000473, Exp. Date 8/31/2023; R2000517, Exp. Date 9/30/2023; R2100036, R2100005, R2100037, R2100002, R2100040, R2100044, R2100045, R2100039, R2100038, R2100104, R2100047, R2100048, R2100046, R2100049, R2100056, R2100057, R2100101, R2100058, R2100050, R2100103, R2100102, R2100116, R2100108, R2100105, R2100123, R2100117, R2100118, R2100121, R2100122, R2100128, R2100119, R2100124, Exp. Date 12/31/2023; R2100124, R2100182, R2100184, R2100183, R2100188, R2100189, R2100186, R2100222, R2100197, R2100198, R2100203, R2100192, R2100196, R2100202, R2100199, R2100200, R2100223, R2100224, R2100225, R2100226, R2100228, R2100245, R2100227, R2100230, R2100229, Exp. Date 1/31/2024; R2100246, R2100253, R2100249, R2100251, R2100248, R2100263, R2100254, R2100264, R2100265, R2100266, R2100255, R2100256, R2100257,Exp. Date 2/29/2024; R2100445, R2100446, R2100449, R2100450, R2100451, Exp. Date 3/31/2024; R2100544, R2100545, R2100549, R2100550, R2100567, R2100568, R2100574, R2100576, R2100577, Exp. Date 4/30/2024; R2100594, R2100610, R2100600, R2100624, R2100626, R2100662, R2100661, R2100629, R2100776, R2100693, R2100681, R2100684, Exp. Date 5/31/2024; R2100725, R2100724, R2100726, R2100816, R2100804, R2100815, R2100834, R2100841, Exp. Date 6/30/2024; R2200188, R2200196, R2200195, Exp. Date 1/31/2025; R2200368, R2200366, R2200503, Exp. Date 3/31/2025; R2200659, R2200660, R2200751, R2200759, R2200761, R2200763, Exp. Date 5/31/2025; R2201016, R2201014, Exp. Date 7/31/2025;",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Plainsboro",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA203582"
+        ],
+        "brand_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "generic_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "manufacturer_name": [
+          "Macleods Pharmaceuticals Limited"
+        ],
+        "product_ndc": [
+          "33342-110",
+          "33342-111"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "MONTELUKAST"
+        ],
+        "rxcui": [
+          "242438",
+          "311759"
+        ],
+        "spl_id": [
+          "a12af8c6-41af-4850-b725-4f8226b35b67"
+        ],
+        "spl_set_id": [
+          "ce512844-5220-4661-809f-56d088699c9c"
+        ],
+        "package_ndc": [
+          "33342-110-07",
+          "33342-110-10",
+          "33342-110-15",
+          "33342-110-12",
+          "33342-110-39",
+          "33342-110-44",
+          "33342-111-07",
+          "33342-111-10",
+          "33342-111-15",
+          "33342-111-12",
+          "33342-111-39",
+          "33342-111-44"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0333342110077",
+          "0333342111074"
+        ],
+        "nui": [
+          "N0000175777",
+          "N0000000083"
+        ],
+        "pharm_class_epc": [
+          "Leukotriene Receptor Antagonist [EPC]"
+        ],
+        "pharm_class_moa": [
+          "Leukotriene Receptor Antagonists [MoA]"
+        ],
+        "unii": [
+          "MHM278SD3E"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "84749",
+      "recalling_firm": "Macleods Pharma Usa Inc",
+      "address_1": "666 Plainsboro Rd Bldg 200 Ste 230",
+      "address_2": "N/A",
+      "postal_code": "08536-0009",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide within the United States",
+      "recall_number": "D-0823-2020",
+      "product_description": "Montelukast Sodium Chewable Tablets, 5 mg, 90-count bottles, Rx Only, Manufactured for : Macleods Pharma USA, Inc. Plainsboro, NJ Manufactured by: Macleods Pharmaceuticals Ltd Baddi, Himachal Pradesh, India  NDC 33342-111-10",
+      "product_quantity": "10680 units",
+      "reason_for_recall": "Failed Dissolution Specifications:  testing revealed low out of specification result in one lot of product",
+      "recall_initiation_date": "20200120",
+      "center_classification_date": "20200131",
+      "termination_date": "20210426",
+      "report_date": "20200205",
+      "code_info": "Lot #: BMD8901B, Exp. Date 02/2021"
+    },
+    {
+      "status": "Terminated",
+      "city": "Jadcherla Mandal, Mahaboob Nagar",
+      "state": "",
+      "country": "India",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202843"
+        ],
+        "brand_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "generic_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "manufacturer_name": [
+          "Camber Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "31722-726"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "rxcui": [
+          "200224"
+        ],
+        "spl_id": [
+          "30387eb8-222d-146e-e063-6294a90a12a7"
+        ],
+        "spl_set_id": [
+          "97a682c2-7e00-4d07-a5ac-4436c977f842"
+        ],
+        "package_ndc": [
+          "31722-726-30",
+          "31722-726-90",
+          "31722-726-01",
+          "31722-726-10",
+          "31722-726-31",
+          "31722-726-32"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0331722726306"
+        ],
+        "unii": [
+          "U1O3J18SFL"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "81029",
+      "recalling_firm": "Hetero Labs Limited Unit V",
+      "address_1": "Unit V (SEZ Unit I in APIIC SEZ)",
+      "address_2": "Surv. No. 439-441, 458, Polepally Vill.",
+      "postal_code": "N/A",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the USA",
+      "recall_number": "D-1213-2018",
+      "product_description": "Montelukast Sodium Tablets, 10 mg*, 30-count bottles, Rx Only,  By: Hetero, Hetero Labs Limited, Unit V, Polepally, Jadcherla, Mahaboob Nagar - 509 301, India, Manufactured for: Camber Pharmaceuticals, Inc., Piscataway, NJ 08854, NDC 31722-726-30.",
+      "product_quantity": "98,016 bottles",
+      "reason_for_recall": "Discoloration: A complaint was received from a pharmacist for the presence of blue specks on tablets.",
+      "recall_initiation_date": "20180820",
+      "center_classification_date": "20180926",
+      "termination_date": "20211105",
+      "report_date": "20181003",
+      "code_info": "Lot #: MON17355, Exp 12/19",
+      "more_code_info": ""
+    },
+    {
+      "status": "Ongoing",
+      "city": "Jadcherla Mandal, Mahaboob Nagar",
+      "state": "",
+      "country": "India",
+      "classification": "Class I",
+      "openfda": {
+        "application_number": [
+          "ANDA202843"
+        ],
+        "brand_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "generic_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "manufacturer_name": [
+          "Camber Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "31722-726"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "rxcui": [
+          "200224"
+        ],
+        "spl_id": [
+          "30387eb8-222d-146e-e063-6294a90a12a7"
+        ],
+        "spl_set_id": [
+          "97a682c2-7e00-4d07-a5ac-4436c977f842"
+        ],
+        "package_ndc": [
+          "31722-726-30",
+          "31722-726-90",
+          "31722-726-01",
+          "31722-726-10",
+          "31722-726-31",
+          "31722-726-32"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0331722726306"
+        ],
+        "unii": [
+          "U1O3J18SFL"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "80803",
+      "recalling_firm": "Hetero Labs Limited Unit V",
+      "address_1": "Unit V (SEZ Unit I in APIIC SEZ)",
+      "address_2": "Surv. No. 439-441, 458, Polepally Vill.",
+      "postal_code": "N/A",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "U.S.A. Nationwide",
+      "recall_number": "D-0081-2019",
+      "product_description": "Montelukast Sodium Tablets 10 mg, 30-count bottle, Rx Only, By: Hetero Hetero Labs Limited, Unit V, Polepally, Jadcherla, Mahaboob Nagar - 509 301, India, Manfuactured for: Camber Pharmaceuticals, Inc. Piscataway, NJ 08854, NDC 31722-726-30",
+      "product_quantity": "98016 bottles",
+      "reason_for_recall": "Labeling: Label Mix-Up - One lot labeled Montelukast Sodium Tablets 10 mg tablets may contain 90 tablets of Losartan Potassium 50 mg.",
+      "recall_initiation_date": "20180815",
+      "center_classification_date": "20181017",
+      "report_date": "20181003",
+      "code_info": "Lot #: MON17384, Exp 12/19",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Piscataway",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA202843"
+        ],
+        "brand_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "generic_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "manufacturer_name": [
+          "Camber Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "31722-726"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "MONTELUKAST SODIUM"
+        ],
+        "rxcui": [
+          "200224"
+        ],
+        "spl_id": [
+          "30387eb8-222d-146e-e063-6294a90a12a7"
+        ],
+        "spl_set_id": [
+          "97a682c2-7e00-4d07-a5ac-4436c977f842"
+        ],
+        "package_ndc": [
+          "31722-726-30",
+          "31722-726-90",
+          "31722-726-01",
+          "31722-726-10",
+          "31722-726-31",
+          "31722-726-32"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0331722726306"
+        ],
+        "unii": [
+          "U1O3J18SFL"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "76412",
+      "recalling_firm": "Hetero USA Inc",
+      "address_1": "1035 Centennial Ave",
+      "address_2": "",
+      "postal_code": "08854-4124",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Two or more of the following: Email, Fax, Letter, Press Release, Telephone, Visit",
+      "distribution_pattern": "US Nationwide",
+      "recall_number": "D-0623-2017",
+      "product_description": "Montelukast sodium tablets, 10 mg, 30-count bottle, Rx Only, Manufactured for: Camber Pharmaceuticals, Inc., Piscataway, NJ 08854, By: HETERO Labs Limited, Unit V, Polepally, Jadcherla, Mahaboob  Nagar - 509 301, India, NDC 31722-726-30",
+      "product_quantity": "65,664 bottles",
+      "reason_for_recall": "Discoloration: the firm received a complaint of a sealed bottle in which tablets inside had blue spots and a blue powder inside the bottle.",
+      "recall_initiation_date": "20170107",
+      "center_classification_date": "20170329",
+      "termination_date": "20170808",
+      "report_date": "20170405",
+      "code_info": "Lot # MON16001B, Exp 01/18",
+      "more_code_info": ""
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "DRUG DEPENDENCE",
+      "count": 282
+    },
+    {
+      "term": "OVERDOSE",
+      "count": 112
+    },
+    {
+      "term": "DRUG ABUSE",
+      "count": 88
+    },
+    {
+      "term": "PAIN",
+      "count": 78
+    },
+    {
+      "term": "IMPAIRED QUALITY OF LIFE",
+      "count": 67
+    },
+    {
+      "term": "DEATH",
+      "count": 65
+    },
+    {
+      "term": "DRUG DIVERSION",
+      "count": 64
+    },
+    {
+      "term": "NAUSEA",
+      "count": 48
+    },
+    {
+      "term": "TOXICITY TO VARIOUS AGENTS",
+      "count": 46
+    },
+    {
+      "term": "EMOTIONAL DISTRESS",
+      "count": 43
+    }
+  ]
+}

@@ -1,0 +1,717 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "submissions": [
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "18",
+          "submission_status": "AP",
+          "submission_status_date": "20161220",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "46479",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2016/021957Orig1s018,021153Orig1s051,022101Orig1s015ltr.pdf",
+              "date": "20161222",
+              "type": "Letter"
+            },
+            {
+              "id": "46487",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2016/021153s051,021957s018,022101s015lbl.pdf",
+              "date": "20161221",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "5",
+          "submission_status": "AP",
+          "submission_status_date": "20090618",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "37950",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2009/021957s005lbl.pdf",
+              "date": "20090624",
+              "type": "Label"
+            },
+            {
+              "id": "53264",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/021957se5-004_se8-005_Esomeprazole (Nexium)_Clinical_BPCA.pdf",
+              "date": "19000101",
+              "type": "Pediatric Medical Review"
+            },
+            {
+              "id": "53265",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/021957se5-004_se8-005_Esomeprazole (Nexium)_Clinpharm_BPCA.pdf",
+              "date": "19000101",
+              "type": "Pediatric Clinical Pharmacology Review"
+            },
+            {
+              "id": "28917",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2009/021957s005ltr.pdf",
+              "date": "20100923",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "24",
+          "submission_status": "AP",
+          "submission_status_date": "20201127",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "65380",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2020/021153Orig1s057;021957Orig1s024;022101Orig1s021ltr.pdf",
+              "date": "20201130",
+              "type": "Letter"
+            },
+            {
+              "id": "65408",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/021153s057,021957s024,022101s021lbl.pdf",
+              "date": "20201130",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "16",
+          "submission_status": "AP",
+          "submission_status_date": "20140225",
+          "review_priority": "901 REQUIRED",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "6544",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2014/021153Orig1s049,021957Orig1s016,022101Orig1s013ltr.pdf",
+              "date": "20140227",
+              "type": "Letter"
+            },
+            {
+              "id": "16642",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2014/021153s049,021957s016,022101s013lbl.pdf",
+              "date": "20140305",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "3",
+          "submission_status": "AP",
+          "submission_status_date": "20090115",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "6540",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2009/021153s031, 021957s003, 022101s001ltr.pdf",
+              "date": "20090121",
+              "type": "Letter"
+            },
+            {
+              "id": "16637",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2009/021153s031,021957s003,022101s001lbl.pdf",
+              "date": "20090116",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "20080111",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "28915",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2008/021957s001,021153s029ltr.pdf",
+              "date": "20080118",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "14",
+          "submission_status": "AP",
+          "submission_status_date": "20121128",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "28922",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2012/021153Orig1s044,021957Orig1s014,022101Orig1s011ltr.pdf",
+              "date": "20121129",
+              "type": "Letter"
+            },
+            {
+              "id": "37955",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2012/021153s044,021957s014,022101s011lbl.pdf",
+              "date": "20121210",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "20",
+          "submission_status": "AP",
+          "submission_status_date": "20180607",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "54500",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2018/021153s053,022101s017,021957s020lbl.pdf",
+              "date": "20180611",
+              "type": "Label"
+            },
+            {
+              "id": "54566",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2018/021153Orig1s053,022101Orig1s017,021957Orig1s020ltr.pdf",
+              "date": "20180614",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "12",
+          "submission_status": "AP",
+          "submission_status_date": "20121009",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "37953",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2012/021153s042,021957s012,022101s009lbl.pdf",
+              "date": "20121012",
+              "type": "Label"
+            },
+            {
+              "id": "6542",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2012/021153Orig1s042,021957Orig1s012,022101Orig1s009ltr.pdf",
+              "date": "20121011",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "10",
+          "submission_status": "AP",
+          "submission_status_date": "20110630",
+          "review_priority": "UNKNOWN",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "16639",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2011/022101s007,021153s038,021957s010lbl.pdf",
+              "date": "20110706",
+              "type": "Label"
+            },
+            {
+              "id": "28920",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2011/022101s007,021153s038,021957s010,021689s020ltr.pdf",
+              "date": "20110706",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "ORIG",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "20061020",
+          "review_priority": "STANDARD",
+          "submission_class_code": "TYPE 3",
+          "submission_class_code_description": "Type 3 - New Dosage Form",
+          "application_docs": [
+            {
+              "id": "37948",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2006/021957lbl.pdf",
+              "date": "20070327",
+              "type": "Label"
+            },
+            {
+              "id": "44161",
+              "url": "http://www.fda.gov/Drugs/DrugSafety/InformationbyDrugClass/ucm213259.htm",
+              "date": "20111220",
+              "type": "Other Important Information from FDA"
+            },
+            {
+              "id": "21885",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2006/021957_nexium_toc.html",
+              "date": "20080905",
+              "type": "Review"
+            },
+            {
+              "id": "28914",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2006/021957s000ltr.pdf",
+              "date": "20061026",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "8",
+          "submission_status": "AP",
+          "submission_status_date": "20110621",
+          "review_priority": "UNKNOWN",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "37952",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2011/022101s005,021153s035,021957s008lbl.pdf",
+              "date": "20110629",
+              "type": "Label"
+            },
+            {
+              "id": "6541",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2011/022101s005,021153s035,021957s008,021689s016ltr.pdf",
+              "date": "20110627",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "27",
+          "submission_status": "AP",
+          "submission_status_date": "20230718",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "74799",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2023/021153Orig1s060;021957Orig1s027;022101Orig1s024ltr.pdf",
+              "date": "20230719",
+              "type": "Letter"
+            },
+            {
+              "id": "74835",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/021153s060,021957s027,022101s024lbl.pdf",
+              "date": "20230720",
+              "type": "Label"
+            },
+            {
+              "id": "74836",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/021153s060,021957s027,022101s024lbl.pdf#page=40",
+              "date": "20230720",
+              "type": "Medication Guide"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "19",
+          "submission_status": "AP",
+          "submission_status_date": "20161024",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "45662",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2016/021153Orig1s052,022101Orig1s016,021957Orig1s019ltr.pdf",
+              "date": "20161026",
+              "type": "Letter"
+            },
+            {
+              "id": "45695",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2016/021153s052_22101s016_21957s019lbl.pdf",
+              "date": "20161028",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "17",
+          "submission_status": "AP",
+          "submission_status_date": "20141219",
+          "review_priority": "901 REQUIRED",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "37956",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2014/022101s014021957s017021153s050lbl.pdf",
+              "date": "20141229",
+              "type": "Label"
+            },
+            {
+              "id": "28924",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2014/021153Orig1s050,021957Orig1s017,022101Orig1s014ltr.pdf",
+              "date": "20141224",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "4",
+          "submission_status": "AP",
+          "submission_status_date": "20111215",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "37949",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2011/021957s004lbl2.pdf",
+              "date": "20111223",
+              "type": "Label"
+            },
+            {
+              "id": "28916",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2011/021957s004ltr.pdf",
+              "date": "20111228",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "23",
+          "submission_status": "AP",
+          "submission_status_date": "20210825",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "68478",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2021/021153Orig1s056, 021957Orig1s023, 022101Orig1s020ltr.pdf",
+              "date": "20210827",
+              "type": "Letter"
+            },
+            {
+              "id": "68488",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2021/021153s056,021957s023,022101s020lbl.pdf",
+              "date": "20210831",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "15",
+          "submission_status": "AP",
+          "submission_status_date": "20140327",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "16641",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2014/021153s046,021957s015,022101s012lbl.pdf",
+              "date": "20140401",
+              "type": "Label"
+            },
+            {
+              "id": "28923",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2014/021153Orig1s046,021957Orig1s015,022101Orig1s012ltr.pdf",
+              "date": "20140328",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "13",
+          "submission_status": "AP",
+          "submission_status_date": "20120928",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "37954",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2012/021153s043_02195sS013_02210s010lbl.pdf",
+              "date": "20121001",
+              "type": "Label"
+            },
+            {
+              "id": "6543",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2012/021153Orig1s043,021957Orig1s013,022101Orig1s010ltr.pdf",
+              "date": "20121002",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "11",
+          "submission_status": "AP",
+          "submission_status_date": "20120120",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "16640",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2012/021153s040,021957s011,022101s008lbl.pdf",
+              "date": "20120124",
+              "type": "Label"
+            },
+            {
+              "id": "28921",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2012/022101s008,021153s040,021957s011ltr.pdf",
+              "date": "20120124",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "9",
+          "submission_status": "AP",
+          "submission_status_date": "20100903",
+          "review_priority": "UNKNOWN",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "16638",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2010/021153s036,021957s009,022101s006lbl.pdf",
+              "date": "20100910",
+              "type": "Label"
+            },
+            {
+              "id": "28919",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2010/021153s036,021957s009,022101s006ltr.pdf",
+              "date": "20100909",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "7",
+          "submission_status": "AP",
+          "submission_status_date": "20100304",
+          "review_priority": "UNKNOWN",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "37951",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2010/022101s004,021153s034,021957s007,021689s015lbl.pdf",
+              "date": "20100305",
+              "type": "Label"
+            },
+            {
+              "id": "28918",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2010/021153s034,021689s015,021957s007,022101s004ltr.pdf",
+              "date": "20100308",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "26",
+          "submission_status": "AP",
+          "submission_status_date": "20220304",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "70412",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2022/021153Orig1s059; 021957Orig1s026; 022101Orig1s023ltr.pdf",
+              "date": "20220307",
+              "type": "Letter"
+            },
+            {
+              "id": "74774",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/021153s059,021957s026,022101s023lbl.pdf",
+              "date": "20220310",
+              "type": "Label"
+            }
+          ]
+        }
+      ],
+      "application_number": "NDA021957",
+      "sponsor_name": "ASTRAZENECA",
+      "openfda": {
+        "application_number": [
+          "NDA021957"
+        ],
+        "brand_name": [
+          "NEXIUM"
+        ],
+        "generic_name": [
+          "ESOMEPRAZOLE MAGNESIUM"
+        ],
+        "manufacturer_name": [
+          "AstraZeneca Pharmaceuticals LP"
+        ],
+        "product_ndc": [
+          "0186-4020",
+          "0186-5020",
+          "0186-4010",
+          "0186-4040",
+          "0186-5040",
+          "0186-4025",
+          "0186-4050"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ESOMEPRAZOLE MAGNESIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "606726",
+          "606728",
+          "606730",
+          "606731",
+          "692576",
+          "692578",
+          "861568",
+          "861570",
+          "861576",
+          "861583",
+          "1297658",
+          "1297660",
+          "1297761",
+          "1297763"
+        ],
+        "spl_id": [
+          "26f66e74-b652-4b1d-bfff-62a3cc87d590"
+        ],
+        "spl_set_id": [
+          "f4853677-1622-4037-688b-fdf533a11d96"
+        ],
+        "package_ndc": [
+          "0186-5020-31",
+          "0186-5020-54",
+          "0186-5020-82",
+          "0186-4010-01",
+          "0186-4010-02",
+          "0186-4020-01",
+          "0186-4040-01",
+          "0186-4040-02",
+          "0186-5040-31",
+          "0186-5040-35",
+          "0186-5040-55",
+          "0186-5040-85",
+          "0186-5040-54",
+          "0186-5040-82",
+          "0186-5040-05",
+          "0186-4025-01",
+          "0186-4025-02",
+          "0186-4050-01"
+        ],
+        "unii": [
+          "R6DXU4WAY9"
+        ]
+      },
+      "products": [
+        {
+          "product_number": "003",
+          "reference_drug": "Yes",
+          "brand_name": "NEXIUM",
+          "active_ingredients": [
+            {
+              "name": "ESOMEPRAZOLE MAGNESIUM",
+              "strength": "EQ 2.5MG BASE/PACKET"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "FOR SUSPENSION, DELAYED RELEASE",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        },
+        {
+          "product_number": "001",
+          "reference_drug": "Yes",
+          "brand_name": "NEXIUM",
+          "active_ingredients": [
+            {
+              "name": "ESOMEPRAZOLE MAGNESIUM",
+              "strength": "EQ 20MG BASE/PACKET"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "FOR SUSPENSION, DELAYED RELEASE",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        },
+        {
+          "product_number": "004",
+          "reference_drug": "Yes",
+          "brand_name": "NEXIUM",
+          "active_ingredients": [
+            {
+              "name": "ESOMEPRAZOLE MAGNESIUM",
+              "strength": "EQ 5MG BASE/PACKET"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "FOR SUSPENSION, DELAYED RELEASE",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        },
+        {
+          "product_number": "002",
+          "reference_drug": "Yes",
+          "brand_name": "NEXIUM",
+          "active_ingredients": [
+            {
+              "name": "ESOMEPRAZOLE MAGNESIUM",
+              "strength": "EQ 40MG BASE/PACKET"
+            }
+          ],
+          "reference_standard": "Yes",
+          "dosage_form": "FOR SUSPENSION, DELAYED RELEASE",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        }
+      ]
+    }
+  ]
+}

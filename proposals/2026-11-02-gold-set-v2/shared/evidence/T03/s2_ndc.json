@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "0024-1171",
+      "generic_name": "clopidogrel",
+      "labeler_name": "Sanofi-Aventis U.S. LLC",
+      "brand_name": "Plavix",
+      "active_ingredients": [
+        {
+          "name": "CLOPIDOGREL BISULFATE",
+          "strength": "75 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "0024-1171-90",
+          "description": "90 TABLET, FILM COATED in 1 BOTTLE (0024-1171-90)",
+          "marketing_start_date": "20200713",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20261231",
+      "openfda": {
+        "manufacturer_name": [
+          "Sanofi-Aventis U.S. LLC"
+        ],
+        "rxcui": [
+          "213169",
+          "309362",
+          "749196",
+          "749198"
+        ],
+        "spl_set_id": [
+          "de8b0b67-eb25-4684-83b5-7ad785314227"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "08I79HTP27"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET, FILM COATED",
+      "spl_id": "ed60a9e7-49f4-469c-bb7a-08e1bb6057e2",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "19971117",
+      "product_id": "0024-1171_ed60a9e7-49f4-469c-bb7a-08e1bb6057e2",
+      "application_number": "NDA020839",
+      "brand_name_base": "Plavix",
+      "pharm_class": [
+        "Cytochrome P450 2C8 Inhibitors [MoA]",
+        "Decreased Platelet Aggregation [PE]",
+        "P2Y12 Platelet Inhibitor [EPC]",
+        "P2Y12 Receptor Antagonists [MoA]"
+      ]
+    }
+  ]
+}

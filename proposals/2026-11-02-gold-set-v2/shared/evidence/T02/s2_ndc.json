@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "0597-0425",
+      "generic_name": "dabigatran etexilate",
+      "labeler_name": "Boehringer Ingelheim Pharmaceuticals, Inc.",
+      "brand_name": "Pradaxa",
+      "active_ingredients": [
+        {
+          "name": "DABIGATRAN ETEXILATE MESYLATE",
+          "strength": "20 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "0597-0425-78",
+          "description": "1 BAG in 1 CARTON (0597-0425-78)  / 60 PELLET in 1 BAG",
+          "marketing_start_date": "20220316",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20261231",
+      "openfda": {
+        "manufacturer_name": [
+          "Boehringer Ingelheim Pharmaceuticals, Inc."
+        ],
+        "rxcui": [
+          "2590616",
+          "2590619",
+          "2590620",
+          "2590621",
+          "2590623",
+          "2590625",
+          "2590627",
+          "2590629",
+          "2590631",
+          "2590633",
+          "2590635",
+          "2590637"
+        ],
+        "spl_set_id": [
+          "9ac0a64a-8666-45f7-9d4f-40fd894f7e6d"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "SC7NUW5IIT"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "PELLET",
+      "spl_id": "56b1a7c2-0afd-40c6-bda5-563e234a9f28",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20220316",
+      "product_id": "0597-0425_56b1a7c2-0afd-40c6-bda5-563e234a9f28",
+      "application_number": "NDA214358",
+      "brand_name_base": "Pradaxa",
+      "pharm_class": [
+        "Direct Thrombin Inhibitor [EPC]",
+        "Thrombin Inhibitors [MoA]"
+      ]
+    }
+  ]
+}

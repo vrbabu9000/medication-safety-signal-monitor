@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "0074-3727",
+      "generic_name": "Levothyroxine Sodium",
+      "labeler_name": "AbbVie Inc.",
+      "brand_name": "Synthroid",
+      "active_ingredients": [
+        {
+          "name": "LEVOTHYROXINE SODIUM",
+          "strength": "137 ug/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "0074-3727-19",
+          "description": "1000 TABLET in 1 BOTTLE (0074-3727-19)",
+          "marketing_start_date": "20020724",
+          "sample": false
+        },
+        {
+          "package_ndc": "0074-3727-72",
+          "description": "2 BLISTER PACK in 1 CARTON (0074-3727-72)  / 7 TABLET in 1 BLISTER PACK",
+          "marketing_start_date": "20020724",
+          "sample": true
+        },
+        {
+          "package_ndc": "0074-3727-90",
+          "description": "90 TABLET in 1 BOTTLE (0074-3727-90)",
+          "marketing_start_date": "20020724",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20261231",
+      "openfda": {
+        "manufacturer_name": [
+          "AbbVie Inc."
+        ],
+        "rxcui": [
+          "892246",
+          "892251",
+          "892255",
+          "966158",
+          "966171",
+          "966185",
+          "966191",
+          "966201",
+          "966205",
+          "966218",
+          "966220",
+          "966221",
+          "966222",
+          "966224",
+          "966225",
+          "966247",
+          "966248",
+          "966249",
+          "966250",
+          "966251",
+          "966253",
+          "966270",
+          "966271",
+          "966282"
+        ],
+        "spl_set_id": [
+          "1e11ad30-1041-4520-10b0-8f9d30d30fcc"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0300747149902",
+          "0300747068197",
+          "0300744341194",
+          "0300745182192",
+          "0300747070190",
+          "0300747069903",
+          "0300749296192",
+          "0300743727906",
+          "0300747148905",
+          "0300746624905"
+        ],
+        "unii": [
+          "9J765S329G"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET",
+      "spl_id": "b85ab7fa-ba96-43cd-b736-44b3924e644c",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20020724",
+      "product_id": "0074-3727_b85ab7fa-ba96-43cd-b736-44b3924e644c",
+      "application_number": "NDA021402",
+      "brand_name_base": "Synthroid",
+      "pharm_class": [
+        "Thyroxine [CS]",
+        "l-Thyroxine [EPC]"
+      ]
+    }
+  ]
+}

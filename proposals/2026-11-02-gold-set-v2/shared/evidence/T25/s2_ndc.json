@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "0078-0358",
+      "generic_name": "valsartan",
+      "labeler_name": "Novartis Pharmaceuticals Corporation",
+      "brand_name": "Diovan",
+      "active_ingredients": [
+        {
+          "name": "VALSARTAN",
+          "strength": "80 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "0078-0358-34",
+          "description": "90 TABLET in 1 BOTTLE (0078-0358-34)",
+          "marketing_start_date": "20010701",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20271231",
+      "openfda": {
+        "manufacturer_name": [
+          "Novartis Pharmaceuticals Corporation"
+        ],
+        "rxcui": [
+          "349199",
+          "349200",
+          "349201",
+          "349483",
+          "351761",
+          "351762",
+          "352001",
+          "352274"
+        ],
+        "spl_set_id": [
+          "5ddba454-f3e6-43c2-a7a6-58365d297213"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "nui": [
+          "N0000000070",
+          "N0000175561"
+        ],
+        "pharm_class_moa": [
+          "Angiotensin 2 Receptor Antagonists [MoA]"
+        ],
+        "pharm_class_epc": [
+          "Angiotensin 2 Receptor Blocker [EPC]"
+        ],
+        "unii": [
+          "80M03YXJ7I"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET",
+      "spl_id": "8b57e357-5cfb-49a6-a600-59ce118fd1e9",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20010701",
+      "product_id": "0078-0358_8b57e357-5cfb-49a6-a600-59ce118fd1e9",
+      "application_number": "NDA021283",
+      "brand_name_base": "Diovan",
+      "pharm_class": [
+        "Angiotensin 2 Receptor Antagonists [MoA]",
+        "Angiotensin 2 Receptor Blocker [EPC]"
+      ]
+    }
+  ]
+}

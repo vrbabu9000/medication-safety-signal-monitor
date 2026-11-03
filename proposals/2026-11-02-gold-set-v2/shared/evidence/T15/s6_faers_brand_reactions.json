@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "OFF LABEL USE",
+      "count": 424
+    },
+    {
+      "term": "MATERNAL EXPOSURE DURING PREGNANCY",
+      "count": 364
+    },
+    {
+      "term": "RASH",
+      "count": 363
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 339
+    },
+    {
+      "term": "PAIN",
+      "count": 334
+    },
+    {
+      "term": "PEMPHIGUS",
+      "count": 332
+    },
+    {
+      "term": "SWELLING",
+      "count": 332
+    },
+    {
+      "term": "SYSTEMIC LUPUS ERYTHEMATOSUS",
+      "count": 328
+    },
+    {
+      "term": "TYPE 2 DIABETES MELLITUS",
+      "count": 328
+    },
+    {
+      "term": "PERICARDITIS",
+      "count": 320
+    }
+  ]
+}

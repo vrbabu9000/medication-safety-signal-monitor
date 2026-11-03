@@ -1,0 +1,587 @@
+{
+ "trace_id": "T08",
+ "questions_sha256": "e05fb6707c1ff83f4fae95eae4d12310fc5f1583bd1bc913ef8aee7357df0db3",
+ "checks": [
+  {
+   "check": "8 steps answered",
+   "pass": true,
+   "detail": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8"
+   ]
+  },
+  {
+   "check": "hash T08.s1_rx_brand",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s1_rx_brand",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s1_rx_brand_props",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s1_rx_brand_props",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s1_rx_ingredients",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s1_rx_ingredients",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s1_rx_reverse_1488564",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s1_rx_reverse_1488564",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s2_ndc",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s2_ndc",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s3_drugsfda",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s3_drugsfda",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s4_label",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s4_label",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s5_srlc_detail",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s5_srlc_detail",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s5_srlc_search",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s5_srlc_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s6_faers_brand_reactions",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s6_faers_brand_reactions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s6_faers_brand_total",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s6_faers_brand_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s6_faers_substance",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s6_faers_substance",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s6_faers_total",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s6_faers_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s7_recall_app",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s7_recall_app",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s7_recall_ingredient",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s7_recall_ingredient",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s8_trial",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s8_trial",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s8_trials_search",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s8_trials_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T08.s8_trials_version",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T08.s8_trials_version",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S1 cites manifest hash for T08.s1_rx_brand",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S1 cites manifest hash for T08.s1_rx_brand_props",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S1 cites manifest hash for T08.s1_rx_ingredients",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S1 cites manifest hash for T08.s1_rx_reverse_1488564",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S1 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S2 cites manifest hash for T08.s2_ndc",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S2 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S3 cites manifest hash for T08.s3_drugsfda",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S3 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S4 cites manifest hash for T08.s4_label",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S4 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S5 cites manifest hash for T08.s5_srlc_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S5 cites manifest hash for T08.s5_srlc_detail",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S5 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S6 cites manifest hash for T08.s6_faers_substance",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S6 cites manifest hash for T08.s6_faers_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S6 cites manifest hash for T08.s6_faers_brand_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S6 cites manifest hash for T08.s6_faers_brand_reactions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S6 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S7 cites manifest hash for T08.s7_recall_ingredient",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S7 cites manifest hash for T08.s7_recall_app",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S7 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S8 cites manifest hash for T08.s8_trials_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S8 cites manifest hash for T08.s8_trial",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S8 cites manifest hash for T08.s8_trials_version",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T08-S8 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S1 brand rxcui",
+   "pass": true,
+   "detail": "1486972"
+  },
+  {
+   "check": "S1 tty",
+   "pass": true,
+   "detail": "BN"
+  },
+  {
+   "check": "S1 ingredients",
+   "pass": true,
+   "detail": [
+    [
+     "1488564",
+     "dapagliflozin"
+    ]
+   ]
+  },
+  {
+   "check": "S1 multi flag",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S1 reverse IN 1488564 -> brand",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S2 labeler/category/app",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S2 package description",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S2 set id link",
+   "pass": true,
+   "detail": "72ad22ae-efe6-4cd6-a302-98aaee423d69"
+  },
+  {
+   "check": "S3 sponsor",
+   "pass": true,
+   "detail": "ASTRAZENECA AB"
+  },
+  {
+   "check": "S3 products",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S3 app link",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S4 section found once by id",
+   "pass": true,
+   "detail": "9823dd6c-e784-41a3-903f-701f62b30cb7"
+  },
+  {
+   "check": "S4 heading matches",
+   "pass": true,
+   "detail": "5.1 Diabetic Ketoacidosis in Patients with Type 1 Diabetes Mellitus and Other Ketoacidosis"
+  },
+  {
+   "check": "S4 quote verbatim in passage",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S4 target phrase in passage",
+   "pass": true,
+   "detail": "abdominal pain"
+  },
+  {
+   "check": "S4 class allowed",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S5 page header names application",
+   "pass": true,
+   "detail": "NDA202293"
+  },
+  {
+   "check": "S5 passage is underlined text on the page",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S5 entry date + supplement on page",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S5 no newer entry with underlined Boxed/4/5/6 text",
+   "pass": true,
+   "detail": []
+  },
+  {
+   "check": "S5 presence in S4 label",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 substance",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 substance total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 brand total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 s6_faers_total holds no report records",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 s6_faers_brand_total holds no report records",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 terms and counts",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'DIARRHOEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'NAUSEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'NAUSEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'FATIGUE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'PRODUCT DOSE OMISSION ISSUE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'DIZZINESS'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'VOMITING'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'VOMITING'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'OFF LABEL USE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'HEADACHE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'CONSTIPATION'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'CONSTIPATION'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'DEATH'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'DEATH'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S7 most recent record",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S7 fields",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S7 package named in record text",
+   "pass": true,
+   "detail": "0310-6205-30"
+  },
+  {
+   "check": "S7 application-level query was empty",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S8 nct + status",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S8 group values",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S8 study is in captured search",
+   "pass": true,
+   "detail": 6
+  },
+  {
+   "check": "S8 group title names drug",
+   "pass": true,
+   "detail": "Dapagliflozin, 2.5 mg (Randomized Before Protocol Amendment 8)"
+  },
+  {
+   "check": "S8 no earlier study in search order qualifies",
+   "pass": true,
+   "detail": []
+  }
+ ],
+ "passed": 113,
+ "failed": []
+}

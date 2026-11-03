@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 2
+    }
+  },
+  "results": [
+    {
+      "status": "Ongoing",
+      "city": "Naples",
+      "state": "FL",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA077670"
+        ],
+        "brand_name": [
+          "SERTRALINE HYDROCHLORIDE"
+        ],
+        "generic_name": [
+          "SERTRALINE HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "Lupin Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "68180-351",
+          "68180-352",
+          "68180-353",
+          "68180-978",
+          "68180-986",
+          "68180-992"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "SERTRALINE HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "312938",
+          "312940",
+          "312941"
+        ],
+        "spl_id": [
+          "37fc8b27-bf23-4fe6-8d44-5331bde5b466"
+        ],
+        "spl_set_id": [
+          "42120ff8-b353-4632-9ea9-54de9a698724"
+        ],
+        "package_ndc": [
+          "68180-351-08",
+          "68180-351-06",
+          "68180-351-09",
+          "68180-351-03",
+          "68180-351-01",
+          "68180-352-11",
+          "68180-352-01",
+          "68180-352-03",
+          "68180-352-06",
+          "68180-352-09",
+          "68180-352-02",
+          "68180-352-05",
+          "68180-353-11",
+          "68180-353-01",
+          "68180-353-03",
+          "68180-353-02",
+          "68180-353-06",
+          "68180-353-09",
+          "68180-353-05",
+          "68180-978-01",
+          "68180-978-02",
+          "68180-978-03",
+          "68180-986-04",
+          "68180-986-02",
+          "68180-986-01",
+          "68180-986-03",
+          "68180-992-04",
+          "68180-992-01",
+          "68180-992-02",
+          "68180-992-03"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "UTI8907Y6X"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "97936",
+      "recalling_firm": "Lupin Pharmaceuticals Inc.",
+      "address_1": "5801 Pelican Bay Blvd",
+      "address_2": "Suite 500",
+      "postal_code": "34108-2755",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide.",
+      "recall_number": "D-0227-2026",
+      "product_description": "Sertraline Hydrochloride Tablets USP, 100 mg, 90 Tablets bottles, Rx Only, Manufactured by: Lupin Pharmaceuticals, Inc., Naples, FL 34108, NDC 68180-353-09.",
+      "product_quantity": "52,128 bottles",
+      "reason_for_recall": "Defective container - seal not adhering to bottles",
+      "recall_initiation_date": "20251105",
+      "center_classification_date": "20251210",
+      "report_date": "20251217",
+      "code_info": "Lot # QB00865, exp. date Feb 2028",
+      "more_code_info": ""
+    },
+    {
+      "status": "Ongoing",
+      "city": "Earth City",
+      "state": "MO",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA077397"
+        ],
+        "brand_name": [
+          "SERTRALINE HYDROCHLORIDE"
+        ],
+        "generic_name": [
+          "SERTRALINE HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "Legacy Pharmaceutical Packaging, LLC"
+        ],
+        "product_ndc": [
+          "68645-521",
+          "68645-522",
+          "68645-523"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "SERTRALINE HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "312938",
+          "312940",
+          "312941"
+        ],
+        "spl_id": [
+          "4cc29310-2a31-9e2e-e063-6294a90a8e5d"
+        ],
+        "spl_set_id": [
+          "bd86b293-dab9-4d37-95eb-2bffca335d16"
+        ],
+        "package_ndc": [
+          "68645-521-54",
+          "68645-522-54",
+          "68645-523-54"
+        ],
+        "original_packager_product_ndc": [
+          "69097-833",
+          "69097-834",
+          "69097-835"
+        ],
+        "upc": [
+          "0368645522548",
+          "0368645521541",
+          "0368645523545"
+        ],
+        "unii": [
+          "UTI8907Y6X"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "93605",
+      "recalling_firm": "Legacy Pharmaceutical Packaging LLC",
+      "address_1": "13333 Lakefront Dr",
+      "address_2": "",
+      "postal_code": "63045-1514",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "CA and AR",
+      "recall_number": "D-0205-2024",
+      "product_description": "Sertraline Tablets, USP 100 mg, 30 tablets per bottle, Distributed by: Wal-Mart, Bentonville, AR 72716, Manufactured for: Cipla USA, Inc., Warren, NJ 07059, Packaged by: Legacy Pharmaceutical Packaging LLC., Earth City, MO 63045, NDC# 68645-523-54",
+      "product_quantity": "161,664 bottles",
+      "reason_for_recall": "CGMP Deviations: Inadequate line clearance which may result in a potential comingling of product.",
+      "recall_initiation_date": "20231211",
+      "center_classification_date": "20231226",
+      "report_date": "20240103",
+      "code_info": "Lot #: 222033, exp. date 08/31/2024",
+      "more_code_info": ""
+    }
+  ]
+}

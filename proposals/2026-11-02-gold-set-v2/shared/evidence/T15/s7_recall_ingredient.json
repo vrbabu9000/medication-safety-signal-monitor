@@ -1,0 +1,567 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 5
+    }
+  },
+  "results": [
+    {
+      "status": "Terminated",
+      "city": "Pulaski",
+      "state": "TN",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA079132"
+        ],
+        "brand_name": [
+          "LAMOTRIGINE"
+        ],
+        "generic_name": [
+          "LAMOTRIGINE"
+        ],
+        "manufacturer_name": [
+          "AvKARE"
+        ],
+        "product_ndc": [
+          "42291-366",
+          "42291-367",
+          "42291-368",
+          "42291-369"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LAMOTRIGINE"
+        ],
+        "rxcui": [
+          "198427",
+          "198428",
+          "198429",
+          "282401"
+        ],
+        "spl_id": [
+          "51b57ded-2d7d-d540-e063-6394a90a4744"
+        ],
+        "spl_set_id": [
+          "fcdb94a8-33be-6375-98ef-6933999d157f"
+        ],
+        "package_ndc": [
+          "42291-366-01",
+          "42291-366-10",
+          "42291-367-01",
+          "42291-367-10",
+          "42291-368-60",
+          "42291-368-50",
+          "42291-369-60",
+          "42291-369-50"
+        ],
+        "original_packager_product_ndc": [
+          "59746-245",
+          "59746-246",
+          "59746-247",
+          "59746-248"
+        ],
+        "upc": [
+          "0342291368606",
+          "342291367104"
+        ],
+        "nui": [
+          "N0000175753",
+          "N0000008486",
+          "N0000175751",
+          "N0000187061",
+          "N0000000191"
+        ],
+        "pharm_class_epc": [
+          "Anti-epileptic Agent [EPC]",
+          "Mood Stabilizer [EPC]"
+        ],
+        "pharm_class_pe": [
+          "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+        ],
+        "pharm_class_moa": [
+          "Organic Cation Transporter 2 Inhibitors [MoA]",
+          "Dihydrofolate Reductase Inhibitors [MoA]"
+        ],
+        "unii": [
+          "U3H27498KS"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90637",
+      "recalling_firm": "AVKARE Inc.",
+      "address_1": "615 N 1st St",
+      "address_2": "",
+      "postal_code": "38478-2403",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide within the United States",
+      "recall_number": "D-1329-2022",
+      "product_description": "Lamotrigine Tablets, USP 100 mg, 1000-count bottles, Rx Only, Manufactured for: AvKARE, Inc. Pulaski, TN 38478, NDC 42291-367-10, UPC 3 42291 36710 4",
+      "product_quantity": "8328 bottles",
+      "reason_for_recall": "Labeling: Label Error on Declared Strength",
+      "recall_initiation_date": "20220720",
+      "center_classification_date": "20220808",
+      "termination_date": "20240930",
+      "report_date": "20220817",
+      "code_info": "Lot #: 42581 Exp. 12/2024; 42484 Exp. 11/2024; 41204 Exp. 05/2024; 38723 Exp. 02/2023; 37623 Exp. 10/2022",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Pulaski",
+      "state": "TN",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA079132"
+        ],
+        "brand_name": [
+          "LAMOTRIGINE"
+        ],
+        "generic_name": [
+          "LAMOTRIGINE"
+        ],
+        "manufacturer_name": [
+          "AvKARE"
+        ],
+        "product_ndc": [
+          "42291-366",
+          "42291-367",
+          "42291-368",
+          "42291-369"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LAMOTRIGINE"
+        ],
+        "rxcui": [
+          "198427",
+          "198428",
+          "198429",
+          "282401"
+        ],
+        "spl_id": [
+          "51b57ded-2d7d-d540-e063-6394a90a4744"
+        ],
+        "spl_set_id": [
+          "fcdb94a8-33be-6375-98ef-6933999d157f"
+        ],
+        "package_ndc": [
+          "42291-366-01",
+          "42291-366-10",
+          "42291-367-01",
+          "42291-367-10",
+          "42291-368-60",
+          "42291-368-50",
+          "42291-369-60",
+          "42291-369-50"
+        ],
+        "original_packager_product_ndc": [
+          "59746-245",
+          "59746-246",
+          "59746-247",
+          "59746-248"
+        ],
+        "upc": [
+          "0342291368606"
+        ],
+        "nui": [
+          "N0000175753",
+          "N0000008486",
+          "N0000175751",
+          "N0000187061",
+          "N0000000191"
+        ],
+        "pharm_class_epc": [
+          "Anti-epileptic Agent [EPC]",
+          "Mood Stabilizer [EPC]"
+        ],
+        "pharm_class_pe": [
+          "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+        ],
+        "pharm_class_moa": [
+          "Organic Cation Transporter 2 Inhibitors [MoA]",
+          "Dihydrofolate Reductase Inhibitors [MoA]"
+        ],
+        "unii": [
+          "U3H27498KS"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "85783",
+      "recalling_firm": "AVKARE Inc.",
+      "address_1": "615 N 1st St",
+      "address_2": "N/A",
+      "postal_code": "38478-2403",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the U.S.",
+      "recall_number": "D-1289-2020",
+      "product_description": "Lamotrigine Tablets, USP, 150 mg, Rx Only, a) 60 count Bottle, NDC 42291-368-60, b) 500 count Bottle, NDC 42291-368-50, Manufactured for: AvKARE, Inc. Pulaski, TN 38478.",
+      "product_quantity": "4124 bottles",
+      "reason_for_recall": "Presence of Foreign Substance consistent with granules from desiccant packs used during storage",
+      "recall_initiation_date": "20200528",
+      "center_classification_date": "20200604",
+      "termination_date": "20211022",
+      "report_date": "20200610",
+      "code_info": "Lot #: a) 25634, b) 25633; Exp. 09/30/2021"
+    },
+    {
+      "status": "Terminated",
+      "city": "Hawthorne",
+      "state": "NY",
+      "country": "United States",
+      "classification": "Class I",
+      "openfda": {
+        "application_number": [
+          "ANDA078525"
+        ],
+        "brand_name": [
+          "LAMOTRIGINE"
+        ],
+        "generic_name": [
+          "LAMOTRIGINE"
+        ],
+        "manufacturer_name": [
+          "Sun Pharmaceutical Industries, Inc."
+        ],
+        "product_ndc": [
+          "51672-4130",
+          "51672-4131",
+          "51672-4132",
+          "51672-4133"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LAMOTRIGINE"
+        ],
+        "rxcui": [
+          "198427",
+          "198428",
+          "198429",
+          "282401"
+        ],
+        "spl_id": [
+          "5356e9be-0f6c-ebbb-e063-6394a90aac4d"
+        ],
+        "spl_set_id": [
+          "b829f9b2-f0ac-408a-a6f4-18b72150227d"
+        ],
+        "package_ndc": [
+          "51672-4130-6",
+          "51672-4130-4",
+          "51672-4130-1",
+          "51672-4130-3",
+          "51672-4130-0",
+          "51672-4131-6",
+          "51672-4131-4",
+          "51672-4131-1",
+          "51672-4131-3",
+          "51672-4131-0",
+          "51672-4132-6",
+          "51672-4132-4",
+          "51672-4132-1",
+          "51672-4132-2",
+          "51672-4132-3",
+          "51672-4132-0",
+          "51672-4133-6",
+          "51672-4133-4",
+          "51672-4133-1",
+          "51672-4133-2",
+          "51672-4133-3",
+          "51672-4133-0"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0351672413019",
+          "0351672413347",
+          "0351672413248",
+          "0351672413118"
+        ],
+        "nui": [
+          "N0000175753",
+          "N0000008486",
+          "N0000175751",
+          "N0000187061",
+          "N0000000191"
+        ],
+        "pharm_class_epc": [
+          "Anti-epileptic Agent [EPC]",
+          "Mood Stabilizer [EPC]"
+        ],
+        "pharm_class_pe": [
+          "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+        ],
+        "pharm_class_moa": [
+          "Organic Cation Transporter 2 Inhibitors [MoA]",
+          "Dihydrofolate Reductase Inhibitors [MoA]"
+        ],
+        "unii": [
+          "U3H27498KS"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "84645",
+      "recalling_firm": "Taro Pharmaceuticals U.S.A., Inc.",
+      "address_1": "3 Skyline Dr",
+      "address_2": "",
+      "postal_code": "10532-2174",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the U.S. and Puerto Rico.",
+      "recall_number": "D-0833-2020",
+      "product_description": "Lamotrigine Tablets, USP, 100 mg, Rx Only, 100-count bottle,  Mfd. by: Taro Pharmaceutical Industries Ltd. Haifa Bay, Israel 2624761 Dist. by: Taro Pharmaceuticals U.S.A., Inc. Hawthorne, NY 10532, NDC 51672-4131-1.",
+      "product_quantity": "",
+      "reason_for_recall": "Cross Contamination; Lamotrigine Tablets 100 mg USP was contaminated with enalapril maleate.",
+      "recall_initiation_date": "20191220",
+      "center_classification_date": "20200207",
+      "termination_date": "20240223",
+      "report_date": "20200219",
+      "code_info": "Lot #: 331771, Exp. June 2021",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Kalamazoo",
+      "state": "MI",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA203370"
+        ],
+        "brand_name": [
+          "LAMOTRIGINE"
+        ],
+        "generic_name": [
+          "LAMOTRIGINE"
+        ],
+        "manufacturer_name": [
+          "Torrent Pharmaceuticals Limited"
+        ],
+        "product_ndc": [
+          "13668-339",
+          "13668-340",
+          "13668-341",
+          "13668-342"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LAMOTRIGINE"
+        ],
+        "rxcui": [
+          "850087",
+          "850091",
+          "900156",
+          "900164"
+        ],
+        "spl_id": [
+          "aae9e98a-c9b3-4e3c-8e24-ff46f11bcadf"
+        ],
+        "spl_set_id": [
+          "52df02a7-83da-4b20-9951-69790237dc24"
+        ],
+        "package_ndc": [
+          "13668-339-30",
+          "13668-339-01",
+          "13668-339-05",
+          "13668-340-30",
+          "13668-340-01",
+          "13668-340-05",
+          "13668-341-30",
+          "13668-341-01",
+          "13668-341-05",
+          "13668-342-30",
+          "13668-342-01"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0313668342307",
+          "0313668341300",
+          "0313668340303"
+        ],
+        "nui": [
+          "N0000175753",
+          "N0000008486",
+          "N0000175751",
+          "N0000187061",
+          "N0000000191"
+        ],
+        "pharm_class_epc": [
+          "Anti-epileptic Agent [EPC]",
+          "Mood Stabilizer [EPC]"
+        ],
+        "pharm_class_pe": [
+          "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+        ],
+        "pharm_class_moa": [
+          "Organic Cation Transporter 2 Inhibitors [MoA]",
+          "Dihydrofolate Reductase Inhibitors [MoA]"
+        ],
+        "unii": [
+          "U3H27498KS"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "80985",
+      "recalling_firm": "Torrent Pharma Inc.",
+      "address_1": "1803 Whites Rd Ste 1",
+      "address_2": "N/A",
+      "postal_code": "49008-2883",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide USA",
+      "recall_number": "D-1204-2018",
+      "product_description": "Lamotrigine Extended-Release Tablets, USP, 200 mg, 30 tablets per bottle, Rx Only, Manufactured in INDIA, For: TORRENT PHARMA INC., 150 Allen Road, Suite 102, Basking Ridge, NJ 07920. NDC: 13668-342-30",
+      "product_quantity": "15,384 30-count bottles",
+      "reason_for_recall": "Failed Dissolution Specifications: Out of Specification for Dissolution test (Buffer Stage) at the 5-hour time point during stability testing.",
+      "recall_initiation_date": "20180911",
+      "center_classification_date": "20180920",
+      "termination_date": "20200904",
+      "report_date": "20180926",
+      "code_info": "Lot: BFR5D002 EXP 11-2019"
+    },
+    {
+      "status": "Terminated",
+      "city": "Hasbrouck Heights",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA090170"
+        ],
+        "brand_name": [
+          "LAMOTRIGINE"
+        ],
+        "generic_name": [
+          "LAMOTRIGINE"
+        ],
+        "manufacturer_name": [
+          "Unichem Pharmaceuticals (USA), Inc."
+        ],
+        "product_ndc": [
+          "29300-111",
+          "29300-112",
+          "29300-113",
+          "29300-114"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LAMOTRIGINE"
+        ],
+        "rxcui": [
+          "198427",
+          "198428",
+          "198429",
+          "282401"
+        ],
+        "spl_id": [
+          "503a737a-92a2-4a67-bfbb-e08788c101df"
+        ],
+        "spl_set_id": [
+          "4b72ea7a-a0b0-4980-84ad-84f64e2e6368"
+        ],
+        "package_ndc": [
+          "29300-111-01",
+          "29300-111-05",
+          "29300-111-10",
+          "29300-112-01",
+          "29300-112-05",
+          "29300-112-10",
+          "29300-113-16",
+          "29300-113-05",
+          "29300-113-10",
+          "29300-114-16",
+          "29300-114-05",
+          "29300-114-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0329300113167",
+          "0329300111019",
+          "0329300114164"
+        ],
+        "nui": [
+          "N0000175753",
+          "N0000008486",
+          "N0000175751",
+          "N0000187061",
+          "N0000000191"
+        ],
+        "pharm_class_epc": [
+          "Anti-epileptic Agent [EPC]",
+          "Mood Stabilizer [EPC]"
+        ],
+        "pharm_class_pe": [
+          "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+        ],
+        "pharm_class_moa": [
+          "Organic Cation Transporter 2 Inhibitors [MoA]",
+          "Dihydrofolate Reductase Inhibitors [MoA]"
+        ],
+        "unii": [
+          "U3H27498KS"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "75205",
+      "recalling_firm": "Unichem Pharmaceuticals Usa Inc",
+      "address_1": "777 Terrace Ave",
+      "address_2": "Suite 102",
+      "postal_code": "07604-3102",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1519-2016",
+      "product_description": "Lamotrigine Tablets, USP, 150 mg, 500-count Tablets per bottle, Rx only,  Manufactured by: Unichem Laboratories LTD., Pilerne Ind. Estate, Pilerne, Bardez, Goa 403 511 India; Marketed by: Unichem Pharmaceuticals (USA), Inc ., Rochelle Park, NJ 07662; NDC 29300-113-05.",
+      "product_quantity": "368 bottles",
+      "reason_for_recall": "Tablets/Capsules Imprinted With Wrong ID: incorrect imprint debossed on the tablets.",
+      "recall_initiation_date": "20160819",
+      "center_classification_date": "20160923",
+      "termination_date": "20170207",
+      "report_date": "20161005",
+      "code_info": "Lot #: GLEH 16003, Exp 03/31/18"
+    }
+  ]
+}

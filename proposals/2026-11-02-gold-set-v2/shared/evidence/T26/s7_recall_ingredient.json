@@ -1,0 +1,3433 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 35
+    }
+  },
+  "results": [
+    {
+      "status": "Ongoing",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202289"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "manufacturer_name": [
+          "Macleods Pharmaceuticals Limited"
+        ],
+        "product_ndc": [
+          "33342-050",
+          "33342-051",
+          "33342-052"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM",
+          "HYDROCHLOROTHIAZIDE"
+        ],
+        "rxcui": [
+          "979464",
+          "979468",
+          "979471"
+        ],
+        "spl_id": [
+          "cf31d31e-9355-47da-9c2b-8e4b84ac8159"
+        ],
+        "spl_set_id": [
+          "a04b5622-2c49-4d61-92b1-5dc523af7a24"
+        ],
+        "package_ndc": [
+          "33342-050-07",
+          "33342-050-10",
+          "33342-050-44",
+          "33342-050-12",
+          "33342-051-07",
+          "33342-051-10",
+          "33342-051-44",
+          "33342-051-12",
+          "33342-052-07",
+          "33342-052-10",
+          "33342-052-44",
+          "33342-052-12"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0333342051448",
+          "0333342050106",
+          "0333342052100",
+          "0333342051103",
+          "0333342052445",
+          "0333342051073",
+          "0333342052070"
+        ],
+        "nui": [
+          "N0000175359",
+          "N0000175419",
+          "M0471776"
+        ],
+        "pharm_class_pe": [
+          "Increased Diuresis [PE]"
+        ],
+        "pharm_class_epc": [
+          "Thiazide Diuretic [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Thiazides [CS]"
+        ],
+        "unii": [
+          "3ST302B24A",
+          "0J48LPH2TH"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "94592",
+      "recalling_firm": "MACLEODS PHARMA USA, INC",
+      "address_1": "103 College Rd E Fl 2",
+      "address_2": "N/A",
+      "postal_code": "08540-6611",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "N/A",
+      "distribution_pattern": "USA Nationwide",
+      "recall_number": "D-0498-2024",
+      "product_description": "Losartan Potassium and Hydrochlorothiazide Tablets, USP 50mg /12.5 mg, 1000-count bottle, Rx only, Manufactured for: Macleods Pharma USA, Inc. Princeton, NJ 08540, Manufactured by: Macleods Pharmaceuticals Ltd. Baddi, Himachal Pradesh, INDIA, NDC 33342-050-44",
+      "product_quantity": "1,048 bottles",
+      "reason_for_recall": "Presence of foreign substance: plastic-like substance.",
+      "recall_initiation_date": "20240507",
+      "center_classification_date": "20240515",
+      "report_date": "20240522",
+      "code_info": "Lot #: BLK2304A, Exp. 07/31/2025"
+    },
+    {
+      "status": "Terminated",
+      "city": "East Brunswick",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA090382"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "Strides Pharma Science Limited"
+        ],
+        "product_ndc": [
+          "64380-933",
+          "64380-934",
+          "64380-935"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "de8fc110-fa21-4904-8309-fd3c28dfff44"
+        ],
+        "spl_set_id": [
+          "a8817f22-8478-49b9-8354-ab27ca222c6b"
+        ],
+        "package_ndc": [
+          "64380-933-04",
+          "64380-933-05",
+          "64380-933-08",
+          "64380-934-04",
+          "64380-934-05",
+          "64380-934-08",
+          "64380-935-04",
+          "64380-935-05",
+          "64380-935-08"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0364380933052",
+          "0364380935056",
+          "0364380935087",
+          "0364380935049",
+          "0364380934042",
+          "0364380933045",
+          "0364380934080",
+          "0364380933083",
+          "0364380934059"
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "92584",
+      "recalling_firm": "Strides Pharma Inc.",
+      "address_1": "2 Tower Center Blvd Ste 1102",
+      "address_2": "N/A",
+      "postal_code": "08816-1100",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the USA.",
+      "recall_number": "D-0895-2023",
+      "product_description": "Losartan Potassium Tablets, USP, 25 mg, 1000 film coated tablets per bottle, Rx Only, Manufactured by: Vivimed Life Sciences Private Limited, Plot No. 101, 102, 107 & 108, SIDCO Pharmaceutical Complex, Alathur, Kanchipuram- 603 110, Tamilnadu, India, NDC 64380-933-08",
+      "product_quantity": "2,700 HDPE Bottles",
+      "reason_for_recall": "Presence of Foreign Substance: Presence of a small piece of blue plastic embedded in the tablet.",
+      "recall_initiation_date": "20230626",
+      "center_classification_date": "20230706",
+      "termination_date": "20240515",
+      "report_date": "20230712",
+      "code_info": "Lot#: 7901903A, exp. date 04/2024"
+    },
+    {
+      "status": "Terminated",
+      "city": "Oklahoma City",
+      "state": "OK",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA090382"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "PD-Rx Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "72789-163",
+          "72789-164",
+          "72789-165"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "4af79dfe-6b5c-ba11-e063-6294a90aca69"
+        ],
+        "spl_set_id": [
+          "372ba4ad-26ca-4675-8475-4b664fbecba9"
+        ],
+        "package_ndc": [
+          "72789-163-90",
+          "72789-164-90",
+          "72789-165-90"
+        ],
+        "original_packager_product_ndc": [
+          "64380-933",
+          "64380-934",
+          "64380-935"
+        ],
+        "upc": [
+          "0372789163901",
+          "0372789164908",
+          "0372789165905",
+          "372789164908"
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90383",
+      "recalling_firm": "PD-Rx Pharmaceuticals, Inc.",
+      "address_1": "727 N Ann Arbor Ave",
+      "address_2": "",
+      "postal_code": "73127-5822",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1162-2022",
+      "product_description": "Losartan Potassium Tablets, USP 50 mg, 90 Tablets bottles, Rx Only Marketed and Packaged By: PD-Rx Pharmaceuticals, Inc. Oklahoma City, OK 73127 Manufactured by: Vivimed Life Sciences Private Limited, Plot No. 101, 102, 107 & 108 SIDCO Pharmaceutical Complex, Alathur, Kanchipuram-603 110, Tamilnadu, India  NDC 72789-164-90 UPC 3 72789 16490 8",
+      "product_quantity": "687 bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220606",
+      "center_classification_date": "20220627",
+      "termination_date": "20240617",
+      "report_date": "20220706",
+      "code_info": "Lots: D21D63 Exp. 11/30/22; E21A73 Exp. 11/30/22; E21D35 Exp. 11/30/22; F21A28 Exp. 11/30/22; F21D04 Exp. 09/30/22; G21B03 Exp. 11/30/22; G21E23 Exp. 11/30/22; H21B46 Exp. 11/30/22; H21D46 Exp. 08/31/23;  H21D46 Exp. 08/31/23; I21B67 Exp. 01/31/23; J21A26 Exp. 01/31/23; J21C44 Exp. 01/31/23",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Oklahoma City",
+      "state": "OK",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA090382"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "PD-Rx Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "72789-163",
+          "72789-164",
+          "72789-165"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "4af79dfe-6b5c-ba11-e063-6294a90aca69"
+        ],
+        "spl_set_id": [
+          "372ba4ad-26ca-4675-8475-4b664fbecba9"
+        ],
+        "package_ndc": [
+          "72789-163-90",
+          "72789-164-90",
+          "72789-165-90"
+        ],
+        "original_packager_product_ndc": [
+          "64380-933",
+          "64380-934",
+          "64380-935"
+        ],
+        "upc": [
+          "0372789163901",
+          "0372789164908",
+          "0372789165905",
+          "372789165905"
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90383",
+      "recalling_firm": "PD-Rx Pharmaceuticals, Inc.",
+      "address_1": "727 N Ann Arbor Ave",
+      "address_2": "",
+      "postal_code": "73127-5822",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1163-2022",
+      "product_description": "Losartan Potassium Tablets, USP 100 mg, 90 Tablets bottles, Rx Only, Marketed and Packaged By: PD-Rx Pharmaceuticals, Inc. Oklahoma City, OK 73127 Manufactured by: Vivimed Life Sciences Private Limited, Plot No. 101, 102, 107 & 108 SIDCO Pharmaceutical Complex, Alathur, Kanchipuram-603 110, Tamilnadu, India  NDC 72789-165-90 UPC 3 72789 16590 5",
+      "product_quantity": "1320 bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220606",
+      "center_classification_date": "20220627",
+      "termination_date": "20240617",
+      "report_date": "20220706",
+      "code_info": "Lots: G21C26 Exp. 07/31/22; H21B96 Exp. 07/31/22; I21B39 Exp. 07/31/22; I21C44 Exp. 07/31/22; D21F35 Exp. 10/31/22; E21A66 Exp. 10/31/22; E21C72 Exp. 10/31/22; E21F01 Exp. 10/31/22; F21C15 Exp. 10/31/22; F21E19 Exp. 10/31/22; G21B14 Exp. 10/31/22; K21A61 Exp. 11/30/22; L21A45 Exp. 11/30/22",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Oklahoma City",
+      "state": "OK",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA090382"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "PD-Rx Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "72789-163",
+          "72789-164",
+          "72789-165"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "4af79dfe-6b5c-ba11-e063-6294a90aca69"
+        ],
+        "spl_set_id": [
+          "372ba4ad-26ca-4675-8475-4b664fbecba9"
+        ],
+        "package_ndc": [
+          "72789-163-90",
+          "72789-164-90",
+          "72789-165-90"
+        ],
+        "original_packager_product_ndc": [
+          "64380-933",
+          "64380-934",
+          "64380-935"
+        ],
+        "upc": [
+          "0372789163901",
+          "0372789164908",
+          "0372789165905",
+          "372789163901"
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90383",
+      "recalling_firm": "PD-Rx Pharmaceuticals, Inc.",
+      "address_1": "727 N Ann Arbor Ave",
+      "address_2": "",
+      "postal_code": "73127-5822",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1161-2022",
+      "product_description": "Losartan Potassium Tablets, USP 25 mg, 90 Tablets bottles, Rx Only Marketed and Packaged By: PD-Rx Pharmaceuticals, Inc. Oklahoma City, OK 73127 Manufactured by: Vivimed Life Sciences Private Limited, Plot No. 101, 102, 107 & 108 SIDCO Pharmaceutical Complex, Alathur, Kanchipuram-603 110, Tamilnadu, India  NDC 72789-163-90 UPC 3 72789 16390 1",
+      "product_quantity": "1441 bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220606",
+      "center_classification_date": "20220627",
+      "termination_date": "20240617",
+      "report_date": "20220706",
+      "code_info": "Lots: D21C18 Exp. 09/30/22; E21A28 Exp. 09/30/22; E21C04 Exp. 09/30/22; E21D59 Exp. 09/30/22; G21B65 Exp. 09/30/22; H21A12 Exp. 09/30/22; H21D42 Exp. 09/30/22; K21D19 Exp. 10/31/22; A22A73 Exp. 10/31/22",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Plainsboro",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202289"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "manufacturer_name": [
+          "Macleods Pharmaceuticals Limited"
+        ],
+        "product_ndc": [
+          "33342-050",
+          "33342-051",
+          "33342-052"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM",
+          "HYDROCHLOROTHIAZIDE"
+        ],
+        "rxcui": [
+          "979464",
+          "979468",
+          "979471"
+        ],
+        "spl_id": [
+          "cf31d31e-9355-47da-9c2b-8e4b84ac8159"
+        ],
+        "spl_set_id": [
+          "a04b5622-2c49-4d61-92b1-5dc523af7a24"
+        ],
+        "package_ndc": [
+          "33342-050-07",
+          "33342-050-10",
+          "33342-050-44",
+          "33342-050-12",
+          "33342-051-07",
+          "33342-051-10",
+          "33342-051-44",
+          "33342-051-12",
+          "33342-052-07",
+          "33342-052-10",
+          "33342-052-44",
+          "33342-052-12"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0333342051448",
+          "0333342050106",
+          "0333342052100",
+          "0333342051103",
+          "0333342052445",
+          "0333342051073",
+          "0333342052070"
+        ],
+        "nui": [
+          "N0000175359",
+          "N0000175419",
+          "M0471776"
+        ],
+        "pharm_class_pe": [
+          "Increased Diuresis [PE]"
+        ],
+        "pharm_class_epc": [
+          "Thiazide Diuretic [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Thiazides [CS]"
+        ],
+        "unii": [
+          "3ST302B24A",
+          "0J48LPH2TH"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90426",
+      "recalling_firm": "Macleods Pharma Usa Inc",
+      "address_1": "666 Plainsboro Rd Bldg 200 Ste 230",
+      "address_2": "",
+      "postal_code": "08536-0009",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed nationwide.",
+      "recall_number": "D-1164-2022",
+      "product_description": "Losartan potassium & Hydrochlorothiazide Tablets 100 mg/25 mg, 30, 90 & 1000 count  NDC # 33342-052-07, NDC #33342-052-10 & NDC # 33342-052-44, Rx Only, MFR: Macleods Pharma USA, Inc. Plainsboro, NJ 08536",
+      "product_quantity": "84/1000 count bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220610",
+      "center_classification_date": "20220627",
+      "termination_date": "20240523",
+      "report_date": "20220706",
+      "code_info": "Lot #    BLM2114A, exp. date 07/2023",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "East Brunswick",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA090382"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "Strides Pharma Science Limited"
+        ],
+        "product_ndc": [
+          "64380-933",
+          "64380-934",
+          "64380-935"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "de8fc110-fa21-4904-8309-fd3c28dfff44"
+        ],
+        "spl_set_id": [
+          "a8817f22-8478-49b9-8354-ab27ca222c6b"
+        ],
+        "package_ndc": [
+          "64380-933-04",
+          "64380-933-05",
+          "64380-933-08",
+          "64380-934-04",
+          "64380-934-05",
+          "64380-934-08",
+          "64380-935-04",
+          "64380-935-05",
+          "64380-935-08"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0364380933052",
+          "0364380935056",
+          "0364380935087",
+          "0364380935049",
+          "0364380934042",
+          "0364380933045",
+          "0364380934080",
+          "0364380933083",
+          "0364380934059"
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90229",
+      "recalling_firm": "Strides Pharma Inc.",
+      "address_1": "2 Tower Center Blvd Ste 1102",
+      "address_2": "N/A",
+      "postal_code": "08816-1100",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "N/A",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-0973-2022",
+      "product_description": "Losartan Potassium Tablets, USP, 50 mg, Rx Only, Manufactured by: Vivimed Life Sciences Private Limited, Plot No., 101, 102, 107 & 108, SIDCO Pharmaceutical Complex, Alathur, Kanchipuram - 603 110, Tamilnadu, India, Distributed by: Strides Pharma Inc., East Brunswick, NJ 08816.    90 film coated tablets NDC 64380-934-05  1000 film coated tablets NDC 64380-934-08",
+      "product_quantity": "381456 bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220518",
+      "center_classification_date": "20220528",
+      "termination_date": "20231020",
+      "report_date": "20220608",
+      "code_info": "NDC 64380-934-05  Lot 7901146A, 7901147A, 7901148A & 7901149A, Exp Date Sep-22; Lot 7901279A, 7901280A, 7901281A, 7901282A, 7901283A & 7901284A, Exp Date Nov-22; Lot 7901359A, 7901360A & 7901361A, Exp Date Dec-22; Lot 7901362A, 7901406A, 7901407A, 7901408A & 7901409A, Exp Date Jan-23.   64380-934-08  Lot 7901008A & 7901009A, Exp Date Jun-22; Lot 7901150A & 7901151A, Exp Date Sep-22; Lot 7901285B, 7901286B, 7901287A, 7901288A, 7901289A, 7901290A, 7901291A, 7901292A, 7901293A & 7901294A, Exp Date Nov-22."
+    },
+    {
+      "status": "Terminated",
+      "city": "Dawsonville",
+      "state": "GA",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA091629"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "manufacturer_name": [
+          "Direct_Rx"
+        ],
+        "product_ndc": [
+          "72189-012",
+          "72189-098",
+          "72189-129",
+          "72189-139",
+          "72189-167"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM",
+          "HYDROCHLOROTHIAZIDE"
+        ],
+        "rxcui": [
+          "979464",
+          "979468",
+          "979471"
+        ],
+        "spl_id": [
+          "2becfaea-c7d6-ec34-e063-6294a90af5b3"
+        ],
+        "spl_set_id": [
+          "8de04bf2-83dd-c494-e053-2a95a90abade"
+        ],
+        "package_ndc": [
+          "72189-012-90",
+          "72189-098-90",
+          "72189-129-90",
+          "72189-129-30",
+          "72189-139-30",
+          "72189-139-90",
+          "72189-167-30",
+          "72189-167-90"
+        ],
+        "original_packager_product_ndc": [
+          "65862-468",
+          "0093-7369",
+          "59746-337",
+          "59746-339",
+          "68180-216"
+        ],
+        "nui": [
+          "N0000175359",
+          "N0000175419",
+          "M0471776"
+        ],
+        "pharm_class_pe": [
+          "Increased Diuresis [PE]"
+        ],
+        "pharm_class_epc": [
+          "Thiazide Diuretic [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Thiazides [CS]"
+        ],
+        "unii": [
+          "3ST302B24A",
+          "0J48LPH2TH"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90161",
+      "recalling_firm": "Direct Rx",
+      "address_1": "94 Worldwide Dr",
+      "address_2": "N/A",
+      "postal_code": "30534-6828",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "AL, GA, FL, LA",
+      "recall_number": "D-0971-2022",
+      "product_description": "Losartan Pot./HCTZ 100/12.5 mg Packaged and Distributed By: Direct Rx Dawsonville, GA 30534 Mfg For: Lupin Pharmaceuticals, Inc. Baltimore, MD 21202 a) 30 Tabs NDC 72189-167-30; b) 90 Tabs NDC 72189-167-90",
+      "product_quantity": "81 bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220505",
+      "center_classification_date": "20220527",
+      "termination_date": "20231005",
+      "report_date": "20220608",
+      "code_info": "a) 30-count bottles-    Lot: 11MY2103 Exp. 11/30/22  Lot: 05JA2106 Exp. 6/30/22      b) 90-count bottles-       Lot: 20MY2115 Exp. 11/30/22  Lot: 22JU2118 Exp. 12/31/22  Lot: 29JY2113 Exp. 12/31/22  Lot: 13SE2113 Exp. 2/28/23  Lot: 05JA2106 Exp. 6/30/22"
+    },
+    {
+      "status": "Terminated",
+      "city": "East Brunswick",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA090382"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "Strides Pharma Science Limited"
+        ],
+        "product_ndc": [
+          "64380-933",
+          "64380-934",
+          "64380-935"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "de8fc110-fa21-4904-8309-fd3c28dfff44"
+        ],
+        "spl_set_id": [
+          "a8817f22-8478-49b9-8354-ab27ca222c6b"
+        ],
+        "package_ndc": [
+          "64380-933-04",
+          "64380-933-05",
+          "64380-933-08",
+          "64380-934-04",
+          "64380-934-05",
+          "64380-934-08",
+          "64380-935-04",
+          "64380-935-05",
+          "64380-935-08"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0364380933052",
+          "0364380935056",
+          "0364380935087",
+          "0364380935049",
+          "0364380934042",
+          "0364380933045",
+          "0364380934080",
+          "0364380933083",
+          "0364380934059"
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90229",
+      "recalling_firm": "Strides Pharma Inc.",
+      "address_1": "2 Tower Center Blvd Ste 1102",
+      "address_2": "N/A",
+      "postal_code": "08816-1100",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "N/A",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-0974-2022",
+      "product_description": "Losartan Potassium Tablets, USP, 100 mg, Rx Only, Manufactured by: Vivimed Life Sciences Private Limited, Plot No., 101, 102, 107 & 108, SIDCO Pharmaceutical Complex, Alathur, Kanchipuram - 603 110, Tamilnadu, India, Distributed by: Strides Pharma Inc., East Brunswick, NJ 08816.    90 film coated tablets NDC 64380-935-05  1000 film coated tablets NDC 64380-935-08",
+      "product_quantity": "96966 bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220518",
+      "center_classification_date": "20220528",
+      "termination_date": "20231020",
+      "report_date": "20220608",
+      "code_info": "64380-935-05  Lots 7901047B, 7901048B, 7901049B & 7901050B, Exp Date Jul-22; Lots 7901185A, 7901186A, 7901187A & 7901188A, Exp Date Oct-22; Lots 7901250A, 7901251A & 7901252A, Exp Date Nov-22.       64380-935-08     Lots 7900813B, 7900814B, 7900908A, 7900935A, 7900936A, 7900937A, 7900938A & 7900939B, Exp Date May-22; Lots 7901043A, 7901044A, 7901045A & 7901046A, Exp Date Jul-22; Lots 7901158B, 7901159B, 7901160B, 7901161A, 7901182A & 7901183A, Exp Date Sep-22; Lots 7901184A, 7901189A, 7901190A, 7901191A, 7901192A, 7901193A, 7901194A & 7901195A, Exp Date Oct-22; Lots 7901295B, 7901296B, 7901297B, 7901298B, 7901299B, 7901300B, 7901301B & 7901302B, Exp Date Nov-22; Lots 7901338A, 7901339A, 7901340A, 7901341A & 7901342A, Exp Date Dec-22; Lot 7901387A, Exp Date Jan-23"
+    },
+    {
+      "status": "Terminated",
+      "city": "East Brunswick",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA090382"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "Strides Pharma Science Limited"
+        ],
+        "product_ndc": [
+          "64380-933",
+          "64380-934",
+          "64380-935"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "de8fc110-fa21-4904-8309-fd3c28dfff44"
+        ],
+        "spl_set_id": [
+          "a8817f22-8478-49b9-8354-ab27ca222c6b"
+        ],
+        "package_ndc": [
+          "64380-933-04",
+          "64380-933-05",
+          "64380-933-08",
+          "64380-934-04",
+          "64380-934-05",
+          "64380-934-08",
+          "64380-935-04",
+          "64380-935-05",
+          "64380-935-08"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0364380933052",
+          "0364380935056",
+          "0364380935087",
+          "0364380935049",
+          "0364380934042",
+          "0364380933045",
+          "0364380934080",
+          "0364380933083",
+          "0364380934059"
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90229",
+      "recalling_firm": "Strides Pharma Inc.",
+      "address_1": "2 Tower Center Blvd Ste 1102",
+      "address_2": "N/A",
+      "postal_code": "08816-1100",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "N/A",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-0972-2022",
+      "product_description": "Losartan Potassium Tablets, USP 25 mg,  Rx only, Manufactured by: Vivimed Life Sciences Private Limited, Plot No., 101, 102, 107 & 108, SIDCO Pharmaceutical Complex, Alathur, Kanchipuram - 603 110, Tamilnadu, India, Distributed by: Strides Pharma Inc., East Brunswick, NJ 08816.    90 film coated tablets NDC 64380-933-05  1000 film coated tablets NDC 64380-933-08",
+      "product_quantity": "200407 bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220518",
+      "center_classification_date": "20220528",
+      "termination_date": "20231020",
+      "report_date": "20220608",
+      "code_info": "NDC 64380-933-05  Lot 7901007A, Exp Date Jun-22; Lot 7901144A, 7901178A & 7901179A, Exp Date Sep-22; Lots 7901246A & 7901247A, Exp Date Oct-22; Lot 7901343A, Exp Date Dec-22.  NDC 64380-933-08   Lot 7901006A, Exp Date Jun-22; Lot 7901145A & 7901180A, Exp Date Sep-22; Lot 7901181A, Exp Date Oct-22."
+    },
+    {
+      "status": "Terminated",
+      "city": "Dawsonville",
+      "state": "GA",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202289"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "manufacturer_name": [
+          "DirectRx"
+        ],
+        "product_ndc": [
+          "72189-290"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM",
+          "HYDROCHLOROTHIAZIDE"
+        ],
+        "rxcui": [
+          "979464"
+        ],
+        "spl_id": [
+          "2c294389-2485-bf83-e063-6394a90a70d2"
+        ],
+        "spl_set_id": [
+          "d1ee193e-bf78-3134-e053-2a95a90a65d2"
+        ],
+        "package_ndc": [
+          "72189-290-90"
+        ],
+        "original_packager_product_ndc": [
+          "33342-051"
+        ],
+        "nui": [
+          "N0000175359",
+          "N0000175419",
+          "M0471776"
+        ],
+        "pharm_class_pe": [
+          "Increased Diuresis [PE]"
+        ],
+        "pharm_class_epc": [
+          "Thiazide Diuretic [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Thiazides [CS]"
+        ],
+        "unii": [
+          "3ST302B24A",
+          "0J48LPH2TH"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90200",
+      "recalling_firm": "Direct Rx",
+      "address_1": "94 Worldwide Dr",
+      "address_2": "",
+      "postal_code": "30534-6828",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "FL",
+      "recall_number": "D-0893-2022",
+      "product_description": "Losartan Pot/HCTZ 100/12.5 mg 90 Tabs NDC 72189-290-90 Packaged and Distributed By: Direct Rx Dawsonville, GA 30534 Mfg. For Macleods Pharma USA, Inc. Plainsboro, NJ 08540",
+      "product_quantity": "11 bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits .",
+      "recall_initiation_date": "20220511",
+      "center_classification_date": "20220524",
+      "termination_date": "20221202",
+      "report_date": "20220601",
+      "code_info": "Lot: 25OC2116 Exp. 5/31/23",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Dawsonville",
+      "state": "GA",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202289"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "manufacturer_name": [
+          "DirectRx"
+        ],
+        "product_ndc": [
+          "72189-297"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "HYDROCHLOROTHIAZIDE",
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979468"
+        ],
+        "spl_id": [
+          "2c294e17-bf06-cf97-e063-6394a90abafc"
+        ],
+        "spl_set_id": [
+          "d2021060-94d7-3e1d-e053-2995a90a10ee"
+        ],
+        "package_ndc": [
+          "72189-297-90"
+        ],
+        "original_packager_product_ndc": [
+          "33342-050"
+        ],
+        "nui": [
+          "N0000175359",
+          "N0000175419",
+          "M0471776"
+        ],
+        "pharm_class_pe": [
+          "Increased Diuresis [PE]"
+        ],
+        "pharm_class_epc": [
+          "Thiazide Diuretic [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Thiazides [CS]"
+        ],
+        "unii": [
+          "0J48LPH2TH",
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90200",
+      "recalling_firm": "Direct Rx",
+      "address_1": "94 Worldwide Dr",
+      "address_2": "",
+      "postal_code": "30534-6828",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "FL",
+      "recall_number": "D-0894-2022",
+      "product_description": "Losartan Pot/HCTZ 50/12.5 mg 90 Tabs NDC 72189-297-90 Packaged and Distributed By: Direct Rx Dawsonville, GA 30534 Mfg. For Macleods Pharma USA, Inc. Plainsboro, NJ 08540",
+      "product_quantity": "6 bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits .",
+      "recall_initiation_date": "20220511",
+      "center_classification_date": "20220524",
+      "termination_date": "20221202",
+      "report_date": "20220601",
+      "code_info": "Lots: 19NO2108 Exp. 1/31/25; 19NO2114 Exp. 1/31/25; 22NO2126 Exp. 1/31/25",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Dawsonville",
+      "state": "GA",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202289"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "manufacturer_name": [
+          "DirectRx"
+        ],
+        "product_ndc": [
+          "72189-289"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "HYDROCHLOROTHIAZIDE",
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979471"
+        ],
+        "spl_id": [
+          "2c294389-2484-bf83-e063-6394a90a70d2"
+        ],
+        "spl_set_id": [
+          "d1ed9593-a587-55bb-e053-2995a90a8a9a"
+        ],
+        "package_ndc": [
+          "72189-289-90"
+        ],
+        "original_packager_product_ndc": [
+          "33342-052"
+        ],
+        "nui": [
+          "N0000175359",
+          "N0000175419",
+          "M0471776"
+        ],
+        "pharm_class_pe": [
+          "Increased Diuresis [PE]"
+        ],
+        "pharm_class_epc": [
+          "Thiazide Diuretic [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Thiazides [CS]"
+        ],
+        "unii": [
+          "0J48LPH2TH",
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90200",
+      "recalling_firm": "Direct Rx",
+      "address_1": "94 Worldwide Dr",
+      "address_2": "",
+      "postal_code": "30534-6828",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "FL",
+      "recall_number": "D-0895-2022",
+      "product_description": "Losartan Pot/HCTZ 100/25 mg 90 Tabs NDC 72189-289-90 Packaged and Distributed By: Direct Rx Dawsonville, GA 30534 Mfg. For Macleods Pharma USA, Inc. Plainsboro, NJ 08540",
+      "product_quantity": "11 bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits .",
+      "recall_initiation_date": "20220511",
+      "center_classification_date": "20220524",
+      "termination_date": "20221202",
+      "report_date": "20220601",
+      "code_info": "Lots: 08NO2102 Exp. 1/31/25; 17NO2118 Exp. 1/31/25; 18NO2123 Exp. 1/31/25; 25OC2114 Exp. 1/31/25; 22NO2105 Exp. 1/31/25",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Plainsboro",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202230"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "Macleods Pharmaceuticals Limited"
+        ],
+        "product_ndc": [
+          "33342-044",
+          "33342-045",
+          "33342-046"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "81824d1f-61f4-457c-8723-cd43d5429029"
+        ],
+        "spl_set_id": [
+          "85d69d02-c5ef-467e-94aa-903100218795"
+        ],
+        "package_ndc": [
+          "33342-044-10",
+          "33342-044-12",
+          "33342-044-07",
+          "33342-044-44",
+          "33342-045-10",
+          "33342-045-12",
+          "33342-045-07",
+          "33342-045-44",
+          "33342-046-10",
+          "33342-046-12",
+          "33342-046-07",
+          "33342-046-44"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90037",
+      "recalling_firm": "Macleods Pharma Usa Inc",
+      "address_1": "666 Plainsboro Rd Bldg 200 Ste 230",
+      "address_2": "N/A",
+      "postal_code": "08536-0009",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed nationwide.",
+      "recall_number": "D-0833-2022",
+      "product_description": "Losartan Potassium Tablets, USP, 50 mg, a) 30-count bottles (NDC # 33342-045-07), b) 90-count bottles (NDC # 33342-045-10), c) 1000-count bottles (NDC # 33342-045-44), Rx Only, MFR: Macleods Pharma USA, Inc. Plainsboro, NJ 08536",
+      "product_quantity": "3216/30 count bottles; 47,904/90 count bottles; 4269/1000 count bottles = 8,676,840 tablets",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220415",
+      "center_classification_date": "20220503",
+      "termination_date": "20231013",
+      "report_date": "20220511",
+      "code_info": "Lot #  BLI2002A, exp. date 11/2022  BLI2004A, exp. date 11/2022  BLI2104B, exp. date 05/2023"
+    },
+    {
+      "status": "Terminated",
+      "city": "Plainsboro",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202230"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "Macleods Pharmaceuticals Limited"
+        ],
+        "product_ndc": [
+          "33342-044",
+          "33342-045",
+          "33342-046"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "81824d1f-61f4-457c-8723-cd43d5429029"
+        ],
+        "spl_set_id": [
+          "85d69d02-c5ef-467e-94aa-903100218795"
+        ],
+        "package_ndc": [
+          "33342-044-10",
+          "33342-044-12",
+          "33342-044-07",
+          "33342-044-44",
+          "33342-045-10",
+          "33342-045-12",
+          "33342-045-07",
+          "33342-045-44",
+          "33342-046-10",
+          "33342-046-12",
+          "33342-046-07",
+          "33342-046-44"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90037",
+      "recalling_firm": "Macleods Pharma Usa Inc",
+      "address_1": "666 Plainsboro Rd Bldg 200 Ste 230",
+      "address_2": "N/A",
+      "postal_code": "08536-0009",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed nationwide.",
+      "recall_number": "D-0832-2022",
+      "product_description": "Losartan Potassium Tablets, USP, 25 mg, a) 90-count bottles (NDC # 33342-044-10), b) 1000-count bottles (NDC # 33342-044-44), Rx Only, MFR: Macleods Pharma USA, Inc. Plainsboro, NJ 08536",
+      "product_quantity": "12,408/90 count bottles; 1670/1000 count bottles =2,786,720 tablets",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220415",
+      "center_classification_date": "20220503",
+      "termination_date": "20231013",
+      "report_date": "20220511",
+      "code_info": "Lot #  BLH2002A, exp. date 11/2022  BLH2003B, exp. date 11/2022  BLH2004A, exp. date 11/2022"
+    },
+    {
+      "status": "Terminated",
+      "city": "Baltimore",
+      "state": "MD",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA078232"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "Lupin Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "68180-210",
+          "68180-211",
+          "68180-212",
+          "68180-376",
+          "68180-377",
+          "68180-378",
+          "68180-307",
+          "68180-308",
+          "68180-309"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "38431fb6-7157-4be5-929a-0c65b7a29c55"
+        ],
+        "spl_set_id": [
+          "e5886220-43b7-46e1-9034-5242ba245bd1"
+        ],
+        "package_ndc": [
+          "68180-210-09",
+          "68180-210-03",
+          "68180-210-01",
+          "68180-210-06",
+          "68180-211-06",
+          "68180-211-09",
+          "68180-211-03",
+          "68180-211-01",
+          "68180-212-06",
+          "68180-212-03",
+          "68180-212-09",
+          "68180-212-01",
+          "68180-376-03",
+          "68180-376-06",
+          "68180-376-01",
+          "68180-376-09",
+          "68180-377-03",
+          "68180-377-01",
+          "68180-377-09",
+          "68180-377-06",
+          "68180-378-09",
+          "68180-378-03",
+          "68180-378-06",
+          "68180-378-01",
+          "68180-307-01",
+          "68180-307-02",
+          "68180-307-09",
+          "68180-307-06",
+          "68180-308-06",
+          "68180-308-09",
+          "68180-308-02",
+          "68180-308-01",
+          "68180-309-06",
+          "68180-309-09",
+          "68180-309-02",
+          "68180-309-01"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0368180212065",
+          "0368180376033",
+          "0368180210061",
+          "0368180378037",
+          "0368180308027",
+          "0368180376095",
+          "0368180211068",
+          "0368180309024",
+          "0368180377030"
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "89916",
+      "recalling_firm": "Lupin Pharmaceuticals Inc.",
+      "address_1": "Harborplace Tower",
+      "address_2": "111 S Calvert St Fl 21st",
+      "postal_code": "21202-6174",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed nationwide",
+      "recall_number": "D-0840-2022",
+      "product_description": "Losartan Potassium Tablets USP, 100 mg, a) 90-count bottles (NDC#  68180-378-03), b) 1000-count bottles (NDC#  68180-378-09), Rx Only, Manufactured By: Lupin Limited, Pithampur, India, MFG For: Lupin Pharmaceuticals, Inc. Baltimore, Maryland 21202, USA.",
+      "product_quantity": "1,247,067 bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220331",
+      "center_classification_date": "20220503",
+      "termination_date": "20230522",
+      "report_date": "20220511",
+      "code_info": "H903573, exp. date Oct-22  H002311, exp. date Dec-22  H100713, exp. date Mar-23  H001060, exp. date Nov-22  H002620, exp. date Jan-23  H100714, exp. date Mar-23  H001456, exp. date Nov-22  H002313, exp. date Jan-23  H100934, exp. date Mar-23  H001457, exp. date Nov-22  H002490, exp. date Jan-23  H100935, exp. date Mar-23  H001470,, exp. date Nov-22  H002842, exp. date Jan-23  H101081, exp. date Mar-23  H001484, exp. date Dec-22  H002843, exp. date Jan-23  H101148, exp. date Mar-23  H001485, exp. date Dec-22  H002995, exp. date Jan-23  H101639, exp. date Mar-23  H001708, exp. date Dec-22  H003199, exp. date Feb-23  H101480, exp. date Mar-23  H002314, exp. date Dec-22  H003200, exp. date Feb-23  H101822, exp. date Mar-23  H001709, exp. date Dec-22  H100028, exp. date Feb-23  H101481, exp. date Mar-23  H002001, exp. date Dec-22  H100712, exp. date Feb-23  H102288, exp. date Mar-23  H001991, exp. date Dec-22  H100221, exp. date Feb-23   H002000, exp. date Dec-22  H100222, exp. dateFeb-23  H903582, exp. date Oct-22  H001707, exp. dateDec-22  H100220, exp. date Feb-23  H000556,, exp. date Nov-22  H003045, exp. date Dec-22  H100901, exp. date Mar-23  H000557, exp. date Nov-22  H002391, exp. date Dec-22  H101078, exp. date Mar-23  H001061, exp. date Nov-22  H002312, exp. date Jan-23  H101479, exp. date Mar-23  H001062, exp. date Nov-22  H002517, exp. date Jan-23  H101496, exp. date Mar-23  H001431, exp. date Nov-22  H002841, exp. date Jan-23  H101821, exp. date Mar-23  H002341, exp. date Nov-22  H003044, exp. date Feb-23  H102286, exp. date Mar-23  H001706, exp. date Dec-22  H003198, exp. date Feb-23  H102287, exp. date Mar-23"
+    },
+    {
+      "status": "Terminated",
+      "city": "Plainsboro",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202230"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "Macleods Pharmaceuticals Limited"
+        ],
+        "product_ndc": [
+          "33342-044",
+          "33342-045",
+          "33342-046"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "81824d1f-61f4-457c-8723-cd43d5429029"
+        ],
+        "spl_set_id": [
+          "85d69d02-c5ef-467e-94aa-903100218795"
+        ],
+        "package_ndc": [
+          "33342-044-10",
+          "33342-044-12",
+          "33342-044-07",
+          "33342-044-44",
+          "33342-045-10",
+          "33342-045-12",
+          "33342-045-07",
+          "33342-045-44",
+          "33342-046-10",
+          "33342-046-12",
+          "33342-046-07",
+          "33342-046-44"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90037",
+      "recalling_firm": "Macleods Pharma Usa Inc",
+      "address_1": "666 Plainsboro Rd Bldg 200 Ste 230",
+      "address_2": "N/A",
+      "postal_code": "08536-0009",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed nationwide.",
+      "recall_number": "D-0834-2022",
+      "product_description": "Losartan Potassium Tablets, USP, 100 mg, a) 30-count bottles (NDC # 33342-046-07), b) 90-count bottles (NDC # 33342-046-10), c) 1000-count bottles (NDC # 33342-046-44), Rx Only, MFR: Macleods Pharma USA, Inc. Plainsboro, NJ 08536",
+      "product_quantity": "3288/30 count bottles; 23,904/90 count bottles; 3364/1000 count bottles = 5,614,000 tablets",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220415",
+      "center_classification_date": "20220503",
+      "termination_date": "20231013",
+      "report_date": "20220511",
+      "code_info": "Lot #  BLI2107B, exp. date 06/2023  BLI2101A, exp. date 12/2022  BLI2103A, exp. date 12/2022  BLI2105A, exp. date 05/2023"
+    },
+    {
+      "status": "Terminated",
+      "city": "Baltimore",
+      "state": "MD",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA078232"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "Lupin Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "68180-210",
+          "68180-211",
+          "68180-212",
+          "68180-376",
+          "68180-377",
+          "68180-378",
+          "68180-307",
+          "68180-308",
+          "68180-309"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "38431fb6-7157-4be5-929a-0c65b7a29c55"
+        ],
+        "spl_set_id": [
+          "e5886220-43b7-46e1-9034-5242ba245bd1"
+        ],
+        "package_ndc": [
+          "68180-210-09",
+          "68180-210-03",
+          "68180-210-01",
+          "68180-210-06",
+          "68180-211-06",
+          "68180-211-09",
+          "68180-211-03",
+          "68180-211-01",
+          "68180-212-06",
+          "68180-212-03",
+          "68180-212-09",
+          "68180-212-01",
+          "68180-376-03",
+          "68180-376-06",
+          "68180-376-01",
+          "68180-376-09",
+          "68180-377-03",
+          "68180-377-01",
+          "68180-377-09",
+          "68180-377-06",
+          "68180-378-09",
+          "68180-378-03",
+          "68180-378-06",
+          "68180-378-01",
+          "68180-307-01",
+          "68180-307-02",
+          "68180-307-09",
+          "68180-307-06",
+          "68180-308-06",
+          "68180-308-09",
+          "68180-308-02",
+          "68180-308-01",
+          "68180-309-06",
+          "68180-309-09",
+          "68180-309-02",
+          "68180-309-01"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0368180212065",
+          "0368180376033",
+          "0368180210061",
+          "0368180378037",
+          "0368180308027",
+          "0368180376095",
+          "0368180211068",
+          "0368180309024",
+          "0368180377030"
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "89916",
+      "recalling_firm": "Lupin Pharmaceuticals Inc.",
+      "address_1": "Harborplace Tower",
+      "address_2": "111 S Calvert St Fl 21st",
+      "postal_code": "21202-6174",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed nationwide",
+      "recall_number": "D-0839-2022",
+      "product_description": "Losartan Potassium Tablets USP, 50 mg, a) 90-count bottles (NDC# 68180-377-03), b) 1000-count bottles (NDC#  68180-377-09), Rx Only, Manufactured By: Lupin Limited, Pithampur, India, MFG For: Lupin Pharmaceuticals, Inc. Baltimore, Maryland 21202, USA.",
+      "product_quantity": "1,466,150 bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220331",
+      "center_classification_date": "20220503",
+      "termination_date": "20230522",
+      "report_date": "20220511",
+      "code_info": "H903720, exp. date Oct-22  H001876, exp. date Dec-22  H003002, exp. date Jan-23  H903774, exp. date Oct-22  H001877, exp. date Dec-22  H003003, exp. date Feb-23  H000849, exp. date Nov-22  H002127, exp. date Dec-22  H003004, exp. date Feb-23  H001412, exp. date Nov-22  H002128, exp. date Dec-22  H003123, exp. date Feb-23  H001413, exp. date Nov-22  H002643, exp. date Jan-23  H003124, exp. date Feb-23  H001414, exp. date Nov-22  H002644, exp. date Jan-23  H101129, exp. date Feb-23  H001430, exp. date Nov-22  H002645, exp. date Jan-23  H101147, exp. date Mar-23  H001526, exp. date Dec-22  H002839, exp. date Jan-23  H102139, exp. date Mar-23  H001652, exp. date Dec-22  H002840, exp. date Jan-23  H102158, exp. date Mar-23  H000605, exp. date Jan-23  H001599, exp. date Dec-22  H100148, exp. date Feb-23  H001401, exp. date Nov-22  H001875, exp. date Dec-22  H102043, exp. date Mar-23  H001063, exp. date Nov-22  H002126, exp. date Dec-22  H101495, exp. date Mar-23  H001188, exp. date Nov-22  H002838, exp. date Jan-23   H001455, exp. date Nov-22  H002642, exp. date Jan-23"
+    },
+    {
+      "status": "Terminated",
+      "city": "Plainsboro",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202289"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "manufacturer_name": [
+          "Macleods Pharmaceuticals Limited"
+        ],
+        "product_ndc": [
+          "33342-050",
+          "33342-051",
+          "33342-052"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM",
+          "HYDROCHLOROTHIAZIDE"
+        ],
+        "rxcui": [
+          "979464",
+          "979468",
+          "979471"
+        ],
+        "spl_id": [
+          "cf31d31e-9355-47da-9c2b-8e4b84ac8159"
+        ],
+        "spl_set_id": [
+          "a04b5622-2c49-4d61-92b1-5dc523af7a24"
+        ],
+        "package_ndc": [
+          "33342-050-07",
+          "33342-050-10",
+          "33342-050-44",
+          "33342-050-12",
+          "33342-051-07",
+          "33342-051-10",
+          "33342-051-44",
+          "33342-051-12",
+          "33342-052-07",
+          "33342-052-10",
+          "33342-052-44",
+          "33342-052-12"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0333342051448",
+          "0333342050106",
+          "0333342052100",
+          "0333342051103",
+          "0333342052445",
+          "0333342051073",
+          "0333342052070"
+        ],
+        "nui": [
+          "N0000175359",
+          "N0000175419",
+          "M0471776"
+        ],
+        "pharm_class_pe": [
+          "Increased Diuresis [PE]"
+        ],
+        "pharm_class_epc": [
+          "Thiazide Diuretic [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Thiazides [CS]"
+        ],
+        "unii": [
+          "3ST302B24A",
+          "0J48LPH2TH"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90037",
+      "recalling_firm": "Macleods Pharma Usa Inc",
+      "address_1": "666 Plainsboro Rd Bldg 200 Ste 230",
+      "address_2": "N/A",
+      "postal_code": "08536-0009",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed nationwide.",
+      "recall_number": "D-0835-2022",
+      "product_description": "Losartan Potassium & Hydrochlorothiazide Tablets, USP, 50 mg/12.5 mg, a) 30-count bottles (NDC# 33342-050-07), b) 90-count bottles (NDC # 33342-050-10)  c) 1000-count bottles (NDC # 33342-050-44), Rx Only, MFR: Macleods Pharma USA, Inc. Plainsboro, NJ 08536",
+      "product_quantity": "N/A",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220415",
+      "center_classification_date": "20220503",
+      "termination_date": "20231013",
+      "report_date": "20220511",
+      "code_info": "Lot #   BLK2107B, exp. date 05/2023  BLK2101A, exp. date 01/2025  BLK2102A, exp. date 02/2025  BLK2103B, exp. date 02/2023  BLK2103C, exp. date 02/2023  BLK2104A, exp. date 05/2023"
+    },
+    {
+      "status": "Terminated",
+      "city": "Baltimore",
+      "state": "MD",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA078245"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "manufacturer_name": [
+          "Lupin Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "68180-215",
+          "68180-216",
+          "68180-217"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "HYDROCHLOROTHIAZIDE",
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979464",
+          "979468",
+          "979471"
+        ],
+        "spl_id": [
+          "84f3649d-3ced-4765-ba22-d0fbaeffa820"
+        ],
+        "spl_set_id": [
+          "ee1eaaf6-050b-48af-942b-5e3451edc164"
+        ],
+        "package_ndc": [
+          "68180-215-09",
+          "68180-215-03",
+          "68180-215-01",
+          "68180-215-06",
+          "68180-216-06",
+          "68180-216-09",
+          "68180-216-01",
+          "68180-216-03",
+          "68180-217-06",
+          "68180-217-09",
+          "68180-217-01",
+          "68180-217-03"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0368180215066",
+          "0368180217060"
+        ],
+        "nui": [
+          "N0000175359",
+          "N0000175419",
+          "M0471776"
+        ],
+        "pharm_class_pe": [
+          "Increased Diuresis [PE]"
+        ],
+        "pharm_class_epc": [
+          "Thiazide Diuretic [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Thiazides [CS]"
+        ],
+        "unii": [
+          "3ST302B24A",
+          "0J48LPH2TH"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "89916",
+      "recalling_firm": "Lupin Pharmaceuticals Inc.",
+      "address_1": "Harborplace Tower",
+      "address_2": "111 S Calvert St Fl 21st",
+      "postal_code": "21202-6174",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed nationwide",
+      "recall_number": "D-0843-2022",
+      "product_description": "Losartan Potassium and Hydrochlorothiazide Tablets USP, 100 mg/12.5 mg  a) 30-count bottles (NDC# 68180-216-06)  b) 90-count bottles (NDC# 68180-216-09), Rx Only, Manufactured By: Lupin Limited, Pithampur, India, MFG For: Lupin Pharmaceuticals, Inc. Baltimore, Maryland 21202, USA",
+      "product_quantity": "2,361,924 bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220331",
+      "center_classification_date": "20220503",
+      "termination_date": "20230522",
+      "report_date": "20220511",
+      "code_info": "Lot #  H001878 6/30/2022 68180-216-06  H002178 7/31/2022 68180-216-06  H002626 9/30/2022 68180-216-06  H102149 9/30/2023 68180-216-06  H001600 5/31/2022 68180-216-09  H001601 5/1/2022         68180-216-09  H001625 5/31/2022 68180-216-09  H001626 5/31/2022 68180-216-09  H001794 6/30/2022 68180-216-09  H001795 6/30/2022 68180-216-09  H001796 6/30/2022 68180-216-09  H001797 6/30/2022 68180-216-09  H001879 6/30/2022 68180-216-09  H001880 6/30/2022 68180-216-09  H001881 6/30/2022 68180-216-09  H001942 6/30/2022 68180-216-09  H001943 6/30/2022 68180-216-09  H001944 6/30/2022 68180-216-09  H001945 6/30/2022 68180-216-09  H001946 6/30/2022 68180-216-09  H002179 7/31/2022 68180-216-09  H002180 7/31/2022 68180-216-09  H002181 8/31/2022 68180-216-09  H002182 8/31/2022 68180-216-09  H002183 8/31/2022 68180-216-09  H002237 8/31/2022 68180-216-09  H002238 8/31/2022 68180-216-09  H002239 8/31/2022 68180-216-09  H002240 8/31/2022 68180-216-09  H002241 8/31/2022 68180-216-09  H002627 9/30/2022 68180-216-09  H002628 9/30/2022 68180-216-09  H002629 9/30/2022 68180-216-09  H002630 9/30/2022 68180-216-09  H002631 9/30/2022 68180-216-09  H002979 11/30/2022 68180-216-09  H002980 11/30/2022 68180-216-09  H002981 11/30/2022 68180-216-09  H002982 11/30/2022 68180-216-09  H002983 11/30/2022 68180-216-09  H100112 12/31/2022 68180-216-09  H100113 12/31/2022 68180-216-09  H100114 12/31/2022 68180-216-09  H100115 12/31/2022 68180-216-09  H100116 12/31/2022 68180-216-09  H100156 12/31/2022 68180-216-09  H100157 12/31/2022 68180-216-09  H100622 2/28/2023 68180-216-09  H100623 2/28/2023 68180-216-09  H100624 2/28/2023 68180-216-09  H100625 2/28/2023 68180-216-09  H100626 2/28/2023 68180-216-09  H100627 2/28/2023 68180-216-09  H100628 2/28/2023 68180-216-09  H100629 2/28/2023 68180-216-09  H100939 4/30/2023 68180-216-09  H100940 4/30/2023 68180-216-09  H100941 4/30/2023 68180-216-09  H100942 4/30/2023 68180-216-09  H100943 4/30/2023 68180-216-09  H101094 5/31/2023 68180-216-09  H101095 5/31/2023 68180-216-09  H101096 5/31/2023 68180-216-09  H101097 5/31/2023 68180-216-09  H101098 5/31/2023 68180-216-09  H101151 5/31/2023 68180-216-09  H101152 5/31/2023 68180-216-09  H101290 5/31/2023 68180-216-09  H101291 5/31/2023 68180-216-09  H101292 5/31/2023 68180-216-09  H101293 5/31/2023 68180-216-09  H101323 5/31/2023 68180-216-09  H101324 5/31/2023 68180-216-09  H101823 7/31/2023 68180-216-09  H101824 7/31/2023 68180-216-09  H101825 7/31/2023 68180-216-09  H101853 8/31/2023 68180-216-09  H101854 8/31/2023 68180-216-09  H101855 8/31/2023 68180-216-09  H101856 8/31/2023 68180-216-09  H102127 9/30/2023 68180-216-09  H102128 9/30/2023 68180-216-09  H102129 9/30/2023 68180-216-09  H102130 9/30/2023 68180-216-09  H102150 9/30/2023 68180-216-09  H102151 9/30/2023 68180-216-09  H102152 9/30/2023 68180-216-09  H102153 9/30/2023 68180-216-09  H102154 9/30/2023 68180-216-09  H102155 9/30/2023 68180-216-09  H102201 9/30/2023 68180-216-09  H102223 9/30/2023 68180-216-09  H102268 9/30/2023 68180-216-09  H102269 9/30/2023 68180-216-09  H102270 9/30/2023 68180-216-09  H102271 9/30/2023 68180-216-09"
+    },
+    {
+      "status": "Terminated",
+      "city": "Plainsboro",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202289"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "manufacturer_name": [
+          "Macleods Pharmaceuticals Limited"
+        ],
+        "product_ndc": [
+          "33342-050",
+          "33342-051",
+          "33342-052"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM",
+          "HYDROCHLOROTHIAZIDE"
+        ],
+        "rxcui": [
+          "979464",
+          "979468",
+          "979471"
+        ],
+        "spl_id": [
+          "cf31d31e-9355-47da-9c2b-8e4b84ac8159"
+        ],
+        "spl_set_id": [
+          "a04b5622-2c49-4d61-92b1-5dc523af7a24"
+        ],
+        "package_ndc": [
+          "33342-050-07",
+          "33342-050-10",
+          "33342-050-44",
+          "33342-050-12",
+          "33342-051-07",
+          "33342-051-10",
+          "33342-051-44",
+          "33342-051-12",
+          "33342-052-07",
+          "33342-052-10",
+          "33342-052-44",
+          "33342-052-12"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0333342051448",
+          "0333342050106",
+          "0333342052100",
+          "0333342051103",
+          "0333342052445",
+          "0333342051073",
+          "0333342052070"
+        ],
+        "nui": [
+          "N0000175359",
+          "N0000175419",
+          "M0471776"
+        ],
+        "pharm_class_pe": [
+          "Increased Diuresis [PE]"
+        ],
+        "pharm_class_epc": [
+          "Thiazide Diuretic [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Thiazides [CS]"
+        ],
+        "unii": [
+          "3ST302B24A",
+          "0J48LPH2TH"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90037",
+      "recalling_firm": "Macleods Pharma Usa Inc",
+      "address_1": "666 Plainsboro Rd Bldg 200 Ste 230",
+      "address_2": "N/A",
+      "postal_code": "08536-0009",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed nationwide.",
+      "recall_number": "D-0836-2022",
+      "product_description": "Losartan Potassium & Hydrochlorothiazide Tablets, USP, 100 mg/25 mg, a) 30-count bottles (NDC# 33342-052-07), b) 90-count bottles (NDC # 33342-052-10)  c) 1000-count bottles (NDC # 33342-052-44), Rx Only, MFR: Macleods Pharma USA, Inc. Plainsboro, NJ 08536",
+      "product_quantity": "N/A",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220415",
+      "center_classification_date": "20220503",
+      "termination_date": "20231013",
+      "report_date": "20220511",
+      "code_info": "Lot #   BLM2106B, exp. date 05/2023  BLM2101A, exp. date 01/2025  BLM2102A, exp. date 02/2023  BLM2106A, exp. date 05/2023  BLM2103B, exp. date 02/2023  BLM2104A, exp. date 05/2023  BLM2110A, exp. date 06/2023"
+    },
+    {
+      "status": "Terminated",
+      "city": "Baltimore",
+      "state": "MD",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA078245"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "manufacturer_name": [
+          "Lupin Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "68180-215",
+          "68180-216",
+          "68180-217"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "HYDROCHLOROTHIAZIDE",
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979464",
+          "979468",
+          "979471"
+        ],
+        "spl_id": [
+          "84f3649d-3ced-4765-ba22-d0fbaeffa820"
+        ],
+        "spl_set_id": [
+          "ee1eaaf6-050b-48af-942b-5e3451edc164"
+        ],
+        "package_ndc": [
+          "68180-215-09",
+          "68180-215-03",
+          "68180-215-01",
+          "68180-215-06",
+          "68180-216-06",
+          "68180-216-09",
+          "68180-216-01",
+          "68180-216-03",
+          "68180-217-06",
+          "68180-217-09",
+          "68180-217-01",
+          "68180-217-03"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0368180215066",
+          "0368180217060"
+        ],
+        "nui": [
+          "N0000175359",
+          "N0000175419",
+          "M0471776"
+        ],
+        "pharm_class_pe": [
+          "Increased Diuresis [PE]"
+        ],
+        "pharm_class_epc": [
+          "Thiazide Diuretic [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Thiazides [CS]"
+        ],
+        "unii": [
+          "3ST302B24A",
+          "0J48LPH2TH"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "89916",
+      "recalling_firm": "Lupin Pharmaceuticals Inc.",
+      "address_1": "Harborplace Tower",
+      "address_2": "111 S Calvert St Fl 21st",
+      "postal_code": "21202-6174",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed nationwide",
+      "recall_number": "D-0842-2022",
+      "product_description": "Losartan Potassium and Hydrochlorothiazide Tablets USP, 100 mg/25 mg  a) 30-count bottles (NDC# 68180-217-06)  b) 90-count bottles (NDC# 68180-217-09), Rx Only, Manufactured By: Lupin Limited, Pithampur, India, MFG For: Lupin Pharmaceuticals, Inc. Baltimore, Maryland 21202, USA",
+      "product_quantity": "303,696 bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220331",
+      "center_classification_date": "20220503",
+      "termination_date": "20230522",
+      "report_date": "20220511",
+      "code_info": "Lot #  H001156 4/30/2022 68180-217-06  H001627 5/31/2022 68180-217-06  H001947 6/30/2022 68180-217-06  H002242 8/31/2022 68180-217-06  H101826 7/31/2023 68180-217-06  H001155 4/30/2022 68180-217-09  H001355 5/31/2022 68180-217-09  H001356 5/31/2022 68180-217-09  H001357 5/31/2022 68180-217-09  H001358 5/31/2022 68180-217-09  H001359 5/31/2022 68180-217-09  H001371 5/31/2022 68180-217-09  H001372 5/31/2022 68180-217-09  H001373 5/31/2022 68180-217-09  H001374 5/31/2022 68180-217-09  H001375 5/31/2022 68180-217-09  H001628 5/31/2022 68180-217-09  H001629 5/31/2022 68180-217-09  H001630 6/30/2022 68180-217-09  H001645 6/30/2022 68180-217-09  H001646 6/30/2022 68180-217-09  H001647 6/30/2022 68180-217-09  H001798 6/30/2022 68180-217-09  H001799 6/30/2022 68180-217-09  H001882 6/30/2022 68180-217-09  H001883 6/30/2022 68180-217-09  H001948 6/30/2022 68180-217-09  H001949 6/30/2022 68180-217-09  H001985 6/30/2022 68180-217-09  H001986 6/30/2022 68180-217-09  H001987 7/31/2022 68180-217-09  H001988 7/31/2022 68180-217-09  H001989 7/31/2022 68180-217-09  H001990 7/31/2022 68180-217-09  H002243 8/31/2022 68180-217-09  H002244 8/31/2022 68180-217-09  H002245 8/31/2022 68180-217-09  H002315 8/31/2022 68180-217-09  H002316 8/31/2022 68180-217-09  H002317 8/31/2022 68180-217-09  H002318 8/31/2022 68180-217-09  H002319 8/31/2022 68180-217-09  H002320 8/31/2022 68180-217-09  H002321 8/31/2022 68180-217-09  H002322 8/31/2022 68180-217-09  H002323 8/31/2022 68180-217-09  H002324 8/31/2022 68180-217-09  H002632 9/30/2022 68180-217-09  H002633 9/30/2022 68180-217-09  H002634 9/30/2022 68180-217-09  H002635 9/30/2022 68180-217-09  H002636 9/30/2022 68180-217-09  H002765 9/30/2022 68180-217-09  H002766 9/30/2022 68180-217-09  H002767 9/30/2022 68180-217-09  H002768 9/30/2022 68180-217-09  H002769 9/30/2022 68180-217-09  H002770 9/30/2022 68180-217-09  H003194 11/30/2022 68180-217-09  H003195 11/30/2022 68180-217-09  H100009 12/31/2022 68180-217-09  H100010 12/31/2022 68180-217-09  H100021 12/31/2022 68180-217-09  H100022 12/31/2022 68180-217-09  H100023 12/31/2022 68180-217-09  H100029 12/31/2022 68180-217-09  H100030 12/31/2022 68180-217-09  H100342 1/31/2023 68180-217-09  H100343 1/31/2023 68180-217-09  H100344 1/31/2023 68180-217-09  H100345 1/31/2023 68180-217-09  H100346 1/31/2023 68180-217-09  H100374 1/31/2023 68180-217-09  H100375 1/31/2023 68180-217-09  H100376 1/31/2023 68180-217-09  H100377 1/31/2023 68180-217-09  H100378 1/31/2023 68180-217-09  H100452 1/31/2023 68180-217-09  H100453 1/31/2023 68180-217-09  H100454 2/28/2023 68180-217-09  H100458 2/28/2023 68180-217-09  H100459 2/28/2023 68180-217-09  H100652 2/28/2023 68180-217-09  H100653 2/28/2023 68180-217-09  H100654 2/28/2023 68180-217-09  H100655 2/28/2023 68180-217-09  H100656 2/28/2023 68180-217-09  H100687 2/28/2023 68180-217-09  H100688 2/28/2023 68180-217-09  H100689 2/28/2023 68180-217-09  H100703 2/28/2023 68180-217-09  H100704 2/28/2023 68180-217-09  H100891 3/31/2023 68180-217-09  H100892 3/31/2023 68180-217-09  H100902 3/31/2023 68180-217-09  H100903 3/31/2023 68180-217-09  H100904 3/31/2023 68180-217-09  H100905 3/31/2023 68180-217-09  H100936 3/31/2023 68180-217-09  H100937 3/31/2023 68180-217-09  H100938 3/31/2023 68180-217-09  H101153 5/31/2023 68180-217-09  H101154 5/31/2023 68180-217-09  H101155 5/31/2023 68180-217-09  H101156 5/31/2023 68180-217-09  H101157 5/31/2023 68180-217-09  H101158 5/31/2023 68180-217-09  H101159 5/31/2023 68180-217-09  H101294 5/31/2023 68180-217-09  H101295 5/31/2023 68180-217-09  H101296 5/31/2023 68180-217-09  H101297 5/31/2023 68180-217-09  H101325 5/31/2023 68180-217-09  H101326 6/30/2023 68180-217-09  H101327 6/30/2023 68180-217-09  H101328 6/30/2023 68180-217-09  H101349 6/30/2023 68180-217-09  H101350 6/30/2023 68180-217-09  H101351 6/30/2023 68180-217-09  H101352 6/30/2023 68180-217-09  H101482 6/30/2023 68180-217-09  H101483 6/30/2023 68180-217-09  H101606 7/31/2023 68180-217-09  H101618 7/31/2023 68180-217-09  H101619 7/31/2023 68180-217-09  H101620 7/31/2023 68180-217-09  H101621 7/31/2023 68180-217-09  H101827 7/31/2023 68180-217-09  H101828 7/31/2023 68180-217-09  H101829 7/31/2023 68180-217-09  H101857 7/31/2023 68180-217-09  H101858 7/31/2023 68180-217-09  H101911 7/31/2023 68180-217-09  H101912 7/31/2023 68180-217-09  H101913 7/31/2023 68180-217-09  H102455 10/31/2023 68180-217-09  H102456 10/31/2023 68180-217-09  H102457 10/31/2023 68180-217-09  H102458 10/31/2023 68180-217-09  H102485 10/31/2023 68180-217-09  H102489 10/31/2023 68180-217-09  H102490 10/31/2023 68180-217-09  H102491 10/31/2023 68180-217-09"
+    },
+    {
+      "status": "Terminated",
+      "city": "Baltimore",
+      "state": "MD",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA078232"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "Lupin Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "68180-210",
+          "68180-211",
+          "68180-212",
+          "68180-376",
+          "68180-377",
+          "68180-378",
+          "68180-307",
+          "68180-308",
+          "68180-309"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "38431fb6-7157-4be5-929a-0c65b7a29c55"
+        ],
+        "spl_set_id": [
+          "e5886220-43b7-46e1-9034-5242ba245bd1"
+        ],
+        "package_ndc": [
+          "68180-210-09",
+          "68180-210-03",
+          "68180-210-01",
+          "68180-210-06",
+          "68180-211-06",
+          "68180-211-09",
+          "68180-211-03",
+          "68180-211-01",
+          "68180-212-06",
+          "68180-212-03",
+          "68180-212-09",
+          "68180-212-01",
+          "68180-376-03",
+          "68180-376-06",
+          "68180-376-01",
+          "68180-376-09",
+          "68180-377-03",
+          "68180-377-01",
+          "68180-377-09",
+          "68180-377-06",
+          "68180-378-09",
+          "68180-378-03",
+          "68180-378-06",
+          "68180-378-01",
+          "68180-307-01",
+          "68180-307-02",
+          "68180-307-09",
+          "68180-307-06",
+          "68180-308-06",
+          "68180-308-09",
+          "68180-308-02",
+          "68180-308-01",
+          "68180-309-06",
+          "68180-309-09",
+          "68180-309-02",
+          "68180-309-01"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0368180212065",
+          "0368180376033",
+          "0368180210061",
+          "0368180378037",
+          "0368180308027",
+          "0368180376095",
+          "0368180211068",
+          "0368180309024",
+          "0368180377030"
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "89916",
+      "recalling_firm": "Lupin Pharmaceuticals Inc.",
+      "address_1": "Harborplace Tower",
+      "address_2": "111 S Calvert St Fl 21st",
+      "postal_code": "21202-6174",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed nationwide",
+      "recall_number": "D-0838-2022",
+      "product_description": "Losartan Potassium Tablets USP, 25 mg, a) 90-count bottles (NDC# 68180-376-03), b) 1000-count bottles (NDC#  68180-376-09), Rx Only, Manufactured By: Lupin Limited, Pithampur, India, MFG For: Lupin Pharmaceuticals, Inc. Baltimore, Maryland 21202, USA.",
+      "product_quantity": "657,336 bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220331",
+      "center_classification_date": "20220503",
+      "termination_date": "20230522",
+      "report_date": "20220511",
+      "code_info": "H001333, exp. date Nov-22  H002786, exp. date Jan-23  H101282, exp. date Feb-23  H001189, exp. date Nov-22  H002955, exp. date Jan-23  H101285, exp. date Feb-23  H001714, exp. date Dec-22  H000523, exp. date Jan-23  H101989, exp. date Mar-23  H001940, exp. date Dec-22  H003080, exp. date Jan-23  H101789, exp. date Mar-23  H002388, exp. date Jan-23  H100109, exp. date Feb-23   H002389, exp. date Jan-23  H100642, exp. date Feb-23   H000848, exp. date Nov-22,  H002002, exp. date Dec-22  H100110, exp. date Feb-23  H001190, exp. date Nov-22  H002003, exp. date Dec-22  H100111, exp. date Feb-23  H001191, exp. date Nov-22  H002489, exp. date Jan-23  H100146, exp. date Feb-23  H001192, exp. date Nov-22  H002390, exp. date Jan-23  H100147, exp. date Feb-23  H001058, exp. date Nov-22  H002486, exp. date Jan-23  H101283, exp. date Feb-23  H000985, exp. date Nov-22  H002487, exp. date Jan-23  H101284, exp. date Feb-23  H001059, exp. date Nov-22  H002488, exp. date Jan-23  H100643, exp. date Feb-23  H001275, exp. date Nov-22  H002787, exp. date Jan-23  H100644, exp. date Mar-23  H001715, exp. date Dec-22  H002957, exp. date Jan-23  H100869, exp. date Mar-23  H001716, exp. date Dec-22  H002958, exp. date Jan-23  H101990, exp. date Mar-23  H001717, exp. date Dec-22  H003079, exp. date Jan-23  H101991, exp. date Mar-23  H001718, exp. date Dec-22  H003121, exp. date Feb-23  H101992, exp. date Mar-23  H001941, exp. date Dec-22  H003122, exp. date   Feb-23   H000847, exp. date  Nov 2022"
+    },
+    {
+      "status": "Terminated",
+      "city": "Baltimore",
+      "state": "MD",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA078245"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "manufacturer_name": [
+          "Lupin Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "68180-215",
+          "68180-216",
+          "68180-217"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "HYDROCHLOROTHIAZIDE",
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979464",
+          "979468",
+          "979471"
+        ],
+        "spl_id": [
+          "84f3649d-3ced-4765-ba22-d0fbaeffa820"
+        ],
+        "spl_set_id": [
+          "ee1eaaf6-050b-48af-942b-5e3451edc164"
+        ],
+        "package_ndc": [
+          "68180-215-09",
+          "68180-215-03",
+          "68180-215-01",
+          "68180-215-06",
+          "68180-216-06",
+          "68180-216-09",
+          "68180-216-01",
+          "68180-216-03",
+          "68180-217-06",
+          "68180-217-09",
+          "68180-217-01",
+          "68180-217-03"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0368180215066",
+          "0368180217060"
+        ],
+        "nui": [
+          "N0000175359",
+          "N0000175419",
+          "M0471776"
+        ],
+        "pharm_class_pe": [
+          "Increased Diuresis [PE]"
+        ],
+        "pharm_class_epc": [
+          "Thiazide Diuretic [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Thiazides [CS]"
+        ],
+        "unii": [
+          "3ST302B24A",
+          "0J48LPH2TH"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "89916",
+      "recalling_firm": "Lupin Pharmaceuticals Inc.",
+      "address_1": "Harborplace Tower",
+      "address_2": "111 S Calvert St Fl 21st",
+      "postal_code": "21202-6174",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed nationwide",
+      "recall_number": "D-0841-2022",
+      "product_description": "Losartan Potassium and Hydrochlorothiazide Tablets USP, 50 mg/12.5 mg  a) 30-count bottles (NDC# 68180-215-06)  b) 90-count bottles (NDC# 68180-215-09), Rx Only, Manufactured By: Lupin Limited, Pithampur, India, MFG For: Lupin Pharmaceuticals, Inc. Baltimore, Maryland 21202, USA.",
+      "product_quantity": "1,214,016 bottles",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220331",
+      "center_classification_date": "20220503",
+      "termination_date": "20230522",
+      "report_date": "20220511",
+      "code_info": "Lot #  H001149 4/30/2022 68180-215-06  H001602 5/31/2022 68180-215-06  H001884 6/30/2022 68180-215-06  H002539 8/31/2022 68180-215-06  H100944 4/30/2023 68180-215-06  H101054 4/30/2023 68180-215-06  H001150 4/30/2022 68180-215-09  H001151 4/30/2022 68180-215-09  H001152 4/30/2022 68180-215-09  H001532 5/31/2022 68180-215-09  H001533 5/31/2022 68180-215-09  H001534 5/31/2022 68180-215-09  H001535 5/31/2022 68180-215-09  H001536 5/31/2022 68180-215-09  H001603 5/31/2022 68180-215-09  H001604 5/31/2022 68180-215-09  H001605 5/31/2022 68180-215-09  H001606 5/31/2022 68180-215-09  H001607 5/31/2022 68180-215-09  H001608 5/31/2022 68180-215-09  H001885 6/30/2022 68180-215-09  H001886 6/30/2022 68180-215-09  H001887 6/30/2022 68180-215-09  H001888 6/30/2022 68180-215-09  H002171 7/31/2022 68180-215-09  H002172 7/31/2022 68180-215-09  H002173 7/31/2022 68180-215-09  H002174 7/31/2022 68180-215-09  H002175 7/31/2022 68180-215-09  H002540 8/31/2022 68180-215-09  H002541 8/31/2022 68180-215-09  H002542 8/31/2022 68180-215-09  H002543 8/31/2022 68180-215-09  H002544 8/31/2022 68180-215-09  H002545 8/31/2022 68180-215-09  H002976 10/31/2022 68180-215-09  H002977 10/31/2022 68180-215-09  H002978 10/31/2022 68180-215-09  H003131 11/30/2022 68180-215-09  H003132 11/30/2022 68180-215-09  H003133 11/30/2022 68180-215-09  H003134 11/30/2022 68180-215-09  H003135 11/30/2022 68180-215-09  H003136 11/30/2022 68180-215-09  H100302 1/31/2023 68180-215-09  H100303 1/31/2023 68180-215-09  H100304 1/31/2023 68180-215-09  H100340 1/31/2023 68180-215-09  H100341 1/31/2023 68180-215-09  H100657 2/28/2023 68180-215-09  H100658 2/28/2023 68180-215-09  H100659 2/28/2023 68180-215-09  H100660 2/28/2023 68180-215-09  H100661 2/28/2023 68180-215-09  H100662 2/28/2023 68180-215-09  H100945 4/30/2023 68180-215-09  H100946 4/30/2023 68180-215-09  H101051 4/30/2023 68180-215-09  H101052 4/30/2023 68180-215-09  H101053 4/30/2023 68180-215-09  H101055 4/30/2023 68180-215-09  H101056 4/30/2023 68180-215-09  H101057 4/30/2023 68180-215-09  H101058 4/30/2023 68180-215-09  H101286 5/31/2023 68180-215-09  H101287 5/31/2023 68180-215-09  H101288 5/31/2023 68180-215-09  H101289 5/31/2023 68180-215-09  H101581 6/30/2023 68180-215-09  H101582 6/30/2023 68180-215-09  H101583 6/30/2023 68180-215-09  H101584 7/31/2023 68180-215-09  H101585 7/31/2023 68180-215-09  H101790 7/31/2023 68180-215-09  H101791 7/31/2023 68180-215-09  H102078 8/31/2023 68180-215-09  H102079 8/31/2023 68180-215-09  H102080 9/30/2023 68180-215-09  H102118 9/30/2023 68180-215-09  H102119 9/30/2023 68180-215-09  H102120 9/30/2023 68180-215-09  H102125 9/30/2023 68180-215-09  H102126 9/30/2023 68180-215-09"
+    },
+    {
+      "status": "Terminated",
+      "city": "Plainsboro",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202289"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "manufacturer_name": [
+          "Macleods Pharmaceuticals Limited"
+        ],
+        "product_ndc": [
+          "33342-050",
+          "33342-051",
+          "33342-052"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM",
+          "HYDROCHLOROTHIAZIDE"
+        ],
+        "rxcui": [
+          "979464",
+          "979468",
+          "979471"
+        ],
+        "spl_id": [
+          "cf31d31e-9355-47da-9c2b-8e4b84ac8159"
+        ],
+        "spl_set_id": [
+          "a04b5622-2c49-4d61-92b1-5dc523af7a24"
+        ],
+        "package_ndc": [
+          "33342-050-07",
+          "33342-050-10",
+          "33342-050-44",
+          "33342-050-12",
+          "33342-051-07",
+          "33342-051-10",
+          "33342-051-44",
+          "33342-051-12",
+          "33342-052-07",
+          "33342-052-10",
+          "33342-052-44",
+          "33342-052-12"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0333342051448",
+          "0333342050106",
+          "0333342052100",
+          "0333342051103",
+          "0333342052445",
+          "0333342051073",
+          "0333342052070"
+        ],
+        "nui": [
+          "N0000175359",
+          "N0000175419",
+          "M0471776"
+        ],
+        "pharm_class_pe": [
+          "Increased Diuresis [PE]"
+        ],
+        "pharm_class_epc": [
+          "Thiazide Diuretic [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Thiazides [CS]"
+        ],
+        "unii": [
+          "3ST302B24A",
+          "0J48LPH2TH"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "90037",
+      "recalling_firm": "Macleods Pharma Usa Inc",
+      "address_1": "666 Plainsboro Rd Bldg 200 Ste 230",
+      "address_2": "N/A",
+      "postal_code": "08536-0009",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed nationwide.",
+      "recall_number": "D-0837-2022",
+      "product_description": "Losartan Potassium & Hydrochlorothiazide Tablets, USP, 100 mg/12.5 mg, a) 30-count bottles (NDC# 33342-051-07), b) 90-count bottles (NDC # 33342-051-10)  c) 1000-count bottles (NDC # 33342-051-44), Rx Only, MFR: Macleods Pharma USA, Inc. Plainsboro, NJ 08536",
+      "product_quantity": "N/A",
+      "reason_for_recall": "CGMP Deviations- AZIDO Impurity levels observed to be above acceptable limits",
+      "recall_initiation_date": "20220415",
+      "center_classification_date": "20220503",
+      "termination_date": "20231013",
+      "report_date": "20220511",
+      "code_info": "Lot #  BLL2107B, exp. date 05/2023  BLL2101A, exp. date 01/2025  BLL2102A, exp. date 02/2025  BLL2103B, exp. date 02/2023  BLL2104A, exp. date 05/2023"
+    },
+    {
+      "status": "Terminated",
+      "city": "Oklahoma City",
+      "state": "OK",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA203835"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "PD-Rx Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "43063-854"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979492"
+        ],
+        "spl_id": [
+          "525abf19-736b-8fd8-e063-6294a90a30b9"
+        ],
+        "spl_set_id": [
+          "abb56236-f2fe-45b5-93ac-35fd661f8992"
+        ],
+        "package_ndc": [
+          "43063-854-60",
+          "43063-854-90",
+          "43063-0854-90"
+        ],
+        "original_packager_product_ndc": [
+          "31722-701"
+        ],
+        "upc": [
+          "0343063854907"
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "87774",
+      "recalling_firm": "PD-Rx Pharmaceuticals, Inc.",
+      "address_1": "727 N Ann Arbor Ave",
+      "address_2": "N/A",
+      "postal_code": "73127-5822",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "AK, AZ, CA, CO, FL, KY, MA, MI, MN, NC, OH, OR, WI, WY",
+      "recall_number": "D-0341-2021",
+      "product_description": "Losartan Potassium USP, 50 mg, RX Only,  Pkg By PD-Rx Pharmaceuticals Incorporated Oklahoma City, OK 73127 a) 60 Tablets NDC: 43063-854-60; b) 90 Tablets NDC: 43063-0854-90",
+      "product_quantity": "576 bottles",
+      "reason_for_recall": "CGMP deviation: Product found to contain trace amounts of NMBA",
+      "recall_initiation_date": "20190308",
+      "center_classification_date": "20210426",
+      "termination_date": "20210616",
+      "report_date": "20210505",
+      "code_info": "Lots: A19B99 Exp. 11/30/2019; B19A26 Exp. 11/30/2019; B19A69 Exp. 11/30/2019; E18F12 Exp.: 09/30/19; F18A12 Exp.: 09/30/19; F18F06 Exp.: 09/30/19; G18B43 Exp.: 09/30/19; G18C43 Exp.: 09/30/19; G18F75 Exp.: 09/30/19; H18D55 Exp.: 09/30/19; I18A11 Exp.: 09/30/19; I18E32 Exp.: 09/30/19; J18A90 Exp.: 09/30/19; J18D50 Exp. 11/30/2019; L18D01 Exp. 11/30/2019",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Plainsboro",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202230"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "Macleods Pharmaceuticals Limited"
+        ],
+        "product_ndc": [
+          "33342-044",
+          "33342-045",
+          "33342-046"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "81824d1f-61f4-457c-8723-cd43d5429029"
+        ],
+        "spl_set_id": [
+          "85d69d02-c5ef-467e-94aa-903100218795"
+        ],
+        "package_ndc": [
+          "33342-044-10",
+          "33342-044-12",
+          "33342-044-07",
+          "33342-044-44",
+          "33342-045-10",
+          "33342-045-12",
+          "33342-045-07",
+          "33342-045-44",
+          "33342-046-10",
+          "33342-046-12",
+          "33342-046-07",
+          "33342-046-44"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "83151",
+      "recalling_firm": "Macleods Pharma Usa Inc",
+      "address_1": "666 Plainsboro Rd Bldg 200 Ste 230",
+      "address_2": "",
+      "postal_code": "08536-0009",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1458-2019",
+      "product_description": "Losartan Potassium Tablets 50 mg 1000 Tablets, USP Rx Only  Manufactured for: Macleods Pharma USA inc. Plainsboro, NJ 08536   Manufactured by: Macleods Pharmaceuticals, Ltd. Baddi, Himachal Pradesh, INDIA   NDC 33342-045-44",
+      "product_quantity": "4277 bottles (4,277,000 tablets)",
+      "reason_for_recall": "CGMP Deviations: impurity for N-Nitroso-N-methyl-4-aminobutyric acid (NMBA) detected in the active pharmaceutical ingredient (API) used to manufacture finished products.",
+      "recall_initiation_date": "20190620",
+      "center_classification_date": "20190709",
+      "termination_date": "20211026",
+      "report_date": "20190717",
+      "code_info": "BLI710A Nov 2019",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Plainsboro",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202289"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "manufacturer_name": [
+          "Macleods Pharmaceuticals Limited"
+        ],
+        "product_ndc": [
+          "33342-050",
+          "33342-051",
+          "33342-052"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM",
+          "HYDROCHLOROTHIAZIDE"
+        ],
+        "rxcui": [
+          "979464",
+          "979468",
+          "979471"
+        ],
+        "spl_id": [
+          "cf31d31e-9355-47da-9c2b-8e4b84ac8159"
+        ],
+        "spl_set_id": [
+          "a04b5622-2c49-4d61-92b1-5dc523af7a24"
+        ],
+        "package_ndc": [
+          "33342-050-07",
+          "33342-050-10",
+          "33342-050-44",
+          "33342-050-12",
+          "33342-051-07",
+          "33342-051-10",
+          "33342-051-44",
+          "33342-051-12",
+          "33342-052-07",
+          "33342-052-10",
+          "33342-052-44",
+          "33342-052-12"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0333342051448",
+          "0333342050106",
+          "0333342052100",
+          "0333342051103",
+          "0333342052445",
+          "0333342051073",
+          "0333342052070"
+        ],
+        "nui": [
+          "N0000175359",
+          "N0000175419",
+          "M0471776"
+        ],
+        "pharm_class_pe": [
+          "Increased Diuresis [PE]"
+        ],
+        "pharm_class_epc": [
+          "Thiazide Diuretic [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Thiazides [CS]"
+        ],
+        "unii": [
+          "3ST302B24A",
+          "0J48LPH2TH"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "83151",
+      "recalling_firm": "Macleods Pharma Usa Inc",
+      "address_1": "666 Plainsboro Rd Bldg 200 Ste 230",
+      "address_2": "",
+      "postal_code": "08536-0009",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1459-2019",
+      "product_description": "Losartan Potassium and Hydrochlorothiazide Tablets, USP 50 mg/12.5 mg 90 Tablets, USP  Manufactured for: Macleods Pharma USA inc. Plainsboro, NJ 08536   Manufactured by: Macleods Pharmaceuticals, Ltd. Baddi, Himachal Pradesh, INDIA   NDC 33342-050-10",
+      "product_quantity": "142626 bottles (12,836,340 tablets)",
+      "reason_for_recall": "CGMP Deviations: impurity for N-Nitroso-N-methyl-4-aminobutyric acid (NMBA) detected in the active pharmaceutical ingredient (API) used to manufacture finished products.",
+      "recall_initiation_date": "20190620",
+      "center_classification_date": "20190709",
+      "termination_date": "20211026",
+      "report_date": "20190717",
+      "code_info": "BLK719A Sep-19  BLK720A Sep-19  BLK721A Sep-19  BLK722A Sep-19  BLK723A Sep-19  BLK724A Sep-19  BLK725A Oct-19  BLK726A Oct-19  BLK804A Jan-20  BLK806A Jan-20  BLK825A Oct-21  BLK826A Oct-21",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Plainsboro",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202230"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "Macleods Pharmaceuticals Limited"
+        ],
+        "product_ndc": [
+          "33342-044",
+          "33342-045",
+          "33342-046"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "81824d1f-61f4-457c-8723-cd43d5429029"
+        ],
+        "spl_set_id": [
+          "85d69d02-c5ef-467e-94aa-903100218795"
+        ],
+        "package_ndc": [
+          "33342-044-10",
+          "33342-044-12",
+          "33342-044-07",
+          "33342-044-44",
+          "33342-045-10",
+          "33342-045-12",
+          "33342-045-07",
+          "33342-045-44",
+          "33342-046-10",
+          "33342-046-12",
+          "33342-046-07",
+          "33342-046-44"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "83151",
+      "recalling_firm": "Macleods Pharma Usa Inc",
+      "address_1": "666 Plainsboro Rd Bldg 200 Ste 230",
+      "address_2": "",
+      "postal_code": "08536-0009",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1457-2019",
+      "product_description": "Losartan Potassium Tablets, USP 50 mg 90 tablets Rx Only Manufactured for: Macleods Pharma USA inc. Plainsboro, NJ 08536   Manufactured by: Macleods Pharmaceuticals, Ltd. Baddi, Himachal Pradesh, INDIA   NDC 33342-045-10",
+      "product_quantity": "47520 bottles (4,276,800 tablets)",
+      "reason_for_recall": "CGMP Deviations: impurity for N-Nitroso-N-methyl-4-aminobutyric acid (NMBA) detected in the active pharmaceutical ingredient (API) used to manufacture finished products.",
+      "recall_initiation_date": "20190620",
+      "center_classification_date": "20190709",
+      "termination_date": "20211026",
+      "report_date": "20190717",
+      "code_info": "BLI711A Nov 2019",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Plainsboro",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202289"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "manufacturer_name": [
+          "Macleods Pharmaceuticals Limited"
+        ],
+        "product_ndc": [
+          "33342-050",
+          "33342-051",
+          "33342-052"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM",
+          "HYDROCHLOROTHIAZIDE"
+        ],
+        "rxcui": [
+          "979464",
+          "979468",
+          "979471"
+        ],
+        "spl_id": [
+          "cf31d31e-9355-47da-9c2b-8e4b84ac8159"
+        ],
+        "spl_set_id": [
+          "a04b5622-2c49-4d61-92b1-5dc523af7a24"
+        ],
+        "package_ndc": [
+          "33342-050-07",
+          "33342-050-10",
+          "33342-050-44",
+          "33342-050-12",
+          "33342-051-07",
+          "33342-051-10",
+          "33342-051-44",
+          "33342-051-12",
+          "33342-052-07",
+          "33342-052-10",
+          "33342-052-44",
+          "33342-052-12"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0333342051448",
+          "0333342050106",
+          "0333342052100",
+          "0333342051103",
+          "0333342052445",
+          "0333342051073",
+          "0333342052070"
+        ],
+        "nui": [
+          "N0000175359",
+          "N0000175419",
+          "M0471776"
+        ],
+        "pharm_class_pe": [
+          "Increased Diuresis [PE]"
+        ],
+        "pharm_class_epc": [
+          "Thiazide Diuretic [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Thiazides [CS]"
+        ],
+        "unii": [
+          "3ST302B24A",
+          "0J48LPH2TH"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "83151",
+      "recalling_firm": "Macleods Pharma Usa Inc",
+      "address_1": "666 Plainsboro Rd Bldg 200 Ste 230",
+      "address_2": "",
+      "postal_code": "08536-0009",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1460-2019",
+      "product_description": "Losartan Potassium and Hydrochlorothiazide Tablets, USP 100 mg/12.5 mg 90 Tablets, USP  Manufactured for: Macleods Pharma USA inc. Plainsboro, NJ 08536   Manufactured by: Macleods Pharmaceuticals, Ltd. Baddi, Himachal Pradesh, INDIA     NDC 33342-051-10",
+      "product_quantity": "29106 bottles (2,619,540 tablets)",
+      "reason_for_recall": "CGMP Deviations: impurity for N-Nitroso-N-methyl-4-aminobutyric acid (NMBA) detected in the active pharmaceutical ingredient (API) used to manufacture finished products.",
+      "recall_initiation_date": "20190620",
+      "center_classification_date": "20190709",
+      "termination_date": "20211026",
+      "report_date": "20190717",
+      "code_info": "BLL801A Dec-19  BLL802A Dec-19  BLL803A Dec-19",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Plainsboro",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202289"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "manufacturer_name": [
+          "Macleods Pharmaceuticals Limited"
+        ],
+        "product_ndc": [
+          "33342-050",
+          "33342-051",
+          "33342-052"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM",
+          "HYDROCHLOROTHIAZIDE"
+        ],
+        "rxcui": [
+          "979464",
+          "979468",
+          "979471"
+        ],
+        "spl_id": [
+          "cf31d31e-9355-47da-9c2b-8e4b84ac8159"
+        ],
+        "spl_set_id": [
+          "a04b5622-2c49-4d61-92b1-5dc523af7a24"
+        ],
+        "package_ndc": [
+          "33342-050-07",
+          "33342-050-10",
+          "33342-050-44",
+          "33342-050-12",
+          "33342-051-07",
+          "33342-051-10",
+          "33342-051-44",
+          "33342-051-12",
+          "33342-052-07",
+          "33342-052-10",
+          "33342-052-44",
+          "33342-052-12"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0333342051448",
+          "0333342050106",
+          "0333342052100",
+          "0333342051103",
+          "0333342052445",
+          "0333342051073",
+          "0333342052070"
+        ],
+        "nui": [
+          "N0000175359",
+          "N0000175419",
+          "M0471776"
+        ],
+        "pharm_class_pe": [
+          "Increased Diuresis [PE]"
+        ],
+        "pharm_class_epc": [
+          "Thiazide Diuretic [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Thiazides [CS]"
+        ],
+        "unii": [
+          "3ST302B24A",
+          "0J48LPH2TH"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "83151",
+      "recalling_firm": "Macleods Pharma Usa Inc",
+      "address_1": "666 Plainsboro Rd Bldg 200 Ste 230",
+      "address_2": "",
+      "postal_code": "08536-0009",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1461-2019",
+      "product_description": "Losartan Potassium andHydrochlorothiazide Tablets 100 mg/25 mg 90 tablets, USP Rx Only,  Manufactured for: Macleods Pharma USA inc. Plainsboro, NJ 08536   Manufactured by: Macleods Pharmaceuticals, Ltd. Baddi, Himachal Pradesh, INDIA   NDC 33342-052-10",
+      "product_quantity": "145162 bottles (13,064,580 tablets)",
+      "reason_for_recall": "CGMP Deviations: impurity for N-Nitroso-N-methyl-4-aminobutyric acid (NMBA) detected in the active pharmaceutical ingredient (API) used to manufacture finished products.",
+      "recall_initiation_date": "20190620",
+      "center_classification_date": "20190709",
+      "termination_date": "20211026",
+      "report_date": "20190717",
+      "code_info": "BLM716A  Jul-19  BLM717A Jul-19  BLM719A Aug-19  BLM720A  Aug-19  BLM721A  Sep-19  BLM722A Sep-19  BLM723A Oct-19  BLM724A  Oct-19  BLM725A  Oct-19  BLM726A  Nov-19  BLM802A  Dec-19  BLM803A  Dec-19  BLM825A  Sep-21  BLM826A Sep-21  BLM827A Sep-21",
+      "more_code_info": ""
+    },
+    {
+      "status": "Ongoing",
+      "city": "Piscataway",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA203835"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "Camber Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "31722-700",
+          "31722-701",
+          "31722-702"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "40b34aeb-20b5-4200-e063-6394a90a96e9"
+        ],
+        "spl_set_id": [
+          "cafd54e8-42a8-474c-8ea8-49ec74c2b0d3"
+        ],
+        "package_ndc": [
+          "31722-700-30",
+          "31722-700-60",
+          "31722-700-90",
+          "31722-700-05",
+          "31722-700-10",
+          "31722-701-30",
+          "31722-701-60",
+          "31722-701-90",
+          "31722-701-05",
+          "31722-701-10",
+          "31722-702-30",
+          "31722-702-60",
+          "31722-702-90",
+          "31722-702-05",
+          "31722-702-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0331722702300",
+          "0331722700900",
+          "0331722701303"
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "82281",
+      "recalling_firm": "Camber Pharmaceuticals Inc",
+      "address_1": "1031 Centennial Ave",
+      "address_2": "N/A",
+      "postal_code": "08854-4125",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Press Release",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1042-2019",
+      "product_description": "Losartan Potassium Tablets USP, 50 mg, Rx only, a) 30 count (NDC 31722-701-30), b) 90 count (NDC 31722-701-90), c) 1000 count (NDC 31722-701-10) bottles, Manufactured for: Camber Pharmaceuticals, Inc. Piscataway, NJ 08854 By: Hetero Hetero Labs Limited, Unit V, Polepally, Jadcherla, Mahaboob Nagar -509 301, India",
+      "product_quantity": "69712 bottles",
+      "reason_for_recall": "CGMP Deviations; trace amounts of N-Nitroso N-Methyl 4-amino butyric acid (NMBA) detected in the active pharmaceutical ingredient",
+      "recall_initiation_date": "20190228",
+      "center_classification_date": "20190321",
+      "report_date": "20190327",
+      "code_info": "a) LOP17028C, Exp. Sep-19, LOP17064A, Exp. Nov-19;    b) LOP17027, Exp Sep-19, LOP17063, LOP17093, Exp. Nov-19; LOP17094, LOP17095, LOP17097A, LOP17105, LOP17107, Exp. Dec-19;    c) LOP17004, Exp Dec-19, LOP17028B, Exp Sep-19, LOP17048, LOP17049 Exp Oct-19, LOP17056, LOP17073, LOP17074, LOP17076 Exp Nov-19, LOP17096, Exp Dec-19, LOP18077A, LOP18078, LOP18079, LOP18080 Exp  Feb-20; LOP18081, LOP18084, LOP18095, LOP18096 Exp Mar-20"
+    },
+    {
+      "status": "Ongoing",
+      "city": "Piscataway",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA203835"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "Camber Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "31722-700",
+          "31722-701",
+          "31722-702"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "40b34aeb-20b5-4200-e063-6394a90a96e9"
+        ],
+        "spl_set_id": [
+          "cafd54e8-42a8-474c-8ea8-49ec74c2b0d3"
+        ],
+        "package_ndc": [
+          "31722-700-30",
+          "31722-700-60",
+          "31722-700-90",
+          "31722-700-05",
+          "31722-700-10",
+          "31722-701-30",
+          "31722-701-60",
+          "31722-701-90",
+          "31722-701-05",
+          "31722-701-10",
+          "31722-702-30",
+          "31722-702-60",
+          "31722-702-90",
+          "31722-702-05",
+          "31722-702-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0331722702300",
+          "0331722700900",
+          "0331722701303"
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "82281",
+      "recalling_firm": "Camber Pharmaceuticals Inc",
+      "address_1": "1031 Centennial Ave",
+      "address_2": "N/A",
+      "postal_code": "08854-4125",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Press Release",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1043-2019",
+      "product_description": "Losartan Potassium Tablets USP, 100 mg, Rx only, a) 30 count (NDC 31722-702-30), b) 90 count (NDC 31722-702-30), c) 1000 count (NDC 31722-702-10) bottles, Manufactured for: Camber Pharmaceuticals, Inc. Piscataway, NJ 08854 By: Hetero Hetero Labs Limited, Unit V, Polepally, Jadcherla, Mahaboob Nagar -509 301, India",
+      "product_quantity": "683,641 bottles",
+      "reason_for_recall": "CGMP Deviations; trace amounts of N-Nitroso N-Methyl 4-amino butyric acid (NMBA) detected in the active pharmaceutical ingredient",
+      "recall_initiation_date": "20190228",
+      "center_classification_date": "20190321",
+      "report_date": "20190327",
+      "code_info": "a) LOP17011, Exp Aug-19, Lot LOP17087 Exp Nov-19;    b) LOP17012, LOP17013, Exp Aug-19, LOP17042, LOP17043 Exp Oct-19,  LOP17044, LOP17045, Exp  Nov-19, LOP18024, LOP18025, LOP18026, LOP18027, LOP18028, LOP18029, LOP18030, Exp. Dec-19;    c) LOP17005, Exp May-19,  LOP17014, Exp Aug-19, LOP17016,  LOP17023, Exp Sep-19, LOP17083, Exp Oct-19, LOP17084, LOP17085, LOP17086, Exp Nov-19, LOP18021, LOP18022, LOP18023, LOP18031, LOP18032, LOP18033, LOP18050, LOP18051, Exp Dec-19, LOP18109,  LOP18111, Exp Mar-20, LOP18122, LOP18123, LOP18124, LOP18125,  LOP18126, LOP18127, LOP18128, LOP18129, LOP18130, LOP18131C, LOP18133, Exp Jun-20"
+    },
+    {
+      "status": "Ongoing",
+      "city": "Piscataway",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA203835"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "manufacturer_name": [
+          "Camber Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "31722-700",
+          "31722-701",
+          "31722-702"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM"
+        ],
+        "rxcui": [
+          "979480",
+          "979485",
+          "979492"
+        ],
+        "spl_id": [
+          "40b34aeb-20b5-4200-e063-6394a90a96e9"
+        ],
+        "spl_set_id": [
+          "cafd54e8-42a8-474c-8ea8-49ec74c2b0d3"
+        ],
+        "package_ndc": [
+          "31722-700-30",
+          "31722-700-60",
+          "31722-700-90",
+          "31722-700-05",
+          "31722-700-10",
+          "31722-701-30",
+          "31722-701-60",
+          "31722-701-90",
+          "31722-701-05",
+          "31722-701-10",
+          "31722-702-30",
+          "31722-702-60",
+          "31722-702-90",
+          "31722-702-05",
+          "31722-702-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0331722702300",
+          "0331722700900",
+          "0331722701303"
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "82281",
+      "recalling_firm": "Camber Pharmaceuticals Inc",
+      "address_1": "1031 Centennial Ave",
+      "address_2": "N/A",
+      "postal_code": "08854-4125",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Press Release",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1041-2019",
+      "product_description": "Losartan Potassium Tablets USP, 25 mg, Rx only, a) 90 count (NDC 31722-700-90), b) 500 count (NDC 31722-700-05) and c) 1000 count (NDC 31722-700-05) bottles, Manufactured for: Camber Pharmaceuticals, Inc. Piscataway, NJ 08854 By: Hetero Hetero Labs Limited, Unit V, Polepally, Jadcherla, Mahaboob Nagar -509 301, India",
+      "product_quantity": "351,732 bottles",
+      "reason_for_recall": "CGMP Deviations; trace amounts of N-Nitroso N-Methyl 4-amino butyric acid (NMBA) detected in the active pharmaceutical ingredient",
+      "recall_initiation_date": "20190228",
+      "center_classification_date": "20190321",
+      "report_date": "20190327",
+      "code_info": "a) LOP17026B, LOP17050, LOP1705, LOP17052, LOP17053, Exp. Sep-19; LOP17061, Exp. Oct-19; LOP18035, LOP18036, Exp. Dec-19;    b) LOP17026, Exp. Sep-19;    c) LOP17006, Exp. May-19, LOP17025, Exp. Sep-19, LOP17068, Exp, Oct-19, LOP18037, LOP18038, LOP18039, Exp. Dec-19, LOP18057, Exp. Jan-20"
+    },
+    {
+      "status": "Terminated",
+      "city": "Salisbury",
+      "state": "MD",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA201845"
+        ],
+        "brand_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "generic_name": [
+          "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE"
+        ],
+        "manufacturer_name": [
+          "Jubilant Cadista Pharmaceuticals Inc."
+        ],
+        "product_ndc": [
+          "59746-337",
+          "59746-338",
+          "59746-339"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "LOSARTAN POTASSIUM",
+          "HYDROCHLOROTHIAZIDE"
+        ],
+        "rxcui": [
+          "979464",
+          "979468",
+          "979471"
+        ],
+        "spl_id": [
+          "5357e5cd-0f2e-4296-8879-72e700f87d46"
+        ],
+        "spl_set_id": [
+          "e0b74a86-3d36-1af0-e538-41b45b8d2cc3"
+        ],
+        "package_ndc": [
+          "59746-337-30",
+          "59746-337-90",
+          "59746-337-01",
+          "59746-337-10",
+          "59746-338-30",
+          "59746-338-90",
+          "59746-338-01",
+          "59746-338-10",
+          "59746-339-30",
+          "59746-339-90",
+          "59746-339-01",
+          "59746-339-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0359746338107",
+          "0359746337100",
+          "0359746339104"
+        ],
+        "nui": [
+          "N0000175359",
+          "N0000175419",
+          "M0471776"
+        ],
+        "pharm_class_pe": [
+          "Increased Diuresis [PE]"
+        ],
+        "pharm_class_epc": [
+          "Thiazide Diuretic [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Thiazides [CS]"
+        ],
+        "unii": [
+          "3ST302B24A",
+          "0J48LPH2TH"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "68776",
+      "recalling_firm": "Jubilant Cadista Pharmaceuticals Inc.",
+      "address_1": "207 Kiley Dr",
+      "address_2": "",
+      "postal_code": "21801-2249",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Telephone",
+      "distribution_pattern": "Nationwide and Puerto Rico",
+      "recall_number": "D-1500-2014",
+      "product_description": "Losartan Potassium and Hydrochlorothiazide Tablets, USP 100 mg/25 mg, 90-tablets per bottle, Rx Only, Manufactured by: Jubilant Cadista Pharmaceuticals Inc., Salisbury, MD 21801, NDC # 59746-339-90",
+      "product_quantity": "9,358 bottles",
+      "reason_for_recall": "Presence of Foreign Substance: Tablets may contain dark blemishes identified as stainless steel.",
+      "recall_initiation_date": "20140711",
+      "center_classification_date": "20140731",
+      "termination_date": "20160915",
+      "report_date": "20140806",
+      "code_info": "Lot #14P0292, Exp 04/2016",
+      "more_code_info": ""
+    }
+  ]
+}

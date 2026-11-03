@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "78206-121",
+      "generic_name": "losartan potassium",
+      "labeler_name": "Organon LLC",
+      "brand_name": "COZAAR",
+      "active_ingredients": [
+        {
+          "name": "LOSARTAN POTASSIUM",
+          "strength": "25 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "78206-121-01",
+          "description": "90 TABLET, FILM COATED in 1 BOTTLE (78206-121-01)",
+          "marketing_start_date": "20210601",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20271231",
+      "openfda": {
+        "manufacturer_name": [
+          "Organon LLC"
+        ],
+        "rxcui": [
+          "979480",
+          "979482",
+          "979485",
+          "979487",
+          "979492",
+          "979494"
+        ],
+        "spl_set_id": [
+          "9949448f-c3b9-44ee-94ed-c1aca8c90f39"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0378206122025",
+          "0378206121011",
+          "0378206123022"
+        ],
+        "unii": [
+          "3ST302B24A"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET, FILM COATED",
+      "spl_id": "998b309b-7dde-4d62-b902-010dd83108fe",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20210601",
+      "product_id": "78206-121_998b309b-7dde-4d62-b902-010dd83108fe",
+      "application_number": "NDA020386",
+      "brand_name_base": "COZAAR",
+      "pharm_class": [
+        "Angiotensin 2 Receptor Antagonists [MoA]",
+        "Angiotensin 2 Receptor Blocker [EPC]"
+      ]
+    }
+  ]
+}

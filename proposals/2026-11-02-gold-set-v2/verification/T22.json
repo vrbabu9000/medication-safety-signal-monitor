@@ -1,0 +1,587 @@
+{
+ "trace_id": "T22",
+ "questions_sha256": "296a369d43907b078bee93397c9ccaa2657aed6bf046cc7e68c941608cd31400",
+ "checks": [
+  {
+   "check": "8 steps answered",
+   "pass": true,
+   "detail": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8"
+   ]
+  },
+  {
+   "check": "hash T22.s1_rx_brand",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s1_rx_brand",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T22.s1_rx_brand_props",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s1_rx_brand_props",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T22.s1_rx_ingredients",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s1_rx_ingredients",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T22.s1_rx_reverse_89013",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s1_rx_reverse_89013",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T22.s2_ndc",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s2_ndc",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T22.s3_drugsfda",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s3_drugsfda",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T22.s4_label",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s4_label",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T22.s5_srlc_detail",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s5_srlc_detail",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T22.s5_srlc_search",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s5_srlc_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T22.s6_faers_brand_reactions",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s6_faers_brand_reactions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T22.s6_faers_brand_total",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s6_faers_brand_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T22.s6_faers_substance",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s6_faers_substance",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T22.s6_faers_total",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s6_faers_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T22.s7_recall_app",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s7_recall_app",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T22.s8_trial",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s8_trial",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T22.s8_trials_search",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s8_trials_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hash T22.s8_trials_version",
+   "pass": true,
+   "detail": "captured"
+  },
+  {
+   "check": "no api key stored T22.s8_trials_version",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S1 cites manifest hash for T22.s1_rx_brand",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S1 cites manifest hash for T22.s1_rx_brand_props",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S1 cites manifest hash for T22.s1_rx_ingredients",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S1 cites manifest hash for T22.s1_rx_reverse_89013",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S1 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S2 cites manifest hash for T22.s2_ndc",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S2 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S3 cites manifest hash for T22.s3_drugsfda",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S3 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S4 cites manifest hash for T22.s4_label",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S4 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S5 cites manifest hash for T22.s5_srlc_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S5 cites manifest hash for T22.s5_srlc_detail",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S5 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S6 cites manifest hash for T22.s6_faers_substance",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S6 cites manifest hash for T22.s6_faers_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S6 cites manifest hash for T22.s6_faers_brand_total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S6 cites manifest hash for T22.s6_faers_brand_reactions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S6 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S7 cites manifest hash for T22.s7_recall_app",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S7 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S8 cites manifest hash for T22.s8_trials_search",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S8 cites manifest hash for T22.s8_trial",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S8 cites manifest hash for T22.s8_trials_version",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "T22-S8 resolved and pending review",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S1 brand rxcui",
+   "pass": true,
+   "detail": "352393"
+  },
+  {
+   "check": "S1 tty",
+   "pass": true,
+   "detail": "BN"
+  },
+  {
+   "check": "S1 ingredients",
+   "pass": true,
+   "detail": [
+    [
+     "89013",
+     "aripiprazole"
+    ]
+   ]
+  },
+  {
+   "check": "S1 multi flag",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S1 reverse IN 89013 -> brand",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S2 labeler/category/app",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S2 package description",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S2 set id link",
+   "pass": true,
+   "detail": "c040bd1d-45b7-49f2-93ea-aed7220b30ac"
+  },
+  {
+   "check": "S3 sponsor",
+   "pass": true,
+   "detail": "OTSUKA"
+  },
+  {
+   "check": "S3 products",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S3 app link",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S4 section found once by id",
+   "pass": true,
+   "detail": "81dc96e0-92a6-41fb-948d-94c4467745af"
+  },
+  {
+   "check": "S4 heading matches",
+   "pass": true,
+   "detail": "5.7 Pathological Gambling and Other Compulsive Behaviors"
+  },
+  {
+   "check": "S4 quote verbatim in passage",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S4 target phrase in passage",
+   "pass": true,
+   "detail": "urges, particularly for gambling"
+  },
+  {
+   "check": "S4 class allowed",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S5 page header names application",
+   "pass": true,
+   "detail": "NDA021436"
+  },
+  {
+   "check": "S5 passage is underlined text on the page",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S5 entry date + supplement on page",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S5 no newer entry with underlined Boxed/4/5/6 text",
+   "pass": true,
+   "detail": []
+  },
+  {
+   "check": "S5 presence in S4 label",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 substance",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 substance total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 brand total",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 s6_faers_total holds no report records",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 s6_faers_brand_total holds no report records",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 terms and counts",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'OFF LABEL USE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'DRUG INEFFECTIVE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'FATIGUE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'FATIGUE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'WEIGHT INCREASED'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'WEIGHT INCREASED'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'NAUSEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'NAUSEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'HEADACHE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'HEADACHE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'DIARRHOEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'DIARRHOEA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'DIZZINESS'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'DIZZINESS'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'INSOMNIA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'INSOMNIA'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 label match 'TREMOR'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S6 quote verbatim 'TREMOR'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S7 most recent record",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S7 fields",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S7 package named in record text",
+   "pass": true,
+   "detail": "59148-006-13"
+  },
+  {
+   "check": "S8 nct + status",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S8 group values",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "S8 study is in captured search",
+   "pass": true,
+   "detail": 0
+  },
+  {
+   "check": "S8 group title names drug",
+   "pass": true,
+   "detail": "Augmenting: Antidepressant + Aripiprazole"
+  },
+  {
+   "check": "S8 no earlier study in search order qualifies",
+   "pass": true,
+   "detail": []
+  }
+ ],
+ "passed": 113,
+ "failed": []
+}

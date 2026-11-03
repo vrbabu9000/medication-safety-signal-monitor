@@ -1,0 +1,4466 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 41
+    }
+  },
+  "results": [
+    {
+      "status": "Ongoing",
+      "city": "Bedminster",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA209288"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Ascend Laboratories, LLC"
+        ],
+        "product_ndc": [
+          "67877-511",
+          "67877-512",
+          "67877-513",
+          "67877-514"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "259255",
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "777b866a-796a-4d15-8cb6-dd0c9a1856e2"
+        ],
+        "spl_set_id": [
+          "67e60880-091a-4df7-8696-6e6c42a490e2"
+        ],
+        "package_ndc": [
+          "67877-511-90",
+          "67877-511-05",
+          "67877-511-10",
+          "67877-511-55",
+          "67877-511-33",
+          "67877-511-38",
+          "67877-512-90",
+          "67877-512-05",
+          "67877-512-10",
+          "67877-512-44",
+          "67877-512-33",
+          "67877-512-38",
+          "67877-513-90",
+          "67877-513-05",
+          "67877-513-10",
+          "67877-513-23",
+          "67877-513-33",
+          "67877-513-38",
+          "67877-514-90",
+          "67877-514-05",
+          "67877-514-10",
+          "67877-514-33",
+          "67877-514-38"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0367877512051",
+          "0367877513102",
+          "0367877514109"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "97639",
+      "recalling_firm": "Ascend Laboratories, LLC",
+      "address_1": "135 Us Highway 202 206 Ste 15",
+      "address_2": "",
+      "postal_code": "07921-2608",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "U.S. Nationwide",
+      "recall_number": "D-0020-2026",
+      "product_description": "Atorvastatin Calcium Tablets USP, 80 mg, Rx Only, a). 90-count(NDC 67877-514-90), b). 500-count(NDC 67877-514-05), Manufactured by: Alkem Laboratories, Ltd. India, Distributed by: Ascend Laboratories, LLC, Parsippany, NJ 07054",
+      "product_quantity": "",
+      "reason_for_recall": "Failed Dissolution Specifications",
+      "recall_initiation_date": "20250919",
+      "center_classification_date": "20251010",
+      "report_date": "20251022",
+      "code_info": "Lot#: 25140249, Exp. Dec. 2026 Lot#: 25140247, Exp. Dec. 2026 Lot#: 24144999, Exp. Nov. 2026 Lot#: 24144942, Exp. Nov. 2026 Lot#: 24144845, Exp. Nov. 2026 Lot#: 24144713, Exp. Nov. 2026 Lot#: 24144652, Exp. Oct. 2026 Lot#: 24143898, Exp. Aug. 2026 Lot#: 24143412, Exp. Aug. 2026 Lot#: 24143582, Exp. Aug. 2026",
+      "more_code_info": ""
+    },
+    {
+      "status": "Ongoing",
+      "city": "Bedminster",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA209288"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Ascend Laboratories, LLC"
+        ],
+        "product_ndc": [
+          "67877-511",
+          "67877-512",
+          "67877-513",
+          "67877-514"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "259255",
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "777b866a-796a-4d15-8cb6-dd0c9a1856e2"
+        ],
+        "spl_set_id": [
+          "67e60880-091a-4df7-8696-6e6c42a490e2"
+        ],
+        "package_ndc": [
+          "67877-511-90",
+          "67877-511-05",
+          "67877-511-10",
+          "67877-511-55",
+          "67877-511-33",
+          "67877-511-38",
+          "67877-512-90",
+          "67877-512-05",
+          "67877-512-10",
+          "67877-512-44",
+          "67877-512-33",
+          "67877-512-38",
+          "67877-513-90",
+          "67877-513-05",
+          "67877-513-10",
+          "67877-513-23",
+          "67877-513-33",
+          "67877-513-38",
+          "67877-514-90",
+          "67877-514-05",
+          "67877-514-10",
+          "67877-514-33",
+          "67877-514-38"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0367877512051",
+          "0367877513102",
+          "0367877514109"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "97639",
+      "recalling_firm": "Ascend Laboratories, LLC",
+      "address_1": "135 Us Highway 202 206 Ste 15",
+      "address_2": "",
+      "postal_code": "07921-2608",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "U.S. Nationwide",
+      "recall_number": "D-0019-2026",
+      "product_description": "Atorvastatin Calcium Tablets USP, 20 mg, Rx Only, a). 90-count(NDC 67877-512-90),  b). 500-count (NDC 67877-512-05), c). 1000-count(NDC 67877-512-10),Manufactured by: Alkem Laboratories, Ltd. India, Distributed by: Ascend Laboratories, LLC, Parsippany, NJ 07054.",
+      "product_quantity": "",
+      "reason_for_recall": "Failed Dissolution Specifications",
+      "recall_initiation_date": "20250919",
+      "center_classification_date": "20251010",
+      "report_date": "20251022",
+      "code_info": "Lot #: 25140150, Exp.  Dec. 2026 Lot #: 25140173, Exp. Dec. 2026 Lot #: 25140172, Exp. Dec. 2026 Lot #: 24144720, Exp. Nov. 2026 Lot #: 24144798, Exp.  Nov. 2026 Lot #: 24144692, Exp. Oct. 2026 Lot #: 24143755, Exp.  Aug. 2026 Lot #: 24143913, Exp. Aug. 2026 Lot #: 24143754, Exp.  Aug. 2026 Lot #: 24143047, Exp. June 2026 Lot #: 24142936, Exp. July 2026",
+      "more_code_info": ""
+    },
+    {
+      "status": "Ongoing",
+      "city": "Bedminster",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA209288"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Ascend Laboratories, LLC"
+        ],
+        "product_ndc": [
+          "67877-511",
+          "67877-512",
+          "67877-513",
+          "67877-514"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "259255",
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "777b866a-796a-4d15-8cb6-dd0c9a1856e2"
+        ],
+        "spl_set_id": [
+          "67e60880-091a-4df7-8696-6e6c42a490e2"
+        ],
+        "package_ndc": [
+          "67877-511-90",
+          "67877-511-05",
+          "67877-511-10",
+          "67877-511-55",
+          "67877-511-33",
+          "67877-511-38",
+          "67877-512-90",
+          "67877-512-05",
+          "67877-512-10",
+          "67877-512-44",
+          "67877-512-33",
+          "67877-512-38",
+          "67877-513-90",
+          "67877-513-05",
+          "67877-513-10",
+          "67877-513-23",
+          "67877-513-33",
+          "67877-513-38",
+          "67877-514-90",
+          "67877-514-05",
+          "67877-514-10",
+          "67877-514-33",
+          "67877-514-38"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0367877512051",
+          "0367877513102",
+          "0367877514109"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "97639",
+      "recalling_firm": "Ascend Laboratories, LLC",
+      "address_1": "135 Us Highway 202 206 Ste 15",
+      "address_2": "",
+      "postal_code": "07921-2608",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "U.S. Nationwide",
+      "recall_number": "D-0017-2026",
+      "product_description": "Atorvastatin Calcium Tablets USP, 10 mg, Rx Only a) 90-count bottle (NDC 67877-511-90), b). 500-count bottle (NDC 67877-511-05), c). 1000-count bottle (NDC 67877-511-10) Manufactured by: Alkem Laboratories, Ltd. India, Distributed by: Ascend Laboratories, LLC, Parsippany, NJ 07054.",
+      "product_quantity": "141,984 bottles",
+      "reason_for_recall": "Failed Dissolution Specifications",
+      "recall_initiation_date": "20250919",
+      "center_classification_date": "20251010",
+      "report_date": "20251022",
+      "code_info": "Lot#: 25141249, Exp. Feb. 2027 Lot#: 24144938, Exp. Nov. 2026 Lot#: 24144868, Exp. Nov. 2026 Lot#: 24144867, Exp. Nov. 2026 Lot#: 24144458, Exp. Sep. 2026 Lot#: 24143994, Exp. Sep. 2026 Lot#: 24142987, Exp. July 2026 Lot#: 24143316, Exp. July 2026",
+      "more_code_info": ""
+    },
+    {
+      "status": "Ongoing",
+      "city": "Bedminster",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA209288"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Ascend Laboratories, LLC"
+        ],
+        "product_ndc": [
+          "67877-511",
+          "67877-512",
+          "67877-513",
+          "67877-514"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "259255",
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "777b866a-796a-4d15-8cb6-dd0c9a1856e2"
+        ],
+        "spl_set_id": [
+          "67e60880-091a-4df7-8696-6e6c42a490e2"
+        ],
+        "package_ndc": [
+          "67877-511-90",
+          "67877-511-05",
+          "67877-511-10",
+          "67877-511-55",
+          "67877-511-33",
+          "67877-511-38",
+          "67877-512-90",
+          "67877-512-05",
+          "67877-512-10",
+          "67877-512-44",
+          "67877-512-33",
+          "67877-512-38",
+          "67877-513-90",
+          "67877-513-05",
+          "67877-513-10",
+          "67877-513-23",
+          "67877-513-33",
+          "67877-513-38",
+          "67877-514-90",
+          "67877-514-05",
+          "67877-514-10",
+          "67877-514-33",
+          "67877-514-38"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0367877512051",
+          "0367877513102",
+          "0367877514109"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "97639",
+      "recalling_firm": "Ascend Laboratories, LLC",
+      "address_1": "135 Us Highway 202 206 Ste 15",
+      "address_2": "",
+      "postal_code": "07921-2608",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "U.S. Nationwide",
+      "recall_number": "D-0018-2026",
+      "product_description": "Atorvastatin Calcium Tablets USP, 40 mg, Rx Only,  a). 90-count (NDC 67877-513-90), b).  500-count (NDC 67877-513-05), c). 1000-count (NDC 67877-513-10),  Manufactured by: Alkem Laboratories, Ltd. India, Distributed by: Ascend Laboratories, LLC, Parsippany, NJ 07054.",
+      "product_quantity": "",
+      "reason_for_recall": "Failed Dissolution Specifications",
+      "recall_initiation_date": "20250919",
+      "center_classification_date": "20251010",
+      "report_date": "20251022",
+      "code_info": "Lot#: 25140933, Exp. Feb. 2027 Lot#: 25140477, Exp.  Dec. 2026 Lot#: 24144254, Exp. Oct. 2026 Lot#: 24144163, Exp.  Sep. 2026 Lot#: 24143995, Exp.  Sep. 2026",
+      "more_code_info": ""
+    },
+    {
+      "status": "Ongoing",
+      "city": "ISELIN",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA216436"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Biocon Pharma Inc."
+        ],
+        "product_ndc": [
+          "70377-077",
+          "70377-078",
+          "70377-079",
+          "70377-080"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "259255",
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "72b8b3f5-4658-80af-655c-87ce7966a5e6"
+        ],
+        "spl_set_id": [
+          "5b839619-1805-c227-91bf-182f5b966ba4"
+        ],
+        "package_ndc": [
+          "70377-077-11",
+          "70377-077-13",
+          "70377-077-12",
+          "70377-078-11",
+          "70377-078-13",
+          "70377-078-12",
+          "70377-079-11",
+          "70377-079-12",
+          "70377-079-13",
+          "70377-080-11",
+          "70377-080-12",
+          "70377-080-13"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0370377080111"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "96496",
+      "recalling_firm": "BIOCON PHARMA INC",
+      "address_1": "485 HWY 1 (S)",
+      "address_2": "",
+      "postal_code": "08830",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "",
+      "distribution_pattern": "U.S.A. nationwide",
+      "recall_number": "D-0306-2025",
+      "product_description": "Atorvastatin Calcium Tablets USP 40 mg, 1000-count bottle, Rx Only, Manufactured for: Biocon Pharma Inc., Iselin, NJ 08830-3009 USA, Manufactured by: Recipharm Pharmaservices PVT, Ltd Bengaluru, INDIA -562-123, NDC 70377-079-13",
+      "product_quantity": "2184 bottles",
+      "reason_for_recall": "Failed dissolution specifications: lower than specifications",
+      "recall_initiation_date": "20250317",
+      "center_classification_date": "20250328",
+      "report_date": "20250409",
+      "code_info": "Lot#: AVC24035, Exp 03/31/26",
+      "more_code_info": ""
+    },
+    {
+      "status": "Ongoing",
+      "city": "Indianapolis",
+      "state": "IN",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA207687"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Northwind Health Company, LLC"
+        ],
+        "product_ndc": [
+          "51655-946"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "617312"
+        ],
+        "spl_id": [
+          "4bc15e11-0610-7b32-e063-6394a90ada06"
+        ],
+        "spl_set_id": [
+          "df6233cf-5b4e-5fbe-e053-2a95a90a0a80"
+        ],
+        "package_ndc": [
+          "51655-946-52"
+        ],
+        "original_packager_product_ndc": [
+          "16729-044"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "91944",
+      "recalling_firm": "Northwind Pharmaceuticals LLC",
+      "address_1": "4838 Fletcher Ave Ste 1000",
+      "address_2": "N/A",
+      "postal_code": "46203-1642",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Two or more of the following: Email, Fax, Letter, Press Release, Telephone, Visit",
+      "distribution_pattern": "Nationwide with the United States",
+      "recall_number": "D-0548-2023",
+      "product_description": "Atorvastatin Calcium Tablets, USP, 10 mg, 30-count bottles, Rx Only, Repackaged By: Northwind Pharmaceuticals, Indianapolis, IN 46203.  NDC 51655-946-52",
+      "product_quantity": "99 bottles",
+      "reason_for_recall": "CGMP Deviations",
+      "recall_initiation_date": "20230316",
+      "center_classification_date": "20230426",
+      "report_date": "20230503",
+      "code_info": "Lot # F117192201, Exp. Date 4/30/2023"
+    },
+    {
+      "status": "Terminated",
+      "city": "Durham",
+      "state": "NC",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA207687"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Accord Healthcare Inc."
+        ],
+        "product_ndc": [
+          "16729-044",
+          "16729-045",
+          "16729-046",
+          "16729-047"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "259255",
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "40828d2e-69eb-5d38-e063-6394a90abd70"
+        ],
+        "spl_set_id": [
+          "4e06b20d-cc5d-46eb-991b-5972248de3af"
+        ],
+        "package_ndc": [
+          "16729-045-10",
+          "16729-045-15",
+          "16729-045-01",
+          "16729-045-16",
+          "16729-045-17",
+          "16729-044-10",
+          "16729-044-15",
+          "16729-044-01",
+          "16729-044-16",
+          "16729-044-17",
+          "16729-046-10",
+          "16729-046-15",
+          "16729-046-01",
+          "16729-046-16",
+          "16729-046-17",
+          "16729-047-10",
+          "16729-047-15",
+          "16729-047-01",
+          "16729-047-16",
+          "16729-047-17"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ],
+        "upc": [
+          "316729047159",
+          "316729047166"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "91657",
+      "recalling_firm": "Accord Healthcare, Inc.",
+      "address_1": "1009 Slater Rd Ste 210B",
+      "address_2": "N/A",
+      "postal_code": "27703-8446",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "United States including Puerto Rico and Canada",
+      "recall_number": "D-0374-2023",
+      "product_description": "Atorvastatin Calcium Tablets USP 80 mg* Rx Only, Packaged as a) 90 Tablets NDC 16729-047-15 UPC 3 16729 04715 9; b) 500 Tablets NDC 16729-047-16 UPC 3 16729 04716 6; Manufactured for: Accord Healthcare, Inc., Durham, NC 27703 Manufactured by: Intas Pharmaceuticals Limited, Pharmez, Ahmedabad-382 213, INDIA",
+      "product_quantity": "72,376 bottles",
+      "reason_for_recall": "CGMP Deviations: recalling drug products following an FDA inspection.",
+      "recall_initiation_date": "20230207",
+      "center_classification_date": "20230302",
+      "termination_date": "20240422",
+      "report_date": "20230308",
+      "code_info": "Batches: a)R2100283, R2100288, R2100289, Exp. Date 2/28/2023; R2200235, Exp. Date 1/31/2024; R2201037, R2200952, Exp. Date 6/30/2024; b) R2100291, R2100281, R2100282, R2100292, R2100293, R2100294, R2100290, R2100306, R2100348, R2100349, R2100347, R2100350, R2100356, R2100355, Exp. Date 2/28/2023; R2100461, R2100463, R2100464, Exp. Date 3/31/2023; R2101214, R2101215, R2101216, Exp. Date 9/30/2023; R2101572, R2101573, R2101577, R2101578, R2101585, R2101579, R2101584, R2101587, R2101597, Exp. Date 11/30/2023; R2200801, Exp. Date 6/30/2024;",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Durham",
+      "state": "NC",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA207687"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Accord Healthcare Inc."
+        ],
+        "product_ndc": [
+          "16729-044",
+          "16729-045",
+          "16729-046",
+          "16729-047"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "259255",
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "40828d2e-69eb-5d38-e063-6394a90abd70"
+        ],
+        "spl_set_id": [
+          "4e06b20d-cc5d-46eb-991b-5972248de3af"
+        ],
+        "package_ndc": [
+          "16729-045-10",
+          "16729-045-15",
+          "16729-045-01",
+          "16729-045-16",
+          "16729-045-17",
+          "16729-044-10",
+          "16729-044-15",
+          "16729-044-01",
+          "16729-044-16",
+          "16729-044-17",
+          "16729-046-10",
+          "16729-046-15",
+          "16729-046-01",
+          "16729-046-16",
+          "16729-046-17",
+          "16729-047-10",
+          "16729-047-15",
+          "16729-047-01",
+          "16729-047-16",
+          "16729-047-17"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ],
+        "upc": [
+          "316729046152",
+          "316729046176"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "91657",
+      "recalling_firm": "Accord Healthcare, Inc.",
+      "address_1": "1009 Slater Rd Ste 210B",
+      "address_2": "N/A",
+      "postal_code": "27703-8446",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "United States including Puerto Rico and Canada",
+      "recall_number": "D-0373-2023",
+      "product_description": "Atorvastatin Calcium Tablets USP 40 mg* Rx Only, Packaged as a) 90 Tablets NDC 16729-046-15 UPC 3 16729 04615 2; b) 1,000 Tablets NDC 16729-046-17 UPC 3 16729 04617 6,  Manufactured for: Accord Healthcare, Inc., Durham, NC 27703 Manufactured by: Intas Pharmaceuticals Limited, Pharmez, Ahmedabad-382 213, INDIA",
+      "product_quantity": "147,736 bottles",
+      "reason_for_recall": "CGMP Deviations: recalling drug products following an FDA inspection.",
+      "recall_initiation_date": "20230207",
+      "center_classification_date": "20230302",
+      "termination_date": "20240422",
+      "report_date": "20230308",
+      "code_info": "Batches: a)R2100552, R2100553, Exp. Date 4/30/2023; R2200253, Exp. Date 2/29/2024; R2200627, Exp. Date 4/30/2024; R2201113, Exp. Date 6/30/2024; R2201184, Exp. Date 8/31/2024; R2201366, Exp. Date 9/30/2024;  b) R2200280, Exp. Date 2/29/2024; R2200385, R2200386, R2200491, R2200490, R2200494, R2200496, R2200495, Exp. Date 3/31/2024; R2200510, R2200520, R2200521, R2200517, R2200511, R2200632, R2200631, R2200637, R2200635, R2200648, R2200638, R2200639, R2200647, Exp. Date 4/30/2024; R2200727, Exp. Date 5/31/2024;",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Durham",
+      "state": "NC",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA207687"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Accord Healthcare Inc."
+        ],
+        "product_ndc": [
+          "16729-044",
+          "16729-045",
+          "16729-046",
+          "16729-047"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "259255",
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "40828d2e-69eb-5d38-e063-6394a90abd70"
+        ],
+        "spl_set_id": [
+          "4e06b20d-cc5d-46eb-991b-5972248de3af"
+        ],
+        "package_ndc": [
+          "16729-045-10",
+          "16729-045-15",
+          "16729-045-01",
+          "16729-045-16",
+          "16729-045-17",
+          "16729-044-10",
+          "16729-044-15",
+          "16729-044-01",
+          "16729-044-16",
+          "16729-044-17",
+          "16729-046-10",
+          "16729-046-15",
+          "16729-046-01",
+          "16729-046-16",
+          "16729-046-17",
+          "16729-047-10",
+          "16729-047-15",
+          "16729-047-01",
+          "16729-047-16",
+          "16729-047-17"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ],
+        "upc": [
+          "316729044158",
+          "316729044172"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "91657",
+      "recalling_firm": "Accord Healthcare, Inc.",
+      "address_1": "1009 Slater Rd Ste 210B",
+      "address_2": "N/A",
+      "postal_code": "27703-8446",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "United States including Puerto Rico and Canada",
+      "recall_number": "D-0371-2023",
+      "product_description": "Atorvastatin Calcium Tablets USP, 10 mg* Rx Only, Packaged as  a) 90 Tablets NDC 16729-044-15 UPC 3 16729 04415 8; b) 1,000 Tablets NDC 16729-044-17 UPC 3 16729 04417 2; Manufactured for: Accord Healthcare, Inc., Durham, NC 27703, Manufactured by: Intas Pharmaceuticals Limited, Pharmez, Ahmedabad-382 213, INDIA.",
+      "product_quantity": "256,106 bottles",
+      "reason_for_recall": "CGMP Deviations: recalling drug products following an FDA inspection.",
+      "recall_initiation_date": "20230207",
+      "center_classification_date": "20230302",
+      "termination_date": "20240422",
+      "report_date": "20230308",
+      "code_info": "Batches: a)R2100455, Exp. Date 3/31/2023; R2200274, Exp. Date 1/31/2024; R2200700, Exp. Date 5/31/2024;  b) R2101342, R2101343, R2101476, Exp. Date 9/30/2023; R2101364, R2101365, R2101366, R2101367, Exp. Date 10/31/2023; R2101612, R2101613, R2101614, Exp. Date 11/30/2023; R2200222, R2200221, R2200223, Exp. Date 1/31/2024; R2200795, R2200713, R2200701, R2200711, R2200712, R2200756, R2200757, R2200754, R2200755, Exp. Date 5/31/2024; R2200945, R2200943, Exp. Date 6/30/2024;",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Durham",
+      "state": "NC",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA207687"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Accord Healthcare Inc."
+        ],
+        "product_ndc": [
+          "16729-044",
+          "16729-045",
+          "16729-046",
+          "16729-047"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "259255",
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "40828d2e-69eb-5d38-e063-6394a90abd70"
+        ],
+        "spl_set_id": [
+          "4e06b20d-cc5d-46eb-991b-5972248de3af"
+        ],
+        "package_ndc": [
+          "16729-045-10",
+          "16729-045-15",
+          "16729-045-01",
+          "16729-045-16",
+          "16729-045-17",
+          "16729-044-10",
+          "16729-044-15",
+          "16729-044-01",
+          "16729-044-16",
+          "16729-044-17",
+          "16729-046-10",
+          "16729-046-15",
+          "16729-046-01",
+          "16729-046-16",
+          "16729-046-17",
+          "16729-047-10",
+          "16729-047-15",
+          "16729-047-01",
+          "16729-047-16",
+          "16729-047-17"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ],
+        "upc": [
+          "316729045155",
+          "316729045179"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "91657",
+      "recalling_firm": "Accord Healthcare, Inc.",
+      "address_1": "1009 Slater Rd Ste 210B",
+      "address_2": "N/A",
+      "postal_code": "27703-8446",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "United States including Puerto Rico and Canada",
+      "recall_number": "D-0372-2023",
+      "product_description": "Atorvastatin Calcium Tablets USP 20 mg* Rx Only, Packaged as  a) 90 Tablets NDC 16729-045-15 UPC 3 16729 04515 5; b) 1,000 Tablets NDC 16729-045-17 UPC 3 16729 04517 9, Manufactured for: Accord Healthcare, Inc., Durham, NC 27703 Manufactured by: Intas Pharmaceuticals Limited, Pharmez, Ahmedabad-382 213, INDIA",
+      "product_quantity": "241,585 bottles",
+      "reason_for_recall": "CGMP Deviations: recalling drug products following an FDA inspection.",
+      "recall_initiation_date": "20230207",
+      "center_classification_date": "20230302",
+      "termination_date": "20240422",
+      "report_date": "20230308",
+      "code_info": "Batches: a)R2100305, Exp. Date 2/28/2023; R2200227, Exp. Date 1/31/2024; R2200797, Exp. Date 6/30/2024;  b) R2101423, R2101438, R2101447, R2101446, Exp. Date 10/31/2023; R2200040, R2200041, R2200052, R2200043, R2200044, R2200051, R2200060, R2200061, R2200062, R2200077, R2200078, Exp. Date 12/31/2023; R2200228, R2200480, Exp. Date 1/31/2024; R2200266, R2200267, R2200265, R2200268, Exp. Date 2/29/2024; R2200370, Exp. Date 3/31/2024; R2201038, Exp. Date 6/30/2024;",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA202357"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Limited"
+        ],
+        "product_ndc": [
+          "55111-124"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "259255"
+        ],
+        "spl_id": [
+          "3ec2bef7-b820-857f-1c70-e57c2d2c6dbf"
+        ],
+        "spl_set_id": [
+          "6ccdb6f3-22c7-5b48-46bc-ce4a4c65eb4d"
+        ],
+        "package_ndc": [
+          "55111-124-30",
+          "55111-124-60",
+          "55111-124-90",
+          "55111-124-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "89833",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the USA.",
+      "recall_number": "D-0726-2022",
+      "product_description": "Atorvstatin Calcium Tablets, USP 80 mg*, 90 Tablets, Rx Only, Mrd. By: Dr. Reddy's Laboratories Limited, Srikakulam - 532 409, INDIA, NDC 55111-124-90",
+      "product_quantity": "28,068 bottles",
+      "reason_for_recall": "Failed Impurities/Degradation Specifications: Out of Specification results for related substance.",
+      "recall_initiation_date": "20220316",
+      "center_classification_date": "20220329",
+      "termination_date": "20231113",
+      "report_date": "20220406",
+      "code_info": "Lot: T000707, T000756, T000758, T000759, Exp 03/2022; T2100600, T2101075, Exp. 1/2023; T2102802, Exp. 07/2023"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA091650"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Limited"
+        ],
+        "product_ndc": [
+          "55111-121",
+          "55111-122",
+          "55111-123"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "36e09eff-3948-2638-b633-d5ec2bc03d2a"
+        ],
+        "spl_set_id": [
+          "901550e6-22be-68c9-eb86-f85a9c9dd998"
+        ],
+        "package_ndc": [
+          "55111-121-30",
+          "55111-121-60",
+          "55111-121-90",
+          "55111-121-05",
+          "55111-121-10",
+          "55111-122-30",
+          "55111-122-60",
+          "55111-122-90",
+          "55111-122-05",
+          "55111-122-10",
+          "55111-123-30",
+          "55111-123-60",
+          "55111-123-90",
+          "55111-123-05",
+          "55111-123-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0355111123903"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "88041",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide within the United States",
+      "recall_number": "D-0629-2021",
+      "product_description": "Atorvastatin Calcium Tablets, USP 10 mg, 500-count bottles, Rx Only, Dr. Reddy's Mfd. By: Dr. Reddy's Laboratories Limited, Bachupally, 500-090 India, NDC 55111-121-05.",
+      "product_quantity": "5984 bottles",
+      "reason_for_recall": "Failed Impurities/Degradation Specifications: due to presence of ATV cyclo IP and FP impurities",
+      "recall_initiation_date": "20210604",
+      "center_classification_date": "20210611",
+      "termination_date": "20230216",
+      "report_date": "20210623",
+      "code_info": "Lot #: C905064, C905065, Exp. Date 07/2021",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA091650"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Limited"
+        ],
+        "product_ndc": [
+          "55111-121",
+          "55111-122",
+          "55111-123"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "36e09eff-3948-2638-b633-d5ec2bc03d2a"
+        ],
+        "spl_set_id": [
+          "901550e6-22be-68c9-eb86-f85a9c9dd998"
+        ],
+        "package_ndc": [
+          "55111-121-30",
+          "55111-121-60",
+          "55111-121-90",
+          "55111-121-05",
+          "55111-121-10",
+          "55111-122-30",
+          "55111-122-60",
+          "55111-122-90",
+          "55111-122-05",
+          "55111-122-10",
+          "55111-123-30",
+          "55111-123-60",
+          "55111-123-90",
+          "55111-123-05",
+          "55111-123-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0355111123903"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "87879",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Distributed Nationwide in the USA",
+      "recall_number": "D-0599-2021",
+      "product_description": "Atorvastatin Calcium Tablets, USP 10 mg*, Rx Only, 500 count bottle, Mfd By: Dr. Reddy's Laboratories Limited, Bachupally 500 090, India,  NDC 55111-121-05.",
+      "product_quantity": "2980 500 count -bottles",
+      "reason_for_recall": "Failed Impurities -Degradation Specifications:due to presence of ATV cyclo IP and FP impurities",
+      "recall_initiation_date": "20210504",
+      "center_classification_date": "20210527",
+      "termination_date": "20230216",
+      "report_date": "20210602",
+      "code_info": "Lot # C905063, Exp 07/2021"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA091650"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Limited"
+        ],
+        "product_ndc": [
+          "55111-121",
+          "55111-122",
+          "55111-123"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "36e09eff-3948-2638-b633-d5ec2bc03d2a"
+        ],
+        "spl_set_id": [
+          "901550e6-22be-68c9-eb86-f85a9c9dd998"
+        ],
+        "package_ndc": [
+          "55111-121-30",
+          "55111-121-60",
+          "55111-121-90",
+          "55111-121-05",
+          "55111-121-10",
+          "55111-122-30",
+          "55111-122-60",
+          "55111-122-90",
+          "55111-122-05",
+          "55111-122-10",
+          "55111-123-30",
+          "55111-123-60",
+          "55111-123-90",
+          "55111-123-05",
+          "55111-123-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0355111123903"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "87365",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Distributed Nationwide in the USA",
+      "recall_number": "D-0291-2021",
+      "product_description": "Atorvastatin Calcium Tablets, 40mg, packaged in a) 90-count bottles, NDC 55111-123-90; b)  500-count bottles, NDC 55111-123-05; Rx only, Mfd By: Dr. Reddy's Laboratories Limited Srikakulam - 532 409 INDIA",
+      "product_quantity": "10,440 90-count and 224,710 500-count bottles",
+      "reason_for_recall": "Failed Impurities/Degradation Specifications:presence of ATV cyclo IP and FP, Dihydroxy epoxy and Dieto epoxy impurities",
+      "recall_initiation_date": "20210219",
+      "center_classification_date": "20210301",
+      "termination_date": "20230907",
+      "report_date": "20210310",
+      "code_info": "a) T900406, exp 3/2021    b) T000078 exp 12/2021  T000079 exp 12/2021  T000080 exp 12/2021  T000081 exp 12/2021  T000082 exp 12/2021  T000083 exp 12/2021  T000084 exp 12/2021  T000085 exp 12/2021  T000086 exp 12/2021  T000087 exp 12/2021  T000088 exp 1/2022  T000311 exp 1/2022  T000312 exp 1/2022  T000313 exp 1/2022  T000314 exp 1/2022  T000315 exp 1/2022  T000316 exp 1/2022  T000317 exp 1/2022  T000318 exp 1/2022  T000319 exp 1/2022  T000320 exp 1/2022  T000500 exp 2/2022  T000501 exp 2/2022  T000502 exp 2/2022  T000503 exp 2/2022  T000504 exp 2/2022  T000505 exp 2/2022  T000506 exp 2/2022  T000507 exp 2/2022  T000508 exp 2/2022  T000509 exp 3/2022  T000510 exp 3/2022  T000647 exp 3/2022  T000648 exp 3/2022  T000651exp 3/2022  T000652 exp 3/2022  T000653 exp 3/2022  T000654 exp 3/2022  T000875 exp 4/2022  T000876 exp 4/2022  T000877 exp 4/2022  T000878 exp 4/2022  T000879 exp 4/2022  T000880 exp 4/2022  T000881 exp 4/2022  T000882 exp 4/2022  T000883 exp 4/2022  T000884 exp 4/2022  T001120 exp 5/2022  T001121 exp 5/2022  T001122 exp 5/2022  T001124 exp 5/2022  T001125 exp 5/2022  T001126 exp 5/2022  T001127 exp 5/2022  T001128 exp 5/2022  T001129 exp 5/2022  T001130 exp 5/2022  T001260 exp 5/2022  T001261 exp 5/2022  T900506 exp 4/2021  T900507 exp 4/2021  T900508 exp 4/2021  T900655 exp 5/2021  T900656 exp 5/2021  T900657 exp 5/2021  T900658 exp 5/2021  T900659 exp 5/2021  T900673 exp 5/2021  T900674 exp 5/2021  T901024 exp 7/2021  T901025 exp 7/2021  T901026 exp 7/2021  T901027 exp 7/2021  T901029 exp 7/2021   T901030 exp 7/2021  T901031 exp 7/2021  T901032 exp 7/2021  T901033 exp 7/2021  T901424 exp 10/2021  T901425 exp 10/2021  T901426 exp 10/2021  T901427 exp 10/2021   T901428 exp 10/2021  T901429 exp 10/2021  T901430 exp 10/2021   T901431 exp 10/2021  T901432 exp 10/2021  T901433 exp 10/2021  T901568 exp 10/2021  T901569 exp 10/2021  T901570 exp 11/2021  T901571 exp 11/2021  T901572 exp 11/2021  T901573 exp 11/2021  T901574 exp 11/2021  T901575 exp 11/2021  T901576 exp 11/2021  T901577 exp 11/2021",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "New York",
+      "state": "NY",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "NDA021540"
+        ],
+        "brand_name": [
+          "CADUET"
+        ],
+        "generic_name": [
+          "AMLODIPINE AND ATORVASTATIN"
+        ],
+        "manufacturer_name": [
+          "Pfizer Laboratories Div Pfizer Inc"
+        ],
+        "product_ndc": [
+          "0069-6180",
+          "0069-2150",
+          "0069-2170",
+          "0069-2190",
+          "0069-2260",
+          "0069-2160",
+          "0069-2180",
+          "0069-2250",
+          "0069-2270",
+          "0069-6323",
+          "0069-6565",
+          "0069-6747",
+          "0069-7810",
+          "0069-7232",
+          "0069-7654",
+          "0069-7476"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "AMLODIPINE BESYLATE",
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "404011",
+          "404013",
+          "597967",
+          "597977",
+          "597980",
+          "597984",
+          "597987",
+          "597990",
+          "750199",
+          "750203",
+          "750207",
+          "750211",
+          "750227",
+          "750231",
+          "750235",
+          "750239"
+        ],
+        "spl_id": [
+          "7df1ff98-e490-4df8-8631-b21dc94a396e"
+        ],
+        "spl_set_id": [
+          "6f1a9bd8-ee30-4c7d-932f-3fa8c4e087b6"
+        ],
+        "package_ndc": [
+          "0069-2150-30",
+          "0069-2170-30",
+          "0069-2190-30",
+          "0069-2260-30",
+          "0069-2160-30",
+          "0069-2180-30",
+          "0069-2250-30",
+          "0069-2270-30",
+          "0069-6180-30",
+          "0069-6323-30",
+          "0069-6565-30",
+          "0069-6747-30",
+          "0069-7810-30",
+          "0069-7232-30",
+          "0069-7654-30",
+          "0069-7476-30"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0300692150305",
+          "0300692250302",
+          "0300692170303",
+          "0300692160304",
+          "0300692190301",
+          "0300696565303",
+          "0300696747303",
+          "0300697810303",
+          "0300692270300",
+          "0300697232303",
+          "0300697476301",
+          "0300696180308",
+          "0300696323309",
+          "0300692260301",
+          "0300697654303"
+        ],
+        "unii": [
+          "48A5M73Z4Q",
+          "864V2Q084H"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "84860",
+      "recalling_firm": "Pfizer Inc.",
+      "address_1": "235 E 42nd St",
+      "address_2": "",
+      "postal_code": "10017-5703",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the USA.",
+      "recall_number": "D-0841-2020",
+      "product_description": "Caduet (amlodipine besylate/atorvastatin calcium) Tablets, 10 mg/20 mg*, 30-count bottle, Rx only, Distributed by: Pfizer Labs, Division of Pfizer Inc. NY, NY 10017, Made in Germany, NDC 0069-2180-30.",
+      "product_quantity": "141 bottles",
+      "reason_for_recall": "Defective Container: products potentially could have been packaged in defective bottles, with a notched rim, that could cause inadequate foil sealing resulting in lack of moisture protection.",
+      "recall_initiation_date": "20200205",
+      "center_classification_date": "20200213",
+      "termination_date": "20210308",
+      "report_date": "20200219",
+      "code_info": "Lot #: CY0937, Exp 12/2021",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "New York",
+      "state": "NY",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "NDA021540"
+        ],
+        "brand_name": [
+          "CADUET"
+        ],
+        "generic_name": [
+          "AMLODIPINE AND ATORVASTATIN"
+        ],
+        "manufacturer_name": [
+          "Pfizer Laboratories Div Pfizer Inc"
+        ],
+        "product_ndc": [
+          "0069-6180",
+          "0069-2150",
+          "0069-2170",
+          "0069-2190",
+          "0069-2260",
+          "0069-2160",
+          "0069-2180",
+          "0069-2250",
+          "0069-2270",
+          "0069-6323",
+          "0069-6565",
+          "0069-6747",
+          "0069-7810",
+          "0069-7232",
+          "0069-7654",
+          "0069-7476"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "AMLODIPINE BESYLATE",
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "404011",
+          "404013",
+          "597967",
+          "597977",
+          "597980",
+          "597984",
+          "597987",
+          "597990",
+          "750199",
+          "750203",
+          "750207",
+          "750211",
+          "750227",
+          "750231",
+          "750235",
+          "750239"
+        ],
+        "spl_id": [
+          "7df1ff98-e490-4df8-8631-b21dc94a396e"
+        ],
+        "spl_set_id": [
+          "6f1a9bd8-ee30-4c7d-932f-3fa8c4e087b6"
+        ],
+        "package_ndc": [
+          "0069-2150-30",
+          "0069-2170-30",
+          "0069-2190-30",
+          "0069-2260-30",
+          "0069-2160-30",
+          "0069-2180-30",
+          "0069-2250-30",
+          "0069-2270-30",
+          "0069-6180-30",
+          "0069-6323-30",
+          "0069-6565-30",
+          "0069-6747-30",
+          "0069-7810-30",
+          "0069-7232-30",
+          "0069-7654-30",
+          "0069-7476-30"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0300692150305",
+          "0300692250302",
+          "0300692170303",
+          "0300692160304",
+          "0300692190301",
+          "0300696565303",
+          "0300696747303",
+          "0300697810303",
+          "0300692270300",
+          "0300697232303",
+          "0300697476301",
+          "0300696180308",
+          "0300696323309",
+          "0300692260301",
+          "0300697654303"
+        ],
+        "unii": [
+          "48A5M73Z4Q",
+          "864V2Q084H"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "84860",
+      "recalling_firm": "Pfizer Inc.",
+      "address_1": "235 E 42nd St",
+      "address_2": "",
+      "postal_code": "10017-5703",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the USA.",
+      "recall_number": "D-0842-2020",
+      "product_description": "Caduet (amlodipine besylate/atorvastatin calcium) Tablets, 10 mg/10 mg*, 30-count bottle, Rx only, Distributed by: Pfizer Labs, Division of Pfizer Inc. NY, NY 10017, Made in Germany, NDC 0069-2160-30.",
+      "product_quantity": "128 bottles",
+      "reason_for_recall": "Defective Container: products potentially could have been packaged in defective bottles, with a notched rim, that could cause inadequate foil sealing resulting in lack of moisture protection.",
+      "recall_initiation_date": "20200205",
+      "center_classification_date": "20200213",
+      "termination_date": "20210308",
+      "report_date": "20200219",
+      "code_info": "Lot #: CY0963, Exp 07/2022",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "North York",
+      "state": "",
+      "country": "Canada",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA090548"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Apotex Corp."
+        ],
+        "product_ndc": [
+          "60505-2578",
+          "60505-2579",
+          "60505-2580",
+          "60505-2671"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM PROPYLENE GLYCOL SOLVATE"
+        ],
+        "rxcui": [
+          "259255",
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "68d09be6-1a04-4117-85dc-1d975e475c6a"
+        ],
+        "spl_set_id": [
+          "d9adb9e4-c495-9530-e5e3-7e3b01d53e4c"
+        ],
+        "package_ndc": [
+          "60505-2578-3",
+          "60505-2578-9",
+          "60505-2578-5",
+          "60505-2578-8",
+          "60505-2578-7",
+          "60505-2578-0",
+          "60505-2579-3",
+          "60505-2579-9",
+          "60505-2579-5",
+          "60505-2579-8",
+          "60505-2579-7",
+          "60505-2579-0",
+          "60505-2580-3",
+          "60505-2580-9",
+          "60505-2580-5",
+          "60505-2580-8",
+          "60505-2580-7",
+          "60505-2580-0",
+          "60505-2671-3",
+          "60505-2671-9",
+          "60505-2671-5",
+          "60505-2671-8",
+          "60505-2671-7",
+          "60505-2671-0"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "YRZ789OWMI"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "84107",
+      "recalling_firm": "Apotex Inc.",
+      "address_1": "150 Signet Drive",
+      "address_2": "",
+      "postal_code": "N/A",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "IL, MS, NJ, OH, TX",
+      "recall_number": "D-0153-2020",
+      "product_description": "Atorvastatin Calcium Tablets, USP 40 mg*, 1,000 count bottles, Rx Only, Manufactured by: Apotex Inc. Toronto, Ontario Canada M9L 1T9 Manufactured for: Apotex Corp. Weston, Florida 33326  NDC 60505-2580-8",
+      "product_quantity": "1968 bottles",
+      "reason_for_recall": "Presence of Foreign Tablets/Capsules: a single tablet of Pravastatin 40 mg found in bottle of Atorvastatin Calcium 40 mg.",
+      "recall_initiation_date": "20191022",
+      "center_classification_date": "20191028",
+      "termination_date": "20260219",
+      "report_date": "20191106",
+      "code_info": "Lot: RC5439 Exp. 03/2022",
+      "more_code_info": ""
+    },
+    {
+      "country": "United States",
+      "city": "Princeton",
+      "address_1": "107 College Rd E",
+      "reason_for_recall": "Failed Impurities/Degradation Specifications - OOS was observed for ATV Cyclo FP Impurity and Total Degradation Impurities tested at the 18 month stability time point in Atorvastatin Calcium Tablets 40 mg 500 tablets.",
+      "address_2": "",
+      "product_quantity": "2280 bottles",
+      "code_info": "T60045",
+      "center_classification_date": "20180814",
+      "distribution_pattern": "U.S.A. Nationwide",
+      "state": "NJ",
+      "product_description": "Atorvastatin Calcium tablets, 40 mg, 500-count bottle, Rx only, Mfd By: Dr. Reddy's Laboratories Limited, Srikakulam - 532 409 India, NDC 55111-123-05",
+      "report_date": "20180822",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA091650"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Limited"
+        ],
+        "product_ndc": [
+          "55111-121",
+          "55111-122",
+          "55111-123"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "36e09eff-3948-2638-b633-d5ec2bc03d2a"
+        ],
+        "spl_set_id": [
+          "901550e6-22be-68c9-eb86-f85a9c9dd998"
+        ],
+        "package_ndc": [
+          "55111-121-30",
+          "55111-121-60",
+          "55111-121-90",
+          "55111-121-05",
+          "55111-121-10",
+          "55111-122-30",
+          "55111-122-60",
+          "55111-122-90",
+          "55111-122-05",
+          "55111-122-10",
+          "55111-123-30",
+          "55111-123-60",
+          "55111-123-90",
+          "55111-123-05",
+          "55111-123-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0355111123903"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "recall_number": "D-1079-2018",
+      "initial_firm_notification": "Letter",
+      "product_type": "Drugs",
+      "event_id": "80675",
+      "termination_date": "20200415",
+      "more_code_info": "",
+      "recall_initiation_date": "20180802",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "status": "Terminated"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA091650"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Limited"
+        ],
+        "product_ndc": [
+          "55111-121",
+          "55111-122",
+          "55111-123"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "36e09eff-3948-2638-b633-d5ec2bc03d2a"
+        ],
+        "spl_set_id": [
+          "901550e6-22be-68c9-eb86-f85a9c9dd998"
+        ],
+        "package_ndc": [
+          "55111-121-30",
+          "55111-121-60",
+          "55111-121-90",
+          "55111-121-05",
+          "55111-121-10",
+          "55111-122-30",
+          "55111-122-60",
+          "55111-122-90",
+          "55111-122-05",
+          "55111-122-10",
+          "55111-123-30",
+          "55111-123-60",
+          "55111-123-90",
+          "55111-123-05",
+          "55111-123-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0355111123903"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "80275",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the USA and Puerto Rico",
+      "recall_number": "D-0888-2018",
+      "product_description": "Atorvastatin Calcium Tablets, 40 mg*, packaged as a) 90-count bottle (NDC 55111-123-90 and b) 500-count bottle (NDC 55111-123-05), Rx Only, Mfd. By: Dr. Reddy's Laboratories Limited, Srikakulam - 532 409 INDIA",
+      "product_quantity": "130,081 bottles",
+      "reason_for_recall": "Failed Impurities/Degradation Specifications",
+      "recall_initiation_date": "20180612",
+      "center_classification_date": "20180621",
+      "termination_date": "20191108",
+      "report_date": "20180627",
+      "code_info": "Lot #: a) T600392, T600384, T600353, Exp 08/18; T600427, Exp 09/18; T600435, Exp 10/18; T600492, Exp 11/18; T700006, T700014, T700033, T700035, T700036 12/18; b) T600407, Exp 09/18"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA091650"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Limited"
+        ],
+        "product_ndc": [
+          "55111-121",
+          "55111-122",
+          "55111-123"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "36e09eff-3948-2638-b633-d5ec2bc03d2a"
+        ],
+        "spl_set_id": [
+          "901550e6-22be-68c9-eb86-f85a9c9dd998"
+        ],
+        "package_ndc": [
+          "55111-121-30",
+          "55111-121-60",
+          "55111-121-90",
+          "55111-121-05",
+          "55111-121-10",
+          "55111-122-30",
+          "55111-122-60",
+          "55111-122-90",
+          "55111-122-05",
+          "55111-122-10",
+          "55111-123-30",
+          "55111-123-60",
+          "55111-123-90",
+          "55111-123-05",
+          "55111-123-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0355111123903"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "80275",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the USA and Puerto Rico",
+      "recall_number": "D-0887-2018",
+      "product_description": "Atorvastatin Calcium Tablets, 20 mg*, 90-count bottle, Rx Only, Mfd. By: Dr. Reddy's Laboratories Limited, Srikakulam - 532 409 INDIA,  NDC 55111-122-90",
+      "product_quantity": "44,894 bottles",
+      "reason_for_recall": "Failed Impurities/Degradation Specifications",
+      "recall_initiation_date": "20180612",
+      "center_classification_date": "20180621",
+      "termination_date": "20191108",
+      "report_date": "20180627",
+      "code_info": "Lot #: T600328, Exp 07/18; T700214, T700216, Exp 04/19"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA202357"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Limited"
+        ],
+        "product_ndc": [
+          "55111-124"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "259255"
+        ],
+        "spl_id": [
+          "3ec2bef7-b820-857f-1c70-e57c2d2c6dbf"
+        ],
+        "spl_set_id": [
+          "6ccdb6f3-22c7-5b48-46bc-ce4a4c65eb4d"
+        ],
+        "package_ndc": [
+          "55111-124-30",
+          "55111-124-60",
+          "55111-124-90",
+          "55111-124-05",
+          "3551111249"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ],
+        "upc": [
+          "355111124900"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "80208",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the USA",
+      "recall_number": "D-0878-2018",
+      "product_description": "Atorvastatin Calcium Tablets, 80 mg*, 90-count bottles, Rx Only, Mfd. By: Dr. Reddy's Laboratories Limited, Srikakulam - 532 409 INDIA, NDC 55111-124-90  UPC 355111124900",
+      "product_quantity": "6,397 bottles",
+      "reason_for_recall": "Presence of Foreign Substance: A product complaint was received for a defective tablet with an embedded foreign object observed in a bottle.",
+      "recall_initiation_date": "20180530",
+      "center_classification_date": "20180618",
+      "termination_date": "20201214",
+      "report_date": "20180627",
+      "code_info": "Lot #: T800064, Exp 12/2019"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA091650"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Limited"
+        ],
+        "product_ndc": [
+          "55111-121",
+          "55111-122",
+          "55111-123"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "36e09eff-3948-2638-b633-d5ec2bc03d2a"
+        ],
+        "spl_set_id": [
+          "901550e6-22be-68c9-eb86-f85a9c9dd998"
+        ],
+        "package_ndc": [
+          "55111-121-30",
+          "55111-121-60",
+          "55111-121-90",
+          "55111-121-05",
+          "55111-121-10",
+          "55111-122-30",
+          "55111-122-60",
+          "55111-122-90",
+          "55111-122-05",
+          "55111-122-10",
+          "55111-123-30",
+          "55111-123-60",
+          "55111-123-90",
+          "55111-123-05",
+          "55111-123-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0355111123903"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "80275",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the USA and Puerto Rico",
+      "recall_number": "D-0886-2018",
+      "product_description": "Atorvastatin Calcium Tablets, 10 mg*, 90-count bottle, Rx Only, Mfd. By: Dr. Reddy's Laboratories Limited, Srikakulam - 532 409 INDIA,  NDC 55111-121-90",
+      "product_quantity": "55,126 bottles",
+      "reason_for_recall": "Failed Impurities/Degradation Specifications",
+      "recall_initiation_date": "20180612",
+      "center_classification_date": "20180621",
+      "termination_date": "20191108",
+      "report_date": "20180627",
+      "code_info": "Lot #: T600327, Exp 07/18; T700213, T700215, Exp 04/19"
+    },
+    {
+      "country": "United States",
+      "city": "Princeton",
+      "address_1": "107 College Rd E",
+      "reason_for_recall": "Failed Impurities/Degradations Specifications; out-of-specification results observed for Total Degradation Impurities during stability",
+      "address_2": "",
+      "product_quantity": "a) 34,125; b) 3,540 bottles",
+      "code_info": "Lot numbers: a) T600125, 3/2018; T600201, T600248 5/2018, b) T600125, 3/2018; T600201, and T600248, 5/2018",
+      "center_classification_date": "20180213",
+      "distribution_pattern": "Nationwide",
+      "state": "NJ",
+      "product_description": "Atorvastatin Calcium Tablets 10 mg, a) 90 count and b) 500 count bottles, Rx only, Mfd by: Dr. Reddy's Laboratories, Ltd., Srikakulam, INDIA --- NDC 55111-121-05",
+      "report_date": "20180207",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA091650"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Limited"
+        ],
+        "product_ndc": [
+          "55111-121",
+          "55111-122",
+          "55111-123"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "36e09eff-3948-2638-b633-d5ec2bc03d2a"
+        ],
+        "spl_set_id": [
+          "901550e6-22be-68c9-eb86-f85a9c9dd998"
+        ],
+        "package_ndc": [
+          "55111-121-30",
+          "55111-121-60",
+          "55111-121-90",
+          "55111-121-05",
+          "55111-121-10",
+          "55111-122-30",
+          "55111-122-60",
+          "55111-122-90",
+          "55111-122-05",
+          "55111-122-10",
+          "55111-123-30",
+          "55111-123-60",
+          "55111-123-90",
+          "55111-123-05",
+          "55111-123-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0355111123903"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "recall_number": "D-0418-2018",
+      "initial_firm_notification": "Letter",
+      "product_type": "Drugs",
+      "event_id": "79065",
+      "termination_date": "20181207",
+      "more_code_info": "",
+      "recall_initiation_date": "20180129",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "status": "Terminated"
+    },
+    {
+      "country": "United States",
+      "city": "Princeton",
+      "address_1": "107 College Rd E",
+      "reason_for_recall": "Failed Impurities/Degradations Specifications; out-of-specification results observed for Total Degradation Impurities during stability",
+      "address_2": "",
+      "product_quantity": "12,579 bottles",
+      "code_info": "Lot number: T600279, 6/2018",
+      "center_classification_date": "20180213",
+      "distribution_pattern": "Nationwide",
+      "state": "NJ",
+      "product_description": "Atorvastatin Calcium Tablets 40 mg, 90 count bottles, Rx only, Mfd by: Dr. Reddy's Laboratories, Ltd., Srikakulam, INDIA --- NDC 55111-123-05",
+      "report_date": "20180207",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA091650"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Limited"
+        ],
+        "product_ndc": [
+          "55111-121",
+          "55111-122",
+          "55111-123"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "36e09eff-3948-2638-b633-d5ec2bc03d2a"
+        ],
+        "spl_set_id": [
+          "901550e6-22be-68c9-eb86-f85a9c9dd998"
+        ],
+        "package_ndc": [
+          "55111-121-30",
+          "55111-121-60",
+          "55111-121-90",
+          "55111-121-05",
+          "55111-121-10",
+          "55111-122-30",
+          "55111-122-60",
+          "55111-122-90",
+          "55111-122-05",
+          "55111-122-10",
+          "55111-123-30",
+          "55111-123-60",
+          "55111-123-90",
+          "55111-123-05",
+          "55111-123-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0355111123903"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "recall_number": "D-0420-2018",
+      "initial_firm_notification": "Letter",
+      "product_type": "Drugs",
+      "event_id": "79065",
+      "termination_date": "20181207",
+      "more_code_info": "",
+      "recall_initiation_date": "20180129",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "status": "Terminated"
+    },
+    {
+      "country": "United States",
+      "city": "Princeton",
+      "address_1": "107 College Rd E",
+      "reason_for_recall": "Failed Impurities/Degradations Specifications; out-of-specification results observed for Total Degradation Impurities during stability",
+      "address_2": "",
+      "product_quantity": "a) 28,941 and b) 2,928 bottles",
+      "code_info": "Lot numbers: a) T600126, 3/2018; T600202 and T600247 5/2018, b) T600126, 3/2018; T600202, and T600247, 5/2018",
+      "center_classification_date": "20180213",
+      "distribution_pattern": "Nationwide",
+      "state": "NJ",
+      "product_description": "Atorvastatin Calcium Tablets 20 mg, a) 90 count and b) 500 count bottles, Rx only, Mfd by: Dr. Reddy's Laboratories, Ltd., Srikakulam, INDIA --- NDC 55111-122-05",
+      "report_date": "20180207",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA091650"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Limited"
+        ],
+        "product_ndc": [
+          "55111-121",
+          "55111-122",
+          "55111-123"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "36e09eff-3948-2638-b633-d5ec2bc03d2a"
+        ],
+        "spl_set_id": [
+          "901550e6-22be-68c9-eb86-f85a9c9dd998"
+        ],
+        "package_ndc": [
+          "55111-121-30",
+          "55111-121-60",
+          "55111-121-90",
+          "55111-121-05",
+          "55111-121-10",
+          "55111-122-30",
+          "55111-122-60",
+          "55111-122-90",
+          "55111-122-05",
+          "55111-122-10",
+          "55111-123-30",
+          "55111-123-60",
+          "55111-123-90",
+          "55111-123-05",
+          "55111-123-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0355111123903"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "recall_number": "D-0419-2018",
+      "initial_firm_notification": "Letter",
+      "product_type": "Drugs",
+      "event_id": "79065",
+      "termination_date": "20181207",
+      "more_code_info": "",
+      "recall_initiation_date": "20180129",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "status": "Terminated"
+    },
+    {
+      "status": "Terminated",
+      "city": "Morgantown",
+      "state": "WV",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA091226"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Mylan Pharmaceuticals Inc."
+        ],
+        "product_ndc": [
+          "0378-3950",
+          "0378-3951",
+          "0378-3952",
+          "0378-3953"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "259255",
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "113b06e8-1031-4e37-90d9-da72aa8c4f8d"
+        ],
+        "spl_set_id": [
+          "d0a0feb6-84f0-4693-a11f-eb4f7ae0a87d"
+        ],
+        "package_ndc": [
+          "0378-3950-77",
+          "0378-3950-05",
+          "0378-3950-09",
+          "0378-3950-07",
+          "0378-3951-77",
+          "0378-3951-05",
+          "0378-3951-09",
+          "0378-3951-07",
+          "0378-3952-77",
+          "0378-3952-05",
+          "0378-3952-09",
+          "0378-3952-07",
+          "0378-3953-77",
+          "0378-3953-05",
+          "0378-3953-09",
+          "0378-3953-07"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0303783953779",
+          "0303783950778",
+          "0303783951775"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "76750",
+      "recalling_firm": "Mylan Pharmaceuticals Inc.",
+      "address_1": "781 Chestnut Ridge Rd",
+      "address_2": "",
+      "postal_code": "26505-2730",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Telephone",
+      "distribution_pattern": "Nationwide in the USA and Puerto Rico",
+      "recall_number": "D-0618-2017",
+      "product_description": "Atorvastatin Calcium Tablets, 10 mg*, packaged in a) 90-count bottles (NDC 0378-3950-77); b) 90-count bottles (NDC 0378-3950-09); c) 500-count bottles (NDC 0378-3950-05); d) 500-count bottles (NDC 0378-3950-07), Rx only, Mylan Pharmaceuticals Inc., Morgantown, WV  26505 U.S.A.",
+      "product_quantity": "1,233,107 bottles",
+      "reason_for_recall": "Microbial Contamination of Non-Sterile Products: potential of an elevated bioburden with identification of objectionable organisms.",
+      "recall_initiation_date": "20170320",
+      "center_classification_date": "20170328",
+      "termination_date": "20180126",
+      "report_date": "20170405",
+      "code_info": "Lot #: a) 3076141, 3076142, Exp 05/18; 2007223, Exp 06/18; 2007335, Exp 07/18; 2007336, Exp 08/18; 2007446, 3084691, Exp 09/18; 3084692, Exp 01/18; b) 3073773, Exp 01/18; 2007445, Exp 09/18; c) 3076139, 3076140, 3076143, Exp 05/18; 3076144, 3076145, Exp 06/18; 2007445, Exp 09/18; d) 3070837, Exp 10/17; 3073773, Exp 01/18; 3076139, Exp 05/18; 3073774, Exp 01/18; 2007445, Exp 09/18",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Morgantown",
+      "state": "WV",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA091226"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Mylan Pharmaceuticals Inc."
+        ],
+        "product_ndc": [
+          "0378-3950",
+          "0378-3951",
+          "0378-3952",
+          "0378-3953"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "259255",
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "113b06e8-1031-4e37-90d9-da72aa8c4f8d"
+        ],
+        "spl_set_id": [
+          "d0a0feb6-84f0-4693-a11f-eb4f7ae0a87d"
+        ],
+        "package_ndc": [
+          "0378-3950-77",
+          "0378-3950-05",
+          "0378-3950-09",
+          "0378-3950-07",
+          "0378-3951-77",
+          "0378-3951-05",
+          "0378-3951-09",
+          "0378-3951-07",
+          "0378-3952-77",
+          "0378-3952-05",
+          "0378-3952-09",
+          "0378-3952-07",
+          "0378-3953-77",
+          "0378-3953-05",
+          "0378-3953-09",
+          "0378-3953-07"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0303783953779",
+          "0303783950778",
+          "0303783951775"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "76750",
+      "recalling_firm": "Mylan Pharmaceuticals Inc.",
+      "address_1": "781 Chestnut Ridge Rd",
+      "address_2": "",
+      "postal_code": "26505-2730",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Telephone",
+      "distribution_pattern": "Nationwide in the USA and Puerto Rico",
+      "recall_number": "D-0620-2017",
+      "product_description": "Atorvastatin Calcium Tablets, 40 mg*, packaged in a) 90-count bottles (NDC 0378-3952-09) and b) 500-count bottles (NDC 0378-3952-07); Rx only, Mylan Pharmaceuticals Inc., Morgantown, WV  26505 U.S.A.",
+      "product_quantity": "444,201 bottles",
+      "reason_for_recall": "Microbial Contamination of Non-Sterile Products: potential of an elevated bioburden with identification of objectionable organisms.",
+      "recall_initiation_date": "20170320",
+      "center_classification_date": "20170328",
+      "termination_date": "20180126",
+      "report_date": "20170405",
+      "code_info": "Lot #: a) 3073779, 3073780, Exp 02/18; 3074910, Exp 03/18; 3075568, Exp 04/18; 3075889, 3075890, Exp 06/18; 2007339, 2007340, Exp 08/18; 3079881, 3079882, Exp 10/18; b) 3070839, Exp 10/17; 3073778, 3073779, Exp 02/18; 3075566, 3075567, Exp 04/18; 3075890, 2007225, Exp 06/18; 2007340, Exp 08/18; 3079880, 3079881, Exp 10/18",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Rockford",
+      "state": "IL",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA091226"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Mylan Institutional Inc."
+        ],
+        "product_ndc": [
+          "51079-208",
+          "51079-209",
+          "51079-210",
+          "51079-211"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "259255",
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "3a398bf9-4f72-46b9-e063-6394a90af2d2"
+        ],
+        "spl_set_id": [
+          "7c1083b9-7a20-475d-ba12-4f5d0b53e601"
+        ],
+        "package_ndc": [
+          "51079-208-01",
+          "51079-208-20",
+          "51079-209-01",
+          "51079-209-20",
+          "51079-210-01",
+          "51079-210-20",
+          "51079-211-01",
+          "51079-211-03"
+        ],
+        "original_packager_product_ndc": [
+          "0378-3950",
+          "0378-3951",
+          "0378-3952",
+          "0378-3953"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "76802",
+      "recalling_firm": "Mylan Institutional, Inc. (d.b.a. UDL Laboratories)",
+      "address_1": "1718 Northrock Ct",
+      "address_2": "",
+      "postal_code": "61103-1201",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the USA",
+      "recall_number": "D-0622-2017",
+      "product_description": "Atorvastatin Calcium Tablets, 10 mg*, 100-count Unit Dose Tablets (10 x 10) per carton, Rx only, Manufactured by: Mylan Pharmaceuticals Inc., Morgantown, WV 26505 U.S.A.., NDC 51079-208-20",
+      "product_quantity": "1,527 cartons",
+      "reason_for_recall": "Microbial Contamination of Non-Sterile Products: potential of an elevated bioburden with identification of objectionable organisms.",
+      "recall_initiation_date": "20170321",
+      "center_classification_date": "20170328",
+      "termination_date": "20190315",
+      "report_date": "20170405",
+      "code_info": "Lot #: 3084288, Exp. 07/18",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Morgantown",
+      "state": "WV",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA091226"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Mylan Pharmaceuticals Inc."
+        ],
+        "product_ndc": [
+          "0378-3950",
+          "0378-3951",
+          "0378-3952",
+          "0378-3953"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "259255",
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "113b06e8-1031-4e37-90d9-da72aa8c4f8d"
+        ],
+        "spl_set_id": [
+          "d0a0feb6-84f0-4693-a11f-eb4f7ae0a87d"
+        ],
+        "package_ndc": [
+          "0378-3950-77",
+          "0378-3950-05",
+          "0378-3950-09",
+          "0378-3950-07",
+          "0378-3951-77",
+          "0378-3951-05",
+          "0378-3951-09",
+          "0378-3951-07",
+          "0378-3952-77",
+          "0378-3952-05",
+          "0378-3952-09",
+          "0378-3952-07",
+          "0378-3953-77",
+          "0378-3953-05",
+          "0378-3953-09",
+          "0378-3953-07"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0303783953779",
+          "0303783950778",
+          "0303783951775"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "76750",
+      "recalling_firm": "Mylan Pharmaceuticals Inc.",
+      "address_1": "781 Chestnut Ridge Rd",
+      "address_2": "",
+      "postal_code": "26505-2730",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Telephone",
+      "distribution_pattern": "Nationwide in the USA and Puerto Rico",
+      "recall_number": "D-0619-2017",
+      "product_description": "Atorvastatin Calcium Tablets, 20 mg*, packaged in a) 90-count bottles (NDC 0378-3951-09) and b) 500-count bottles (NDC 0378-3951-07); Rx only, Mylan Pharmaceuticals Inc., Morgantown, WV  26505 U.S.A.",
+      "product_quantity": "299,112 bottles",
+      "reason_for_recall": "Microbial Contamination of Non-Sterile Products: potential of an elevated bioburden with identification of objectionable organisms.",
+      "recall_initiation_date": "20170320",
+      "center_classification_date": "20170328",
+      "termination_date": "20180126",
+      "report_date": "20170405",
+      "code_info": "Lot #: a) 3073776, Exp 01/18; 3073777, 3074909, Exp 02/18; 3075564, 3075565, Exp 03/18; 2007338, Exp 08/18; b) 3070838, Exp 10/17; 3073775, Exp 01/18; 3074908, 3074909, Exp 02/18; 3075564, Exp 03/18; 2007224, 3075887, Exp 06/18; 2007337, 2007338, Exp 08/18",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Morgantown",
+      "state": "WV",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA091226"
+        ],
+        "brand_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Mylan Pharmaceuticals Inc."
+        ],
+        "product_ndc": [
+          "0378-3950",
+          "0378-3951",
+          "0378-3952",
+          "0378-3953"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "259255",
+          "617310",
+          "617311",
+          "617312"
+        ],
+        "spl_id": [
+          "113b06e8-1031-4e37-90d9-da72aa8c4f8d"
+        ],
+        "spl_set_id": [
+          "d0a0feb6-84f0-4693-a11f-eb4f7ae0a87d"
+        ],
+        "package_ndc": [
+          "0378-3950-77",
+          "0378-3950-05",
+          "0378-3950-09",
+          "0378-3950-07",
+          "0378-3951-77",
+          "0378-3951-05",
+          "0378-3951-09",
+          "0378-3951-07",
+          "0378-3952-77",
+          "0378-3952-05",
+          "0378-3952-09",
+          "0378-3952-07",
+          "0378-3953-77",
+          "0378-3953-05",
+          "0378-3953-09",
+          "0378-3953-07"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0303783953779",
+          "0303783950778",
+          "0303783951775"
+        ],
+        "unii": [
+          "48A5M73Z4Q"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "76750",
+      "recalling_firm": "Mylan Pharmaceuticals Inc.",
+      "address_1": "781 Chestnut Ridge Rd",
+      "address_2": "",
+      "postal_code": "26505-2730",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Telephone",
+      "distribution_pattern": "Nationwide in the USA and Puerto Rico",
+      "recall_number": "D-0621-2017",
+      "product_description": "Atorvastatin Calcium Tablets, 80 mg*, packaged in a) 90-count bottles (NDC 0378-3953-09) and b) 500-count bottles (NDC 0378-3953-07), Rx only, Mylan Pharmaceuticals Inc., Morgantown, WV  26505 U.S.A.",
+      "product_quantity": "452,269 bottles",
+      "reason_for_recall": "Microbial Contamination of Non-Sterile Products: potential of an elevated bioburden with identification of objectionable organisms.",
+      "recall_initiation_date": "20170320",
+      "center_classification_date": "20170328",
+      "termination_date": "20180126",
+      "report_date": "20170405",
+      "code_info": "Lot #: a) 3073782, 3073783, Exp 02/18; 3074915, 3074916, 3074917, Exp 03/18; 3074918, 3075572, Exp 04/18; 3075573, 3075574, Exp 05/18; 2007226, 3075894, Exp 06/18; 2007344, 2007345, 2007346, Exp 08/18; 2007451, 2007452, 2007453, 2007454, Exp 09/18; b) 3070840, Exp 10/17; 3073781, 3074911, Exp 02/18; 3074912, 3074913, 3074914, Exp 03/18; 3075570, 3075571, Exp 04/18; 3075892, Exp 05/18; 3075893, Exp 06/18; 2007341, 2007342, 2007343, 2007347, Exp 08/18; 2007456, Exp 10/18",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA203874"
+        ],
+        "brand_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-313",
+          "43598-323",
+          "43598-320",
+          "43598-317",
+          "43598-322",
+          "43598-319",
+          "43598-316",
+          "43598-314",
+          "43598-321",
+          "43598-318",
+          "43598-315"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "AMLODIPINE BESYLATE",
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "404011",
+          "404013",
+          "597967",
+          "597971",
+          "597974",
+          "597977",
+          "597980",
+          "597984",
+          "597987",
+          "597990",
+          "597993"
+        ],
+        "spl_id": [
+          "54058ac6-94e2-d2d3-5c46-886b3478fc76"
+        ],
+        "spl_set_id": [
+          "abee4a34-89cc-d886-192c-32582ab8f024"
+        ],
+        "package_ndc": [
+          "43598-323-30",
+          "43598-323-60",
+          "43598-323-90",
+          "43598-323-05",
+          "43598-320-30",
+          "43598-320-60",
+          "43598-320-90",
+          "43598-320-05",
+          "43598-317-30",
+          "43598-317-60",
+          "43598-317-90",
+          "43598-317-05",
+          "43598-322-30",
+          "43598-322-60",
+          "43598-322-90",
+          "43598-322-05",
+          "43598-319-30",
+          "43598-319-60",
+          "43598-319-90",
+          "43598-319-05",
+          "43598-316-30",
+          "43598-316-60",
+          "43598-316-90",
+          "43598-316-05",
+          "43598-314-30",
+          "43598-314-60",
+          "43598-314-90",
+          "43598-314-05",
+          "43598-321-30",
+          "43598-321-60",
+          "43598-321-90",
+          "43598-321-05",
+          "43598-318-30",
+          "43598-318-60",
+          "43598-318-90",
+          "43598-318-05",
+          "43598-315-30",
+          "43598-315-60",
+          "43598-315-90",
+          "43598-315-05",
+          "43598-313-30",
+          "43598-313-60",
+          "43598-313-90",
+          "43598-313-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343598323305",
+          "0343598315300",
+          "0343598320304",
+          "0343598317304",
+          "0343598313306",
+          "0343598322308",
+          "0343598319308",
+          "0343598316307",
+          "0343598314303"
+        ],
+        "unii": [
+          "48A5M73Z4Q",
+          "864V2Q084H"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "71984",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "U.S. Nationwide",
+      "recall_number": "D-1379-2015",
+      "product_description": "Amlodipine besylate and Atorvastatin calcium Tablets, 10 mg/80 mg, 30 Count Bottles, Rx Only. Manufactured by Dr. Reddy's Laboratories Limited, Bachupally - 500 090 India. NDC: 43598-313-30.",
+      "product_quantity": "3840 Bottles",
+      "reason_for_recall": "Subpotent Drug: Subpotent atorvastatin.",
+      "recall_initiation_date": "20150813",
+      "center_classification_date": "20150827",
+      "termination_date": "20161215",
+      "report_date": "20150902",
+      "code_info": "Lot #: C404595, Expiry: 11/2015"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA203874"
+        ],
+        "brand_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-313",
+          "43598-323",
+          "43598-320",
+          "43598-317",
+          "43598-322",
+          "43598-319",
+          "43598-316",
+          "43598-314",
+          "43598-321",
+          "43598-318",
+          "43598-315"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "AMLODIPINE BESYLATE",
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "404011",
+          "404013",
+          "597967",
+          "597971",
+          "597974",
+          "597977",
+          "597980",
+          "597984",
+          "597987",
+          "597990",
+          "597993"
+        ],
+        "spl_id": [
+          "54058ac6-94e2-d2d3-5c46-886b3478fc76"
+        ],
+        "spl_set_id": [
+          "abee4a34-89cc-d886-192c-32582ab8f024"
+        ],
+        "package_ndc": [
+          "43598-323-30",
+          "43598-323-60",
+          "43598-323-90",
+          "43598-323-05",
+          "43598-320-30",
+          "43598-320-60",
+          "43598-320-90",
+          "43598-320-05",
+          "43598-317-30",
+          "43598-317-60",
+          "43598-317-90",
+          "43598-317-05",
+          "43598-322-30",
+          "43598-322-60",
+          "43598-322-90",
+          "43598-322-05",
+          "43598-319-30",
+          "43598-319-60",
+          "43598-319-90",
+          "43598-319-05",
+          "43598-316-30",
+          "43598-316-60",
+          "43598-316-90",
+          "43598-316-05",
+          "43598-314-30",
+          "43598-314-60",
+          "43598-314-90",
+          "43598-314-05",
+          "43598-321-30",
+          "43598-321-60",
+          "43598-321-90",
+          "43598-321-05",
+          "43598-318-30",
+          "43598-318-60",
+          "43598-318-90",
+          "43598-318-05",
+          "43598-315-30",
+          "43598-315-60",
+          "43598-315-90",
+          "43598-315-05",
+          "43598-313-30",
+          "43598-313-60",
+          "43598-313-90",
+          "43598-313-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343598323305",
+          "0343598315300",
+          "0343598320304",
+          "0343598317304",
+          "0343598313306",
+          "0343598322308",
+          "0343598319308",
+          "0343598316307",
+          "0343598314303"
+        ],
+        "unii": [
+          "48A5M73Z4Q",
+          "864V2Q084H"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "71984",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "U.S. Nationwide",
+      "recall_number": "D-1375-2015",
+      "product_description": "Amlodipine besylate and Atorvastatin calcium Tablets,2.5 mg/40 mg, 30 Count Bottles, Rx Only. Manufactured by Dr. Reddy's Laboratories Limited, Bachupally - 500 090 India. NDC: 43598-317-30.",
+      "product_quantity": "984 Bottles",
+      "reason_for_recall": "Subpotent Drug: Subpotent atorvastatin.",
+      "recall_initiation_date": "20150813",
+      "center_classification_date": "20150827",
+      "termination_date": "20161215",
+      "report_date": "20150902",
+      "code_info": "Lot #: C402341, Expiry: 08/2015"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA203874"
+        ],
+        "brand_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-313",
+          "43598-323",
+          "43598-320",
+          "43598-317",
+          "43598-322",
+          "43598-319",
+          "43598-316",
+          "43598-314",
+          "43598-321",
+          "43598-318",
+          "43598-315"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "AMLODIPINE BESYLATE",
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "404011",
+          "404013",
+          "597967",
+          "597971",
+          "597974",
+          "597977",
+          "597980",
+          "597984",
+          "597987",
+          "597990",
+          "597993"
+        ],
+        "spl_id": [
+          "54058ac6-94e2-d2d3-5c46-886b3478fc76"
+        ],
+        "spl_set_id": [
+          "abee4a34-89cc-d886-192c-32582ab8f024"
+        ],
+        "package_ndc": [
+          "43598-323-30",
+          "43598-323-60",
+          "43598-323-90",
+          "43598-323-05",
+          "43598-320-30",
+          "43598-320-60",
+          "43598-320-90",
+          "43598-320-05",
+          "43598-317-30",
+          "43598-317-60",
+          "43598-317-90",
+          "43598-317-05",
+          "43598-322-30",
+          "43598-322-60",
+          "43598-322-90",
+          "43598-322-05",
+          "43598-319-30",
+          "43598-319-60",
+          "43598-319-90",
+          "43598-319-05",
+          "43598-316-30",
+          "43598-316-60",
+          "43598-316-90",
+          "43598-316-05",
+          "43598-314-30",
+          "43598-314-60",
+          "43598-314-90",
+          "43598-314-05",
+          "43598-321-30",
+          "43598-321-60",
+          "43598-321-90",
+          "43598-321-05",
+          "43598-318-30",
+          "43598-318-60",
+          "43598-318-90",
+          "43598-318-05",
+          "43598-315-30",
+          "43598-315-60",
+          "43598-315-90",
+          "43598-315-05",
+          "43598-313-30",
+          "43598-313-60",
+          "43598-313-90",
+          "43598-313-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343598323305",
+          "0343598315300",
+          "0343598320304",
+          "0343598317304",
+          "0343598313306",
+          "0343598322308",
+          "0343598319308",
+          "0343598316307",
+          "0343598314303"
+        ],
+        "unii": [
+          "48A5M73Z4Q",
+          "864V2Q084H"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "71984",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "U.S. Nationwide",
+      "recall_number": "D-1377-2015",
+      "product_description": "Amlodipine besylate and Atorvastatin calcium Tablets, 10 mg/20 mg, Packaged in a) 30 Count Bottles (NDC: 43598-318-30) and b) 90 Count Bottles (NDC: 43598-318-90), Rx Only. Manufactured by Dr. Reddy's Laboratories Limited, Bachupally - 500 090 India",
+      "product_quantity": "a) 16,080 and b) 480 Bottles",
+      "reason_for_recall": "Subpotent Drug: Subpotent atorvastatin.",
+      "recall_initiation_date": "20150813",
+      "center_classification_date": "20150827",
+      "termination_date": "20161215",
+      "report_date": "20150902",
+      "code_info": "a) Lot #: C404592, Expiry: 11/2015. b) Lot #: C404592, Expiry: 11/2015"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA203874"
+        ],
+        "brand_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-313",
+          "43598-323",
+          "43598-320",
+          "43598-317",
+          "43598-322",
+          "43598-319",
+          "43598-316",
+          "43598-314",
+          "43598-321",
+          "43598-318",
+          "43598-315"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "AMLODIPINE BESYLATE",
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "404011",
+          "404013",
+          "597967",
+          "597971",
+          "597974",
+          "597977",
+          "597980",
+          "597984",
+          "597987",
+          "597990",
+          "597993"
+        ],
+        "spl_id": [
+          "54058ac6-94e2-d2d3-5c46-886b3478fc76"
+        ],
+        "spl_set_id": [
+          "abee4a34-89cc-d886-192c-32582ab8f024"
+        ],
+        "package_ndc": [
+          "43598-323-30",
+          "43598-323-60",
+          "43598-323-90",
+          "43598-323-05",
+          "43598-320-30",
+          "43598-320-60",
+          "43598-320-90",
+          "43598-320-05",
+          "43598-317-30",
+          "43598-317-60",
+          "43598-317-90",
+          "43598-317-05",
+          "43598-322-30",
+          "43598-322-60",
+          "43598-322-90",
+          "43598-322-05",
+          "43598-319-30",
+          "43598-319-60",
+          "43598-319-90",
+          "43598-319-05",
+          "43598-316-30",
+          "43598-316-60",
+          "43598-316-90",
+          "43598-316-05",
+          "43598-314-30",
+          "43598-314-60",
+          "43598-314-90",
+          "43598-314-05",
+          "43598-321-30",
+          "43598-321-60",
+          "43598-321-90",
+          "43598-321-05",
+          "43598-318-30",
+          "43598-318-60",
+          "43598-318-90",
+          "43598-318-05",
+          "43598-315-30",
+          "43598-315-60",
+          "43598-315-90",
+          "43598-315-05",
+          "43598-313-30",
+          "43598-313-60",
+          "43598-313-90",
+          "43598-313-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343598323305",
+          "0343598315300",
+          "0343598320304",
+          "0343598317304",
+          "0343598313306",
+          "0343598322308",
+          "0343598319308",
+          "0343598316307",
+          "0343598314303"
+        ],
+        "unii": [
+          "48A5M73Z4Q",
+          "864V2Q084H"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "71984",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "U.S. Nationwide",
+      "recall_number": "D-1376-2015",
+      "product_description": "Amlodipine besylate and Atorvastatin calcium Tablets, 5 mg/20 mg, Packaged in a) 30 Count Bottles (NDC: 43598-319-30) and b) 90 Count Bottles (NDC: 43598-319-90), Rx Only. Manufactured by Dr. Reddy's Laboratories Limited, Bachupally - 500 090 India.",
+      "product_quantity": "a) 14,640 and b) 624 Bottles",
+      "reason_for_recall": "Subpotent Drug: Subpotent atorvastatin.",
+      "recall_initiation_date": "20150813",
+      "center_classification_date": "20150827",
+      "termination_date": "20161215",
+      "report_date": "20150902",
+      "code_info": "a) Lot #: C403577, Expiry: 10/2015; b) Lot #: C403577, Expiry: 10/2015."
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA203874"
+        ],
+        "brand_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-313",
+          "43598-323",
+          "43598-320",
+          "43598-317",
+          "43598-322",
+          "43598-319",
+          "43598-316",
+          "43598-314",
+          "43598-321",
+          "43598-318",
+          "43598-315"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "AMLODIPINE BESYLATE",
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "404011",
+          "404013",
+          "597967",
+          "597971",
+          "597974",
+          "597977",
+          "597980",
+          "597984",
+          "597987",
+          "597990",
+          "597993"
+        ],
+        "spl_id": [
+          "54058ac6-94e2-d2d3-5c46-886b3478fc76"
+        ],
+        "spl_set_id": [
+          "abee4a34-89cc-d886-192c-32582ab8f024"
+        ],
+        "package_ndc": [
+          "43598-323-30",
+          "43598-323-60",
+          "43598-323-90",
+          "43598-323-05",
+          "43598-320-30",
+          "43598-320-60",
+          "43598-320-90",
+          "43598-320-05",
+          "43598-317-30",
+          "43598-317-60",
+          "43598-317-90",
+          "43598-317-05",
+          "43598-322-30",
+          "43598-322-60",
+          "43598-322-90",
+          "43598-322-05",
+          "43598-319-30",
+          "43598-319-60",
+          "43598-319-90",
+          "43598-319-05",
+          "43598-316-30",
+          "43598-316-60",
+          "43598-316-90",
+          "43598-316-05",
+          "43598-314-30",
+          "43598-314-60",
+          "43598-314-90",
+          "43598-314-05",
+          "43598-321-30",
+          "43598-321-60",
+          "43598-321-90",
+          "43598-321-05",
+          "43598-318-30",
+          "43598-318-60",
+          "43598-318-90",
+          "43598-318-05",
+          "43598-315-30",
+          "43598-315-60",
+          "43598-315-90",
+          "43598-315-05",
+          "43598-313-30",
+          "43598-313-60",
+          "43598-313-90",
+          "43598-313-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343598323305",
+          "0343598315300",
+          "0343598320304",
+          "0343598317304",
+          "0343598313306",
+          "0343598322308",
+          "0343598319308",
+          "0343598316307",
+          "0343598314303"
+        ],
+        "unii": [
+          "48A5M73Z4Q",
+          "864V2Q084H"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "71984",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "U.S. Nationwide",
+      "recall_number": "D-1378-2015",
+      "product_description": "Amlodipine besylate and Atorvastatin calcium Tablets,10 mg/40 mg, Packaged in a) 30 Count Bottles (NDC: 43598-315-30) and b) 90 Count Bottles (NDC: 43598-315-90), Rx Only. Manufactured by Dr. Reddy's Laboratories Limited, Bachupally - 500 090 India.",
+      "product_quantity": "a) 16,848 and b) 216 Bottles",
+      "reason_for_recall": "Subpotent Drug: Subpotent atorvastatin.",
+      "recall_initiation_date": "20150813",
+      "center_classification_date": "20150827",
+      "termination_date": "20161215",
+      "report_date": "20150902",
+      "code_info": "a) Lot #: C409650, Expiry: 05/2016; Lot #: C409652,Expiry: 05/2016. b) Lot #: C409652, Expiry: 05/2016"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA203874"
+        ],
+        "brand_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-313",
+          "43598-323",
+          "43598-320",
+          "43598-317",
+          "43598-322",
+          "43598-319",
+          "43598-316",
+          "43598-314",
+          "43598-321",
+          "43598-318",
+          "43598-315"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "AMLODIPINE BESYLATE",
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "404011",
+          "404013",
+          "597967",
+          "597971",
+          "597974",
+          "597977",
+          "597980",
+          "597984",
+          "597987",
+          "597990",
+          "597993"
+        ],
+        "spl_id": [
+          "54058ac6-94e2-d2d3-5c46-886b3478fc76"
+        ],
+        "spl_set_id": [
+          "abee4a34-89cc-d886-192c-32582ab8f024"
+        ],
+        "package_ndc": [
+          "43598-323-30",
+          "43598-323-60",
+          "43598-323-90",
+          "43598-323-05",
+          "43598-320-30",
+          "43598-320-60",
+          "43598-320-90",
+          "43598-320-05",
+          "43598-317-30",
+          "43598-317-60",
+          "43598-317-90",
+          "43598-317-05",
+          "43598-322-30",
+          "43598-322-60",
+          "43598-322-90",
+          "43598-322-05",
+          "43598-319-30",
+          "43598-319-60",
+          "43598-319-90",
+          "43598-319-05",
+          "43598-316-30",
+          "43598-316-60",
+          "43598-316-90",
+          "43598-316-05",
+          "43598-314-30",
+          "43598-314-60",
+          "43598-314-90",
+          "43598-314-05",
+          "43598-321-30",
+          "43598-321-60",
+          "43598-321-90",
+          "43598-321-05",
+          "43598-318-30",
+          "43598-318-60",
+          "43598-318-90",
+          "43598-318-05",
+          "43598-315-30",
+          "43598-315-60",
+          "43598-315-90",
+          "43598-315-05",
+          "43598-313-30",
+          "43598-313-60",
+          "43598-313-90",
+          "43598-313-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343598323305",
+          "0343598315300",
+          "0343598320304",
+          "0343598317304",
+          "0343598313306",
+          "0343598322308",
+          "0343598319308",
+          "0343598316307",
+          "0343598314303"
+        ],
+        "unii": [
+          "48A5M73Z4Q",
+          "864V2Q084H"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "71984",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "U.S. Nationwide",
+      "recall_number": "D-1373-2015",
+      "product_description": "Amlodipine besylate and Atorvastatin calcium Tablets, 2.5 mg/10 mg, 30 Count Bottles, Rx Only. Manufactured by Dr. Reddy's Laboratories Limited, Bachupally - 500 090 India.  NDC: 43598-323-30.",
+      "product_quantity": "1,056 Bottles",
+      "reason_for_recall": "Subpotent Drug: Subpotent atorvastatin.",
+      "recall_initiation_date": "20150813",
+      "center_classification_date": "20150827",
+      "termination_date": "20161215",
+      "report_date": "20150902",
+      "code_info": "Lot #: C403575, Expiry: 10/2015"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA203874"
+        ],
+        "brand_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-313",
+          "43598-323",
+          "43598-320",
+          "43598-317",
+          "43598-322",
+          "43598-319",
+          "43598-316",
+          "43598-314",
+          "43598-321",
+          "43598-318",
+          "43598-315"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "AMLODIPINE BESYLATE",
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "404011",
+          "404013",
+          "597967",
+          "597971",
+          "597974",
+          "597977",
+          "597980",
+          "597984",
+          "597987",
+          "597990",
+          "597993"
+        ],
+        "spl_id": [
+          "54058ac6-94e2-d2d3-5c46-886b3478fc76"
+        ],
+        "spl_set_id": [
+          "abee4a34-89cc-d886-192c-32582ab8f024"
+        ],
+        "package_ndc": [
+          "43598-323-30",
+          "43598-323-60",
+          "43598-323-90",
+          "43598-323-05",
+          "43598-320-30",
+          "43598-320-60",
+          "43598-320-90",
+          "43598-320-05",
+          "43598-317-30",
+          "43598-317-60",
+          "43598-317-90",
+          "43598-317-05",
+          "43598-322-30",
+          "43598-322-60",
+          "43598-322-90",
+          "43598-322-05",
+          "43598-319-30",
+          "43598-319-60",
+          "43598-319-90",
+          "43598-319-05",
+          "43598-316-30",
+          "43598-316-60",
+          "43598-316-90",
+          "43598-316-05",
+          "43598-314-30",
+          "43598-314-60",
+          "43598-314-90",
+          "43598-314-05",
+          "43598-321-30",
+          "43598-321-60",
+          "43598-321-90",
+          "43598-321-05",
+          "43598-318-30",
+          "43598-318-60",
+          "43598-318-90",
+          "43598-318-05",
+          "43598-315-30",
+          "43598-315-60",
+          "43598-315-90",
+          "43598-315-05",
+          "43598-313-30",
+          "43598-313-60",
+          "43598-313-90",
+          "43598-313-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343598323305",
+          "0343598315300",
+          "0343598320304",
+          "0343598317304",
+          "0343598313306",
+          "0343598322308",
+          "0343598319308",
+          "0343598316307",
+          "0343598314303"
+        ],
+        "unii": [
+          "48A5M73Z4Q",
+          "864V2Q084H"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "71984",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "U.S. Nationwide",
+      "recall_number": "D-1374-2015",
+      "product_description": "Amlodipine besylate and Atorvastatin calcium Tablets, 2.5 mg/20 mg, 30 Count Bottles, Rx Only. Manufactured by Dr. Reddy's Laboratories Limited, Bachupally - 500 090 India. NDC: 43598-320-30.",
+      "product_quantity": "576 Bottles",
+      "reason_for_recall": "Subpotent Drug: Subpotent atorvastatin.",
+      "recall_initiation_date": "20150813",
+      "center_classification_date": "20150827",
+      "termination_date": "20161215",
+      "report_date": "20150902",
+      "code_info": "Lot #: C403574, Expiry: 10/2015"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA203874"
+        ],
+        "brand_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-313",
+          "43598-323",
+          "43598-320",
+          "43598-317",
+          "43598-322",
+          "43598-319",
+          "43598-316",
+          "43598-314",
+          "43598-321",
+          "43598-318",
+          "43598-315"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "AMLODIPINE BESYLATE",
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "404011",
+          "404013",
+          "597967",
+          "597971",
+          "597974",
+          "597977",
+          "597980",
+          "597984",
+          "597987",
+          "597990",
+          "597993"
+        ],
+        "spl_id": [
+          "54058ac6-94e2-d2d3-5c46-886b3478fc76"
+        ],
+        "spl_set_id": [
+          "abee4a34-89cc-d886-192c-32582ab8f024"
+        ],
+        "package_ndc": [
+          "43598-323-30",
+          "43598-323-60",
+          "43598-323-90",
+          "43598-323-05",
+          "43598-320-30",
+          "43598-320-60",
+          "43598-320-90",
+          "43598-320-05",
+          "43598-317-30",
+          "43598-317-60",
+          "43598-317-90",
+          "43598-317-05",
+          "43598-322-30",
+          "43598-322-60",
+          "43598-322-90",
+          "43598-322-05",
+          "43598-319-30",
+          "43598-319-60",
+          "43598-319-90",
+          "43598-319-05",
+          "43598-316-30",
+          "43598-316-60",
+          "43598-316-90",
+          "43598-316-05",
+          "43598-314-30",
+          "43598-314-60",
+          "43598-314-90",
+          "43598-314-05",
+          "43598-321-30",
+          "43598-321-60",
+          "43598-321-90",
+          "43598-321-05",
+          "43598-318-30",
+          "43598-318-60",
+          "43598-318-90",
+          "43598-318-05",
+          "43598-315-30",
+          "43598-315-60",
+          "43598-315-90",
+          "43598-315-05",
+          "43598-313-30",
+          "43598-313-60",
+          "43598-313-90",
+          "43598-313-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343598323305",
+          "0343598315300",
+          "0343598320304",
+          "0343598317304",
+          "0343598313306",
+          "0343598322308",
+          "0343598319308",
+          "0343598316307",
+          "0343598314303"
+        ],
+        "unii": [
+          "48A5M73Z4Q",
+          "864V2Q084H"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "71375",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1143-2015",
+      "product_description": "Amlodipine besylate and Atorvastatin calcium tablets, 5mg/10mg, packaged in a)30-count bottle (NDC 43598-322-30), b) 90-count bottle (NDC 43598-322-90), Rx Only, Manufactured by Dr. Reddy's Laboratories Limited Bachupally, 500 090 India",
+      "product_quantity": "",
+      "reason_for_recall": "Subpotent drug",
+      "recall_initiation_date": "20150506",
+      "center_classification_date": "20150618",
+      "termination_date": "20160331",
+      "report_date": "20150624",
+      "code_info": "Lot #: a) C401536, Exp 07/2015; b) C401538, Exp 07/2015",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA203874"
+        ],
+        "brand_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-313",
+          "43598-323",
+          "43598-320",
+          "43598-317",
+          "43598-322",
+          "43598-319",
+          "43598-316",
+          "43598-314",
+          "43598-321",
+          "43598-318",
+          "43598-315"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "AMLODIPINE BESYLATE",
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "404011",
+          "404013",
+          "597967",
+          "597971",
+          "597974",
+          "597977",
+          "597980",
+          "597984",
+          "597987",
+          "597990",
+          "597993"
+        ],
+        "spl_id": [
+          "54058ac6-94e2-d2d3-5c46-886b3478fc76"
+        ],
+        "spl_set_id": [
+          "abee4a34-89cc-d886-192c-32582ab8f024"
+        ],
+        "package_ndc": [
+          "43598-323-30",
+          "43598-323-60",
+          "43598-323-90",
+          "43598-323-05",
+          "43598-320-30",
+          "43598-320-60",
+          "43598-320-90",
+          "43598-320-05",
+          "43598-317-30",
+          "43598-317-60",
+          "43598-317-90",
+          "43598-317-05",
+          "43598-322-30",
+          "43598-322-60",
+          "43598-322-90",
+          "43598-322-05",
+          "43598-319-30",
+          "43598-319-60",
+          "43598-319-90",
+          "43598-319-05",
+          "43598-316-30",
+          "43598-316-60",
+          "43598-316-90",
+          "43598-316-05",
+          "43598-314-30",
+          "43598-314-60",
+          "43598-314-90",
+          "43598-314-05",
+          "43598-321-30",
+          "43598-321-60",
+          "43598-321-90",
+          "43598-321-05",
+          "43598-318-30",
+          "43598-318-60",
+          "43598-318-90",
+          "43598-318-05",
+          "43598-315-30",
+          "43598-315-60",
+          "43598-315-90",
+          "43598-315-05",
+          "43598-313-30",
+          "43598-313-60",
+          "43598-313-90",
+          "43598-313-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343598323305",
+          "0343598315300",
+          "0343598320304",
+          "0343598317304",
+          "0343598313306",
+          "0343598322308",
+          "0343598319308",
+          "0343598316307",
+          "0343598314303"
+        ],
+        "unii": [
+          "48A5M73Z4Q",
+          "864V2Q084H"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "71375",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1144-2015",
+      "product_description": "Amlodipine besylate and Atorvastatin calcium tablets, 10mg/10mg, packaged in a)30-count bottle (NDC 43598-321-30), b) 90-count bottle (NDC 43598-321-90), Rx Only, Manufactured by Dr. Reddy's Laboratories Limited Bachupally, 500 090 India",
+      "product_quantity": "",
+      "reason_for_recall": "Subpotent drug",
+      "recall_initiation_date": "20150506",
+      "center_classification_date": "20150618",
+      "termination_date": "20160331",
+      "report_date": "20150624",
+      "code_info": "Lot #: a) C401537, Exp 07/2015; b) C401539, Exp 07/2015",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA203874"
+        ],
+        "brand_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-313",
+          "43598-323",
+          "43598-320",
+          "43598-317",
+          "43598-322",
+          "43598-319",
+          "43598-316",
+          "43598-314",
+          "43598-321",
+          "43598-318",
+          "43598-315"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "AMLODIPINE BESYLATE",
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "404011",
+          "404013",
+          "597967",
+          "597971",
+          "597974",
+          "597977",
+          "597980",
+          "597984",
+          "597987",
+          "597990",
+          "597993"
+        ],
+        "spl_id": [
+          "54058ac6-94e2-d2d3-5c46-886b3478fc76"
+        ],
+        "spl_set_id": [
+          "abee4a34-89cc-d886-192c-32582ab8f024"
+        ],
+        "package_ndc": [
+          "43598-323-30",
+          "43598-323-60",
+          "43598-323-90",
+          "43598-323-05",
+          "43598-320-30",
+          "43598-320-60",
+          "43598-320-90",
+          "43598-320-05",
+          "43598-317-30",
+          "43598-317-60",
+          "43598-317-90",
+          "43598-317-05",
+          "43598-322-30",
+          "43598-322-60",
+          "43598-322-90",
+          "43598-322-05",
+          "43598-319-30",
+          "43598-319-60",
+          "43598-319-90",
+          "43598-319-05",
+          "43598-316-30",
+          "43598-316-60",
+          "43598-316-90",
+          "43598-316-05",
+          "43598-314-30",
+          "43598-314-60",
+          "43598-314-90",
+          "43598-314-05",
+          "43598-321-30",
+          "43598-321-60",
+          "43598-321-90",
+          "43598-321-05",
+          "43598-318-30",
+          "43598-318-60",
+          "43598-318-90",
+          "43598-318-05",
+          "43598-315-30",
+          "43598-315-60",
+          "43598-315-90",
+          "43598-315-05",
+          "43598-313-30",
+          "43598-313-60",
+          "43598-313-90",
+          "43598-313-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343598323305",
+          "0343598315300",
+          "0343598320304",
+          "0343598317304",
+          "0343598313306",
+          "0343598322308",
+          "0343598319308",
+          "0343598316307",
+          "0343598314303"
+        ],
+        "unii": [
+          "48A5M73Z4Q",
+          "864V2Q084H"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "71375",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1145-2015",
+      "product_description": "Amlodipine besylate and Atorvastatin calcium tablets, 10mg/40mg, 90-count bottle, Rx Only Manufactured by Dr. Reddy's Laboratories Limited Bachupally, 500 090 India, NDC 43598-315-90",
+      "product_quantity": "",
+      "reason_for_recall": "Subpotent drug",
+      "recall_initiation_date": "20150506",
+      "center_classification_date": "20150618",
+      "termination_date": "20160331",
+      "report_date": "20150624",
+      "code_info": "Lot # C309280",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA203874"
+        ],
+        "brand_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "generic_name": [
+          "AMLODIPINE BESYLATE AND ATORVASTATIN CALCIUM"
+        ],
+        "manufacturer_name": [
+          "Dr. Reddy's Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-313",
+          "43598-323",
+          "43598-320",
+          "43598-317",
+          "43598-322",
+          "43598-319",
+          "43598-316",
+          "43598-314",
+          "43598-321",
+          "43598-318",
+          "43598-315"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "AMLODIPINE BESYLATE",
+          "ATORVASTATIN CALCIUM TRIHYDRATE"
+        ],
+        "rxcui": [
+          "404011",
+          "404013",
+          "597967",
+          "597971",
+          "597974",
+          "597977",
+          "597980",
+          "597984",
+          "597987",
+          "597990",
+          "597993"
+        ],
+        "spl_id": [
+          "54058ac6-94e2-d2d3-5c46-886b3478fc76"
+        ],
+        "spl_set_id": [
+          "abee4a34-89cc-d886-192c-32582ab8f024"
+        ],
+        "package_ndc": [
+          "43598-323-30",
+          "43598-323-60",
+          "43598-323-90",
+          "43598-323-05",
+          "43598-320-30",
+          "43598-320-60",
+          "43598-320-90",
+          "43598-320-05",
+          "43598-317-30",
+          "43598-317-60",
+          "43598-317-90",
+          "43598-317-05",
+          "43598-322-30",
+          "43598-322-60",
+          "43598-322-90",
+          "43598-322-05",
+          "43598-319-30",
+          "43598-319-60",
+          "43598-319-90",
+          "43598-319-05",
+          "43598-316-30",
+          "43598-316-60",
+          "43598-316-90",
+          "43598-316-05",
+          "43598-314-30",
+          "43598-314-60",
+          "43598-314-90",
+          "43598-314-05",
+          "43598-321-30",
+          "43598-321-60",
+          "43598-321-90",
+          "43598-321-05",
+          "43598-318-30",
+          "43598-318-60",
+          "43598-318-90",
+          "43598-318-05",
+          "43598-315-30",
+          "43598-315-60",
+          "43598-315-90",
+          "43598-315-05",
+          "43598-313-30",
+          "43598-313-60",
+          "43598-313-90",
+          "43598-313-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343598323305",
+          "0343598315300",
+          "0343598320304",
+          "0343598317304",
+          "0343598313306",
+          "0343598322308",
+          "0343598319308",
+          "0343598316307",
+          "0343598314303"
+        ],
+        "unii": [
+          "48A5M73Z4Q",
+          "864V2Q084H"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "71375",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1146-2015",
+      "product_description": "Amlodipine besylate and Atorvastatin calcium tablets, 5mg/40mg packaged in a)30-count bottle (NDC 43598-316-30), b) 90-count bottle (NDC 43598-316-90), Rx Only,  Manufactured by Dr. Reddy's Laboratories Limited Bachupally, 500 090 India",
+      "product_quantity": "",
+      "reason_for_recall": "Subpotent drug",
+      "recall_initiation_date": "20150506",
+      "center_classification_date": "20150618",
+      "termination_date": "20160331",
+      "report_date": "20150624",
+      "code_info": "Lot # C402439",
+      "more_code_info": ""
+    }
+  ]
+}

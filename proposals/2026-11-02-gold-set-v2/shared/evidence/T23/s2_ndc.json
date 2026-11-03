@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "0186-4020",
+      "generic_name": "Esomeprazole magnesium",
+      "labeler_name": "AstraZeneca Pharmaceuticals LP",
+      "brand_name": "NEXIUM",
+      "active_ingredients": [
+        {
+          "name": "ESOMEPRAZOLE MAGNESIUM TRIHYDRATE",
+          "strength": "20 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "0186-4020-01",
+          "description": "30 GRANULE, DELAYED RELEASE in 1 CARTON (0186-4020-01)",
+          "marketing_start_date": "20070319",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20271231",
+      "openfda": {
+        "manufacturer_name": [
+          "AstraZeneca Pharmaceuticals LP"
+        ],
+        "rxcui": [
+          "606726",
+          "606728",
+          "606730",
+          "606731",
+          "692576",
+          "692578",
+          "861568",
+          "861570",
+          "861576",
+          "861583",
+          "1297658",
+          "1297660",
+          "1297761",
+          "1297763"
+        ],
+        "spl_set_id": [
+          "f4853677-1622-4037-688b-fdf533a11d96"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "R6DXU4WAY9"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "GRANULE, DELAYED RELEASE",
+      "spl_id": "26f66e74-b652-4b1d-bfff-62a3cc87d590",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20070319",
+      "product_id": "0186-4020_26f66e74-b652-4b1d-bfff-62a3cc87d590",
+      "application_number": "NDA021957",
+      "brand_name_base": "NEXIUM",
+      "pharm_class": [
+        "Cytochrome P450 2C19 Inhibitors [MoA]",
+        "Proton Pump Inhibitor [EPC]",
+        "Proton Pump Inhibitors [MoA]"
+      ]
+    }
+  ]
+}

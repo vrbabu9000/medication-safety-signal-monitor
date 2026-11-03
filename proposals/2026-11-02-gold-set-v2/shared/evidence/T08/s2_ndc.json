@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "0310-6205",
+      "generic_name": "DAPAGLIFLOZIN",
+      "labeler_name": "AstraZeneca Pharmaceuticals LP",
+      "brand_name": "FARXIGA",
+      "active_ingredients": [
+        {
+          "name": "DAPAGLIFLOZIN PROPANEDIOL",
+          "strength": "5 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "0310-6205-30",
+          "description": "30 TABLET, FILM COATED in 1 BOTTLE, PLASTIC (0310-6205-30)",
+          "marketing_start_date": "20150202",
+          "sample": false
+        },
+        {
+          "package_ndc": "0310-6205-90",
+          "description": "90 TABLET, FILM COATED in 1 BOTTLE, PLASTIC (0310-6205-90)",
+          "marketing_start_date": "20240318",
+          "sample": false
+        },
+        {
+          "package_ndc": "0310-6205-95",
+          "description": "1 BLISTER PACK in 1 CARTON (0310-6205-95)  / 7 TABLET, FILM COATED in 1 BLISTER PACK",
+          "marketing_start_date": "20150202",
+          "marketing_end_date": "20271231",
+          "sample": true
+        }
+      ],
+      "listing_expiration_date": "20271231",
+      "openfda": {
+        "manufacturer_name": [
+          "AstraZeneca Pharmaceuticals LP"
+        ],
+        "rxcui": [
+          "1486977",
+          "1486981",
+          "1488569",
+          "1488574"
+        ],
+        "spl_set_id": [
+          "72ad22ae-efe6-4cd6-a302-98aaee423d69"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "887K2391VH"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET, FILM COATED",
+      "spl_id": "6ae68943-041a-4236-8f49-fb8f0edc38cf",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20080114",
+      "product_id": "0310-6205_6ae68943-041a-4236-8f49-fb8f0edc38cf",
+      "application_number": "NDA202293",
+      "brand_name_base": "FARXIGA",
+      "pharm_class": [
+        "Sodium-Glucose Cotransporter 2 Inhibitor [EPC]",
+        "Sodium-Glucose Transporter 2 Inhibitors [MoA]"
+      ]
+    }
+  ]
+}

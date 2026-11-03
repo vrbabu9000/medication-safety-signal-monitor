@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "61958-0701",
+      "generic_name": "emtricitabine and tenofovir disoproxil fumarate",
+      "labeler_name": "Gilead Sciences, Inc",
+      "brand_name": "Truvada",
+      "active_ingredients": [
+        {
+          "name": "EMTRICITABINE",
+          "strength": "200 mg/1"
+        },
+        {
+          "name": "TENOFOVIR DISOPROXIL FUMARATE",
+          "strength": "300 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "61958-0701-1",
+          "description": "30 TABLET, FILM COATED in 1 BOTTLE, PLASTIC (61958-0701-1)",
+          "marketing_start_date": "20040802",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20261231",
+      "openfda": {
+        "manufacturer_name": [
+          "Gilead Sciences, Inc"
+        ],
+        "rxcui": [
+          "476556",
+          "639888",
+          "1744001",
+          "1744003",
+          "1744005",
+          "1744007",
+          "1744009",
+          "1744011"
+        ],
+        "spl_set_id": [
+          "54e82b13-a037-49ed-b4b3-030b37c0ecdd"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "nui": [
+          "N0000175462",
+          "M0015066",
+          "N0000009947"
+        ],
+        "pharm_class_epc": [
+          "Human Immunodeficiency Virus Nucleoside Analog Reverse Transcriptase Inhibitor [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Nucleosides [CS]"
+        ],
+        "pharm_class_moa": [
+          "Nucleoside Reverse Transcriptase Inhibitors [MoA]"
+        ],
+        "unii": [
+          "G70B4ETF4S",
+          "OTT9J7900I"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET, FILM COATED",
+      "spl_id": "32422ee8-1cdc-4305-bb3e-0458472513fc",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20040802",
+      "product_id": "61958-0701_32422ee8-1cdc-4305-bb3e-0458472513fc",
+      "application_number": "NDA021752",
+      "brand_name_base": "Truvada",
+      "pharm_class": [
+        "Hepatitis B Virus Nucleoside Analog Reverse Transcriptase Inhibitor [EPC]",
+        "Human Immunodeficiency Virus Nucleoside Analog Reverse Transcriptase Inhibitor [EPC]",
+        "Human Immunodeficiency Virus Nucleoside Analog Reverse Transcriptase Inhibitor [EPC]",
+        "Nucleoside Reverse Transcriptase Inhibitors [MoA]",
+        "Nucleoside Reverse Transcriptase Inhibitors [MoA]",
+        "Nucleosides [CS]",
+        "Nucleosides [CS]"
+      ]
+    }
+  ]
+}

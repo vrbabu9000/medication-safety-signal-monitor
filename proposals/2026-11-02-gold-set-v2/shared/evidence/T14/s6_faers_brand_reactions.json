@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "PRODUCT ADHESION ISSUE",
+      "count": 50
+    },
+    {
+      "term": "PRODUCT SOLUBILITY ABNORMAL",
+      "count": 40
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 29
+    },
+    {
+      "term": "DENTAL CARIES",
+      "count": 28
+    },
+    {
+      "term": "THERAPEUTIC RESPONSE DECREASED",
+      "count": 26
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 24
+    },
+    {
+      "term": "NAUSEA",
+      "count": 23
+    },
+    {
+      "term": "PAIN",
+      "count": 23
+    },
+    {
+      "term": "FATIGUE",
+      "count": 21
+    },
+    {
+      "term": "HEADACHE",
+      "count": 20
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "58151-574",
+      "generic_name": "sertraline hydrochloride",
+      "labeler_name": "Viatris Specialty LLC",
+      "brand_name": "Zoloft",
+      "active_ingredients": [
+        {
+          "name": "SERTRALINE HYDROCHLORIDE",
+          "strength": "25 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "58151-574-93",
+          "description": "30 TABLET, FILM COATED in 1 BOTTLE (58151-574-93)",
+          "marketing_start_date": "20241030",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20271231",
+      "openfda": {
+        "manufacturer_name": [
+          "Viatris Specialty LLC"
+        ],
+        "rxcui": [
+          "208149",
+          "208161",
+          "212233",
+          "312938",
+          "312940",
+          "312941",
+          "861064",
+          "861066"
+        ],
+        "spl_set_id": [
+          "fda754f6-d0f3-4dce-a17a-927d64f912f7"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "UTI8907Y6X"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET, FILM COATED",
+      "spl_id": "fd27d2f5-1ade-4dbf-b2d2-bb98daf7da3a",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20241030",
+      "product_id": "58151-574_fd27d2f5-1ade-4dbf-b2d2-bb98daf7da3a",
+      "application_number": "NDA019839",
+      "brand_name_base": "Zoloft",
+      "pharm_class": [
+        "Cytochrome P450 2D6 Inhibitors [MoA]",
+        "Serotonin Reuptake Inhibitor [EPC]",
+        "Serotonin Uptake Inhibitors [MoA]"
+      ]
+    }
+  ]
+}

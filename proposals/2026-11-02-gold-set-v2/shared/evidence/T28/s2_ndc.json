@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "78206-170",
+      "generic_name": "montelukast sodium",
+      "labeler_name": "Organon LLC",
+      "brand_name": "SINGULAIR",
+      "active_ingredients": [
+        {
+          "name": "MONTELUKAST SODIUM",
+          "strength": "4 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "78206-170-01",
+          "description": "30 TABLET, CHEWABLE in 1 BOTTLE (78206-170-01)",
+          "marketing_start_date": "20210601",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20261231",
+      "openfda": {
+        "manufacturer_name": [
+          "Organon LLC"
+        ],
+        "rxcui": [
+          "153892",
+          "153893",
+          "200224",
+          "242438",
+          "261367",
+          "311759",
+          "351246",
+          "404406"
+        ],
+        "spl_set_id": [
+          "482dcc92-b47f-4ea6-854a-f5ac2aea7842"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0378206173010",
+          "0378206170019"
+        ],
+        "unii": [
+          "U1O3J18SFL"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET, CHEWABLE",
+      "spl_id": "57a12189-3bb3-4a5d-b5fe-fc57db87c134",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20210601",
+      "product_id": "78206-170_57a12189-3bb3-4a5d-b5fe-fc57db87c134",
+      "application_number": "NDA020830",
+      "brand_name_base": "SINGULAIR",
+      "pharm_class": [
+        "Leukotriene Receptor Antagonist [EPC]",
+        "Leukotriene Receptor Antagonists [MoA]"
+      ]
+    }
+  ]
+}

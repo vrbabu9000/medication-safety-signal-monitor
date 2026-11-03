@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "0024-5401",
+      "marketing_end_date": "20261031",
+      "generic_name": "zolpidem tartrate",
+      "labeler_name": "Sanofi-Aventis U.S. LLC",
+      "dea_schedule": "CIV",
+      "brand_name": "Ambien",
+      "active_ingredients": [
+        {
+          "name": "ZOLPIDEM TARTRATE",
+          "strength": "5 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "0024-5401-31",
+          "description": "100 TABLET, FILM COATED in 1 BOTTLE (0024-5401-31)",
+          "marketing_start_date": "19930401",
+          "marketing_end_date": "20261031",
+          "sample": false
+        }
+      ],
+      "openfda": {
+        "manufacturer_name": [
+          "Sanofi-Aventis U.S. LLC"
+        ],
+        "rxcui": [
+          "854873",
+          "854875",
+          "854876",
+          "854878"
+        ],
+        "spl_set_id": [
+          "c36cadf4-65a4-4466-b409-c82020b42452"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "WY6W63843K"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET, FILM COATED",
+      "spl_id": "3d6feaca-4f30-4ca9-a9c8-d9038744fa2f",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "19930401",
+      "product_id": "0024-5401_3d6feaca-4f30-4ca9-a9c8-d9038744fa2f",
+      "application_number": "NDA019908",
+      "brand_name_base": "Ambien",
+      "pharm_class": [
+        "Central Nervous System Depression [PE]",
+        "GABA A Receptor Positive Modulators [MoA]",
+        "gamma-Aminobutyric Acid A Receptor Positive Modulator [EPC]"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "0069-0468",
+      "generic_name": "varenicline tartrate",
+      "labeler_name": "Pfizer Laboratories Div Pfizer Inc",
+      "brand_name": "CHANTIX",
+      "active_ingredients": [
+        {
+          "name": "VARENICLINE TARTRATE",
+          "strength": ".5 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "0069-0468-56",
+          "description": "56 TABLET, FILM COATED in 1 BOTTLE (0069-0468-56)",
+          "marketing_start_date": "20060510",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20271231",
+      "openfda": {
+        "manufacturer_name": [
+          "Pfizer Laboratories Div Pfizer Inc"
+        ],
+        "rxcui": [
+          "636671",
+          "636676",
+          "637188",
+          "637190",
+          "749289",
+          "749788",
+          "795735",
+          "795737"
+        ],
+        "spl_set_id": [
+          "f0ff4f27-5185-4881-a749-c6b7a0ca5696"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0300690469560",
+          "0300690468563",
+          "0300690471280"
+        ],
+        "unii": [
+          "82269ASB48"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET, FILM COATED",
+      "spl_id": "09cce88b-e4f0-48b7-ac05-54d97976b4c5",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20060510",
+      "product_id": "0069-0468_09cce88b-e4f0-48b7-ac05-54d97976b4c5",
+      "application_number": "NDA021928",
+      "brand_name_base": "CHANTIX",
+      "pharm_class": [
+        "Cholinergic Agonists [MoA]",
+        "Cholinergic Receptor Agonist [EPC]",
+        "Partial Cholinergic Nicotinic Agonist [EPC]",
+        "Partial Cholinergic Nicotinic Agonists [MoA]"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "0071-1018",
+      "marketing_end_date": "20261231",
+      "generic_name": "PREGABALIN",
+      "labeler_name": "Parke-Davis Div of Pfizer Inc",
+      "dea_schedule": "CV",
+      "brand_name": "Lyrica",
+      "active_ingredients": [
+        {
+          "name": "PREGABALIN",
+          "strength": "300 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "0071-1018-68",
+          "description": "90 CAPSULE in 1 BOTTLE (0071-1018-68)",
+          "marketing_start_date": "20041230",
+          "marketing_end_date": "20261231",
+          "sample": false
+        }
+      ],
+      "openfda": {
+        "manufacturer_name": [
+          "Parke-Davis Div of Pfizer Inc"
+        ],
+        "rxcui": [
+          "483438",
+          "483440",
+          "483442",
+          "483444",
+          "483446",
+          "483448",
+          "483450",
+          "577127",
+          "607018",
+          "607020",
+          "607022",
+          "607024",
+          "607026",
+          "607028",
+          "607033",
+          "607038",
+          "898715",
+          "898718"
+        ],
+        "spl_set_id": [
+          "60185c88-ecfd-46f9-adb9-b97c6b00a553"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0300711012683"
+        ],
+        "unii": [
+          "55JG375S6M"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "CAPSULE",
+      "spl_id": "e7c79058-03ba-4e7f-9a31-9ec5ce245161",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20041230",
+      "product_id": "0071-1018_e7c79058-03ba-4e7f-9a31-9ec5ce245161",
+      "application_number": "NDA021446",
+      "brand_name_base": "Lyrica"
+    }
+  ]
+}

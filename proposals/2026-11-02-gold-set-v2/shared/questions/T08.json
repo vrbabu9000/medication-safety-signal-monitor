@@ -1,0 +1,70 @@
+{
+ "trace_id": "T08",
+ "brand": "Farxiga",
+ "class": "SGLT2",
+ "questions": [
+  {
+   "step": "S1",
+   "source": "RxNorm",
+   "question": "For the exact brand name 'Farxiga', which brand RxCUI and term type does RxNorm return, which ingredient (IN) concepts are related to it, and is it a multi-ingredient product?",
+   "answer_format": "{brand_rxcui, brand_tty, ingredients:[{rxcui,name}] sorted by name, multi_ingredient}"
+  },
+  {
+   "step": "S2",
+   "source": "NDC Directory",
+   "question": "For NDC product 0310-6205, what are the labeler, marketing category, application number and the description of package 0310-6205-30? Does the listing's spl_set_id equal the S4 label set ID 72ad22ae-efe6-4cd6-a302-98aaee423d69?",
+   "answer_format": "{labeler_name, marketing_category, application_number, package_ndc, package_description, spl_set_id_matches_s4}",
+   "inputs": {
+    "package_ndc": "0310-6205-30"
+   }
+  },
+  {
+   "step": "S3",
+   "source": "Drugs@FDA",
+   "question": "For the application number recorded in S2, what sponsor name does Drugs@FDA give, and which product numbers, dosage forms and strengths are listed?",
+   "answer_format": "{application_number, sponsor_name, products:[{product_number, dosage_form, route, active_ingredients}] sorted by product_number}"
+  },
+  {
+   "step": "S4",
+   "source": "DailyMed",
+   "question": "In SPL set 72ad22ae-efe6-4cd6-a302-98aaee423d69 version 49, section '5.1 Diabetic Ketoacidosis in Patients with Type 1 Diabetes Mellitus and Other Ketoacidosis' (direct text only), classify 'abdominal pain'.",
+   "answer_format": "One of reaction_or_warning, underlying_condition_or_risk_factor, symptom_of_other_condition, administration_instruction, contraindicated_population, exposure_factor, co_medication_risk_factor",
+   "inputs": {
+    "section_ordinal": 12,
+    "section_id": "9823dd6c-e784-41a3-903f-701f62b30cb7",
+    "target": "abdominal pain"
+   }
+  },
+  {
+   "step": "S5",
+   "source": "SrLC",
+   "question": "On the SrLC page for this application, which is the most recent entry with underlined (added/revised) text in Boxed Warning or sections 4, 5 or 6? Give its date, supplement and first such subsection, and the longest underlined passage in that subsection. Is that passage present in the S4 label version (letters and digits only, case-insensitive)?",
+   "answer_format": "{entry_date, supplement, section, subsection, underlined_passage, present_in_s4_label}"
+  },
+  {
+   "step": "S6",
+   "source": "FAERS (openFDA)",
+   "question": "For FAERS reports received 20250101–20251231: how many name the product 'FARXIGA' exactly, and how many list its most frequent FAERS-coded active substance (any product)? For the brand-named reports, what are the 10 most frequent reaction terms with counts, and is each term found in the S4 label's in-scope sections (Boxed Warning, Contraindications, Warnings and Precautions, Warnings, Precautions, Adverse Reactions)?",
+   "answer_format": "{brand_query, brand_report_count, substance_query, active_substance, substance_report_count, top_terms_brand:[{term,count,found_in_label_scope}]}",
+   "template_version": "v2 (pilot T01 showed substance-level reports mix products)"
+  },
+  {
+   "step": "S7",
+   "source": "FDA enforcement",
+   "question": "Among openFDA enforcement records for this ingredient (no application-level record exists), take the most recent by report_date. What are its recall number, classification, reason, reported status and report date? Does that record's own product_description or code_info name package 0310-6205-30?",
+   "answer_format": "{query_level, records_found, recall_number, classification, reason_for_recall, status_as_reported, report_date, package_named_in_record, package_in_openfda_harmonized_list}",
+   "inputs": {
+    "package_ndc": "0310-6205-30",
+    "record_file": "s7_recall_ingredient"
+   }
+  },
+  {
+   "step": "S8",
+   "source": "ClinicalTrials.gov",
+   "question": "From the captured search (interventional, completed, with results, largest enrollment first, 25 studies), take the first study with an adverse-event group whose title names the drug. Report the NCT ID, overall status, group ID and title, serious adverse events affected and at risk.",
+   "answer_format": "{nct_id, overall_status, group_id, group_title, seriousNumAffected, seriousNumAtRisk}"
+  }
+ ],
+ "frozen_before_answers": true,
+ "created_at_utc": "2026-11-02T18:45:30.027540+00:00"
+}

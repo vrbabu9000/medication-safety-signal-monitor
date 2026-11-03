@@ -1,0 +1,809 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "submissions": [
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "10",
+          "submission_status": "AP",
+          "submission_status_date": "20070621",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "36958",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2007/021446s010lbl.pdf",
+              "date": "20070627",
+              "type": "Label"
+            },
+            {
+              "id": "5412",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2007/021446s010ltr.pdf",
+              "date": "20070705",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "29",
+          "submission_status": "AP",
+          "submission_status_date": "20131223",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "15503",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2013/021446s029,022488s008lbl.pdf",
+              "date": "20131224",
+              "type": "Label"
+            },
+            {
+              "id": "27824",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2013/022488Orig1s008;021446Orig1s029ltr.pdf",
+              "date": "20131226",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "35",
+          "submission_status": "AP",
+          "submission_status_date": "20180503",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "54022",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2018/021446s035,022488s013lbl.pdf",
+              "date": "20180504",
+              "type": "Label"
+            },
+            {
+              "id": "54039",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2018/021446Orig1s035,022488Orig1s013ltr.pdf",
+              "date": "20180508",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "41",
+          "submission_status": "AP",
+          "submission_status_date": "20231213",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "76790",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2024/021446Orig1s041,%20022488Orig1s018,%20209501Orig1s005Correctedltr.pdf",
+              "date": "20240108",
+              "type": "Letter"
+            },
+            {
+              "id": "76827",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/021446s041,022488s018lbl.pdf",
+              "date": "20240410",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "25",
+          "submission_status": "AP",
+          "submission_status_date": "20110824",
+          "review_priority": "UNKNOWN",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "27823",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2011/021446s025,022488s004ltr.pdf",
+              "date": "20110826",
+              "type": "Letter"
+            },
+            {
+              "id": "36963",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2011/022488-s004-0211446s025lbl.pdf",
+              "date": "20110830",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "31",
+          "submission_status": "AP",
+          "submission_status_date": "20160708",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "23",
+          "submission_status": "AP",
+          "submission_status_date": "20110426",
+          "review_priority": "UNKNOWN",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "36962",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2011/021446s023s024,022488s001s002s003lbl.pdf",
+              "date": "20110429",
+              "type": "Label"
+            },
+            {
+              "id": "27821",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2011/021446s023,s024,022488s001,s002,s003ltr.pdf",
+              "date": "20110429",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "ORIG",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "20041230",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "TYPE 1",
+          "submission_class_code_description": "Type 1 - New Molecular Entity",
+          "application_docs": [
+            {
+              "id": "21665",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2004/021446_LyricaTOC.html",
+              "date": "20050718",
+              "type": "Review"
+            },
+            {
+              "id": "24148",
+              "url": "http://www.fda.gov/Drugs/DrugSafety/PostmarketDrugSafetyInformationforPatientsandProviders/ucm100192.htm",
+              "date": "20051130",
+              "type": "Healthcare Professional Sheet"
+            },
+            {
+              "id": "27817",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2004/21446ltr.pdf",
+              "date": "20050111",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "6",
+          "submission_status": "AP",
+          "submission_status_date": "20061027",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "27819",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2006/021446s006ltr.pdf",
+              "date": "20061106",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "21",
+          "submission_status": "AP",
+          "submission_status_date": "20101008",
+          "review_priority": "UNKNOWN",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "36961",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2010/021446s021lbl.pdf",
+              "date": "20101025",
+              "type": "Label"
+            },
+            {
+              "id": "5415",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2010/021446s021ltr.pdf",
+              "date": "20101019",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "13",
+          "submission_status": "AP",
+          "submission_status_date": "20090423",
+          "review_priority": "901 REQUIRED",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "5413",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2009/021446s013,s014ltr.pdf",
+              "date": "20090504",
+              "type": "Letter"
+            },
+            {
+              "id": "15500",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2009/021446s013s014lbl.pdf",
+              "date": "20090512",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "2",
+          "submission_status": "AP",
+          "submission_status_date": "20060217",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "15499",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2006/021446s002,s003lbl.pdf",
+              "date": "20060222",
+              "type": "Label"
+            },
+            {
+              "id": "27818",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2006/021446s002s003ltr.pdf",
+              "date": "20060301",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "46",
+          "submission_status": "AP",
+          "submission_status_date": "20250425",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "82061",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021446s046,022488s022lbl.pdf",
+              "date": "20250429",
+              "type": "Label"
+            },
+            {
+              "id": "82062",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021446s046,022488s022lbl.pdf#page=54",
+              "date": "20250429",
+              "type": "Medication Guide"
+            },
+            {
+              "id": "82108",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2025/021446Orig1s046, 022488Orig1s022ltr.pdf",
+              "date": "20250501",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "36",
+          "submission_status": "AP",
+          "submission_status_date": "20190523",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "58852",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2019/021446s036,022488s014lbl.pdf",
+              "date": "20190524",
+              "type": "Label"
+            },
+            {
+              "id": "58855",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2019/021446Orig1s036ltr, 022488Orig1s014ltr.pdf",
+              "date": "20190524",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "28",
+          "submission_status": "AP",
+          "submission_status_date": "20120620",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "5417",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2012/021446s028ltr.pdf",
+              "date": "20120621",
+              "type": "Letter"
+            },
+            {
+              "id": "21666",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2012/021446Orig1s028_lyrica_toc.html",
+              "date": "20120706",
+              "type": "Review"
+            },
+            {
+              "id": "24201",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2012/021446Orig1s028SumR.pdf",
+              "date": "20120706",
+              "type": "Summary Review"
+            },
+            {
+              "id": "36964",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2012/021446s028lbl.pdf",
+              "date": "20120621",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "26",
+          "submission_status": "AP",
+          "submission_status_date": "20110620",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "5416",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2011/021446s026,022488s005ltr.pdf",
+              "date": "20110629",
+              "type": "Letter"
+            },
+            {
+              "id": "15502",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2011/021446s026,022488s005lbl.pdf",
+              "date": "20110707",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "40",
+          "submission_status": "AP",
+          "submission_status_date": "20200403",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "62448",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2020/021446Orig1s040, 022488Orig1s017ltr.pdf",
+              "date": "20200406",
+              "type": "Letter"
+            },
+            {
+              "id": "62515",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2020/021446s040,%20022488s017lbl.pdf",
+              "date": "20200409",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "18",
+          "submission_status": "AP",
+          "submission_status_date": "20100104",
+          "review_priority": "UNKNOWN",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "5414",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2010/022488s000,021446s018ltr.pdf",
+              "date": "20100106",
+              "type": "Letter"
+            },
+            {
+              "id": "36960",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2010/022488,021446s018lbl.pdf",
+              "date": "20100108",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "32",
+          "submission_status": "AP",
+          "submission_status_date": "20161222",
+          "review_priority": "STANDARD",
+          "submission_class_code": "EFFICACY",
+          "submission_class_code_description": "Efficacy",
+          "application_docs": [
+            {
+              "id": "46515",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2016/021446s032,022488s011lbl.pdf",
+              "date": "20161222",
+              "type": "Label"
+            },
+            {
+              "id": "46528",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2016/021446Orig1s032, 022488Orig1s011ltr.pdf",
+              "date": "20161223",
+              "type": "Letter"
+            },
+            {
+              "id": "51599",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/56_21446 22488 pregabalin clinical prea.pdf",
+              "date": "19000101",
+              "type": "Pediatric Medical Review"
+            },
+            {
+              "id": "51600",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/57_21446 22488 pregabalin clinpharm prea.pdf",
+              "date": "19000101",
+              "type": "Pediatric Clinical Pharmacology Review"
+            },
+            {
+              "id": "51601",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/58_21446 22488 pregabalin statistical prea.pdf",
+              "date": "19000101",
+              "type": "Pediatric Statistical Review"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "24",
+          "submission_status": "AP",
+          "submission_status_date": "20110426",
+          "review_priority": "N/A",
+          "submission_class_code": "REMS",
+          "submission_class_code_description": "REMS",
+          "application_docs": [
+            {
+              "id": "15501",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2011/021446s023s024,022488s001s002s003lbl.pdf",
+              "date": "20110429",
+              "type": "Label"
+            },
+            {
+              "id": "27822",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2011/021446s023,s024,022488s001,s002,s003ltr.pdf",
+              "date": "20110429",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "30",
+          "submission_status": "AP",
+          "submission_status_date": "20160309",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "27825",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2016/021446Orig1s030,022488Orig1s010ltr.pdf",
+              "date": "20160311",
+              "type": "Letter"
+            },
+            {
+              "id": "36965",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2016/021446s030,022488s010lbl.pdf",
+              "date": "20160315",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "14",
+          "submission_status": "AP",
+          "submission_status_date": "20090423",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "27820",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2009/021446s013,s014ltr.pdf",
+              "date": "20090504",
+              "type": "Letter"
+            },
+            {
+              "id": "36959",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2009/021446s013s014lbl.pdf",
+              "date": "20090512",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "3",
+          "submission_status": "AP",
+          "submission_status_date": "20060217",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "36957",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2006/021446s002,s003lbl.pdf",
+              "date": "20060222",
+              "type": "Label"
+            },
+            {
+              "id": "5411",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2006/021446s002s003ltr.pdf",
+              "date": "20060301",
+              "type": "Letter"
+            }
+          ]
+        }
+      ],
+      "application_number": "NDA021446",
+      "sponsor_name": "UPJOHN",
+      "openfda": {
+        "application_number": [
+          "NDA021446"
+        ],
+        "brand_name": [
+          "LYRICA"
+        ],
+        "generic_name": [
+          "PREGABALIN"
+        ],
+        "manufacturer_name": [
+          "Parke-Davis Div of Pfizer Inc",
+          "Viatris Specialty LLC"
+        ],
+        "product_ndc": [
+          "0071-1018",
+          "0071-1012",
+          "0071-1013",
+          "0071-1014",
+          "0071-1015",
+          "0071-1016",
+          "0071-1017",
+          "0071-1019",
+          "0071-1020",
+          "58151-236",
+          "58151-237",
+          "58151-238",
+          "58151-239",
+          "58151-240",
+          "58151-241",
+          "58151-243",
+          "58151-242",
+          "58151-244"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "PREGABALIN"
+        ],
+        "rxcui": [
+          "483438",
+          "483440",
+          "483442",
+          "483444",
+          "483446",
+          "483448",
+          "483450",
+          "577127",
+          "607018",
+          "607020",
+          "607022",
+          "607024",
+          "607026",
+          "607028",
+          "607033",
+          "607038",
+          "898715",
+          "898718"
+        ],
+        "spl_id": [
+          "e7c79058-03ba-4e7f-9a31-9ec5ce245161",
+          "1c2af07d-faf4-4fc7-b724-c5166746956d"
+        ],
+        "spl_set_id": [
+          "60185c88-ecfd-46f9-adb9-b97c6b00a553",
+          "d4734e7d-5079-455e-8ff5-8f4539c998a9"
+        ],
+        "package_ndc": [
+          "0071-1012-68",
+          "0071-1013-41",
+          "0071-1013-68",
+          "0071-1014-41",
+          "0071-1014-68",
+          "0071-1015-41",
+          "0071-1015-68",
+          "0071-1016-41",
+          "0071-1016-68",
+          "0071-1017-68",
+          "0071-1019-68",
+          "0071-1018-68",
+          "0071-1020-01",
+          "58151-236-77",
+          "58151-237-32",
+          "58151-237-88",
+          "58151-237-77",
+          "58151-238-32",
+          "58151-238-88",
+          "58151-238-77",
+          "58151-239-32",
+          "58151-239-88",
+          "58151-239-77",
+          "58151-240-32",
+          "58151-240-88",
+          "58151-240-77",
+          "58151-241-77",
+          "58151-243-77",
+          "58151-242-77",
+          "58151-244-35"
+        ],
+        "unii": [
+          "55JG375S6M"
+        ]
+      },
+      "products": [
+        {
+          "product_number": "006",
+          "reference_drug": "Yes",
+          "brand_name": "LYRICA",
+          "active_ingredients": [
+            {
+              "name": "PREGABALIN",
+              "strength": "200MG"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "CAPSULE",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        },
+        {
+          "product_number": "004",
+          "reference_drug": "Yes",
+          "brand_name": "LYRICA",
+          "active_ingredients": [
+            {
+              "name": "PREGABALIN",
+              "strength": "100MG"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "CAPSULE",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        },
+        {
+          "product_number": "002",
+          "reference_drug": "Yes",
+          "brand_name": "LYRICA",
+          "active_ingredients": [
+            {
+              "name": "PREGABALIN",
+              "strength": "50MG"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "CAPSULE",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        },
+        {
+          "product_number": "007",
+          "reference_drug": "Yes",
+          "brand_name": "LYRICA",
+          "active_ingredients": [
+            {
+              "name": "PREGABALIN",
+              "strength": "225MG"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "CAPSULE",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        },
+        {
+          "product_number": "005",
+          "reference_drug": "Yes",
+          "brand_name": "LYRICA",
+          "active_ingredients": [
+            {
+              "name": "PREGABALIN",
+              "strength": "150MG"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "CAPSULE",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        },
+        {
+          "product_number": "003",
+          "reference_drug": "Yes",
+          "brand_name": "LYRICA",
+          "active_ingredients": [
+            {
+              "name": "PREGABALIN",
+              "strength": "75MG"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "CAPSULE",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        },
+        {
+          "product_number": "001",
+          "reference_drug": "Yes",
+          "brand_name": "LYRICA",
+          "active_ingredients": [
+            {
+              "name": "PREGABALIN",
+              "strength": "25MG"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "CAPSULE",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        },
+        {
+          "product_number": "008",
+          "reference_drug": "Yes",
+          "brand_name": "LYRICA",
+          "active_ingredients": [
+            {
+              "name": "PREGABALIN",
+              "strength": "300MG"
+            }
+          ],
+          "reference_standard": "Yes",
+          "dosage_form": "CAPSULE",
+          "route": "ORAL",
+          "marketing_status": "Prescription",
+          "te_code": "AB"
+        }
+      ]
+    }
+  ]
+}

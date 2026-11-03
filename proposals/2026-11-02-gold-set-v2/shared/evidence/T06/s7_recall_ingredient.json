@@ -1,0 +1,1001 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 9
+    }
+  },
+  "results": [
+    {
+      "status": "Ongoing",
+      "city": "Mahwah",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA208699"
+        ],
+        "brand_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "generic_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "manufacturer_name": [
+          "Glenmark Pharmaceuticals Inc., USA"
+        ],
+        "product_ndc": [
+          "68462-321",
+          "68462-322",
+          "68462-323",
+          "68462-324"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "EZETIMIBE",
+          "SIMVASTATIN"
+        ],
+        "rxcui": [
+          "476345",
+          "476349",
+          "476350",
+          "476351"
+        ],
+        "spl_id": [
+          "9c80244b-f111-425c-bf4c-c8cc91300cce"
+        ],
+        "spl_set_id": [
+          "32d0e130-1211-44ca-be60-5379ffec96fd"
+        ],
+        "package_ndc": [
+          "68462-321-90",
+          "68462-321-10",
+          "68462-321-30",
+          "68462-322-30",
+          "68462-322-90",
+          "68462-322-10",
+          "68462-323-30",
+          "68462-323-90",
+          "68462-323-05",
+          "68462-324-30",
+          "68462-324-90",
+          "68462-324-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0368462321300",
+          "0368462322307",
+          "0368462323304"
+        ],
+        "nui": [
+          "N0000175589",
+          "N0000000121",
+          "N0000008553",
+          "N0000175911"
+        ],
+        "pharm_class_epc": [
+          "HMG-CoA Reductase Inhibitor [EPC]",
+          "Dietary Cholesterol Absorption Inhibitor [EPC]"
+        ],
+        "pharm_class_moa": [
+          "Hydroxymethylglutaryl-CoA Reductase Inhibitors [MoA]"
+        ],
+        "pharm_class_pe": [
+          "Decreased Cholesterol Absorption [PE]"
+        ],
+        "unii": [
+          "AGG2FN16EV",
+          "EOR26LQQ24"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "96884",
+      "recalling_firm": "Glenmark Pharmaceuticals Inc., USA",
+      "address_1": "750 Corporate Dr",
+      "address_2": "",
+      "postal_code": "07430-2009",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide USA and PR",
+      "recall_number": "D-0462-2025",
+      "product_description": "Ezetimibe and Simvastatin Tablets, 10mg/40mg, 90-count bottle, Rx only, Manufactured by: Glenmark Pharmaceuticals Ltd., Plot No. 2, Phase-2, Pharma Zone SEZ, Madya Pradesh, India, Manufactured for: Glenmark Pharmaceuticals Inc., USA, Mahwah, NJ 07430, NDC 68462-323-90",
+      "product_quantity": "6,759 Con - 90 bottle pack",
+      "reason_for_recall": "Failed Impurities/Degradation Specifications: Out of Specification (OOS) for related substances test for Anhydro Simvastatin at the 06-month time point during long-term stability study.",
+      "recall_initiation_date": "20250519",
+      "center_classification_date": "20250610",
+      "report_date": "20250618",
+      "code_info": "Lot #: 17240195, Exp 01/31/2026.",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Camarillo",
+      "state": "CA",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA200909"
+        ],
+        "brand_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "generic_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "manufacturer_name": [
+          "Golden State Medical Supply, Inc."
+        ],
+        "product_ndc": [
+          "51407-190",
+          "51407-191",
+          "51407-192",
+          "51407-193"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "EZETIMIBE",
+          "SIMVASTATIN"
+        ],
+        "rxcui": [
+          "476345",
+          "476349",
+          "476350",
+          "476351"
+        ],
+        "spl_id": [
+          "446023ff-25b4-2c12-e063-6294a90ad27e"
+        ],
+        "spl_set_id": [
+          "88cd0e7b-e8dc-6125-e053-2a95a90aaa27"
+        ],
+        "package_ndc": [
+          "51407-190-30",
+          "51407-190-90",
+          "51407-190-10",
+          "51407-191-30",
+          "51407-191-90",
+          "51407-191-10",
+          "51407-192-30",
+          "51407-192-90",
+          "51407-192-05",
+          "51407-192-10",
+          "51407-193-30",
+          "51407-193-90",
+          "51407-193-05"
+        ],
+        "original_packager_product_ndc": [
+          "43598-742",
+          "43598-744",
+          "43598-743",
+          "43598-745"
+        ],
+        "nui": [
+          "N0000175589",
+          "N0000000121",
+          "N0000008553",
+          "N0000175911"
+        ],
+        "pharm_class_epc": [
+          "HMG-CoA Reductase Inhibitor [EPC]",
+          "Dietary Cholesterol Absorption Inhibitor [EPC]"
+        ],
+        "pharm_class_moa": [
+          "Hydroxymethylglutaryl-CoA Reductase Inhibitors [MoA]"
+        ],
+        "pharm_class_pe": [
+          "Decreased Cholesterol Absorption [PE]"
+        ],
+        "unii": [
+          "AGG2FN16EV",
+          "EOR26LQQ24"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "88866",
+      "recalling_firm": "Golden State Medical Supply Inc.",
+      "address_1": "5187 Camino Ruiz",
+      "address_2": "N/A",
+      "postal_code": "93012-8601",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Distributed to two distributors located in AZ and MO",
+      "recall_number": "D-0227-2022",
+      "product_description": "Ezetimibe and Simvastatin Tablets, 10 mg/40mg, a) 90 Tablets, b) 500 tablets, Rx only, Manufactured by Dr. Reddy's Laboratories LA LLC Shreveport, LA 71106 USA, Packaged by GSMS, Incorporated Camarillo, CA 93012 USA; NDC: a) 51407-192-90, b) 51407-192-05",
+      "product_quantity": "a) 101 b) 145 bottles",
+      "reason_for_recall": "Failed Excipient Specifications and Presence of Foreign Tablets/Capsules; product manufactured using an excipient found to be OOS for conductivity and some Ezetimibe and Simvastatin Tablets, 10 mg/10 mg were found in the bottle",
+      "recall_initiation_date": "20211014",
+      "center_classification_date": "20211109",
+      "termination_date": "20221110",
+      "report_date": "20211117",
+      "code_info": "a) Lot: GS038610, Exp: 01/2023; b) GS038891, Exp: 1/2023",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Camarillo",
+      "state": "CA",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA200909"
+        ],
+        "brand_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "generic_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "manufacturer_name": [
+          "Golden State Medical Supply, Inc."
+        ],
+        "product_ndc": [
+          "51407-190",
+          "51407-191",
+          "51407-192",
+          "51407-193"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "EZETIMIBE",
+          "SIMVASTATIN"
+        ],
+        "rxcui": [
+          "476345",
+          "476349",
+          "476350",
+          "476351"
+        ],
+        "spl_id": [
+          "446023ff-25b4-2c12-e063-6294a90ad27e"
+        ],
+        "spl_set_id": [
+          "88cd0e7b-e8dc-6125-e053-2a95a90aaa27"
+        ],
+        "package_ndc": [
+          "51407-190-30",
+          "51407-190-90",
+          "51407-190-10",
+          "51407-191-30",
+          "51407-191-90",
+          "51407-191-10",
+          "51407-192-30",
+          "51407-192-90",
+          "51407-192-05",
+          "51407-192-10",
+          "51407-193-30",
+          "51407-193-90",
+          "51407-193-05"
+        ],
+        "original_packager_product_ndc": [
+          "43598-742",
+          "43598-744",
+          "43598-743",
+          "43598-745"
+        ],
+        "nui": [
+          "N0000175589",
+          "N0000000121",
+          "N0000008553",
+          "N0000175911"
+        ],
+        "pharm_class_epc": [
+          "HMG-CoA Reductase Inhibitor [EPC]",
+          "Dietary Cholesterol Absorption Inhibitor [EPC]"
+        ],
+        "pharm_class_moa": [
+          "Hydroxymethylglutaryl-CoA Reductase Inhibitors [MoA]"
+        ],
+        "pharm_class_pe": [
+          "Decreased Cholesterol Absorption [PE]"
+        ],
+        "unii": [
+          "AGG2FN16EV",
+          "EOR26LQQ24"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "88866",
+      "recalling_firm": "Golden State Medical Supply Inc.",
+      "address_1": "5187 Camino Ruiz",
+      "address_2": "N/A",
+      "postal_code": "93012-8601",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Distributed to two distributors located in AZ and MO",
+      "recall_number": "D-0228-2022",
+      "product_description": "Ezetimibe and Simvastatin Tablets, 10 mg/80mg, 500 tablet bottles, Rx only, Manufactured by Dr. Reddy's Laboratories LA LLC Shreveport, LA 71106 USA, Packaged by GSMS, Incorporated Camarillo, CA 93012 USA; NDC 51407-193-05",
+      "product_quantity": "49",
+      "reason_for_recall": "Failed Excipient Specification; product manufactured using an excipient found to be OOS for conductivity",
+      "recall_initiation_date": "20211014",
+      "center_classification_date": "20211109",
+      "termination_date": "20221110",
+      "report_date": "20211117",
+      "code_info": "GS040048, Exp: 1/2023",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA200909"
+        ],
+        "brand_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "generic_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "manufacturer_name": [
+          "Dr.Reddys Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-742",
+          "43598-744",
+          "43598-743",
+          "43598-745"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "EZETIMIBE",
+          "SIMVASTATIN"
+        ],
+        "rxcui": [
+          "476345",
+          "476349",
+          "476350",
+          "476351"
+        ],
+        "spl_id": [
+          "697ae8a7-2359-455f-9c21-e266f1c31288"
+        ],
+        "spl_set_id": [
+          "023ca87a-1b04-8c17-dc4f-e2758b0771e2"
+        ],
+        "package_ndc": [
+          "43598-742-30",
+          "43598-742-90",
+          "43598-742-10",
+          "43598-744-30",
+          "43598-744-90",
+          "43598-744-10",
+          "43598-743-30",
+          "43598-743-90",
+          "43598-743-05",
+          "43598-745-30",
+          "43598-745-90",
+          "43598-745-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343598745909",
+          "0343598742908",
+          "0343598743905",
+          "0343598744902"
+        ],
+        "nui": [
+          "N0000175589",
+          "N0000000121",
+          "N0000008553",
+          "N0000175911"
+        ],
+        "pharm_class_epc": [
+          "HMG-CoA Reductase Inhibitor [EPC]",
+          "Dietary Cholesterol Absorption Inhibitor [EPC]"
+        ],
+        "pharm_class_moa": [
+          "Hydroxymethylglutaryl-CoA Reductase Inhibitors [MoA]"
+        ],
+        "pharm_class_pe": [
+          "Decreased Cholesterol Absorption [PE]"
+        ],
+        "unii": [
+          "AGG2FN16EV",
+          "EOR26LQQ24"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "88798",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the US",
+      "recall_number": "D-0084-2022",
+      "product_description": "Dr. Reddy's Ezetimibe and Simvastatin Tablets, 10 mg/40 mg, a) 30 count (NDC 43598-743-30), b) 90 count (NDC 43598-743-90) bottles, Rx Only, Manufactured by: Dr. Reddy's Laboratories LA LLC, Shreveport, LA 71106, USA, Distributed by: Dr. Reddy's Laboratories Inc., Princeton, NJ 08540 USA",
+      "product_quantity": "a) 11,590 bottles b) 3,585 bottles",
+      "reason_for_recall": "Failed Excipient Specifications; product manufactured using an excipient found to be OOS for conductivity",
+      "recall_initiation_date": "20211005",
+      "center_classification_date": "20211029",
+      "termination_date": "20230216",
+      "report_date": "20211110",
+      "code_info": "a) L100158, exp 12/2022 b) L100159, exp 12/2022"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA200909"
+        ],
+        "brand_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "generic_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "manufacturer_name": [
+          "Dr.Reddys Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-742",
+          "43598-744",
+          "43598-743",
+          "43598-745"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "EZETIMIBE",
+          "SIMVASTATIN"
+        ],
+        "rxcui": [
+          "476345",
+          "476349",
+          "476350",
+          "476351"
+        ],
+        "spl_id": [
+          "697ae8a7-2359-455f-9c21-e266f1c31288"
+        ],
+        "spl_set_id": [
+          "023ca87a-1b04-8c17-dc4f-e2758b0771e2"
+        ],
+        "package_ndc": [
+          "43598-742-30",
+          "43598-742-90",
+          "43598-742-10",
+          "43598-744-30",
+          "43598-744-90",
+          "43598-744-10",
+          "43598-743-30",
+          "43598-743-90",
+          "43598-743-05",
+          "43598-745-30",
+          "43598-745-90",
+          "43598-745-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343598745909",
+          "0343598742908",
+          "0343598743905",
+          "0343598744902"
+        ],
+        "nui": [
+          "N0000175589",
+          "N0000000121",
+          "N0000008553",
+          "N0000175911"
+        ],
+        "pharm_class_epc": [
+          "HMG-CoA Reductase Inhibitor [EPC]",
+          "Dietary Cholesterol Absorption Inhibitor [EPC]"
+        ],
+        "pharm_class_moa": [
+          "Hydroxymethylglutaryl-CoA Reductase Inhibitors [MoA]"
+        ],
+        "pharm_class_pe": [
+          "Decreased Cholesterol Absorption [PE]"
+        ],
+        "unii": [
+          "AGG2FN16EV",
+          "EOR26LQQ24"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "88798",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the US",
+      "recall_number": "D-0082-2022",
+      "product_description": "Dr. Reddy's Ezetimibe and Simvastatin Tablets, 10 mg/20 mg, a) 30 count (NDC 43598-744-30), b) 90 count (NDC 43598-744-90) bottles, Rx only, Manufactured by: Dr. Reddy's Laboratories LA LLC, Shreveport, LA 71106, USA, Distributed by: Dr. Reddy's Laboratories Inc., Princeton, NJ 08540 USA",
+      "product_quantity": "a) 30,839 bottles, b) 3,830 bottles",
+      "reason_for_recall": "Failed Excipient Specifications; product manufactured using an excipient found to be OOS for conductivity",
+      "recall_initiation_date": "20211005",
+      "center_classification_date": "20211029",
+      "termination_date": "20230216",
+      "report_date": "20211110",
+      "code_info": "a) L100298 and L100304, exp 01/2023 b) L100235, exp 01/2023"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA200909"
+        ],
+        "brand_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "generic_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "manufacturer_name": [
+          "Dr.Reddys Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-742",
+          "43598-744",
+          "43598-743",
+          "43598-745"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "EZETIMIBE",
+          "SIMVASTATIN"
+        ],
+        "rxcui": [
+          "476345",
+          "476349",
+          "476350",
+          "476351"
+        ],
+        "spl_id": [
+          "697ae8a7-2359-455f-9c21-e266f1c31288"
+        ],
+        "spl_set_id": [
+          "023ca87a-1b04-8c17-dc4f-e2758b0771e2"
+        ],
+        "package_ndc": [
+          "43598-742-30",
+          "43598-742-90",
+          "43598-742-10",
+          "43598-744-30",
+          "43598-744-90",
+          "43598-744-10",
+          "43598-743-30",
+          "43598-743-90",
+          "43598-743-05",
+          "43598-745-30",
+          "43598-745-90",
+          "43598-745-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343598745909",
+          "0343598742908",
+          "0343598743905",
+          "0343598744902"
+        ],
+        "nui": [
+          "N0000175589",
+          "N0000000121",
+          "N0000008553",
+          "N0000175911"
+        ],
+        "pharm_class_epc": [
+          "HMG-CoA Reductase Inhibitor [EPC]",
+          "Dietary Cholesterol Absorption Inhibitor [EPC]"
+        ],
+        "pharm_class_moa": [
+          "Hydroxymethylglutaryl-CoA Reductase Inhibitors [MoA]"
+        ],
+        "pharm_class_pe": [
+          "Decreased Cholesterol Absorption [PE]"
+        ],
+        "unii": [
+          "AGG2FN16EV",
+          "EOR26LQQ24"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "88798",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the US",
+      "recall_number": "D-0083-2022",
+      "product_description": "Dr. Reddy's Ezetimibe and Simvastatin Tablets, 10 mg/80 mg, a) 30 count (NDC 43598-745-30), b) 90 count (NDC 43598-745-90), and c) 500 count (NDC 43598-745-05) bottles, Rx Only, Manufactured by: Dr. Reddy's Laboratories LA LLC, Shreveport, LA 71106, USA, Distributed by: Dr. Reddy's Laboratories Inc., Princeton, NJ 08540 USA",
+      "product_quantity": "a) 3,444 bottles b) 469 bottles c) 142 bottles",
+      "reason_for_recall": "Failed Excipient Specifications; product manufactured using an excipient found to be OOS for conductivity",
+      "recall_initiation_date": "20211005",
+      "center_classification_date": "20211029",
+      "termination_date": "20230216",
+      "report_date": "20211110",
+      "code_info": "a) L100160, exp 01/2023 b) L100249, exp 01/2023 c) L100250, exp 01/2023"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA200909"
+        ],
+        "brand_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "generic_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "manufacturer_name": [
+          "Dr.Reddys Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-742",
+          "43598-744",
+          "43598-743",
+          "43598-745"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "EZETIMIBE",
+          "SIMVASTATIN"
+        ],
+        "rxcui": [
+          "476345",
+          "476349",
+          "476350",
+          "476351"
+        ],
+        "spl_id": [
+          "697ae8a7-2359-455f-9c21-e266f1c31288"
+        ],
+        "spl_set_id": [
+          "023ca87a-1b04-8c17-dc4f-e2758b0771e2"
+        ],
+        "package_ndc": [
+          "43598-742-30",
+          "43598-742-90",
+          "43598-742-10",
+          "43598-744-30",
+          "43598-744-90",
+          "43598-744-10",
+          "43598-743-30",
+          "43598-743-90",
+          "43598-743-05",
+          "43598-745-30",
+          "43598-745-90",
+          "43598-745-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343598745909",
+          "0343598742908",
+          "0343598743905",
+          "0343598744902"
+        ],
+        "nui": [
+          "N0000175589",
+          "N0000000121",
+          "N0000008553",
+          "N0000175911"
+        ],
+        "pharm_class_epc": [
+          "HMG-CoA Reductase Inhibitor [EPC]",
+          "Dietary Cholesterol Absorption Inhibitor [EPC]"
+        ],
+        "pharm_class_moa": [
+          "Hydroxymethylglutaryl-CoA Reductase Inhibitors [MoA]"
+        ],
+        "pharm_class_pe": [
+          "Decreased Cholesterol Absorption [PE]"
+        ],
+        "unii": [
+          "AGG2FN16EV",
+          "EOR26LQQ24"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "88798",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the US",
+      "recall_number": "D-0085-2022",
+      "product_description": "Dr. Reddy's  Ezetimibe and Simvastatin Tablets, 10 mg/40 mg, 500 count bottles, Rx Only, Manufactured by: Dr. Reddy's Laboratories LA LLC, Shreveport, LA 71106, USA, Distributed by: Dr. Reddy's Laboratories Inc., Princeton, NJ 08540 USA NDC 43598-743-05",
+      "product_quantity": "696 bottles",
+      "reason_for_recall": "Failed Excipient Specifications and Presence of Foreign Tablets/Capsules; product manufactured using an excipient found to be OOS for conductivity and some Ezetimibe and Simvastatin Tablets, 10 mg/10 mg were found in the bottle",
+      "recall_initiation_date": "20211005",
+      "center_classification_date": "20211029",
+      "termination_date": "20230216",
+      "report_date": "20211110",
+      "code_info": "L100208, exp 01/2023"
+    },
+    {
+      "status": "Terminated",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA200909"
+        ],
+        "brand_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "generic_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "manufacturer_name": [
+          "Dr.Reddys Laboratories Inc"
+        ],
+        "product_ndc": [
+          "43598-742",
+          "43598-744",
+          "43598-743",
+          "43598-745"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "EZETIMIBE",
+          "SIMVASTATIN"
+        ],
+        "rxcui": [
+          "476345",
+          "476349",
+          "476350",
+          "476351"
+        ],
+        "spl_id": [
+          "697ae8a7-2359-455f-9c21-e266f1c31288"
+        ],
+        "spl_set_id": [
+          "023ca87a-1b04-8c17-dc4f-e2758b0771e2"
+        ],
+        "package_ndc": [
+          "43598-742-30",
+          "43598-742-90",
+          "43598-742-10",
+          "43598-744-30",
+          "43598-744-90",
+          "43598-744-10",
+          "43598-743-30",
+          "43598-743-90",
+          "43598-743-05",
+          "43598-745-30",
+          "43598-745-90",
+          "43598-745-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0343598745909",
+          "0343598742908",
+          "0343598743905",
+          "0343598744902"
+        ],
+        "nui": [
+          "N0000175589",
+          "N0000000121",
+          "N0000008553",
+          "N0000175911"
+        ],
+        "pharm_class_epc": [
+          "HMG-CoA Reductase Inhibitor [EPC]",
+          "Dietary Cholesterol Absorption Inhibitor [EPC]"
+        ],
+        "pharm_class_moa": [
+          "Hydroxymethylglutaryl-CoA Reductase Inhibitors [MoA]"
+        ],
+        "pharm_class_pe": [
+          "Decreased Cholesterol Absorption [PE]"
+        ],
+        "unii": [
+          "AGG2FN16EV",
+          "EOR26LQQ24"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "88798",
+      "recalling_firm": "Dr. Reddy's Laboratories, Inc.",
+      "address_1": "107 College Rd E",
+      "address_2": "N/A",
+      "postal_code": "08540-6623",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the US",
+      "recall_number": "D-0081-2022",
+      "product_description": "Dr. Reddy's Ezetimibe and Simvastatin Tablets, 10 mg/10 mg, a) 90 count (NDC 43598-742-90) and b) 1000 count (NDC 43598-742-10) bottles, Rx only, Manufactured by: Dr. Reddy's Laboratories LA LLC, Shreveport, LA 71106, USA, Distributed by: Dr. Reddy's Laboratories Inc., Princeton, NJ 08540 USA, , packaged in bottles.",
+      "product_quantity": "a) 776 bottles, b) 84 bottles",
+      "reason_for_recall": "Failed Excipient Specifications; product manufactured using an excipient found to be OOS for conductivity",
+      "recall_initiation_date": "20211005",
+      "center_classification_date": "20211029",
+      "termination_date": "20230216",
+      "report_date": "20211110",
+      "code_info": "a) L100256, exp 01/2023; b) L100257, exp 01/2023"
+    },
+    {
+      "status": "Terminated",
+      "city": "Dublin",
+      "state": "OH",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA208699"
+        ],
+        "brand_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "generic_name": [
+          "EZETIMIBE AND SIMVASTATIN"
+        ],
+        "manufacturer_name": [
+          "Glenmark Pharmaceuticals Inc., USA"
+        ],
+        "product_ndc": [
+          "68462-321",
+          "68462-322",
+          "68462-323",
+          "68462-324"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "EZETIMIBE",
+          "SIMVASTATIN"
+        ],
+        "rxcui": [
+          "476345",
+          "476349",
+          "476350",
+          "476351"
+        ],
+        "spl_id": [
+          "9c80244b-f111-425c-bf4c-c8cc91300cce"
+        ],
+        "spl_set_id": [
+          "32d0e130-1211-44ca-be60-5379ffec96fd"
+        ],
+        "package_ndc": [
+          "68462-321-90",
+          "68462-321-10",
+          "68462-321-30",
+          "68462-322-30",
+          "68462-322-90",
+          "68462-322-10",
+          "68462-323-30",
+          "68462-323-90",
+          "68462-323-05",
+          "68462-324-30",
+          "68462-324-90",
+          "68462-324-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0368462321300",
+          "0368462322307",
+          "0368462323304"
+        ],
+        "nui": [
+          "N0000175589",
+          "N0000000121",
+          "N0000008553",
+          "N0000175911"
+        ],
+        "pharm_class_epc": [
+          "HMG-CoA Reductase Inhibitor [EPC]",
+          "Dietary Cholesterol Absorption Inhibitor [EPC]"
+        ],
+        "pharm_class_moa": [
+          "Hydroxymethylglutaryl-CoA Reductase Inhibitors [MoA]"
+        ],
+        "pharm_class_pe": [
+          "Decreased Cholesterol Absorption [PE]"
+        ],
+        "unii": [
+          "AGG2FN16EV",
+          "EOR26LQQ24"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "87512",
+      "recalling_firm": "Cardinal Health Inc.",
+      "address_1": "7000 Cardinal Pl",
+      "address_2": "N/A",
+      "postal_code": "43017-1091",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "FL, GA, SC",
+      "recall_number": "D-0484-2021",
+      "product_description": "EZETIMIBE AND SIMVASTATIN TABLETS 10-10MG 30; NDC/UPC 68462-321-30; RX; TABLETS",
+      "product_quantity": "7 CARTON",
+      "reason_for_recall": "CGMP Deviations: Intermittent exposure to temperature excursion during storage.",
+      "recall_initiation_date": "20210315",
+      "center_classification_date": "20210524",
+      "termination_date": "20240617",
+      "report_date": "20210602",
+      "code_info": "17201603"
+    }
+  ]
+}

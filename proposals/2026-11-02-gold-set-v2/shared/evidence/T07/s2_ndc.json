@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "0597-0152",
+      "generic_name": "Empagliflozin",
+      "labeler_name": "Boehringer Ingelheim Pharmaceuticals, Inc.",
+      "brand_name": "Jardiance",
+      "active_ingredients": [
+        {
+          "name": "EMPAGLIFLOZIN",
+          "strength": "10 mg/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "0597-0152-07",
+          "description": "1 BOTTLE in 1 CARTON (0597-0152-07)  / 7 TABLET, FILM COATED in 1 BOTTLE",
+          "marketing_start_date": "20140801",
+          "sample": true
+        },
+        {
+          "package_ndc": "0597-0152-30",
+          "description": "30 TABLET, FILM COATED in 1 BOTTLE (0597-0152-30)",
+          "marketing_start_date": "20140801",
+          "sample": false
+        },
+        {
+          "package_ndc": "0597-0152-37",
+          "description": "30 BLISTER PACK in 1 CARTON (0597-0152-37)  / 1 TABLET, FILM COATED in 1 BLISTER PACK",
+          "marketing_start_date": "20140801",
+          "sample": false
+        },
+        {
+          "package_ndc": "0597-0152-90",
+          "description": "90 TABLET, FILM COATED in 1 BOTTLE (0597-0152-90)",
+          "marketing_start_date": "20140801",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20271231",
+      "openfda": {
+        "manufacturer_name": [
+          "Boehringer Ingelheim Pharmaceuticals, Inc."
+        ],
+        "rxcui": [
+          "1545658",
+          "1545664",
+          "1545666",
+          "1545668"
+        ],
+        "spl_set_id": [
+          "faf3dd6a-9cd0-39c2-0d2e-232cb3f67565"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "nui": [
+          "N0000187059",
+          "N0000187058"
+        ],
+        "pharm_class_epc": [
+          "Sodium-Glucose Cotransporter 2 Inhibitor [EPC]"
+        ],
+        "pharm_class_moa": [
+          "Sodium-Glucose Transporter 2 Inhibitors [MoA]"
+        ],
+        "unii": [
+          "HDC1R2M35U"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "TABLET, FILM COATED",
+      "spl_id": "09daa78d-f417-436c-a29e-029c015ca6d6",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "ORAL"
+      ],
+      "marketing_start_date": "20140801",
+      "product_id": "0597-0152_09daa78d-f417-436c-a29e-029c015ca6d6",
+      "application_number": "NDA204629",
+      "brand_name_base": "Jardiance",
+      "pharm_class": [
+        "Sodium-Glucose Cotransporter 2 Inhibitor [EPC]",
+        "Sodium-Glucose Transporter 2 Inhibitors [MoA]"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,469 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 5
+    }
+  },
+  "results": [
+    {
+      "status": "Terminated",
+      "city": "Livonia",
+      "state": "MI",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA204203"
+        ],
+        "brand_name": [
+          "QUETIAPINE"
+        ],
+        "generic_name": [
+          "QUETIAPINE"
+        ],
+        "manufacturer_name": [
+          "Major Pharmaceuticals"
+        ],
+        "product_ndc": [
+          "0904-6801",
+          "0904-6802",
+          "0904-6803",
+          "0904-6804",
+          "0904-6805"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "QUETIAPINE FUMARATE"
+        ],
+        "rxcui": [
+          "721791",
+          "721794",
+          "721796",
+          "853201",
+          "895670"
+        ],
+        "spl_id": [
+          "19c4edd2-4fc7-40b5-8204-178a933b7be4"
+        ],
+        "spl_set_id": [
+          "b02324b1-e7f0-4cbc-8778-5f7c4a5d194a"
+        ],
+        "package_ndc": [
+          "0904-6801-61",
+          "0904-6802-61",
+          "0904-6803-61",
+          "0904-6804-61",
+          "0904-6805-61"
+        ],
+        "original_packager_product_ndc": [
+          "68180-612",
+          "68180-613",
+          "68180-614",
+          "68180-615",
+          "68180-616"
+        ],
+        "unii": [
+          "2S3PL1B6UJ"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "85138",
+      "recalling_firm": "The Harvard Drug Group",
+      "address_1": "17177 N Laurel Park Dr Ste 233",
+      "address_2": "",
+      "postal_code": "48152-3951",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1000-2020",
+      "product_description": "Quetiapine Fumarate Extended-Release Tablets, 150 mg, 100 tablets per unit dose carton, Rx only, Manufactured by: Lupin Limited, Pithampur (M.P.) 454775 India; Distributed by: Major Pharmaceuticals, 17177 N. Laurel Park Dr., Suite 233, Livonia, MI 48152 USA.  NDC: 0904-6802-61",
+      "product_quantity": "1 carton",
+      "reason_for_recall": "Labeling; Incorrect or Missing Package Insert: Product was packaged with the package insert for Quetiapine Fumarate Tablets not Quetiapine Fumarate Extended-Release Tablets.",
+      "recall_initiation_date": "20200227",
+      "center_classification_date": "20200311",
+      "termination_date": "20220924",
+      "report_date": "20200318",
+      "code_info": "Lot, expiry: Lot N00036, exp 05/2021",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Livonia",
+      "state": "MI",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA204203"
+        ],
+        "brand_name": [
+          "QUETIAPINE"
+        ],
+        "generic_name": [
+          "QUETIAPINE"
+        ],
+        "manufacturer_name": [
+          "Major Pharmaceuticals"
+        ],
+        "product_ndc": [
+          "0904-6801",
+          "0904-6802",
+          "0904-6803",
+          "0904-6804",
+          "0904-6805"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "QUETIAPINE FUMARATE"
+        ],
+        "rxcui": [
+          "721791",
+          "721794",
+          "721796",
+          "853201",
+          "895670"
+        ],
+        "spl_id": [
+          "19c4edd2-4fc7-40b5-8204-178a933b7be4"
+        ],
+        "spl_set_id": [
+          "b02324b1-e7f0-4cbc-8778-5f7c4a5d194a"
+        ],
+        "package_ndc": [
+          "0904-6801-61",
+          "0904-6802-61",
+          "0904-6803-61",
+          "0904-6804-61",
+          "0904-6805-61"
+        ],
+        "original_packager_product_ndc": [
+          "68180-612",
+          "68180-613",
+          "68180-614",
+          "68180-615",
+          "68180-616"
+        ],
+        "unii": [
+          "2S3PL1B6UJ"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "85138",
+      "recalling_firm": "The Harvard Drug Group",
+      "address_1": "17177 N Laurel Park Dr Ste 233",
+      "address_2": "",
+      "postal_code": "48152-3951",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1002-2020",
+      "product_description": "Quetiapine Fumarate Extended-Release Tablets, 300 mg, 100 tablets per unit dose carton, Rx only, Manufactured by: Lupin Limited, Pithampur (M.P.) 454775 India; Distributed by: Major Pharmaceuticals, 17177 N. Laurel Park Dr., Suite 233, Livonia, MI 48152 USA.  NDC: 0904-6804-61",
+      "product_quantity": "",
+      "reason_for_recall": "Labeling; Incorrect or Missing Package Insert: Product was packaged with the package insert for Quetiapine Fumarate Tablets not Quetiapine Fumarate Extended-Release Tablets.",
+      "recall_initiation_date": "20200227",
+      "center_classification_date": "20200311",
+      "termination_date": "20220924",
+      "report_date": "20200318",
+      "code_info": "Lot, expiry: Lot N00037, exp 05/2021",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Livonia",
+      "state": "MI",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA204203"
+        ],
+        "brand_name": [
+          "QUETIAPINE"
+        ],
+        "generic_name": [
+          "QUETIAPINE"
+        ],
+        "manufacturer_name": [
+          "Major Pharmaceuticals"
+        ],
+        "product_ndc": [
+          "0904-6801",
+          "0904-6802",
+          "0904-6803",
+          "0904-6804",
+          "0904-6805"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "QUETIAPINE FUMARATE"
+        ],
+        "rxcui": [
+          "721791",
+          "721794",
+          "721796",
+          "853201",
+          "895670"
+        ],
+        "spl_id": [
+          "19c4edd2-4fc7-40b5-8204-178a933b7be4"
+        ],
+        "spl_set_id": [
+          "b02324b1-e7f0-4cbc-8778-5f7c4a5d194a"
+        ],
+        "package_ndc": [
+          "0904-6801-61",
+          "0904-6802-61",
+          "0904-6803-61",
+          "0904-6804-61",
+          "0904-6805-61"
+        ],
+        "original_packager_product_ndc": [
+          "68180-612",
+          "68180-613",
+          "68180-614",
+          "68180-615",
+          "68180-616"
+        ],
+        "unii": [
+          "2S3PL1B6UJ"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "85138",
+      "recalling_firm": "The Harvard Drug Group",
+      "address_1": "17177 N Laurel Park Dr Ste 233",
+      "address_2": "",
+      "postal_code": "48152-3951",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1001-2020",
+      "product_description": "Quetiapine Fumarate Extended-Release Tablets, 200 mg, 100 tablets per unit dose carton, Rx only, Manufactured by: Lupin Limited, Pithampur (M.P.) 454775 India; Distributed by: Major Pharmaceuticals, 17177 N. Laurel Park Dr., Suite 233, Livonia, MI 48152 USA.  NDC: 0904-6803-61",
+      "product_quantity": "115 cartons",
+      "reason_for_recall": "Labeling; Incorrect or Missing Package Insert: Product was packaged with the package insert for Quetiapine Fumarate Tablets not Quetiapine Fumarate Extended-Release Tablets.",
+      "recall_initiation_date": "20200227",
+      "center_classification_date": "20200311",
+      "termination_date": "20220924",
+      "report_date": "20200318",
+      "code_info": "Lot, expiry: Lot N00037, exp 05/2021",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Livonia",
+      "state": "MI",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA204203"
+        ],
+        "brand_name": [
+          "QUETIAPINE"
+        ],
+        "generic_name": [
+          "QUETIAPINE"
+        ],
+        "manufacturer_name": [
+          "Major Pharmaceuticals"
+        ],
+        "product_ndc": [
+          "0904-6801",
+          "0904-6802",
+          "0904-6803",
+          "0904-6804",
+          "0904-6805"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "QUETIAPINE FUMARATE"
+        ],
+        "rxcui": [
+          "721791",
+          "721794",
+          "721796",
+          "853201",
+          "895670"
+        ],
+        "spl_id": [
+          "19c4edd2-4fc7-40b5-8204-178a933b7be4"
+        ],
+        "spl_set_id": [
+          "b02324b1-e7f0-4cbc-8778-5f7c4a5d194a"
+        ],
+        "package_ndc": [
+          "0904-6801-61",
+          "0904-6802-61",
+          "0904-6803-61",
+          "0904-6804-61",
+          "0904-6805-61"
+        ],
+        "original_packager_product_ndc": [
+          "68180-612",
+          "68180-613",
+          "68180-614",
+          "68180-615",
+          "68180-616"
+        ],
+        "unii": [
+          "2S3PL1B6UJ"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "85138",
+      "recalling_firm": "The Harvard Drug Group",
+      "address_1": "17177 N Laurel Park Dr Ste 233",
+      "address_2": "",
+      "postal_code": "48152-3951",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-0999-2020",
+      "product_description": "Quetiapine Fumarate Extended-Release Tablets, 50 mg, 100 tablets per unit dose carton, Rx only, Manufactured by: Lupin Limited, Pithampur (M.P.) 454775 India; Distributed by: Major Pharmaceuticals, 17177 N. Laurel Park Dr., Suite 233, Livonia, MI 48152 USA.  NDC: 0904-6801-61",
+      "product_quantity": "330 cartons",
+      "reason_for_recall": "Labeling; Incorrect or Missing Package Insert: Product was packaged with the package insert for Quetiapine Fumarate Tablets not Quetiapine Fumarate Extended-Release Tablets.",
+      "recall_initiation_date": "20200227",
+      "center_classification_date": "20200311",
+      "termination_date": "20220924",
+      "report_date": "20200318",
+      "code_info": "Lot, expiry: Lot N00028, exp 04/2021; Lot N00044, exp 06/2021",
+      "more_code_info": ""
+    },
+    {
+      "status": "Terminated",
+      "city": "Parsippany",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA201504"
+        ],
+        "brand_name": [
+          "QUETIAPINE"
+        ],
+        "generic_name": [
+          "QUETIAPINE"
+        ],
+        "manufacturer_name": [
+          "Ascend Laboratories, LLC"
+        ],
+        "product_ndc": [
+          "67877-242",
+          "67877-249",
+          "67877-250",
+          "67877-245",
+          "67877-246",
+          "67877-247",
+          "67877-248"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "QUETIAPINE FUMARATE"
+        ],
+        "rxcui": [
+          "312743",
+          "312744",
+          "312745",
+          "317174",
+          "389201",
+          "616483",
+          "616487"
+        ],
+        "spl_id": [
+          "1324eb95-6488-498f-b2c9-1c44b1f48062"
+        ],
+        "spl_set_id": [
+          "3112a006-1c61-47f2-84f5-9a7670d09c9b"
+        ],
+        "package_ndc": [
+          "67877-242-01",
+          "67877-242-10",
+          "67877-242-38",
+          "67877-242-33",
+          "67877-249-01",
+          "67877-249-10",
+          "67877-249-38",
+          "67877-249-33",
+          "67877-250-01",
+          "67877-250-38",
+          "67877-250-33",
+          "67877-250-10",
+          "67877-245-01",
+          "67877-245-38",
+          "67877-245-33",
+          "67877-246-01",
+          "67877-246-38",
+          "67877-246-33",
+          "67877-246-10",
+          "67877-247-60",
+          "67877-247-38",
+          "67877-247-33",
+          "67877-247-10",
+          "67877-248-01",
+          "67877-248-38",
+          "67877-248-33",
+          "67877-248-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "2S3PL1B6UJ"
+        ],
+        "upc": [
+          "367877248011"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "81568",
+      "recalling_firm": "Ascend Laboratories LLC",
+      "address_1": "339 Jefferson Rd Ste 101",
+      "address_2": "N/A",
+      "postal_code": "07054-3707",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-0287-2019",
+      "product_description": "Quetiapine Tablets USP 400 mg, 100 tablet bottles, Rx Only,  Manufactured by: Alkem Laboratories Ltd., Mumbai - 400 013, India. Distributed by: Ascend Laboratories, LLC Parsippany, NJ 07054 --- NDC  67877-248-01, UPC code: 3 67877-248-01 1",
+      "product_quantity": "N/A",
+      "reason_for_recall": "Presence of Foreign Substance; metal shard found in tablet",
+      "recall_initiation_date": "20181114",
+      "center_classification_date": "20181128",
+      "termination_date": "20200330",
+      "report_date": "20181205",
+      "code_info": "Lot 7143908, exp Nov 2020"
+    }
+  ]
+}

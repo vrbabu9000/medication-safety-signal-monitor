@@ -1,0 +1,696 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 9
+    }
+  },
+  "results": [
+    {
+      "status": "Ongoing",
+      "city": "Princeton",
+      "state": "NJ",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "NDA021537"
+        ],
+        "brand_name": [
+          "CIPROFLOXACIN AND DEXAMETHASONE"
+        ],
+        "generic_name": [
+          "CIPROFLOXACIN AND DEXAMETHASONE"
+        ],
+        "manufacturer_name": [
+          "Sandoz Inc"
+        ],
+        "product_ndc": [
+          "0781-6186"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "AURICULAR (OTIC)"
+        ],
+        "substance_name": [
+          "CIPROFLOXACIN HYDROCHLORIDE",
+          "DEXAMETHASONE"
+        ],
+        "rxcui": [
+          "403908"
+        ],
+        "spl_id": [
+          "39a8b845-aa32-4c9d-bef8-18cea1ef7bc9"
+        ],
+        "spl_set_id": [
+          "89fef4d2-7078-47f1-96bf-aca50b135a97"
+        ],
+        "package_ndc": [
+          "0781-6186-67"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0307816186677"
+        ],
+        "nui": [
+          "N0000175576",
+          "N0000175450"
+        ],
+        "pharm_class_epc": [
+          "Corticosteroid [EPC]"
+        ],
+        "pharm_class_moa": [
+          "Corticosteroid Hormone Receptor Agonists [MoA]"
+        ],
+        "unii": [
+          "4BA73M5E37",
+          "7S5I7G3JQL"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "97431",
+      "recalling_firm": "Sandoz Inc",
+      "address_1": "100 College Rd W",
+      "address_2": "N/A",
+      "postal_code": "08540-6604",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Product was distributed to one consignee in CA.",
+      "recall_number": "D-0626-2025",
+      "product_description": "Ciprofloxacin 0.3% and Dexamethasone 0.1% Otic Suspension Rx Only, For Use in Ears Only, Manufactured By: Novartis Manufacturing NV, Belgium, Distributed by: Sandoz, Inc., Princeton, NJ,  NDC# 0781-6186-67, Carton NDC# 0781-6186-67",
+      "product_quantity": "1,680 bottles",
+      "reason_for_recall": "Temperature Abuse",
+      "recall_initiation_date": "20250813",
+      "center_classification_date": "20250910",
+      "report_date": "20250917",
+      "code_info": "Lot # VNF35A, Exp.08/31/2026"
+    },
+    {
+      "status": "Ongoing",
+      "city": "Aurangabad, Maharashtra State",
+      "state": "N/A",
+      "country": "India",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA077568"
+        ],
+        "brand_name": [
+          "CIPROFLOXACIN"
+        ],
+        "generic_name": [
+          "CIPROFLOXACIN"
+        ],
+        "manufacturer_name": [
+          "Leading Pharma, LLC"
+        ],
+        "product_ndc": [
+          "69315-308"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "OPHTHALMIC"
+        ],
+        "substance_name": [
+          "CIPROFLOXACIN HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "309307"
+        ],
+        "spl_id": [
+          "8217ec14-6498-4c35-a5a9-511b451b9459"
+        ],
+        "spl_set_id": [
+          "545527e7-05c7-4dbf-ab32-b3fa463d55b0"
+        ],
+        "package_ndc": [
+          "69315-308-02",
+          "69315-308-05",
+          "69315-308-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0369315308028",
+          "0369315308059"
+        ],
+        "unii": [
+          "4BA73M5E37"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "96495",
+      "recalling_firm": "FDC Limited",
+      "address_1": "B-8 MIDC Industrial Area",
+      "address_2": "Waluj District",
+      "postal_code": "N/A",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide in the U.S",
+      "recall_number": "D-0282-2025",
+      "product_description": "Ciprofloxacin Ophthalmic Solution USP, 0.3% as base, package in 5 mL bottles, Rx Only, Distributed by: Leading Pharma LLC, Fairfield, NJ. Manufactured by: FDC Limited, Maharashtra, India, NDC 69315-308-05",
+      "product_quantity": "90960 bottles",
+      "reason_for_recall": "Defective container: Unable to get the solution out of the bottle as the spike of the cap was lodged in the nozzle of the product bottle",
+      "recall_initiation_date": "20250311",
+      "center_classification_date": "20250317",
+      "report_date": "20250326",
+      "code_info": "Lot: 084A067, Exp 12/31/2025"
+    },
+    {
+      "status": "Ongoing",
+      "city": "Aurangabad, Maharashtra State",
+      "state": "",
+      "country": "India",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA077568"
+        ],
+        "brand_name": [
+          "CIPROFLOXACIN"
+        ],
+        "generic_name": [
+          "CIPROFLOXACIN"
+        ],
+        "manufacturer_name": [
+          "Leading Pharma, LLC"
+        ],
+        "product_ndc": [
+          "69315-308"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "OPHTHALMIC"
+        ],
+        "substance_name": [
+          "CIPROFLOXACIN HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "309307"
+        ],
+        "spl_id": [
+          "8217ec14-6498-4c35-a5a9-511b451b9459"
+        ],
+        "spl_set_id": [
+          "545527e7-05c7-4dbf-ab32-b3fa463d55b0"
+        ],
+        "package_ndc": [
+          "69315-308-02",
+          "69315-308-05",
+          "69315-308-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0369315308028",
+          "0369315308059"
+        ],
+        "unii": [
+          "4BA73M5E37"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "96014",
+      "recalling_firm": "FDC Limited",
+      "address_1": "B-8 MIDC Industrial Area",
+      "address_2": "Waluj District",
+      "postal_code": "N/A",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-0182-2025",
+      "product_description": "Ciprofloxacin Ophthalmic Solution USP, 0.3% as base, Sterile, package in 5 mL bottles, Rx Only, Distributed by: Leading Pharma LLC, Fairfield, NJ. Manufactured by: FDC Limited, Maharashtra, India, NDC 69315-308-05",
+      "product_quantity": "136,181 bottles",
+      "reason_for_recall": "Defective container: Unable to get the solution out of the bottle as the spike of the cap was lodged in the nozzle of the product bottle",
+      "recall_initiation_date": "20241216",
+      "center_classification_date": "20250103",
+      "report_date": "20250115",
+      "code_info": "Lot: 083L111, Exp. 11/30/2025; 084A032, Exp. 12/31/2025",
+      "more_code_info": ""
+    },
+    {
+      "status": "Ongoing",
+      "city": "Aurangabad, Maharashtra State",
+      "state": "N/A",
+      "country": "India",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA077568"
+        ],
+        "brand_name": [
+          "CIPROFLOXACIN"
+        ],
+        "generic_name": [
+          "CIPROFLOXACIN"
+        ],
+        "manufacturer_name": [
+          "Leading Pharma, LLC"
+        ],
+        "product_ndc": [
+          "69315-308"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "OPHTHALMIC"
+        ],
+        "substance_name": [
+          "CIPROFLOXACIN HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "309307"
+        ],
+        "spl_id": [
+          "8217ec14-6498-4c35-a5a9-511b451b9459"
+        ],
+        "spl_set_id": [
+          "545527e7-05c7-4dbf-ab32-b3fa463d55b0"
+        ],
+        "package_ndc": [
+          "69315-308-02",
+          "69315-308-05",
+          "69315-308-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0369315308028",
+          "0369315308059"
+        ],
+        "unii": [
+          "4BA73M5E37"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "95027",
+      "recalling_firm": "FDC Limited",
+      "address_1": "B-8 MIDC Industrial Area",
+      "address_2": "Waluj District",
+      "postal_code": "N/A",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "U.S. A. Nationwide",
+      "recall_number": "D-0623-2024",
+      "product_description": "Ciprofloxacin ophthalmic solution USP, 0.3% as base, package in bottles: a) 10 mL (NDC 69315-308-10), b) 2.5 mL (NDC 69315-308-02), Rx Only, Distributed by: Leading Pharma LLC, Fairfield, NJ. Manufactured by: FDC Limited, Maharashtra, India.",
+      "product_quantity": "66,528 bottles",
+      "reason_for_recall": "Defective container: unable to get the solution out of the bottle as the spike of the cap was lodged in the nozzle of the product bottle.",
+      "recall_initiation_date": "20240723",
+      "center_classification_date": "20240801",
+      "report_date": "20240807",
+      "code_info": "Lot#: a) 084C040, Exp 02/28/2026; b) 084A024, Exp12/31/2025."
+    },
+    {
+      "status": "Terminated",
+      "city": "Richmond",
+      "state": "VA",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "NDA019992"
+        ],
+        "brand_name": [
+          "CIPROFLOXACIN HYDROCHLORIDE"
+        ],
+        "generic_name": [
+          "CIPROFLOXACIN HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "Sandoz Inc"
+        ],
+        "product_ndc": [
+          "61314-656"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "OPHTHALMIC"
+        ],
+        "substance_name": [
+          "CIPROFLOXACIN HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "309307"
+        ],
+        "spl_id": [
+          "1c86f423-a99a-4e4d-9502-42799a9d40e6"
+        ],
+        "spl_set_id": [
+          "ab52b14d-345b-47ff-a832-465caddd3801"
+        ],
+        "package_ndc": [
+          "61314-656-25",
+          "61314-656-05",
+          "61314-656-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0361314656100"
+        ],
+        "unii": [
+          "4BA73M5E37"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "89646",
+      "recalling_firm": "Mckesson Medical-Surgical Inc. Corporate Office",
+      "address_1": "9954 Maryland Drive",
+      "address_2": "Deep Run Iii Ste. 4000",
+      "postal_code": "23233",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "USA nationwide.",
+      "recall_number": "D-1044-2022",
+      "product_description": "Ciprofloxacin Ophthalmic Solution 0.3%, 5 mL bottle, Rx only, MFG: Sandoz Pharma, NDC 61314-656-05",
+      "product_quantity": "7 bottles",
+      "reason_for_recall": "cGMP deviations: Temperature abuse",
+      "recall_initiation_date": "20220413",
+      "center_classification_date": "20220609",
+      "termination_date": "20231130",
+      "report_date": "20220615",
+      "code_info": "McKesson Medical-Surgical (MMS) is not able to identify the particular lot number received by a particular consignee for the recalled prescription products. Each letter includes the date it was distributed to customers and the dates that impacted product may have been shipped to the customer.",
+      "more_code_info": ""
+    },
+    {
+      "status": "Completed",
+      "city": "Aquebogue",
+      "state": "NY",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA204613"
+        ],
+        "brand_name": [
+          "CIPROFLOXACIN HCL OPHTHALMIC"
+        ],
+        "generic_name": [
+          "CIPROFLOXACIN HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "Altaire Pharmaceuticals Inc."
+        ],
+        "product_ndc": [
+          "59390-217"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "OPHTHALMIC"
+        ],
+        "substance_name": [
+          "CIPROFLOXACIN HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "309307"
+        ],
+        "spl_id": [
+          "f31149b7-60fc-4cef-8270-5eb8ff2b42bb"
+        ],
+        "spl_set_id": [
+          "41363a06-d6f5-4bc6-b0e9-34e5616ae387"
+        ],
+        "package_ndc": [
+          "59390-217-02",
+          "59390-217-05",
+          "59390-217-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "4776638217054"
+        ],
+        "unii": [
+          "4BA73M5E37"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "83265",
+      "recalling_firm": "Altaire Pharmaceuticals, Inc.",
+      "address_1": "311 W Ln",
+      "address_2": "PO Box 849",
+      "postal_code": "11931-0849",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Two or more of the following: Email, Fax, Letter, Press Release, Telephone, Visit",
+      "distribution_pattern": "U.S.A. Nationwide",
+      "recall_number": "D-0420-2020",
+      "product_description": "Altaire Ciprofloxacin Ophthalmic Solution, USP,  0.3%, 10 mL,  Rx only, Altaire Pharmaceuticals, Inc. Aquebogue, NY 11931 NDC 59390-217-10",
+      "product_quantity": "636 units",
+      "reason_for_recall": "Lack of Assurance of Sterility",
+      "recall_initiation_date": "20190702",
+      "center_classification_date": "20191115",
+      "report_date": "20191127",
+      "code_info": "18164 7/20"
+    },
+    {
+      "status": "Completed",
+      "city": "Aquebogue",
+      "state": "NY",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA204613"
+        ],
+        "brand_name": [
+          "CIPROFLOXACIN HCL OPHTHALMIC"
+        ],
+        "generic_name": [
+          "CIPROFLOXACIN HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "Altaire Pharmaceuticals Inc."
+        ],
+        "product_ndc": [
+          "59390-217"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "OPHTHALMIC"
+        ],
+        "substance_name": [
+          "CIPROFLOXACIN HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "309307"
+        ],
+        "spl_id": [
+          "f31149b7-60fc-4cef-8270-5eb8ff2b42bb"
+        ],
+        "spl_set_id": [
+          "41363a06-d6f5-4bc6-b0e9-34e5616ae387"
+        ],
+        "package_ndc": [
+          "59390-217-02",
+          "59390-217-05",
+          "59390-217-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "4776638217054"
+        ],
+        "unii": [
+          "4BA73M5E37"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "83265",
+      "recalling_firm": "Altaire Pharmaceuticals, Inc.",
+      "address_1": "311 W Ln",
+      "address_2": "PO Box 849",
+      "postal_code": "11931-0849",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Two or more of the following: Email, Fax, Letter, Press Release, Telephone, Visit",
+      "distribution_pattern": "U.S.A. Nationwide",
+      "recall_number": "D-0478-2020",
+      "product_description": "Altaire Ciprofloxacin HCl Ophthalmic Solution, 0.3%, 5 mL, NDC 59390-217-05",
+      "product_quantity": "6024 units",
+      "reason_for_recall": "Lack of Assurance of Sterility",
+      "recall_initiation_date": "20190702",
+      "center_classification_date": "20191115",
+      "report_date": "20191127",
+      "code_info": "Lot #: 18164, Exp 7/20"
+    },
+    {
+      "status": "Completed",
+      "city": "Aquebogue",
+      "state": "NY",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "ANDA204613"
+        ],
+        "brand_name": [
+          "CIPROFLOXACIN HCL OPHTHALMIC"
+        ],
+        "generic_name": [
+          "CIPROFLOXACIN HYDROCHLORIDE"
+        ],
+        "manufacturer_name": [
+          "Altaire Pharmaceuticals Inc."
+        ],
+        "product_ndc": [
+          "59390-217"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "OPHTHALMIC"
+        ],
+        "substance_name": [
+          "CIPROFLOXACIN HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "309307"
+        ],
+        "spl_id": [
+          "f31149b7-60fc-4cef-8270-5eb8ff2b42bb"
+        ],
+        "spl_set_id": [
+          "41363a06-d6f5-4bc6-b0e9-34e5616ae387"
+        ],
+        "package_ndc": [
+          "59390-217-02",
+          "59390-217-05",
+          "59390-217-10"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "4776638217054"
+        ],
+        "unii": [
+          "4BA73M5E37"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "83265",
+      "recalling_firm": "Altaire Pharmaceuticals, Inc.",
+      "address_1": "311 W Ln",
+      "address_2": "PO Box 849",
+      "postal_code": "11931-0849",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Two or more of the following: Email, Fax, Letter, Press Release, Telephone, Visit",
+      "distribution_pattern": "U.S.A. Nationwide",
+      "recall_number": "D-0419-2020",
+      "product_description": "Altaire Ciprofloxacin Ophthalmic Solution, USP, 0.3%, Rx only 2.5 mL, Altaire Pharmaceuticals, Inc Aquebogue, NY 11931 NDC 59390-217-02",
+      "product_quantity": "3060 units",
+      "reason_for_recall": "Lack of Assurance of Sterility",
+      "recall_initiation_date": "20190702",
+      "center_classification_date": "20191115",
+      "report_date": "20191127",
+      "code_info": "18164 7/20"
+    },
+    {
+      "status": "Terminated",
+      "city": "Buffalo Grove",
+      "state": "IL",
+      "country": "United States",
+      "classification": "Class III",
+      "openfda": {
+        "application_number": [
+          "ANDA076639"
+        ],
+        "brand_name": [
+          "CIPROFLOXACIN"
+        ],
+        "generic_name": [
+          "CIPROFLOXACIN"
+        ],
+        "manufacturer_name": [
+          "Rising Pharma Holdings, Inc."
+        ],
+        "product_ndc": [
+          "16571-411",
+          "16571-412",
+          "16571-413"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "CIPROFLOXACIN HYDROCHLORIDE"
+        ],
+        "rxcui": [
+          "197511",
+          "197512",
+          "309309"
+        ],
+        "spl_id": [
+          "f031ce92-a4ed-45b0-8eb3-c3bdb02fbece"
+        ],
+        "spl_set_id": [
+          "ef468722-68cd-440b-afd7-2285029db41f"
+        ],
+        "package_ndc": [
+          "16571-411-10",
+          "16571-412-10",
+          "16571-412-50",
+          "16571-413-05"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "upc": [
+          "0316577411102",
+          "0316571412501"
+        ],
+        "unii": [
+          "4BA73M5E37"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "51880",
+      "recalling_firm": "Pack Pharmaceuticals",
+      "address_1": "1110 W Lake Cook Rd",
+      "address_2": "Ste 301",
+      "postal_code": "60089-1944",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "Nationwide",
+      "recall_number": "D-1422-2012",
+      "product_description": "Ciprofloxacin Tablets, USP, 500 mg, Rx Only, 100 Tablets per Bottle, Manufactured in India by: Unique Pharmaceutical Laboratories (A Division of J.B. Chemicals & Pharmaceuticals Ltd.), Mumbai - 400 030, Distributed by: PACK Pharmaceuticals, LLC, Buffalo Grove, IL 60089, NDC 16571-412-10.",
+      "product_quantity": "4,848 bottles",
+      "reason_for_recall": "Labeling Illegible: Missing Label; The voluntary recall of the aforementioned batch of product is being initiated due to two bottles missing container labels.",
+      "recall_initiation_date": "20120309",
+      "center_classification_date": "20120719",
+      "termination_date": "20120719",
+      "report_date": "20120725",
+      "code_info": "Lot #: : PUB1040, Exp 08/2015",
+      "more_code_info": ""
+    }
+  ]
+}

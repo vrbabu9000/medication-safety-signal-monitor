@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "product_ndc": "59385-021",
+      "generic_name": "buprenorphine hydrochloride",
+      "labeler_name": "BioDelivery Sciences International Inc",
+      "dea_schedule": "CIII",
+      "brand_name": "BELBUCA",
+      "active_ingredients": [
+        {
+          "name": "BUPRENORPHINE HYDROCHLORIDE",
+          "strength": "75 ug/1"
+        }
+      ],
+      "finished": true,
+      "packaging": [
+        {
+          "package_ndc": "59385-021-60",
+          "description": "60 POUCH in 1 CARTON (59385-021-60)  / 1 FILM, SOLUBLE in 1 POUCH (59385-021-01)",
+          "marketing_start_date": "20170901",
+          "sample": false
+        }
+      ],
+      "listing_expiration_date": "20271231",
+      "openfda": {
+        "manufacturer_name": [
+          "BioDelivery Sciences International Inc"
+        ],
+        "rxcui": [
+          "1716057",
+          "1716063",
+          "1716065",
+          "1716067",
+          "1716069",
+          "1716071",
+          "1716073",
+          "1716075",
+          "1716077",
+          "1716079",
+          "1716081",
+          "1716083",
+          "1716086",
+          "1716090"
+        ],
+        "spl_set_id": [
+          "bc2b7a3d-72cf-497c-95b0-ba2b71f63c64"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "56W8MW3EN1"
+        ]
+      },
+      "marketing_category": "NDA",
+      "dosage_form": "FILM, SOLUBLE",
+      "spl_id": "16403e7a-5881-43d2-990c-a7d673971c3d",
+      "product_type": "HUMAN PRESCRIPTION DRUG",
+      "route": [
+        "BUCCAL"
+      ],
+      "marketing_start_date": "20170901",
+      "product_id": "59385-021_16403e7a-5881-43d2-990c-a7d673971c3d",
+      "application_number": "NDA207932",
+      "brand_name_base": "BELBUCA",
+      "pharm_class": [
+        "Partial Opioid Agonist [EPC]",
+        "Partial Opioid Agonists [MoA]"
+      ]
+    }
+  ]
+}

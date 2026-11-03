@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "submissions": [
+        {
+          "submission_type": "ORIG",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "20210621",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "TYPE 3",
+          "submission_class_code_description": "Type 3 - New Dosage Form",
+          "application_docs": [
+            {
+              "id": "67846",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2021/214358s000lbl.pdf",
+              "date": "20210622",
+              "type": "Label"
+            },
+            {
+              "id": "67871",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2021/214358Orig1s000ltr.pdf",
+              "date": "20210623",
+              "type": "Letter"
+            },
+            {
+              "id": "70678",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2022/214358Orig1s000TOC.html",
+              "date": "20220401",
+              "type": "Review"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "9",
+          "submission_status": "AP",
+          "submission_status_date": "20250617",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "82604",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2026/214358s009lbl.pdf",
+              "date": "20251003",
+              "type": "Label"
+            },
+            {
+              "id": "82605",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/214358s009lbl.pdf#page=14",
+              "date": "20250620",
+              "type": "Medication Guide"
+            },
+            {
+              "id": "83643",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2025/022512Orig1s049;214358Orig1s009correctedltr.pdf",
+              "date": "20251003",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "7",
+          "submission_status": "AP",
+          "submission_status_date": "20231114",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "76570",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2023/214358Orig1s007ltr.pdf",
+              "date": "20231115",
+              "type": "Letter"
+            },
+            {
+              "id": "76575",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2023/214358s007lbl.pdf",
+              "date": "20231115",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "20220325",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "70630",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2022/214358Orig1s001ltr.pdf",
+              "date": "20220328",
+              "type": "Letter"
+            },
+            {
+              "id": "70697",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2022/214358Orig1s001lbl.pdf",
+              "date": "20220405",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "2",
+          "submission_status": "AP",
+          "submission_status_date": "20220304",
+          "review_priority": "STANDARD",
+          "submission_class_code": "MANUF (CMC)",
+          "submission_class_code_description": "Manufacturing (CMC)"
+        }
+      ],
+      "application_number": "NDA214358",
+      "sponsor_name": "BOEHRINGER INGELHEIM",
+      "openfda": {
+        "application_number": [
+          "NDA214358"
+        ],
+        "brand_name": [
+          "PRADAXA"
+        ],
+        "generic_name": [
+          "DABIGATRAN ETEXILATE"
+        ],
+        "manufacturer_name": [
+          "Boehringer Ingelheim Pharmaceuticals, Inc."
+        ],
+        "product_ndc": [
+          "0597-0425",
+          "0597-0430",
+          "0597-0435",
+          "0597-0440",
+          "0597-0445",
+          "0597-0450"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "DABIGATRAN ETEXILATE MESYLATE"
+        ],
+        "rxcui": [
+          "2590616",
+          "2590619",
+          "2590620",
+          "2590621",
+          "2590623",
+          "2590625",
+          "2590627",
+          "2590629",
+          "2590631",
+          "2590633",
+          "2590635",
+          "2590637"
+        ],
+        "spl_id": [
+          "56b1a7c2-0afd-40c6-bda5-563e234a9f28"
+        ],
+        "spl_set_id": [
+          "9ac0a64a-8666-45f7-9d4f-40fd894f7e6d"
+        ],
+        "package_ndc": [
+          "0597-0425-78",
+          "0597-0430-18",
+          "0597-0435-96",
+          "0597-0440-53",
+          "0597-0445-87",
+          "0597-0450-16"
+        ],
+        "unii": [
+          "SC7NUW5IIT"
+        ]
+      },
+      "products": [
+        {
+          "product_number": "005",
+          "reference_drug": "Yes",
+          "brand_name": "PRADAXA",
+          "active_ingredients": [
+            {
+              "name": "DABIGATRAN ETEXILATE MESYLATE",
+              "strength": "EQ 110MG BASE/PACKET"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "PELLETS",
+          "route": "ORAL",
+          "marketing_status": "Discontinued"
+        },
+        {
+          "product_number": "003",
+          "reference_drug": "Yes",
+          "brand_name": "PRADAXA",
+          "active_ingredients": [
+            {
+              "name": "DABIGATRAN ETEXILATE MESYLATE",
+              "strength": "EQ 40MG BASE/PACKET"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "PELLETS",
+          "route": "ORAL",
+          "marketing_status": "Discontinued"
+        },
+        {
+          "product_number": "001",
+          "reference_drug": "Yes",
+          "brand_name": "PRADAXA",
+          "active_ingredients": [
+            {
+              "name": "DABIGATRAN ETEXILATE MESYLATE",
+              "strength": "EQ 20MG BASE/PACKET"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "PELLETS",
+          "route": "ORAL",
+          "marketing_status": "Discontinued"
+        },
+        {
+          "product_number": "006",
+          "reference_drug": "Yes",
+          "brand_name": "PRADAXA",
+          "active_ingredients": [
+            {
+              "name": "DABIGATRAN ETEXILATE MESYLATE",
+              "strength": "EQ 150MG BASE/PACKET"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "PELLETS",
+          "route": "ORAL",
+          "marketing_status": "Discontinued"
+        },
+        {
+          "product_number": "004",
+          "reference_drug": "Yes",
+          "brand_name": "PRADAXA",
+          "active_ingredients": [
+            {
+              "name": "DABIGATRAN ETEXILATE MESYLATE",
+              "strength": "EQ 50MG BASE/PACKET"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "PELLETS",
+          "route": "ORAL",
+          "marketing_status": "Discontinued"
+        },
+        {
+          "product_number": "002",
+          "reference_drug": "Yes",
+          "brand_name": "PRADAXA",
+          "active_ingredients": [
+            {
+              "name": "DABIGATRAN ETEXILATE MESYLATE",
+              "strength": "EQ 30MG BASE/PACKET"
+            }
+          ],
+          "reference_standard": "No",
+          "dosage_form": "PELLETS",
+          "route": "ORAL",
+          "marketing_status": "Discontinued"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-21",
+    "results": {
+      "skip": 0,
+      "limit": 100,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "status": "Terminated",
+      "city": "Dublin",
+      "state": "OH",
+      "country": "United States",
+      "classification": "Class II",
+      "openfda": {
+        "application_number": [
+          "NDA022056"
+        ],
+        "brand_name": [
+          "PRILOSEC"
+        ],
+        "generic_name": [
+          "OMEPRAZOLE MAGNESIUM"
+        ],
+        "manufacturer_name": [
+          "Covis Pharma US, Inc"
+        ],
+        "product_ndc": [
+          "70515-610",
+          "70515-625"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "ORAL"
+        ],
+        "substance_name": [
+          "OMEPRAZOLE MAGNESIUM"
+        ],
+        "rxcui": [
+          "797058",
+          "797061",
+          "797063",
+          "797065"
+        ],
+        "spl_id": [
+          "296db0e8-af6e-4053-874d-2a7c8f7aba50"
+        ],
+        "spl_set_id": [
+          "b6761f84-53ac-4745-a8c8-1e5427d7e179"
+        ],
+        "package_ndc": [
+          "70515-625-01",
+          "70515-610-01"
+        ],
+        "is_original_packager": [
+          true
+        ],
+        "unii": [
+          "426QFE7XLK"
+        ]
+      },
+      "product_type": "Drugs",
+      "event_id": "87512",
+      "recalling_firm": "Cardinal Health Inc.",
+      "address_1": "7000 Cardinal Pl",
+      "address_2": "N/A",
+      "postal_code": "43017-1091",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "Letter",
+      "distribution_pattern": "FL, GA, SC",
+      "recall_number": "D-0466-2021",
+      "product_description": "Prilosec (Omeprazole Magnesium) For Delayed-Release Oral Suspension 10 mg Rx only NDC 70515-610-01 Mfd. for: Covis Pharma, Zug, 6300 Switzerland",
+      "product_quantity": "13 packets",
+      "reason_for_recall": "CGMP Deviations: Intermittent exposure to temperature excursion during storage.",
+      "recall_initiation_date": "20210315",
+      "center_classification_date": "20210524",
+      "termination_date": "20240617",
+      "report_date": "20210602",
+      "code_info": "CACU"
+    }
+  ]
+}

@@ -3,15 +3,24 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-11-04 — Step 5 clean baseline built in Foundry: FAERS, labels, recalls; 0 duplicate keys; FAERS counts equal the prototype (Compass v17) |
-| **Where we are** | Phase 2, build-order steps 1–5 done. Raw: 10 datasets. Clean (`Data/clean`): identity 5 datasets + FAERS cases 792,346 · case reactions 2,554,017 · oxycodone drug×reaction 75,006 (3,408 cases after fold) · label versions 263 · label sections 1,160 · recalls 25 (4 active) · recall match 58. Action save not tested yet. [foundry/README](foundry/README.md) · [contracts](docs/04-architecture/dataset-contracts-v1.md) |
-| **Next 3 actions** | 1. (Claude) Step 6: Ontology object types Drug, Product, Label, Recall from the clean datasets · 2. (Claude + you) Step 6: create a test Action and prove the write-back saves · 3. (Claude) Wire `OpenFdaApiKey` before widening (step 9) |
+| **Last session** | 2026-11-04 — Step 6 first Ontology path built; gate passed; Action save proven (Compass v18) |
+| **Where we are** | Phase 2, build-order steps 1–6 done. Raw 10 · clean 12 · curated 9 datasets. Ontology: MSSM Drug 13 · Product 141 · Label 263 · Recall 25 · Triage Decision (Action-only), 5 link types, 1 create-only Action. [foundry/ontology](foundry/ontology/README.md) · [A010](docs/05-approaches/A010-first-ontology-path.md) |
+| **Next 3 actions** | 1. (Claude) Step 7: AIP label extraction on a few OxyContin v44 sections, exact quotes + config saved · 2. (Claude + you) Step 7: hand-check outputs, define the gold set before broad runs · 3. (you) Name the pharmacist reviewer (packet after step 7) |
 | **Waiting on** | Pharmacist reviewer for the reference set · tell boss the demo date is open |
-| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 6 (first Ontology path + Action save)."_ (Cloud: on hold, see [guide](docs/10-delivery/cloud-session-guide.md).) |
+| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 7 (AI label extraction)."_ (Cloud: on hold, see [guide](docs/10-delivery/cloud-session-guide.md).) |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-04 (late night, 2) — Step 6: first Ontology path + Action save (Compass v18)
+- **Built:** [ontology_objects.py](foundry/pipelines/ontology/ontology_objects.py) (in repo `pipelines_clean`), giving 9 curated datasets in `Data/curated`: 4 object tables, 4 join tables and 1 empty Action-owned table. Keys: 0 null, 0 duplicate.
+- **Ontology (built by hand in Ontology Manager; record in [foundry/ontology](foundry/ontology/README.md)):** object types MSSM Drug 13 · Product 141 · Label 263 · Recall 25 · Triage Decision. Link types: Drug↔Product, Product↔Label, Product→Reference Label (foreign key), Recall↔Product, Recall↔Drug. Action "Create MSSM Triage Decision" (create only; ID, reviewer and time set by the system; 4 allowed decisions).
+- **Gate (Object Explorer):** "Oxycodone" is the first hit by title · Oxycodone → 141 products, 25 recalls (no multiplied records) · OxyContin NDA022272 → Reference Label → v44 PLR (T13) ✅.
+- **Action save proven:** submitted 1 test decision (recall D-0338-2026, "monitoring", rationale marked as a test). Forced a rebuild of the backing dataset and reloaded: the decision is still there ✅. Closes the blocker open since step 1.
+- **Learned:** the Ontology Manager form preview is a test run only; apply from Object Explorer → Actions. New object and link types need ~30–60 s of indexing. An unchanged dataset needs Force build.
+- **Decided:** D040 (Ontology path v1, your OK pending). Approach [A010](docs/05-approaches/A010-first-ontology-path.md). Snapshot [Compass v17](docs/00-compass/history/COMPASS-v17.md).
+- **Small follow-ups:** move the Reference Label link type from `Data/curated` to `Ontology/Links`; add object type descriptions; idempotency token on the Action (step 8).
 
 ### 2026-11-04 (late night) — Step 5: clean baseline (Compass v17)
 - **Built** in `Pipelines/pipelines_clean` (polars lightweight), three new mirrors: [clean_faers.py](foundry/pipelines/clean/clean_faers.py), [clean_labels.py](foundry/pipelines/clean/clean_labels.py), [clean_recalls.py](foundry/pipelines/clean/clean_recalls.py).

@@ -1,6 +1,6 @@
 # 🧭 COMPASS — Where we are, where we're going
 
-**Compass v17** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
+**Compass v18** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
 
 ## North Star
 _Purpose (boss, 2026-10-13): an exploratory showcase of design thinking, system design and usefulness. The reasoning trail is half the deliverable._
@@ -13,9 +13,9 @@ and can click any flag to see the exact source behind it.
 | | |
 |---|---|
 | 📍 **Phase** | 2 · Pilot build (started 2026-11-04, built with Claude over Claude in Chrome) |
-| 🔨 **Step** | Steps 1–5 done. Step 5 clean baseline in `Data/clean` (repo `pipelines_clean`): `clean_faers_cases_current` 792,346 cases (D022 upsert + deletes) · `clean_faers_case_reactions` 2,554,017 (PRR background) · `clean_faers_drug_reaction` 75,006 oxycodone rows (4,464 cases → **3,408 after the D023 fold**) · `clean_label_versions` 263 · `clean_label_sections` 1,160 · `clean_recalls_current` 25 (4 active) · `clean_recall_product_match` 58 (all 4 active recalls matched to a package); **0 duplicate keys; FAERS counts = prototype exactly**. Step 4 identity (5 datasets) and raw (10) → [foundry/README](foundry/README.md) |
-| 🎯 **Next milestone** | Step 6: first Ontology objects (Drug, Product, Label, Recall) from the clean datasets + **Action save test** (triage write-back) |
-| ⛔ **Blockers** | Action save untested (needs an object type, step 6) · secret `OpenFdaApiKey` added but not yet used in code · pharmacist reviewer for the reference set not named |
+| 🔨 **Step** | Steps 1–6 done. Step 6 first Ontology path ([A010](docs/05-approaches/A010-first-ontology-path.md), D040): object types MSSM Drug 13 · Product 141 · Label 263 · Recall 25 · Triage Decision; 5 link types (Drug↔Product, Product↔Label, Product→Reference Label, Recall↔Product, Recall↔Drug); **gate passed**: "Oxycodone" found by title, links = source counts (141 products, 25 recalls), OxyContin → label v44; **Action save proven** (decision survives rebuild + reload). Map: [foundry/ontology](foundry/ontology/README.md) |
+| 🎯 **Next milestone** | Step 7: AI label extraction on a few OxyContin sections (AIP), exact quotes saved, `LabeledReaction`; define the gold set before broad runs |
+| ⛔ **Blockers** | ~~Action save~~ ✅ proven 2026-11-04 · secret `OpenFdaApiKey` added but not yet used in code (needed by step 9) · pharmacist reviewer for the reference set not named (needed after step 7) |
 | ⏱️ **Time** | **No fixed demo date** (D031 v4, 2026-11-04): build at our own pace. Old Nov 4 plan is historical → [prior game plan](docs/10-delivery/game-plan-v1-oct27-to-nov4.md). BACKLOG hours not yet re-estimated |
 | ⚠️ **Top risk** | Foundry speed per step (first Code Repository setup took ~15 min incl. lock-file conflict). Second: Action write-back still unproven. |
 
@@ -26,7 +26,7 @@ and can click any flag to see the exact source behind it.
 |---|---|---|
 | 0 · Discover | Brief understood, questions asked, users understood | ✅ Done (2026-10-13) |
 | 1 · Define | Scope, formulary, signal rule, "label mentions" definition decided; sources profiled | 🟡 In progress |
-| 2 · Pilot build | 4+ sources raw→clean→ontology, 1 incremental pipeline, AI extraction, Workshop app with write-back | 🟡 Started 2026-11-04 (access + folders + 1 test dataset) |
+| 2 · Pilot build | 4+ sources raw→clean→ontology, 1 incremental pipeline, AI extraction, Workshop app with write-back | 🟡 Started 2026-11-04 — raw ✅ clean ✅ ontology path + write-back ✅; AI extraction, statistics, Workshop, incremental to go |
 | 3 · Harden + Monitor | Gold set labeled, hallucination rate measured, 1 pipeline optimized; **full monitoring live (pipeline + AI + 3–4 wk drift)** | ⚪ |
 | 4 · Demo + Note | Demo rehearsed, architecture note done | ⚪ |
 | 5 · Scale | Production roadmap written (not built) | ⚪ |
@@ -60,6 +60,7 @@ See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active dec
 ## Change log of the compass
 | Ver | Date | What moved | Decisions changed |
 |---|---|---|---|
+| v18 | 2026-11-04 | Step 6 done: first Ontology path (4 object types + TriageDecision, 5 link types, create-only Action). Gate passed in Object Explorer; Action save proven (survives rebuild). Blocker "Action save untested" closed. Next: step 7 AI label extraction. | New D040 |
 | v17 | 2026-11-04 | Step 5 done: 7 clean baseline datasets (FAERS cases/reactions/drug×reaction, label versions/sections, recalls/recall match), 0 duplicate keys; FAERS numbers equal the Oct 20 prototype (792,346 cases; oxycodone 4,464 → 3,408 after fold). New background dataset `clean_faers_case_reactions` (contract addition). Next: step 6 Ontology + Action save. | none (learnings only) |
 | v16 | 2026-11-04 | Step 4 done: 5 identity datasets in Data/clean, 0 duplicate keys, OxyContin chain resolves in Foundry. Clean layer uses polars lightweight transforms (~1 min builds). VS Code workspace auto-sync lost one uncommitted file once (re-added). | none (learnings only) |
 | v15 | 2026-11-04 | Step 3 done: 5 pulls, 4 sources (openFDA, DailyMed, RxNav, FAERS files), 10 raw datasets, all equal to source totals. Bugs caught by count checks: openFDA OR needs parentheses (11→25); Drugs@FDA needs the ingredient field (47→141). Next: step 4 identity. | none (learnings only) |

@@ -48,6 +48,8 @@
 
 Same objects and keys as [conventions §5](foundry-conventions/conventions-v1.md#5-ontology-contract-grain-and-keys-before-objects): `ontology_drug_drugs` (key `ingredient_rxcui`), `ontology_product_products` (key `product_key`, G2), `ontology_label_labels` (`setid` + `version`), `ontology_recall_recalls` (`recall_number`), `ontology_ae_stats`, `ontology_signal_signals`, plus Action-owned `TriageDecision`. These are built at steps 6–8 and are not changed here.
 
+**As built (step 6, 2026-11-04):** `ontology_drug_drugs`, `ontology_product_products` (plus `reference_label_key`), `ontology_label_labels` (key `label_key` = `setid|v<version>`), `ontology_recall_recalls`, join datasets `ontology_link_{drug_product, product_label, recall_product, recall_drug}` (key `link_key`), and an empty Action-owned `ontology_triage_decisions`. Details: [foundry/ontology](../../foundry/ontology/README.md), D040.
+
 ---
 
 ## 4. Gates: things you need to decide

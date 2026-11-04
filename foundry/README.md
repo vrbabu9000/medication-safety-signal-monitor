@@ -8,8 +8,8 @@ Reference: [Foundry conventions](../docs/04-architecture/foundry-conventions/REA
 |---|---|---|---|
 | `pipelines/raw/` | Ingestion transforms (one file per pull) | A | ✅ 6 files, [README](pipelines/raw/README.md) |
 | `pipelines/clean/` | Cleaning, dedup, **shared drug identity** (resolved once) | A | ✅ identity (step 4) + FAERS, labels, recalls (step 5), [README](pipelines/clean/README.md) |
-| `pipelines/ontology/` | Datasets that back Ontology objects | A | ⚪ |
-| `ontology/` | Object types, links, Actions (definitions + notes) | A, C | ⚪ |
+| `pipelines/ontology/` | Datasets that back Ontology objects | A | ✅ step 6, [ontology_objects.py](pipelines/ontology/ontology_objects.py) (runs in repo `pipelines_clean`) |
+| `ontology/` | Object types, links, Actions (definitions + notes) | A, C | ✅ [README](ontology/README.md) |
 | `ai-function/` | Label-extraction prompts, AIP Logic notes, grounding check | B | ⚪ |
 | `app/` | Workshop layout notes and screenshots | C | ⚪ |
 | `monitoring/` | Data expectations, health checks, drift checks | D | ⚪ |
@@ -82,6 +82,22 @@ Checked in Foundry SQL: **0 duplicate keys in each**; every count equals the loc
 | `clean_recalls_current` | 25 (4 active) | `recall_number` | `ri.foundry.main.dataset.3f5dce51-9412-4892-85b5-436e97f64e15` |
 | `clean_recall_product_match` | 58 (11 high-confidence package matches) | `recall_number` + `match_target` + `match_key` | `ri.foundry.main.dataset.4144615f-e80b-491f-ae26-b4a8d2023f6d` |
 
+### Curated datasets built (`Data/curated`, step 6, 2026-11-04)
+
+They back the Ontology ([foundry/ontology](ontology/README.md)). Built by [ontology_objects.py](pipelines/ontology/ontology_objects.py) in repo `pipelines_clean`. Keys: 0 null, 0 duplicate (checked locally; object counts in Foundry equal the rows).
+
+| Dataset | Rows | Key | RID |
+|---|---|---|---|
+| `ontology_drug_drugs` | 13 | `ingredient_rxcui` | `ri.foundry.main.dataset.5f757c65-2871-4287-a626-36cb105085a6` |
+| `ontology_product_products` | 141 (34 with a reference label) | `product_key` | `ri.foundry.main.dataset.33f79c11-4199-4b6b-9b5e-89c413921bba` |
+| `ontology_label_labels` | 263 | `label_key` | `ri.foundry.main.dataset.42a0f5f1-c37f-4b45-ae0d-a6cdf40410da` |
+| `ontology_recall_recalls` | 25 | `recall_number` | `ri.foundry.main.dataset.c13cd5e7-ec0a-4497-8aa3-9f1663908080` |
+| `ontology_link_drug_product` | 141 | `link_key` | `ri.foundry.main.dataset.8d1377f5-954c-49e7-abf8-8e5a053c27ef` |
+| `ontology_link_product_label` | 265 | `link_key` | `ri.foundry.main.dataset.4db5d0d7-e786-461b-b664-429b4a92d3b7` |
+| `ontology_link_recall_product` | 11 | `link_key` | `ri.foundry.main.dataset.53604667-d496-47cd-9fb1-033ede3b6f84` |
+| `ontology_link_recall_drug` | 26 | `link_key` | `ri.foundry.main.dataset.a49f8d73-8f31-43e2-b1bd-027b769a2d25` |
+| `ontology_triage_decisions` | 0 (Action-owned) | `decision_id` | `ri.foundry.main.dataset.88c5b012-c746-47ea-b6fd-230c18d7da70` |
+
 ## How a change reaches Foundry
 
 1. Edit the mirror file here and test it with [tools/local_run](tools/local_run/README.md).
@@ -97,4 +113,6 @@ Gotchas we hit (full list: [DECISIONS learnings](../docs/06-decisions/DECISIONS.
 - A source shows "Pending approval" after self-approval. Check the Control Panel policy page instead.
 - Importing a source into a repo can show an error yet succeed. Reload before retrying.
 - Use one editor per branch. A new repo opens a VS Code workspace that auto-commits ("Sync remote branch") for ~30 min, which conflicts with Code Repositories edits. Commit right after each paste. If a commit is rejected ("sync first"), reload and check the file still exists before building.
+- An Action's form preview in Ontology Manager is a **test run only**. Apply real edits from Object Explorer → Actions. A new object type needs ~1 min of indexing first.
+- A dataset that hasn't changed won't rebuild: use Build ▾ → **Force**.
 - Raw transforms take **no Foundry dataset inputs**. A transform that uses an external source together with dataset inputs needs source exports enabled, which we keep off. Clean transforms read raw datasets and use **no** external source.

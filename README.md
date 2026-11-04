@@ -11,14 +11,14 @@ Public data only (FDA, NLM). No patient-level data, no PHI.
 > 3. [docs/10-delivery/cloud-session-guide.md](docs/10-delivery/cloud-session-guide.md) → how to work from a cloud session, and the prompt for the next step
 > 4. [CLAUDE.md](CLAUDE.md) → how Claude must respond and the git ground rule (Codex: [AGENTS.md](AGENTS.md))
 
-## Status (2026-11-04 · Compass v17)
+## Status (2026-11-04 · Compass v18)
 
 | | |
 |---|---|
 | **Phase** | 2 · Pilot build (no fixed demo date, D031 v4) |
-| **Done** | Build-order steps 1–4: Foundry access proven (AIP, outbound internet), folder layout, [dataset contracts](docs/04-architecture/dataset-contracts-v1.md) accepted (D039), **raw layer for the oxycodone slice (10 datasets = source totals)**, **shared drug identity (5 clean datasets, 0 duplicate keys, OxyContin chain resolves)**, **clean baseline (FAERS 792k current cases, oxycodone 3,408 after duplicate fold; 1,160 label sections; 25 recalls matched to packages)** |
-| **Next** | Step 6: first Ontology objects (Drug, Product, Label, Recall) + prove the Action save |
-| **Open** | Action write-back not yet proven (step 6) · openFDA key stored in Foundry but not yet used in code · pharmacist reviewer not named |
+| **Done** | Build-order steps 1–4: Foundry access proven (AIP, outbound internet), folder layout, [dataset contracts](docs/04-architecture/dataset-contracts-v1.md) accepted (D039), **raw layer for the oxycodone slice (10 datasets = source totals)**, **shared drug identity (5 clean datasets, 0 duplicate keys, OxyContin chain resolves)**, **clean baseline (FAERS 792k current cases, oxycodone 3,408 after duplicate fold; 1,160 label sections; 25 recalls matched to packages)**, **first Ontology path (Drug, Product, Label, Recall, Triage Decision; 5 link types) with a working triage Action** |
+| **Next** | Step 7: AI label extraction (AIP) on a few OxyContin label sections; `LabeledReaction`; gold set |
+| **Open** | openFDA key stored in Foundry but not yet used in code · pharmacist reviewer not named |
 
 ## The requirement (from the brief)
 
@@ -31,9 +31,9 @@ The user is a hospital pharmacy safety officer. Each morning she asks:
 
 | Part | What | Status |
 |---|---|---|
-| **A. Pipelines** | 4+ public sources (≥1 unstructured) → raw → clean → Ontology (Drug, Label, Adverse Event, Recall, Signal); ≥1 incremental pipeline | 🟡 raw done (4 sources); clean layer done (identity, FAERS, labels, recalls); Ontology next |
+| **A. Pipelines** | 4+ public sources (≥1 unstructured) → raw → clean → Ontology (Drug, Label, Adverse Event, Recall, Signal); ≥1 incremental pipeline | 🟡 raw, clean and first Ontology path done (4 object types + links); Signal / AE stats objects in step 8 |
 | **B. AI function** | LLM extracts labeled reactions from DailyMed label text; compare with FAERS; flag frequent-but-unlabeled reactions | ⚪ AIP access proven only |
-| **C. App** | Workshop: ranked signals, drug drill-down (label passage beside AI extraction), recall alerts, **triage button that writes back** | ⚪ |
+| **C. App** | Workshop: ranked signals, drug drill-down (label passage beside AI extraction), recall alerts, **triage button that writes back** | 🟡 triage Action write-back proven; Workshop not started |
 | **D. Monitoring** | Pipeline health + AI health (gold set, drift) — decided as must-have (D008) | ⚪ |
 
 Deliverables: working Foundry build · one-page architecture note · optimization log (measured before/after) · 20-minute demo. Full detail: [brief summary](docs/00-brief/brief-summary.md) · [requirements deep-dive](docs/01-discovery/requirements-deep-dive.md) · [original brief PDF](docs/00-brief/Soragence-Technical-Build-Brief.pdf).
@@ -47,13 +47,13 @@ Source: [project-build-order-v1.md](docs/04-architecture/foundry-conventions/pro
 
 | # | Step | Status |
 |---|---|---|
-| 1 | Confirm scope; check Foundry, AIP, Action access | ✅ (Action save deferred to 6) |
+| 1 | Confirm scope; check Foundry, AIP, Action access | ✅ (Action save proven in 6) |
 | 2 | Folder layout; dataset grain/key contracts | ✅ [contracts v1](docs/04-architecture/dataset-contracts-v1.md) |
 | 3 | Land raw samples for every source | ✅ oxycodone slice |
 | 4 | Shared drug identity + product/label mapping | ✅ |
 | 5 | Clean baseline: FAERS case versions/deletes, label sections, recall normalisation | ✅ |
-| 6 | First Ontology path: Drug, Product, Label, Recall (+ test Action save) | ⏭️ **next** |
-| 7 | AI label extraction on a few sections; gold set | ⚪ |
+| 6 | First Ontology path: Drug, Product, Label, Recall (+ test Action save) | ✅ [A010](docs/05-approaches/A010-first-ontology-path.md) |
+| 7 | AI label extraction on a few sections; gold set | ⏭️ **next** |
 | 8 | Statistics + one explainable signal in Workshop with a triage Action | ⚪ |
 | 9 | Widen to the full formulary | ⚪ |
 | 10 | Prove an incremental pipeline (vs full rebuild) | ⚪ |
@@ -68,7 +68,8 @@ All under project `/kestrel-01f4ab/Medication Safety Signal Monitor`. Code mirro
 |---|---|---|
 | Sources (`Data/raw`) | `src_openfda_api`, `src_dailymed_api`, `src_rxnav_api`, `src_faers_files` | REST API sources; egress self-approved; exports **off**; code-repo import only (D038) |
 | Code repositories | `Pipelines/pipelines_raw_ingest`, `Pipelines/pipelines_clean` | Python transforms; mirrors: [raw](foundry/pipelines/raw/README.md), [clean](foundry/pipelines/clean/README.md) |
-| Datasets | 10 in `Data/raw`, 12 in `Data/clean` | Counts + RIDs in [foundry/README.md](foundry/README.md#raw-datasets-built) |
+| Datasets | 10 in `Data/raw`, 12 in `Data/clean`, 9 in `Data/curated` |
+| Ontology | 5 `MSSM` object types, 5 link types, 1 Action | Map: [foundry/ontology](foundry/ontology/README.md) | Counts + RIDs in [foundry/README.md](foundry/README.md#raw-datasets-built) |
 | AIP | `AIP/Logic/scratch_aip_access_test` | Access test only |
 
 ## Where things live

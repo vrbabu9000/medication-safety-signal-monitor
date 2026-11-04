@@ -11,12 +11,12 @@ Public data only (FDA, NLM). No patient-level data, no PHI.
 > 3. [docs/10-delivery/cloud-session-guide.md](docs/10-delivery/cloud-session-guide.md) → how to work from a cloud session, and the prompt for the next step
 > 4. [CLAUDE.md](CLAUDE.md) → how Claude must respond and the git ground rule (Codex: [AGENTS.md](AGENTS.md))
 
-## Status (2026-11-04 · Compass v21)
+## Status (2026-11-04 · Compass v22)
 
 | | |
 |---|---|
 | **Phase** | 2 · Pilot build (no fixed demo date, D031 v4) |
-| **Done** | Build-order steps 1–4: Foundry access proven (AIP, outbound internet), folder layout, [dataset contracts](docs/04-architecture/dataset-contracts-v1.md) accepted (D039), **raw layer for the oxycodone slice (10 datasets = source totals)**, **shared drug identity (5 clean datasets, 0 duplicate keys, OxyContin chain resolves)**, **clean baseline (FAERS 792k current cases, oxycodone 3,408 after duplicate fold; 1,160 label sections; 25 recalls matched to packages)**, **first Ontology path (Drug, Product, Label, Recall, Triage Decision; 5 link types) with a working triage Action**, **AI label extraction pilot (Claude Sonnet 5.5: 403 reactions, every quote grounded, recall 0.91 on gold, cached)** |
+| **Done** | Build-order steps 1–4: Foundry access proven (AIP, outbound internet), folder layout, [dataset contracts](docs/04-architecture/dataset-contracts-v1.md) accepted (D039), **raw layer for the oxycodone slice (10 datasets = source totals)**, **shared drug identity (5 clean datasets, 0 duplicate keys, OxyContin chain resolves)**, **clean baseline (FAERS 792k current cases, oxycodone 3,408 after duplicate fold; 1,160 label sections; 25 recalls matched to packages)**, **first Ontology path (Drug, Product, Label, Recall, Triage Decision; 5 link types) with a working triage Action**, **AI label extraction pilot (Claude Sonnet 5.5, prompt p2: 448 reactions, every quote grounded, strict recall 1.00 on short gold sections, cached)** |
 | **Next** | Step 8: FAERS statistics + one explainable oxycodone signal in Workshop with the triage Action |
 | **Open** | openFDA key stored in Foundry but not yet used in code · pharmacist reviewer not named |
 

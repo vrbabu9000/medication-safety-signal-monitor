@@ -3,15 +3,19 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-11-04 — Step 7 AI label extraction pilot built in Foundry; 403 reactions, all grounded; cache proven (Compass v20) |
+| **Last session** | 2026-11-04 — Prompt p2 (atomic terms) live: strict recall 0.31 → 1.00 on short gold sections, 448/448 grounded (Compass v22) |
 | **Where we are** | Phase 2, build-order steps 1–7 done (7 = pilot). AI: Claude Sonnet 5.5 on 2 labels / 9 sections, 403/403 quotes exact, recall 0.91 on gold, 0 calls on unchanged rebuild. Ontology: 6 object types incl. Labeled Reaction. [A011](docs/05-approaches/A011-ai-label-extraction-pilot.md) · [run notes](eval/gold-set/runs/step7-run1-notes.md) |
-| **Next 3 actions** | 1. (Claude) Prompt p2: one reaction per item (split grouped terms), re-run the pilot, re-score · 2. (Claude) Step 8: PRR stats for oxycodone (D006) + first signal compared with LabeledReactions, in Workshop with the triage Action · 3. (you) Name the pharmacist reviewer: 366 long-section items to check |
+| **Next 3 actions** | 1. (Claude) Step 8: PRR stats for oxycodone (D006) from clean FAERS, and compare reactions with LabeledReactions (string rule D037) · 2. (Claude) Step 8: first signal object + Workshop screen with the triage Action · 3. (you) Name the pharmacist reviewer: long sections (~400 items) to check |
 | **Waiting on** | Pharmacist reviewer for the reference set · tell boss the demo date is open |
-| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue: prompt p2, then build-order step 8 (statistics + signal in Workshop)."_ |
+| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 8 (statistics + signal in Workshop)."_ |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-04 (night, 4) — Prompt p2: one reaction per item (Compass v22)
+- **Changed:** `PROMPT_VERSION` p1 → **p2** in [ai_label_extraction.py](foundry/pipelines/ai/ai_label_extraction.py). New rules: split lists, name included sub-conditions, list risk headings, drop severity words, no mechanisms or programmes. The new cache key meant 9 fresh calls, as intended.
+- **Result:** 448 reactions, **448/448 quotes exact**. Strict recall on the 4 short gold sections: **0.31 → 1.00**; extras: "adverse drug effects", "liver transplant". 44.6k prompt / 45.2k completion tokens, 202 s. Scorer now has `--strict` ([check_gold.py](foundry/tools/local_run/check_gold.py)); details in [A011](docs/05-approaches/A011-ai-label-extraction-pilot.md) and the [run notes](eval/gold-set/runs/step7-run1-notes.md).
 
 ### 2026-11-04 (night, 3) — Step 7: AI label extraction pilot (Compass v20)
 - **Built:** [ai_label_extraction.py](foundry/pipelines/ai/ai_label_extraction.py) in `pipelines_clean` (lightweight, incremental). Libraries `palantir_models` + `language-model-service-api` added. Model **Claude Sonnet 5.5** imported into the project (your OK). Outputs `ai_label_section_extractions` (9) and `ontology_labeled_reactions` (403). New object type **MSSM Labeled Reaction**, linked to MSSM Label.

@@ -19,7 +19,7 @@ from transforms.api import Input, Output, incremental, transform
 CLEAN = "/kestrel-01f4ab/Medication Safety Signal Monitor/Data/clean/"
 CURATED = "/kestrel-01f4ab/Medication Safety Signal Monitor/Data/curated/"
 MODEL_ID = "claude-sonnet-5.5"
-PROMPT_VERSION = "p1"
+PROMPT_VERSION = "p2"  # p1 (2026-11-04): grouped terms; p2: one reaction per item
 PARSER_VERSION = "x1"
 # OxyContin v44 (modern PLR label, reference trace T13) and one older-format oxycodone/acetaminophen generic reference label.
 PILOT_SETIDS = ["bfdfe235-d717-4855-a3c8-a13d26dadede", "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7"]
@@ -35,14 +35,25 @@ USER = """Label section: {section_name} ({section_code}) of "{title}".
 List every adverse reaction, adverse event or safety risk that this section says the drug can cause, or that is
 reported with the drug. In a Contraindications section, list the patient conditions instead.
 
+Rules for the list:
+- ONE reaction per item. Split lists and pairs: "addiction, abuse, and misuse" gives three items ("addiction",
+  "abuse", "misuse"); "overdose and death" gives two. Name included sub-conditions too: "gastrointestinal obstruction,
+  including paralytic ileus" gives "gastrointestinal obstruction" and "paralytic ileus".
+- A heading that names a risk (e.g. "Hepatotoxicity") is an item, as well as the reactions under it.
+- Use the plain medical term, without severity or cause words: "life-threatening respiratory depression" gives
+  "respiratory depression"; "fatal overdose from accidental ingestion" gives "overdose" (and "accidental ingestion").
+- Do not list drug interactions, mechanisms or blood levels that are not themselves a harm (e.g. "increased plasma
+  concentration"), or programmes and instructions (e.g. REMS, "swallow whole").
+- Several items may share the same quote.
+
 For each item return:
-- "reaction": the reaction or condition, worded as in the text, as short as possible (e.g. "respiratory depression").
+- "reaction": the term (as short as possible, e.g. "respiratory depression").
 - "quote": an exact copy of the words in the text that state it (max 300 characters). Copy, do not paraphrase.
 - "assertion_type": one of "adverse_reaction" (observed/reported reaction, e.g. trial or postmarketing lists),
   "warning_risk" (a risk the label warns about), "contraindication_condition", "other".
 - "population": who it affects if the text names someone other than the patient (e.g. "neonates"), else null.
 
-List each distinct reaction once. If the section mentions none, return an empty list.
+If the section mentions none, return an empty list.
 Return exactly: {{"reactions": [{{"reaction": "...", "quote": "...", "assertion_type": "...", "population": null}}]}}
 
 SECTION TEXT:

@@ -1,0 +1,37 @@
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34066-1", "normalized_term": "abuse", "grounding": "exact"}
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34066-1", "normalized_term": "accidental ingestion", "grounding": "exact"}
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34066-1", "normalized_term": "addiction", "grounding": "exact"}
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34066-1", "normalized_term": "adverse drug effects", "grounding": "exact"}
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34066-1", "normalized_term": "coma", "grounding": "exact"}
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34066-1", "normalized_term": "death", "grounding": "exact"}
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34066-1", "normalized_term": "misuse", "grounding": "exact"}
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34066-1", "normalized_term": "neonatal opioid withdrawal syndrome", "grounding": "exact"}
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34066-1", "normalized_term": "overdose", "grounding": "exact"}
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34066-1", "normalized_term": "profound sedation", "grounding": "exact"}
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34066-1", "normalized_term": "respiratory depression", "grounding": "exact"}
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34070-3", "normalized_term": "anaphylaxis", "grounding": "exact"}
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34070-3", "normalized_term": "bronchial asthma", "grounding": "exact"}
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34070-3", "normalized_term": "gastrointestinal obstruction", "grounding": "exact"}
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34070-3", "normalized_term": "hypersensitivity", "grounding": "exact"}
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34070-3", "normalized_term": "paralytic ileus", "grounding": "exact"}
+{"label_key": "bfdfe235-d717-4855-a3c8-a13d26dadede|v44", "section_code": "34070-3", "normalized_term": "respiratory depression", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34066-1", "normalized_term": "abuse", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34066-1", "normalized_term": "accidental ingestion", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34066-1", "normalized_term": "acute liver failure", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34066-1", "normalized_term": "addiction", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34066-1", "normalized_term": "coma", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34066-1", "normalized_term": "death", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34066-1", "normalized_term": "hepatotoxicity", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34066-1", "normalized_term": "liver injury", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34066-1", "normalized_term": "liver transplant", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34066-1", "normalized_term": "misuse", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34066-1", "normalized_term": "neonatal opioid withdrawal syndrome", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34066-1", "normalized_term": "overdose", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34066-1", "normalized_term": "respiratory depression", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34066-1", "normalized_term": "sedation", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34070-3", "normalized_term": "anaphylaxis", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34070-3", "normalized_term": "bronchial asthma", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34070-3", "normalized_term": "gastrointestinal obstruction", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34070-3", "normalized_term": "hypersensitivity", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34070-3", "normalized_term": "paralytic ileus", "grounding": "exact"}
+{"label_key": "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19", "section_code": "34070-3", "normalized_term": "respiratory depression", "grounding": "exact"}

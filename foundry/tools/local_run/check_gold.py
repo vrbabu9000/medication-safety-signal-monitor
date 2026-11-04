@@ -1,6 +1,6 @@
 """Score step 7 extraction output against the frozen pilot gold set.
 
-    .venv/bin/python foundry/tools/local_run/check_gold.py path/to/labeled_reactions.jsonl
+    .venv/bin/python foundry/tools/local_run/check_gold.py path/to/labeled_reactions.jsonl [--strict]
 
 Input: rows of ontology_labeled_reactions (label_key, section_code, normalized_term, grounding), e.g. exported from Foundry SQL.
 Recall = gold items found / gold items. "Extra" = extracted terms that match no gold item; they are listed for a human to judge
@@ -14,12 +14,15 @@ from collections import defaultdict
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 gold = json.load(open(os.path.join(ROOT, "eval/gold-set/step7-pilot-gold-v1.json")))
 rows = [json.loads(line) for line in open(sys.argv[1]) if line.strip()]
+STRICT = "--strict" in sys.argv  # strict: the extracted term must equal a variant (atomic terms, as FAERS matching needs)
 by_section = defaultdict(list)
 for r in rows:
     by_section[(r["label_key"], r["section_code"])].append(r)
 
 
 def matches(term, variants):
+    if STRICT:
+        return term in variants
     return any(v == term or v in term or term in v for v in variants)
 
 

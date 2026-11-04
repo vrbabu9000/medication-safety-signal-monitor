@@ -1,6 +1,6 @@
 # 🧭 COMPASS — Where we are, where we're going
 
-**Compass v21** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
+**Compass v22** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
 
 ## North Star
 _Purpose (boss, 2026-10-13): an exploratory showcase of design thinking, system design and usefulness. The reasoning trail is half the deliverable._
@@ -13,8 +13,8 @@ and can click any flag to see the exact source behind it.
 | | |
 |---|---|
 | 📍 **Phase** | 2 · Pilot build (started 2026-11-04, built with Claude over Claude in Chrome) |
-| 🔨 **Step** | Steps 1–7 done (7 = pilot). Step 7 AI label extraction ([A011](docs/05-approaches/A011-ai-label-extraction-pilot.md), D041): Claude Sonnet 5.5 on 2 reference labels / 9 sections → **403 reactions, 403/403 quotes found exactly, 0 failures**; recall **0.91** on frozen gold (4 short sections); rebuild with unchanged text = **0 model calls** (O1); `MSSM Labeled Reaction` object linked to Label. Before: steps 1–6 (raw, clean, Ontology, Action save) → [foundry/README](foundry/README.md) |
-| 🎯 **Next milestone** | Step 8: FAERS statistics (PRR, D006) + one explainable signal for oxycodone in Workshop, with label evidence and the triage Action. Before it: prompt p2 (atomic terms) and the pharmacist packet for the long sections |
+| 🔨 **Step** | Steps 1–7 done (7 = pilot). Step 7 AI label extraction ([A011](docs/05-approaches/A011-ai-label-extraction-pilot.md), D041): Claude Sonnet 5.5 on 2 reference labels / 9 sections → prompt **p2**: **448 reactions, 448/448 quotes exact, 0 failures**; **strict recall 35/35 = 1.00** on frozen gold (4 short sections; p1 was 0.31); rebuild with unchanged text = **0 model calls** (O1); `MSSM Labeled Reaction` object linked to Label. Before: steps 1–6 (raw, clean, Ontology, Action save) → [foundry/README](foundry/README.md) |
+| 🎯 **Next milestone** | Step 8: FAERS statistics (PRR, D006) + one explainable signal for oxycodone in Workshop, with label evidence (LabeledReactions) and the triage Action. In parallel: pharmacist check of the long sections |
 | ⛔ **Blockers** | Pharmacist reviewer not named (now needed: 366 long-section items to check) · secret `OpenFdaApiKey` not yet used (step 9) |
 | ⏱️ **Time** | **No fixed demo date** (D031 v4, 2026-11-04): build at our own pace. Old Nov 4 plan is historical → [prior game plan](docs/10-delivery/game-plan-v1-oct27-to-nov4.md). BACKLOG hours not yet re-estimated |
 | ⚠️ **Top risk** | Foundry speed per step (first Code Repository setup took ~15 min incl. lock-file conflict). Second: Action write-back still unproven. |
@@ -60,6 +60,7 @@ See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active dec
 ## Change log of the compass
 | Ver | Date | What moved | Decisions changed |
 |---|---|---|---|
+| v22 | 2026-11-04 | Prompt p2 live: atomic terms; strict recall 0.31 → 1.00 on short gold sections, 448/448 grounded. Next: step 8. | none (learning only) |
 | v21 | 2026-11-04 | D041 (AI label extraction) accepted by you. No change to step or plan. | D041 → Accepted |
 | v20 | 2026-11-04 | Step 7 pilot done: AI extraction in Foundry (Claude Sonnet 5.5, 9 sections, 403 grounded reactions, recall 0.91 on gold, cache = 0 calls on rebuild). Model imported into the project with your OK. LabeledReaction object added. Next: step 8 signal + Workshop; prompt p2 for atomic terms. | New D041; first optimization-log entry O1 |
 | v19 | 2026-11-04 | D040 (first Ontology path) accepted by you. No change to step or plan. | D040 → Accepted |

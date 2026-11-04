@@ -5,7 +5,7 @@
 | **Date** | 2026-11-04 |
 | **Design-thinking stage** | Prototype → Test |
 | **Area** | AI |
-| **Status** | Kept (pilot, D041 accepted); prompt p2 needed before widening |
+| **Status** | Kept (pilot, D041 accepted); prompt **p2** in use since 2026-11-04 |
 | **Replaces** | none (implements [conventions §8](../04-architecture/foundry-conventions/conventions-v1.md#8-ai-extraction-and-evidence-contract) and D005) |
 
 ## What changed
@@ -33,8 +33,23 @@
 | Cost, run 1 | 41,704 prompt + 29,072 completion tokens; 143 s of model time; job 2 m 43 s |
 | Cache | After the upstream rebuild: **9/9 sections from cache, 0 model calls**, output unchanged |
 
+## Run 2: prompt p2 (one reaction per item)
+p2 adds rules: split lists ("addiction, abuse, and misuse" → 3 items); name included sub-conditions (paralytic ileus); list risk headings (hepatotoxicity); drop severity/cause words; no mechanisms (plasma levels) or programmes (REMS).
+
+| Measure | p1 | p2 |
+|---|---|---|
+| Sections ok / reactions | 9 / 403 | 9 / **448** |
+| Quotes found exactly | 403/403 | **448/448** |
+| Recall, lenient (part-of-term counts) | 32/35 = 0.91 | **35/35 = 1.00** |
+| Recall, **strict** (term = gold variant; what FAERS matching needs) | **11/35 = 0.31** | **35/35 = 1.00** |
+| Extra terms on short sections (judge by hand) | 14 (grouped terms, plasma levels) | 2: "adverse drug effects" (too generic: a false positive), "liver transplant" (an outcome; debatable) |
+| Strict precision / F1 on short sections | — | 35/37 = 0.95 / **≈ 0.97** |
+| Tokens (prompt / completion), model time | 41.7k / 29.1k, 143 s | 44.6k / 45.2k, 202 s (+55% output: more, shorter items) |
+
+Caveat: 4 short sections, 35 gold items, and a gold set written by Claude. This is evidence for the prompt change, not proof of D015's F1 ≥ 0.85 on the full label. The long sections still need the pharmacist check.
+
 ## Verdict
-Keep the design. Two things to fix before widening:
+Keep the design. p2 fixed the first item below (strict recall 0.31 → 1.00); the second is still open:
 - **Atomic terms.** The model groups items, e.g. "addiction, abuse, and misuse" and "overdose and death". Recall above counts a grouped term as finding each part (lenient). FAERS needs one term per item, so prompt **p2** must say "one reaction per item".
 - **Long sections need a hand check.** Warnings/Precautions and Adverse Reactions (366 of 403 items) are not in the gold set yet. They go into the pharmacist packet.
 

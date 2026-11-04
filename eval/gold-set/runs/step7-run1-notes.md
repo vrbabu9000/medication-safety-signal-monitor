@@ -14,3 +14,7 @@ Short-section terms, as read from Foundry SQL: [step7-run1-short-sections.jsonl]
 Caveat: recall is lenient. A grouped term ("addiction, abuse, and misuse") counts for each of its parts. With atomic matching, the Boxed Warning results would be lower until prompt p2 splits lists.
 
 Not yet scored: Warnings and Precautions, Warnings, Precautions and Adverse Reactions (366 of 403 items). They go into the pharmacist packet.
+
+## Run 2 — prompt p2 (2026-11-04)
+
+Terms: [step7-run2-p2-short-sections.jsonl](step7-run2-p2-short-sections.jsonl). `check_gold.py --strict` gives **35/35 = 1.00** (run 1 strict: 11/35 = 0.31). All 4 sections are now at full recall. Extras: "adverse drug effects" (OxyContin boxed warning, too generic) and "liver transplant" (generic boxed warning, an outcome). Whole run: 448 reactions, 448/448 quotes exact.

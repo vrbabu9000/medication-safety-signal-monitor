@@ -3,15 +3,24 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-11-04 — Step 4 shared drug identity built in Foundry; 0 duplicate keys; OxyContin chain resolves (Compass v16) |
-| **Where we are** | Phase 2, build-order steps 1–4 done. Raw: 10 datasets = source totals. Clean (`Data/clean`, repo `pipelines_clean`): ingredients 13 · identity 8 · product map 141 · package map 937 · label map 269. Action save not tested yet. No fixed demo date (D031 v4). [foundry/README](foundry/README.md) · [contracts](docs/04-architecture/dataset-contracts-v1.md) |
-| **Next 3 actions** | 1. (Claude) Step 5: clean FAERS (parse quarter files, case versions/deletes D022, drug×reaction D021/D023) · 2. (Claude) Step 5: `clean_label_sections` + `clean_recalls_current` + recall→package match · 3. (Claude) Wire `OpenFdaApiKey` before widening (step 9) |
+| **Last session** | 2026-11-04 — Step 5 clean baseline built in Foundry: FAERS, labels, recalls; 0 duplicate keys; FAERS counts equal the prototype (Compass v17) |
+| **Where we are** | Phase 2, build-order steps 1–5 done. Raw: 10 datasets. Clean (`Data/clean`): identity 5 datasets + FAERS cases 792,346 · case reactions 2,554,017 · oxycodone drug×reaction 75,006 (3,408 cases after fold) · label versions 263 · label sections 1,160 · recalls 25 (4 active) · recall match 58. Action save not tested yet. [foundry/README](foundry/README.md) · [contracts](docs/04-architecture/dataset-contracts-v1.md) |
+| **Next 3 actions** | 1. (Claude) Step 6: Ontology object types Drug, Product, Label, Recall from the clean datasets · 2. (Claude + you) Step 6: create a test Action and prove the write-back saves · 3. (Claude) Wire `OpenFdaApiKey` before widening (step 9) |
 | **Waiting on** | Pharmacist reviewer for the reference set · tell boss the demo date is open |
-| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 5 (clean baseline)."_ (Cloud: on hold, see [guide](docs/10-delivery/cloud-session-guide.md).) |
+| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 6 (first Ontology path + Action save)."_ (Cloud: on hold, see [guide](docs/10-delivery/cloud-session-guide.md).) |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-04 (late night) — Step 5: clean baseline (Compass v17)
+- **Built** in `Pipelines/pipelines_clean` (polars lightweight), three new mirrors: [clean_faers.py](foundry/pipelines/clean/clean_faers.py), [clean_labels.py](foundry/pipelines/clean/clean_labels.py), [clean_recalls.py](foundry/pipelines/clean/clean_recalls.py).
+- **FAERS (Foundry = local = Oct 20 prototype):** `clean_faers_cases_current` 792,346 cases (D022: upsert by caseid, max caseversion, then each quarter's deletes) · `clean_faers_case_reactions` 2,554,017 case × reaction rows (background for PRR in step 8; **new dataset, contract addition**) · `clean_faers_drug_reaction` 75,006 oxycodone rows. Oxycodone suspect cases 4,464 → **3,408 after the D023 fold** (1,530 cases suppressed in 7 clusters across all drugs). Roles: SS 2,459 · PS 1,511 · PS+SS 451 · I 43 (D021). Built with Foundry's default memory; ~12 s and 2.9 GB peak locally.
+- **Labels:** `clean_label_versions` 263 (all have XML and an effective date; 109 modern PLR format) · `clean_label_sections` 1,160 safety sections (Boxed Warning, Contraindications, Warnings and Precautions, Warnings, Precautions, Adverse Reactions; the D037 list), sub-sections folded into the parent text, 0 empty. OxyContin v44 has its 4 PLR sections.
+- **Recalls:** `clean_recalls_current` 25 (4 Ongoing, 21 Terminated) · `clean_recall_product_match` 58 rows: every recall gets an ingredient row; 11 package matches with high confidence; **all 4 active recalls match a listed package**; 20 NDCs no longer in the NDC directory kept with a reason (G4).
+- **Checks in Foundry SQL:** 0 duplicate keys in all 7 datasets; all counts equal the local run.
+- **Problem met again:** the VS Code auto-sync rejected one commit; "Update" kept the file this time (it had been auto-committed). Committed each file right after pasting.
+- **Tools:** local harness reads files datasets (`filesystem().ls()/open()`); `out/raw_faers_quarter_files` is a link to `prototypes/data/_faers_bulk`. Snapshot [Compass v16](docs/00-compass/history/COMPASS-v16.md).
 
 ### 2026-11-04 (night) — Step 4: shared drug identity (Compass v16)
 - **Built:** new Foundry repo `Pipelines/pipelines_clean` (polars lightweight transforms; no external sources). Mirrors: [clean_drug_identity.py](foundry/pipelines/clean/clean_drug_identity.py), [clean_label_product_map.py](foundry/pipelines/clean/clean_label_product_map.py), [README](foundry/pipelines/clean/README.md).

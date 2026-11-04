@@ -158,8 +158,27 @@ class FakeOutput:
 class FakeInput:
     def __init__(self, path, out_dir):
         self.file = os.path.join(out_dir, os.path.basename(path) + ".jsonl")
-        if not os.path.exists(self.file):
+        self.root = os.path.join(out_dir, os.path.basename(path))
+        if not os.path.exists(self.file) and not os.path.isdir(self.root):
             raise SystemExit(f"Input {path} not found locally: run its raw transform first ({self.file})")
+
+    def filesystem(self):
+        # Files dataset: a folder under --out (e.g. raw_faers_quarter_files/<quarter>/ASCII/DEMO26Q1.txt).
+        root = self.root
+
+        class FileStatus:
+            def __init__(self, path):
+                self.path = path
+
+        class FS:
+            def ls(self, glob=None, regex=None):
+                for d, _, names in os.walk(root, followlinks=True):
+                    for n in names:
+                        yield FileStatus(os.path.relpath(os.path.join(d, n), root))
+
+            def open(self, rel, mode="r"):
+                return open(os.path.join(root, rel), mode)
+        return FS()
 
     def polars(self, lazy=False):
         import polars as pl

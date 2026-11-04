@@ -7,7 +7,7 @@ Reference: [Foundry conventions](../docs/04-architecture/foundry-conventions/REA
 | Folder | Holds | Brief part | Status |
 |---|---|---|---|
 | `pipelines/raw/` | Ingestion transforms (one file per pull) | A | ✅ 6 files, [README](pipelines/raw/README.md) |
-| `pipelines/clean/` | Cleaning, dedup, **shared drug identity** (resolved once) | A | ✅ identity (step 4), [README](pipelines/clean/README.md); step 5 next |
+| `pipelines/clean/` | Cleaning, dedup, **shared drug identity** (resolved once) | A | ✅ identity (step 4) + FAERS, labels, recalls (step 5), [README](pipelines/clean/README.md) |
 | `pipelines/ontology/` | Datasets that back Ontology objects | A | ⚪ |
 | `ontology/` | Object types, links, Actions (definitions + notes) | A, C | ⚪ |
 | `ai-function/` | Label-extraction prompts, AIP Logic notes, grounding check | B | ⚪ |
@@ -67,6 +67,20 @@ Checked in Foundry SQL: **0 duplicate keys in each**; the OxyContin chain (7804 
 | `clean_drug_product_map` | 141 | `ingredient_rxcui` + `product_key` | `ri.foundry.main.dataset.39544a6a-e39a-40ef-8da4-012f7322723b` |
 | `clean_drug_package_map` | 937 | `package_ndc11` | `ri.foundry.main.dataset.7a29f351-8847-47ac-b7e8-22c21d9a6a69` |
 | `clean_label_product_map` | 269 | `setid` + `spl_version` + `application_number` | `ri.foundry.main.dataset.9f37f742-13b7-4f79-bdc3-4d08f0527f40` |
+
+### Clean baseline built (`Data/clean`, step 5, 2026-11-04)
+
+Checked in Foundry SQL: **0 duplicate keys in each**; every count equals the local run, and the FAERS counts equal the Oct 20 prototype.
+
+| Dataset | Rows | Key | RID |
+|---|---|---|---|
+| `clean_faers_cases_current` | 792,346 (1,530 `dup_suppressed`) | `caseid` | `ri.foundry.main.dataset.cf4d8b32-006e-42ab-8a4b-8b02b5a9fe56` |
+| `clean_faers_case_reactions` | 2,554,017 | `caseid` + `pt` | `ri.foundry.main.dataset.e2bbab66-b5ce-4a85-a5b4-e095731da488` |
+| `clean_faers_drug_reaction` | 75,006 (31,018 after fold; oxycodone 4,464 → 3,408 cases) | `caseid` + `ingredient_rxcui` + `pt` | `ri.foundry.main.dataset.ee3b0d07-4751-4402-80db-2c6d9b3d8667` |
+| `clean_label_versions` | 263 | `setid` + `spl_version` | `ri.foundry.main.dataset.e87ac84a-8b77-4c8f-938d-9e0d3559c1ce` |
+| `clean_label_sections` | 1,160 | `setid` + `spl_version` + `section_code` | `ri.foundry.main.dataset.11d2cc25-d4c8-4f24-b5de-0ac4cdfddd22` |
+| `clean_recalls_current` | 25 (4 active) | `recall_number` | `ri.foundry.main.dataset.3f5dce51-9412-4892-85b5-436e97f64e15` |
+| `clean_recall_product_match` | 58 (11 high-confidence package matches) | `recall_number` + `match_target` + `match_key` | `ri.foundry.main.dataset.4144615f-e80b-491f-ae26-b4a8d2023f6d` |
 
 ## How a change reaches Foundry
 

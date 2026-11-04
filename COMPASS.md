@@ -1,6 +1,6 @@
 # 🧭 COMPASS — Where we are, where we're going
 
-**Compass v16** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
+**Compass v17** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
 
 ## North Star
 _Purpose (boss, 2026-10-13): an exploratory showcase of design thinking, system design and usefulness. The reasoning trail is half the deliverable._
@@ -13,8 +13,8 @@ and can click any flag to see the exact source behind it.
 | | |
 |---|---|
 | 📍 **Phase** | 2 · Pilot build (started 2026-11-04, built with Claude over Claude in Chrome) |
-| 🔨 **Step** | Steps 1–4 done. Step 4: shared drug identity in `Data/clean` (repo `Pipelines/pipelines_clean`, polars lightweight): `clean_drug_ingredients` 13 · `clean_drug_identity` 8 strings (all oxycodone forms → 7804) · `clean_drug_product_map` 141 applications · `clean_drug_package_map` 937 packages · `clean_label_product_map` 269 rows; **0 duplicate keys; OxyContin chain 7804 → NDA022272 → 59011-410-10 → label v44 resolves in Foundry** (T13). Raw layer: 10 datasets = source totals → [foundry/README](foundry/README.md) |
-| 🎯 **Next milestone** | Step 5: clean baseline — FAERS case versions/deletes (D022) + drug/reaction rows (D021, D023), label sections, recalls current + recall→package match; then step 6 first Ontology objects + Action save test |
+| 🔨 **Step** | Steps 1–5 done. Step 5 clean baseline in `Data/clean` (repo `pipelines_clean`): `clean_faers_cases_current` 792,346 cases (D022 upsert + deletes) · `clean_faers_case_reactions` 2,554,017 (PRR background) · `clean_faers_drug_reaction` 75,006 oxycodone rows (4,464 cases → **3,408 after the D023 fold**) · `clean_label_versions` 263 · `clean_label_sections` 1,160 · `clean_recalls_current` 25 (4 active) · `clean_recall_product_match` 58 (all 4 active recalls matched to a package); **0 duplicate keys; FAERS counts = prototype exactly**. Step 4 identity (5 datasets) and raw (10) → [foundry/README](foundry/README.md) |
+| 🎯 **Next milestone** | Step 6: first Ontology objects (Drug, Product, Label, Recall) from the clean datasets + **Action save test** (triage write-back) |
 | ⛔ **Blockers** | Action save untested (needs an object type, step 6) · secret `OpenFdaApiKey` added but not yet used in code · pharmacist reviewer for the reference set not named |
 | ⏱️ **Time** | **No fixed demo date** (D031 v4, 2026-11-04): build at our own pace. Old Nov 4 plan is historical → [prior game plan](docs/10-delivery/game-plan-v1-oct27-to-nov4.md). BACKLOG hours not yet re-estimated |
 | ⚠️ **Top risk** | Foundry speed per step (first Code Repository setup took ~15 min incl. lock-file conflict). Second: Action write-back still unproven. |
@@ -60,6 +60,7 @@ See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active dec
 ## Change log of the compass
 | Ver | Date | What moved | Decisions changed |
 |---|---|---|---|
+| v17 | 2026-11-04 | Step 5 done: 7 clean baseline datasets (FAERS cases/reactions/drug×reaction, label versions/sections, recalls/recall match), 0 duplicate keys; FAERS numbers equal the Oct 20 prototype (792,346 cases; oxycodone 4,464 → 3,408 after fold). New background dataset `clean_faers_case_reactions` (contract addition). Next: step 6 Ontology + Action save. | none (learnings only) |
 | v16 | 2026-11-04 | Step 4 done: 5 identity datasets in Data/clean, 0 duplicate keys, OxyContin chain resolves in Foundry. Clean layer uses polars lightweight transforms (~1 min builds). VS Code workspace auto-sync lost one uncommitted file once (re-added). | none (learnings only) |
 | v15 | 2026-11-04 | Step 3 done: 5 pulls, 4 sources (openFDA, DailyMed, RxNav, FAERS files), 10 raw datasets, all equal to source totals. Bugs caught by count checks: openFDA OR needs parentheses (11→25); Drugs@FDA needs the ingredient field (47→141). Next: step 4 identity. | none (learnings only) |
 | v14 | 2026-11-04 | Step 2 done: dataset contracts v1 accepted with all gate defaults (13 ingredients after the slice, product = application number, one reference label, uncertain shown, 3 new egress hosts, D020–D024 accepted). Step 3 starts with oxycodone. | New D039; D020–D024 → Accepted |

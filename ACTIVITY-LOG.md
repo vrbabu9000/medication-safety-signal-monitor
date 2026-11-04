@@ -3,15 +3,25 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-11-04 — First hands-on Foundry build with Claude via Claude in Chrome: access proven, folders, openFDA test dataset (Compass v13) |
-| **Where we are** | Phase 2 started. AIP ✅, openFDA ✅ (1 real recall in `Data/raw`), folders ✅. Action save not tested yet. No fixed demo date (D031 v4). [Access results](docs/10-delivery/2026-11-04-foundry-access-results.md) · [build order](docs/04-architecture/foundry-conventions/project-build-order-v1.md) |
-| **Next 3 actions** | 1. (you) Add the openFDA key as source secret `openfda_api_key` on `src_openfda_api` · 2. (you + Claude) Step 2: write dataset grain/key contracts · 3. (you + Claude) Step 3: real raw pulls for recalls, labels, RxNorm, FAERS (decide DailyMed/RxNorm/FAERS-bulk method) |
-| **Waiting on** | Pharmacist reviewer for the reference set · domain decision review · tell boss the demo date is open |
-| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 2."_ |
+| **Last session** | 2026-11-04 — Foundry access proven, contracts accepted (D039), first real raw dataset: 25 oxycodone recalls (Compass v14) |
+| **Where we are** | Phase 2, build-order step 3. Pulls 1–3 built: `raw_openfda_enforcement` 25 · `raw_openfda_drugsfda` 141 · `raw_openfda_ndc` 313 · `raw_dailymed_spl_index` 263 · `raw_dailymed_spl_xml` 263 · `raw_rxnorm_lookup` 2 · `raw_rxnorm_related` 271 · `raw_faers_quarter_files` 37 files + manifest (all = source totals; OxyContin v44 = T13; oxycodone → 7804). **Step 3 done** (Compass v15). Action save not tested yet. No fixed demo date (D031 v4). [Contracts](docs/04-architecture/dataset-contracts-v1.md) · [access results](docs/10-delivery/2026-11-04-foundry-access-results.md) |
+| **Next 3 actions** | 1. (Claude) Step 4: `clean_drug_identity` + `clean_drug_product_map` + `clean_drug_package_map` · 2. (Claude) Wire `OpenFdaApiKey` into the openFDA transforms · 3. (you) Commit today's work to GitHub |
+| **Waiting on** | Pharmacist reviewer for the reference set · tell boss the demo date is open |
+| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 4 (identity)."_ |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-04 (later) — Contracts accepted, first real raw pull (Compass v14)
+- **Step 2:** [dataset contracts v1](docs/04-architecture/dataset-contracts-v1.md) written and accepted with all gate defaults (D039; D020–D024 now Accepted).
+- **Step 3, pull 1:** `Data/raw/raw_openfda_enforcement` built from [raw_openfda_enforcement.py](foundry/pipelines/raw/raw_openfda_enforcement.py): 25 oxycodone recalls, 15 columns, `result_total` 25, source updated 2026-10-28. Matches the 25 in the [volume profile](docs/07-data-quality/source-profiles/06-data-volume-13-ingredients.md).
+- **Bug caught:** the first build gave 11 rows. Without parentheses, openFDA silently dropped the first OR term. Fixed and rebuilt (learning logged).
+- **Step 3, pull 2:** [raw_openfda_products.py](foundry/pipelines/raw/raw_openfda_products.py) builds `raw_openfda_drugsfda` (141 applications) and `raw_openfda_ndc` (313 products), both equal to openFDA totals. OxyContin NDA022272 (sponsor KNOA PHARMA) present, with 8 linked NDC products. Drugs@FDA needed `products.active_ingredients.name`: `openfda.generic_name` alone finds 47 of 141.
+- **Step 3, pull 3:** new source `src_dailymed_api` (dailymed.nlm.nih.gov, egress approved by you, code import on, exports off). [raw_dailymed_spl.py](foundry/pipelines/raw/raw_dailymed_spl.py) writes `raw_dailymed_spl_index` (263 oxycodone labels = DailyMed total) and `raw_dailymed_spl_xml` (263 XML, 14.2 MB, 0 errors, 0 version mismatches). OxyContin `bfdfe235…` v44, effective 20260624, matches reference trace T13.
+- **Step 3, pull 4:** new source `src_rxnav_api` (rxnav.nlm.nih.gov, egress approved by you, code import on, exports off). [raw_rxnorm.py](foundry/pipelines/raw/raw_rxnorm.py) writes `raw_rxnorm_lookup` (oxycodone → 7804; oxycodone hydrochloride → 82063, the salt, showing why D020 strips salts) and `raw_rxnorm_related` (271 concepts: BN 10, SCD 56, SBD 37, MIN 5 …), RxNorm 02-Nov-2026. Tested locally with stand-ins for the Foundry library before building. Contracts updated with the as-built search methods and the new `raw_rxnorm_related`.
+- **Step 3, pull 5:** new source `src_faers_files` (fis.fda.gov, egress approved by you, code import on, exports off). [raw_faers_quarters.py](foundry/pipelines/raw/raw_faers_quarters.py) stores every file of the 2026 Q1 and Q2 ZIPs unchanged in `raw_faers_quarter_files` (files dataset), plus `raw_faers_quarter_manifest`: Q1 19 files / 352,984,542 bytes, Q2 18 files / 337,724,653 bytes, 0 errors. ZIP sizes and the DRUG26Q1 sha256 equal the copies downloaded on 2026-10-20. Tested locally on those ZIPs first. **Step 3 complete; snapshot [Compass v14](docs/00-compass/history/COMPASS-v14.md) → v15.**
+- **Also:** you added secret `OpenFdaApiKey` (not yet used in code). Secret names must be alphanumeric, so the key secret is `OpenFdaApiKey`. Code is now pasted into the Foundry editor (auto-indent mangled typed code).
 
 ### 2026-11-04 — Foundry access proven, first dataset built (Compass v13)
 - **How:** you logged in to Foundry in Chrome; Claude worked through Claude in Chrome. You did the security clicks yourself (egress approval, code-import toggle).

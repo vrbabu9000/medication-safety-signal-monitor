@@ -25,7 +25,7 @@ One 1-record query, `drug/enforcement.json?search=openfda.generic_name:"oxycodon
 1 row · HTTP 200 · `meta.results.total` = 11 · record D-0338-2026 (oxycodone HCl 5 mg, Class II, Ongoing). Build ~4 min end to end (mostly queue and Spark start). Details: [access results](../10-delivery/2026-11-04-foundry-access-results.md).
 
 ## Verdict
-**Keep** for openFDA endpoints (enforcement, labels, NDC, Drugs@FDA). Before bulk pulls: add the key as source secret `openfda_api_key`, paginate (`skip`/`limit` ≤ 1000), store request params in their own column, and consider a lightweight (non-Spark) transform to cut start-up time. Still open: DailyMed SPL ZIPs, RxNorm and FAERS quarterly ZIPs (separate hosts, so new sources and egress policies).
+**Keep** for openFDA endpoints (enforcement, labels, NDC, Drugs@FDA). Before bulk pulls: add the key as source secret `OpenFdaApiKey`, paginate (`skip`/`limit` ≤ 1000), store request params in their own column, and consider a lightweight (non-Spark) transform to cut start-up time. Still open: DailyMed SPL ZIPs, RxNorm and FAERS quarterly ZIPs (separate hosts, so new sources and egress policies).
 
 ## Diagram (if structure changed)
 No new structure. Fits the raw layer of [18-foundry-medallion-v1](../diagrams/png/18-foundry-medallion-v1.png) ([PDF](../diagrams/pdf/18-foundry-medallion-v1.pdf)).

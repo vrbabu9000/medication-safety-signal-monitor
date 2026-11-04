@@ -1,6 +1,6 @@
 # 🧭 COMPASS — Where we are, where we're going
 
-**Compass v13** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
+**Compass v15** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
 
 ## North Star
 _Purpose (boss, 2026-10-13): an exploratory showcase of design thinking, system design and usefulness. The reasoning trail is half the deliverable._
@@ -13,9 +13,9 @@ and can click any flag to see the exact source behind it.
 | | |
 |---|---|
 | 📍 **Phase** | 2 · Pilot build (started 2026-11-04, built with Claude over Claude in Chrome) |
-| 🔨 **Step** | Build-order steps 1–2 partly done: access proven for AIP (model replied) and openFDA (1 real recall landed in `Data/raw`), 9-folder layout created → [access results](docs/10-delivery/2026-11-04-foundry-access-results.md) · [A009](docs/05-approaches/A009-openfda-rest-ingestion.md) |
-| 🎯 **Next milestone** | Dataset grain/key contracts (step 2), then real raw pulls for the 4 core sources (step 3), then one drug → evidence → saved triage flow |
-| ⛔ **Blockers** | Action save untested (needs an object type, step 6) · openFDA key not yet added as a Foundry secret (needed before bulk pulls) · domain decision gates (including product key) · pharmacist reviewer for the reference set not named |
+| 🔨 **Step** | Steps 1–3 done. Raw layer (oxycodone slice) complete, 10 datasets, every one = its source total: `raw_openfda_enforcement` 25 · `raw_openfda_drugsfda` 141 · `raw_openfda_ndc` 313 · `raw_dailymed_spl_index` 263 + `raw_dailymed_spl_xml` 263 (OxyContin v44 = T13) · `raw_rxnorm_lookup` 2 + `raw_rxnorm_related` 271 (oxycodone → 7804) · `raw_faers_quarter_files` 37 files + manifest (2026 Q1+Q2, sha256 = local copy). Next: step 4 shared identity → [contracts v1](docs/04-architecture/dataset-contracts-v1.md) · [access results](docs/10-delivery/2026-11-04-foundry-access-results.md) |
+| 🎯 **Next milestone** | Step 4: `clean_drug_identity`, `clean_drug_product_map`, `clean_drug_package_map` with uniqueness + match-rate checks; then step 5 clean FAERS/labels/recalls, then one drug → evidence → saved triage flow |
+| ⛔ **Blockers** | Action save untested (needs an object type, step 6) · secret `OpenFdaApiKey` added but not yet used in code · pharmacist reviewer for the reference set not named |
 | ⏱️ **Time** | **No fixed demo date** (D031 v4, 2026-11-04): build at our own pace. Old Nov 4 plan is historical → [prior game plan](docs/10-delivery/game-plan-v1-oct27-to-nov4.md). BACKLOG hours not yet re-estimated |
 | ⚠️ **Top risk** | Foundry speed per step (first Code Repository setup took ~15 min incl. lock-file conflict). Second: Action write-back still unproven. |
 
@@ -60,6 +60,8 @@ See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active dec
 ## Change log of the compass
 | Ver | Date | What moved | Decisions changed |
 |---|---|---|---|
+| v15 | 2026-11-04 | Step 3 done: 5 pulls, 4 sources (openFDA, DailyMed, RxNav, FAERS files), 10 raw datasets, all equal to source totals. Bugs caught by count checks: openFDA OR needs parentheses (11→25); Drugs@FDA needs the ingredient field (47→141). Next: step 4 identity. | none (learnings only) |
+| v14 | 2026-11-04 | Step 2 done: dataset contracts v1 accepted with all gate defaults (13 ingredients after the slice, product = application number, one reference label, uncertain shown, 3 new egress hosts, D020–D024 accepted). Step 3 starts with oxycodone. | New D039; D020–D024 → Accepted |
 | v13 | 2026-11-04 | Phase 2 started. Foundry access proven: AIP Logic test reply in 2.9 s (GPT-5.6 Sol; Claude/Gemini/Grok listed); openFDA REST source + self-approved egress + Python external transform landed 1 real oxycodone recall (HTTP 200). 9-folder layout created. Demo date dropped ("no rush"). Action save still untested. | D031 v3 → v4; new D038; 4 learnings |
 | v12 | 2026-11-02 | Reference set v2 built: 62 drugs screened, 30 traced through 8 sources (240 answers, 3,403 automated checks pass; live re-check: 530/530 sources identical, 30/30 answers unchanged). v1 FAERS failure explained (openFDA key needed for `limit>100`); key now in user's shell. Pharmacist review pending. Foundry status unchanged (unverified). | New D037 (proposed); 4 learnings |
 | v11 | 2026-10-31 | Data Forge episodes 3/6/9 + official docs researched; conventions, two diagrams and 12-step build order published. Build status remains unverified; historical capacity estimate marked stale. | D036 (documentation only) |

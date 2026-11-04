@@ -3,15 +3,22 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-11-02 — Reference set v2: 30 verified cross-source drug traces (A008, D037) |
-| **Where we are** | Reference set v2 built and verified against sources ([findings](proposals/2026-11-02-gold-set-v2/claude/findings.md), [cards](proposals/2026-11-02-gold-set-v2/cards/)); pharmacist review pending. Foundry build completion still unverified. [Start here](docs/04-architecture/foundry-conventions/README.md) |
-| **Next 3 actions** | 1. (you) Name a pharmacist reviewer and send [review-notes](proposals/2026-11-02-gold-set-v2/claude/review-notes.md) · 2. (you) Verify Foundry/AIP/Action access and current build status · 3. (you + Claude) Build one drug → source evidence → saved triage flow, using a formulary trace (T13 OxyContin) as the test case |
-| **Waiting on** | Pharmacist review · hands-on capability evidence · domain decision review · boss OK on Nov 4 demo |
-| **Say this to Codex to restart** | _"Read ACTIVITY-LOG and COMPASS, then follow step 1 of the Foundry build order."_ |
+| **Last session** | 2026-11-04 — First hands-on Foundry build with Claude via Claude in Chrome: access proven, folders, openFDA test dataset (Compass v13) |
+| **Where we are** | Phase 2 started. AIP ✅, openFDA ✅ (1 real recall in `Data/raw`), folders ✅. Action save not tested yet. No fixed demo date (D031 v4). [Access results](docs/10-delivery/2026-11-04-foundry-access-results.md) · [build order](docs/04-architecture/foundry-conventions/project-build-order-v1.md) |
+| **Next 3 actions** | 1. (you) Add the openFDA key as source secret `openfda_api_key` on `src_openfda_api` · 2. (you + Claude) Step 2: write dataset grain/key contracts · 3. (you + Claude) Step 3: real raw pulls for recalls, labels, RxNorm, FAERS (decide DailyMed/RxNorm/FAERS-bulk method) |
+| **Waiting on** | Pharmacist reviewer for the reference set · domain decision review · tell boss the demo date is open |
+| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 2."_ |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-04 — Foundry access proven, first dataset built (Compass v13)
+- **How:** you logged in to Foundry in Chrome; Claude worked through Claude in Chrome. You did the security clicks yourself (egress approval, code-import toggle).
+- **Built in Foundry:** 9 top-level folders + subfolders (`Data/raw|clean|curated|quarantine`, `Ontology/Objects|Links|Actions`, `AIP/Logic|Evals`) · `AIP/Logic/scratch_aip_access_test` · source `Data/raw/src_openfda_api` · Code Repository `Pipelines/pipelines_raw_ingest` · dataset `Data/raw/raw_openfda_enforcement_access_test` (1 row, HTTP 200, recall D-0338-2026, oxycodone 5 mg, Class II, Ongoing).
+- **Proven:** AIP model replies (GPT-5.6 Sol, "AIP OK" in 2.9 s); openFDA reachable from a Foundry build. **Not proven:** Action save.
+- **Decided:** D031 v4 (no fixed demo date; cut list v3 stays default scope) · D038 (openFDA via REST API source + external transform). Approach [A009](docs/05-approaches/A009-openfda-rest-ingestion.md). 4 learnings. Record: [access results](docs/10-delivery/2026-11-04-foundry-access-results.md). Code mirror: [raw_openfda_enforcement_access_test.py](foundry/pipelines/raw/raw_openfda_enforcement_access_test.py). Snapshot: [Compass v12](docs/00-compass/history/COMPASS-v12.md).
+- **Not done:** openFDA key secret; `request_url` loses the query string (store params in their own column next time); BACKLOG hours not re-estimated; Delivery Lead not run.
 
 ### 2026-11-02 — Reference set v2: 30 cross-source drug traces (Compass v12)
 - **Why:** the v1 30-case pack wasn't defensible. Codex wrote the questions and its own answers in one pass, the FAERS oxycodone capture failed, and one SrLC file was really Ozempic.

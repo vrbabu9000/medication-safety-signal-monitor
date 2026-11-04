@@ -12,4 +12,5 @@ Every approach we try gets a file here, including the ones we drop. New file = c
 | [A005](A005-source-selection-and-merge.md) | Source selection (+Drugs@FDA, NDC Directory, SrLC; OnSIDES benchmark) and two-level merge | Define | Pipelines / Ontology | Trying | D003 v1 | 2026-10-20 |
 | [A007](A007-foundry-medallion-conventions.md) | Foundry medallion, ontology conventions and numbered build order | Define → Prototype | Pipelines / Ontology / Process | Kept (reference; deployment validation pending) | — (A006 reserved in non-adopted proposal) | 2026-10-31 |
 | [A008](A008-gold-set-v2-cross-source-traces.md) | Reference set v2: 30 verified cross-source drug traces (8 sources each) | Prototype → Test | AI / Monitoring / Process | Kept (pharmacist review pending) | v1 30-case pack (superseded) | 2026-11-02 |
+| [A009](A009-openfda-rest-ingestion.md) | openFDA ingestion via REST API source + Python external transform | Prototype → Test | Pipelines | Kept (1-record test passed) | — (manual upload = fallback) | 2026-11-04 |
 | A00x | Monitoring design (incl. how to show 3–4 week drift in a 3-week project) | Ideate | Monitoring | _Later_ | — | — |

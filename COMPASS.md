@@ -1,6 +1,6 @@
 # 🧭 COMPASS — Where we are, where we're going
 
-**Compass v12** · _Last updated: 2026-11-02_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
+**Compass v13** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
 
 ## North Star
 _Purpose (boss, 2026-10-13): an exploratory showcase of design thinking, system design and usefulness. The reasoning trail is half the deliverable._
@@ -12,12 +12,12 @@ and can click any flag to see the exact source behind it.
 ## Right now
 | | |
 |---|---|
-| 📍 **Phase** | 1 → 2 · Define → Pilot build preparation; Foundry completion evidence not recorded |
-| 🔨 **Step** | Reference set v2 built and verified against sources (30 drugs × 8 sources, [A008](docs/05-approaches/A008-gold-set-v2-cross-source-traces.md)); pharmacist review pending. Next hands-on step is still Foundry access/capability verification |
-| 🎯 **Next milestone** | Verify Foundry/AIP/Action access, then prove one drug → evidence → saved triage flow. Demo **Wed Nov 4** remains pending boss confirmation; prior freeze target Nov 2, 8 pm |
-| ⛔ **Blockers** | Foundry/AIP/Action access unverified in project records · domain decision gates (including product key) · boss OK on Nov 4 · pharmacist reviewer for the reference set not named. (openFDA key: resolved 2026-11-02) |
-| ⏱️ **Time** | Oct 27 estimate (~54 h available / ~41 h work) is historical, not a current capacity assessment. Oct 29–30 completion is unverified. Re-estimate after access/build status is confirmed → [prior game plan](docs/10-delivery/game-plan-v1-oct27-to-nov4.md) |
-| ⚠️ **Top risk** | Foundry speed (first build). Second: Part B needs AIP. |
+| 📍 **Phase** | 2 · Pilot build (started 2026-11-04, built with Claude over Claude in Chrome) |
+| 🔨 **Step** | Build-order steps 1–2 partly done: access proven for AIP (model replied) and openFDA (1 real recall landed in `Data/raw`), 9-folder layout created → [access results](docs/10-delivery/2026-11-04-foundry-access-results.md) · [A009](docs/05-approaches/A009-openfda-rest-ingestion.md) |
+| 🎯 **Next milestone** | Dataset grain/key contracts (step 2), then real raw pulls for the 4 core sources (step 3), then one drug → evidence → saved triage flow |
+| ⛔ **Blockers** | Action save untested (needs an object type, step 6) · openFDA key not yet added as a Foundry secret (needed before bulk pulls) · domain decision gates (including product key) · pharmacist reviewer for the reference set not named |
+| ⏱️ **Time** | **No fixed demo date** (D031 v4, 2026-11-04): build at our own pace. Old Nov 4 plan is historical → [prior game plan](docs/10-delivery/game-plan-v1-oct27-to-nov4.md). BACKLOG hours not yet re-estimated |
+| ⚠️ **Top risk** | Foundry speed per step (first Code Repository setup took ~15 min incl. lock-file conflict). Second: Action write-back still unproven. |
 
 ## Phase map
 📊 **Diagram:** [00-compass-phase-map-v1.png](docs/diagrams/png/00-compass-phase-map-v1.png) · [PDF](docs/diagrams/pdf/00-compass-phase-map-v1.pdf) · _source: [00-compass-phase-map-v1.mmd](docs/diagrams/src/00-compass-phase-map-v1.mmd)_
@@ -26,12 +26,12 @@ and can click any flag to see the exact source behind it.
 |---|---|---|
 | 0 · Discover | Brief understood, questions asked, users understood | ✅ Done (2026-10-13) |
 | 1 · Define | Scope, formulary, signal rule, "label mentions" definition decided; sources profiled | 🟡 In progress |
-| 2 · Pilot build | 4+ sources raw→clean→ontology, 1 incremental pipeline, AI extraction, Workshop app with write-back | ⚪ |
+| 2 · Pilot build | 4+ sources raw→clean→ontology, 1 incremental pipeline, AI extraction, Workshop app with write-back | 🟡 Started 2026-11-04 (access + folders + 1 test dataset) |
 | 3 · Harden + Monitor | Gold set labeled, hallucination rate measured, 1 pipeline optimized; **full monitoring live (pipeline + AI + 3–4 wk drift)** | ⚪ |
 | 4 · Demo + Note | Demo rehearsed, architecture note done | ⚪ |
 | 5 · Scale | Production roadmap written (not built) | ⚪ |
 
-## Prior schedule to the demo (D031 v3; completion not inferred) — detail in [game plan v1](docs/10-delivery/game-plan-v1-oct27-to-nov4.md)
+## Prior schedule to the demo (D031 v3 — historical; superseded by D031 v4 "no fixed date", 2026-11-04) — detail in [game plan v1](docs/10-delivery/game-plan-v1-oct27-to-nov4.md)
 | Dates | Focus | Exit check |
 |---|---|---|
 | Tue Oct 27–Wed Oct 28 | Claude: kit (transforms, click guides, approve sheet, diagrams) · you: text boss, approve, smoke test | Foundry + AIP proven to work |
@@ -43,12 +43,14 @@ and can click any flag to see the exact source behind it.
 | Tue Nov 3 | Note + 1 rehearsal (B13, B14) · Election Day | Demo-ready |
 | Wed Nov 4 | **Demo** | — |
 
-**Cut list v3: all 6 cuts applied now** (Trials, OnSIDES, gold set 6, 1 rehearsal, no daily FAERS/SrLC backtest, 11 drugs) **+ decision review 5 h → 1 h + gold-set draft check folded into B8.** **Never cut:** identity · Part B accuracy · recalls · write-back · monitoring.
+**Cut list v3 stays the default scope under D031 v4; any cut can be restored later by a new decision.** Original wording: **all 6 cuts applied now** (Trials, OnSIDES, gold set 6, 1 rehearsal, no daily FAERS/SrLC backtest, 11 drugs) **+ decision review 5 h → 1 h + gold-set draft check folded into B8.** **Never cut:** identity · Part B accuracy · recalls · write-back · monitoring.
 
 ## Key decisions so far
-See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active decision IDs: 33 (D001–D031 + D036 + D037; D032–D035 reserved in the non-adopted proposal) · Changes: see "Decision changes" at the top of DECISIONS (5 changed on 2026-10-20). Latest: D037 reference set v2 + dataset "label mentions" rule (proposed) · D036 conventions reference + dependency roadmap (documentation only) · D026 add Drugs@FDA/NDC/SrLC · D027 two-level identity · D028 "since last review" · D029 FAERS quarterly · D030 tracking · D031 freeze + cuts · D016 focus rule · D017 diagrams as PNG/PDF · D018 formulary = 13 RxCUIs · D019 DailyMed = label truth · D014 hybrid class (accepted) · D015 AI F1 ≥ 0.85 target (proposed) · D007 opioids · D008 monitoring must · D009 3–4 wk drift · D010 Developer Tier · D011 showcase purpose · D012 profile sources first.
+See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active decision IDs: 34 (D001–D031 + D036–D038; D032–D035 reserved in the non-adopted proposal) · Changes: see "Decision changes" at the top of DECISIONS (5 changed on 2026-10-20). Latest: D038 openFDA via REST API source + Python external transform (kept) · D031 v4 no fixed demo date · D037 reference set v2 + dataset "label mentions" rule (proposed) · D036 conventions reference + dependency roadmap (documentation only) · D026 add Drugs@FDA/NDC/SrLC · D027 two-level identity · D028 "since last review" · D029 FAERS quarterly · D030 tracking · D031 freeze + cuts · D016 focus rule · D017 diagrams as PNG/PDF · D018 formulary = 13 RxCUIs · D019 DailyMed = label truth · D014 hybrid class (accepted) · D015 AI F1 ≥ 0.85 target (proposed) · D007 opioids · D008 monitoring must · D009 3–4 wk drift · D010 Developer Tier · D011 showcase purpose · D012 profile sources first.
 
 ## Active approach
+[A009 — openFDA ingestion via REST API source + Python external transform](docs/05-approaches/A009-openfda-rest-ingestion.md) (kept; 1-record access test passed 2026-11-04) · [access results](docs/10-delivery/2026-11-04-foundry-access-results.md).
+
 [A008 — Reference set v2: 30 verified cross-source drug traces](docs/05-approaches/A008-gold-set-v2-cross-source-traces.md) (kept; pharmacist review pending) · [case cards](proposals/2026-11-02-gold-set-v2/cards/) · v1 30-case pack superseded.
 
 [A007 — Foundry medallion + ontology conventions](docs/05-approaches/A007-foundry-medallion-conventions.md) (kept as reference; runtime validation pending) · **[Start here](docs/04-architecture/foundry-conventions/README.md)** · [12-step build order](docs/04-architecture/foundry-conventions/project-build-order-v1.md). The six-day draft in `proposals/` remains non-adopted.
@@ -58,6 +60,7 @@ See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active dec
 ## Change log of the compass
 | Ver | Date | What moved | Decisions changed |
 |---|---|---|---|
+| v13 | 2026-11-04 | Phase 2 started. Foundry access proven: AIP Logic test reply in 2.9 s (GPT-5.6 Sol; Claude/Gemini/Grok listed); openFDA REST source + self-approved egress + Python external transform landed 1 real oxycodone recall (HTTP 200). 9-folder layout created. Demo date dropped ("no rush"). Action save still untested. | D031 v3 → v4; new D038; 4 learnings |
 | v12 | 2026-11-02 | Reference set v2 built: 62 drugs screened, 30 traced through 8 sources (240 answers, 3,403 automated checks pass; live re-check: 530/530 sources identical, 30/30 answers unchanged). v1 FAERS failure explained (openFDA key needed for `limit>100`); key now in user's shell. Pharmacist review pending. Foundry status unchanged (unverified). | New D037 (proposed); 4 learnings |
 | v11 | 2026-10-31 | Data Forge episodes 3/6/9 + official docs researched; conventions, two diagrams and 12-step build order published. Build status remains unverified; historical capacity estimate marked stale. | D036 (documentation only) |
 | v10 | 2026-10-27 | No work Oct 21–27. Demo moved to Wed Nov 4 (asked). All cuts applied; build Oct 29–Nov 2; Claude pre-builds the kit Oct 27–28. Load 76%. | D031 v2 → v3 |

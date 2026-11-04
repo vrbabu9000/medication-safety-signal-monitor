@@ -1,0 +1,13 @@
+flowchart LR
+    S[Public sources] --> B[Bronze / raw\nOriginal files + retrieval metadata]
+    B --> C[Silver / clean\nTyped sources + shared identity + case state]
+    C --> G[Gold / curated\nObject backing datasets + evidence + aggregates]
+    L[AIP label extraction\nCached + grounded + evaluated] --> G
+    C --> L
+    G --> O[Ontology\nObjects + links + Actions]
+    O --> W[Workshop\nSignals / recalls / changes]
+    W --> T[Human triage\nTriageDecision Action]
+    T --> O
+    H[Health checks at each boundary] -.-> B
+    H -.-> C
+    H -.-> G

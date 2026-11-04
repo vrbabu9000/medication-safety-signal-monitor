@@ -5,6 +5,8 @@ which drugs show adverse events **not on the label**, which have **active recall
 
 > Coming back after a break? → [ACTIVITY-LOG.md](ACTIVITY-LOG.md) ("Pick up here") · [COMPASS.md](COMPASS.md) (where we're going)
 
+**Learning/build reference:** [Foundry conventions](docs/04-architecture/foundry-conventions/README.md) — medallion layers, ontology naming, and a numbered project roadmap.
+
 ## Where things live
 
 | Folder | What's in it | Open this first |

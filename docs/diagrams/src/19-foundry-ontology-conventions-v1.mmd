@@ -1,0 +1,11 @@
+flowchart LR
+    D[Drug: ingredient] <-->|products / ingredients| P[Product: validated granularity]
+    P -->|packages| K[Package: optional object]
+    P <-->|labels / products| L[Label: set + version]
+    L -->|labeledReactions| LR[LabeledReaction: grounded assertion]
+    D -->|adverseEventStats| A[AdverseEventStat: aggregate]
+    D -->|signals| S[Signal: current candidate]
+    S -->|reviewedLabels| L
+    S -->|supportingStats| A
+    R[Recall: source record] <-->|validated matches| P
+    S -->|triageDecisions| T[TriageDecision: human decision]

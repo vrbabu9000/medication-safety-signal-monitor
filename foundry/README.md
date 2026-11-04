@@ -14,3 +14,6 @@ Code and configs that will live in Palantir Foundry. Empty until access is set u
 
 Naming: `<layer>_<source>_<thing>`, e.g. `clean_faers_cases_dedup`.
 Local experiments before Foundry access go in `/prototypes`, not here.
+
+
+Reference: [Foundry conventions](../docs/04-architecture/foundry-conventions/README.md) and [project build order](../docs/04-architecture/foundry-conventions/project-build-order-v1.md). Existing paths stay in place: `raw` = bronze, `clean` = silver (including shared identity), `pipelines/ontology` = curated gold dataset logic. Ontology object/link/Action definitions live separately in `ontology/`.

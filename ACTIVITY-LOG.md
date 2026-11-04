@@ -3,15 +3,23 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-11-04 — Step 6 first Ontology path built; gate passed; Action save proven (Compass v18) |
-| **Where we are** | Phase 2, build-order steps 1–6 done. Raw 10 · clean 12 · curated 9 datasets. Ontology: MSSM Drug 13 · Product 141 · Label 263 · Recall 25 · Triage Decision (Action-only), 5 link types, 1 create-only Action. [foundry/ontology](foundry/ontology/README.md) · [A010](docs/05-approaches/A010-first-ontology-path.md) |
-| **Next 3 actions** | 1. (Claude) Step 7: AIP label extraction on a few OxyContin v44 sections, exact quotes + config saved · 2. (Claude + you) Step 7: hand-check outputs, define the gold set before broad runs · 3. (you) Name the pharmacist reviewer (packet after step 7) |
+| **Last session** | 2026-11-04 — Step 7 AI label extraction pilot built in Foundry; 403 reactions, all grounded; cache proven (Compass v20) |
+| **Where we are** | Phase 2, build-order steps 1–7 done (7 = pilot). AI: Claude Sonnet 5.5 on 2 labels / 9 sections, 403/403 quotes exact, recall 0.91 on gold, 0 calls on unchanged rebuild. Ontology: 6 object types incl. Labeled Reaction. [A011](docs/05-approaches/A011-ai-label-extraction-pilot.md) · [run notes](eval/gold-set/runs/step7-run1-notes.md) |
+| **Next 3 actions** | 1. (Claude) Prompt p2: one reaction per item (split grouped terms), re-run the pilot, re-score · 2. (Claude) Step 8: PRR stats for oxycodone (D006) + first signal compared with LabeledReactions, in Workshop with the triage Action · 3. (you) Name the pharmacist reviewer: 366 long-section items to check |
 | **Waiting on** | Pharmacist reviewer for the reference set · tell boss the demo date is open |
-| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 7 (AI label extraction)."_ (Cloud: on hold, see [guide](docs/10-delivery/cloud-session-guide.md).) |
+| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue: prompt p2, then build-order step 8 (statistics + signal in Workshop)."_ |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-04 (night, 3) — Step 7: AI label extraction pilot (Compass v20)
+- **Built:** [ai_label_extraction.py](foundry/pipelines/ai/ai_label_extraction.py) in `pipelines_clean` (lightweight, incremental). Libraries `palantir_models` + `language-model-service-api` added. Model **Claude Sonnet 5.5** imported into the project (your OK). Outputs `ai_label_section_extractions` (9) and `ontology_labeled_reactions` (403). New object type **MSSM Labeled Reaction**, linked to MSSM Label.
+- **Run 1:** 9/9 sections `ok`, 403 reactions, **403/403 quotes found exactly**. 41.7k prompt + 29.1k completion tokens, 143 s model time.
+- **Gold:** [step7-pilot-gold-v1.json](eval/gold-set/step7-pilot-gold-v1.json), frozen before scoring. Recall **32/35 = 0.91** on the 4 short sections ([notes](eval/gold-set/runs/step7-run1-notes.md)). Misses: paralytic ileus ×2, hepatotoxicity. The model groups terms ("addiction, abuse, and misuse"), so prompt p2 will split them.
+- **Cache (gate):** after forcing an upstream rebuild with the same text, 9/9 came from cache with **0 model calls** (optimization log O1).
+- **Problems met:** `AccessWithoutImportDenied` (fixed by importing the model via the inline RID picker) · `polars(mode="previous", schema=dict)` error (read without schema) · the repo Build button skipped the incremental job (used the dataset page Build) · the VS Code workspace was stale and is not used. All logged as learnings.
+- **Decided:** D041, **accepted by you**. Approach [A011](docs/05-approaches/A011-ai-label-extraction-pilot.md). Snapshot [Compass v19](docs/00-compass/history/COMPASS-v19.md).
 
 ### 2026-11-04 (late night, 2) — Step 6: first Ontology path + Action save (Compass v18)
 - **Built:** [ontology_objects.py](foundry/pipelines/ontology/ontology_objects.py) (in repo `pipelines_clean`), giving 9 curated datasets in `Data/curated`: 4 object tables, 4 join tables and 1 empty Action-owned table. Keys: 0 null, 0 duplicate.
@@ -19,7 +27,7 @@
 - **Gate (Object Explorer):** "Oxycodone" is the first hit by title · Oxycodone → 141 products, 25 recalls (no multiplied records) · OxyContin NDA022272 → Reference Label → v44 PLR (T13) ✅.
 - **Action save proven:** submitted 1 test decision (recall D-0338-2026, "monitoring", rationale marked as a test). Forced a rebuild of the backing dataset and reloaded: the decision is still there ✅. Closes the blocker open since step 1.
 - **Learned:** the Ontology Manager form preview is a test run only; apply from Object Explorer → Actions. New object and link types need ~30–60 s of indexing. An unchanged dataset needs Force build.
-- **Decided:** D040 (Ontology path v1, your OK pending). Approach [A010](docs/05-approaches/A010-first-ontology-path.md). Snapshot [Compass v17](docs/00-compass/history/COMPASS-v17.md).
+- **Decided:** D040 (Ontology path v1), **accepted by you**. Approach [A010](docs/05-approaches/A010-first-ontology-path.md). Snapshot [Compass v17](docs/00-compass/history/COMPASS-v17.md).
 - **Small follow-ups:** move the Reference Label link type from `Data/curated` to `Ontology/Links`; add object type descriptions; idempotency token on the Action (step 8).
 
 ### 2026-11-04 (late night) — Step 5: clean baseline (Compass v17)

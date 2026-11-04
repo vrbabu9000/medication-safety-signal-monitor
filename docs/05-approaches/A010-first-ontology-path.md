@@ -31,7 +31,7 @@ The step 6 gate from the [build order](../04-architecture/foundry-conventions/pr
 | Action save persists | 1 test decision created (`D-0338-2026`, monitoring); still present after a forced rebuild of the backing dataset and a reload |
 
 ## Verdict
-Keep. The gate passed. The Ontology path is the base for step 7 (LabeledReaction) and step 8 (Signal, with the triage link moved from recall to signal).
+Keep (D040 accepted 2026-11-04). The gate passed. The Ontology path is the base for step 7 (LabeledReaction) and step 8 (Signal, with the triage link moved from recall to signal).
 
 ## Design choices made on the way
 - **`MSSM` name prefix** on every type. The enrollment Ontology is shared with Palantir's example types, so the prefix keeps ours easy to find and avoids name clashes.

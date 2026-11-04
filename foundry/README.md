@@ -10,7 +10,8 @@ Reference: [Foundry conventions](../docs/04-architecture/foundry-conventions/REA
 | `pipelines/clean/` | Cleaning, dedup, **shared drug identity** (resolved once) | A | ✅ identity (step 4) + FAERS, labels, recalls (step 5), [README](pipelines/clean/README.md) |
 | `pipelines/ontology/` | Datasets that back Ontology objects | A | ✅ step 6, [ontology_objects.py](pipelines/ontology/ontology_objects.py) (runs in repo `pipelines_clean`) |
 | `ontology/` | Object types, links, Actions (definitions + notes) | A, C | ✅ [README](ontology/README.md) |
-| `ai-function/` | Label-extraction prompts, AIP Logic notes, grounding check | B | ⚪ |
+| `ai-function/` | Label-extraction prompts, AIP Logic notes, grounding check | B | superseded by `pipelines/ai/` |
+| `pipelines/ai/` | AI label extraction transform (Claude Sonnet 5.5, cached, grounded) | B | ✅ pilot step 7, [README](pipelines/ai/README.md) |
 | `app/` | Workshop layout notes and screenshots | C | ⚪ |
 | `monitoring/` | Data expectations, health checks, drift checks | D | ⚪ |
 | `tools/local_run/` | Run a transform on your machine with stand-ins for Foundry's library | — | ✅ [README](tools/local_run/README.md) |
@@ -97,6 +98,8 @@ They back the Ontology ([foundry/ontology](ontology/README.md)). Built by [ontol
 | `ontology_link_recall_product` | 11 | `link_key` | `ri.foundry.main.dataset.53604667-d496-47cd-9fb1-033ede3b6f84` |
 | `ontology_link_recall_drug` | 26 | `link_key` | `ri.foundry.main.dataset.a49f8d73-8f31-43e2-b1bd-027b769a2d25` |
 | `ontology_triage_decisions` | 0 (Action-owned) | `decision_id` | `ri.foundry.main.dataset.88c5b012-c746-47ea-b6fd-230c18d7da70` |
+| `ai_label_section_extractions` | 9 (pilot, step 7) | `cache_key` | `ri.foundry.main.dataset.48f642bc-e242-429d-ae71-f93cb5400b02` |
+| `ontology_labeled_reactions` | 403 (all quotes grounded) | `labeled_reaction_key` | `ri.foundry.main.dataset.407104e1-6078-4eb9-b2b5-d02933261cbf` |
 
 ## How a change reaches Foundry
 
@@ -114,5 +117,7 @@ Gotchas we hit (full list: [DECISIONS learnings](../docs/06-decisions/DECISIONS.
 - Importing a source into a repo can show an error yet succeed. Reload before retrying.
 - Use one editor per branch. A new repo opens a VS Code workspace that auto-commits ("Sync remote branch") for ~30 min, which conflicts with Code Repositories edits. Commit right after each paste. If a commit is rejected ("sync first"), reload and check the file still exists before building.
 - An Action's form preview in Ontology Manager is a **test run only**. Apply real edits from Object Explorer → Actions. A new object type needs ~1 min of indexing first.
+- An AIP model must be imported into the project before a transform can use it: type its RID inline inside the model Input call, pick it, click Import.
+- The repo's Build button skips an unchanged incremental transform even after upstream rebuilds; use the dataset page Build and check History.
 - A dataset that hasn't changed won't rebuild: use Build ▾ → **Force**.
 - Raw transforms take **no Foundry dataset inputs**. A transform that uses an external source together with dataset inputs needs source exports enabled, which we keep off. Clean transforms read raw datasets and use **no** external source.

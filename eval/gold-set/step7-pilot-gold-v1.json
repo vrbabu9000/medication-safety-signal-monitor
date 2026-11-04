@@ -1,0 +1,74 @@
+{
+  "version": "step7-pilot-gold-v1",
+  "created": "2026-11-04",
+  "author": "Claude (draft) - pharmacist review pending",
+  "frozen_before_model_output": true,
+  "rule": "Gold item = a reaction, risk or contraindicated condition that the section text itself states. An extracted term matches a gold item when its normalized text equals, contains, or is contained in one of the item's variants. Process/mechanism items (REMS programme, CYP3A4 interaction, dosing advice) are NOT gold items; extracting them is not counted as an error, only reported.",
+  "labels": {
+    "bfdfe235-d717-4855-a3c8-a13d26dadede|v44": {
+      "title": "OxyContin (oxycodone HCl ER tablets), Purdue/Knoa, PLR format",
+      "sections": {
+        "34066-1": {
+          "name": "Boxed Warning",
+          "items": [
+            {"id": "addiction", "variants": ["addiction", "opioid addiction"]},
+            {"id": "abuse", "variants": ["abuse", "opioid abuse"]},
+            {"id": "misuse", "variants": ["misuse", "opioid misuse"]},
+            {"id": "overdose", "variants": ["overdose", "fatal overdose", "fatal dose"]},
+            {"id": "death", "variants": ["death"]},
+            {"id": "respiratory depression", "variants": ["respiratory depression", "life-threatening respiratory depression"]},
+            {"id": "accidental ingestion", "variants": ["accidental ingestion"]},
+            {"id": "profound sedation", "variants": ["sedation", "profound sedation"]},
+            {"id": "coma", "variants": ["coma"]},
+            {"id": "neonatal opioid withdrawal syndrome", "variants": ["neonatal opioid withdrawal syndrome", "nows"]}
+          ]
+        },
+        "34070-3": {
+          "name": "Contraindications",
+          "items": [
+            {"id": "significant respiratory depression", "variants": ["respiratory depression"]},
+            {"id": "acute or severe bronchial asthma", "variants": ["bronchial asthma", "asthma"]},
+            {"id": "gastrointestinal obstruction", "variants": ["gastrointestinal obstruction"]},
+            {"id": "paralytic ileus", "variants": ["paralytic ileus", "ileus"]},
+            {"id": "hypersensitivity to oxycodone", "variants": ["hypersensitivity"]},
+            {"id": "anaphylaxis", "variants": ["anaphylaxis"]}
+          ]
+        }
+      }
+    },
+    "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7|v19": {
+      "title": "Oxycodone and acetaminophen tablets, Granules, older (non-PLR) format",
+      "sections": {
+        "34066-1": {
+          "name": "Boxed Warning",
+          "items": [
+            {"id": "addiction", "variants": ["addiction", "opioid addiction"]},
+            {"id": "abuse", "variants": ["abuse", "opioid abuse"]},
+            {"id": "misuse", "variants": ["misuse", "opioid misuse"]},
+            {"id": "overdose", "variants": ["overdose", "fatal overdose"]},
+            {"id": "death", "variants": ["death"]},
+            {"id": "respiratory depression", "variants": ["respiratory depression", "life-threatening respiratory depression"]},
+            {"id": "accidental ingestion", "variants": ["accidental ingestion"]},
+            {"id": "profound sedation", "variants": ["sedation", "profound sedation"]},
+            {"id": "coma", "variants": ["coma"]},
+            {"id": "neonatal opioid withdrawal syndrome", "variants": ["neonatal opioid withdrawal syndrome", "nows"]},
+            {"id": "hepatotoxicity", "variants": ["hepatotoxicity"]},
+            {"id": "acute liver failure", "variants": ["acute liver failure", "liver failure"]},
+            {"id": "liver injury", "variants": ["liver injury"]}
+          ]
+        },
+        "34070-3": {
+          "name": "Contraindications",
+          "items": [
+            {"id": "significant respiratory depression", "variants": ["respiratory depression"]},
+            {"id": "acute or severe bronchial asthma", "variants": ["bronchial asthma", "asthma"]},
+            {"id": "gastrointestinal obstruction", "variants": ["gastrointestinal obstruction"]},
+            {"id": "paralytic ileus", "variants": ["paralytic ileus", "ileus"]},
+            {"id": "hypersensitivity", "variants": ["hypersensitivity"]},
+            {"id": "anaphylaxis", "variants": ["anaphylaxis"]}
+          ]
+        }
+      }
+    }
+  }
+}

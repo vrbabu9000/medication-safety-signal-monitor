@@ -1,6 +1,6 @@
 # 🧭 COMPASS — Where we are, where we're going
 
-**Compass v18** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
+**Compass v21** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
 
 ## North Star
 _Purpose (boss, 2026-10-13): an exploratory showcase of design thinking, system design and usefulness. The reasoning trail is half the deliverable._
@@ -13,9 +13,9 @@ and can click any flag to see the exact source behind it.
 | | |
 |---|---|
 | 📍 **Phase** | 2 · Pilot build (started 2026-11-04, built with Claude over Claude in Chrome) |
-| 🔨 **Step** | Steps 1–6 done. Step 6 first Ontology path ([A010](docs/05-approaches/A010-first-ontology-path.md), D040): object types MSSM Drug 13 · Product 141 · Label 263 · Recall 25 · Triage Decision; 5 link types (Drug↔Product, Product↔Label, Product→Reference Label, Recall↔Product, Recall↔Drug); **gate passed**: "Oxycodone" found by title, links = source counts (141 products, 25 recalls), OxyContin → label v44; **Action save proven** (decision survives rebuild + reload). Map: [foundry/ontology](foundry/ontology/README.md) |
-| 🎯 **Next milestone** | Step 7: AI label extraction on a few OxyContin sections (AIP), exact quotes saved, `LabeledReaction`; define the gold set before broad runs |
-| ⛔ **Blockers** | ~~Action save~~ ✅ proven 2026-11-04 · secret `OpenFdaApiKey` added but not yet used in code (needed by step 9) · pharmacist reviewer for the reference set not named (needed after step 7) |
+| 🔨 **Step** | Steps 1–7 done (7 = pilot). Step 7 AI label extraction ([A011](docs/05-approaches/A011-ai-label-extraction-pilot.md), D041): Claude Sonnet 5.5 on 2 reference labels / 9 sections → **403 reactions, 403/403 quotes found exactly, 0 failures**; recall **0.91** on frozen gold (4 short sections); rebuild with unchanged text = **0 model calls** (O1); `MSSM Labeled Reaction` object linked to Label. Before: steps 1–6 (raw, clean, Ontology, Action save) → [foundry/README](foundry/README.md) |
+| 🎯 **Next milestone** | Step 8: FAERS statistics (PRR, D006) + one explainable signal for oxycodone in Workshop, with label evidence and the triage Action. Before it: prompt p2 (atomic terms) and the pharmacist packet for the long sections |
+| ⛔ **Blockers** | Pharmacist reviewer not named (now needed: 366 long-section items to check) · secret `OpenFdaApiKey` not yet used (step 9) |
 | ⏱️ **Time** | **No fixed demo date** (D031 v4, 2026-11-04): build at our own pace. Old Nov 4 plan is historical → [prior game plan](docs/10-delivery/game-plan-v1-oct27-to-nov4.md). BACKLOG hours not yet re-estimated |
 | ⚠️ **Top risk** | Foundry speed per step (first Code Repository setup took ~15 min incl. lock-file conflict). Second: Action write-back still unproven. |
 
@@ -60,6 +60,9 @@ See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active dec
 ## Change log of the compass
 | Ver | Date | What moved | Decisions changed |
 |---|---|---|---|
+| v21 | 2026-11-04 | D041 (AI label extraction) accepted by you. No change to step or plan. | D041 → Accepted |
+| v20 | 2026-11-04 | Step 7 pilot done: AI extraction in Foundry (Claude Sonnet 5.5, 9 sections, 403 grounded reactions, recall 0.91 on gold, cache = 0 calls on rebuild). Model imported into the project with your OK. LabeledReaction object added. Next: step 8 signal + Workshop; prompt p2 for atomic terms. | New D041; first optimization-log entry O1 |
+| v19 | 2026-11-04 | D040 (first Ontology path) accepted by you. No change to step or plan. | D040 → Accepted |
 | v18 | 2026-11-04 | Step 6 done: first Ontology path (4 object types + TriageDecision, 5 link types, create-only Action). Gate passed in Object Explorer; Action save proven (survives rebuild). Blocker "Action save untested" closed. Next: step 7 AI label extraction. | New D040 |
 | v17 | 2026-11-04 | Step 5 done: 7 clean baseline datasets (FAERS cases/reactions/drug×reaction, label versions/sections, recalls/recall match), 0 duplicate keys; FAERS numbers equal the Oct 20 prototype (792,346 cases; oxycodone 4,464 → 3,408 after fold). New background dataset `clean_faers_case_reactions` (contract addition). Next: step 6 Ontology + Action save. | none (learnings only) |
 | v16 | 2026-11-04 | Step 4 done: 5 identity datasets in Data/clean, 0 duplicate keys, OxyContin chain resolves in Foundry. Clean layer uses polars lightweight transforms (~1 min builds). VS Code workspace auto-sync lost one uncommitted file once (re-added). | none (learnings only) |

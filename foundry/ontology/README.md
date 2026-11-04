@@ -12,6 +12,7 @@ Ontology: `kestrel Ontology` (shared with Palantir's example types, hence the `M
 | MSSM Product | `ontology_product_products` | `product_key` (application number, or `labeler:` key) | `display_name` (e.g. OXYCONTIN (NDA022272)) | 141 | off |
 | MSSM Label | `ontology_label_labels` | `label_key` = `setid|v<version>` | `display_name` (title · v44) | 263 | off |
 | MSSM Recall | `ontology_recall_recalls` | `recall_number` | `display_name` (D-0338-2026 · Class II · Ongoing) | 25 | off |
+| MSSM Labeled Reaction | `ontology_labeled_reactions` (built by the AI transform, step 7) | `labeled_reaction_key` | `reaction_text` | 403 (pilot: 2 labels) | off |
 | MSSM Triage Decision | `ontology_triage_decisions` (empty on purpose) | `decision_id` (generated UUID) | `subject_key` | created by the Action only | **on** |
 
 ## Link types
@@ -22,6 +23,7 @@ Ontology: `kestrel Ontology` (shared with Palantir's example types, hence the `M
 | Product ↔ Label | many-to-many | `ontology_link_product_label` (every approval id in the label XML) | MSSM Labels / MSSM Products |
 | Product → Label | many-to-one, foreign key `reference_label_key` | product dataset | Reference Label (`referenceLabel`) / Reference For Products (`referenceForProducts`) |
 | Recall ↔ Product | many-to-many | `ontology_link_recall_product` (high/medium-confidence NDC matches) | MSSM Products / MSSM Recalls |
+| Labeled Reaction → Label | many-to-one, foreign key `label_key` | labeled reactions dataset | MSSM Label / MSSM Labeled Reactions |
 | Recall ↔ Drug | many-to-many | `ontology_link_recall_drug` (ingredient named in the recall text) | MSSM Drugs / MSSM Recalls |
 
 ## Action types

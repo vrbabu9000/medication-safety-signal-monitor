@@ -126,6 +126,11 @@ class FakeOutput:
         self._save(df.records)
 
     def write_table(self, df):
+        if hasattr(df, "collect"):
+            df = df.collect()
+        null_cols = [c for c, t in getattr(df, "schema", {}).items() if str(t) == "Null"]
+        if null_cols:
+            print(f"[{self.name}] WARNING all-null (untyped) columns, Foundry may reject them: {null_cols}")
         self._save(df.to_dicts() if hasattr(df, "to_dicts") else df.to_dict("records"))
 
     def filesystem(self):

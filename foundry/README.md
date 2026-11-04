@@ -7,7 +7,7 @@ Reference: [Foundry conventions](../docs/04-architecture/foundry-conventions/REA
 | Folder | Holds | Brief part | Status |
 |---|---|---|---|
 | `pipelines/raw/` | Ingestion transforms (one file per pull) | A | ✅ 6 files, [README](pipelines/raw/README.md) |
-| `pipelines/clean/` | Cleaning, dedup, **shared drug identity** (resolved once) | A | ⏭️ step 4 |
+| `pipelines/clean/` | Cleaning, dedup, **shared drug identity** (resolved once) | A | ✅ identity (step 4), [README](pipelines/clean/README.md); step 5 next |
 | `pipelines/ontology/` | Datasets that back Ontology objects | A | ⚪ |
 | `ontology/` | Object types, links, Actions (definitions + notes) | A, C | ⚪ |
 | `ai-function/` | Label-extraction prompts, AIP Logic notes, grounding check | B | ⚪ |
@@ -37,6 +37,7 @@ Every source: exports **off**; "import into code repositories" **on**; compute m
 | Repo | Path | RID | Holds |
 |---|---|---|---|
 | `pipelines_raw_ingest` | `Pipelines/` | `ri.stemma.main.repository.5c896743-fd13-41bf-a44f-30df020df319` | Python transforms; library `transforms-external-systems` 0.1399.0; all 4 sources imported. Files under `transforms-python/src/myproject/datasets/` |
+| `pipelines_clean` | `Pipelines/` | `ri.stemma.main.repository.a93194bd-2c3a-452d-bc8d-da642ae64be0` | Python lightweight (polars) transforms; dataset inputs only, no sources |
 
 ### Raw datasets built
 
@@ -55,6 +56,18 @@ All in `Data/raw`, full snapshot each build, oxycodone slice (2026-11-04). "Chec
 | `raw_faers_quarter_manifest` | 37 | Q1 352,984,542 B / Q2 337,724,653 B; sha256 = local copies | `ri.foundry.main.dataset.539ccd4c-55b3-48cc-924e-baf55d5da0ce` |
 | `raw_openfda_enforcement_access_test` | 1 | access test only; can be deleted later | `ri.foundry.main.dataset.b1b1999d-7d65-4010-b2ff-28449a50cf1e` |
 
+### Clean datasets built (`Data/clean`, step 4, 2026-11-04)
+
+Checked in Foundry SQL: **0 duplicate keys in each**; the OxyContin chain (7804 → NDA022272 → 59011-410-10 → label `bfdfe235…` v44 reference) returns 1 row.
+
+| Dataset | Rows | Key | RID |
+|---|---|---|---|
+| `clean_drug_ingredients` | 13 | `ingredient_rxcui` | `ri.foundry.main.dataset.13768528-5de2-41f7-8847-640f721b15fc` |
+| `clean_drug_identity` | 8 | `lookup_string` | `ri.foundry.main.dataset.fb64198f-7b8b-4c95-a26b-580a347071fa` |
+| `clean_drug_product_map` | 141 | `ingredient_rxcui` + `product_key` | `ri.foundry.main.dataset.39544a6a-e39a-40ef-8da4-012f7322723b` |
+| `clean_drug_package_map` | 937 | `package_ndc11` | `ri.foundry.main.dataset.7a29f351-8847-47ac-b7e8-22c21d9a6a69` |
+| `clean_label_product_map` | 269 | `setid` + `spl_version` + `application_number` | `ri.foundry.main.dataset.9f37f742-13b7-4f79-bdc3-4d08f0527f40` |
+
 ## How a change reaches Foundry
 
 1. Edit the mirror file here and test it with [tools/local_run](tools/local_run/README.md).
@@ -69,5 +82,5 @@ Gotchas we hit (full list: [DECISIONS learnings](../docs/06-decisions/DECISIONS.
 - openFDA `openfda.*` fields are sparse. Always also search the source's own ingredient field.
 - A source shows "Pending approval" after self-approval. Check the Control Panel policy page instead.
 - Importing a source into a repo can show an error yet succeed. Reload before retrying.
-- Use one editor per branch. Opening VS Code workspaces makes its own commit, which conflicts with the lock file.
+- Use one editor per branch. A new repo opens a VS Code workspace that auto-commits ("Sync remote branch") for ~30 min, which conflicts with Code Repositories edits. Commit right after each paste. If a commit is rejected ("sync first"), reload and check the file still exists before building.
 - Raw transforms take **no Foundry dataset inputs**. A transform that uses an external source together with dataset inputs needs source exports enabled, which we keep off. Clean transforms read raw datasets and use **no** external source.

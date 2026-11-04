@@ -11,13 +11,13 @@ Public data only (FDA, NLM). No patient-level data, no PHI.
 > 3. [docs/10-delivery/cloud-session-guide.md](docs/10-delivery/cloud-session-guide.md) → how to work from a cloud session, and the prompt for the next step
 > 4. [CLAUDE.md](CLAUDE.md) → how Claude must respond and the git ground rule (Codex: [AGENTS.md](AGENTS.md))
 
-## Status (2026-11-04 · Compass v15)
+## Status (2026-11-04 · Compass v16)
 
 | | |
 |---|---|
 | **Phase** | 2 · Pilot build (no fixed demo date, D031 v4) |
-| **Done** | Build-order steps 1–3: Foundry access proven (AIP, outbound internet), folder layout, [dataset contracts](docs/04-architecture/dataset-contracts-v1.md) accepted (D039), **raw layer for the oxycodone slice: 10 datasets, each equal to its source total** |
-| **Next** | Step 4: shared drug identity (`clean_drug_identity`, product map, package map) → prompt in the [cloud guide](docs/10-delivery/cloud-session-guide.md#4-prompt-to-start-step-4) |
+| **Done** | Build-order steps 1–4: Foundry access proven (AIP, outbound internet), folder layout, [dataset contracts](docs/04-architecture/dataset-contracts-v1.md) accepted (D039), **raw layer for the oxycodone slice (10 datasets = source totals)**, **shared drug identity (5 clean datasets, 0 duplicate keys, OxyContin chain resolves)** |
+| **Next** | Step 5: clean baseline: FAERS cases/drug×reaction, label sections, current recalls + recall→package match |
 | **Open** | Action write-back not yet proven (step 6) · openFDA key stored in Foundry but not yet used in code · pharmacist reviewer not named |
 
 ## The requirement (from the brief)
@@ -31,7 +31,7 @@ The user is a hospital pharmacy safety officer. Each morning she asks:
 
 | Part | What | Status |
 |---|---|---|
-| **A. Pipelines** | 4+ public sources (≥1 unstructured) → raw → clean → Ontology (Drug, Label, Adverse Event, Recall, Signal); ≥1 incremental pipeline | 🟡 raw layer done (5 sources); clean next |
+| **A. Pipelines** | 4+ public sources (≥1 unstructured) → raw → clean → Ontology (Drug, Label, Adverse Event, Recall, Signal); ≥1 incremental pipeline | 🟡 raw done (4 sources); clean identity done; clean FAERS/labels/recalls next |
 | **B. AI function** | LLM extracts labeled reactions from DailyMed label text; compare with FAERS; flag frequent-but-unlabeled reactions | ⚪ AIP access proven only |
 | **C. App** | Workshop: ranked signals, drug drill-down (label passage beside AI extraction), recall alerts, **triage button that writes back** | ⚪ |
 | **D. Monitoring** | Pipeline health + AI health (gold set, drift) — decided as must-have (D008) | ⚪ |
@@ -50,8 +50,8 @@ Source: [project-build-order-v1.md](docs/04-architecture/foundry-conventions/pro
 | 1 | Confirm scope; check Foundry, AIP, Action access | ✅ (Action save deferred to 6) |
 | 2 | Folder layout; dataset grain/key contracts | ✅ [contracts v1](docs/04-architecture/dataset-contracts-v1.md) |
 | 3 | Land raw samples for every source | ✅ oxycodone slice |
-| 4 | Shared drug identity + product/label mapping | ⏭️ **next** |
-| 5 | Clean baseline: FAERS case versions/deletes, label sections, recall normalisation | ⚪ |
+| 4 | Shared drug identity + product/label mapping | ✅ |
+| 5 | Clean baseline: FAERS case versions/deletes, label sections, recall normalisation | ⏭️ **next** |
 | 6 | First Ontology path: Drug, Product, Label, Recall (+ test Action save) | ⚪ |
 | 7 | AI label extraction on a few sections; gold set | ⚪ |
 | 8 | Statistics + one explainable signal in Workshop with a triage Action | ⚪ |
@@ -67,8 +67,8 @@ All under project `/kestrel-01f4ab/Medication Safety Signal Monitor`. Code mirro
 | Kind | Name (path) | Notes |
 |---|---|---|
 | Sources (`Data/raw`) | `src_openfda_api`, `src_dailymed_api`, `src_rxnav_api`, `src_faers_files` | REST API sources; egress self-approved; exports **off**; code-repo import only (D038) |
-| Code repository | `Pipelines/pipelines_raw_ingest` | Python transforms; mirror: [foundry/pipelines/raw/](foundry/pipelines/raw/README.md) |
-| Raw datasets (`Data/raw`) | 10 datasets | Counts in [foundry/README.md](foundry/README.md#raw-datasets-built) |
+| Code repositories | `Pipelines/pipelines_raw_ingest`, `Pipelines/pipelines_clean` | Python transforms; mirrors: [raw](foundry/pipelines/raw/README.md), [clean](foundry/pipelines/clean/README.md) |
+| Datasets | 10 in `Data/raw`, 5 in `Data/clean` | Counts + RIDs in [foundry/README.md](foundry/README.md#raw-datasets-built) |
 | AIP | `AIP/Logic/scratch_aip_access_test` | Access test only |
 
 ## Where things live

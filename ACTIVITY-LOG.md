@@ -3,15 +3,23 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-11-04 — Foundry access proven, contracts accepted (D039), first real raw dataset: 25 oxycodone recalls (Compass v14) |
-| **Where we are** | Phase 2, build-order step 3. Pulls 1–3 built: `raw_openfda_enforcement` 25 · `raw_openfda_drugsfda` 141 · `raw_openfda_ndc` 313 · `raw_dailymed_spl_index` 263 · `raw_dailymed_spl_xml` 263 · `raw_rxnorm_lookup` 2 · `raw_rxnorm_related` 271 · `raw_faers_quarter_files` 37 files + manifest (all = source totals; OxyContin v44 = T13; oxycodone → 7804). **Step 3 done** (Compass v15). Action save not tested yet. No fixed demo date (D031 v4). [Contracts](docs/04-architecture/dataset-contracts-v1.md) · [access results](docs/10-delivery/2026-11-04-foundry-access-results.md) |
-| **Next 3 actions** | 1. (Claude) Step 4: `clean_drug_identity` + `clean_drug_product_map` + `clean_drug_package_map` · 2. (Claude) Wire `OpenFdaApiKey` into the openFDA transforms · 3. (you) Commit today's work to GitHub |
+| **Last session** | 2026-11-04 — Step 4 shared drug identity built in Foundry; 0 duplicate keys; OxyContin chain resolves (Compass v16) |
+| **Where we are** | Phase 2, build-order steps 1–4 done. Raw: 10 datasets = source totals. Clean (`Data/clean`, repo `pipelines_clean`): ingredients 13 · identity 8 · product map 141 · package map 937 · label map 269. Action save not tested yet. No fixed demo date (D031 v4). [foundry/README](foundry/README.md) · [contracts](docs/04-architecture/dataset-contracts-v1.md) |
+| **Next 3 actions** | 1. (Claude) Step 5: clean FAERS (parse quarter files, case versions/deletes D022, drug×reaction D021/D023) · 2. (Claude) Step 5: `clean_label_sections` + `clean_recalls_current` + recall→package match · 3. (Claude) Wire `OpenFdaApiKey` before widening (step 9) |
 | **Waiting on** | Pharmacist reviewer for the reference set · tell boss the demo date is open |
-| **Say this to Claude to restart** | Cloud: paste the prompt in [cloud-session-guide §4](docs/10-delivery/cloud-session-guide.md#4-prompt-to-start-step-4). Local: _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 4 (identity)."_ |
+| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 5 (clean baseline)."_ (Cloud: on hold, see [guide](docs/10-delivery/cloud-session-guide.md).) |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-04 (night) — Step 4: shared drug identity (Compass v16)
+- **Built:** new Foundry repo `Pipelines/pipelines_clean` (polars lightweight transforms; no external sources). Mirrors: [clean_drug_identity.py](foundry/pipelines/clean/clean_drug_identity.py), [clean_label_product_map.py](foundry/pipelines/clean/clean_label_product_map.py), [README](foundry/pipelines/clean/README.md).
+- **Results (Foundry = local):** `clean_drug_ingredients` 13 (D018; oxycodone `in_slice`) · `clean_drug_identity` 8 strings: OXYCODONE → 7804 `exact_in`, OXYCODONE HYDROCHLORIDE / TEREPHTHALATE → 7804 `exact_pin`, 5 combination partners (acetaminophen, aspirin, ibuprofen, naloxone, naltrexone) kept as `no_formulary_match` · `clean_drug_product_map` 141 applications (127 ANDA, 14 NDA; 83 combination; 51 marketed) · `clean_drug_package_map` 937 packages (895 by application, 42 bulk/unapproved by `labeler:` key; all 11-digit normalised) · `clean_label_product_map` 269 rows (265 matched, 3 application not in the Drugs@FDA pull, 1 label with no approval id; 35 owner labels = 15 exact + 20 first-word name matches).
+- **Checks in Foundry SQL:** 0 duplicate keys in all 5 datasets; OxyContin chain 7804 → NDA022272 (KNOA PHARMA) → 59011-410-10 (`59011041010`) → label `bfdfe235…` v44 reference = **1 row** (reference trace T13).
+- **Found:** only 71 of 141 oxycodone applications have any DailyMed label (most others discontinued ANDAs); 34 have the owner's (reference) label. Products with no owner label are flagged `product_has_owner_label = false`, not guessed (G4).
+- **Problem met:** the VS Code workspace (opened automatically when the repo was created) kept auto-committing "Sync remote branch". One commit was rejected, and "Update then build" then dropped an uncommitted file; re-added and committed. Lesson logged.
+- **Tools:** local harness now warns about all-null columns; new [check_identity.py](foundry/tools/local_run/check_identity.py). Snapshot [Compass v15](docs/00-compass/history/COMPASS-v15.md).
 
 ### 2026-11-04 (evening) — Repo made cloud-ready
 - **Why:** you'll continue from a cloud session linked to GitHub, which has no access to Foundry, this laptop, or chat memory.

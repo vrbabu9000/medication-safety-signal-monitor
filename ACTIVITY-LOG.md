@@ -7,11 +7,16 @@
 | **Where we are** | Phase 2, build-order step 3. Pulls 1–3 built: `raw_openfda_enforcement` 25 · `raw_openfda_drugsfda` 141 · `raw_openfda_ndc` 313 · `raw_dailymed_spl_index` 263 · `raw_dailymed_spl_xml` 263 · `raw_rxnorm_lookup` 2 · `raw_rxnorm_related` 271 · `raw_faers_quarter_files` 37 files + manifest (all = source totals; OxyContin v44 = T13; oxycodone → 7804). **Step 3 done** (Compass v15). Action save not tested yet. No fixed demo date (D031 v4). [Contracts](docs/04-architecture/dataset-contracts-v1.md) · [access results](docs/10-delivery/2026-11-04-foundry-access-results.md) |
 | **Next 3 actions** | 1. (Claude) Step 4: `clean_drug_identity` + `clean_drug_product_map` + `clean_drug_package_map` · 2. (Claude) Wire `OpenFdaApiKey` into the openFDA transforms · 3. (you) Commit today's work to GitHub |
 | **Waiting on** | Pharmacist reviewer for the reference set · tell boss the demo date is open |
-| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 4 (identity)."_ |
+| **Say this to Claude to restart** | Cloud: paste the prompt in [cloud-session-guide §4](docs/10-delivery/cloud-session-guide.md#4-prompt-to-start-step-4). Local: _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 4 (identity)."_ |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-04 (evening) — Repo made cloud-ready
+- **Why:** you'll continue from a cloud session linked to GitHub, which has no access to Foundry, this laptop, or chat memory.
+- **Updated:** [README](README.md) (status, requirements, 12-step plan with progress, Foundry map) · [foundry/README](foundry/README.md) (every source/repo/dataset with RID and counts, how a change reaches Foundry, gotchas) · new [pipelines/raw/README](foundry/pipelines/raw/README.md) · new local test harness [foundry/tools/local_run](foundry/tools/local_run/README.md) (reproduces the Foundry counts 2/271/25/141/313) · new [cloud session guide](docs/10-delivery/cloud-session-guide.md) with the step 4 prompt.
+- **Cloud on hold (your call):** cloud sessions can't drive the browser/Foundry, which was the main reason for using them. Work continues locally with Claude in Chrome. The guide stays for later; git option (guide §2) not chosen. Pharmacist review packet discussed, not built (plan: after step 7, ~45–60 min ask).
 
 ### 2026-11-04 (later) — Contracts accepted, first real raw pull (Compass v14)
 - **Step 2:** [dataset contracts v1](docs/04-architecture/dataset-contracts-v1.md) written and accepted with all gate defaults (D039; D020–D024 now Accepted).

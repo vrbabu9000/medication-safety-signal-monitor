@@ -6,3 +6,4 @@ __pycache__/
 prototypes/data/
 *.zip
 .claude/settings.local.json
+foundry/tools/local_run/out/

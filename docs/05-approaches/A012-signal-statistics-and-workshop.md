@@ -53,3 +53,6 @@ No new structure beyond conventions §5 (AdverseEventStat, Signal). Screen layou
 - 🩺 PV SME: PRR on spontaneous reports measures reporting, not risk. The 30-drug cut is a blunt tool, so it keeps `a_mass_reports` visible rather than deleting. The label check is exact-term, so synonyms (hyperaesthesia vs hyperalgesia) will show as "not in label" until a synonym table exists.
 - 💊 Safety Officer: "I can see why it is on the list and I can write down what I did about it." She will want the label quote next to "not in label", and fewer decimals.
 - 🧐 Evaluator: Strong on traceability (evaluation id ties a decision to one computation). Weak on false positives: only a pharmacist read can say how many of the 125 are real.
+
+## Update (2026-11-05): drug filter
+After step 9 the ranked table mixed 12 drugs (rank 1 of each drug first). A filter list on Ingredient Name (pill layout, counts per drug) now drives a second object set, *Ranked signals for chosen drugs*, which feeds the table. Tested in View mode: semaglutide alone → NAION #1, Gastrointestinal hypomotility #2, Weight increased #3.

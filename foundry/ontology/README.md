@@ -50,7 +50,8 @@ How to apply it: in **Object Explorer**, open MSSM Triage Decision → **Actions
 
 | Part | Built from |
 |---|---|
-| Left: **Ranked signals (not in label)** table | Variable *Ranked signals* = MSSM Signal where Is Ranked = true (125). Columns: signal, reaction, rank, reports, from mass reports (30+ drugs), PRR, PRR 95% CI low, Chi² (Yates), caution. Default sort rank ↑ |
+| Left top: **drug filter** (pill "Ingredient Name", 2026-11-05) | Filter list on *Ranked signals*, showing ranked counts per drug; its output filters *Ranked signals for chosen drugs*. Row height Absolute 64 px |
+| Left: **Ranked signals (not in label)** table | Variable *Ranked signals for chosen drugs* = *Ranked signals* + the drug filter. *Ranked signals* = MSSM Signal where Is Ranked = true (1,115 for 12 drugs; 125 at step 8). Columns: signal, reaction, rank, reports, from mass reports (30+ drugs), PRR, PRR 95% CI low, Chi² (Yates), caution. Default sort rank ↑ |
 | Right top: button **Triage this signal** | Action Create MSSM Triage Decision. Defaults: Subject Type = static "signal"; Subject Key = *Selected signal key* (object property of the table's active object); Evaluation Id = *Selected evaluation id*. All three locked (Disabled); the officer picks Decision and writes Rationale |
 | Right middle: decisions for this signal | Variable *Decisions for selected signal* = MSSM Triage Decision where Subject Key = Selected signal key |
 | Right bottom: full signal record | Property list of the active signal: 22 properties in reading order with plain labels. Why flagged (reaction, reports, PRR + 95% CI, χ², caution, mass reports set aside) → label check (status, reference labels searched, labels also read by AI, method) → trace (rank, bucket, FAERS window, rule version, evaluation id, signal key, stat key, RxCUI) |
@@ -58,3 +59,5 @@ How to apply it: in **Object Explorer**, open MSSM Triage Decision → **Actions
 **Polish (2026-11-04, v0.3):** number format on MSSM Signal properties in Ontology Manager (Display → Numeric formatting → Maximum fraction digits: PRR 1, CI low/high 2, χ² 1, mass share 2). Decisions table: row height Absolute 160 px, fit columns, 5 columns. Evidence list reordered and relabelled. The last two were done in each widget's JSON config (`</>` → edit → *Validate and save*).
 
 Still open: reviewer shows a user ID; links from a signal to the labels that were searched.
+
+Why two variables: the filter list must read the unfiltered set, or the filter would feed back into itself and every other drug would disappear from its own choices.

@@ -8,6 +8,7 @@ Status: Proposed (waiting on boss veto) · Accepted · Superseded by D### (vN)
 ## Decision changes (newest first)
 | Date | Decision | Before (v1) | Now | Trigger / evidence | Compass |
 |---|---|---|---|---|---|
+| 2026-11-05 | D043 table data syn_v1 → syn_v2 (no rule change) | 233 rows | 258 rows from a top-12-per-drug review, each phrase checked in the drug's labels | Ranked 1,115 → 1,073; possibly-in-label 72 → 108; Foundry = local (A014 update) | v32 |
 | 2026-11-05 | D016 v3 Proposed → Accepted | Built and measured, awaiting OK | Accepted as built | User, 2026-11-05: "Accept D016 v3" | v30 |
 | 2026-11-05 | D016 v2 → **D016 v3** (proposed) | GLP-1 efficacy terms, "Product …" complaints and procedures ranked as clinical | Efficacy: hunger, increased appetite, food craving, lack of satiety, hyperphagia, weight loss poor, HbA1c, inadequate control, therapeutic response changed/shortened, product ineffective. Product use: any "Product …" (not "ineffective"), dispensing, titration, wrong route/form/dose/patient, device injury, compounding. Abuse: illicit, needle track. Social: work ability. Administrative: "… therapy", surgery, -ectomy, transplant, procedure, lens user | Ranked 1,210 → 1,115 (−95) on identical data; signals unchanged (1,959, tagged not removed); evaluation ids unchanged; Foundry = local (A013 follow-up) | v29 |
 | 2026-11-05 | D043 Proposed → Accepted | Built and measured, awaiting OK | Accepted as built | User, 2026-11-05: "Accept D043" | v28 |

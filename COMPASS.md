@@ -1,6 +1,6 @@
 # 🧭 COMPASS — Where we are, where we're going
 
-**Compass v31** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
+**Compass v32** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
 
 ## North Star
 _Purpose (boss, 2026-10-13): an exploratory showcase of design thinking, system design and usefulness. The reasoning trail is half the deliverable._
@@ -13,8 +13,8 @@ and can click any flag to see the exact source behind it.
 | | |
 |---|---|
 | 📍 **Phase** | 2 · Pilot build (started 2026-11-04, built with Claude over Claude in Chrome) |
-| 🔨 **Step** | Steps 1–9 done, plus the label ↔ FAERS **synonym table** ([A014](docs/05-approaches/A014-label-faers-synonym-table.md), D043 accepted): ranked queue **1,355 → 1,210** (−10.7%), 72 signals now "possibly in label"; then D016 v3 buckets (accepted) → **1,115 ranked**; NAION now #1 for semaglutide; GLP-1 gastric-emptying false positives gone; NAION confirmed not in any semaglutide label (ranked 2nd). Foundry = local. Before: step 9 → [A013](docs/05-approaches/A013-widen-to-formulary.md) |
-| 🎯 **Next milestone** | Synonym v2 ("Gastrointestinal / Gastric hypomotility"), then step 10: prove one incremental pipeline (FAERS) |
+| 🔨 **Step** | Steps 1–9 done, plus the label ↔ FAERS **synonym table** ([A014](docs/05-approaches/A014-label-faers-synonym-table.md), D043 accepted): ranked queue **1,355 → 1,210** (−10.7%), 72 signals now "possibly in label"; then D016 v3 buckets (accepted) → **1,115 ranked**; synonym v2 → **1,073 ranked**, 108 possibly in label; NAION #1 for semaglutide; GLP-1 gastric-emptying false positives gone; NAION confirmed not in any semaglutide label (ranked 2nd). Foundry = local. Before: step 9 → [A013](docs/05-approaches/A013-widen-to-formulary.md) |
+| 🎯 **Next milestone** | step 10: prove one incremental pipeline (FAERS) |
 | ⛔ **Blockers** | Pharmacist reviewer not named (now: long label sections, 125+ ranked signals **and** the synonym bands) · `OpenFdaApiKey` unused (fine at ~50 calls) |
 | ⏱️ **Time** | **No fixed demo date** (D031 v4, 2026-11-04): build at our own pace. Old Nov 4 plan is historical → [prior game plan](docs/10-delivery/game-plan-v1-oct27-to-nov4.md). BACKLOG hours not yet re-estimated |
 | ⚠️ **Top risk** | False positives now at scale: 1,355 ranked items; for GLP-1s the top ones are synonyms (impaired vs delayed gastric emptying) and efficacy terms (weight loss poor, hunger). Second: Foundry speed per step |
@@ -66,6 +66,7 @@ See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active dec
 ## Change log of the compass
 | Ver | Date | What moved | Decisions changed |
 |---|---|---|---|
+| v32 | 2026-11-05 | Synonym table syn_v2 live: ranked 1,115 → 1,073, possibly-in-label 108. Next: step 10 incremental FAERS. | D043 data v2 (no rule change) |
 | v31 | 2026-11-05 | Drug filter on the Workshop screen (ranked list per drug). Next: synonym v2, then step 10. | none |
 | v30 | 2026-11-05 | D016 v3 accepted by you. No change to step or plan. | D016 v3 → Accepted |
 | v29 | 2026-11-05 | D016 v3 buckets live in Foundry: ranked 1,210 → 1,115; signals unchanged. Next: your OK on D016 v3, drug filter, step 10. | D016 v2 → v3 (proposed) |

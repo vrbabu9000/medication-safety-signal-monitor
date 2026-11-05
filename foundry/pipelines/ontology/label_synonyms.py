@@ -4,11 +4,12 @@
 # band "rejected": the lead was reviewed and the label wording is not the same idea; kept so it is not reviewed twice.
 # A phrase only counts where it appears in a safety section of that drug's reference label (same text rule as D037).
 # Review: Claude draft from eval/synonyms/candidates-v1.jsonl (209 leads with a short matching phrase) plus a few
-# standard clinical synonyms marked "knowledge". Pharmacist review pending.
+# standard clinical synonyms marked "knowledge". v2 (2026-11-05): leads from the top 12 ranked signals per drug, each phrase
+# checked in that drug's reference labels; marked "v2". Pharmacist review pending.
 #
 # Mirror of Foundry repo Pipelines/pipelines_clean,
 #   transforms-python/src/myproject/datasets/label_synonyms.py
-SYN_VERSION = "syn_v1"
+SYN_VERSION = "syn_v2"
 
 _HIGH = [
     ("Impaired gastric emptying", ["delays gastric emptying", "delay gastric emptying", "delayed gastric emptying"], "label states the drug slows gastric emptying"),
@@ -59,6 +60,9 @@ _HIGH = [
     ("Body temperature increased", ["hyperthermia", "fever"], "knowledge"),
     ("Acute hepatic failure", ["acute liver failure"], "knowledge"),
     ("Optic ischaemic neuropathy", ["ischemic optic neuropathy", "naion"], "knowledge"),
+    ("Gastric hypomotility", ["delays gastric emptying", "delayed gastric emptying"], "v2: same idea"),
+    ("Electrocardiogram QT prolonged", ["qt interval prolongation", "qt prolongation"], "v2: same idea"),
+    ("Euphoric mood", ["euphoria"], "v2: same idea"),
 ]
 _MEDIUM = [
     ("Gastrointestinal disorder", ["gastrointestinal adverse reactions"], "vague FAERS term; label lists many GI reactions"),
@@ -104,6 +108,24 @@ _MEDIUM = [
     ("Cardiogenic shock", ["shock"], "broader"),
     ("Cardio-respiratory distress", ["circulatory depression"], "related"),
     ("Amylase abnormal", ["amylase"], "label reports increases only"),
+    ("Gastrointestinal hypomotility", ["delays gastric emptying"], "v2: label covers the stomach, FAERS term the whole gut"),
+    ("Injection site hypersensitivity", ["injection site reactions"], "v2: broader"),
+    ("Injection site haemorrhage", ["injection site reactions"], "v2: broader"),
+    ("Injection site mass", ["injection site reactions"], "v2: broader"),
+    ("Injection site urticaria", ["injection site reactions"], "v2: broader"),
+    ("Injection site irritation", ["injection site reactions"], "v2: broader"),
+    ("Injection site discharge", ["injection site reactions"], "v2: broader"),
+    ("Injection site indentation", ["injection site reactions"], "v2: broader"),
+    ("Application site burn", ["application site reactions"], "v2: broader"),
+    ("Application site scar", ["application site reactions"], "v2: broader"),
+    ("Application site vesicles", ["application site reactions"], "v2: broader"),
+    ("Respiratory rate decreased", ["respiratory depression"], "v2: slow breathing is a sign of it"),
+    ("Coma scale abnormal", ["coma"], "v2: related"),
+    ("Unresponsive to stimuli", ["coma"], "v2: related"),
+    ("Consciousness fluctuating", ["impaired consciousness"], "v2: related"),
+    ("Wheezing", ["bronchospasm"], "v2: a sign of it"),
+    ("Nasal oedema", ["angioedema"], "v2: related"),
+    ("Obstructive pancreatitis", ["pancreatitis"], "v2: label describes acute pancreatitis"),
 ]
 # Leads reviewed and rejected: the shared words point to a different idea (e.g. "Blindness" vs "double-blind", "Increased appetite"
 # vs "decreased appetite", "Mental disorder" vs "mental illness" as a risk factor, "Renal failure" vs "renal impairment" dosing).
@@ -129,6 +151,7 @@ _REJECTED = [
     "Hyperthermia", "Hyperlipidaemia", "Hyperbilirubinaemia", "Hepatomegaly", "Head circumference abnormal",
     "Haemorrhage urinary tract", "Functional gastrointestinal disorder", "Dysphoria", "Dissociation", "Discouragement",
     "Alcoholism", "Activities of daily living decreased",
+    "Early satiety", "Allodynia",  # v2: phrase not in that drug's labels
 ]
 
 SYNONYMS = ([(pt, ph, "high", note) for pt, phrases, note in _HIGH for ph in phrases]

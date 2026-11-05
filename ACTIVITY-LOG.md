@@ -3,15 +3,19 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-11-05 — Drug filter added to the Workshop screen; semaglutide view shows NAION #1 (Compass v31) |
-| **Where we are** | Phase 2, steps 1–9 done + A014. 1,959 signals (1,210 ranked, 72 possibly in label) for 12 drugs. NAION unlabeled for semaglutide (ranked 2nd). [A014](docs/05-approaches/A014-label-faers-synonym-table.md) |
-| **Next 3 actions** | 1. (Claude) Synonym v2: "Gastrointestinal hypomotility", "Gastric hypomotility" ~ delays gastric emptying · 2. (Claude) Step 10: prove one incremental pipeline (FAERS) · 3. (you) Name the pharmacist reviewer |
+| **Last session** | 2026-11-05 — Synonym table syn_v2 live: ranked 1,115 → 1,073 (Compass v32) |
+| **Where we are** | Phase 2, steps 1–9 + A014 synonyms (v2) + D016 v3 + drug filter. 1,952 signals for 12 drugs, 1,073 ranked, 108 possibly in label. NAION #1 for semaglutide. |
+| **Next 3 actions** | 1. (Claude) Step 10: prove one incremental pipeline (FAERS) against the full-rebuild baseline · 2. (Claude) Add retry/back-off to the DailyMed pull before any schedule · 3. (you) Name the pharmacist reviewer (long sections, ranked signals, synonym bands) |
 | **Waiting on** | Pharmacist reviewer · tell boss the demo date is open |
 | **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue with the synonym table and the drug filter, then build-order step 10."_ |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-05 (early, 4) — Synonym table syn_v2 (Compass v32)
+- **Review:** top 12 ranked signals per drug; each candidate phrase checked in that drug's reference labels before banding. 3 high, 18 medium, 2 rejected ([label_synonyms.py](foundry/pipelines/ontology/label_synonyms.py), A014 update).
+- **Result (local = Foundry):** ranked 1,115 → **1,073**; possibly-in-label 72 → 108; signals 1,959 → 1,952; 0 duplicate keys; label check `syn_v2`.
 
 ### 2026-11-05 (early, 3) — Drug filter on the screen (Compass v31)
 - **Built:** filter list (pill "Ingredient Name", ranked counts per drug) above the table; new variable *Ranked signals for chosen drugs* = *Ranked signals* + filter; table re-pointed (columns and sort kept). Published.

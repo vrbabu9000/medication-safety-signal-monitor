@@ -101,8 +101,8 @@ They back the Ontology ([foundry/ontology](ontology/README.md)). Built by [ontol
 | `ai_label_section_extractions` | 9 (pilot, step 7) | `cache_key` | `ri.foundry.main.dataset.48f642bc-e242-429d-ae71-f93cb5400b02` |
 | `ontology_labeled_reactions` | 448 (prompt p2; all quotes grounded) | `labeled_reaction_key` | `ri.foundry.main.dataset.407104e1-6078-4eb9-b2b5-d02933261cbf` |
 | `ontology_ae_stats` | 14,921 for 13 drugs (label check `text+ai_v1+syn_v1` since A014) | `stat_key` | `ri.foundry.main.dataset.1c1d39d3-c423-471c-9822-52c2a7db1093` |
-| `ontology_signal_signals` | 1,959, 1,115 ranked (D016 v3), 72 possibly in label (A014; was 2,047 / 1,355 at step 9) | `signal_key` | `ri.foundry.main.dataset.1ece78d5-f17c-4b18-96cd-2b7ae43dafd7` |
-| `ontology_label_synonyms` | 233 (syn_v1: high, medium, rejected) | `faers_pt` + `label_phrase` | (see `Data/curated`) |
+| `ontology_signal_signals` | 1,952, 1,073 ranked, 108 possibly in label (D016 v3 + syn_v2; was 2,047 / 1,355 at step 9) | `signal_key` | `ri.foundry.main.dataset.1ece78d5-f17c-4b18-96cd-2b7ae43dafd7` |
+| `ontology_label_synonyms` | 258 (syn_v2: high, medium, rejected) | `faers_pt` + `label_phrase` | (see `Data/curated`) |
 
 ## How a change reaches Foundry
 

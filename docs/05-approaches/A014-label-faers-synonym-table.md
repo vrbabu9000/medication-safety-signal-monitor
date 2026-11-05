@@ -50,3 +50,17 @@
 - 🩺 PV SME: The bands are sensible. "Parent term = high" (intestinal obstruction covers small intestinal obstruction) is the main judgement call to confirm. Rejected rows are as valuable as accepted ones: they stop the same lead being re-argued.
 - 💊 Safety Officer: The gastric-emptying noise is gone from the top of every GLP-1 list. "Possibly in label" tells her to check the label rather than escalate.
 - 🧐 Evaluator: Good before/after evidence on identical data, plus a Foundry = local check. Still Claude-reviewed; say so until the pharmacist signs.
+
+## Update (2026-11-05): syn_v2
+Leads came from the **top 12 ranked signals per drug**, i.e. what the officer sees first. Every phrase was checked against that drug's reference labels before it was banded (local check script; 2 leads rejected because the phrase was not there: "early satiety", "allodynia").
+
+| | syn_v1 + D016 v3 | syn_v2 |
+|---|---|---|
+| Table rows (high / medium / rejected) | 64 / 54 / 115 | 69 / 72 / 117 (258) |
+| Signals | 1,959 | 1,952 (7 now fully in label) |
+| Ranked | 1,115 | **1,073** (−42) |
+| Possibly in label | 72 | 108 |
+
+- High: Gastric hypomotility → "delays gastric emptying"; Electrocardiogram QT prolonged → "QT (interval) prolongation" (methadone); Euphoric mood → "euphoria".
+- Medium: Gastrointestinal hypomotility (whole gut vs stomach), 7 injection-site and 3 application-site terms → "… site reactions", Respiratory rate decreased, Coma scale abnormal / Unresponsive to stimuli → "coma", Consciousness fluctuating, Wheezing → "bronchospasm", Nasal oedema → "angioedema", Obstructive pancreatitis.
+- Foundry = local exactly; `label_check` = `text+ai_v1+syn_v2` (so evaluation ids changed again, as designed). Semaglutide now: NAION #1, Weight increased #2.

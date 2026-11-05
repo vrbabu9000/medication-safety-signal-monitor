@@ -10,7 +10,7 @@ Mirrors of [ontology_objects.py](ontology_objects.py) (step 6), [ontology_signal
 | `compute_recalls` | `ontology_recall_recalls` · `ontology_link_recall_product` (high/medium matches) · `ontology_link_recall_drug` | `recall_number` · `link_key` |
 | `compute_triage_seed` | `ontology_triage_decisions`: empty, the schema only; rows come from the Action | `decision_id` |
 
-| `ontology_signals.compute` (step 8, [A012](../../../docs/05-approaches/A012-signal-statistics-and-workshop.md)) | `ontology_ae_stats`: per drug × reaction a/b/c/d, PRR, 95% CI, Yates χ², Evans flag (D006), label status + match evidence (D037 text + AI terms) · `ontology_signal_signals`: Evans **and** not in label, bucket (D016 v2), `is_ranked`, `rank_in_bucket`, caution, `evaluation_id` | `stat_key` · `signal_key` |
+| `ontology_signals.compute` (step 8; buckets D016 v3, [A012](../../../docs/05-approaches/A012-signal-statistics-and-workshop.md)) | `ontology_ae_stats`: per drug × reaction a/b/c/d, PRR, 95% CI, Yates χ², Evans flag (D006), label status + match evidence (D037 text + AI terms) · `ontology_signal_signals`: Evans **and** not in label, bucket (D016 v2), `is_ranked`, `rank_in_bucket`, caution, `evaluation_id` | `stat_key` · `signal_key` |
 
 Label check `text+ai_v1+syn_v1`: (1) AI atomic term, (2) exact term or US spelling in a safety section (D037), (3) reviewed synonym phrase (D043): high → `in_label`, medium → `possibly_in_label` (signal kept, not ranked). The table is also written to `ontology_label_synonyms`.
 

@@ -50,3 +50,15 @@ No structural change; same graph, more rows.
 - 🩺 PV SME: GLP-1 reports are dominated by efficacy and product-use terms. Without MedDRA groupings the keyword buckets will keep leaking. The synonym table is the higher-value fix.
 - 💊 Safety Officer: The ranked list now mixes 12 drugs, so she needs a drug filter on the screen.
 - 🧐 Evaluator: Strong reconciliation evidence. The claim "1,355 ranked signals" must not be presented as 1,355 findings; it is a review queue.
+
+## Follow-up (2026-11-05): D016 v3 buckets
+The A013 verdict named efficacy terms ranked as clinical. After the synonym table (A014), the ranked list still led with GLP-1 efficacy and product complaints, so D016 v3 (proposed) widens the buckets. Measured locally, then in Foundry (identical):
+
+| | Before (syn_v1) | After (D016 v3) |
+|---|---|---|
+| Signals | 1,959 | 1,959 (tagged, not removed) |
+| Ranked | 1,210 | **1,115** (−95, −7.9%) |
+| Moved out of the ranked queue | — | 95: first pass product use 44 · efficacy 26 · administrative 12 · social 6 · abuse 3; then 4 more from "hyperphagia" and "corrective lens user" |
+| Semaglutide NAION rank | #2 | **#1** |
+
+Evaluation ids did not change (buckets are not part of the hash), so existing decisions stay linked. Next candidate for synonym table v2: "Gastrointestinal hypomotility" (now 2nd for semaglutide), which matches the labels' "delays gastric emptying".

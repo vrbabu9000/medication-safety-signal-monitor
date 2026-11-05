@@ -3,15 +3,20 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-11-05 — Synonym table syn_v1 built, reviewed (Claude draft) and live in Foundry: ranked 1,355 → 1,210 (Compass v28; D043 accepted) |
+| **Last session** | 2026-11-05 — D016 v3 buckets live: ranked 1,210 → 1,115; NAION #1 for semaglutide (Compass v29) |
 | **Where we are** | Phase 2, steps 1–9 done + A014. 1,959 signals (1,210 ranked, 72 possibly in label) for 12 drugs. NAION unlabeled for semaglutide (ranked 2nd). [A014](docs/05-approaches/A014-label-faers-synonym-table.md) |
-| **Next 3 actions** | 1. (Claude) Propose D016 efficacy update for GLP-1 terms (your OK) · 2. (Claude) Drug filter on the Workshop screen; then step 10 (incremental FAERS) · 3. (you) Name the pharmacist reviewer (long sections, ranked signals, synonym bands) |
-| **Waiting on** | Pharmacist reviewer · tell boss the demo date is open |
+| **Next 3 actions** | 1. (you) Accept or change D016 v3 · 2. (Claude) Drug filter on the Workshop screen; synonym v2 ("Gastrointestinal hypomotility"); then step 10 (incremental FAERS) · 3. (you) Name the pharmacist reviewer |
+| **Waiting on** | Your OK on D016 v3 · pharmacist reviewer · tell boss the demo date is open |
 | **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue with the synonym table and the drug filter, then build-order step 10."_ |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-05 (early, 2) — D016 v3 buckets (Compass v29)
+- **Changed:** wider efficacy / product-use / abuse / social / administrative patterns in [ontology_signals.py](foundry/pipelines/ontology/ontology_signals.py) (list in DECISIONS, D016 v3, proposed). Kept clinical on purpose: weight increased, eating-behaviour terms, fall.
+- **Result (local = Foundry):** ranked 1,210 → **1,115**; signals 1,959 unchanged; 0 duplicate keys; evaluation ids unchanged. NAION is now #1 for semaglutide; "Gastrointestinal hypomotility" (#2) is a synonym-v2 candidate.
+- **Docs:** A013 follow-up section, DECISIONS (D016 v3 + learning), READMEs, Compass v28 snapshot → v29.
 
 ### 2026-11-05 (early) — Label ↔ FAERS synonym table (Compass v27)
 - **Local replica:** the whole 13-drug pipeline now runs on this machine and equals Foundry. Found on the way: DailyMed rate-limited the local pull (HTTP 429 for 744 labels, recorded as error rows, refetched slowly); the runner's reader needed full-row type scanning.

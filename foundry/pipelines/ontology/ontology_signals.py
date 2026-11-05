@@ -34,19 +34,30 @@ BUCKETS = [  # keyword stand-in for MedDRA groupings (no MedDRA licence); review
                           r"device |product use|medication error|product dose|underdose|extra dose|wrong drug|product storage|product quality|"
                           r"product substitution|product prescribing|intercepted|counterfeit|product tampering|prescription form|"
                           r"contraindicated product|product administered|product formulation|product physical|product container|packaging|"
-                          r"drug-drug interaction|drug interaction|labelled drug"),
+                          r"drug-drug interaction|drug interaction|labelled drug|"
+                          # D016 v3: any "Product ..." complaint except efficacy, dispensing/titration/route/form/dose errors, devices
+                          r"^product (?!ineffective)|dispensing|titration|incorrect route|incorrect product|wrong dos|wrong patient|"
+                          r"administration error|administration rate|single-use|compounding|associated with device|therapy error|"
+                          r"noncompliance|infectious agent via product"),
     ("efficacy", r"drug ineffective|therapeutic product effect|drug effect less|therapy non-responder|treatment failure|inadequate analgesia|"
-                 r"drug effect decreased|therapeutic response decreased|drug tolerance"),
+                 r"drug effect decreased|therapeutic response decreased|drug tolerance|"
+                 # D016 v3: GLP-1 weight / appetite / glucose-control outcomes are about efficacy, not new harms
+                 r"therapeutic response changed|therapeutic response shortened|product ineffective|weight loss poor|^hunger$|"
+                 r"increased appetite|food craving|lack of satiety|^hyperphagia$|glycosylated haemoglobin|inadequate control"),
     ("abuse_overdose", r"overdose|drug abuse|abuse|dependence|withdrawal|misuse|intentional|toxicity to various|diversion|drug use disorder|"
                        r"substance use|addiction|drug screen|blood drug level|drug level increased|postmortem|pharmaceutical nomadism|"
-                       r"drug seeking|accidental exposure|accidental poisoning|poisoning|without a prescription|detoxification"),
+                       r"drug seeking|accidental exposure|accidental poisoning|poisoning|without a prescription|detoxification|"
+                       r"illicit|needle track"),
     ("pregnancy_neonatal", r"pregnancy|foetal|fetal|neonatal|maternal|exposure via breast|premature|congenital|malformation|developmental|"
                            r"learning disability|cerebral ventricle dilatation|in utero|birth"),
     ("social_legal", r"homicide|assault|victim|neglect|imprisonment|incarceration|arrest|legal problem|high risk sexual|impaired driving|"
-                     r"road traffic|completed suicide|suicid|death of relative|domestic|homeless|social problem|criminal|gun shot|stab wound"),
+                     r"road traffic|completed suicide|suicid|death of relative|domestic|homeless|social problem|criminal|gun shot|stab wound|"
+                     r"work ability"),
     ("litigation_style", r"emotional distress|injury$|loss of employment|anxiety$|impaired quality of life|economic problem|"
                          r"loss of personal independence"),
-    ("administrative", r"medical observation|hospitalisation|hospitalization|no adverse event|unevaluable|general physical health deterioration"),
+    ("administrative", r"medical observation|hospitalisation|hospitalization|no adverse event|unevaluable|general physical health deterioration|"
+                       # D016 v3: procedures and treatments are what was done, not a reaction
+                       r" therapy$|^physiotherapy$|medical procedure|surgery$|ectomy$|transplant$|lens user$"),
 ]
 _US = [("oesophag", "esophag"), ("oedema", "edema"), ("diarrhoea", "diarrhea"), ("haem", "hem"), ("anaem", "anem"), ("aemia", "emia"),
        ("oestr", "estr"), ("foet", "fet"), ("paed", "ped"), ("isation", "ization"), ("ise ", "ize "), ("yse ", "yze "), ("leukaem", "leukem"),

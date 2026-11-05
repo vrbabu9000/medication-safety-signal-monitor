@@ -52,7 +52,7 @@ No structural change; same graph, more rows.
 - 🧐 Evaluator: Strong reconciliation evidence. The claim "1,355 ranked signals" must not be presented as 1,355 findings; it is a review queue.
 
 ## Follow-up (2026-11-05): D016 v3 buckets
-The A013 verdict named efficacy terms ranked as clinical. After the synonym table (A014), the ranked list still led with GLP-1 efficacy and product complaints, so D016 v3 (proposed) widens the buckets. Measured locally, then in Foundry (identical):
+The A013 verdict named efficacy terms ranked as clinical. After the synonym table (A014), the ranked list still led with GLP-1 efficacy and product complaints, so D016 v3 (accepted 2026-11-05) widens the buckets. Measured locally, then in Foundry (identical):
 
 | | Before (syn_v1) | After (D016 v3) |
 |---|---|---|

@@ -42,17 +42,17 @@ Every source: exports **off**; "import into code repositories" **on**; compute m
 
 ### Raw datasets built
 
-All in `Data/raw`, full snapshot each build, oxycodone slice (2026-11-04). "Check" = the count we compared against the source.
+All in `Data/raw`, full snapshot each build, **13-drug formulary since step 9** (2026-11-04; was the oxycodone slice). "Check" = the count we compared against the source, per drug in Foundry SQL.
 
 | Dataset | Rows | Check | RID |
 |---|---|---|---|
-| `raw_openfda_enforcement` | 25 | = openFDA total 25 | `ri.foundry.main.dataset.467890f6-bd3a-4088-b3ce-b6645498e65d` |
-| `raw_openfda_drugsfda` | 141 | = openFDA total 141; OxyContin NDA022272 present | `ri.foundry.main.dataset.23a81f16-a77e-40ad-bb1b-4548bf5ded23` |
-| `raw_openfda_ndc` | 313 | = openFDA total 313; 8 products under NDA022272 | `ri.foundry.main.dataset.8c02f006-233d-4d81-a6a8-f5e432cecb37` |
-| `raw_dailymed_spl_index` | 263 | = DailyMed total 263 | `ri.foundry.main.dataset.3c7c4178-33b8-4061-bdcd-a8f600ecb26c` |
-| `raw_dailymed_spl_xml` | 263 (14.2 MB) | 0 errors, 0 version mismatches; OxyContin `bfdfe235…` v44 = reference trace T13 | `ri.foundry.main.dataset.72097730-4717-4853-a711-4be8e27efb13` |
-| `raw_rxnorm_lookup` | 2 | oxycodone → 7804; oxycodone hydrochloride → 82063 | (see `Data/raw`) |
-| `raw_rxnorm_related` | 271 | = local run 271 (RxNorm 02-Nov-2026) | (see `Data/raw`) |
+| `raw_openfda_enforcement` | 930 (900 distinct recalls) | = openFDA total for each of 13 drugs; 0 error rows | `ri.foundry.main.dataset.467890f6-bd3a-4088-b3ce-b6645498e65d` |
+| `raw_openfda_drugsfda` | 663 | = openFDA total for each of 13 drugs; 0 error rows | `ri.foundry.main.dataset.23a81f16-a77e-40ad-bb1b-4548bf5ded23` |
+| `raw_openfda_ndc` | 1,824 | = openFDA total for each of 13 drugs; 0 error rows | `ri.foundry.main.dataset.8c02f006-233d-4d81-a6a8-f5e432cecb37` |
+| `raw_dailymed_spl_index` | 1,321 setids | = DailyMed total for each of 13 drugs | `ri.foundry.main.dataset.3c7c4178-33b8-4061-bdcd-a8f600ecb26c` |
+| `raw_dailymed_spl_xml` | 1,321 | 0 HTTP errors, 0 version mismatches; **2 replies are the text "None" with HTTP 200** (tramadol repackager labels, DQ42) | `ri.foundry.main.dataset.72097730-4717-4853-a711-4be8e27efb13` |
+| `raw_rxnorm_lookup` | 13 ingredients + 1 salt string | widened at step 9; not re-counted row by row | (see `Data/raw`) |
+| `raw_rxnorm_related` | (13 ingredients) | widened at step 9; identity result checked downstream (39 lookup strings) | (see `Data/raw`) |
 | `raw_faers_quarter_files` | 37 files | files dataset (not a table) | `ri.foundry.main.dataset.de0e0c09-28ee-480c-9296-e96f127f9532` |
 | `raw_faers_quarter_manifest` | 37 | Q1 352,984,542 B / Q2 337,724,653 B; sha256 = local copies | `ri.foundry.main.dataset.539ccd4c-55b3-48cc-924e-baf55d5da0ce` |
 | `raw_openfda_enforcement_access_test` | 1 | access test only; can be deleted later | `ri.foundry.main.dataset.b1b1999d-7d65-4010-b2ff-28449a50cf1e` |
@@ -64,10 +64,10 @@ Checked in Foundry SQL: **0 duplicate keys in each**; the OxyContin chain (7804 
 | Dataset | Rows | Key | RID |
 |---|---|---|---|
 | `clean_drug_ingredients` | 13 | `ingredient_rxcui` | `ri.foundry.main.dataset.13768528-5de2-41f7-8847-640f721b15fc` |
-| `clean_drug_identity` | 8 | `lookup_string` | `ri.foundry.main.dataset.fb64198f-7b8b-4c95-a26b-580a347071fa` |
-| `clean_drug_product_map` | 141 | `ingredient_rxcui` + `product_key` | `ri.foundry.main.dataset.39544a6a-e39a-40ef-8da4-012f7322723b` |
-| `clean_drug_package_map` | 937 | `package_ndc11` | `ri.foundry.main.dataset.7a29f351-8847-47ac-b7e8-22c21d9a6a69` |
-| `clean_label_product_map` | 269 | `setid` + `spl_version` + `application_number` | `ri.foundry.main.dataset.9f37f742-13b7-4f79-bdc3-4d08f0527f40` |
+| `clean_drug_identity` | 39 (step 9) | `lookup_string` | `ri.foundry.main.dataset.fb64198f-7b8b-4c95-a26b-580a347071fa` |
+| `clean_drug_product_map` | 658 (step 9) | `ingredient_rxcui` + `product_key` | `ri.foundry.main.dataset.39544a6a-e39a-40ef-8da4-012f7322723b` |
+| `clean_drug_package_map` | 4,293 (step 9) | `package_ndc11` | `ri.foundry.main.dataset.7a29f351-8847-47ac-b7e8-22c21d9a6a69` |
+| `clean_label_product_map` | 1,386 (step 9) | `setid` + `spl_version` + `application_number` | `ri.foundry.main.dataset.9f37f742-13b7-4f79-bdc3-4d08f0527f40` |
 
 ### Clean baseline built (`Data/clean`, step 5, 2026-11-04)
 
@@ -77,11 +77,11 @@ Checked in Foundry SQL: **0 duplicate keys in each**; every count equals the loc
 |---|---|---|---|
 | `clean_faers_cases_current` | 792,346 (1,530 `dup_suppressed`) | `caseid` | `ri.foundry.main.dataset.cf4d8b32-006e-42ab-8a4b-8b02b5a9fe56` |
 | `clean_faers_case_reactions` | 2,554,017 | `caseid` + `pt` | `ri.foundry.main.dataset.e2bbab66-b5ce-4a85-a5b4-e095731da488` |
-| `clean_faers_drug_reaction` | 75,006 (31,018 after fold; oxycodone 4,464 → 3,408 cases) | `caseid` + `ingredient_rxcui` + `pt` | `ri.foundry.main.dataset.ee3b0d07-4751-4402-80db-2c6d9b3d8667` |
-| `clean_label_versions` | 263 | `setid` + `spl_version` | `ri.foundry.main.dataset.e87ac84a-8b77-4c8f-938d-9e0d3559c1ce` |
-| `clean_label_sections` | 1,160 | `setid` + `spl_version` + `section_code` | `ri.foundry.main.dataset.11d2cc25-d4c8-4f24-b5de-0ac4cdfddd22` |
-| `clean_recalls_current` | 25 (4 active) | `recall_number` | `ri.foundry.main.dataset.3f5dce51-9412-4892-85b5-436e97f64e15` |
-| `clean_recall_product_match` | 58 (11 high-confidence package matches) | `recall_number` + `match_target` + `match_key` | `ri.foundry.main.dataset.4144615f-e80b-491f-ae26-b4a8d2023f6d` |
+| `clean_faers_drug_reaction` | 373,522 for 13 drugs (step 9; oxycodone unchanged 4,464 → 3,408 cases; semaglutide 21,034 = Oct 20 walkthrough) | `caseid` + `ingredient_rxcui` + `pt` | `ri.foundry.main.dataset.ee3b0d07-4751-4402-80db-2c6d9b3d8667` |
+| `clean_label_versions` | 1,321 (2 without usable XML, DQ42) | `setid` + `spl_version` | `ri.foundry.main.dataset.e87ac84a-8b77-4c8f-938d-9e0d3559c1ce` |
+| `clean_label_sections` | 5,431 | `setid` + `spl_version` + `section_code` | `ri.foundry.main.dataset.11d2cc25-d4c8-4f24-b5de-0ac4cdfddd22` |
+| `clean_recalls_current` | 900 (126 ongoing) | `recall_number` | `ri.foundry.main.dataset.3f5dce51-9412-4892-85b5-436e97f64e15` |
+| `clean_recall_product_match` | 1,933 | `recall_number` + `match_target` + `match_key` | `ri.foundry.main.dataset.4144615f-e80b-491f-ae26-b4a8d2023f6d` |
 
 ### Curated datasets built (`Data/curated`, step 6, 2026-11-04)
 
@@ -90,18 +90,18 @@ They back the Ontology ([foundry/ontology](ontology/README.md)). Built by [ontol
 | Dataset | Rows | Key | RID |
 |---|---|---|---|
 | `ontology_drug_drugs` | 13 | `ingredient_rxcui` | `ri.foundry.main.dataset.5f757c65-2871-4287-a626-36cb105085a6` |
-| `ontology_product_products` | 141 (34 with a reference label) | `product_key` | `ri.foundry.main.dataset.33f79c11-4199-4b6b-9b5e-89c413921bba` |
-| `ontology_label_labels` | 263 | `label_key` | `ri.foundry.main.dataset.42a0f5f1-c37f-4b45-ae0d-a6cdf40410da` |
-| `ontology_recall_recalls` | 25 | `recall_number` | `ri.foundry.main.dataset.c13cd5e7-ec0a-4497-8aa3-9f1663908080` |
-| `ontology_link_drug_product` | 141 | `link_key` | `ri.foundry.main.dataset.8d1377f5-954c-49e7-abf8-8e5a053c27ef` |
-| `ontology_link_product_label` | 265 | `link_key` | `ri.foundry.main.dataset.4db5d0d7-e786-461b-b664-429b4a92d3b7` |
-| `ontology_link_recall_product` | 11 | `link_key` | `ri.foundry.main.dataset.53604667-d496-47cd-9fb1-033ede3b6f84` |
-| `ontology_link_recall_drug` | 26 | `link_key` | `ri.foundry.main.dataset.a49f8d73-8f31-43e2-b1bd-027b769a2d25` |
-| `ontology_triage_decisions` | 0 (Action-owned) | `decision_id` | `ri.foundry.main.dataset.88c5b012-c746-47ea-b6fd-230c18d7da70` |
+| `ontology_product_products` | 658 (182 with a reference label) | `product_key` | `ri.foundry.main.dataset.33f79c11-4199-4b6b-9b5e-89c413921bba` |
+| `ontology_label_labels` | 1,321 | `label_key` | `ri.foundry.main.dataset.42a0f5f1-c37f-4b45-ae0d-a6cdf40410da` |
+| `ontology_recall_recalls` | 900 | `recall_number` | `ri.foundry.main.dataset.c13cd5e7-ec0a-4497-8aa3-9f1663908080` |
+| `ontology_link_drug_product` | 658 | `link_key` | `ri.foundry.main.dataset.8d1377f5-954c-49e7-abf8-8e5a053c27ef` |
+| `ontology_link_product_label` | 1,293 | `link_key` | `ri.foundry.main.dataset.4db5d0d7-e786-461b-b664-429b4a92d3b7` |
+| `ontology_link_recall_product` | 85 | `link_key` | `ri.foundry.main.dataset.53604667-d496-47cd-9fb1-033ede3b6f84` |
+| `ontology_link_recall_drug` | 930 | `link_key` | `ri.foundry.main.dataset.a49f8d73-8f31-43e2-b1bd-027b769a2d25` |
+| `ontology_triage_decisions` | 0 in the dataset; 2 decisions live as Action edits | `decision_id` | `ri.foundry.main.dataset.88c5b012-c746-47ea-b6fd-230c18d7da70` |
 | `ai_label_section_extractions` | 9 (pilot, step 7) | `cache_key` | `ri.foundry.main.dataset.48f642bc-e242-429d-ae71-f93cb5400b02` |
 | `ontology_labeled_reactions` | 448 (prompt p2; all quotes grounded) | `labeled_reaction_key` | `ri.foundry.main.dataset.407104e1-6078-4eb9-b2b5-d02933261cbf` |
-| `ontology_ae_stats` | 1,382 (329 meet Evans) | `stat_key` | `ri.foundry.main.dataset.1c1d39d3-c423-471c-9822-52c2a7db1093` |
-| `ontology_signal_signals` | 271 (125 ranked) | `signal_key` | `ri.foundry.main.dataset.1ece78d5-f17c-4b18-96cd-2b7ae43dafd7` |
+| `ontology_ae_stats` | 14,921 for 13 drugs (step 9; oxycodone 1,382 unchanged) | `stat_key` | `ri.foundry.main.dataset.1c1d39d3-c423-471c-9822-52c2a7db1093` |
+| `ontology_signal_signals` | 2,047 for 12 drugs, 1,355 ranked (step 9; oxycodone 271 / 125 unchanged) | `signal_key` | `ri.foundry.main.dataset.1ece78d5-f17c-4b18-96cd-2b7ae43dafd7` |
 
 ## How a change reaches Foundry
 

@@ -10,7 +10,7 @@ from pyspark.sql.types import IntegerType, StringType, StructField, StructType
 from transforms.api import transform_df, Output
 from transforms.external.systems import external_systems, Source
 
-INGREDIENTS = ["oxycodone"]
+INGREDIENTS = ["fentanyl", "morphine", "hydromorphone", "oxycodone", "hydrocodone", "methadone", "buprenorphine", "tramadol", "semaglutide", "tirzepatide", "liraglutide", "dulaglutide", "exenatide"]  # D018 formulary; widened at step 9 (D039 G1)
 PAGE_SIZE = 1000
 DRUGSFDA_FIELDS = ["application_number", "sponsor_name"]
 NDC_FIELDS = ["product_ndc", "product_id", "application_number", "generic_name", "brand_name", "labeler_name", "marketing_category", "dosage_form", "product_type", "finished"]

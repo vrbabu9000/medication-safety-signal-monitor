@@ -37,8 +37,8 @@ def walk(sec, depth=1):
         yield from walk(sub, depth + 1)
 
 
-def good_xml(df):
-    return df.filter((pl.col("http_status").cast(pl.Utf8) == "200") & pl.col("xml_text").is_not_null())
+def good_xml(df):  # DailyMed can answer 200 with the text "None" (2 tramadol repackager labels, step 9): not XML, so left out; has_xml shows it
+    return df.filter((pl.col("http_status").cast(pl.Utf8) == "200") & pl.col("xml_text").is_not_null() & pl.col("xml_text").str.starts_with("<"))
 
 
 @transform.using(out=Output(CLEAN + "clean_label_versions"), index=Input(RAW + "raw_dailymed_spl_index"), xml=Input(RAW + "raw_dailymed_spl_xml"))

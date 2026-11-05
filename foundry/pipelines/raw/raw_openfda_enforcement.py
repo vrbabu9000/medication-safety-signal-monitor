@@ -10,7 +10,7 @@ from transforms.api import transform_df, Output
 from transforms.external.systems import external_systems, Source
 
 ENDPOINT = "/drug/enforcement.json"
-INGREDIENTS = ["oxycodone"]
+INGREDIENTS = ["fentanyl", "morphine", "hydromorphone", "oxycodone", "hydrocodone", "methadone", "buprenorphine", "tramadol", "semaglutide", "tirzepatide", "liraglutide", "dulaglutide", "exenatide"]  # D018 formulary; widened at step 9 (D039 G1)
 PAGE_SIZE = 1000
 FIELDS = ["recall_number", "event_id", "status", "classification", "report_date", "recall_initiation_date", "termination_date"]
 SCHEMA = StructType(

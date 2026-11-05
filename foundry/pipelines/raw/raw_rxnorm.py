@@ -11,7 +11,7 @@ from transforms.api import transform, Output
 from transforms.external.systems import external_systems, Source
 
 API = "/REST"
-INGREDIENTS = ["oxycodone"]
+INGREDIENTS = ["fentanyl", "morphine", "hydromorphone", "oxycodone", "hydrocodone", "methadone", "buprenorphine", "tramadol", "semaglutide", "tirzepatide", "liraglutide", "dulaglutide", "exenatide"]  # D018 formulary; widened at step 9 (D039 G1)
 # Salt forms are looked up too, so the clean layer can show why exact ingredient matching strips salts (D020).
 EXTRA_STRINGS = ["oxycodone hydrochloride"]
 LOOKUP_SCHEMA = StructType([StructField(c, IntegerType() if c in ("http_status", "rxcui_count") else StringType()) for c in ["lookup_string", "rxnorm_version", "api_version", "request_params", "http_status", "rxcui_list", "rxcui_count", "retrieved_at", "record_json", "error_text"]])

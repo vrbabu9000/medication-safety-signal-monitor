@@ -15,7 +15,7 @@ Rules every raw transform follows:
 - Keep the original payload (JSON, XML or file) next to a few parsed columns.
 - Save `request_params`, `http_status`, `retrieved_at` and the source's own "last updated" field.
 - A non-200 reply becomes an **error row**, never a silent gap.
-- Scope is the `INGREDIENTS` list at the top of each file. It's oxycodone only today; widening to 13 is D039 G1.
+- Scope is the `INGREDIENTS` list at the top of each file: all 13 formulary ingredients since step 9 (D039 G1, D031 v5).
 - Verify each build: row count = the source's own total (`meta.results.total`, `total_elements`, manifest bytes).
 
-Open items: use secret `OpenFdaApiKey` in both openFDA files before widening (needed above ~1,000 requests/day). Make DailyMed and FAERS incremental at build-order step 10.
+Open items: secret `OpenFdaApiKey` is still unused. The 13-drug pull needs about 50 openFDA requests, well under the no-key limit (1,000/day); add the key before daily refreshes or more drugs. Make DailyMed and FAERS incremental at build-order step 10.

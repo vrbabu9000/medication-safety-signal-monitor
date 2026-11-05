@@ -12,13 +12,13 @@ from transforms.api import Input, Output, transform
 
 RAW = "/kestrel-01f4ab/Medication Safety Signal Monitor/Data/raw/"
 CLEAN = "/kestrel-01f4ab/Medication Safety Signal Monitor/Data/clean/"
-# D018 formulary (13 ingredient RxCUIs). in_slice = pulled into raw today (D039 G1: widen after the oxycodone slice works).
+# D018 formulary (13 ingredient RxCUIs). in_slice = pulled into raw today; all 13 since step 9 (D039 G1).
 FORMULARY = [
-    ("4337", "fentanyl", "opioid", False), ("7052", "morphine", "opioid", False), ("3423", "hydromorphone", "opioid", False),
-    ("7804", "oxycodone", "opioid", True), ("5489", "hydrocodone", "opioid", False), ("6813", "methadone", "opioid", False),
-    ("1819", "buprenorphine", "opioid", False), ("10689", "tramadol", "opioid", False), ("1991302", "semaglutide", "glp1", False),
-    ("2601723", "tirzepatide", "glp1", False), ("475968", "liraglutide", "glp1", False), ("1551291", "dulaglutide", "glp1", False),
-    ("60548", "exenatide", "glp1", False),
+    ("4337", "fentanyl", "opioid", True), ("7052", "morphine", "opioid", True), ("3423", "hydromorphone", "opioid", True),
+    ("7804", "oxycodone", "opioid", True), ("5489", "hydrocodone", "opioid", True), ("6813", "methadone", "opioid", True),
+    ("1819", "buprenorphine", "opioid", True), ("10689", "tramadol", "opioid", True), ("1991302", "semaglutide", "glp1", True),
+    ("2601723", "tirzepatide", "glp1", True), ("475968", "liraglutide", "glp1", True), ("1551291", "dulaglutide", "glp1", True),
+    ("60548", "exenatide", "glp1", True),
 ]
 SALTS = ["HYDROCHLORIDE", "HCL", "BITARTRATE", "TARTRATE", "SULFATE", "CITRATE", "PHOSPHATE", "MYRISTATE", "TEREPHTHALATE", "ACETATE", "MESYLATE", "SODIUM", "MALEATE", "BROMIDE"]
 

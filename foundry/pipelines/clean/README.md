@@ -6,7 +6,7 @@ Clean transforms read **raw datasets only**: no external sources, no web calls. 
 
 | File | Outputs | Key | Rule |
 |---|---|---|---|
-| [clean_drug_identity.py](clean_drug_identity.py) | `clean_drug_ingredients` | `ingredient_rxcui` | D018 formulary (13), `in_slice` marks what is pulled today |
+| [clean_drug_identity.py](clean_drug_identity.py) | `clean_drug_ingredients` | `ingredient_rxcui` | D018 formulary (13), `in_slice` = pulled today (all 13 since step 9) |
 | | `clean_drug_identity` | `lookup_string` | D020: exact RxNorm IN/PIN name, then salt strip; never substring; unmatched kept |
 | | `clean_drug_product_map` | `ingredient_rxcui` + `product_key` | D039 G2: product = application number; combination flag |
 | | `clean_drug_package_map` | `package_ndc11` | 11-digit NDC (4-4-2/5-3-2/5-4-1 padded); no application number → `labeler:<product_ndc>` (D-R6) |

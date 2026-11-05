@@ -12,7 +12,7 @@ from transforms.api import transform, Output
 from transforms.external.systems import external_systems, Source
 
 API = "/dailymed/services/v2"
-INGREDIENTS = ["oxycodone"]
+INGREDIENTS = ["fentanyl", "morphine", "hydromorphone", "oxycodone", "hydrocodone", "methadone", "buprenorphine", "tramadol", "semaglutide", "tirzepatide", "liraglutide", "dulaglutide", "exenatide"]  # D018 formulary; widened at step 9 (D039 G1)
 PAGE_SIZE = 100
 INDEX_SCHEMA = StructType([StructField(c, IntegerType() if c in ("http_status", "spl_version", "result_total") else StringType()) for c in ["search_ingredient", "request_params", "http_status", "result_total", "source_published", "retrieved_at", "setid", "spl_version", "title", "published_date", "record_json", "error_text"]])
 XML_SCHEMA = StructType([StructField(c, IntegerType() if c in ("http_status", "index_spl_version", "xml_version_number", "xml_bytes") else StringType()) for c in ["setid", "index_spl_version", "xml_version_number", "effective_time", "http_status", "source_url", "retrieved_at", "xml_bytes", "xml_text", "error_text"]])

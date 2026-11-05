@@ -3,15 +3,22 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-11-04 — Step 8 done and polished (Workshop v0.3: rounded numbers, readable decisions table, evidence in reading order). D023 v2, D016 v2, D042 accepted. Compass v25 |
-| **Where we are** | Phase 2, build-order steps 1–8 done for the oxycodone pilot. 271 signals (Evans + not in label), 125 ranked. AI: 448/448 quotes exact, strict recall 1.00 on short gold sections. [A012](docs/05-approaches/A012-signal-statistics-and-workshop.md) · [Workshop notes](foundry/ontology/README.md#workshop-module) |
-| **Next 3 actions** | 1. (Claude) Step 9: widen to 13 drugs with `OpenFdaApiKey` · 2. (Claude) Link each signal to the labels searched; show reviewer names · 3. (you) Name the pharmacist reviewer (long sections + the 125 ranked signals) |
+| **Last session** | 2026-11-04 — Step 9 done: all 13 formulary drugs run raw → signals in Foundry; every count reconciled (Compass v26) |
+| **Where we are** | Phase 2, build-order steps 1–9 done. 2,047 signals for 12 drugs (1,355 ranked), 900 recalls (126 ongoing), 1,321 labels. AI still on 2 pilot labels. [A013](docs/05-approaches/A013-widen-to-formulary.md) |
+| **Next 3 actions** | 1. (Claude) Label ↔ FAERS synonym table + propose D016 efficacy update for GLP-1 terms (your OK) · 2. (Claude) Drug filter on the Workshop screen; then step 10 (incremental FAERS) · 3. (you) Name the pharmacist reviewer |
 | **Waiting on** | Pharmacist reviewer for the reference set · tell boss the demo date is open |
-| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 9 (widen to the formulary)."_ |
+| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue with the synonym table and the drug filter, then build-order step 10."_ |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-04 (night, 8) — Step 9: 13-drug formulary end to end (Compass v26)
+- **Changed:** `INGREDIENTS` in the 4 raw API pulls → 13 drugs; `in_slice` true for all 13 ([clean_drug_identity.py](foundry/pipelines/clean/clean_drug_identity.py)). Edited in Foundry with find-and-replace, committed in both repos.
+- **Raw = source** for every drug: recalls 930 rows (900 recalls), Drugs@FDA 663, NDC 1,824, DailyMed 1,321 labels; 0 error rows; ~50 openFDA calls, so no API key needed yet.
+- **Bug found:** DailyMed answered HTTP 200 with the text "None" for 2 tramadol labels, and the label build crashed. Fixed in [clean_labels.py](foundry/pipelines/clean/clean_labels.py) (DQ42).
+- **Result:** FAERS 373,522 drug-reaction rows; 14,921 stats → 2,047 signals (1,355 ranked). Oxycodone identical to step 8 (the test decision still matches). Semaglutide reports 21,034 = Oct 20 walkthrough. 0 duplicate keys; AI cache 0 calls; Ontology re-indexed.
+- **Seen:** for GLP-1s, synonym misses and efficacy terms top the list; NAION is ranked 3rd for semaglutide. Decided: D031 v5 (13 drugs, via G1). Docs: [A013](docs/05-approaches/A013-widen-to-formulary.md), DECISIONS, READMEs, DQ42.
 
 ### 2026-11-04 (night, 7) — Workshop polish v0.3 (Compass v25)
 - **Numbers:** PRR 1 decimal, CI 2, χ² 1, mass share 2. Set as number format on the MSSM Signal properties in Ontology Manager; the stored values are unchanged.

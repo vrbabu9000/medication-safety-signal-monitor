@@ -3,15 +3,28 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-11-04 — Prompt p2 (atomic terms) live: strict recall 0.31 → 1.00 on short gold sections, 448/448 grounded (Compass v22) |
-| **Where we are** | Phase 2, build-order steps 1–7 done (7 = pilot). AI: Claude Sonnet 5.5 on 2 labels / 9 sections, 403/403 quotes exact, recall 0.91 on gold, 0 calls on unchanged rebuild. Ontology: 6 object types incl. Labeled Reaction. [A011](docs/05-approaches/A011-ai-label-extraction-pilot.md) · [run notes](eval/gold-set/runs/step7-run1-notes.md) |
-| **Next 3 actions** | 1. (Claude) Step 8: PRR stats for oxycodone (D006) from clean FAERS, and compare reactions with LabeledReactions (string rule D037) · 2. (Claude) Step 8: first signal object + Workshop screen with the triage Action · 3. (you) Name the pharmacist reviewer: long sections (~400 items) to check |
+| **Last session** | 2026-11-04 — Step 8 done: PRR stats + signals in Foundry; Workshop module **MSSM Safety Officer** built; triage submit → reload → persists ✅ (Compass v23) |
+| **Where we are** | Phase 2, build-order steps 1–8 done for the oxycodone pilot. 271 signals (Evans + not in label), 125 ranked. AI: 448/448 quotes exact, strict recall 1.00 on short gold sections. [A012](docs/05-approaches/A012-signal-statistics-and-workshop.md) · [Workshop notes](foundry/ontology/README.md#workshop-module) |
+| **Next 3 actions** | 1. (you) Accept or change D023 v2, D016 v2, D042 in [DECISIONS](docs/06-decisions/DECISIONS.md) · 2. (Claude) Polish: PRR/χ² decimals, taller decisions table, label quote on screen; then step 9: widen to 13 drugs with `OpenFdaApiKey` · 3. (you) Name the pharmacist reviewer (long sections + the 125 ranked signals) |
 | **Waiting on** | Pharmacist reviewer for the reference set · tell boss the demo date is open |
-| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 8 (statistics + signal in Workshop)."_ |
+| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 9 (widen to the formulary)."_ |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-04 (night, 6) — Step 8 done: Workshop screen + triage (Compass v23)
+- **Built:** Workshop module **MSSM Safety Officer** in `Workshop/` (published v0.2.0). Left: ranked signals (125, sorted by rank, plain column names). Right: *Triage this signal* button → Create MSSM Triage Decision with Subject Type / Subject Key / Evaluation Id filled from the selected signal and locked; decisions for that signal; full signal record. Details: [foundry/ontology README](foundry/ontology/README.md#workshop-module).
+- **Gate:** selected *Oxycodone · Myoclonus* → submitted "reviewing" (rationale marked STEP 8 WORKSHOP TEST) → "Edits successfully applied" → full reload → row still there (decided 8:19 PM, evaluation id `cbcd091262d23bd6`) ✅.
+- **Docs:** [A012](docs/05-approaches/A012-signal-statistics-and-workshop.md); DECISIONS: **D042**, **D023 v2**, **D016 v2** (all proposed, need your OK) + 4 learnings; foundry READMEs (curated RIDs, new object types and links, Workshop); Compass v22 snapshot → v23.
+- **Open polish:** PRR shows 12 decimals; decisions table too short; "Toothache"-type noise still ranked → synonym table + pharmacist read.
+
+### 2026-11-04 (night, 5) — Step 8 started (not finished)
+- **Built:** [ontology_signals.py](foundry/pipelines/ontology/ontology_signals.py) in `pipelines_clean` → `ontology_ae_stats` 1,382 rows, `ontology_signal_signals` 271 (125 ranked, 80 with "mostly_mass_reports" caution). PRR matches the Oct 20 prototype (Drug dependence a=506, PRR 114.7). Label check: 127 AI-term matches, 87 text matches.
+- **Found:** a Canadian mass-polypharmacy cluster (465 of 3,408 oxycodone cases have ≥30 drugs; median 122 drugs, ages changing) put pemphigus, rheumatic fever etc. at the top. D023's exact-person rule misses it. Fix in code (proposed **D023 v2**, needs your OK): reports with ≥30 drugs leave the primary population; their counts stay visible. D016 buckets widened (social/legal, counterfeit, developmental, administrative).
+- **Ontology:** object types MSSM Signal, MSSM AE Stat; links Signal→Drug, AE Stat→Drug, Signal→AE Stat, Triage Decision→Signal (on subject_key). Saved.
+- **Incident:** the browser resized mid-step and the signals code was pasted into `ai_label_extraction.py`; restored to p2 before any build (master verified clean).
+- **Not done:** Workshop screen; docs (A012, D023 v2, Compass bump); mirror READMEs.
 
 ### 2026-11-04 (night, 4) — Prompt p2: one reaction per item (Compass v22)
 - **Changed:** `PROMPT_VERSION` p1 → **p2** in [ai_label_extraction.py](foundry/pipelines/ai/ai_label_extraction.py). New rules: split lists, name included sub-conditions, list risk headings, drop severity words, no mechanisms or programmes. The new cache key meant 9 fresh calls, as intended.

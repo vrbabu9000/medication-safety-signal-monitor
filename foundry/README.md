@@ -8,11 +8,11 @@ Reference: [Foundry conventions](../docs/04-architecture/foundry-conventions/REA
 |---|---|---|---|
 | `pipelines/raw/` | Ingestion transforms (one file per pull) | A | ✅ 6 files, [README](pipelines/raw/README.md) |
 | `pipelines/clean/` | Cleaning, dedup, **shared drug identity** (resolved once) | A | ✅ identity (step 4) + FAERS, labels, recalls (step 5), [README](pipelines/clean/README.md) |
-| `pipelines/ontology/` | Datasets that back Ontology objects | A | ✅ step 6, [ontology_objects.py](pipelines/ontology/ontology_objects.py) (runs in repo `pipelines_clean`) |
+| `pipelines/ontology/` | Datasets that back Ontology objects | A | ✅ step 6 + 8, [ontology_objects.py](pipelines/ontology/ontology_objects.py), [ontology_signals.py](pipelines/ontology/ontology_signals.py) (run in repo `pipelines_clean`) |
 | `ontology/` | Object types, links, Actions (definitions + notes) | A, C | ✅ [README](ontology/README.md) |
 | `ai-function/` | Label-extraction prompts, AIP Logic notes, grounding check | B | superseded by `pipelines/ai/` |
 | `pipelines/ai/` | AI label extraction transform (Claude Sonnet 5.5, cached, grounded) | B | ✅ pilot step 7, [README](pipelines/ai/README.md) |
-| `app/` | Workshop layout notes and screenshots | C | ⚪ |
+| `app/` | Workshop layout notes and screenshots | C | 🟡 module **MSSM Safety Officer** built (step 8); notes in [ontology README](ontology/README.md#workshop-module) |
 | `monitoring/` | Data expectations, health checks, drift checks | D | ⚪ |
 | `tools/local_run/` | Run a transform on your machine with stand-ins for Foundry's library | — | ✅ [README](tools/local_run/README.md) |
 
@@ -99,7 +99,9 @@ They back the Ontology ([foundry/ontology](ontology/README.md)). Built by [ontol
 | `ontology_link_recall_drug` | 26 | `link_key` | `ri.foundry.main.dataset.a49f8d73-8f31-43e2-b1bd-027b769a2d25` |
 | `ontology_triage_decisions` | 0 (Action-owned) | `decision_id` | `ri.foundry.main.dataset.88c5b012-c746-47ea-b6fd-230c18d7da70` |
 | `ai_label_section_extractions` | 9 (pilot, step 7) | `cache_key` | `ri.foundry.main.dataset.48f642bc-e242-429d-ae71-f93cb5400b02` |
-| `ontology_labeled_reactions` | 403 (all quotes grounded) | `labeled_reaction_key` | `ri.foundry.main.dataset.407104e1-6078-4eb9-b2b5-d02933261cbf` |
+| `ontology_labeled_reactions` | 448 (prompt p2; all quotes grounded) | `labeled_reaction_key` | `ri.foundry.main.dataset.407104e1-6078-4eb9-b2b5-d02933261cbf` |
+| `ontology_ae_stats` | 1,382 (329 meet Evans) | `stat_key` | `ri.foundry.main.dataset.1c1d39d3-c423-471c-9822-52c2a7db1093` |
+| `ontology_signal_signals` | 271 (125 ranked) | `signal_key` | `ri.foundry.main.dataset.1ece78d5-f17c-4b18-96cd-2b7ae43dafd7` |
 
 ## How a change reaches Foundry
 

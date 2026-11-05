@@ -1,6 +1,6 @@
 # 🧭 COMPASS — Where we are, where we're going
 
-**Compass v22** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
+**Compass v23** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
 
 ## North Star
 _Purpose (boss, 2026-10-13): an exploratory showcase of design thinking, system design and usefulness. The reasoning trail is half the deliverable._
@@ -13,11 +13,11 @@ and can click any flag to see the exact source behind it.
 | | |
 |---|---|
 | 📍 **Phase** | 2 · Pilot build (started 2026-11-04, built with Claude over Claude in Chrome) |
-| 🔨 **Step** | Steps 1–7 done (7 = pilot). Step 7 AI label extraction ([A011](docs/05-approaches/A011-ai-label-extraction-pilot.md), D041): Claude Sonnet 5.5 on 2 reference labels / 9 sections → prompt **p2**: **448 reactions, 448/448 quotes exact, 0 failures**; **strict recall 35/35 = 1.00** on frozen gold (4 short sections; p1 was 0.31); rebuild with unchanged text = **0 model calls** (O1); `MSSM Labeled Reaction` object linked to Label. Before: steps 1–6 (raw, clean, Ontology, Action save) → [foundry/README](foundry/README.md) |
-| 🎯 **Next milestone** | Step 8: FAERS statistics (PRR, D006) + one explainable signal for oxycodone in Workshop, with label evidence (LabeledReactions) and the triage Action. In parallel: pharmacist check of the long sections |
-| ⛔ **Blockers** | Pharmacist reviewer not named (now needed: 366 long-section items to check) · secret `OpenFdaApiKey` not yet used (step 9) |
+| 🔨 **Step** | Steps 1–8 done (7 and 8 = oxycodone pilot). Step 8 ([A012](docs/05-approaches/A012-signal-statistics-and-workshop.md), D042 proposed): PRR stats in Foundry (1,382 drug × reaction rows, equal to the Oct 20 prototype) → **271 signals (Evans + not in label), 125 ranked**. Workshop module **MSSM Safety Officer**: ranked list → full evidence → *Triage this signal* (keys filled and locked) → decision **persists after reload** ✅. Before: steps 1–7 → [foundry/README](foundry/README.md) |
+| 🎯 **Next milestone** | Your OK on D023 v2 (≥30-drug reports out of the main count), D016 v2 (wider buckets) and D042 · then step 9: widen to the 13-drug formulary with the `OpenFdaApiKey` secret. Small polish: decimals, label quote on screen |
+| ⛔ **Blockers** | Pharmacist reviewer not named (needed for ~400 long-section items **and** to judge the 125 ranked signals) · secret `OpenFdaApiKey` not yet used (step 9) |
 | ⏱️ **Time** | **No fixed demo date** (D031 v4, 2026-11-04): build at our own pace. Old Nov 4 plan is historical → [prior game plan](docs/10-delivery/game-plan-v1-oct27-to-nov4.md). BACKLOG hours not yet re-estimated |
-| ⚠️ **Top risk** | Foundry speed per step (first Code Repository setup took ~15 min incl. lock-file conflict). Second: Action write-back still unproven. |
+| ⚠️ **Top risk** | False positives in the ranked list: exact-term label matching misses synonyms (e.g. hyperaesthesia vs hyperalgesia). Needs a synonym table + pharmacist read. Second: Foundry speed per step |
 
 ## Phase map
 📊 **Diagram:** [00-compass-phase-map-v1.png](docs/diagrams/png/00-compass-phase-map-v1.png) · [PDF](docs/diagrams/pdf/00-compass-phase-map-v1.pdf) · _source: [00-compass-phase-map-v1.mmd](docs/diagrams/src/00-compass-phase-map-v1.mmd)_
@@ -26,7 +26,7 @@ and can click any flag to see the exact source behind it.
 |---|---|---|
 | 0 · Discover | Brief understood, questions asked, users understood | ✅ Done (2026-10-13) |
 | 1 · Define | Scope, formulary, signal rule, "label mentions" definition decided; sources profiled | 🟡 In progress |
-| 2 · Pilot build | 4+ sources raw→clean→ontology, 1 incremental pipeline, AI extraction, Workshop app with write-back | 🟡 Started 2026-11-04 — raw ✅ clean ✅ ontology path + write-back ✅; AI extraction, statistics, Workshop, incremental to go |
+| 2 · Pilot build | 4+ sources raw→clean→ontology, 1 incremental pipeline, AI extraction, Workshop app with write-back | 🟡 Started 2026-11-04 — raw ✅ clean ✅ ontology + write-back ✅ AI extraction ✅ (pilot) statistics ✅ Workshop ✅ (first screen); widen to formulary, recalls + "since last review" on screen to go |
 | 3 · Harden + Monitor | Gold set labeled, hallucination rate measured, 1 pipeline optimized; **full monitoring live (pipeline + AI + 3–4 wk drift)** | ⚪ |
 | 4 · Demo + Note | Demo rehearsed, architecture note done | ⚪ |
 | 5 · Scale | Production roadmap written (not built) | ⚪ |
@@ -46,9 +46,11 @@ and can click any flag to see the exact source behind it.
 **Cut list v3 stays the default scope under D031 v4; any cut can be restored later by a new decision.** Original wording: **all 6 cuts applied now** (Trials, OnSIDES, gold set 6, 1 rehearsal, no daily FAERS/SrLC backtest, 11 drugs) **+ decision review 5 h → 1 h + gold-set draft check folded into B8.** **Never cut:** identity · Part B accuracy · recalls · write-back · monitoring.
 
 ## Key decisions so far
-See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active decision IDs: 34 (D001–D031 + D036–D038; D032–D035 reserved in the non-adopted proposal) · Changes: see "Decision changes" at the top of DECISIONS (5 changed on 2026-10-20). Latest: D038 openFDA via REST API source + Python external transform (kept) · D031 v4 no fixed demo date · D037 reference set v2 + dataset "label mentions" rule (proposed) · D036 conventions reference + dependency roadmap (documentation only) · D026 add Drugs@FDA/NDC/SrLC · D027 two-level identity · D028 "since last review" · D029 FAERS quarterly · D030 tracking · D031 freeze + cuts · D016 focus rule · D017 diagrams as PNG/PDF · D018 formulary = 13 RxCUIs · D019 DailyMed = label truth · D014 hybrid class (accepted) · D015 AI F1 ≥ 0.85 target (proposed) · D007 opioids · D008 monitoring must · D009 3–4 wk drift · D010 Developer Tier · D011 showcase purpose · D012 profile sources first.
+See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active decision IDs: 34 (D001–D031 + D036–D038; D032–D035 reserved in the non-adopted proposal) · Changes: see "Decision changes" at the top of DECISIONS (5 changed on 2026-10-20). Latest: D042 step 8 signal + Workshop (proposed) · D023 v2 ≥30-drug reports out of main count (proposed) · D016 v2 wider buckets (proposed) · D041 AI extraction · D040 Ontology path · D038 openFDA via REST API source + Python external transform (kept) · D031 v4 no fixed demo date · D037 reference set v2 + dataset "label mentions" rule (proposed) · D036 conventions reference + dependency roadmap (documentation only) · D026 add Drugs@FDA/NDC/SrLC · D027 two-level identity · D028 "since last review" · D029 FAERS quarterly · D030 tracking · D031 freeze + cuts · D016 focus rule · D017 diagrams as PNG/PDF · D018 formulary = 13 RxCUIs · D019 DailyMed = label truth · D014 hybrid class (accepted) · D015 AI F1 ≥ 0.85 target (proposed) · D007 opioids · D008 monitoring must · D009 3–4 wk drift · D010 Developer Tier · D011 showcase purpose · D012 profile sources first.
 
 ## Active approach
+[A012 — Signal statistics + first Workshop screen](docs/05-approaches/A012-signal-statistics-and-workshop.md) (kept; step 8 gate passed).
+
 [A009 — openFDA ingestion via REST API source + Python external transform](docs/05-approaches/A009-openfda-rest-ingestion.md) (kept; 1-record access test passed 2026-11-04) · [access results](docs/10-delivery/2026-11-04-foundry-access-results.md).
 
 [A008 — Reference set v2: 30 verified cross-source drug traces](docs/05-approaches/A008-gold-set-v2-cross-source-traces.md) (kept; pharmacist review pending) · [case cards](proposals/2026-11-02-gold-set-v2/cards/) · v1 30-case pack superseded.
@@ -60,6 +62,7 @@ See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active dec
 ## Change log of the compass
 | Ver | Date | What moved | Decisions changed |
 |---|---|---|---|
+| v23 | 2026-11-04 | Step 8 done: PRR stats + 271 signals (125 ranked) in Foundry; Workshop module MSSM Safety Officer with triage Action, decision persists after reload. Top risk now false positives (synonyms). Next: your OK on the 3 proposals, then step 9 widen to formulary. | New D042 (proposed); D023 v1 → v2 (proposed); D016 v1 → v2 (proposed) |
 | v22 | 2026-11-04 | Prompt p2 live: atomic terms; strict recall 0.31 → 1.00 on short gold sections, 448/448 grounded. Next: step 8. | none (learning only) |
 | v21 | 2026-11-04 | D041 (AI label extraction) accepted by you. No change to step or plan. | D041 → Accepted |
 | v20 | 2026-11-04 | Step 7 pilot done: AI extraction in Foundry (Claude Sonnet 5.5, 9 sections, 403 grounded reactions, recall 0.91 on gold, cache = 0 calls on rebuild). Model imported into the project with your OK. LabeledReaction object added. Next: step 8 signal + Workshop; prompt p2 for atomic terms. | New D041; first optimization-log entry O1 |

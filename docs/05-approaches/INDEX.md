@@ -15,4 +15,5 @@ Every approach we try gets a file here, including the ones we drop. New file = c
 | [A009](A009-openfda-rest-ingestion.md) | openFDA ingestion via REST API source + Python external transform | Prototype → Test | Pipelines | Kept (1-record test passed) | — (manual upload = fallback) | 2026-11-04 |
 | [A010](A010-first-ontology-path.md) | First Ontology path: Drug, Product, Label, Recall + TriageDecision write-back | Prototype → Test | Ontology | Kept (step 6 gate passed) | — | 2026-11-04 |
 | [A011](A011-ai-label-extraction-pilot.md) | AI label extraction pilot: Claude Sonnet 5.5 in a cached, grounded transform; 2 labels / 9 sections | Prototype → Test | AI | Kept (pilot; prompt p2 before widening) | — | 2026-11-04 |
+| [A012](A012-signal-statistics-and-workshop.md) | Signal statistics (PRR, Evans, mass-report cut) + first Workshop screen with triage write-back | Prototype → Test | Pipelines / Ontology / App | Kept (step 8 gate passed) | — | 2026-11-04 |
 | A00x | Monitoring design (incl. how to show 3–4 week drift in a 3-week project) | Ideate | Monitoring | _Later_ | — | — |

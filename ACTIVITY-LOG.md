@@ -3,9 +3,9 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-11-04 — Step 8 done: PRR stats + signals in Foundry; Workshop module **MSSM Safety Officer** built; triage submit → reload → persists ✅ (Compass v23) |
+| **Last session** | 2026-11-04 — Step 8 done and polished (Workshop v0.3: rounded numbers, readable decisions table, evidence in reading order). D023 v2, D016 v2, D042 accepted. Compass v25 |
 | **Where we are** | Phase 2, build-order steps 1–8 done for the oxycodone pilot. 271 signals (Evans + not in label), 125 ranked. AI: 448/448 quotes exact, strict recall 1.00 on short gold sections. [A012](docs/05-approaches/A012-signal-statistics-and-workshop.md) · [Workshop notes](foundry/ontology/README.md#workshop-module) |
-| **Next 3 actions** | 1. (you) Accept or change D023 v2, D016 v2, D042 in [DECISIONS](docs/06-decisions/DECISIONS.md) · 2. (Claude) Polish: PRR/χ² decimals, taller decisions table, label quote on screen; then step 9: widen to 13 drugs with `OpenFdaApiKey` · 3. (you) Name the pharmacist reviewer (long sections + the 125 ranked signals) |
+| **Next 3 actions** | 1. (Claude) Step 9: widen to 13 drugs with `OpenFdaApiKey` · 2. (Claude) Link each signal to the labels searched; show reviewer names · 3. (you) Name the pharmacist reviewer (long sections + the 125 ranked signals) |
 | **Waiting on** | Pharmacist reviewer for the reference set · tell boss the demo date is open |
 | **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue at build-order step 9 (widen to the formulary)."_ |
 
@@ -13,9 +13,17 @@
 
 ## Log (newest first)
 
+### 2026-11-04 (night, 7) — Workshop polish v0.3 (Compass v25)
+- **Numbers:** PRR 1 decimal, CI 2, χ² 1, mass share 2. Set as number format on the MSSM Signal properties in Ontology Manager; the stored values are unchanged.
+- **Decisions table:** fixed 160 px height (it was collapsed); columns Decided at · Decision · Reviewer · Rationale · Evaluation id.
+- **Evidence list:** 22 rows in reading order with plain labels (why flagged → label check → trace). Edited through the widget JSON config (learning logged).
+- **Checked in View mode:** Myoclonus shows PRR 15.2 (CI 9.36–24.8), χ² 201, 33 labels searched, and the step 8 test decision.
+- **Not done:** the label quote does not apply to "not in label" signals; the plan is to link each signal to the labels searched. Reviewer shows a user ID.
+
 ### 2026-11-04 (night, 6) — Step 8 done: Workshop screen + triage (Compass v23)
 - **Built:** Workshop module **MSSM Safety Officer** in `Workshop/` (published v0.2.0). Left: ranked signals (125, sorted by rank, plain column names). Right: *Triage this signal* button → Create MSSM Triage Decision with Subject Type / Subject Key / Evaluation Id filled from the selected signal and locked; decisions for that signal; full signal record. Details: [foundry/ontology README](foundry/ontology/README.md#workshop-module).
 - **Gate:** selected *Oxycodone · Myoclonus* → submitted "reviewing" (rationale marked STEP 8 WORKSHOP TEST) → "Edits successfully applied" → full reload → row still there (decided 8:19 PM, evaluation id `cbcd091262d23bd6`) ✅.
+- **Accepted by you:** D023 v2, D016 v2, D042 (Compass v24).
 - **Docs:** [A012](docs/05-approaches/A012-signal-statistics-and-workshop.md); DECISIONS: **D042**, **D023 v2**, **D016 v2** (all proposed, need your OK) + 4 learnings; foundry READMEs (curated RIDs, new object types and links, Workshop); Compass v22 snapshot → v23.
 - **Open polish:** PRR shows 12 decimals; decisions table too short; "Toothache"-type noise still ranked → synonym table + pharmacist read.
 

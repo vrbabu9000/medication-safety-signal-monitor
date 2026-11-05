@@ -5,7 +5,7 @@
 | **Date** | 2026-11-04 |
 | **Design-thinking stage** | Prototype → Test |
 | **Area** | Pipelines / Ontology / App |
-| **Status** | Kept (step 8 gate passed; D023 v2, D016 v2 and D042 waiting on your OK) |
+| **Status** | Kept (step 8 gate passed; D023 v2, D016 v2, D042 accepted 2026-11-04) |
 | **Replaces** | none (prototype PRR from Oct 20 is now in Foundry) |
 
 ## What changed
@@ -38,8 +38,11 @@
 
 ## Verdict
 **Keep.** Statistics match the prototype and the screen closes the loop "flag → evidence → decision → stored". Not yet polished:
-- PRR / χ² show 12 decimals (fix: number format on the property in Ontology Manager).
-- Past-decisions table is very short (fix: give that section a fixed height).
+- ~~PRR / χ² show 12 decimals~~ → fixed 2026-11-04: number format on the Signal properties (PRR 1 decimal, CI 2, χ² 1, mass share 2). Stored values unchanged.
+- ~~Past-decisions table is very short~~ → fixed: fixed height 160 px, columns Decided at · Decision · Reviewer · Rationale · Evaluation id.
+- ~~25 raw properties in A–Z order~~ → fixed: 22 rows in reading order with plain labels (why flagged → label check → trace keys).
+- "Label quote next to not in label" does not apply: a signal has no label match, so there is no quote. The screen shows what was searched instead (33 reference labels, 2 also read by AI). Next step for proof: link each signal to the labels that were searched.
+- Reviewer shows a user ID, not a name.
 - The signal title repeats "Oxycodone ·" (fine while only one drug is in the pilot).
 - Some ranked terms are still noise for a pharmacist (e.g. "Toothache" is ranked 107). They need a synonym table (label ↔ FAERS term, high/medium/low bands) and pharmacist review.
 

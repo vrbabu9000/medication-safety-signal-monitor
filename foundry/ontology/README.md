@@ -46,13 +46,15 @@ How to apply it: in **Object Explorer**, open MSSM Triage Decision → **Actions
 
 ## Workshop module
 
-**MSSM Safety Officer** (`ri.workshop.main.module.5468606b-d94b-4f0a-b257-a22b207de88d`, project folder `Workshop/`, published v0.2.0). Approach: [A012](../../docs/05-approaches/A012-signal-statistics-and-workshop.md) · decision D042 (proposed).
+**MSSM Safety Officer** (`ri.workshop.main.module.5468606b-d94b-4f0a-b257-a22b207de88d`, project folder `Workshop/`, published v0.2.0). Approach: [A012](../../docs/05-approaches/A012-signal-statistics-and-workshop.md) · decision D042 (accepted).
 
 | Part | Built from |
 |---|---|
 | Left: **Ranked signals (not in label)** table | Variable *Ranked signals* = MSSM Signal where Is Ranked = true (125). Columns: signal, reaction, rank, reports, from mass reports (30+ drugs), PRR, PRR 95% CI low, Chi² (Yates), caution. Default sort rank ↑ |
 | Right top: button **Triage this signal** | Action Create MSSM Triage Decision. Defaults: Subject Type = static "signal"; Subject Key = *Selected signal key* (object property of the table's active object); Evaluation Id = *Selected evaluation id*. All three locked (Disabled); the officer picks Decision and writes Rationale |
 | Right middle: decisions for this signal | Variable *Decisions for selected signal* = MSSM Triage Decision where Subject Key = Selected signal key |
-| Right bottom: full signal record | Property list of the active signal (all 25 properties, incl. label status, reference labels checked, evaluation id) |
+| Right bottom: full signal record | Property list of the active signal: 22 properties in reading order with plain labels. Why flagged (reaction, reports, PRR + 95% CI, χ², caution, mass reports set aside) → label check (status, reference labels searched, labels also read by AI, method) → trace (rank, bucket, FAERS window, rule version, evaluation id, signal key, stat key, RxCUI) |
 
-Polish still open: number format for PRR / χ² (set on the property in Ontology Manager), taller decisions table, label quote next to "not in label".
+**Polish (2026-11-04, v0.3):** number format on MSSM Signal properties in Ontology Manager (Display → Numeric formatting → Maximum fraction digits: PRR 1, CI low/high 2, χ² 1, mass share 2). Decisions table: row height Absolute 160 px, fit columns, 5 columns. Evidence list reordered and relabelled. The last two were done in each widget's JSON config (`</>` → edit → *Validate and save*).
+
+Still open: reviewer shows a user ID; links from a signal to the labels that were searched.

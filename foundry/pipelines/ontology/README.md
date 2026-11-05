@@ -12,6 +12,6 @@ Mirrors of [ontology_objects.py](ontology_objects.py) (step 6) and [ontology_sig
 
 | `ontology_signals.compute` (step 8, [A012](../../../docs/05-approaches/A012-signal-statistics-and-workshop.md)) | `ontology_ae_stats`: per drug × reaction a/b/c/d, PRR, 95% CI, Yates χ², Evans flag (D006), label status + match evidence (D037 text + AI terms) · `ontology_signal_signals`: Evans **and** not in label, bucket (D016 v2), `is_ranked`, `rank_in_bucket`, caution, `evaluation_id` | `stat_key` · `signal_key` |
 
-Rule `prr_evans_v2`: reports with ≥30 drugs (`MAX_DRUG_ROWS`) are left out of the primary population and counted in `a_mass_reports` (D023 v2, proposed).
+Rule `prr_evans_v2`: reports with ≥30 drugs (`MAX_DRUG_ROWS`) are left out of the primary population and counted in `a_mass_reports` (D023 v2, accepted).
 
 Run locally: `.venv/bin/python foundry/tools/local_run/run_local.py foundry/pipelines/ontology/ontology_objects.py` (after the clean transforms).

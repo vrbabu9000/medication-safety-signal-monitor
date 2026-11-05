@@ -5,7 +5,7 @@
 | **Date** | 2026-11-04 |
 | **Design-thinking stage** | Ideate → Prototype → Test |
 | **Area** | AI / Ontology / Monitoring |
-| **Status** | Kept (built and measured; D043 proposed, pharmacist review pending) |
+| **Status** | Kept (D043 accepted 2026-11-05; pharmacist review of bands pending) |
 | **Replaces** | none (adds a third label check after D037 text and the step 7 AI terms) |
 
 ## What changed

@@ -1,6 +1,6 @@
 # 🧭 COMPASS — Where we are, where we're going
 
-**Compass v27** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
+**Compass v28** · _Last updated: 2026-11-04_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
 
 ## North Star
 _Purpose (boss, 2026-10-13): an exploratory showcase of design thinking, system design and usefulness. The reasoning trail is half the deliverable._
@@ -13,8 +13,8 @@ and can click any flag to see the exact source behind it.
 | | |
 |---|---|
 | 📍 **Phase** | 2 · Pilot build (started 2026-11-04, built with Claude over Claude in Chrome) |
-| 🔨 **Step** | Steps 1–9 done, plus the label ↔ FAERS **synonym table** ([A014](docs/05-approaches/A014-label-faers-synonym-table.md), D043 proposed): ranked queue **1,355 → 1,210** (−10.7%), 72 signals now "possibly in label"; GLP-1 gastric-emptying false positives gone; NAION confirmed not in any semaglutide label (ranked 2nd). Foundry = local. Before: step 9 → [A013](docs/05-approaches/A013-widen-to-formulary.md) |
-| 🎯 **Next milestone** | Your OK on D043 · then (a) D016 efficacy update for GLP-1 terms (weight loss poor, hunger, appetite; your OK), (b) drug filter on the Workshop screen, (c) step 10: prove one incremental pipeline (FAERS) |
+| 🔨 **Step** | Steps 1–9 done, plus the label ↔ FAERS **synonym table** ([A014](docs/05-approaches/A014-label-faers-synonym-table.md), D043 accepted): ranked queue **1,355 → 1,210** (−10.7%), 72 signals now "possibly in label"; GLP-1 gastric-emptying false positives gone; NAION confirmed not in any semaglutide label (ranked 2nd). Foundry = local. Before: step 9 → [A013](docs/05-approaches/A013-widen-to-formulary.md) |
+| 🎯 **Next milestone** | (a) D016 efficacy update for GLP-1 terms (weight loss poor, hunger, appetite; your OK), (b) drug filter on the Workshop screen, (c) step 10: prove one incremental pipeline (FAERS) |
 | ⛔ **Blockers** | Pharmacist reviewer not named (now: long label sections, 125+ ranked signals **and** the synonym bands) · `OpenFdaApiKey` unused (fine at ~50 calls) |
 | ⏱️ **Time** | **No fixed demo date** (D031 v4, 2026-11-04): build at our own pace. Old Nov 4 plan is historical → [prior game plan](docs/10-delivery/game-plan-v1-oct27-to-nov4.md). BACKLOG hours not yet re-estimated |
 | ⚠️ **Top risk** | False positives now at scale: 1,355 ranked items; for GLP-1s the top ones are synonyms (impaired vs delayed gastric emptying) and efficacy terms (weight loss poor, hunger). Second: Foundry speed per step |
@@ -46,7 +46,7 @@ and can click any flag to see the exact source behind it.
 **Cut list v3 stays the default scope under D031 v4; any cut can be restored later by a new decision.** Original wording: **all 6 cuts applied now** (Trials, OnSIDES, gold set 6, 1 rehearsal, no daily FAERS/SrLC backtest, 11 drugs) **+ decision review 5 h → 1 h + gold-set draft check folded into B8.** **Never cut:** identity · Part B accuracy · recalls · write-back · monitoring.
 
 ## Key decisions so far
-See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active decision IDs: 34 (D001–D031 + D036–D038; D032–D035 reserved in the non-adopted proposal) · Changes: see "Decision changes" at the top of DECISIONS (5 changed on 2026-10-20). Latest: D043 synonym table (proposed) · D031 v5 13-drug scope (accepted via G1) · D042 step 8 signal + Workshop · D023 v2 ≥30-drug reports out of main count · D016 v2 wider buckets (all accepted 2026-11-04) · D041 AI extraction · D040 Ontology path · D038 openFDA via REST API source + Python external transform (kept) · D031 v4 no fixed demo date · D037 reference set v2 + dataset "label mentions" rule (proposed) · D036 conventions reference + dependency roadmap (documentation only) · D026 add Drugs@FDA/NDC/SrLC · D027 two-level identity · D028 "since last review" · D029 FAERS quarterly · D030 tracking · D031 freeze + cuts · D016 focus rule · D017 diagrams as PNG/PDF · D018 formulary = 13 RxCUIs · D019 DailyMed = label truth · D014 hybrid class (accepted) · D015 AI F1 ≥ 0.85 target (proposed) · D007 opioids · D008 monitoring must · D009 3–4 wk drift · D010 Developer Tier · D011 showcase purpose · D012 profile sources first.
+See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active decision IDs: 34 (D001–D031 + D036–D038; D032–D035 reserved in the non-adopted proposal) · Changes: see "Decision changes" at the top of DECISIONS (5 changed on 2026-10-20). Latest: D043 synonym table (accepted) · D031 v5 13-drug scope (accepted via G1) · D042 step 8 signal + Workshop · D023 v2 ≥30-drug reports out of main count · D016 v2 wider buckets (all accepted 2026-11-04) · D041 AI extraction · D040 Ontology path · D038 openFDA via REST API source + Python external transform (kept) · D031 v4 no fixed demo date · D037 reference set v2 + dataset "label mentions" rule (proposed) · D036 conventions reference + dependency roadmap (documentation only) · D026 add Drugs@FDA/NDC/SrLC · D027 two-level identity · D028 "since last review" · D029 FAERS quarterly · D030 tracking · D031 freeze + cuts · D016 focus rule · D017 diagrams as PNG/PDF · D018 formulary = 13 RxCUIs · D019 DailyMed = label truth · D014 hybrid class (accepted) · D015 AI F1 ≥ 0.85 target (proposed) · D007 opioids · D008 monitoring must · D009 3–4 wk drift · D010 Developer Tier · D011 showcase purpose · D012 profile sources first.
 
 ## Active approach
 [A014 — Label ↔ FAERS synonym table](docs/05-approaches/A014-label-faers-synonym-table.md) (kept; pharmacist review pending).
@@ -66,6 +66,7 @@ See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active dec
 ## Change log of the compass
 | Ver | Date | What moved | Decisions changed |
 |---|---|---|---|
+| v28 | 2026-11-05 | D043 (synonym table) accepted by you. No change to step or plan. | D043 → Accepted |
 | v27 | 2026-11-05 | Synonym table syn_v1 live in Foundry: ranked 1,355 → 1,210, 72 possibly-in-label; US-spelling fix; NAION confirmed unlabeled. Next: your OK on D043, D016 efficacy update, drug filter, step 10. | New D043 (proposed); D037 spelling list extended (bug fix) |
 | v26 | 2026-11-04 | Step 9 done: 13-drug formulary end to end, all counts reconciled; 2,047 signals (1,355 ranked); DQ42 handled. Top risk: false positives at scale. Next: synonym table, D016 efficacy update, drug filter; then step 10 incremental. | D031 v4 → v5 (via D039 G1) |
 | v25 | 2026-11-04 | Workshop polish v0.3: rounded numbers, readable decisions table, evidence list in reading order. Next: step 9. | none (learning only) |

@@ -68,6 +68,44 @@ def resolver(identity):
     return resolve
 
 
+def suspects(drug, resolve):
+    """D020 + D021: formulary suspect ingredients per case, from that case's current drug rows."""
+    # D020: split prod_ai on '\', resolve each part; if prod_ai is blank fall back to the whole drugname (same exact rules).
+    parts = drug.with_columns(pl.when(pl.col("prod_ai") != "").then(pl.col("prod_ai").str.split("\\")).otherwise(pl.concat_list([pl.col("drugname")])).alias("part"),
+                              (pl.col("prod_ai") == "").alias("via_drugname")).explode("part")
+    lookup = {s: resolve(s) for s in parts["part"].unique().to_list()}
+    lk = pl.DataFrame({"part": list(lookup), "ingredient_rxcui": [v[0] for v in lookup.values()], "method": [v[1] for v in lookup.values()]},
+                      schema={"part": pl.Utf8, "ingredient_rxcui": pl.Utf8, "method": pl.Utf8})
+    resolved = parts.join(lk, on="part", how="left").filter(pl.col("ingredient_rxcui").is_not_null()).with_columns(
+        pl.when(pl.col("via_drugname")).then(pl.lit("drugname_") + pl.col("method")).otherwise(pl.col("method")).alias("method"))
+    # D021: suspect roles only, each ingredient once per case; concomitant (C) never counts.
+    return resolved.filter(pl.col("role_cod").is_in(SUSPECT_ROLES)).group_by(["caseid", "ingredient_rxcui"]).agg(
+        pl.col("role_cod").unique().sort().str.join("+").alias("roles"), pl.col("method").min().alias("ingredient_match"))
+
+
+def finish(state, n_drugs, suspect, reac):
+    """D023 fold and output shapes. Shared by the full rebuild below and clean_faers_incremental.py (build-order step 10)."""
+    # D023: one person filed again and again under different caseids. Flag the cluster, keep the latest filing un-suppressed.
+    cases = state.join(n_drugs, on="caseid", how="left").with_columns(pl.col("n_drug_rows").fill_null(0)).with_columns(
+        pl.concat_str(["age", "age_cod", "sex", "occr_country", "event_dt"], separator="|").alias("person_key"))
+    eligible = (pl.col("n_drug_rows") >= FOLD_MIN_DRUGS) & (pl.col("age") != "")
+    cases = cases.with_columns(pl.when(eligible).then(pl.len().over(pl.when(eligible).then(pl.col("person_key")))).otherwise(0).alias("person_key_reports"))
+    cases = cases.with_columns((pl.col("person_key_reports") >= FOLD_MIN_REPORTS).alias("dup_cluster"))
+    keeper = cases.filter(pl.col("dup_cluster")).sort(["fda_dt", "caseid"]).group_by("person_key").agg(pl.col("caseid").last().alias("keeper"))
+    cases = cases.join(keeper, on="person_key", how="left").with_columns(
+        (pl.col("dup_cluster") & (pl.col("caseid") != pl.col("keeper"))).alias("dup_suppressed"))
+    cases = cases.drop([c for c in ("keeper", "q_order") if c in cases.columns])
+    n_susp = suspect.group_by("caseid").agg(pl.len().alias("n_formulary_suspects"))
+    cases = cases.join(n_susp, on="caseid", how="left").with_columns(pl.col("n_formulary_suspects").fill_null(0))
+
+    cases = cases.with_columns(pl.col("fda_dt").str.strptime(pl.Date, "%Y%m%d", strict=False).alias("fda_date"))
+    flags = cases.select("caseid", "quarter", "fda_date", "dup_suppressed")
+    reactions = reac.select("caseid", "pt").join(flags, on="caseid")
+    drug_reaction = (suspect.join(reac.select("caseid", "pt"), on="caseid").join(flags, on="caseid")
+                     .select("caseid", "ingredient_rxcui", "pt", "roles", "ingredient_match", "quarter", "fda_date", "dup_suppressed"))
+    return cases, reactions, drug_reaction
+
+
 @transform.using(cases_out=Output(CLEAN + "clean_faers_cases_current"), reactions_out=Output(CLEAN + "clean_faers_case_reactions"),
                  drug_reaction_out=Output(CLEAN + "clean_faers_drug_reaction"), files=Input(RAW + "raw_faers_quarter_files"),
                  identity=Input(CLEAN + "clean_drug_identity"))
@@ -94,34 +132,9 @@ def compute_faers(cases_out, reactions_out, drug_reaction_out, files, identity):
     drug = pl.concat(drugs)
     reac = pl.concat(reacs).filter(pl.col("pt") != "").unique(["caseid", "pt"])
 
-    # D020: split prod_ai on '\', resolve each part; if prod_ai is blank fall back to the whole drugname (same exact rules).
-    parts = drug.with_columns(pl.when(pl.col("prod_ai") != "").then(pl.col("prod_ai").str.split("\\")).otherwise(pl.concat_list([pl.col("drugname")])).alias("part"),
-                              (pl.col("prod_ai") == "").alias("via_drugname")).explode("part")
-    lookup = {s: resolve(s) for s in parts["part"].unique().to_list()}
-    lk = pl.DataFrame({"part": list(lookup), "ingredient_rxcui": [v[0] for v in lookup.values()], "method": [v[1] for v in lookup.values()]},
-                      schema={"part": pl.Utf8, "ingredient_rxcui": pl.Utf8, "method": pl.Utf8})
-    resolved = parts.join(lk, on="part", how="left").filter(pl.col("ingredient_rxcui").is_not_null()).with_columns(
-        pl.when(pl.col("via_drugname")).then(pl.lit("drugname_") + pl.col("method")).otherwise(pl.col("method")).alias("method"))
-    # D021: suspect roles only, each ingredient once per case; concomitant (C) never counts.
-    suspect = resolved.filter(pl.col("role_cod").is_in(SUSPECT_ROLES)).group_by(["caseid", "ingredient_rxcui"]).agg(
-        pl.col("role_cod").unique().sort().str.join("+").alias("roles"), pl.col("method").min().alias("ingredient_match"))
-
-    # D023: one person filed again and again under different caseids. Flag the cluster, keep the latest filing un-suppressed.
+    suspect = suspects(drug, resolve)
     n_drugs = drug.group_by("caseid").agg(pl.len().alias("n_drug_rows"))
-    cases = state.join(n_drugs, on="caseid", how="left").with_columns(pl.col("n_drug_rows").fill_null(0)).with_columns(
-        pl.concat_str(["age", "age_cod", "sex", "occr_country", "event_dt"], separator="|").alias("person_key"))
-    eligible = (pl.col("n_drug_rows") >= FOLD_MIN_DRUGS) & (pl.col("age") != "")
-    cases = cases.with_columns(pl.when(eligible).then(pl.len().over(pl.when(eligible).then(pl.col("person_key")))).otherwise(0).alias("person_key_reports"))
-    cases = cases.with_columns((pl.col("person_key_reports") >= FOLD_MIN_REPORTS).alias("dup_cluster"))
-    keeper = cases.filter(pl.col("dup_cluster")).sort(["fda_dt", "caseid"]).group_by("person_key").agg(pl.col("caseid").last().alias("keeper"))
-    cases = cases.join(keeper, on="person_key", how="left").with_columns(
-        (pl.col("dup_cluster") & (pl.col("caseid") != pl.col("keeper"))).alias("dup_suppressed")).drop(["keeper", "q_order"])
-    n_susp = suspect.group_by("caseid").agg(pl.len().alias("n_formulary_suspects"))
-    cases = cases.join(n_susp, on="caseid", how="left").with_columns(pl.col("n_formulary_suspects").fill_null(0))
-
-    cases = cases.with_columns(pl.col("fda_dt").str.strptime(pl.Date, "%Y%m%d", strict=False).alias("fda_date"))
-    flags = cases.select("caseid", "quarter", "fda_date", "dup_suppressed")
+    cases, reactions, drug_reaction = finish(state, n_drugs, suspect, reac)
     cases_out.write_table(cases)
-    reactions_out.write_table(reac.select("caseid", "pt").join(flags, on="caseid"))
-    drug_reaction_out.write_table(suspect.join(reac.select("caseid", "pt"), on="caseid").join(flags, on="caseid")
-                                  .select("caseid", "ingredient_rxcui", "pt", "roles", "ingredient_match", "quarter", "fda_date", "dup_suppressed"))
+    reactions_out.write_table(reactions)
+    drug_reaction_out.write_table(drug_reaction)

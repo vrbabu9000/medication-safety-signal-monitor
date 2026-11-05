@@ -4,6 +4,7 @@
 - **Raw transforms** call the real public APIs (openFDA, DailyMed, RxNav, FDA downloads) with a plain `requests` session.
 - **Outputs** are saved to `out/` (git-ignored): tables as `<dataset>.jsonl`, files datasets as folders.
 - **Clean transforms** read those files as their inputs via `input.polars()` / `input.pandas()`. So you can test raw → clean on your machine or in a cloud session.
+- **Incremental transforms** (`@incremental`) run as plain ones; `output.polars(mode="previous")` reads the last saved `<dataset>.jsonl`, so running a file twice behaves like two Foundry builds (step 10, A015). Delete the `.jsonl` to start fresh.
 
 ```bash
 pip install requests polars

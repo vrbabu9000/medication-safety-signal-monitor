@@ -3,15 +3,21 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-11-05 — Synonym table syn_v2 live: ranked 1,115 → 1,073 (Compass v32) |
-| **Where we are** | Phase 2, steps 1–9 + A014 synonyms (v2) + D016 v3 + drug filter. 1,952 signals for 12 drugs, 1,073 ranked, 108 possibly in label. NAION #1 for semaglutide. |
-| **Next 3 actions** | 1. (Claude) Step 10: prove one incremental pipeline (FAERS) against the full-rebuild baseline · 2. (Claude) Add retry/back-off to the DailyMed pull before any schedule · 3. (you) Name the pharmacist reviewer (long sections, ranked signals, synonym bands) |
-| **Waiting on** | Pharmacist reviewer · tell boss the demo date is open |
-| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue with the synonym table and the drug filter, then build-order step 10."_ |
+| **Last session** | 2026-11-05 — Step 10: incremental FAERS proven identical to the full rebuild (Compass v33) |
+| **Where we are** | Phase 2, steps 1–10 done. 1,952 signals for 12 drugs, 1,073 ranked. Incremental FAERS correct but slower at 2 quarters (88 s vs 32 s), so signals still read the full rebuild. D044 proposed. |
+| **Next 3 actions** | 1. (you) Accept or change D044 · 2. (Claude) Step 11: recall status + "changed since last review" on the screen, health checks · 3. (Claude) Add retry/back-off to the DailyMed pull before any schedule |
+| **Waiting on** | D044 OK · pharmacist reviewer · tell boss the demo date is open |
+| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue with build-order step 11."_ |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-05 (early, 5) — Step 10: incremental FAERS (Compass v33)
+- **Built:** [clean_faers_incremental.py](foundry/pipelines/clean/clean_faers_incremental.py) (state + per-quarter log; one new quarter per build; replay on identity change). [clean_faers.py](foundry/pipelines/clean/clean_faers.py) now shares its rules as `suspects()` and `finish()`; its output is unchanged. Local runner reads "previous" outputs ([run_local.py](foundry/tools/local_run/run_local.py)).
+- **Gate (Foundry SQL, EXCEPT ALL both ways):** 0 differences in all 3 outputs (792,346 / 2,554,017 / 373,522 rows). Q2 replaced 26,681 cases and deleted 655. Replay tested locally only.
+- **Measured:** full rebuild 32 s; incremental add-Q2 88 s (state 62 s + outputs 26 s). Not faster at 2 quarters → signals keep the full rebuild (O2).
+- **Decided:** D044 proposed. Docs: [A015](docs/05-approaches/A015-incremental-faers.md), DECISIONS (5 learnings), optimization log O2, READMEs, Compass v32 snapshot → v33.
 
 ### 2026-11-05 (early, 4) — Synonym table syn_v2 (Compass v32)
 - **Review:** top 12 ranked signals per drug; each candidate phrase checked in that drug's reference labels before banding. 3 high, 18 medium, 2 rejected ([label_synonyms.py](foundry/pipelines/ontology/label_synonyms.py), A014 update).

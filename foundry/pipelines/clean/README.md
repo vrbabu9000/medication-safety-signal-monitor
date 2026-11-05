@@ -15,10 +15,15 @@ Clean transforms read **raw datasets only**: no external sources, no web calls. 
 | [clean_faers.py](clean_faers.py) | `clean_faers_cases_current` | `caseid` | D022: per quarter, upsert by caseid (max caseversion, newer quarter wins ties), then that quarter's deletes; D023 fold flagged as `dup_suppressed` |
 | | `clean_faers_case_reactions` | `caseid` + `pt` | All current cases (PRR background) |
 | | `clean_faers_drug_reaction` | `caseid` + `ingredient_rxcui` + `pt` | D021: PS + SS + I, each ingredient once per case; `prod_ai` parts resolved through `clean_drug_identity` (exact, then salt strip; blank `prod_ai` → whole `drugname`) |
+| [clean_faers_incremental.py](clean_faers_incremental.py) (step 10, D044, [A015](../../../docs/05-approaches/A015-incremental-faers.md)) | `clean_faers_inc_state_cases` · `_state_suspects` · `_state_reactions` | `caseid` (+ ingredient / pt) | Incremental state: each build adds the oldest new quarter with the D022 rule; identity change → replay all quarters |
+| | `clean_faers_inc_log` | `generation` + `quarter` | One row per quarter processed: rows read, deletes, cases replaced/deleted, seconds, mode |
+| | `clean_faers_inc_cases_current` · `_case_reactions` · `_drug_reaction` | as the full rebuild | Rebuilt from the state with the shared `finish()`; identical to `clean_faers.py` outputs (checked with EXCEPT ALL). Signals still read the full rebuild |
 | [clean_labels.py](clean_labels.py) | `clean_label_versions` | `setid` + `spl_version` | Index + XML; effective date from the XML; PLR flag |
 | | `clean_label_sections` | `setid` + `spl_version` + `section_code` | 6 safety LOINC codes (D037 list); first safety section on each branch, sub-sections folded in |
 | [clean_recalls.py](clean_recalls.py) | `clean_recalls_current` | `recall_number` | Latest pull wins; status checked against {Ongoing, Completed, Terminated} |
 | | `clean_recall_product_match` | `recall_number` + `match_target` + `match_key` | NDCs from the record's own text (D037 learning); ingredient row for every recall; unmatched kept with a reason |
+
+Incremental FAERS in Foundry: the repo Build does not re-run an unchanged incremental transform; use the dataset page Build ▾ → Force → *Only this dataset* to add the next quarter. Locally, run it once per quarter: `run_local.py foundry/pipelines/clean/clean_faers_incremental.py --func compute_state`, then `--func compute_outputs`.
 
 FAERS locally: link the unzipped quarters first, `ln -sfn "$PWD/prototypes/data/_faers_bulk" foundry/tools/local_run/out/raw_faers_quarter_files`.
 

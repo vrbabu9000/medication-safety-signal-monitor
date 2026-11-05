@@ -56,6 +56,7 @@ def install_stubs(out_dir):
     api = types.ModuleType("transforms.api")
     api.transform, api.transform_df, api.Output, api.Input = _Transform(), transform_df, Output, Input
     api.lightweight = lambda *a, **kw: (a[0] if a and callable(a[0]) else (lambda f: f))
+    api.incremental = lambda *a, **kw: (lambda f: f)  # local runs read the last local output as "previous"
     ext = types.ModuleType("transforms.external.systems")
     ext.external_systems = lambda **src: decorate("_sources", src)
     ext.Source = lambda rid: rid
@@ -125,6 +126,18 @@ class FakeOutput:
     def write_dataframe(self, df):
         self._save(df.records)
 
+    def set_mode(self, mode):
+        pass  # local outputs are always replaced
+
+    def polars(self, mode="current", lazy=False):
+        # Incremental transforms read their own previous output; locally that is the last saved .jsonl.
+        import polars as pl
+        path = os.path.join(self.out_dir, self.name + ".jsonl")
+        if not os.path.exists(path):
+            raise FileNotFoundError(path)
+        df = pl.read_ndjson(path, infer_schema_length=None)
+        return df.lazy() if lazy else df
+
     def write_table(self, df):
         if hasattr(df, "collect"):
             df = df.collect()
@@ -180,7 +193,7 @@ class FakeInput:
                 return open(os.path.join(root, rel), mode)
         return FS()
 
-    def polars(self, lazy=False):
+    def polars(self, lazy=False, mode="current"):
         import polars as pl
         df = pl.read_ndjson(self.file, infer_schema_length=None)  # scan all rows: a column can be null for the first thousand
         return df.lazy() if lazy else df

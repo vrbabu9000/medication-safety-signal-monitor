@@ -3,15 +3,22 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-11-04 — Step 9 done: all 13 formulary drugs run raw → signals in Foundry; every count reconciled (Compass v26) |
-| **Where we are** | Phase 2, build-order steps 1–9 done. 2,047 signals for 12 drugs (1,355 ranked), 900 recalls (126 ongoing), 1,321 labels. AI still on 2 pilot labels. [A013](docs/05-approaches/A013-widen-to-formulary.md) |
-| **Next 3 actions** | 1. (Claude) Label ↔ FAERS synonym table + propose D016 efficacy update for GLP-1 terms (your OK) · 2. (Claude) Drug filter on the Workshop screen; then step 10 (incremental FAERS) · 3. (you) Name the pharmacist reviewer |
-| **Waiting on** | Pharmacist reviewer for the reference set · tell boss the demo date is open |
+| **Last session** | 2026-11-05 — Synonym table syn_v1 built, reviewed (Claude draft) and live in Foundry: ranked 1,355 → 1,210 (Compass v27) |
+| **Where we are** | Phase 2, steps 1–9 done + A014. 1,959 signals (1,210 ranked, 72 possibly in label) for 12 drugs. NAION unlabeled for semaglutide (ranked 2nd). [A014](docs/05-approaches/A014-label-faers-synonym-table.md) |
+| **Next 3 actions** | 1. (you) Accept or change D043 (synonym table) · 2. (Claude) D016 efficacy update for GLP-1 terms (your OK) + drug filter on the screen; then step 10 (incremental FAERS) · 3. (you) Name the pharmacist reviewer (now also for the synonym bands) |
+| **Waiting on** | Your OK on D043 · pharmacist reviewer · tell boss the demo date is open |
 | **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue with the synonym table and the drug filter, then build-order step 10."_ |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-05 (early) — Label ↔ FAERS synonym table (Compass v27)
+- **Local replica:** the whole 13-drug pipeline now runs on this machine and equals Foundry. Found on the way: DailyMed rate-limited the local pull (HTTP 429 for 744 labels, recorded as error rows, refetched slowly); the runner's reader needed full-row type scanning.
+- **Leads → table:** [synonym_candidates.py](foundry/tools/local_run/synonym_candidates.py) found leads for 232 of 1,550 unlabeled clinical terms; I reviewed 209 into [label_synonyms.py](foundry/pipelines/ontology/label_synonyms.py) (64 high rows, 54 medium, 115 rejected; [leads-v1.txt](eval/synonyms/leads-v1.txt)). Also fixed 3 missing US spellings.
+- **Result (same data):** ranked 1,355 → 1,346 (spelling) → **1,210** (synonyms); 72 "possibly in label". Foundry equals local exactly. New dataset `ontology_label_synonyms`.
+- **Finding:** NAION is in no semaglutide label (0 of 36 safety sections) and stays ranked 2nd, so it is a real unlabeled signal.
+- **Decided / proposed:** D043 (needs your OK). Docs: [A014](docs/05-approaches/A014-label-faers-synonym-table.md), DECISIONS (4 learnings), READMEs, DQ09 updated.
 
 ### 2026-11-04 (night, 8) — Step 9: 13-drug formulary end to end (Compass v26)
 - **Changed:** `INGREDIENTS` in the 4 raw API pulls → 13 drugs; `in_slice` true for all 13 ([clean_drug_identity.py](foundry/pipelines/clean/clean_drug_identity.py)). Edited in Foundry with find-and-replace, committed in both repos.

@@ -182,7 +182,7 @@ class FakeInput:
 
     def polars(self, lazy=False):
         import polars as pl
-        df = pl.read_ndjson(self.file)
+        df = pl.read_ndjson(self.file, infer_schema_length=None)  # scan all rows: a column can be null for the first thousand
         return df.lazy() if lazy else df
 
     def pandas(self):

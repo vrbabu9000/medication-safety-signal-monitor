@@ -14,11 +14,19 @@ import re
 import polars as pl
 from transforms.api import Input, Output, transform
 
+try:
+    from myproject.datasets.label_synonyms import SYN_VERSION, SYNONYMS
+except ImportError:  # local run: the module sits next to this file
+    import importlib.util, os
+    _spec = importlib.util.spec_from_file_location("label_synonyms", os.path.join(os.path.dirname(os.path.abspath(__file__)), "label_synonyms.py"))
+    _mod = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(_mod)
+    SYN_VERSION, SYNONYMS = _mod.SYN_VERSION, _mod.SYNONYMS
+
 CLEAN = "/kestrel-01f4ab/Medication Safety Signal Monitor/Data/clean/"
 CURATED = "/kestrel-01f4ab/Medication Safety Signal Monitor/Data/curated/"
 RULE = "prr_evans_v2"  # v2: mass-polypharmacy reports (>= MAX_DRUG_ROWS drugs) left out of the primary population (D023 v2)
 MAX_DRUG_ROWS = 30
-LABEL_CHECK = "text+ai_v1"
+LABEL_CHECK = "text+ai_v1+" + SYN_VERSION  # + reviewed label <-> FAERS synonyms (A014, D043)
 WINDOW = "FAERS 2026Q1-2026Q2"
 # D016 buckets: tag, don't rank. First match wins; everything else is "clinical".
 BUCKETS = [  # keyword stand-in for MedDRA groupings (no MedDRA licence); reviewed by hand, see A012
@@ -42,7 +50,8 @@ BUCKETS = [  # keyword stand-in for MedDRA groupings (no MedDRA licence); review
 ]
 _US = [("oesophag", "esophag"), ("oedema", "edema"), ("diarrhoea", "diarrhea"), ("haem", "hem"), ("anaem", "anem"), ("aemia", "emia"),
        ("oestr", "estr"), ("foet", "fet"), ("paed", "ped"), ("isation", "ization"), ("ise ", "ize "), ("yse ", "yze "), ("leukaem", "leukem"),
-       ("tumour", "tumor"), ("colour", "color"), ("behaviour", "behavior"), ("centre", "center"), ("ae", "e")]
+       ("tumour", "tumor"), ("colour", "color"), ("behaviour", "behavior"), ("centre", "center"), ("noea", "nea"), ("rrhoea", "rrhea"),
+       ("ised ", "ized "), ("ae", "e")]  # noea/rrhoea/ised added at A014 (dyspnoea, rhinorrhoea, generalised were missed)
 
 
 def words(s):
@@ -93,11 +102,12 @@ def label_texts(ingredient_products, products, sections):
 
 
 @transform.using(stats_out=Output(CURATED + "ontology_ae_stats"), signals_out=Output(CURATED + "ontology_signal_signals"),
+                 synonyms_out=Output(CURATED + "ontology_label_synonyms"),
                  cases=Input(CLEAN + "clean_faers_cases_current"), reactions=Input(CLEAN + "clean_faers_case_reactions"),
                  drug_reaction=Input(CLEAN + "clean_faers_drug_reaction"), ingredients=Input(CLEAN + "clean_drug_ingredients"),
                  drug_product=Input(CURATED + "ontology_link_drug_product"), products=Input(CURATED + "ontology_product_products"),
                  sections=Input(CLEAN + "clean_label_sections"), labeled=Input(CURATED + "ontology_labeled_reactions"))
-def compute(stats_out, signals_out, cases, reactions, drug_reaction, ingredients, drug_product, products, sections, labeled):
+def compute(stats_out, signals_out, synonyms_out, cases, reactions, drug_reaction, ingredients, drug_product, products, sections, labeled):
     # Reference population: every current, non-suppressed case (D022, D023), not only formulary cases. D023 v2: reports listing
     # MAX_DRUG_ROWS or more drugs (mass polypharmacy, e.g. one patient re-filed with changing ages) are left out of the primary
     # population; their count per drug-reaction is kept as a_mass_reports so the officer can see what was set aside.
@@ -121,6 +131,16 @@ def compute(stats_out, signals_out, cases, reactions, drug_reaction, ingredients
         for sp in spellings(r["normalized_term"]):
             ai_terms.setdefault(r["label_key"], {}).setdefault(sp, (r["labeled_reaction_key"], r["section_name"], r["quote"]))
 
+    syn = {}  # FAERS term -> [(band, spellings of the label phrase, phrase)], high band first
+    for pt, phrase, band, _ in SYNONYMS:
+        if band in ("high", "medium"):
+            syn.setdefault(pt, []).append((band, spellings(phrase), phrase))
+    for v in syn.values():
+        v.sort(key=lambda x: x[0] != "high")
+    synonyms_out.write_table(pl.DataFrame([{"faers_pt": pt, "label_phrase": ph, "band": b, "note": n, "syn_version": SYN_VERSION}
+                                           for pt, ph, b, n in SYNONYMS], schema={"faers_pt": pl.Utf8, "label_phrase": pl.Utf8, "band": pl.Utf8,
+                                                                               "note": pl.Utf8, "syn_version": pl.Utf8}))
+
     rows = []
     for r in tab.iter_rows(named=True):
         a, nd, c = r["a"], r["n_drug"], r["pt_cases"] - r["a"]
@@ -138,8 +158,16 @@ def compute(stats_out, signals_out, cases, reactions, drug_reaction, ingredients
             hit = next(((k, n) for k, n, t in labs if any(s in t for s in sp)), None)
             if hit:
                 method, lab_key, lab_sec = "label_text", hit[0], hit[1]
+        if method is None:  # 3) synonym table (A014, D043): a reviewed label phrase for this term is in a safety section
+            for band, ps, phrase in syn.get(r["pt"], []):
+                hit = next(((k, n) for k, n, t in labs if any(s in t for s in ps)), None)
+                if hit:
+                    method, lab_key, lab_sec, quote = f"synonym_{band}", hit[0], hit[1], phrase
+                    break
         n_mention = sum(1 for _, _, t in labs if any(s in t for s in sp))
-        status = "no_reference_label" if not labs else ("in_label" if method else "not_in_label")
+        # A medium-band synonym is a close or broader idea: "possibly in label", kept visible but never ranked (D039 G4).
+        status = ("no_reference_label" if not labs else "not_in_label" if method is None
+                  else "possibly_in_label" if method == "synonym_medium" else "in_label")
         rows.append({"stat_key": f"{r['ingredient_rxcui']}|{r['pt']}|{WINDOW}|{RULE}", "ingredient_rxcui": r["ingredient_rxcui"],
                      "ingredient_name": r["ingredient_name"], "pt": r["pt"], "bucket": bucket(r["pt"]), "window": WINDOW, "rule": RULE,
                      "a_drug_reaction": a, "b_drug_other": b, "c_other_reaction": c, "d_other_other": d, "n_drug_cases": nd, "n_all_cases": n_all,
@@ -152,13 +180,15 @@ def compute(stats_out, signals_out, cases, reactions, drug_reaction, ingredients
     stats = pl.DataFrame(rows, infer_schema_length=None)
     stats_out.write_table(stats)
 
-    # Signals: Evans + not found in any reference label. Ranked inside D016 buckets (clinical first) by chi2.
-    sig = stats.filter(pl.col("meets_evans") & (pl.col("label_status") == "not_in_label")).with_columns(
+    # Signals: Evans + not found in any reference label (or only a medium synonym). Ranked inside D016 buckets (clinical first) by chi2.
+    sig = stats.filter(pl.col("meets_evans") & pl.col("label_status").is_in(["not_in_label", "possibly_in_label"])).with_columns(
         pl.concat_str(["ingredient_rxcui", pl.lit("|"), "pt", pl.lit("|"), "rule"]).alias("signal_key"),
         (pl.col("a_mass_reports") / (pl.col("a_drug_reaction") + pl.col("a_mass_reports"))).alias("mass_report_share"))
     # A reaction mostly carried by mass-polypharmacy reports is likely the same re-filed patients: shown with a caution, not ranked.
-    sig = sig.with_columns(((pl.col("bucket") == "clinical") & (pl.col("mass_report_share") < 0.5)).alias("is_ranked"),
-        pl.when(pl.col("mass_report_share") >= 0.5).then(pl.lit("mostly_mass_reports")).otherwise(None).alias("caution"),
+    sig = sig.with_columns(((pl.col("bucket") == "clinical") & (pl.col("mass_report_share") < 0.5)
+                            & (pl.col("label_status") == "not_in_label")).alias("is_ranked"),
+        pl.when(pl.col("mass_report_share") >= 0.5).then(pl.lit("mostly_mass_reports"))
+          .when(pl.col("label_status") == "possibly_in_label").then(pl.lit("possible_label_synonym")).otherwise(None).alias("caution"),
         pl.concat_str([pl.col("ingredient_name").str.to_titlecase(), pl.lit(" · "), "pt"]).alias("display_name"))
     sig = sig.with_columns(pl.struct(["signal_key", "a_drug_reaction", "prr", "label_check", "window", "n_reference_labels", "ai_labels_checked"])
                            .map_elements(lambda s: hashlib.sha256(repr(sorted(s.items())).encode()).hexdigest()[:16], return_dtype=pl.Utf8)

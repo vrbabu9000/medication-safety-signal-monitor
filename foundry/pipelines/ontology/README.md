@@ -1,6 +1,6 @@
 # foundry/pipelines/ontology/ — gold: datasets that back Ontology objects
 
-Mirrors of [ontology_objects.py](ontology_objects.py) (step 6) and [ontology_signals.py](ontology_signals.py) (step 8). It lives in Foundry repo `Pipelines/pipelines_clean` (`transforms-python/src/myproject/datasets/ontology_objects.py`) and writes to `Data/curated`. Object and link types built on these datasets: [foundry/ontology](../../ontology/README.md).
+Mirrors of [ontology_objects.py](ontology_objects.py) (step 6), [ontology_signals.py](ontology_signals.py) (step 8) and [label_synonyms.py](label_synonyms.py) (A014: the reviewed synonym table, a plain Python list imported by the signals transform). It lives in Foundry repo `Pipelines/pipelines_clean` (`transforms-python/src/myproject/datasets/ontology_objects.py`) and writes to `Data/curated`. Object and link types built on these datasets: [foundry/ontology](../../ontology/README.md).
 
 | Transform | Outputs | Key |
 |---|---|---|
@@ -11,6 +11,8 @@ Mirrors of [ontology_objects.py](ontology_objects.py) (step 6) and [ontology_sig
 | `compute_triage_seed` | `ontology_triage_decisions`: empty, the schema only; rows come from the Action | `decision_id` |
 
 | `ontology_signals.compute` (step 8, [A012](../../../docs/05-approaches/A012-signal-statistics-and-workshop.md)) | `ontology_ae_stats`: per drug × reaction a/b/c/d, PRR, 95% CI, Yates χ², Evans flag (D006), label status + match evidence (D037 text + AI terms) · `ontology_signal_signals`: Evans **and** not in label, bucket (D016 v2), `is_ranked`, `rank_in_bucket`, caution, `evaluation_id` | `stat_key` · `signal_key` |
+
+Label check `text+ai_v1+syn_v1`: (1) AI atomic term, (2) exact term or US spelling in a safety section (D037), (3) reviewed synonym phrase (D043): high → `in_label`, medium → `possibly_in_label` (signal kept, not ranked). The table is also written to `ontology_label_synonyms`.
 
 Rule `prr_evans_v2`: reports with ≥30 drugs (`MAX_DRUG_ROWS`) are left out of the primary population and counted in `a_mass_reports` (D023 v2, accepted).
 

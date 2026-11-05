@@ -17,4 +17,5 @@ Every approach we try gets a file here, including the ones we drop. New file = c
 | [A011](A011-ai-label-extraction-pilot.md) | AI label extraction pilot: Claude Sonnet 5.5 in a cached, grounded transform; 2 labels / 9 sections | Prototype → Test | AI | Kept (pilot; prompt p2 before widening) | — | 2026-11-04 |
 | [A012](A012-signal-statistics-and-workshop.md) | Signal statistics (PRR, Evans, mass-report cut) + first Workshop screen with triage write-back | Prototype → Test | Pipelines / Ontology / App | Kept (step 8 gate passed) | — | 2026-11-04 |
 | [A013](A013-widen-to-formulary.md) | Widen the working path to the 13-drug formulary (step 9) | Prototype → Test | Pipelines / Ontology / Scope | Kept (all layers reconciled) | the oxycodone slice | 2026-11-04 |
+| [A014](A014-label-faers-synonym-table.md) | Label ↔ FAERS synonym table (reviewed, banded high / medium / rejected) | Ideate → Test | AI / Ontology | Kept (−10.7% ranked; pharmacist review pending) | — | 2026-11-05 |
 | A00x | Monitoring design (incl. how to show 3–4 week drift in a 3-week project) | Ideate | Monitoring | _Later_ | — | — |

@@ -13,7 +13,7 @@ Status: 🔍 Suspected (not yet seen in our data) · ✅ Confirmed · 🛠️ Ha
 | DQ06 | FAERS | Indication terms show up as reactions (e.g. "diabetes" for a GLP-1) | False "unlabeled" signals | Exclude reactions that match the drug's indication | 🔍 |
 | DQ07 | Labels | Multiple labels per ingredient (brands, generics, repackagers) | Which label is "the" label? | Pick reference label per ingredient (innovator/RLD); document | 🔍 |
 | DQ08 | Labels | Version history; reactions added over time | Needed for "since" and for backtest | Store per (setid, version) | 🔍 |
-| DQ09 | Labels | Prose vs MedDRA terms ("GI upset" vs "Nausea") | Matching errors → false unlabeled flags | LLM normalizes to PT + synonym list; measure on gold set | 🔍 |
+| DQ09 | Labels | Prose vs MedDRA terms ("GI upset" vs "Nausea") | Matching errors → false unlabeled flags | LLM normalizes to PT + synonym list; measure on gold set | 🛠️ partly: exact text + US spelling (D037) + reviewed synonym table syn_v1 (A014, D043); pharmacist review pending |
 | DQ10 | Labels | Tables of reaction percentages inside XML | Extraction must handle tables | Test on gold set | 🔍 |
 | DQ11 | Recalls | Product named in free text; NDCs inconsistent or missing | Joining recall → drug | Parse NDCs → RxNorm; fallback text match; manual review list | 🔍 |
 | DQ12 | Recalls | Compounded products (not FDA-approved) recalled | Do they count for "our" drug? | Show, tagged "compounded" | 🔍 |

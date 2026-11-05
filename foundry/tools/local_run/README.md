@@ -21,8 +21,11 @@ python foundry/tools/local_run/run_local.py foundry/pipelines/raw/raw_rxnorm.py
 
 Verified 2026-11-04: local counts equal the Foundry builds (`raw_rxnorm_lookup` 2, `raw_rxnorm_related` 271, `raw_openfda_enforcement` 25, `raw_openfda_drugsfda` 141, `raw_openfda_ndc` 313).
 
+Also here: [synonym_candidates.py](synonym_candidates.py) finds label wording that may match an unlabeled FAERS term (A014).
+
 Limits:
 - This is **not** a Foundry emulator. Spark functions such as `df.withColumn` are not available. Write clean transforms with polars (`transform.using` + lightweight) to test them here, or test Spark logic in Foundry.
 - `raw_dailymed_spl.py` makes 266 web calls (~2 min). `raw_faers_quarters.py` downloads ~127 MB and writes ~690 MB.
+- DailyMed rate-limits fast pulls (HTTP 429 for 744 of 1,321 labels on 2026-11-04): they become error rows; re-run or refetch slowly.
 - Outbound internet must be allowed (a cloud environment may block some hosts).
 - Results here never replace the Foundry check: row count = source total, on the dataset page.

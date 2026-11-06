@@ -1,0 +1,67 @@
+---
+title: "Incremental pieces v3: FAERS full vs incremental (A015, O2, measured: slower) and DailyMed XML reuse (O3, measured: faster)"
+config:
+  flowchart:
+    wrappingWidth: 320
+---
+flowchart TB
+%% handin-theme
+  classDef source fill:#EAF3F5,stroke:#087F8C,color:#13324B
+  classDef pipeline fill:#FFFFFF,stroke:#13324B,color:#263746
+  classDef incr fill:#FFFFFF,stroke:#087F8C,stroke-width:2.5px,stroke-dasharray:7 4,color:#263746
+  classDef ontology fill:#E1F5EE,stroke:#0F6E56,color:#085041
+  classDef risk fill:#FFF3D6,stroke:#B7791F,color:#7A4B00
+  classDef neutral fill:#F1EFE8,stroke:#5F5E5A,color:#444441
+  classDef done fill:#E1F5EE,stroke:#0F6E56,color:#085041
+
+  subgraph P1["① FAERS: full rebuild vs incremental (A015, D044, O2) · measured in Foundry"]
+    direction LR
+    RQ["<b>raw_faers_quarter_files</b><br/>2026Q1 + 2026Q2<br/>(append-only quarters)"]:::source
+    ID["<b>clean_drug_identity</b><br/>hash differs from the log<br/>→ replay all quarters<br/>as a new generation<br/>(tested locally only)"]:::risk
+
+    subgraph FULL["Full rebuild · the baseline, feeds signals"]
+      FB["<b>clean_faers.py</b><br/>reads every quarter<br/>819,683 DEMO rows + DRUG/REAC"]:::pipeline
+      FO["<b>clean_faers_*</b><br/>cases_current · case_reactions<br/>drug_reaction"]:::pipeline
+    end
+
+    subgraph INC["Incremental path · runs beside it"]
+      ST["<b>compute_state</b><br/>adds the oldest NEW quarter only<br/>Q2: 422,459 DEMO rows (52%)<br/>D022: max caseversion, newer<br/>quarter wins ties, then deletes"]:::incr
+      SD["<b>state</b>, kept between builds<br/>cases · suspects · reactions<br/><b>+ clean_faers_inc_log</b>: 1 row per<br/>quarter (read, replaced, deleted,<br/>seconds, mode, identity hash)"]:::incr
+      OU["<b>compute_outputs</b><br/>shared finish() = D023 fold<br/>→ clean_faers_inc_* (same 3)"]:::pipeline
+    end
+
+    EQ["<b>Correct: EXCEPT ALL both ways = 0</b><br/>792,346 cases · 2,554,017 reactions<br/>373,522 drug-reaction rows<br/>Q2 replaced 26,681 Q1 cases,<br/>deleted 655"]:::done
+    SP["<b>Not faster at 2 quarters</b><br/>full 32 s vs incremental 88 s<br/>(state 1 m 2 s + outputs 26 s)<br/>2.75× slower → signals stay on<br/>the full rebuild; re-measure at 4+"]:::risk
+    SIG["<b>ontology_signals</b><br/>reads the full rebuild"]:::ontology
+
+    RQ --> FB --> FO --> SIG
+    RQ -- "new quarter only" --> ST --> SD --> OU
+    ID -. "identity change" .-> ST
+    FO -.-> EQ
+    OU -.-> EQ
+    FB -. "32 s" .-> SP
+    OU -. "88 s" .-> SP
+  end
+
+  subgraph P2["② DailyMed XML reuse (D047) · O3 · measured in Foundry (raw_dailymed_spl.py)"]
+    direction LR
+    IX["<b>raw_dailymed_spl_index</b><br/>1,321 setid + version"]:::source
+    Q{"same setid + version<br/>already held as XML?"}:::neutral
+    RU["<b>reuse</b> the previous output<br/>no download"]:::incr
+    DL["<b>download</b><br/>retry 429 / 5xx with back-off<br/>(max 5 tries)"]:::pipeline
+    XO["<b>raw_dailymed_spl_xml</b><br/>same 1,321 rows, all HTTP 200<br/>index still pulled every build<br/>→ new versions fetched same day"]:::pipeline
+    OK["<b>Faster: 3 m 23 s → 1 m 23 s (−59%)</b><br/>XML downloads 1,321 → 2<br/>(the 2 DQ42 'None' replies, re-tried)<br/>1,319 reused · fewer HTTP 429 risks"]:::done
+    CV["<b>Caveat</b>: the 3 m 23 s baseline is<br/>an earlier build (step 9, same scope),<br/>not back-to-back"]:::risk
+    IX --> Q
+    Q -- "yes" --> RU --> XO
+    Q -- "no" --> DL --> XO
+    XO -.-> OK
+    OK -.- CV
+  end
+  P1 ~~~ P2
+
+  subgraph LEG["Legend"]
+    direction LR
+    K1["source data"]:::source ~~~ K2["dataset / transform"]:::pipeline ~~~ K3["incremental or reused<br/>(dashed border)"]:::incr ~~~ K4["result proven"]:::done ~~~ K5["caveat"]:::risk
+  end
+  P2 ~~~ LEG

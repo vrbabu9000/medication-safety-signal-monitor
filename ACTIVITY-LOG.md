@@ -3,15 +3,38 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-11-05 — Hand-in Phase D done: 5 reviews, all fixes applied, everything rebuilt (Compass v37) |
-| **Where we are** | Pilot built; hand-in set complete: [R00 Start here](docs/11-handin/reports/pdf/R00-start-here.pdf) → [architecture note](docs/11-handin/architecture-note/architecture-note.pdf) → [deck](docs/11-handin/deck/MSSM-demo-deck.pdf) + [script](docs/11-handin/deck/speaking_script.md) → [demo guide](docs/11-handin/demo/demo-navigation-guide.md) → reports R01–R09. Evaluator v2: Architecture 4 · Optimization 3 · Data judgment 4 · Application 3 · AI reliability 3 · Communication 4 ([rubric-check-v2](docs/11-handin/reviews/rubric-check-v2.md)) |
-| **Next 3 actions** | 1. (you) Batch decision: accept the 12 proposed decisions; D041 v2 yes/no; delete duplicate Signal→Drug link; name a pharmacist · 2. (you + Claude) Rehearsal with the 3 checks (DailyMed "optic", Class I count, stopwatch) · 3. (you) One commit of everything (commands in the last chat reply) |
-| **Waiting on** | Your batch decision · a rehearsal against live Foundry · pharmacist reviewer |
-| **Say this to Claude to restart** | _"Read ACTIVITY-LOG, COMPASS and docs/11-handin/reviews/rubric-check-v2.md; help me rehearse the demo."_ |
+| **Last session** | 2026-11-06 — README rewritten for outside reviewers, repo-wide link/number check, reviewer sharing guide (Compass v39) |
+| **Where we are** | Pilot built and refreshed: the AI now reads the demo drug's labels and its quotes are on page 1 (Workshop v0.10.0). Hand-in set: [R00 Start here](docs/11-handin/reports/pdf/R00-start-here.pdf) → [architecture note](docs/11-handin/architecture-note/architecture-note.pdf) → [deck](docs/11-handin/deck/MSSM-demo-deck.pdf) + [script](docs/11-handin/deck/speaking_script.md) → [demo guide](docs/11-handin/demo/demo-navigation-guide.md) → reports R01–R09 |
+| **Next 3 actions** | 1. (you) 5-minute Foundry sharing check ([guide](docs/10-delivery/sharing-with-reviewers.md)), then send Etter the repo + resume email, ask for Mon Nov 9, 12 PM · 2. (you) One commit + push · 3. (you + Claude) Rehearsal with the 3 checks |
+| **Waiting on** | A rehearsal against live Foundry · pharmacist reviewer |
+| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS; help me rehearse the demo against live Foundry."_ |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-06 (13) — README for outside reviewers + repo check (Compass v39)
+- **README rewritten** ([README.md](README.md)): "Reviewing this project? Start here" path (R00 → note → R02 → R06 → R07 → R09), headline numbers from [numbers.json](docs/11-handin/numbers.json), a data engineering table, "Run it yourself", known gaps (pharmacist, self-scored AI, syn_v3 ahead of Foundry). Old status was Compass v22.
+- **Repo check:** every relative link in .md files resolves, except in the archived `proposals/2026-10-28-codex-draft/` (not adopted; left as is) and COMPASS history snapshots (root-relative links; archival). Stale numbers fixed: [rehearsal-plan.md](docs/11-handin/demo/rehearsal-plan.md) "AI on 2 labels" → 5; [foundry/README.md](foundry/README.md) status table; COMPASS "(proposed)" labels on decisions accepted 6 Nov, and a duplicate v38 change-log row (now v39).
+- **New:** [sharing-with-reviewers.md](docs/10-delivery/sharing-with-reviewers.md). Developer Tier sign-ups paused 23 Oct 2026, so live Foundry access for an outsider is unconfirmed; fallback = repo + PDFs + screen-share.
+- **Not changed:** numbers.json, hand-in PDFs, Foundry.
+
+### 2026-11-06 — Reusable kickoff prompt for a website project
+- **Made:** [website-project-kickoff-prompt.md](docs/13-reuse/website-project-kickoff-prompt.md): paste-ready prompt that carries this project's rules (manual git, Compass, activity log, decisions vN, approaches, diagrams, personas, backlog) to a website repo, plus a new technical-scoping section (SCOPE.md).
+- **Not changed:** Compass, decisions, hand-in set. Outside the Soragence hand-in.
+
+### 2026-11-06 — Batch decision: 12 accepted, D041 v2 built, duplicate link deleted (Compass v38)
+- **Decisions:** you accepted D006, D015 (target only; benchmark stays cut), D025–D029, D037, D045–D048, and D041 v2 ([DECISIONS](docs/06-decisions/DECISIONS.md) change rows). Pharmacist stays a documented gap.
+- **D041 v2 in Foundry** ([A019](docs/05-approaches/A019-widen-ai-to-semaglutide.md)): `PILOT_SETIDS` + 3 semaglutide labels → 21 sections, 745/745 quotes grounded; 12 model calls (44,869 + 26,226 tokens), then a forced rebuild made 0 calls (21/21 cached, O1b). Signals unchanged (1,952 / 1,073; change feed 0 signal changes). NAION: labels also read by AI = 3; the AI found retinopathy terms but no optic-nerve term. Monitoring run 3: grounded 1.0, 0 section errors.
+- **Workshop v0.10.0:** page 1 has a new table "What the AI read in these labels" (reaction · section · word-for-word quote · label). First version squeezed the triage button; fixed with *Enable scrolling* on the evidence section. Screens: [app-1d](docs/11-handin/screens/app-1d-naion-ai-read-3.jpg), [app-1e](docs/11-handin/screens/app-1e-ai-quotes-panel-naion.jpg).
+- **Ontology:** duplicate Signal → Drug link type deleted after checking no Workshop variable used it; 10 MSSM link types.
+- **Docs:** [numbers.json](docs/11-handin/numbers.json) updated (D041 v2 keys), optimization log O1b, [eval](eval/ai-eval-v1.md) D041 v2 section, ontology/AI READMEs, 4 learnings; hand-in reports, deck, demo guide and diagrams refreshed by one agent.
+
+### 2026-11-06 (12) — syn_v3: Allodynia → "dysesthesia" (Compass v38)
+- **Changed:** [label_synonyms.py](foundry/pipelines/ontology/label_synonyms.py): new medium row, Allodynia removed from the rejected list, `SYN_VERSION = "syn_v3"`. Local only.
+- **Measured (local re-run):** signals 1,952 (same) · ranked 1,073 → 1,072 · possibly in label 108 → 109. Only Tirzepatide · Allodynia (#5) changed status ([A014 update](docs/05-approaches/A014-label-faers-synonym-table.md)).
+- **Found:** 27 ranked signals in other drugs swapped rank because of tied chi² (no tie-break) → [DQ43](docs/07-data-quality/data-issues-register.md), learning in DECISIONS.
+- **Not done:** Foundry push and re-freezing [numbers.json](docs/11-handin/numbers.json). The hand-in set still quotes syn_v2 numbers on purpose.
 
 ### 2026-11-05 (evening, 11) — F01 run v2: 3 more public sources
 - **Re-ran the 6 samples** with Europe PMC, FDA "Potential Signals of Serious Risks" (70 quarterly pages, 785 rows) and OnSIDES v3.1.1 (85 MB, CC BY 4.0). New tool [research_sources.py](tools/lit_review/research_sources.py). Results: [rerun-v2-multi-source.md](docs/12-features/ai-literature-review/samples/rerun-v2-multi-source.md).

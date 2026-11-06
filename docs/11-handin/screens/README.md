@@ -16,6 +16,8 @@
 | hood-ai-extractions-cache-sql.jpg | AI extraction rows: 9 sections, n_reactions = n_grounded, from_cache true, tokens | repo SQL panel on ai_label_section_extractions |
 | hood-monitoring-checks-sql.jpg | Latest monitoring checks (warn: reporter type blank; AI checks pass) | repo SQL panel on Data/monitoring/monitoring_checks |
 | app-1c-labels-searched-naion.jpg | NAION evidence + the 3 reference labels searched (Ozempic v20, Wegovy v19, oral Ozempic v14) with DailyMed links | tab 1 → select signal → panel "Reference labels searched" |
+| app-1d-naion-ai-read-3.jpg | v0.10.0 (2026-11-06): NAION record after D041 v2: *Labels also read by AI* = 3, new evaluation id `c4b5da0b64d1e1e6`, triage button visible | tab 1 → NAION row (default) |
+| app-1e-ai-quotes-panel-naion.jpg | v0.10.0: below the labels table, **What the AI read in these labels**: reaction · section · word-for-word quote · label (297 rows for semaglutide) | tab 1 → NAION → scroll the right column |
 | app-3b-what-changed-past-month.jpg | Page 3 with the "Past month" preset (Oct 6 – Nov 5): 26 events = 15 label versions + 11 recalls, same as Morning brief card 3 | tab 3 → Start date → Past month |
 | hood-code-ai-label-extraction.jpg | ai_label_extraction.py: MODEL_ID claude-sonnet-5.5, PROMPT_VERSION p2, PARSER x1, PILOT_SETIDS, CACHEABLE | pipelines_clean → ai_label_extraction.py |
 | hood-labeled-reactions-quotes-sql.jpg | AI output rows: term, assertion type, grounding = exact, the quote | repo SQL on ontology_labeled_reactions |

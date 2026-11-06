@@ -3,7 +3,8 @@
     "captured_at": "2026-11-05T07:50Z",
     "source": "Foundry SQL (repo SQL panel) after the baseline-gate rebuild of the whole downstream chain: raw_dailymed_spl → clean_labels → clean_label_product_map → ontology_objects → ai_label_extraction → ontology_signals → ontology_changes → monitoring. Build durations from the Foundry Builds page. Query: docs/11-handin/baseline-gate.md",
     "provisional": false,
-    "note": "Single source for every number in reports, deck, demo script and diagrams. Values marked 'local' in a key name come from the local runner (equal to Foundry where both exist, A014)."
+    "note": "Single source for every number in reports, deck, demo script and diagrams. Values marked 'local' in a key name come from the local runner (equal to Foundry where both exist, A014).",
+    "updated_2026_11_06": "D041 v2 (accepted 2026-11-06): AI extraction widened to the 3 semaglutide reference labels; ai.*, app.workshop_version, monitoring.runs and the new keys below re-captured with Foundry SQL (repo SQL panel) after rebuilding ai_label_extraction → ontology_signals → ontology_changes → monitoring. Signals re-checked equal (1,952 / 1,073 / 1,844 / 108; change feed found 0 signal changes); other keys were not re-captured."
   },
   "scope": {
     "drugs_formulary": 13,
@@ -52,7 +53,15 @@
       "prr_ci_low": 92.19,
       "prr_ci_high": 137.24,
       "chi2_yates": 10653.8,
-      "all_reports_drug": 20892
+      "all_reports_drug": 20892,
+      "evaluation_id_v2": "c4b5da0b64d1e1e6"
+    },
+    "label_check_stats": {
+      "label_text": 1252,
+      "ai_term_exact": 188,
+      "synonym_high": 163,
+      "synonym_medium": 210,
+      "none": 13108
     }
   },
   "synonyms": {
@@ -82,11 +91,11 @@
     "last_30_days": 26
   },
   "ai": {
-    "pilot_labels": 2,
-    "sections": 9,
-    "reactions": 448,
-    "grounded": 448,
-    "from_cache_on_rebuild": 9,
+    "pilot_labels": 5,
+    "sections": 21,
+    "reactions": 745,
+    "grounded": 745,
+    "from_cache_on_rebuild": 21,
     "model_calls_on_rebuild": 0,
     "gold_recall_strict": "35/35",
     "gold_recall_strict_p1": "11/35",
@@ -94,18 +103,43 @@
     "gold_f1": 0.97,
     "d015_target_f1": 0.85,
     "run1_tokens_prompt": 41704,
-    "run1_tokens_completion": 29072
+    "run1_tokens_completion": 29072,
+    "v1_pilot": {
+      "labels": 2,
+      "sections": 9,
+      "reactions": 448,
+      "grounded": 448
+    },
+    "d041_v2": {
+      "semaglutide_labels": 3,
+      "new_sections": 12,
+      "model_calls": 12,
+      "new_reactions": 297,
+      "new_grounded": 297,
+      "new_prompt_tokens": 44869,
+      "new_completion_tokens": 26226,
+      "cached_sections_in_that_build": 9,
+      "stats_matched_by_ai": 188,
+      "stats_matched_by_ai_semaglutide": 57,
+      "stats_matched_by_ai_oxycodone": 131,
+      "signals_changed": 0,
+      "semaglutide_signals": 274,
+      "semaglutide_ranked": 199,
+      "naion_labels_read_by_ai": 3,
+      "optic_or_naion_terms_found_by_ai": 0
+    }
   },
   "monitoring": {
     "checks_per_build": 21,
-    "runs": 2,
+    "runs": 3,
     "data_health_checks": 4,
     "reporter_type_blank_q1": 0.343,
     "reporter_type_blank_q2": 0.721,
     "recalls_last4w": 10,
     "recalls_prev4w": 3,
     "openfda_age_days": 8,
-    "faers_age_days": 130
+    "faers_age_days": 130,
+    "ai_cache_hit_rate_d041_v2_build": 0.429
   },
   "optimization": {
     "O1": {
@@ -137,15 +171,23 @@
   },
   "app": {
     "pages": 4,
-    "workshop_version": "v0.9.0",
+    "workshop_version": "v0.10.0",
     "triage_decisions": 2,
     "timing_s": {
       "morning_brief_load": 11.5,
       "switch_recalls": 1.1,
       "switch_what_changed": 0.8,
       "switch_signals_with_labels": 2.4,
-      "method": "browser script, time until the expected text is on screen, View mode, 2026-11-05; human reading time not included"
+      "method": "browser script, time until the expected text is on screen, View mode, 2026-11-05; human reading time not included",
+      "note": "timed on v0.9.0 (2026-11-05); v0.10.0 adds one table below the fold on page 1, not re-timed"
     },
-    "labels_searched_naion": 3
+    "labels_searched_naion": 3,
+    "labels_read_by_ai_naion": 3,
+    "ai_quotes_panel_rows_naion": 297
+  },
+  "ontology": {
+    "link_types_mssm": 10,
+    "duplicate_link_deleted": "2026-11-06",
+    "labeled_reactions": 745
   }
 }

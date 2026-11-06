@@ -22,4 +22,5 @@ Every approach we try gets a file here, including the ones we drop. New file = c
 | [A016](A016-three-question-screen.md) | Three-question screen: Morning brief + recalls + "what changed" pages, change feed, source as-of | Prototype → Test | Ontology / App / Pipelines | Kept | A012 one-page screen | 2026-11-05 |
 | [A017](A017-monitoring-and-health-checks.md) | Monitoring: 21 computed checks per build, drift replay, 4 Foundry Data Health checks, DailyMed retry | Prototype → Test | Monitoring | Kept (first version) | — | 2026-11-05 |
 | [A018](A018-ai-literature-review.md) | AI review backed by papers (PubMed) for the officer's watch list ([feature folder](../12-features/ai-literature-review/README.md)) | Ideate → Prototype | AI / App | Trying (6 samples; not in pilot scope) | — | 2026-11-05 |
+| [A019](A019-widen-ai-to-semaglutide.md) | Widen AI label reading to the 3 semaglutide labels + page-1 "What the AI read" table (D041 v2) | Prototype → Test | AI / App | Kept (745/745 grounded; signals unchanged) | extends A011 | 2026-11-06 |
 | A00x | Monitoring design (incl. how to show 3–4 week drift in a 3-week project) | Ideate | Monitoring | _Later_ | — | — |

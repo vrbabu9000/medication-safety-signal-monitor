@@ -1,0 +1,202 @@
+{
+  "id": "03-fentanyl-anaesthetic-neuro",
+  "query": "fentanyl[tiab] AND (anesthe*[tiab] OR anaesthe*[tiab]) AND (\"neurologic complication*\"[tiab] OR \"neurological complication*\"[tiab])",
+  "hits": 38,
+  "papers": [
+    {
+      "pmid": "30008467",
+      "year": "2018",
+      "journal": "Am J Case Rep",
+      "title": "Serotonin Syndrome in the Perioperative Setting.",
+      "pubtype": [
+        "Case Reports",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "28868303",
+      "year": "2017",
+      "journal": "World J Clin Cases",
+      "title": "Adjuvants to local anesthetics: Current understanding and future trends.",
+      "pubtype": [
+        "Editorial"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "15262604",
+      "year": "2004",
+      "journal": "Heart Surg Forum",
+      "title": "Spinal (subarachnoid) morphine for off-pump coronary artery bypass surgery.",
+      "pubtype": [
+        "Clinical Trial",
+        "Journal Article",
+        "Randomized Controlled Trial"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "26239941",
+      "year": "2016",
+      "journal": "J Feline Med Surg",
+      "title": "Retrospective assessment of peripheral nerve block techniques used in cats undergoing hindlimb orthopaedic surgery.",
+      "pubtype": [
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "11084450",
+      "year": "2000",
+      "journal": "J Fr Ophtalmol",
+      "title": "[Premedication and sedation complications during ophthalmic anesthesia].",
+      "pubtype": [
+        "Comparative Study",
+        "English Abstract",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "11211755",
+      "year": "2001",
+      "journal": "Masui",
+      "title": "[Anesthesia for a patient with cardiac sarcoidosis].",
+      "pubtype": [
+        "Case Reports",
+        "English Abstract",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "24151941",
+      "year": "2013",
+      "journal": "J Small Anim Pract",
+      "title": "Retrospective comparison of two peripheral lumbosacral plexus blocks in dogs undergoing pelvic limb orthopaedic surgery.",
+      "pubtype": [
+        "Comparative Study",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "23504678",
+      "year": "2013",
+      "journal": "Urol J",
+      "title": "General versus spinal anesthesia in percutaneous nephrolithotomy.",
+      "pubtype": [
+        "Comparative Study",
+        "Journal Article",
+        "Randomized Controlled Trial",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "24565247",
+      "year": "2013",
+      "journal": "Braz J Anesthesiol",
+      "title": "Anesthesia for cesarean section in a patient with Guillain-Barre syndrome: Case report.",
+      "pubtype": [
+        "Case Reports",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "23931254",
+      "year": "2013",
+      "journal": "Braz J Anesthesiol",
+      "title": "Anesthesia for cesarean section in a patient with Guillain-Barre syndrome: case report.",
+      "pubtype": [
+        "Case Reports",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "24264554",
+      "year": "2013",
+      "journal": "Agri",
+      "title": "Monoplegia after combined spinal epidural anesthesia.",
+      "pubtype": [
+        "Case Reports",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "37441289",
+      "year": "2023",
+      "journal": "Med J Armed Forces India",
+      "title": "A prospective, randomised, single-blinded controlled trial comparing ultrasound versus nerve stimulator guidance for interscalene block for ambulatory upper limb surgeries.",
+      "pubtype": [
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "10027035",
+      "year": "1999",
+      "journal": "Acta Anaesthesiol Scand",
+      "title": "Paraplegia after thoracotomy--not caused by the epidural catheter.",
+      "pubtype": [
+        "Case Reports",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "10442965",
+      "year": "1999",
+      "journal": "Can J Anaesth",
+      "title": "Str\u00fcmpell's disease in a patient presenting for Cesarean section.",
+      "pubtype": [
+        "Case Reports",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "19669023",
+      "year": "2009",
+      "journal": "Rev Bras Anestesiol",
+      "title": "[Continuous spinal block in a patient undergoing partial gastrectomy: case report].",
+      "pubtype": [
+        "Case Reports",
+        "English Abstract",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "20548805",
+      "year": "2010",
+      "journal": "Tex Heart Inst J",
+      "title": "Carotid endarterectomy with intermediate cervical plexus block.",
+      "pubtype": [
+        "Journal Article"
+      ],
+      "retracted": false
+    }
+  ],
+  "abstracts_kept": [
+    "30008467",
+    "28868303",
+    "15262604",
+    "26239941",
+    "11084450",
+    "11211755",
+    "24151941",
+    "23504678"
+  ],
+  "metrics": {
+    "api_calls": 3,
+    "seconds": 2.1,
+    "abstract_chars": 16838,
+    "approx_tokens": 4209,
+    "retracted_dropped": 0
+  }
+}

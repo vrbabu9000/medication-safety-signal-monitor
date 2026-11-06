@@ -1,0 +1,839 @@
+{
+  "summary": {
+    "created_at_utc": "2026-11-01T20:10:59.378216+00:00",
+    "shared_pack_sha256": "2652cbbe5a08210cc9268b956401f21fd169a05c3647035ac7b83caf345be481",
+    "codex_file_sha256": "f22e804bd532e16b97f382c4f3cba8e7172096606d8a6b2f4b2b8a8a9ed2a8ce",
+    "claude_file_sha256": "d33088a1dce3d6825da82e1e6099a7d53f45c292c510c8c33d6ee6e8a6216965",
+    "case_count": 30,
+    "exact_agreements": 29,
+    "disagreements": [
+      "G26"
+    ],
+    "interpretation": "Agreement only; not gold-standard accuracy. Independently check evidence, even where answers agree."
+  },
+  "cases": [
+    {
+      "case_id": "G01",
+      "category": "DailyMed",
+      "codex_answer": "reaction_or_warning",
+      "claude_answer": "reaction_or_warning",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "dm_oxy"
+      ],
+      "claude_source_ids": [
+        "dm_oxy"
+      ],
+      "codex_evidence_locators": {
+        "dm_oxy": "HL7 v3 XML //section whose title is '5.2 Life-Threatening Respiratory Depression'; direct section text; derived section_index=18"
+      },
+      "claude_evidence_locators": {
+        "dm_oxy": {
+          "xml_path": "/document//section[id/@root='09493113-6b9f-41c9-9156-dbad990e351a'][title='5.2 Life-Threatening Respiratory Depression']/text",
+          "heading": "5.2 Life-Threatening Respiratory Depression",
+          "derived_section_index": 18,
+          "derived_view": "evidence/dm_oxy.sections.json"
+        }
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G02",
+      "category": "DailyMed",
+      "codex_answer": "reaction_or_warning",
+      "claude_answer": "reaction_or_warning",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "dm_oxy"
+      ],
+      "claude_source_ids": [
+        "dm_oxy"
+      ],
+      "codex_evidence_locators": {
+        "dm_oxy": "HL7 v3 XML //section whose title is '5.13 Risks of Gastrointestinal Complications'; direct section text; derived section_index=29"
+      },
+      "claude_evidence_locators": {
+        "dm_oxy": {
+          "xml_path": "/document//section[id/@root='9b34b898-58da-4b2f-959a-14a5275657b2'][title='5.13 Risks of Gastrointestinal Complications']/text",
+          "heading": "5.13 Risks of Gastrointestinal Complications",
+          "derived_section_index": 29,
+          "derived_view": "evidence/dm_oxy.sections.json"
+        }
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G03",
+      "category": "DailyMed",
+      "codex_answer": "underlying_condition_or_risk_factor",
+      "claude_answer": "underlying_condition_or_risk_factor",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "dm_oxy"
+      ],
+      "claude_source_ids": [
+        "dm_oxy"
+      ],
+      "codex_evidence_locators": {
+        "dm_oxy": "HL7 v3 XML //section whose title is '5.12 Difficulty in Swallowing and Risk for Obstruction in Patients at Risk for a Small Gastrointestinal Lumen'; direct section text; derived section_index=28"
+      },
+      "claude_evidence_locators": {
+        "dm_oxy": {
+          "xml_path": "/document//section[id/@root='a791a93a-4832-43fc-b616-2b65bb668068'][title='5.12 Difficulty in Swallowing and Risk for Obstruction in Patients at Risk for a Small Gastrointestinal Lumen']/text",
+          "heading": "5.12 Difficulty in Swallowing and Risk for Obstruction in Patients at Risk for a Small Gastrointestinal Lumen",
+          "derived_section_index": 28,
+          "derived_view": "evidence/dm_oxy.sections.json"
+        }
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G04",
+      "category": "DailyMed",
+      "codex_answer": "symptom_of_other_condition",
+      "claude_answer": "symptom_of_other_condition",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "dm_oxy"
+      ],
+      "claude_source_ids": [
+        "dm_oxy"
+      ],
+      "codex_evidence_locators": {
+        "dm_oxy": "HL7 v3 XML //section whose title is '5.9 Adrenal Insufficiency'; direct section text; derived section_index=25"
+      },
+      "claude_evidence_locators": {
+        "dm_oxy": {
+          "xml_path": "/document//section[id/@root='782b93e8-6ed5-4360-878e-def636c286f3'][title='5.9 Adrenal Insufficiency']/text",
+          "heading": "5.9 Adrenal Insufficiency",
+          "derived_section_index": 25,
+          "derived_view": "evidence/dm_oxy.sections.json"
+        }
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G05",
+      "category": "DailyMed",
+      "codex_answer": "administration_instruction",
+      "claude_answer": "administration_instruction",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "dm_oxy"
+      ],
+      "claude_source_ids": [
+        "dm_oxy"
+      ],
+      "codex_evidence_locators": {
+        "dm_oxy": "HL7 v3 XML //section whose title is '5.12 Difficulty in Swallowing and Risk for Obstruction in Patients at Risk for a Small Gastrointestinal Lumen'; direct section text; derived section_index=28"
+      },
+      "claude_evidence_locators": {
+        "dm_oxy": {
+          "xml_path": "/document//section[id/@root='a791a93a-4832-43fc-b616-2b65bb668068'][title='5.12 Difficulty in Swallowing and Risk for Obstruction in Patients at Risk for a Small Gastrointestinal Lumen']/text",
+          "heading": "5.12 Difficulty in Swallowing and Risk for Obstruction in Patients at Risk for a Small Gastrointestinal Lumen",
+          "derived_section_index": 28,
+          "derived_view": "evidence/dm_oxy.sections.json"
+        }
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G06",
+      "category": "DailyMed",
+      "codex_answer": "reaction_or_warning",
+      "claude_answer": "reaction_or_warning",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "dm_oxy"
+      ],
+      "claude_source_ids": [
+        "dm_oxy"
+      ],
+      "codex_evidence_locators": {
+        "dm_oxy": "HL7 v3 XML //section whose title is '5.7 Opioid-Induced Hyperalgesia and Allodynia'; direct section text; derived section_index=23"
+      },
+      "claude_evidence_locators": {
+        "dm_oxy": {
+          "xml_path": "/document//section[id/@root='38246c00-226d-4de8-8fa6-d662a520e77e'][title='5.7 Opioid-Induced Hyperalgesia and Allodynia']/text",
+          "heading": "5.7 Opioid-Induced Hyperalgesia and Allodynia",
+          "derived_section_index": 23,
+          "derived_view": "evidence/dm_oxy.sections.json"
+        }
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G07",
+      "category": "DailyMed",
+      "codex_answer": "exposure_factor",
+      "claude_answer": "exposure_factor",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "dm_fentanyl_patch"
+      ],
+      "claude_source_ids": [
+        "dm_fentanyl_patch"
+      ],
+      "codex_evidence_locators": {
+        "dm_fentanyl_patch": "HL7 v3 XML //section whose title is '5.8 Risk of Increased Fentanyl Absorption with Application of External Heat'; direct section text; derived section_index=24"
+      },
+      "claude_evidence_locators": {
+        "dm_fentanyl_patch": {
+          "xml_path": "/document//section[id/@root='04364084-f9ce-44fa-9c4f-5b3db9531565'][title='5.8 Risk of Increased Fentanyl Absorption with Application of External Heat']/text",
+          "heading": "5.8 Risk of Increased Fentanyl Absorption with Application of External Heat",
+          "derived_section_index": 24,
+          "derived_view": "evidence/dm_fentanyl_patch.sections.json"
+        }
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G08",
+      "category": "DailyMed",
+      "codex_answer": "reaction_or_warning",
+      "claude_answer": "reaction_or_warning",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "dm_fentanyl_patch"
+      ],
+      "claude_source_ids": [
+        "dm_fentanyl_patch"
+      ],
+      "codex_evidence_locators": {
+        "dm_fentanyl_patch": "HL7 v3 XML //section whose title is '5.2 Life-Threatening Respiratory Depression'; direct section text; derived section_index=18"
+      },
+      "claude_evidence_locators": {
+        "dm_fentanyl_patch": {
+          "xml_path": "/document//section[id/@root='a87cac0f-aa79-4bde-95b0-a6043006d770'][title='5.2 Life-Threatening Respiratory Depression']/text",
+          "heading": "5.2 Life-Threatening Respiratory Depression",
+          "derived_section_index": 18,
+          "derived_view": "evidence/dm_fentanyl_patch.sections.json"
+        }
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G09",
+      "category": "DailyMed",
+      "codex_answer": "contraindicated_population",
+      "claude_answer": "contraindicated_population",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "dm_fentanyl_patch"
+      ],
+      "claude_source_ids": [
+        "dm_fentanyl_patch"
+      ],
+      "codex_evidence_locators": {
+        "dm_fentanyl_patch": "HL7 v3 XML //section whose title is '4 CONTRAINDICATIONS'; direct section text; derived section_index=15"
+      },
+      "claude_evidence_locators": {
+        "dm_fentanyl_patch": {
+          "xml_path": "/document//section[id/@root='ff6d1825-5092-4c21-9648-596952ee9ce2'][title='4 CONTRAINDICATIONS']/text",
+          "heading": "4 CONTRAINDICATIONS",
+          "derived_section_index": 15,
+          "derived_view": "evidence/dm_fentanyl_patch.sections.json"
+        }
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G10",
+      "category": "DailyMed",
+      "codex_answer": "co_medication_risk_factor",
+      "claude_answer": "co_medication_risk_factor",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "dm_fentanyl_patch"
+      ],
+      "claude_source_ids": [
+        "dm_fentanyl_patch"
+      ],
+      "codex_evidence_locators": {
+        "dm_fentanyl_patch": "HL7 v3 XML //section whose title is '5.11 Serotonin Syndrome with Concomitant Use of Serotonergic Drugs'; direct section text; derived section_index=27"
+      },
+      "claude_evidence_locators": {
+        "dm_fentanyl_patch": {
+          "xml_path": "/document//section[id/@root='a5d25530-9ec1-4de4-920f-73169fd3b37d'][title='5.11 Serotonin Syndrome with Concomitant Use of Serotonergic Drugs']/text",
+          "heading": "5.11 Serotonin Syndrome with Concomitant Use of Serotonergic Drugs",
+          "derived_section_index": 27,
+          "derived_view": "evidence/dm_fentanyl_patch.sections.json"
+        }
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G11",
+      "category": "DailyMed",
+      "codex_answer": "reaction_or_warning",
+      "claude_answer": "reaction_or_warning",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "dm_tramadol"
+      ],
+      "claude_source_ids": [
+        "dm_tramadol"
+      ],
+      "codex_evidence_locators": {
+        "dm_tramadol": "HL7 v3 XML //section whose title is '5.9 Serotonin Syndrome with Concomitant Use of Serotonergic Drugs'; direct section text; derived section_index=21"
+      },
+      "claude_evidence_locators": {
+        "dm_tramadol": {
+          "xml_path": "/document//section[id/@root='2dae527f-81cc-41ba-a98d-a8b3abeeda84'][title='5.9 Serotonin Syndrome with Concomitant Use of Serotonergic Drugs']/text",
+          "heading": "5.9 Serotonin Syndrome with Concomitant Use of Serotonergic Drugs",
+          "derived_section_index": 21,
+          "derived_view": "evidence/dm_tramadol.sections.json"
+        }
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G12",
+      "category": "DailyMed",
+      "codex_answer": "reaction_or_warning",
+      "claude_answer": "reaction_or_warning",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "dm_tramadol"
+      ],
+      "claude_source_ids": [
+        "dm_tramadol"
+      ],
+      "codex_evidence_locators": {
+        "dm_tramadol": "HL7 v3 XML //section whose title is '5.10 Increased Risk of Seizures'; direct section text; derived section_index=22"
+      },
+      "claude_evidence_locators": {
+        "dm_tramadol": {
+          "xml_path": "/document//section[id/@root='b4b9091c-00b0-48c7-93e8-3c36438f0587'][title='5.10 Increased Risk of Seizures']/text",
+          "heading": "5.10 Increased Risk of Seizures",
+          "derived_section_index": 22,
+          "derived_view": "evidence/dm_tramadol.sections.json"
+        }
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G13",
+      "category": "RxNorm",
+      "codex_answer": "7804",
+      "claude_answer": "7804",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "rx_oxycodone"
+      ],
+      "claude_source_ids": [
+        "rx_oxycodone"
+      ],
+      "codex_evidence_locators": {
+        "rx_oxycodone": "/idGroup/rxnormId/0"
+      },
+      "claude_evidence_locators": {
+        "rx_oxycodone": "/idGroup/rxnormId/0"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G14",
+      "category": "RxNorm",
+      "codex_answer": "7052",
+      "claude_answer": "7052",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "rx_morphine"
+      ],
+      "claude_source_ids": [
+        "rx_morphine"
+      ],
+      "codex_evidence_locators": {
+        "rx_morphine": "/idGroup/rxnormId/0"
+      },
+      "claude_evidence_locators": {
+        "rx_morphine": "/idGroup/rxnormId/0"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G15",
+      "category": "RxNorm",
+      "codex_answer": false,
+      "claude_answer": false,
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "rx_apomorphine",
+        "rx_morphine"
+      ],
+      "claude_source_ids": [
+        "rx_apomorphine",
+        "rx_morphine"
+      ],
+      "codex_evidence_locators": {
+        "rx_apomorphine": "/idGroup/rxnormId/0",
+        "rx_morphine": "/idGroup/rxnormId/0"
+      },
+      "claude_evidence_locators": {
+        "rx_apomorphine": "/idGroup/rxnormId/0",
+        "rx_morphine": "/idGroup/rxnormId/0"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G16",
+      "category": "RxNorm",
+      "codex_answer": [
+        {
+          "rxcui": "161",
+          "name": "acetaminophen"
+        },
+        {
+          "rxcui": "7804",
+          "name": "oxycodone"
+        }
+      ],
+      "claude_answer": [
+        {
+          "rxcui": "161",
+          "name": "acetaminophen"
+        },
+        {
+          "rxcui": "7804",
+          "name": "oxycodone"
+        }
+      ],
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "rx_percocet",
+        "rx_percocet_ingredients"
+      ],
+      "claude_source_ids": [
+        "rx_percocet",
+        "rx_percocet_ingredients"
+      ],
+      "codex_evidence_locators": {
+        "rx_percocet": "/idGroup/rxnormId/0",
+        "rx_percocet_ingredients": "/relatedGroup/conceptGroup/*[tty=IN]/conceptProperties"
+      },
+      "claude_evidence_locators": {
+        "rx_percocet": "/idGroup/rxnormId/0",
+        "rx_percocet_ingredients": "/relatedGroup/conceptGroup/0[tty=IN]/conceptProperties/0..1"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G17",
+      "category": "FAERS",
+      "codex_answer": "2026-07-30",
+      "claude_answer": "2026-07-30",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "faers_counts_unfiltered"
+      ],
+      "claude_source_ids": [
+        "faers_counts_unfiltered"
+      ],
+      "codex_evidence_locators": {
+        "faers_counts_unfiltered": "/meta/last_updated"
+      },
+      "claude_evidence_locators": {
+        "faers_counts_unfiltered": "/meta/last_updated"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G18",
+      "category": "FAERS",
+      "codex_answer": {
+        "term": "DRUG INEFFECTIVE",
+        "count": 1299274
+      },
+      "claude_answer": {
+        "term": "DRUG INEFFECTIVE",
+        "count": 1299274
+      },
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "faers_counts_unfiltered"
+      ],
+      "claude_source_ids": [
+        "faers_counts_unfiltered"
+      ],
+      "codex_evidence_locators": {
+        "faers_counts_unfiltered": "/results/0"
+      },
+      "claude_evidence_locators": {
+        "faers_counts_unfiltered": "/results/0"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G19",
+      "category": "FAERS",
+      "codex_answer": false,
+      "claude_answer": false,
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "faers_counts_unfiltered"
+      ],
+      "claude_source_ids": [
+        "faers_counts_unfiltered"
+      ],
+      "codex_evidence_locators": {
+        "faers_counts_unfiltered": "manifest.requested_url; /results/0"
+      },
+      "claude_evidence_locators": {
+        "faers_counts_unfiltered": "manifest.requested_url; /results/0",
+        "faers_oxy_counts": "manifest status=fetch_failed (HTTP 403)",
+        "faers_oxy_counts_alltime": "manifest status=fetch_failed (HTTP 403)"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G20",
+      "category": "FAERS",
+      "codex_answer": false,
+      "claude_answer": false,
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "docs_faers"
+      ],
+      "claude_source_ids": [
+        "docs_faers"
+      ],
+      "codex_evidence_locators": {
+        "docs_faers": "About FAERS data; Responsible use of the data; Disclaimer"
+      },
+      "claude_evidence_locators": {
+        "docs_faers": "Heading 'Responsible use of the data' (causality) and 'Disclaimer' (incidence)"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G21",
+      "category": "FDA enforcement",
+      "codex_answer": "Defective container: card seal defects (weak/non-existent seals), leading to the tablets falling out of their cavities.",
+      "claude_answer": "Defective container: card seal defects (weak/non-existent seals), leading to the tablets falling out of their cavities.",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "recall_0338"
+      ],
+      "claude_source_ids": [
+        "recall_0338"
+      ],
+      "codex_evidence_locators": {
+        "recall_0338": "/results/0/reason_for_recall"
+      },
+      "claude_evidence_locators": {
+        "recall_0338": "/results/0/reason_for_recall"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G22",
+      "category": "FDA enforcement",
+      "codex_answer": "Ongoing",
+      "claude_answer": "Ongoing",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "recall_0338"
+      ],
+      "claude_source_ids": [
+        "recall_0338"
+      ],
+      "codex_evidence_locators": {
+        "recall_0338": "/results/0/status"
+      },
+      "claude_evidence_locators": {
+        "recall_0338": "/results/0/status"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G23",
+      "category": "FDA enforcement",
+      "codex_answer": "unknown",
+      "claude_answer": "unknown",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "recall_0338",
+        "docs_recalls"
+      ],
+      "claude_source_ids": [
+        "recall_0338",
+        "docs_recalls"
+      ],
+      "codex_evidence_locators": {
+        "recall_0338": "/results/0/status",
+        "docs_recalls": "Disclaimer; status not updated after classification"
+      },
+      "claude_evidence_locators": {
+        "recall_0338": "/results/0/status",
+        "docs_recalls": "Heading 'Disclaimer'"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G24",
+      "category": "FDA enforcement",
+      "codex_answer": "unknown",
+      "claude_answer": "unknown",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "recall_0338"
+      ],
+      "claude_source_ids": [
+        "recall_0338"
+      ],
+      "codex_evidence_locators": {
+        "recall_0338": "/results/0/product_description; /results/0/code_info"
+      },
+      "claude_evidence_locators": {
+        "recall_0338": "/results/0/product_description; /results/0/code_info"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G25",
+      "category": "Drugs@FDA",
+      "codex_answer": "KNOA PHARMA",
+      "claude_answer": "KNOA PHARMA",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "drugsfda_oxy"
+      ],
+      "claude_source_ids": [
+        "drugsfda_oxy"
+      ],
+      "codex_evidence_locators": {
+        "drugsfda_oxy": "/results/0/sponsor_name"
+      },
+      "claude_evidence_locators": {
+        "drugsfda_oxy": "/results/0/sponsor_name"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G26",
+      "category": "Drugs@FDA",
+      "codex_answer": {
+        "brand_name": "OXYCONTIN",
+        "dosage_form": "TABLET, EXTENDED RELEASE",
+        "route": "ORAL",
+        "active_ingredients": [
+          {
+            "name": "OXYCODONE HYDROCHLORIDE",
+            "strength": "10MG"
+          }
+        ]
+      },
+      "claude_answer": {
+        "product_number": "001",
+        "brand_name": "OXYCONTIN",
+        "dosage_form": "TABLET, EXTENDED RELEASE",
+        "route": "ORAL",
+        "active_ingredients": [
+          {
+            "name": "OXYCODONE HYDROCHLORIDE",
+            "strength": "10MG"
+          }
+        ]
+      },
+      "exact_answer_agreement": false,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "drugsfda_oxy"
+      ],
+      "claude_source_ids": [
+        "drugsfda_oxy"
+      ],
+      "codex_evidence_locators": {
+        "drugsfda_oxy": "/results/0/products/1"
+      },
+      "claude_evidence_locators": {
+        "drugsfda_oxy": "/results/0/products/1 (product_number='001')"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G27",
+      "category": "NDC Directory",
+      "codex_answer": "100 TABLET, FILM COATED, EXTENDED RELEASE in 1 BOTTLE (59011-410-10)",
+      "claude_answer": "100 TABLET, FILM COATED, EXTENDED RELEASE in 1 BOTTLE (59011-410-10)",
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "ndc_oxy"
+      ],
+      "claude_source_ids": [
+        "ndc_oxy"
+      ],
+      "codex_evidence_locators": {
+        "ndc_oxy": "/results/0/packaging/0/description"
+      },
+      "claude_evidence_locators": {
+        "ndc_oxy": "/results/0/packaging/0/description"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G28",
+      "category": "NDC Directory",
+      "codex_answer": false,
+      "claude_answer": false,
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "recall_0338",
+        "ndc_oxy"
+      ],
+      "claude_source_ids": [
+        "recall_0338",
+        "ndc_oxy"
+      ],
+      "codex_evidence_locators": {
+        "recall_0338": "/results/0/product_description",
+        "ndc_oxy": "/results/0/packaging/0/package_ndc"
+      },
+      "claude_evidence_locators": {
+        "recall_0338": "/results/0/product_description",
+        "ndc_oxy": "/results/0/packaging/0/package_ndc"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G29",
+      "category": "SrLC",
+      "codex_answer": true,
+      "claude_answer": true,
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "srlc_oxy_verified"
+      ],
+      "claude_source_ids": [
+        "srlc_oxy_verified"
+      ],
+      "codex_evidence_locators": {
+        "srlc_oxy_verified": "OXYCONTIN (NDA-022272) > 12/22/2025 (SUPPL-52) > 5.13 Risks of Gastrointestinal Complications"
+      },
+      "claude_evidence_locators": {
+        "srlc_oxy_verified": "OXYCONTIN (NDA-022272) > 12/22/2025 (SUPPL-52) > 5 Warnings and Precautions > 5.13 Risks of Gastrointestinal Complications; HTML <p><u> block under 'Additions and/or revisions underlined'"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    },
+    {
+      "case_id": "G30",
+      "category": "ClinicalTrials.gov",
+      "codex_answer": {
+        "group_id": "EG000",
+        "group_title": "Extended Release Oxycodone",
+        "seriousNumAffected": 0,
+        "seriousNumAtRisk": 18
+      },
+      "claude_answer": {
+        "group_id": "EG000",
+        "group_title": "Extended Release Oxycodone",
+        "seriousNumAffected": 0,
+        "seriousNumAtRisk": 18
+      },
+      "exact_answer_agreement": true,
+      "codex_answer_status": "resolved",
+      "claude_answer_status": "resolved",
+      "codex_source_ids": [
+        "trial_oxy"
+      ],
+      "claude_source_ids": [
+        "trial_oxy"
+      ],
+      "codex_evidence_locators": {
+        "trial_oxy": "/resultsSection/adverseEventsModule/eventGroups/0"
+      },
+      "claude_evidence_locators": {
+        "trial_oxy": "/resultsSection/adverseEventsModule/eventGroups/0"
+      },
+      "human_verdict": "pending",
+      "human_note": ""
+    }
+  ]
+}

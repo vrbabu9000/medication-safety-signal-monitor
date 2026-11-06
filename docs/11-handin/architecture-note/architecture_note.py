@@ -2,9 +2,10 @@
 
 Builds, in order:
   1. Diagram 38 (data flow + ontology on one canvas, sized for print):
-       docs/diagrams/drawio/38-handin-architecture-onepage-v1.drawio  (open in draw.io; File > Export as > VSDX)
-       docs/diagrams/png/38-handin-architecture-onepage-v1.png
-       docs/diagrams/pdf/38-handin-architecture-onepage-v1.pdf
+       docs/diagrams/drawio/38-handin-architecture-onepage-v2.drawio  (open in draw.io; File > Export as > VSDX)
+       docs/diagrams/png/38-handin-architecture-onepage-v2.png
+       docs/diagrams/pdf/38-handin-architecture-onepage-v2.pdf
+     (v2, 2026-11-06: AI box shows the D041 v2 scope, 5 labels; v1 files stay on disk.)
   2. The note itself, exactly one page, US Letter landscape:
        docs/11-handin/architecture-note/architecture-note.pdf
        docs/11-handin/architecture-note/architecture-note.png   (preview of the page, 150 dpi)
@@ -36,7 +37,7 @@ from reportlab.pdfgen import canvas as rl_canvas  # noqa: E402
 from reportlab.platypus import Frame, KeepInFrame, Paragraph, Spacer, Table, TableStyle  # noqa: E402
 
 NUMBERS = json.loads((ROOT / "docs/11-handin/numbers.json").read_text())
-DIAGRAM = "38-handin-architecture-onepage-v1"
+DIAGRAM = "38-handin-architecture-onepage-v2"
 OUT_PDF = HERE / "architecture-note.pdf"
 OUT_PNG = HERE / "architecture-note.png"
 
@@ -87,7 +88,7 @@ def build_diagram():
     d.box("recalls", C3, r[3], W3, h, "clean_recalls", [f"{N('recalls.total')} · {N('recalls.active')} active",
                                                        "NDC → product match"], kind="pipeline")
 
-    d.box("ai", C4, r[0], W4, h, "AI label extraction", ["Claude via AIP, cached",
+    d.box("ai", C4, r[0], W4, h, "AI label extraction", [f"Claude via AIP · {N('ai.pilot_labels')} labels",
                                                           f"{N('ai.grounded')}/{N('ai.reactions')} quotes grounded"],
           kind="ai", dashed=True)
     d.box("sig", C4, r[1], W4, r[2] + h - r[1], "ontology_signals",
@@ -187,7 +188,7 @@ def para(text, style):
 
 
 DECISIONS = [
-    ("1", "Drug identity is resolved once, in the clean layer", "D020; D027 proposed",
+    ("1", "Drug identity is resolved once, in the clean layer", "D020, D027",
      "one dataset, `clean_drug_identity`, maps every drug name, salt, product and NDC package to an exact "
      "ingredient RxCUI. Every later step joins it.",
      "counts belong to ingredients, labels and recalls to products.",
@@ -199,14 +200,15 @@ DECISIONS = [
      "FAERS re-files and deletes cases; mass re-filings fake signals.",
      f"appending quarters gave +8.7% phantom rows (DQ36). Q2 replaced {N('faers.q2_cases_replaced')} cases and "
      f"deleted {N('faers.q2_cases_deleted')} [[OBSERVED]]"),
-    ("3", "\"Not in label\" is a 3-step check, and the AI must quote", "D037 proposed; D041, D043",
+    ("3", "\"Not in label\" is a 3-step check, and the AI must quote", "D037, D041 v2, D043",
      "a FAERS term is in the label if (1) an AI term with a code-found quote matches it, else (2) its exact "
      "text is in a safety section, else (3) a person-banded synonym.",
      "each \"not in label\" names the label versions searched; each AI match quotes its passage.",
-     f"{N('ai.grounded')}/{N('ai.reactions')} quotes grounded; F1 {N('ai.gold_f1')} vs proposed D015 target {N('ai.d015_target_f1')} "
-     f"(35-item Claude key, 2 labels, pharmacist pending); "
+     f"{N('ai.grounded')}/{N('ai.reactions')} quotes grounded in {N('ai.pilot_labels')} labels; F1 {N('ai.gold_f1')} vs D015 target "
+     f"{N('ai.d015_target_f1')} (35-item Claude key, {N('ai.v1_pilot.labels')} oxycodone labels, pharmacist pending); "
+     f"no optic-nerve term in the 3 semaglutide labels; "
      f"synonyms + wider buckets: ranked {N('signals.ranked_history.step9')} at step 9 → {N('signals.ranked')} [[OBSERVED]]"),
-    ("4", "Triage is its own write-back object; changes are dated", "D040, D042; D045 proposed",
+    ("4", "Triage is its own write-back object; changes are dated", "D040, D042, D045",
      "a decision is its own object, made only by an Action, tied to the signal and its `evaluation_id` "
      "(a hash of the evidence). A change feed dates each signal, recall and label change.",
      "a status column on Signal would be wiped by the next rebuild; sources run on different clocks.",
@@ -221,14 +223,14 @@ WHY_THESE = ("**Why these four:** each decides whether a flag can be trusted, an
 NOT_DONE = [
     "**No MedDRA licence** (the paid dictionary of reaction terms): keyword buckets (D016 v3) and a reviewed "
     "synonym table stand in.",
-    f"**No causality, no patient data.** A signal = more reports than expected (Evans; D006 proposed) and not "
+    f"**No causality, no patient data.** A signal = more reports than expected (Evans; D006) and not "
     f"in the label, or only possibly ({N('signals.possibly_in_label')}). {N('signals.ranked')} ranked = a review queue, not findings.",
     f"**Signals do not read incremental FAERS yet:** equal row for row, but {N('optimization.O2.incremental_add_q2_s')} s "
     f"vs {N('optimization.O2.full_rebuild_s')} s at 2 quarters (O2). Re-measure at 4+.",
-    f"**AI kept to {N('ai.pilot_labels')} pilot labels, and no AI judge per signal,** until a pharmacist checks the answer key.",
-    "**No ClinicalTrials.gov, OnSIDES, daily FAERS scraping or label-change backtest** (D031 cut list; D029 proposed).",
+    f"**AI reads only {N('ai.pilot_labels')} labels; no AI judge per signal,** until a pharmacist checks the answer key.",
+    "**No ClinicalTrials.gov, OnSIDES, daily FAERS scraping or label-change backtest** (D031 cut list; D029).",
     "**No build schedule** (we refresh when a build runs), **per-user bookmark or live drift** yet (drift is a "
-    "replay). Known flaw: an unused duplicate Signal → Drug link.",
+    "replay).",
 ]
 
 
@@ -272,7 +274,7 @@ def build_page(png):
     c.setFillColor(S.GRAY)
     c.setFont(sans, 7.6)
     c.drawRightString(PAGE_W - MR, top - 7.6,
-                      S.plain_safe("Palantir Foundry + AIP · pilot as built · numbers captured 5 Nov 2026 · v1.0"))
+                      S.plain_safe("Palantir Foundry + AIP · pilot as built · numbers captured 5-6 Nov 2026 · v1.1"))
     c.setFillColor(S.NAVY)
     c.setFont(bold, 15.5)
     c.drawString(ML, top - 26, S.plain_safe("Medication Safety Signal Monitor: how the data becomes a flag you can trust"))
@@ -292,7 +294,7 @@ def build_page(png):
         f"{N('faers.cases_current')} current FAERS cases · {N('labels.total')} label versions "
         f"({N('changes.label_version_effective')} carry an effective date) · "
         f"{N('recalls.total')} recalls ({N('recalls.active')} active) · {N('signals.total')} signals, {N('signals.ranked')} ranked · "
-        f"10 object types, 1 Action · Workshop {N('app.workshop_version')}, {N('app.pages')} pages · "
+        f"10 object types, {N('ontology.link_types_mssm')} link types, 1 Action · Workshop {N('app.workshop_version')}, {N('app.pages')} pages · "
         f"{N('monitoring.checks_per_build')} monitoring checks per build. "
         f"Numbers: docs/11-handin/numbers.json (captured {N('_meta.captured_at')}). "
         "Detail: diagrams 30-38, reports R01–R09, docs/06-decisions/DECISIONS.md.", P_FOOT)

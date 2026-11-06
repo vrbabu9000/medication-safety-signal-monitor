@@ -22,7 +22,8 @@ MODEL_ID = "claude-sonnet-5.5"
 PROMPT_VERSION = "p2"  # p1 (2026-11-04): grouped terms; p2: one reaction per item
 PARSER_VERSION = "x1"
 # OxyContin v44 (modern PLR label, reference trace T13) and one older-format oxycodone/acetaminophen generic reference label.
-PILOT_SETIDS = ["bfdfe235-d717-4855-a3c8-a13d26dadede", "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7"]
+# D041 v2 (2026-11-06): plus the 3 semaglutide reference labels (Ozempic, Wegovy, oral Ozempic/Rybelsus), the drug we demo.
+PILOT_SETIDS = ["bfdfe235-d717-4855-a3c8-a13d26dadede", "cc966d57-7cdc-4de3-bbcf-718e2fce9cb7", "adec4fd2-6858-4c99-91d4-531f5f2a2d79", "ee06186f-2aa3-4990-a760-757579d8f77b", "27f15fac-7d98-4114-a2ec-92494a91da98"]
 ASSERTION_TYPES = {"adverse_reaction", "warning_risk", "contraindication_condition", "other"}
 CACHEABLE = {"ok", "empty"}  # parse_error and model_error are retried on the next build
 

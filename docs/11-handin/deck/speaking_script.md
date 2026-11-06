@@ -1,6 +1,6 @@
 # Speaking script — MSSM hand-in demo (20:00)
 
-_🖼️ Deck Designer view · v1, 2026-11-05 · estimate, not yet rehearsed_
+_🖼️ Deck Designer view · v2, 2026-11-06 (D041 v2: the AI now reads the semaglutide labels and its quotes are on page 1; 12 decisions accepted; duplicate link deleted) · estimate, not yet rehearsed_
 
 **Deck:** [MSSM-demo-deck.pptx](MSSM-demo-deck.pptx) (16 main slides; backups B1–B12 = slides 18–29). **Agenda:** [AGENT-BRIEF.md](../AGENT-BRIEF.md) "The 20-minute demo" (binding). **Click-by-click path in Foundry:** the demo navigation guide in [../demo/](../demo/) (demo director). This script gives the words; the guide gives every click.
 
@@ -9,7 +9,7 @@ _🖼️ Deck Designer view · v1, 2026-11-05 · estimate, not yet rehearsed_
 - Only quoted text is said aloud. Background, evidence and likely questions are in [slide_explanations.md](slide_explanations.md) under the same anchor.
 - Numbers said aloud are the ones on the slide (from [numbers.json](../numbers.json)). Say "about" only where the slide says so.
 
-**Timing.** About 2,250 spoken words at ~125 words per minute ≈ 18 min, plus ~2 min of clicking, page loads and pauses (mostly in the app parts, slides 3–7; measured page switches are 0.8–2.4 s, the brief loads in 11.5 s) = **about 20 min**. The tightest slots are slides 8–16 (spoken words nearly fill each slot); slides 4–7 have the most slack for slow page loads. A timed rehearsal should replace this estimate. Each slot below ends at the agenda time. If the app is slow, stay on the slide: its screenshot shows the same screen; say "here is the same screen captured this morning".
+**Timing.** About 2,250 spoken words at ~125 words per minute ≈ 18 min, plus ~2 min of clicking, page loads and pauses (mostly in the app parts, slides 3–7; measured on Workshop v0.9.0: page switches 0.8–2.4 s, the brief loads in 11.5 s; v0.10.0 only adds one table below the fold on page 1, not re-timed) = **about 20 min**. The tightest slots are slides 8–16 (spoken words nearly fill each slot); slides 4–7 have the most slack for slow page loads. A timed rehearsal should replace this estimate. Each slot below ends at the agenda time. If the app is slow, stay on the slide: its screenshot shows the same screen; say "here is the same screen captured this morning".
 
 **Words to say the same way every time**
 | Say | Not |
@@ -18,10 +18,11 @@ _🖼️ Deck Designer view · v1, 2026-11-05 · estimate, not yet rehearsed_
 | "review queue" for the 1,073 | "1,073 findings / problems" |
 | "the officer" / "she" | "the user" |
 | "decision" (Triage Decision object) | "comment", "note" |
-| "proposed" for the 12 open decisions (D006, D015, D025–D029, D037, D045–D048) | "decided" |
+| "accepted on 6 November" for the 12 decisions accepted in one batch (D006, D015 target only, D025–D029, D037, D045–D048) and for D041 v2 | "proposed", "pending" |
+| "the AI agrees: retinopathy yes, optic nerve no" (it read the 3 semaglutide labels) | "the AI found NAION is missing" (it reads labels, not reports) |
 | "active recall" = status Ongoing | "not terminated" |
 | "matches none of the 658 FDA-listed products we track for our 13 drugs (we have no purchasing or inventory data)" | "products we carry", "our products" |
-| "built to answer three questions in one screen; machine load 11.5 s" | "answers three questions in under two minutes" |
+| "built to answer three questions in one screen; machine load 11.5 s (timed on v0.9.0)" | "answers three questions in under two minutes" |
 | "found 35 of 35 answer-key items" | "recall 35/35" (confusable with FDA recalls) |
 | "1,355 at step 9" when quoting where the queue started | "1,355 originally" |
 
@@ -63,7 +64,7 @@ _🖼️ Deck Designer view · v1, 2026-11-05 · estimate, not yet rehearsed_
 >
 > **[POINT at the "Data as of" table]** How fresh is each source? They run on different clocks. FAERS comes out quarterly, so the newest reports end with 2026 Q2; our freshness check puts that at 130 days old. Recalls from openFDA were 8 days old. DailyMed publishes labels daily and openFDA updates recalls weekly; our pipeline refreshes when a build runs, and there is no schedule yet. So the screen does not pretend everything is fresh: it says how old each source is.
 >
-> And it is quick: in a timed run the brief was on screen in 11.5 seconds, and each page switch took between 0.8 and 2.4 seconds. That is machine timing; a human walk-through will be timed in rehearsal.
+> And it is quick: in a timed run on the previous app version the brief was on screen in 11.5 seconds, and each page switch took between 0.8 and 2.4 seconds. That is machine timing; a human walk-through will be timed in rehearsal.
 >
 > Now question one.
 
@@ -78,13 +79,13 @@ _🖼️ Deck Designer view · v1, 2026-11-05 · estimate, not yet rehearsed_
 >
 > And NAION is not a discovery. Europe's safety committee, PRAC, concluded in June 2025 that NAION is a very rare side effect of semaglutide, and WHO issued an alert that month. We lead with it because a monitor that missed it would be broken. From FAERS alone, ours ranks it first — and the three US labels she uses still do not mention it.
 >
-> **[SCROLL to “Reference labels searched”]** These are the three labels we searched: Ozempic version 20, Wegovy version 19, oral Ozempic version 14. Our exact-text check and reviewed synonyms find NAION in none. **[POINT: Labels also read by AI: 0]** The AI has not read these labels, so it did not clear this one. **[CLICK the Ozempic v20 DailyMed link → Cmd+F “optic”]** This is Ozempic's label on DailyMed itself. I search for "optic": no optic neuropathy. She can repeat that check in ten seconds.
+> **[SCROLL to “Reference labels searched”]** These are the three labels we searched: Ozempic version 20, Wegovy version 19, oral Ozempic version 14. Our exact-text check and reviewed synonyms find NAION in none. **[CLICK the Ozempic v20 DailyMed link → Cmd+F “optic”]** This is Ozempic's label on DailyMed itself. I search for "optic": no optic neuropathy. She can repeat that check in ten seconds. **[BACK to the app → SCROLL to “What the AI read in these labels”]** And this is what the AI read in the same three labels, each line quoted word for word. It found diabetic retinopathy — the label does warn about the retina — and nothing about the optic nerve. Three independent checks agree.
 >
 > What she cannot do yet is open the 394 reports from this screen. We pull their case ids by query today; that is the first thing to add.
 >
-> **[BACK to the app → CLICK Triage this signal]** To decide, she clicks "Triage this signal": the signal is locked, she picks a decision and writes why. It is saved with the user and the time (the user shows as an ID, not a name), never overwritten. Today only the project owner can submit. **[CLICK Cancel — or Submit only if agreed]**
+> **[SCROLL up → CLICK Triage this signal]** To decide, she clicks "Triage this signal": the signal is locked, she picks a decision and writes why. It is saved with the user and the time (the user shows as an ID, not a name), never overwritten. Today only the project owner can submit. **[CLICK Cancel — or Submit only if agreed]**
 
-**Rehearsal check (must pass before the demo):** on the Ozempic v20 page, the "optic" search must not land on the diabetic retinopathy warning. If it does, search "ischemic optic" instead and say so.
+**Rehearsal check (must pass before the demo):** on the Ozempic v20 page, the "optic" search must not land on the diabetic retinopathy warning. If it does, search "ischemic optic" instead and say so. Then scroll page 1 to the AI table once, so it is loaded.
 
 <a id="s05"></a>
 ## Slide 5 · Recalls and what changed — 6:00–7:30 · app pages 2–3
@@ -122,7 +123,7 @@ _🖼️ Deck Designer view · v1, 2026-11-05 · estimate, not yet rehearsed_
 >
 > Our one Action creates a Triage Decision. It is create-only, so past decisions are never edited. Decisions live in their own object type, so rebuilding the signals does not erase them. Two have been saved so far, and both survived a full rebuild.
 >
-> One honest note: in step 11 I added a second Signal-to-Drug link by mistake. Nothing uses it. It is flagged on the diagram and left for the owner to delete.
+> One honest note: in step 11 I added a second Signal-to-Drug link by mistake. We checked nothing used it and deleted it on 6 November; ten link types remain.
 >
 > **[SWITCH: Ontology Manager → MSSM Signal]** Here is the Signal type: 1,952 objects, its properties. **[SWITCH: Object Explorer → search the NAION signal → Links]** And here is the NAION signal again, from the other side: linked to its statistics record and to its drug. That is the trust rule as data.
 >
@@ -152,13 +153,13 @@ _🖼️ Deck Designer view · v1, 2026-11-05 · estimate, not yet rehearsed_
 
 <a id="s10"></a>
 ## Slide 10 · AI reliability — 13:30–14:45
-> The AI part. Claude Sonnet 5.5, through Foundry's AIP, read 9 label sections from 2 pilot labels and listed each side effect with an exact quote.
+> The AI part. Claude Sonnet 5.5, through Foundry's AIP, read 21 label sections from 5 labels — two for oxycodone and the three semaglutide labels you just saw — and listed each side effect with an exact quote.
 >
-> Grounding: code checks every quote is in the label text — 448 of 448 are. Accuracy, on a small answer key only — 35 items from the short sections of the two oxycodone labels, written by Claude before the model ran: it found 35 of 35 answer-key items, so F1 is 0.97 against our proposed target of 0.85 (D015) — met on this pilot key only; the benchmark comparison was not run.
+> Grounding: code checks every quote is in the label text — 745 of 745 are. Accuracy, on a small answer key only — 35 items from the short sections of the two oxycodone labels, written by Claude before the model ran: it found 35 of 35 answer-key items, so F1 is 0.97 against our target of 0.85 (D015) — met on this pilot key only; the benchmark comparison was not run.
 >
-> Now the honest part. No pharmacist has checked that key, and the long sections are not scored. And the AI does not yet meet the screen: it read only the two oxycodone pilot labels, so for NAION the record says "labels also read by AI: 0", and it does not change the signal list. We chose not to widen a model we cannot yet score independently. Widening it and adding a quote panel is the next decision.
+> Now the honest part. No pharmacist has checked that key; the long sections and the semaglutide labels are not scored. The AI does not change the signal list — text matching already finds its terms. Its value is the quoted evidence you saw on page 1. Adding the semaglutide labels cost 12 model calls once; a forced rebuild made zero.
 
-**[Optional SWITCH: Code Repository → ai_label_extraction.py, cache key lines; or the AI-cache SQL]** (fallback screenshot `screens/hood-code-ai-label-extraction.jpg`; guide stop H9)
+**[Optional SWITCH: Code Repository → ai_label_extraction.py, cache key lines; or the AI-cache SQL]** (fallback screenshot `screens/hood-code-ai-label-extraction.jpg`, captured 5 Nov before the 3 semaglutide setids were added; guide stop H9)
 
 <a id="s11"></a>
 ## Slide 11 · Monitoring — 14:45–15:30
@@ -210,11 +211,11 @@ _🖼️ Deck Designer view · v1, 2026-11-05 · estimate, not yet rehearsed_
 
 <a id="s15"></a>
 ## Slide 15 · Another month — 19:00–19:40
-> With another month, the biggest gap is not data. It is a named pharmacist. Today only Claude has checked the synonym bands, the answer key and the ranked signals. So: Claude prepares an evidence packet with links; the pharmacist decides; a create-only Action records who, when and which evidence; the pipelines rebuild. Then schedules, live drift over three to four weeks, and a health page.
+> With another month, the biggest gap is not data. It is a named pharmacist. Today only Claude has checked the synonym bands, the answer key and the ranked signals. So: Claude prepares an evidence packet with links; the pharmacist decides; a create-only Action records who, when and which evidence; the pipelines rebuild. Then schedules, live drift over three to four weeks, a health page, scoring the long label sections, and the AI on the other drugs' labels.
 
 <a id="s16"></a>
 ## Slide 16 · What to take away — 19:40–20:00
-> Three things. It answers her three questions, and every flag traces to its source: the label versions searched and the FDA recall record open in one click; the FAERS case reports are reachable by query, not yet from her screen. It is built to be extended, and we sped up only what we measured. And we say what is not proven yet — including that the AI has not read the hero drug's labels. Thank you — happy to take questions.
+> Three things. It answers her three questions, and every flag traces to its source: the label versions searched and the FDA recall record open in one click; the FAERS case reports are reachable by query, not yet from her screen. It is built to be extended, and we sped up only what we measured. And we say what is not proven yet — including that no pharmacist has scored the AI or the synonym table. Thank you — happy to take questions.
 
 ---
 
@@ -228,7 +229,7 @@ In PowerPoint slide show, type the number and press Enter. Type 16 and Enter to 
 | Identity and counting rules (D020–D023) | B3 (20) |
 | How a flag is traced; write-back safety | B4 (21) |
 | AI scoring; noticing it getting worse | B5 (22) |
-| Which decisions are final | B6 (23) |
+| Which decisions are final (all 12 accepted 6 Nov) | B6 (23) |
 | "If I change X, what changes?" | B7 (24) |
 | How "what changed" is computed | B8 (25) |
 | Who is alerted, what is not built | B9 (26) |

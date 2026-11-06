@@ -1,0 +1,430 @@
+1. Eur J Clin Pharmacol. 2026 May 22;82(6):154. doi: 10.1007/s00228-026-04079-7.
+
+Dysesthesia associated with GLP-1 agonist therapies: data-mining analysis and 
+literature review.
+
+Laroche ML(1)(2), Géniaux H(3), Jardou M(3).
+
+Author information:
+(1)Regional Center of Pharmacovigilance, Department of Pharmacology, Toxicology 
+and Pharmacovigilance, Limoges' University Hospital, Limoges, France. 
+marie-laure.laroche@unilim.fr.
+(2)Faculty of Medicine, Department of Pharmacology, University of Limoges, 2 
+avenue Dr Marcland, Limoges, 87000 LIMOGES Cedex, France. 
+marie-laure.laroche@unilim.fr.
+(3)Regional Center of Pharmacovigilance, Department of Pharmacology, Toxicology 
+and Pharmacovigilance, Limoges' University Hospital, Limoges, France.
+
+PURPOSE: An increasing number of anecdotal reports on social media platforms and 
+medical blogs describe dysesthesia, particularly burning skin sensations, in 
+association with glucagon-like peptide-1 receptor (GLP-1R) agonists. We 
+performed a pharmacovigilance data-mining analysis to characterise cases of 
+dysesthesia related to GLP-1R.
+METHODS: We conducted a disproportionality analysis using VigiBase data on 
+GLP-1R (Anatomical Therapeutic Chemical classification: ATC code A10BJ) and 
+tirzepatide, focusing on the HLT (High Level Term) "Paraesthesia and 
+dysesthesia", with the Information Component (IC). Additionally, we reviewed all 
+narratives of dysesthesia cases in the French Pharmacovigilance database to 
+extract clinical and pharmacological characteristics. A literature review 
+complemented this analysis.
+RESULTS: Exenatide was significantly associated with hypoesthesia or oral 
+paraesthesia, semaglutide and tirzepatide with hyperaesthesia, and semaglutide 
+with dysesthesia and burning sensation. Dysesthesia appears to be 
+dose-dependent, occurring more frequently at higher doses and with more potent 
+GLP-1R, whether used for weight management or type 2 diabetes. Discontinuation 
+was often performed, followed by spontaneous favourable outcomes, and cases of 
+rechallenge were observed. Skin burning sensations represent a distinctive form 
+of dysesthesia.
+CONCLUSION: Pharmacovigilance quantitative and qualitative data strengthens 
+evidence for dysesthesias associated with GLP-1R agonists already observed in 
+clinical trials of semaglutide, tirzepatide, and retatrutide.
+
+© 2026. The Author(s).
+
+DOI: 10.1007/s00228-026-04079-7
+PMCID: PMC13194321
+PMID: 42168638 [Indexed for MEDLINE]
+
+Conflict of interest statement: Declarations. Ethics approval and consent to 
+Participate: This study, based on anonymized pharmacovigilance data and a 
+literature review, is exempt from formal review by the Limoges University 
+Hospital Institutional Review Board. The requirement for written informed 
+consent was waived owing to the use of a population-level dataset. Competing 
+interests: The authors declare no competing interests.
+
+
+2. Cureus. 2025 Oct 8;17(10):e94126. doi: 10.7759/cureus.94126. eCollection 2025 
+Oct.
+
+Allodynia and Dysesthesia Associated With Semaglutide and Tirzepatide.
+
+Ahern S(1).
+
+Author information:
+(1)Endocrinology, Diabetes and Metabolism, David Geffen School of Medicine, 
+University of California Los Angeles, Los Angeles, USA.
+
+Semaglutide and tirzepatide are two commonly prescribed glucagon-like peptide-1 
+(GLP-1) and GLP-1/glucose-dependent insulinotropic polypeptide (GLP-1/GIP) 
+receptor agonists used for the treatment of type 2 diabetes and chronic weight 
+management. Allodynia and dysesthesia have been previously reported as effects 
+of semaglutide. This case report adds to the literature on dysesthesia from 
+semaglutide and presents a novel report in a patient taking tirzepatide. This 
+adverse drug reaction occurs in both patients treated for type 2 diabetes and 
+chronic weight management, appears to be dose dependent, and resolves with 
+discontinuation of the drug and may resolve spontaneously after several weeks.
+
+Copyright © 2025, Ahern et al.
+
+DOI: 10.7759/cureus.94126
+PMCID: PMC12594042
+PMID: 41210042
+
+Conflict of interest statement: Human subjects: Informed consent for treatment 
+and open access publication was obtained or waived by all participants in this 
+study. Conflicts of interest: In compliance with the ICMJE uniform disclosure 
+form, all authors declare the following: Payment/services info: All authors have 
+declared that no financial support was received from any organization for the 
+submitted work. Financial relationships: All authors have declared that they 
+have no financial relationships at present or within the previous three years 
+with any organizations that might have an interest in the submitted work. Other 
+relationships: All authors have declared that there are no other relationships 
+or activities that could appear to have influenced the submitted work.
+
+
+3. Cardiovasc Diabetol Endocrinol Rep. 2025 Oct 6;11(1):31. doi: 
+10.1186/s40842-025-00245-5.
+
+From needles to pills: oral GLP-1 therapy enters the obesity arena.
+
+Santulli G(1)(2)(3).
+
+Author information:
+(1)Department of Medicine, Albert Einstein College of Medicine, New York City, 
+NY, 10461, USA. gsantulli001@gmail.com.
+(2)International Translational Research and Medical Education (ITME) Consortium, 
+Academic Research Unit, Department of Advanced Biomedical Sciences, "Federico 
+II" University, 80131, Naples, Italy. gsantulli001@gmail.com.
+(3)Department of Molecular Pharmacology, Wilf Family Cardiovascular Research 
+Institute, Einstein Institute for Aging Research, Einstein-Mount Sinai Diabetes 
+Research Center (ES-DRC), Einstein Institute for Neuroimmunology and 
+Inflammation (INI), Fleischer Institute for Diabetes and Metabolism (FIDAM), 
+Albert Einstein College of Medicine, New York City, NY, 10461, USA. 
+gsantulli001@gmail.com.
+
+Obesity remains a major global health challenge, driving type 2 diabetes, 
+cardiovascular disease, and other complications. Despite effective lifestyle and 
+surgical interventions, pharmacotherapy uptake has historically been limited. 
+Injectable GLP-1 receptor agonists, including semaglutide and tirzepatide, have 
+redefined expectations for medical obesity therapy, achieving 15–20% weight 
+reductions in clinical trials. However, barriers such as injections, cost, and 
+adherence limit their real-world use. In September 2025, two pivotal phase-3 
+trials of oral GLP-1 therapies were published. ATTAIN-1 evaluated orforglipron 
+in 3,127 adults with obesity over 72 weeks, demonstrating a mean weight loss of 
+11.2%, ≥ 10% weight loss in 54.6%, and improvements in cardiometabolic 
+parameters. OASIS-4 studied oral semaglutide 25 mg in 307 adults over 64 weeks, 
+showing a mean weight loss of 13.6%, ≥ 10% weight loss in 63%, and favorable 
+metabolic changes. Both agents exhibited gastrointestinal adverse events 
+consistent with the GLP-1 class; additionally, orforglipron had five mild 
+pancreatitis cases, while oral semaglutide reported mild dysesthesia. These 
+results confirm that oral GLP-1 receptor agonists can produce clinically 
+meaningful weight loss and metabolic benefits, expanding options beyond 
+injectables. Real-world adoption will hinge on adherence, tolerability, 
+long-term safety, patient preference, and payer coverage. Oral GLP-1 therapies 
+represent a transformative step in obesity management, offering a convenient 
+alternative that may broaden access and optimize individualized care.
+
+DOI: 10.1186/s40842-025-00245-5
+PMCID: PMC12498447
+PMID: 41053816
+
+Conflict of interest statement: Declarations. Ethics approval and consent to 
+participate: Not applicable. Competing interests: Prof. Santulli is the 
+Editor-in-Chief of Cardiovascular Diabetology - Endocrinology Reports.
+
+
+4. Sci Rep. 2025 May 24;15(1):18063. doi: 10.1038/s41598-025-01206-9.
+
+Pharmacovigilance analysis of neurological adverse events associated with GLP-1 
+receptor agonists based on the FDA Adverse Event Reporting System.
+
+Chen H(1), Liu S(2), Gao S(1), Shi H(3), Yan Y(1), Xu Y(1), Fang J(1), Wang 
+W(1), Chen H(4), Liu Z(5).
+
+Author information:
+(1)Department of Acupuncture, Guang'anmen Hospital, China Academy of Chinese 
+Medical Sciences, Beijing, 100053, China.
+(2)School of Acupuncture-Moxibustion and Tuina, Beijing University of Chinese 
+Medicine, Beijing, China.
+(3)School of Life Sciences, Westlake University, Hangzhou, Zhejiang, China.
+(4)Institute of Acupuncture and Moxibustion, China Academy of Chinese Medical 
+Sciences, Beijing, China.
+(5)Department of Acupuncture, Guang'anmen Hospital, China Academy of Chinese 
+Medical Sciences, Beijing, 100053, China. zhishunjournal@163.com.
+
+We conducted a disproportionality analysis of the FDA Adverse Event Reporting 
+System (FAERS) database (2005 Q2-2024 Q3) to evaluate neurological adverse 
+events (NAEs) associated with six glucagon-like peptide-1 receptor agonists 
+(GLP-1 RAs): exenatide, liraglutide, lixisenatide, dulaglutide, semaglutide, and 
+tirzepatide. Among 28,953 NAE reports associated with GLP-1 RAs, 19 distinct NAE 
+signals were identified using reporting odds ratios (RORs), including dizziness, 
+tremor, dysgeusia, lethargy, taste disorder, presyncope, parosmia, allodynia, 
+and hypoglycemic unconsciousness, etc. Time-to-onset analysis revealed a median 
+latency of 32 days (IQR 7-122) for GLP-1 RA-related NAEs, with 45.28% occurring 
+within 30 days of treatment initiation. Sensitivity analyses using proportional 
+reporting ratios (PRRs), information components (ICs), and empirical Bayes 
+geometric means (EBGMs) confirmed robustness of these signals. While these 
+pharmacovigilance findings underscore the need for heightened clinical 
+vigilance, they represent associations rather than causal relationships, 
+constrained by inherent limitations of FAERS such as reporting bias and 
+confounding. Future prospective studies are needed to confirm these associations 
+and clarify underlying mechanisms.
+
+© 2025. The Author(s).
+
+DOI: 10.1038/s41598-025-01206-9
+PMCID: PMC12103604
+PMID: 40413246 [Indexed for MEDLINE]
+
+Conflict of interest statement: Declarations. Competing interests: The authors 
+declare no competing interests.
+
+
+5. Sex Med. 2025 Sep 24;13(4):qfaf073. doi: 10.1093/sexmed/qfaf073. eCollection 
+2025 Aug.
+
+The use of tirzepatide to successfully treat persistent genital arousal 
+disorder/genitopelvic dysesthesia: a case report.
+
+Burr E(1)(2), Roytman M(2)(3), Poirier É(2)(4), Kolbuszewska M(2)(5), Pfaus 
+JG(6), Komisaruk BR(7), Goldstein I(8), Rubin R(2)(9).
+
+Author information:
+(1)College of Human Medicine, Michigan State University, East Lansing, MI 48824, 
+United States.
+(2)Sexual Medicine Research Team, Washington, DC 20001, United States.
+(3)Stritch School of Medicine, Loyola University Chicago, Chicago, IL 60153, 
+United States.
+(4)Department of Psychology, Queen's University, Kingston, ON K7L 3N6, Canada.
+(5)Department of Psychology, University of British Columbia, Vancouver, BC V6T 
+1Z4, Canada.
+(6)Department of Psychology and Life Sciences, Charles University, Klecany 116 
+36, Czech Republic.
+(7)Department of Psychology, Rutgers University, Newark, NJ 08854, United 
+States.
+(8)San Diego Sexual Medicine, San Diego, CA 92120, United States.
+(9)Department of Urology, Georgetown University Hospital, Washington, DC 20007, 
+United States.
+
+INTRODUCTION: Persistent genital arousal disorder/genitopelvic dysesthesia 
+(PGAD/GPD) is associated with poor quality of life. Due to social stigma and its 
+heterogeneous nature, many patients suffer without treatment.
+AIMS: This case presents the first example of the successful use of a 
+glucagon-like peptide 1 and glucose-dependent insulinotropic polypeptide 
+receptor agonist (GLP1/GIP RA) medication for the treatment of PGAD/GPD.
+METHODS: The patient was identified by the Sexual Medicine Research Team, 
+retained as a patient at a sexual medicine clinic, and interviewed for the 
+purposes of this case report.
+RESULTS: This case presents a 44-year-old woman with a lifelong history of 
+PGAD/GPD symptoms that caused extreme distress and depression who experienced 
+95% resolution of her symptoms within 2 days of starting tirzepatide, a 
+GLP1/GIPRA medication, for weight loss.
+CONCLUSION: Increasing benefits of GLP1/GIPRAs are being uncovered, and further 
+studies must investigate the potential for these medications to be used in 
+patients with PGAD/GPD. This study also provides a potential mechanism for 
+decreased arousal resulting from GLP1/GIP receptor activation in 
+attention/reward pathways in the brain.
+
+© The Author(s) 2025. Published by Oxford University Press on behalf of The 
+International Society for Sexual Medicine.
+
+DOI: 10.1093/sexmed/qfaf073
+PMCID: PMC12459093
+PMID: 41001580
+
+Conflict of interest statement: J.G.P. is a consultant for FirmTech Inc., 
+Kadence Bio., Ovoca Bio/IVIX Corp., Reunion Neuroscience Inc., SmartBod/Lioness, 
+Inc., and Vella Bioscience.
+
+
+6. Am J Case Rep. 2026 May 8;27:e952158. doi: 10.12659/AJCR.952158.
+
+Cutaneous Allodynia Associated With GLP-1RA Tirzepatide for Weight Management: A 
+Case Series.
+
+Chakrabarti MP(1), Han S(2), Campbell NM(2).
+
+Author information:
+(1)St. George's University School of Medicine, Great River, NY, USA.
+(2)Department of Internal Medicine, HMH Jersey Shore University Medical Center, 
+Neptune City, NJ, USA.
+
+BACKGROUND Cutaneous allodynia is reported as a pain resulting from a stimulus 
+that does not normally provoke or elicit pain and an altered quality of 
+sensation characterized by extreme sensitivity to touch or mild temperature 
+change. Glucagon-like peptide-1 receptor agonists (GLP-1RAs) are widely 
+prescribed for management of diabetes mellitus and for obesity and weight 
+management. Tirzepatide is a synthetic polypeptide and dual agonist for 
+glucagon-like peptide-1 (GLP-1) and glucose-dependent insulinotropic polypeptide 
+receptors. Clinical studies demonstrate that tirzepatide provides robust 
+glycemic control and is highly effective for the treatment of obesity. Review of 
+the tirzepatide U.S. prescribing information revealed hypersensitivity and 
+injection site reactions as the only dermatological adverse events, with no 
+reports of skin pain or allodynia. A recent pharmacovigilance analysis of the 
+U.S. Food and Drug Administration Adverse Event Reporting System evaluating 6 
+GLP-1RAs, including tirzepatide, identified rare reports of allodynia; however, 
+detailed case-level descriptions remain limited. CASE REPORT In this case 
+series, we report moderate-to-severe allodynia in 2 patients with severe obesity 
+treated with tirzepatide for weight management. Allodynia in these patients 
+varied from static to dynamic in nature; the incidence of allodynia was 
+temporally associated with dose escalation, related to higher doses, and 
+resolved after termination of the drug, demonstrating strong association with 
+tirzepatide treatment. CONCLUSIONS Although dermatologic adverse events, such as 
+injection site reactions, hypersensitivity, and urticaria, have been reported, 
+to the best of our knowledge, this is the first case series reporting allodynia 
+specifically with tirzepatide therapy.
+
+DOI: 10.12659/AJCR.952158
+PMCID: PMC13170763
+PMID: 42101979 [Indexed for MEDLINE]
+
+Conflict of interest statement: Conflict of interest: None declared
+
+
+7. Med Sci (Basel). 2026 Oct 9;14(6):652. doi: 10.3390/medsci14060652.
+
+Cutaneous Adverse Events Associated with Semaglutide, Liraglutide and 
+Tirzepatide: A Systematic Review.
+
+Gupta AK(1)(2), Teasell EM(3), Magalhães RF(4), Mirmirani P(5)(6), Piguet 
+V(1)(2).
+
+Author information:
+(1)Division of Dermatology, Department of Medicine, Temerty Faculty of Medicine, 
+University of Toronto, Toronto, ON M5S 1A8, Canada.
+(2)Division of Dermatology, Women's College Hospital, Toronto, ON M5S 1B2, 
+Canada.
+(3)Independent Researcher, London, ON N5X 2P1, Canada.
+(4)Dermatology Division, School of Medical Science, Universidade Estadual de 
+Campinas, Campinas 13083-894, Brazil.
+(5)Department of Dermatology, The Permanente Medical Group, Vallejo, CA 94589, 
+USA.
+(6)Department of Dermatology, University of California, San Francisco, CA 94115, 
+USA.
+
+BACKGROUND/OBJECTIVES: Incretin-based therapies, including glucagon like 
+peptide-1 receptor agonists (GLP-1 RAs) and glucose-dependent insulinotropic 
+polypeptide (GIP)/GLP-1 RAs, are increasingly prescribed for obesity, leading to 
+greater recognition of associated dermatological adverse events (AEs). We aimed 
+to characterize the spectrum, frequency, and clinical characteristics of 
+cutaneous AEs reported with semaglutide, liraglutide and tirzepatide, focusing 
+on these agents because of their established use in both weight management and 
+diabetes mellitus.
+METHODS: A systematic literature search was conducted in MEDLINE (via PubMed), 
+Embase, and Web of Science. Search terms combined skin-related manifestations 
+(e.g., skin, dermatologic, injection-site reactions, pruritus, rash, 
+hypersensitivity, dysesthesia, vasculitis) with GLP-1 RA and GIP/GLP-1 RAs 
+(semaglutide, tirzepatide, liraglutide). Clinical trials, observational studies, 
+pharmacovigilance studies, and case reports reporting skin-related AEs 
+associated with semaglutide, liraglutide and tirzepatide were included.
+RESULTS: One hundred and one studies were included (32 randomized controlled 
+trials, 6 retrospective cohort/cross-sectional studies, 20 pharmacovigilance 
+studies, and 43 case series/reports). Cutaneous AEs ranged from generally common 
+but mild reactions to rare but potentially severe immune-mediated disorders. 
+Injection-site reactions, including erythema, pruritus, and hemorrhage, were 
+reported most frequently with tirzepatide (2-7%), then liraglutide, and less 
+commonly with semaglutide, with evidence of dose dependence. Dysesthesia was 
+most strongly associated with semaglutide, occurring in approximately 5% of 
+patients at standard doses and up to 20% with high-dose formulations indicated 
+for weight management, with events frequently occurring during dose escalation. 
+Uncommon reactions reported in association with GLP-1 or GIP/GLP-1 RA use 
+included angioedema, hypersensitivity reactions, autoimmune blistering diseases, 
+drug eruptions, vasculitis, and severe cutaneous reactions.
+CONCLUSIONS: Although most cutaneous AEs associated with GLP-1 and GIP/GLP-1 RAs 
+are mild and manageable, clinically relevant drug-specific differences exist. 
+The recognition of common and uncommon skin manifestations may facilitate 
+earlier diagnosis, support treatment adherence, and reduce the adverse outcomes.
+
+DOI: 10.3390/medsci14060652
+PMCID: PMC13707166
+PMID: 42930571 [Indexed for MEDLINE]
+
+Conflict of interest statement: A.K.G., E.M.T. and R.F.M. declare no conflicts 
+of interest. V.P. has received grants from AbbVie, Bausch Health, Boehringer 
+Ingelheim, Bristol Myers Squibb, Celgene, Eli Lilly, Incyte, Janssen, LEO 
+Pharma, L’Oréal, Novartis, Organon, Pfizer, Sandoz and Sanofi; received payment 
+or honoraria for speaking engagement from Sanofi; participated on an advisory 
+board for LEO Pharma, Novartis, Sanofi, Union Therapeutics, Abbvie and UCB; and 
+received equipment donation from L’Oréal. PM is affiliated with the Permanente 
+Medical Group (a general hospital in California, USA; no conflicts of interest); 
+reports research grants from Amgen, Sun Pharmaceuticals, Eli Lilly, Incyte, 
+Pfizer, and Priovant; has served on the board of directors and medical advisory 
+board for the American Hair Research Society, National Alopecia Areata 
+Foundation, and Scarring Alopecia Foundation; and is a consultant for 
+Veradermics, Priovant, Sanofi, L’Oreal, and Unilever. The sponsors had no role 
+in the design of the study; in the collection, analyses, or interpretation of 
+data; in the writing of the manuscript; or in the decision to publish the 
+results. Author Paradi Mirmirani was employed by the company The Permanente 
+Medical Group. The remaining authors declare that the research was conducted in 
+the absence of any commercial or financial relationships that could be construed 
+as a potential conflict of interest.
+
+
+8. Pharmaceuticals (Basel). 2026 May 31;19(6):876. doi: 10.3390/ph19060876.
+
+Incretin-Based Drugs for Obesity: Common and Drug-Specific Reporting Patterns of 
+Adverse Drug Reactions-A Comparative Disproportionality Analysis Using 
+EudraVigilance Reports Integrating SmPC Data.
+
+Popa Ilie IR(1), Ghibu S(2), Butuca A(3), Dobrea CM(3), Frum A(3), Homorodean 
+C(4)(5), Chis AA(6), Morgovan C(3).
+
+Author information:
+(1)Endocrinology Department, Faculty of Medicine, "Iuliu Haţieganu" University 
+of Medicine and Pharmacy, 3-5 Louis Pasteur Street, 400349 Cluj-Napoca, Romania.
+(2)Department of Pharmacology, Physiology and Pathophysiology, Faculty of 
+Pharmacy, "Iuliu Haţieganu" University of Medicine and Pharmacy, 6A Louis 
+Pasteur Street, 400349 Cluj-Napoca, Romania.
+(3)Preclinical Department, Faculty of Medicine, "Lucian Blaga" University of 
+Sibiu, 550169 Sibiu, Romania.
+(4)Internal Medicine Department, Medical Clinic No. 1, "Iuliu Hatieganu" 
+University of Medicine and Pharmacy, 400006 Cluj-Napoca, Romania.
+(5)Interventional Cardiology Department, Cluj County Emergency Hospital, 400006 
+Cluj-Napoca, Romania.
+(6)Association for Excellence in Pharmaceutical Education and Research, 550169 
+Sibiu, Romania.
+
+Background: With the increasing widespread use of GLP-1 RA and dual GIP/GLP-1 
+RAs in the treatment of obesity, their safety profile remains a concern for 
+healthcare professionals (HPs). Objective: This study aimed to characterize and 
+evaluate safety data from the EudraVigilance (EV) database for semaglutide 
+(SEM), liraglutide (LIR), and tirzepatide (TIR). Methods: A hierarchical 
+pharmacovigilance approach was applied, integrating SOC- and PT-level analyses 
+with SmPC-based evaluation and both frequentist (ROR, 95% CI) and Bayesian 
+(IC025) disproportionality methods. Within each molecule, reporter 
+type-stratified analyses were performed, while across all molecules, 
+disproportionality analyses were conducted separately in HP reports and in the 
+full database to identify reporting patterns and potential safety signals, 
+including those not described in the SmPCs. Results: Some ADRs, listed in the 
+SmPC of only one or two of the three GLP1-RAs were also reported in the EV 
+database for the other agents whose SmPCs do not specify these ADRs including 
+optic ischemic neuropathy (TIR: 0.28% and LIR: 0.17%), alopecia (LIR: 0.81%), 
+headache (TIR: 2.51%), intestinal obstruction (TIR: 1.55%), angioedema (LIR: 
+0.19%), hypersensitivity (SEM: 0.58% and LIR: 0.73%), etc. Pancreatitis, in 
+particular, showed a significant but low-magnitude signal, being more frequently 
+reported by HPs compared with non-HPs across all three GLP1-RAs. Additionally, 
+statistically significant signals (IC025 > 0) were observed in both the HPs and 
+full datasets. For example, for SEM vs. TIR, signals were identified for optic 
+ischemic neuropathy (0.17; 0.13), gallbladder disorder (0.09; 0.11), and 
+dysesthesia (0.42; 0.43), respectively. For TIR vs. SEM, signals were observed 
+for injection site erythema (0.05; 0.11), injection site pruritus (0.01; 0.11), 
+and injection site reaction (0.02; 0.08). Conclusions: These findings suggest 
+potential safety signals beyond current SmPC information, emphasizing the need 
+for continuous pharmacovigilance and cautious interpretation of reporting 
+biases.
+
+DOI: 10.3390/ph19060876
+PMCID: PMC13305957
+PMID: 42356493
+
+Conflict of interest statement: The authors declare no conflicts of interest.

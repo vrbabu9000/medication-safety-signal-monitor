@@ -16,8 +16,8 @@ META = {
     "title": "Decisions, and what we did not do",
     "short": "Decisions",
     "subtitle": "the choices that shaped the build, how they changed, and what we left out on purpose",
-    "version": "1.1",
-    "date": "5 November 2026",
+    "version": "1.2",
+    "date": "6 November 2026",
 }
 
 D = "docs/diagrams/png/"
@@ -57,8 +57,8 @@ def build(r):
              "The approaches we replaced or reverted, kept as part of the record"],
         is_not=["The full decision log: that is `docs/06-decisions/DECISIONS.md` (D001 to D048)",
                 "A pipeline manual (see the pipeline and Ontology reports)",
-                "Final: 12 decisions are still *proposed* (D006, D015, D025, D026, D027, D028, D029, D037, D045, "
-                "D046, D047, D048). Many are built and running; the owner accepts them in one batch",
+                "A list of open decisions: the last 12 proposed ones (D006, D015, D025, D026, D027, D028, D029, "
+                "D037, D045, D046, D047, D048) were accepted in one batch on 6 November 2026, with D041 v2",
                 "Reviewed by a pharmacist"],
         how_to_read="Chapter 1 is the summary and the method. Chapters 2 to 6 each take one theme and explain its "
                     "decisions: options considered, why, evidence, and status. Chapter 7 is the decision-change "
@@ -81,43 +81,45 @@ def build(r):
         "{{n:scope.glp1}} GLP-1 medicines (semaglutide, liraglutide, dulaglutide, tirzepatide, exenatide). Four public "
         "sources: FAERS (the FDA's adverse event reports), DailyMed (official label text), openFDA recalls and RxNorm "
         "(drug names and IDs). A *signal* is a drug and reaction reported unusually often (PRR, the proportional "
-        "reporting ratio, with the Evans rule; D006, proposed but built) that is not found in the drug's label.")
+        "reporting ratio, with the Evans rule; D006) that is not found in the drug's label.")
     r.p("**Status words.** *Accepted* = the owner has agreed. *Proposed* = written down and usually built, waiting "
-        "for the owner's OK. D039 is the dataset-contracts decision; its gates G1 to G6 settled several earlier "
+        "for the owner's OK. *Superseded* = replaced by a newer version or decision. D039 is the dataset-contracts decision; its gates G1 to G6 settled several earlier "
         "decisions during the build (for example G6 accepted D020 to D024 for the pilot).")
-    r.p("**Twelve decisions are still Proposed:** D006 (the Evans signal rule), D015 (the AI target, F1 0.85 or "
-        "more), D025 (fill-rate monitoring), D026 (the bridge sources Drugs@FDA and NDC Directory), D027 (two-level "
-        "identity), D028 ('since yesterday' = since last review), D029 (FAERS is quarterly), D037 (the exact-text "
-        "label check), D045 (change feed), D046 (monitoring), D047 (DailyMed XML reuse) and D048 (no partitioning). "
-        "Many of them are built and running in every build. The owner will accept them in one batch. D031 v3 (an "
-        "old schedule) is superseded.")
+    r.p("**Twelve decisions were accepted in one batch on 6 November 2026** (the owner's words: \"Accept all "
+        "12\"): D006 (the Evans signal rule), D015 (the AI target, F1 0.85 or more; only the target: its TAC 2017 / "
+        "OnSIDES benchmark stays cut by D031), D025 (fill-rate monitoring), D026 (the bridge sources Drugs@FDA and "
+        "NDC Directory), D027 (two-level identity), D028 ('since yesterday' = since last review), D029 (FAERS is "
+        "quarterly), D037 (the exact-text label check), D045 (change feed), D046 (monitoring), D047 (DailyMed XML "
+        "reuse) and D048 (no partitioning). All were already built and running. The same day the owner accepted "
+        "**D041 v2**: the AI also reads the 3 semaglutide labels, and page 1 shows its quotes. D031 v3 (an old "
+        "schedule) is superseded.")
     r.h("The decisions this report explains")
     r.table(["Theme", "Decision", "In one line", "Status"], [
         ("Scope", "D018", "Formulary = an explicit list of {{n:scope.drugs_formulary}} ingredient IDs, not a drug class",
          "Accepted"),
         ("Sources", "D019", "DailyMed is the source of truth for labels", "Accepted"),
         ("Identity", "D020, D027", "Exact ingredient matching; two levels: ingredient → product (→ package)",
-         "D020 accepted (via D039 G6); D027 proposed (product key confirmed by D039 G2)"),
+         "D020 accepted (via D039 G6); D027 accepted 6 Nov (product key confirmed by D039 G2)"),
         ("FAERS", "D021, D022, D023", "Which drugs count; which case version counts; fold duplicates", "Accepted"),
         ("Label check", "D041, D037, D043, D016", "AI terms with a quote, exact text, then a reviewed synonym table; "
-                                                  "tag non-harm terms", "D043, D016 v3 accepted; D037 proposed: built "
-                                                                        "and running, formal acceptance pending owner"),
-        ("AI", "D041", "One cached, grounded model call per label section", "Accepted"),
+                                                  "tag non-harm terms", "Accepted (D037 on 6 Nov)"),
+        ("AI", "D041, D041 v2", "One cached, grounded model call per label section; v2 adds the 3 semaglutide labels",
+         "Accepted (v2 on 6 Nov)"),
         ("Pipelines", "D044, D047, D048", "Incremental FAERS built and proven, not switched on; DailyMed XML reuse; "
-                                          "no partitioning in the pilot", "D044 accepted; D047, D048 proposed"),
-        ("Product", "D045, D046", "Change feed for 'what changed'; monitoring as data", "Proposed"),
+                                          "no partitioning in the pilot", "Accepted (D047, D048 on 6 Nov)"),
+        ("Product", "D045, D046", "Change feed for 'what changed'; monitoring as data", "Accepted 6 Nov"),
     ], widths=[0.9, 1.3, 3.7, 1.3])
     r.key("Narrow and working beats broad and half-working. Each time we had to choose between breadth and "
           "depth, we cut breadth: fewer drugs for AI, fewer sources, a replay instead of live drift.",
           title="The rule behind most choices")
     r.key([
-        "**The core rules are built, even where 'proposed'.** D006 (the signal rule), D037 (the exact-text label "
-        "check) and D045 (the change feed) run in every build; 'proposed' means the owner has not yet signed them "
-        "off, not that they are missing.",
+        "**The core rules are built and accepted.** D006 (the signal rule), D037 (the exact-text label check) and "
+        "D045 (the change feed) run in every build; the owner accepted them on 6 November.",
         "**What we left out shapes her screen.** No MedDRA licence, so synonyms come from a small reviewed table "
         "whose bands no pharmacist has checked yet. FAERS is quarterly, so signals move once a quarter (FAERS is "
-        "about {{n:monitoring.faers_age_days}} days behind). The AI read only {{n:ai.pilot_labels}} oxycodone "
-        "labels, so for most signals (NAION included) 'not in label' comes from the text and synonym checks.",
+        "about {{n:monitoring.faers_age_days}} days behind). The AI reads {{n:ai.pilot_labels}} labels (oxycodone "
+        "and semaglutide), so for the other drugs 'not in label' comes from the text and synonym checks. For "
+        "NAION all three checks agree: the AI found diabetic-retinopathy terms and no optic-nerve term.",
         "**Every 'no' has a reason and a trigger.** Chapter 8 lists what would make us add each missing piece.",
     ], title="What this means for Dana (the safety officer)")
     r.gate("Summary", [
@@ -173,7 +175,7 @@ def build(r):
                     "(heroin); 'fentanyl' hits a fentanyl analogue. That inflated morphine rows by about half (DQ34)."),
         ("Evidence", "[[OBSERVED]] DQ34, measured on the 2026Q2 FAERS file while profiling on 2026-10-20."),
     ], widths=[1, 5.5])
-    r.h("D027 (proposed; built) · Two levels: ingredient and product (D003 v1 → v2)")
+    r.h("D027 · Two levels: ingredient and product (D003 v1 → v2)")
     r.table(["Part", "Detail"], [
         ("Decision", "Drug = ingredient RxCUI. Product = FDA application number. Package = NDC code. All built once "
                      "in the identity step."),
@@ -183,8 +185,8 @@ def build(r):
                            "one created false 'not in label' flags (DQ33). Bulk FAERS has no harmonised label link, but "
                            "it does carry the application number (DQ39, D024)."),
         ("Evidence", "[[OBSERVED]] DQ33 and DQ39. The product key was confirmed as the application number by D039 G2."),
-        ("Status", "Proposed. The two levels are built and used by every label and recall join; the owner has not "
-                   "yet accepted the decision record itself."),
+        ("Status", "Accepted on 6 November 2026 (batch). The two levels are built and used by every label and "
+                   "recall join."),
     ], widths=[1, 5.5])
     r.gate("Identity", [
         ("Required evidence", "One dataset maps every name we see to an ingredient and a product; nothing downstream "
@@ -222,11 +224,11 @@ def build(r):
     r.p("**Why D023 v2 keeps the mass reports visible.** Deleting them would hide evidence. Instead each signal "
         "carries how many of its reports came from mass reports, and a signal that is mostly mass reports gets a "
         "caution and is not ranked. A blunt cut, kept visible, is easier to audit than a silent delete [[DESIGNED]].")
-    r.figure(D + "32-handin-signal-pipeline-v2.png",
+    r.figure(D + "32-handin-signal-pipeline-v3.png",
              "From one FAERS report to a ranked signal: case version (D022), roles (D021), identity (D020), duplicate "
              "and mass-report fold (D023 v2), then statistics, the three label checks in code order (AI, text, "
              "synonyms) and the buckets.",
-             source=D + "32-handin-signal-pipeline-v2.png", max_height=360)
+             source=D + "32-handin-signal-pipeline-v3.png", max_height=360)
     r.gate("FAERS rules", [
         ("Required evidence", "Counts equal an independent prototype; the follow-up effect is measured."),
         ("Result", "Met: Foundry counts equal the 20 October Python prototype exactly (learning 2026-11-04); five "
@@ -239,16 +241,18 @@ def build(r):
     r.p("**A signal is only interesting if the label does not already mention it. Deciding 'mentioned' is the "
         "hardest judgment in the project, and the one that changed most.**")
     r.table(["Step", "Decision", "What it does", "Outcome"], [
-        ("1 · AI terms", "D041", "Is it among the reactions the AI extracted, with a quote that code found in the "
-                                 "label? (pilot labels only)", "in label / not"),
-        ("2 · Text", "D037 (proposed; built)", "Is the exact FAERS term (or its US spelling) in a safety section of "
+        ("1 · AI terms", "D041 v2", "Is it among the reactions the AI extracted, with a quote that code found in the "
+                                 "label? (the {{n:ai.pilot_labels}} AI-read labels only)", "in label / not"),
+        ("2 · Text", "D037", "Is the exact FAERS term (or its US spelling) in a safety section of "
                                                "the drug's reference label version?", "in label / not"),
         ("3 · Synonyms", "D043", "Does a reviewed synonym phrase for that term appear in the label?",
          "in label (high) / possibly in label (medium)"),
     ], widths=[1, 1, 3.5, 1.6])
     r.p("The code runs the checks in this order (`ontology_signals.py` l.163-176). The outcome is the same in any "
-        "order; only the recorded match method (`label_match_method`) differs. D037 is still proposed: the rule is "
-        "built and running in every build, and its formal acceptance is pending the owner.", style="small")
+        "order; only the recorded match method (`label_match_method`) differs. First matches over all "
+        "{{n:signals.ae_stats}} stats (Foundry, after D041 v2): AI {{n:signals.label_check_stats.ai_term_exact}}, "
+        "text {{n:signals.label_check_stats.label_text}}, synonym high {{n:signals.label_check_stats.synonym_high}}, "
+        "medium {{n:signals.label_check_stats.synonym_medium}}, none {{n:signals.label_check_stats.none}}.", style="small")
     r.p("**Why a reviewed synonym table and not MedDRA or an LLM judge (D043).** MedDRA (the standard medical "
         "terminology, whose groupings would solve most synonym cases) needs a licence we do not have for a public "
         "pilot. An LLM reading every label for every signal is costly, ungrounded unless it quotes, and would drift "
@@ -286,7 +290,7 @@ def build(r):
 
     # ------------------------------------------------------------------ 06 AI and pipelines
     r.chapter("The AI step, incremental builds and the new pieces", new_page=False)
-    r.h("D041 · AI label extraction: cached and grounded")
+    r.h("D041 and D041 v2 · AI label extraction: cached and grounded")
     r.table(["Part", "Detail"], [
         ("Decision", "A Python transform calls Claude Sonnet 5.5 (through Foundry AIP) once per label safety section. "
                      "Each reaction comes with an exact quote, and code checks the quote is in the section text. "
@@ -294,18 +298,24 @@ def build(r):
         ("Options", "AIP Logic function per label; Pipeline Builder's 'Use LLM' block; other models (GPT, Claude Opus)."),
         ("Why", "Per section keeps prompts short and failures local; the quote check catches invented text; the cache "
                 "means an unchanged label never costs a second call (D005)."),
-        ("Evidence", "[[OBSERVED]] {{n:ai.grounded}} of {{n:ai.reactions}} quotes found word for word. O1: a rebuild "
+        ("v2 (6 Nov)", "Same model, prompt and cache; the AI also reads the 3 semaglutide reference labels (Ozempic "
+                       "v20, Wegovy v19, oral Ozempic v14): {{n:ai.pilot_labels}} labels, {{n:ai.sections}} sections. "
+                       "Trigger: evaluator v2 found the AI and the screen barely met; semaglutide is the demo drug "
+                       "(A019)."),
+        ("Evidence", "[[OBSERVED]] {{n:ai.grounded}} of {{n:ai.reactions}} quotes found word for word (5 labels). "
+                     "The widening build made {{n:ai.d041_v2.model_calls}} model calls (new sections only); a forced "
+                     "rebuild made {{n:ai.model_calls_on_rebuild}} (O1b). O1: a rebuild "
                      "went from {{n:optimization.O1.before_calls}} model calls and {{n:optimization.O1.before_tokens}} "
                      "tokens to {{n:optimization.O1.after_calls}} and {{n:optimization.O1.after_tokens}}. F1 "
-                     "{{n:ai.gold_f1}} against the target of {{n:ai.d015_target_f1}} (D015, proposed), on a 35-item answer key "
-                     "(Boxed Warning and Contraindications of the {{n:ai.pilot_labels}} oxycodone labels, written by "
+                     "{{n:ai.gold_f1}} against the target of {{n:ai.d015_target_f1}} (D015), on a 35-item answer key "
+                     "(Boxed Warning and Contraindications of the {{n:ai.v1_pilot.labels}} oxycodone labels, written by "
                      "Claude and frozen before the run, no pharmacist yet)."),
         ("Honest limits", "Only {{n:ai.pilot_labels}} labels and {{n:ai.sections}} sections. The answer key is "
-                          "small (the AI found " + r.n("ai.gold_recall_strict").replace("/", " of ") + " answer-key items) and a pharmacist has not "
-                          "checked it. The AI does not change the signal list today: text matching already covers its "
-                          "terms on the pilot labels. It read 0 semaglutide labels, so NAION is 'not in label' from "
-                          "the text and synonym checks only. Its value now is the exact quote, which is not yet on "
-                          "the officer's screen."),
+                          "small (the AI found " + r.n("ai.gold_recall_strict").replace("/", " of ") + " answer-key items), "
+                          "covers only oxycodone, and a pharmacist has not checked it; the semaglutide sections are "
+                          "not scored. The AI does not change the signal list today: text matching already covers its "
+                          "terms on all 5 labels (signals unchanged after v2). Its value is the exact quote, now on the "
+                          "officer's screen (page 1), and an independent 'no optic-nerve term' reading for NAION."),
     ], widths=[1, 5.5])
     r.h("D044 · Incremental FAERS: built, proven equal, not switched on")
     r.p("The brief asks for at least one incremental pipeline. We built one that adds a quarter to a kept state "
@@ -314,16 +324,16 @@ def build(r):
         "{{n:optimization.O2.full_rebuild_s}} s for a full rebuild (" + o2_ratio + " times) [[OBSERVED]]. Reading and "
         "rewriting the state costs more than parsing one quarter. So the full rebuild stays the input to signals "
         "until the incremental path is measured faster, probably at four or more quarters [[ASSUMED]].")
-    r.figure(D + "33-handin-incremental-faers-v2.png",
+    r.figure(D + "33-handin-incremental-faers-v3.png",
              "Full and incremental FAERS side by side: state and log, replay when identity changes, EXCEPT ALL = 0.",
-             source=D + "33-handin-incremental-faers-v2.png", max_height=235)
-    r.h("D047 (proposed) · Reuse DailyMed XML that has not changed")
+             source=D + "33-handin-incremental-faers-v3.png", max_height=235)
+    r.h("D047 · Reuse DailyMed XML that has not changed")
     r.p("The slowest build re-downloaded every label XML. Reusing XML for an unchanged setid and version cut "
         "downloads from {{n:optimization.O3.before_downloads}} to {{n:optimization.O3.after_downloads}} and the build "
         "from " + o3_before + " to " + o3_after + " (" + o3_cut + " less), with the same rows. The index (about 30 "
         "pages) is still pulled every build, so a new label version still arrives the same day [[OBSERVED]]. Caveat: "
         "the 'before' time comes from the step 9 build of the same scope, not a back-to-back run (O3).")
-    r.h("D045 (proposed) · A change feed for 'what changed'")
+    r.h("D045 · A change feed for 'what changed'")
     r.p("'Since yesterday' means 'since my last review', because sources update on different clocks (DQ14). Many "
         "changes are already dated by the source (a recall's report date, a label's effective date); the rest are "
         "found by comparing this build with the last. The first build gave {{n:changes.events_first_build}} events; "
@@ -333,7 +343,7 @@ def build(r):
     r.figure(D + "34-handin-change-feed-v1.png",
              "Change feed: source-dated events and build-to-build differences flow into MSSM Change Event and page 3.",
              source=D + "34-handin-change-feed-v1.png", max_height=260)
-    r.h("D046 (proposed) · Monitoring as data")
+    r.h("D046 · Monitoring as data")
     r.p("Every build appends {{n:monitoring.checks_per_build}} checks (keys, row-count drops, freshness, AI grounded "
         "rate, cache hits, field fill rates) to a dataset, and rebuilds a drift view as a **historical replay** from "
         "source dates, labelled as such. {{n:monitoring.data_health_checks}} Foundry Data Health checks alert the "
@@ -341,7 +351,7 @@ def build(r):
         "{{n:monitoring.reporter_type_blank_q1|.0%}} to {{n:monitoring.reporter_type_blank_q2|.0%}} between quarters "
         "(DQ38), and recalls for our drugs in the last four weeks were {{n:monitoring.recalls_last4w}} against "
         "{{n:monitoring.recalls_prev4w}} before [[OBSERVED]].")
-    r.h("D048 (proposed) · No partitioning in the pilot")
+    r.h("D048 · No partitioning in the pilot")
     r.p("Every dataset is written unpartitioned. The largest table has {{n:faers.case_reactions}} rows, and most "
         "build time is most likely container start-up (not measured separately), not data. We revisit (FAERS by quarter, signals by drug) when FAERS "
         "holds 8 or more quarters or a single build passes 5 minutes (D048) [[DESIGNED]].")
@@ -358,7 +368,7 @@ def build(r):
     r.table(["Decision", "Before", "After", "Trigger (evidence)"], [
         ("D002 → D007 → D014 class", "GLP-1 only, then opioids only", "{{n:scope.opioids}} opioids + {{n:scope.glp1}} GLP-1",
          "Project sponsor's suggestion, then research scoring the hybrid higher (A003)"),
-        ("D003 → D027 identity (D027 proposed)", "One key: ingredient", "Ingredient → product → package",
+        ("D003 → D027 identity", "One key: ingredient", "Ingredient → product → package",
          "Labels and recalls belong to products (DQ33)"),
         ("D004 v1 → v2 (D022)", "Incremental = append each quarter", "Upsert latest version + deletes on all history",
          "Phantom rows from appending (DQ36)"),
@@ -374,8 +384,12 @@ def build(r):
          "so gate D039 G1 restored all 13 drugs"),
         ("D043 data syn_v1 → syn_v2", "Synonym table v1", "{{n:synonyms.rows}} rows",
          "Top-12-per-drug review; ranked {{n:signals.ranked_history.d016_v3}} → {{n:signals.ranked_history.syn_v2}}"),
-        ("D028 → D045", "'Since last review' as an idea (D028, proposed)", "A built change feed (D045, proposed)",
+        ("D028 → D045", "'Since last review' as an idea (D028)", "A built change feed (D045)",
          "Step 11 build (A016)"),
+        ("D041 → D041 v2", "AI reads 2 oxycodone labels; 0 for the demo drug", "Also the 3 semaglutide labels; page-1 "
+         "table of AI quotes", "Evaluator v2: the AI and the screen barely met (A019); owner, 6 Nov"),
+        ("12 decisions Proposed → Accepted", "Built and measured, awaiting the owner", "Accepted as built (D015: "
+         "the target only)", "Owner's batch decision, 6 Nov 2026"),
     ], widths=[1.6, 1.7, 1.8, 2.5])
     r.note("D031 (schedule) went through five versions: a demo date, a re-ordered cut list tied to hours, a "
            "one-week slip that forced all cuts, 'no fixed date', and finally the full {{n:scope.drugs_formulary}}-drug "
@@ -403,10 +417,11 @@ def build(r):
         ("Scheduled builds", "Pilot built by hand, step by step", "Freshness checks do not fire on their own",
          "Production hand-over"),
         ("AI on all labels", "Answer key not reviewed by a pharmacist (D031 v5)", "Only {{n:ai.pilot_labels}} labels "
-                                                                                  "have AI quotes", "A reviewed gold set on long sections"),
+                                                                                  "(oxycodone, semaglutide) have AI quotes",
+         "A reviewed gold set on long sections"),
         ("ClinicalTrials.gov, OnSIDES (open label side-effect data, CC BY 4.0)", "D031 cut list (v3 cuts, kept by v5): breadth after "
          "depth", "No 'seen in trials' or second 'is it labelled?' opinion", "Another month (roadmap)"),
-        ("Daily FAERS", "No confirmed official daily API (D029, proposed). FAERS moved to AEMS (the FDA's new adverse event "
+        ("Daily FAERS", "No confirmed official daily API (D029). FAERS moved to AEMS (the FDA's new adverse event "
                         "system) in March 2026 (DQ20); the future feed is unverified", "FAERS is quarterly, about "
          "{{n:monitoring.faers_age_days}} days behind", "An official AEMS export"),
         ("SrLC (FDA Safety-related Labeling Changes) backtest", "D031 cut list (v3 cuts, kept by v5)",
@@ -419,7 +434,7 @@ def build(r):
         ("Spark for the clean layer", "Polars on one machine is enough at this size", "Not tested at scale",
          "Data that outgrows one machine"),
     ], widths=[1.6, 2, 1.7, 1.8])
-    r.how_we_know("Each row traces to a decision or cut: D009, D029 (proposed), D031 v3 to v5 (v3 superseded; its cuts kept by v5), D043, A005 and the optimization "
+    r.how_we_know("Each row traces to a decision or cut: D009, D029, D031 v3 to v5 (v3 superseded; its cuts kept by v5), D043, A005 and the optimization "
                   "log. The 'another month' plan (`docs/09-roadmap/another-month-sources-and-pharmacist-review.md`) "
                   "puts a named pharmacist reviewer first, ahead of any new source.")
     r.gate("Scope discipline", [
@@ -437,7 +452,7 @@ def build(r):
         ("Opioids-only pilot class", "Research scored a hybrid class higher", "{{n:scope.opioids}} opioids + {{n:scope.glp1}} GLP-1",
          "A001 → A003, D014"),
         ("v1 reference pack (30 cases, one source each)", "Questions and answers written in one pass; capture errors",
-         "Reference set v2: frozen questions, independent verifier", "A008, D037 (proposed)"),
+         "Reference set v2: frozen questions, independent verifier", "A008, D037"),
         ("Six-day build proposal", "Not adopted; its ids (A006, D032 to D035) are reserved", "12-step build order",
          "A007, D036"),
         ("One-page screen (question 1 only)", "Did not answer recalls or changes", "Four-page module",
@@ -478,7 +493,9 @@ def build(r):
         ("F1 answer key: 35 items, Boxed Warning + Contraindications of 2 labels", "eval/ai-eval-v1.md"),
         ("DailyMed index about 30 pages per build; 'before' from the step 9 build", "Optimization log O3"),
         ("Drift needs a 3 to 4 week window", "D009"),
-        ("Partitioning trigger: 8+ FAERS quarters or a build over 5 minutes", "D048 (proposed)"),
+        ("Partitioning trigger: 8+ FAERS quarters or a build over 5 minutes", "D048"),
+        ("Batch acceptance of 12 decisions; D041 v2 accepted (6 Nov 2026)", "DECISIONS.md, decision changes"),
+        ("AI found diabetic-retinopathy terms, no optic-nerve term (semaglutide)", "A019; eval/ai-eval-v1.md"),
         ("FAERS replaced by AEMS on 11 March 2026", "DQ20"),
         ("Hybrid class scored higher than opioids only", "D014; A003"),
     ], widths=[300, 204])

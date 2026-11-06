@@ -5,7 +5,7 @@ Build:  .venv/bin/python tools/handin/build_report.py R03-ontology
 Output: docs/11-handin/reports/pdf/R03-ontology.pdf
 
 Sources: foundry/ontology/README.md, docs/05-approaches/A010, A012, A016, DECISIONS D040 / D042 / D045,
-docs/11-handin/baseline-gate.md, diagram 31 (docs/diagrams/png/31-handin-ontology-v1.png).
+docs/11-handin/baseline-gate.md, diagram 31 v2 (docs/diagrams/png/31-handin-ontology-v2.png), A019 (D041 v2).
 Numbers come from docs/11-handin/numbers.json via {{n:...}}; the few figures from other records are cited
 where they appear and listed in the appendix.
 Phase D (2026-11-05): NAION not AI-checked (W3); page 1 "Reference labels searched" panel (S12-S14, app-1c);
@@ -17,8 +17,8 @@ META = {
     "title": "The Ontology",
     "short": "Ontology",
     "subtitle": "ten object types, their links and the one write-back Action",
-    "version": "1.1",
-    "date": "5 November 2026",
+    "version": "1.2",
+    "date": "6 November 2026",
 }
 
 ONT = "foundry/ontology/README.md"
@@ -128,10 +128,10 @@ def build(r):
                "Links mirror real relationships (drug, product, label, recall, statistic, signal). One "
                "create-only Action writes each triage decision as its own object, pinned to the exact "
                "computation it reviewed by an `evaluation_id`.")],
-        is_=["A tour of the MSSM Ontology as built in Foundry on 5 November 2026",
+        is_=["A tour of the MSSM Ontology as built in Foundry (5 November 2026; updated 6 November)",
              "Written for an engineer who has never used Palantir Foundry",
              "Each object type: backing dataset, key, title and why that grain",
-             "Each link type with its cardinality, including one mistake",
+             "Each link type with its cardinality, and one mistake we fixed",
              "A worked trace of the top signal (NAION) back to its sources"],
         is_not=["The pipeline design (how the curated datasets are computed)",
                 "A statistics lesson: PRR and the Evans rule are explained only as far as needed here",
@@ -156,7 +156,7 @@ def build(r):
         "business objects (a drug, a label, a recall, a signal) on top of plain tables. Each object can link "
         "to other objects. An app then shows objects, not rows, and a user can follow the links by clicking.")
     r.p("A {{n:app.pages}}-page Workshop app sits on top of **ten object types** (all named with the "
-        "prefix `MSSM`), **eleven link types** and **one Action**. The scope is {{n:scope.drugs_formulary}} "
+        "prefix `MSSM`), **{{n:ontology.link_types_mssm}} link types** and **one Action**. The scope is {{n:scope.drugs_formulary}} "
         "drugs: {{n:scope.opioids}} opioids (oxycodone, hydrocodone, morphine, fentanyl, hydromorphone, methadone, "
         "buprenorphine, tramadol) and {{n:scope.glp1}} GLP-1 medicines, the newer diabetes and weight-loss drugs "
         "(semaglutide, liraglutide, dulaglutide, tirzepatide, exenatide).")
@@ -180,7 +180,7 @@ def build(r):
         ("RxNorm / RxCUI", "The US drug naming system; an RxCUI is the ID of one ingredient."),
         ("PRR", "Proportional reporting ratio: how much more often a reaction is reported with this drug than "
                 "with all other drugs."),
-        ("Evans rule", "The screening test for a signal: at least 3 reports, PRR at least 2, chi-squared at least 4 (D006, proposed)."),
+        ("Evans rule", "The screening test for a signal: at least 3 reports, PRR at least 2, chi-squared at least 4 (D006)."),
         ("Signal", "A drug–reaction pair that meets the Evans rule and whose reaction is not found in any reference "
                    "label of the drug ({{n:signals.not_in_label}} *not in label*) or only through a medium-band synonym "
                    "({{n:signals.possibly_in_label}} *possibly in label*): {{n:signals.total}} in all."),
@@ -200,11 +200,13 @@ def build(r):
           title="Read every count this way")
     r.note(["**She cannot triage yet.** Only the project owner's account can submit a Triage Decision today. "
             "Giving the officer's role that permission is a production step.",
-            "**Her trace ends at label versions, not quotes.** A *not in label* signal has nothing to quote. Page 1 "
-            "now lists the reference labels that were searched, with DailyMed links (chapter 6).",
-            "**The AI did not read her top signal's labels.** The AI pilot read {{n:ai.pilot_labels}} oxycodone "
-            "labels; for semaglutide × NAION it read 0. *Not in label* there rests on the exact-text and synonym checks. "
-            "NAION is a *known positive*, not a discovery: EMA PRAC (6 Jun 2025) and a WHO alert (27 Jun 2025) "
+            "**Her trace ends at label versions and what they do say.** A *not in label* signal has no matching "
+            "quote. Page 1 lists the reference labels that were searched, with DailyMed links, and below them "
+            "what the AI read in those labels, quoted word for word (chapter 6).",
+            "**The AI read her top signal's labels.** Since 6 Nov (D041 v2) the AI reads the "
+            "{{n:app.labels_read_by_ai_naion}} semaglutide labels. For semaglutide × NAION it found "
+            "diabetic-retinopathy terms and no optic-nerve term, which agrees with the exact-text and synonym "
+            "checks: *not in label*. NAION is a *known positive*, not a discovery: EMA PRAC (6 Jun 2025) and a WHO alert (27 Jun 2025) "
             "named it, and our 3 US labels do not mention it (DECISIONS learning 2026-11-05).",
             "**Signals change once a quarter.** New FAERS data arrives quarterly (about {{n:monitoring.faers_age_days}} "
             "days old at the gate), so most *changes* she sees are recalls and label versions."],
@@ -223,8 +225,8 @@ def build(r):
     r.chapter("Where the Ontology sits", new_page=False)
     r.p("**The Ontology is the last step before the screen. Nothing is computed in it; it only names, keys "
         "and links what the pipelines have already prepared.**")
-    r.p("Data moves in four layers (diagram 30 v2, printed full page as R01 Figure 3 and R02 Figure 1; file "
-        "`docs/diagrams/png/30-handin-data-flow-v2.png`). Public sources are pulled into `Data/raw` as received. "
+    r.p("Data moves in four layers (diagram 30 v3, printed full page as R01 Figure 3 and R02 Figure 1; file "
+        "`docs/diagrams/png/30-handin-data-flow-v3.png`). Public sources are pulled into `Data/raw` as received. "
         "`Data/clean` parses and fixes them, and resolves drug identity **once**, in `clean_drug_identity`. "
         "`Data/curated` holds one dataset per object type and one per many-to-many link. The Ontology reads "
         "the curated datasets. The Workshop app reads the Ontology and writes triage decisions back to it.")
@@ -276,33 +278,33 @@ def build(r):
          "`subject_key`", "{{n:app.triage_decisions}}", "**on**"),
     ], widths=[1.3, 1.9, 1.7, 1.4, 0.75, 0.6])
     r.p("Notes: Product count is recorded in the ontology README and diagram 31 but was not captured into "
-        "`numbers.json`, so it is not quoted here. Labeled Reaction covers only the AI pilot "
-        "({{n:ai.pilot_labels}} labels, {{n:ai.sections}} sections). Triage Decision count is the decisions "
+        "`numbers.json`, so it is not quoted here. Labeled Reaction covers only the labels the AI reads "
+        "({{n:ai.pilot_labels}} labels: 2 oxycodone + 3 semaglutide, {{n:ai.sections}} sections; D041 v2). Triage Decision count is the decisions "
         "present at the baseline gate (two test decisions).", "small")
 
     r.h("Why each grain")
     r.table(["Object type", "One object is", "Why this grain (and not another)", "Source"], [
         ("Drug", "one active ingredient (RxNorm ingredient RxCUI)",
          "Side-effect counts belong to the ingredient: FAERS reports name products loosely, and the officer thinks "
-         "in ingredients. The formulary is an explicit list of ingredient IDs.", "D018, D027 (proposed)"),
+         "in ingredients. The formulary is an explicit list of ingredient IDs.", "D018, D027"),
         ("Product", "one FDA application (NDA / ANDA / BLA number)",
          "Labels and recalls belong to products, not ingredients: an injection and a tablet have different labels. "
-         "FAERS bulk files carry the application number, so this is the finest key FAERS can reach.", "D027 (proposed), D039 G2"),
+         "FAERS bulk files carry the application number, so this is the finest key FAERS can reach.", "D027, D039 G2"),
         ("Label", "one version of one label (setid + version)",
          "A label changes over time; a flag must name the exact version that was searched.", "D019, A010"),
         ("Recall", "one FDA enforcement record",
          "The recall number is the FDA's own ID; the officer can quote it.", "A010"),
         ("Labeled Reaction", "one reaction the AI found in one label section, with its exact quote",
-         "Keeps the AI output inspectable item by item, with the quote that grounds it.", "D041"),
+         "Keeps the AI output inspectable item by item, with the quote that grounds it.", "D041 v2"),
         ("AE Stat", "one drug × reaction count table for one FAERS window and rule version",
          "Holds the 2×2 numbers (a, b, c, d), PRR, confidence interval and χ² for every pair, flagged or not.", "D042"),
         ("Signal", "one drug × reaction that meets the Evans rule and is not found in the label",
          "The unit the officer reviews. The key includes the rule version, so a new rule gives new signals instead "
          "of silently changing old ones.", "D042"),
         ("Change Event", "one dated change to a signal, recall or label",
-         "Answers question 3 as a list of facts with dates, not a guess.", "D045 (proposed)"),
+         "Answers question 3 as a list of facts with dates, not a guess.", "D045"),
         ("Source Status", "one public source", "Shows the as-of date of each source; they update on different clocks.",
-         "D045 (proposed)"),
+         "D045"),
         ("Triage Decision", "one decision by one person at one time",
          "Decisions are history: never overwritten, so they are separate objects (chapter 5).", "D040, D042"),
     ], widths=[1.1, 1.8, 3.6, 0.9])
@@ -322,11 +324,11 @@ def build(r):
         ("If it fails", "A type with two rows per key would fail its build: the key check stops it first."),
     ], status="TESTED")
 
-    landscape_figure(r, PNG + "31-handin-ontology-v1.png",
-                     "The Ontology as built: 10 MSSM object types with keys and row counts, every link with its "
-                     "cardinality, the create-only Action, and the open issue (duplicate Signal → Drug link). The "
-                     "Product count printed in the diagram comes from the README; it was not captured at the gate.",
-                     "docs/diagrams/png/31-handin-ontology-v1.png · draw.io copy docs/diagrams/drawio/31-handin-ontology-v1.drawio")
+    landscape_figure(r, PNG + "31-handin-ontology-v2.png",
+                     "The Ontology as built (v2, 6 Nov): 10 MSSM object types with keys and row counts, the "
+                     "{{n:ontology.link_types_mssm}} link types with their cardinality, and the create-only Action. "
+                     "The Product count printed in the diagram comes from the README; it was not captured at the gate.",
+                     "docs/diagrams/png/31-handin-ontology-v2.png · draw.io copy docs/diagrams/drawio/31-handin-ontology-v2.drawio")
 
     # ------------------------------------------------------------------ 04 links
     r.chapter("The link types")
@@ -351,7 +353,6 @@ def build(r):
         ("Signal → Drug", "many : 1", "foreign key `ingredient_rxcui`", "The drug of the signal."),
         ("Triage Decision → Signal", "many : 1", "foreign key `subject_key`",
          "Every decision taken on that signal, oldest to newest."),
-        ("Signal → Drug (duplicate)", "many : 1", "foreign key `ingredient_rxcui`", "A mistake; see the warning below."),
     ], widths=[1.6, 1.1, 1.9, 2.6])
 
     r.h("Two design choices worth explaining")
@@ -370,18 +371,18 @@ def build(r):
         "screen. That is simpler, but it is a gap: a Change Event → Drug link would let the officer jump from "
         "a change to the drug's other objects (chapter 7).")
 
-    r.warning(["**An honest mistake: the duplicate Signal → Drug link.** On 5 November, during step 11, a second "
-               "Signal → Drug link type (`drugOfSignal` / `signalsOfDrug`) was created without first checking "
-               "the ontology README. One already existed.",
-               "Nothing uses the duplicate. You can see it in Object Explorer (Figure 4, chapter 6): the NAION signal lists "
-               "both *Drug of signal* and *MSSM Drug*. Deleting it is one click in Ontology Manager. We left it "
-               "for the owner to decide, and recorded the lesson: check the README before creating a link type "
-               "(DECISIONS learnings, 2026-11-05)."],
-              title="Open item")
+    r.note(["**History: a duplicate Signal → Drug link, now deleted.** On 5 November, during step 11, a second "
+            "Signal → Drug link type (`drugOfSignal` / `signalsOfDrug`) was created without first checking "
+            "the ontology README. One already existed. It was deleted on 6 Nov after checking nothing used it: no "
+            "Workshop variable used it, and its usage log showed one Object Explorer read. Ontology Manager only "
+            "warns that apps *may* break; it does not list them, so that check was done by hand (DECISIONS "
+            "learnings, 2026-11-05 and 2026-11-06). Lesson: check the README before creating a link type."],
+           title="A mistake, fixed")
     r.gate("Links", [
         ("Required evidence", "Links do not multiply records; counts reached through a link equal source counts."),
         ("Result", "Met at the step 6 gate: oxycodone reached the same number of products and recalls through "
-                   "the links as in the source (A010) [[OBSERVED]]. One duplicate link type exists and is unused."),
+                   "the links as in the source (A010) [[OBSERVED]]. The duplicate link type was deleted on 6 Nov; "
+                   "{{n:ontology.link_types_mssm}} MSSM link types remain."),
         ("If it fails", "A wrong many-to-many join would show a drug with more recalls than the FDA lists: "
                         "compare link counts with source counts after every scope change."),
     ], status="TESTED")
@@ -469,6 +470,10 @@ def build(r):
          "The exact label version searched for each product: Ozempic v20, Wegovy v19, oral Ozempic v14 "
          "({{n:app.labels_searched_naion}} labels). Page 1 shows them in the panel *Reference labels searched*, "
          "walking the same links.", "[[OBSERVED]]"),
+        ("5b", "→ **MSSM Labeled Reactions** (Labeled Reaction → Label)",
+         "What the AI read in those {{n:app.labels_read_by_ai_naion}} labels, each with its word-for-word quote "
+         "(page 1 table *What the AI read in these labels*). Diabetic retinopathy is there; no optic-nerve or "
+         "NAION term is.", "[[OBSERVED]]"),
         ("6", "→ DailyMed", "The setid opens the label on DailyMed; the version number says which one.",
          "[[OBSERVED]]"),
         ("7", "→ FAERS case ids", "`clean_faers_drug_reaction` (SQL by drug and reaction) gives the report ids "
@@ -476,10 +481,11 @@ def build(r):
     ], widths=[0.35, 2.2, 3.6, 0.9])
     crop_figure(r, SCREENS + "hood-object-explorer-naion-links.jpg", [(0.26, 0.19, 1, 0.45)],
                 "Object Explorer (cropped), NAION signal, Links tab: MSSM AE Stat (1) and MSSM Drug (1). The extra row "
-                "'Drug of signal' is the duplicate link type from chapter 4.",
+                "'Drug of signal' is the duplicate link type from chapter 4, deleted on 6 Nov after this screenshot.",
                 "docs/11-handin/screens/hood-object-explorer-naion-links.jpg (Foundry, 2026-11-05)")
     r.p("**What the trace proves.** NAION is not a wording miss. It was not found in the 3 reference labels by "
-        "the exact-term and synonym checks; the AI pilot has not read semaglutide labels, so it played no part. "
+        "the exact-term and synonym checks, and the AI, which read all 3, found diabetic-retinopathy terms but "
+        "no optic-nerve or NAION term. "
         "A wider look at all 36 safety sections of every semaglutide label in DailyMed found no mention either "
         "(A014; DECISIONS learnings, 2026-11-05) [[OBSERVED]]. So it is a *not in label* signal in our data, and "
         "outside our data a *known positive*, not a discovery (EMA PRAC, 6 Jun 2025; WHO alert, 27 Jun 2025; "
@@ -490,15 +496,23 @@ def build(r):
     r.how_we_know(["At the baseline gate, five ranked signals were drawn at random (seed recorded) and re-derived "
                    "by hand: the count *a* recounted from FAERS rows, and the term searched in every safety section "
                    "of the drug's reference labels. All five matched (baseline-gate.md) [[OBSERVED]]. The click path above is written there for a reviewer to repeat."])
-    r.warning("A *not in label* signal has no label quote (there is nothing to quote). What the officer gets "
-              "instead is the list of label versions searched: page 1 now lists the reference labels with DailyMed "
-              "links, by walking Signal → Drug → Products → Reference Label. There is still no dedicated "
-              "Signal → Label link type (item 2 in chapter 7).", title="Watch out")
+    crop_figure(r, SCREENS + "app-1e-ai-quotes-panel-naion.jpg", [(0.42, 0.53, 1, 1)],
+                "Page 1, NAION selected, right column scrolled down (cropped): *Reference labels searched* (3 labels "
+                "with DailyMed links) and, below it, *What the AI read in these labels*: reaction, section, the quote "
+                "word for word, and the label key. For semaglutide the table has {{n:app.ai_quotes_panel_rows_naion}} "
+                "rows; none is an optic-nerve term.",
+                "docs/11-handin/screens/app-1e-ai-quotes-panel-naion.jpg (Workshop {{n:app.workshop_version|raw}}, 2026-11-06)",
+                max_height=300)
+    r.warning("A *not in label* signal has no matching label quote (there is nothing to match). What the officer "
+              "gets instead is the list of label versions searched, with DailyMed links, and what the AI read in "
+              "them, by walking Signal → Drug → Products → Reference Label → Labeled Reactions. There is still no "
+              "dedicated Signal → Label link type (item 1 in chapter 7).", title="Watch out")
     r.gate("Trace to source", [
         ("Required evidence", "From a flag on screen, reach the FAERS rows and the exact label version by following "
                               "links, with no step that needs a developer."),
-        ("Result", "Met for NAION and for five random signals. The labels searched are one click away on page 1 "
-                   "(panel *Reference labels searched*), through existing links."),
+        ("Result", "Met for NAION and for five random signals. The labels searched and the AI's quotes from them "
+                   "are on page 1 (panels *Reference labels searched* and *What the AI read in these labels*), "
+                   "through existing links."),
         ("If it fails", "Any flag that cannot be traced is noise to the officer: fix the link, do not hide the flag."),
     ], status="TESTED")
 
@@ -507,26 +521,26 @@ def build(r):
     r.p("**The brief asks that another engineer could extend this without asking. Here is the list we would "
         "hand them, in order, with the reason for each.**")
     r.table(["#", "Add or fix", "Why", "Effort guess"], [
-        ("1", "Delete the duplicate Signal → Drug link type", "Unused; confuses Object Explorer.", "minutes"),
-        ("2", "Optional: a dedicated Signal → searched Labels link type (join dataset written by `ontology_signals.py`)",
+        ("1", "Optional: a dedicated Signal → searched Labels link type (join dataset written by `ontology_signals.py`)",
          "Page 1 already shows the labels searched through existing links; a dedicated link would make the "
          "trace one hop in Object Explorer too.", "half a day"),
-        ("3", "Idempotency token on the triage Action", "Stops a double click from creating two decisions "
+        ("2", "Idempotency token on the triage Action", "Stops a double click from creating two decisions "
                                                         "(project conventions, section 6 on Actions; open since A010).", "hours"),
-        ("4", "Link Change Event → Drug (and → Signal / Recall / Label by key)",
+        ("3", "Link Change Event → Drug (and → Signal / Recall / Label by key)",
          "Today the change feed is filtered by drug name; a link lets the officer jump to the changed object.",
          "half a day"),
-        ("5", "Object type for `monitoring_checks` (needs a key column)",
-         "Enables a Health page in the app (R04; D046, proposed).", "half a day"),
-        ("6", "Triage on recalls, not only signals", "The Action already has a Subject Type; a Triage Decision → "
+        ("4", "Object type for `monitoring_checks` (needs a key column)",
+         "Enables a Health page in the app (R04; D046).", "half a day"),
+        ("5", "Triage on recalls, not only signals", "The Action already has a Subject Type; a Triage Decision → "
                                                      "Recall link would make it usable.", "hours"),
-        ("7", "A per-user 'last reviewed' marker", "Turns the date filter on page 3 into 'since my last review' "
-                                                   "automatically (an alternative named in D045, proposed).", "a day"),
-        ("8", "Object descriptions, edit history on Triage Decision, move the Reference Label link into "
+        ("6", "A per-user 'last reviewed' marker", "Turns the date filter on page 3 into 'since my last review' "
+                                                   "automatically (an alternative named in D045).", "a day"),
+        ("7", "Object descriptions, edit history on Triage Decision, move the Reference Label link into "
               "`Ontology/Links`, promote types from Experimental", "Housekeeping that a production owner expects "
                                                                   "(A010 known gaps).", "hours"),
-        ("9", "Widen Labeled Reaction beyond the {{n:ai.pilot_labels}} pilot labels",
-         "Only after a pharmacist checks the answer key (D041; scope decision D031 v5).", "days, mostly review"),
+        ("8", "Widen Labeled Reaction to the other drugs' reference labels (today {{n:ai.pilot_labels}} labels: "
+              "oxycodone and semaglutide)",
+         "Only after a pharmacist checks the answer key (D041 v2; scope decision D031 v5).", "days, mostly review"),
     ], widths=[0.3, 2.6, 3, 1])
     r.h("How to add an object type without asking anyone")
     r.bullets([
@@ -534,13 +548,13 @@ def build(r):
         "Create the type in Ontology Manager with the `MSSM` prefix, a readable title and a description.",
         "Many-to-many relationships: add a join dataset. Many-to-one: a foreign-key column on the many side.",
         "Add a row to the tables in `foundry/ontology/README.md` **before** creating anything (the lesson of the "
-        "duplicate link).",
+        "deleted duplicate link).",
         "Prove it: object count = dataset rows, a link count equals the source count, and a forced rebuild keeps "
         "every triage decision.",
     ], numbered=True)
     r.gate("Ready to extend", [
         ("Required evidence", "A written record of every type, link and Action, and a repeatable test for each."),
-        ("Result", "Met: `foundry/ontology/README.md`, this report and diagram 31 (with an editable draw.io copy)."),
+        ("Result", "Met: `foundry/ontology/README.md`, this report and diagram 31 v2 (with an editable draw.io copy)."),
         ("If it fails", "If the README and Foundry disagree, Foundry wins: update the README the same day."),
     ], status="TESTED")
 
@@ -548,7 +562,9 @@ def build(r):
     r.h("Figures quoted from project records (not in numbers.json)")
     r.table(["Figure", "Source"], [
         ("MSSM Signal has 25 properties", "screens/README.md (Figure 1)"),
-        ("NAION reference labels: Ozempic v20, Wegovy v19, oral Ozempic v14", "screens/README.md (app-1c); diagram 32 v2"),
+        ("NAION reference labels: Ozempic v20, Wegovy v19, oral Ozempic v14", "screens/README.md (app-1c); diagram 32 v3"),
+        ("AI found diabetic-retinopathy terms, no optic-nerve term (semaglutide labels)", "A019; eval/ai-eval-v1.md"),
+        ("Duplicate link deleted 6 Nov; usage log showed one Object Explorer read", "foundry/ontology/README.md; DECISIONS learning 2026-11-06"),
         ("NAION: 36 semaglutide safety sections, none mention it", "A014; DECISIONS learnings, 2026-11-05"),
         ("NAION spread over about 10 optic terms", "DQ41, data-issues register"),
         ("Five random ranked signals traced, all matched", "docs/11-handin/baseline-gate.md"),

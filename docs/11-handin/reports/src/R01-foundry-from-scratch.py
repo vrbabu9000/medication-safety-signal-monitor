@@ -15,8 +15,8 @@ META = {
     "title": "Foundry from scratch",
     "short": "Foundry from scratch",
     "subtitle": "a primer on Palantir Foundry, taught through one real project",
-    "version": "1.1",
-    "date": "5 November 2026",
+    "version": "1.2",
+    "date": "6 November 2026",
 }
 
 SCREENS = "docs/11-handin/screens/"
@@ -124,8 +124,8 @@ def click(r, steps):
     r.bullets(steps, numbered=True)
 
 
-# Figures from the NAION statistics row that are not in numbers.json: quoted from diagram 32 v2
-# (docs/diagrams/src/32-handin-signal-pipeline-v2.mmd, box B1), which prints the ontology_ae_stats row.
+# Figures from the NAION statistics row that are not in numbers.json: quoted from diagram 32 v3
+# (docs/diagrams/src/32-handin-signal-pipeline-v3.mmd, box B1; unchanged since v2), which prints the ontology_ae_stats row.
 NAION_C = 128        # other drugs + NAION (diagram 32)
 NAION_D = 763308     # other drugs, other reactions (diagram 32)
 
@@ -197,9 +197,11 @@ def build(r):
             "the **last 30 days**, not since yesterday. On page 3 she sets the date range to *since my last review*.",
             "**Only the project owner can triage today.** The *Triage this signal* form is limited to the owner's "
             "account. Giving her role that permission is a production step.",
-            "**The AI quote is not on her screen.** The AI read only {{n:ai.pilot_labels}} oxycodone pilot labels. "
-            "For the top signal (semaglutide × NAION) it read 0 labels, so *not in label* there comes from the "
-            "exact-text and synonym checks alone. NAION is a *known positive*, not a discovery: EMA PRAC (6 Jun "
+            "**The AI's quotes are on her screen.** The AI reads {{n:ai.pilot_labels}} labels: 2 oxycodone and, "
+            "since 6 Nov (D041 v2), the {{n:app.labels_read_by_ai_naion}} semaglutide labels behind the top signal "
+            "(semaglutide × NAION). Page 1 shows what it quoted. It found diabetic-retinopathy terms and no "
+            "optic-nerve term, so it agrees with the exact-text and synonym checks: *not in label*. NAION is a "
+            "*known positive*, not a discovery: EMA PRAC (6 Jun "
             "2025) and a WHO alert (27 Jun 2025) named it, and our 3 US labels do not mention it (DECISIONS "
             "learning 2026-11-05)."],
           title="What this means for Dana (the safety officer)")
@@ -246,8 +248,8 @@ def build(r):
         f"({NAION_C:,} ÷ {NAION_C + NAION_D:,}) = {prr_calc:.1f}. In words: {a / nd:.1%} of semaglutide reports "
         f"mention NAION, against {NAION_C / (NAION_C + NAION_D):.3%} for all other drugs, so NAION is reported "
         "about {{n:signals.naion.prr}} times more often with semaglutide. a and a + b are in `numbers.json`; c "
-        "and d are quoted from diagram 32 v2, which prints the `ontology_ae_stats` row [[DERIVED]].")
-    r.p("The **Evans rule** (D006, proposed) is the screening test: at least 3 reports (a ≥ 3), PRR at least 2 and "
+        "and d are quoted from diagram 32 v3, which prints the `ontology_ae_stats` row [[DERIVED]].")
+    r.p("The **Evans rule** (D006) is the screening test: at least 3 reports (a ≥ 3), PRR at least 2 and "
         "chi-squared (a test that the excess is not just noise in the counts) at least 4. NAION passes easily: "
         "chi-squared {{n:signals.naion.chi2_yates|,.1f}}.")
     r.h("Signal and ranked: one meaning each", 3)
@@ -275,8 +277,9 @@ def build(r):
         "text, but every claim can be checked there.")
     r.table(["Code", "What it is", "Where it lives"], [
         ("**D###** (D006, D016 v3)", "A decision: what we chose, why, and the alternative we rejected. A changed "
-                                    "decision gets a new version (v2, v3), never an edit. D001 to D048; some are "
-                                    "still *proposed*: 12 of them, D006, D015, D025 to D029, D037, D045 to D048", "`docs/06-decisions/DECISIONS.md`"),
+                                    "decision gets a new version (v2, v3), never an edit. D001 to D048; the last "
+                                    "12 open ones (D006, D015, D025 to D029, D037, D045 to D048) were accepted in one "
+                                    "batch on 6 Nov 2026", "`docs/06-decisions/DECISIONS.md`"),
         ("**A###** (A010)", "An approach: something we tried, with its result and verdict (keep, drop, park)",
          "`docs/05-approaches/`"),
         ("**DQ##** (DQ34)", "A data issue found in a public source, and how we handled it", "`docs/07-data-quality/data-issues-register.md`"),
@@ -438,12 +441,12 @@ def build(r):
     r.how_we_know("The baseline gate rebuilt the whole chain from the DailyMed pull to monitoring, in order, and "
                   "every count matched the earlier values. The change feed found {{n:changes.snapshot_diff_after_rebuild}} "
                   "changes between the two builds, which is right because the data was the same.")
-    landscape_figure(r, PNG + "30-handin-data-flow-v2.png",
-                     "Our data flow as built (v2, O3 measured): 4 public sources → `Data/raw` → `Data/clean` (drug "
+    landscape_figure(r, PNG + "30-handin-data-flow-v3.png",
+                     "Our data flow as built (v3, 6 Nov: the AI reads 5 labels, 745 / 745 quotes grounded): 4 public sources → `Data/raw` → `Data/clean` (drug "
                      "identity resolved once in `clean_drug_identity`) → `Data/curated` → Ontology → Workshop. "
                      "Dashed borders are incremental or cached steps. The product count printed in the identity box "
                      "comes from the README, not from `numbers.json`.",
-                     "docs/diagrams/png/30-handin-data-flow-v2.png (Mermaid source docs/diagrams/src/30-handin-data-flow-v2.mmd)")
+                     "docs/diagrams/png/30-handin-data-flow-v3.png (Mermaid source docs/diagrams/src/30-handin-data-flow-v3.mmd)")
 
     # ------------------------------------------------------------------ 08 sources and egress
     r.chapter("External sources and egress")
@@ -513,9 +516,9 @@ def build(r):
                 "Experimental, index status Indexed, edits disabled (only Triage Decision allows edits). Top right: "
                 "the branch selector shows *Main*.",
                 "docs/11-handin/screens/hood-ontology-manager-signal.jpg (Foundry, 2026-11-05)", max_height=260)
-    r.warning("A second Signal → Drug link type was created by mistake on 2026-11-05, before checking the record. "
-              "Nothing uses it. Deleting it is the owner's call, so it is still there and is marked on diagram 31 (R03).",
-              title="A mistake left visible")
+    r.note("History: a second Signal → Drug link type was created by mistake on 2026-11-05. It was deleted on "
+           "6 Nov after checking nothing used it (no Workshop variable; one Object Explorer read in its usage log). "
+           "The Ontology now has {{n:ontology.link_types_mssm}} MSSM link types.", title="A mistake, fixed")
     click(r, ["**Ontology Manager** → search `MSSM` → open an object type → *Properties*, *Datasources*, *Link types*.",
               "Number display (decimals) is set once on the property (*Display → Numeric formatting*); every app uses it.",
               "Action types → *Create MSSM Triage Decision*. Its form preview here is a **test run only** and saves nothing."])
@@ -530,7 +533,8 @@ def build(r):
         "rule by hand.")
     crop_figure(r, SCREENS + "hood-object-explorer-naion-links.jpg", [(0.24, 0.17, 1, 0.45)],
                 "Object Explorer (cropped): search for *Semaglutide · Optic ischaemic neuropathy*, the MSSM Signal "
-                "selected, Links tab open: Drug of signal (the duplicate link), MSSM AE Stat, MSSM Drug.",
+                "selected, Links tab open: Drug of signal (a duplicate link type, deleted on 6 Nov after checking nothing "
+                "used it), MSSM AE Stat, MSSM Drug.",
                 "docs/11-handin/screens/hood-object-explorer-naion-links.jpg (Foundry, 2026-11-05)")
     r.p("The trace path we use [[OBSERVED]]:")
     r.bullets(["Search the signal name, e.g. *Semaglutide · Optic ischaemic neuropathy* (NAION).",
@@ -569,6 +573,8 @@ def build(r):
         ("Widget: Property list", "The full signal record: 22 of the 25 signal properties in reading order with "
                                   "plain labels (foundry/ontology/README.md)"),
         ("Widget: Button group", "*Triage this signal* runs the Action"),
+        ("Widget: Object table (AI quotes)", "*What the AI read in these labels* on page 1 ({{n:app.workshop_version|raw}}): "
+                                             "reaction, section, word-for-word quote, label key for the selected drug's labels"),
         ("Variable: object set", "*Ranked signals* = MSSM Signal where Is Ranked = true"),
         ("Variable: filtered object set", "*Ranked signals for chosen drugs* = *Ranked signals* + the drug filter"),
         ("Variable: object property", "*Selected signal key*, *Selected evaluation id* from the table's active row"),
@@ -608,25 +614,27 @@ def build(r):
         ("Check it", "Code checks that every quote the model returns is found word for word in the section text"),
         ("Cache it", "`@incremental`: the cache key is label + version + section + text hash + prompt, parser and model version"),
     ], widths=[120, 384])
-    r.p("Results on the pilot ({{n:ai.pilot_labels}} oxycodone labels, {{n:ai.sections}} sections): {{n:ai.reactions}} "
-        "reactions extracted, {{n:ai.grounded}} quotes found word for word in all {{n:ai.sections}} sections. A "
+    r.p("Results ({{n:ai.pilot_labels}} labels: 2 oxycodone + 3 semaglutide, {{n:ai.sections}} sections; D041 v2): "
+        "{{n:ai.reactions}} reactions extracted, {{n:ai.grounded}} quotes found word for word. Adding the "
+        "semaglutide labels made {{n:ai.d041_v2.model_calls}} model calls (only the new sections). A forced "
         "rebuild with unchanged text made {{n:ai.model_calls_on_rebuild}} model calls ({{n:ai.from_cache_on_rebuild}} "
         "of {{n:ai.sections}} sections from cache) [[OBSERVED]].")
     r.p("**Accuracy is a separate, smaller test.** F1 (a score that balances missed and wrong items) was "
-        "{{n:ai.gold_f1}} against the proposed D015 target of {{n:ai.d015_target_f1}}, on a 35-item answer key: the Boxed Warning "
-        "and Contraindications sections of the 2 oxycodone labels. The model found " + r.n("ai.gold_recall_strict").replace("/", " of ") + " "
+        "{{n:ai.gold_f1}} against the D015 target of {{n:ai.d015_target_f1}}, on a 35-item answer key: the Boxed Warning "
+        "and Contraindications sections of the 2 oxycodone labels. The semaglutide sections are not scored. The model found " + r.n("ai.gold_recall_strict").replace("/", " of ") + " "
         "answer-key items [[DERIVED]] (`eval/ai-eval-v1.md`).")
     r.warning(["The answer key was written by Claude and frozen before the model ran; a pharmacist has not checked it yet.",
                "Grounding shows the model did not invent quotes. It does not show the item is the right one.",
-               "Today the AI does not change the signal list: text matching already covers its terms for the 2 pilot "
-               "labels. Its quote is not shown on the officer's screen yet, and it read no semaglutide label."],
+               "Today the AI does not change the signal list: text matching already covers its terms for all 5 "
+               "labels it reads. Its value is the quoted evidence, now shown on page 1."],
               title="What this does not show")
     click(r, ["**AIP** / Model Catalog: browse available models.",
               "Dataset `Data/curated/ai_label_section_extractions`: one row per section with status, tokens, latency and `from_cache`.",
               "Dataset `ontology_labeled_reactions` (object type MSSM Labeled Reaction): each reaction with its exact quote."])
     r.how_we_know("Optimization log O1: run 1 made {{n:optimization.O1.before_calls}} model calls "
                   "({{n:optimization.O1.before_tokens}} tokens); the rebuild made {{n:optimization.O1.after_calls}} "
-                  "with {{n:optimization.O1.after_tokens}} tokens. AI evaluation: `eval/ai-eval-v1.md`.")
+                  "with {{n:optimization.O1.after_tokens}} tokens. O1b repeated it at {{n:ai.sections}} sections: 0 calls, all from "
+                  "cache. AI evaluation: `eval/ai-eval-v1.md`.")
 
     # ------------------------------------------------------------------ 13 data health
     r.chapter("Data Health and monitoring", new_page=False)
@@ -717,7 +725,9 @@ def build(r):
     r.p("These come from measured project records, not from the baseline-gate capture. Each is cited where it "
         "appears.", style="small")
     r.table(["Figure", "Source"], [
-        ("NAION c = 128, d = 763,308 (other drugs)", "Diagram 32 v2 (prints the `ontology_ae_stats` row)"),
+        ("NAION c = 128, d = 763,308 (other drugs)", "Diagram 32 v3 (prints the `ontology_ae_stats` row)"),
+        ("Diabetic-retinopathy terms found, no optic-nerve term (semaglutide labels)", "A019; eval/ai-eval-v1.md"),
+        ("Duplicate link type deleted 6 Nov; one Object Explorer read in its usage log", "foundry/ontology/README.md; DECISIONS learning 2026-11-06"),
         ("9 top-level folders", "foundry/README.md (resource map); ACTIVITY-LOG"),
         ("930 raw recall rows = 900 distinct recalls (one row per recall per drug named)", "foundry/README.md raw table"),
         ("SQL console about 1.5 s; repository SQL panel no answer in 90 s", "DECISIONS learnings, 2026-11-04"),

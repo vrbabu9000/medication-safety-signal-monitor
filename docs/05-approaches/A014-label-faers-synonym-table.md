@@ -64,3 +64,19 @@ Leads came from the **top 12 ranked signals per drug**, i.e. what the officer se
 - High: Gastric hypomotility → "delays gastric emptying"; Electrocardiogram QT prolonged → "QT (interval) prolongation" (methadone); Euphoric mood → "euphoria".
 - Medium: Gastrointestinal hypomotility (whole gut vs stomach), 7 injection-site and 3 application-site terms → "… site reactions", Respiratory rate decreased, Coma scale abnormal / Unresponsive to stimuli → "coma", Consciousness fluctuating, Wheezing → "bronchospasm", Nasal oedema → "angioedema", Obstructive pancreatitis.
 - Foundry = local exactly; `label_check` = `text+ai_v1+syn_v2` (so evaluation ids changed again, as designed). Semaglutide now: NAION #1, Weight increased #2.
+
+## Update (2026-11-06): syn_v3 (proposed; local only)
+One row, found by the F01 literature review ([A018](A018-ai-literature-review.md), sample 04). v2 had rejected "allodynia" because the word itself is not in tirzepatide's labels. The Zepbound label (v40, Adverse Reactions) says **"dysesthesia"**. FDA listed dysaesthesia for GLP-1s (Potential Signals, Q1 2024).
+
+| | syn_v2 | syn_v3 |
+|---|---|---|
+| Table rows (high / medium / rejected) | 69 / 72 / 117 (258) | 69 / 73 / 116 (258) |
+| Signals | 1,952 | 1,952 |
+| Ranked | 1,073 | **1,072** (−1) |
+| Possibly in label | 108 | **109** |
+
+- New medium row: Allodynia → "dysesthesia" (overlapping sensory ideas, not the same; pharmacist call).
+- Only **Tirzepatide · Allodynia** (clinical #5, 55 reports) changed: now "possibly in label" with caution `possible_label_synonym`. Liraglutide · Allodynia changed in `ontology_ae_stats` too but was never a signal.
+- `label_check` = `text+ai_v1+syn_v3`, so all 1,952 evaluation ids change (as designed).
+- **Not in Foundry yet.** The hand-in numbers ([numbers.json](../11-handin/numbers.json)) stay at syn_v2 until you push this file and re-freeze.
+- Side finding: 27 ranked signals in other drugs swapped places because their chi² values tie (DQ43).

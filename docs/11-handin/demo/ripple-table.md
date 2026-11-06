@@ -1,12 +1,12 @@
 # Ripple table: change this here → this changes there
 
-_🎬 Demo Director view · 2026-11-05 (Phase D fix pass: every row re-checked against `foundry/pipelines/**`) · stage: **Test** · picture: [diagram 37 v2](../../diagrams/png/37-handin-ripple-v2.png) ([PDF](../../diagrams/pdf/37-handin-ripple-v2.pdf)) · newcomers start at [R00 "Start here"](../reports/pdf/R00-start-here.pdf)_
+_🎬 Demo Director view · 2026-11-05 (Phase D fix pass: every row re-checked against `foundry/pipelines/**`), refreshed 2026-11-06 for D041 v2 (the AI reads 5 labels, 21 sections) · stage: **Test** · picture: [diagram 37 v3](../../diagrams/png/37-handin-ripple-v3.png) ([PDF](../../diagrams/pdf/37-handin-ripple-v3.pdf)) · newcomers start at [R00 "Start here"](../reports/pdf/R00-start-here.pdf)_
 
 **TL;DR.** Nine edits a judge might ask about. For each one: where you make it, every downstream thing that moves, which builds to run in order, what the officer sees, and how to show it. **Nothing here is changed live in the demo.** The triage form is opened and cancelled (A5) unless the owner chooses Submit, and the page 3 date filter is the only live "change" (A7). Everything else is shown from evidence already on screen (the change feed, the dataset columns, the code constants), because most build times are not measured and a live rebuild could overrun the slot.
 
 **How to read the "how long" column.** Only times in [numbers.json](../numbers.json) or the [optimization log](../../08-optimization-log/optimization-log.md) are given. Everything else says *not measured*: time it in rehearsal pass 1 ([rehearsal-plan.md](rehearsal-plan.md)) before you promise it.
 
-**Common tail** (after any curated dataset changes): the Ontology re-indexes the object types backed by that dataset (time not measured; a brand-new object type needed about 1 minute, [foundry README](../../../foundry/README.md#how-a-change-reaches-foundry)). Then `ontology_changes.py` → `compute_changes` → `ontology_change_events` (+ `ontology_change_snapshot`), and `compute_source_status` → `ontology_source_status`. Then `monitoring.py` → `monitoring_checks` (appends 21 checks) and `monitoring_drift`. The Workshop (v0.9.0) reads the Ontology directly, so it needs no republish.
+**Common tail** (after any curated dataset changes): the Ontology re-indexes the object types backed by that dataset (time not measured; a brand-new object type needed about 1 minute, [foundry README](../../../foundry/README.md#how-a-change-reaches-foundry)). Then `ontology_changes.py` → `compute_changes` → `ontology_change_events` (+ `ontology_change_snapshot`), and `compute_source_status` → `ontology_source_status`. Then `monitoring.py` → `monitoring_checks` (appends 21 checks) and `monitoring_drift`. The Workshop (v0.10.0) reads the Ontology directly, so it needs no republish.
 
 **Key fact 1: what is in the evaluation id.** `evaluation_id` = hash of `signal_key`, `a_drug_reaction`, `prr`, `label_check`, `window`, `n_reference_labels`, `ai_labels_checked` ([ontology_signals.py](../../../foundry/pipelines/ontology/ontology_signals.py) l.204–206). **Not** in the hash: `bucket`, `is_ranked`, `caution`, the label version or label text, and the AI prompt or model version.
 
@@ -39,7 +39,7 @@ When a later build gives a signal a new `evaluation_id` (row 1, 3, 4, 5 or 8 bel
 | 5 | DailyMed publishes a new label version | new XML downloaded (others reused) → sections → label object → label check re-run → a signal may leave | `raw_dailymed_spl` → `clean_labels` → `clean_label_product_map` → `ontology_objects` → `ai_label_extraction` → signals → tail | Page 3: one build-dated "spl version: n → n+1" event; maybe a signal gone from page 1 | Only if `n_reference_labels` or `ai_labels_checked` changes (**label version and text are not hashed**) | Show the existing version_effective events on page 3 | DailyMed pull 1 m 23 s (O3); rest not measured |
 | 6 | openFDA changes a recall's status (Ongoing → Completed or Terminated) | `is_active` → active count → change events | `raw_openfda_enforcement` → `clean_recalls` → `ontology_objects` (`compute_recalls`, `compute_drugs`) → tail | Card 2 drops; page 2 (Is Active = Yes); page 3: one build-dated "status: Ongoing → …" event | n/a | Show the existing "terminated" events on page 3 | not measured |
 | 7 | Officer submits a triage decision | new MSSM Triage Decision object (Ontology edit) | **none** | Decision row on page 1; link in Object Explorer | stores the current id | **Only if the owner chooses Submit (A5)**; default Cancel | seconds (not timed) |
-| 8 | Prompt or model version (`PROMPT_VERSION`, `MODEL_ID`, `PARSER_VERSION` in `ai_label_extraction.py`) | cache key → every pilot section re-sent to Claude → new extractions + labeled reactions → monitoring cache rate | `ai_label_extraction` (Force) → signals → tail; then `check_gold.py` | Nothing on screen unless the AI terms change a label status | Only if `ai_labels_checked` changes (`label_check` keeps `ai_v1`; the prompt version is not hashed) | No: show the code + `from_cache` | 9 model calls; first run 41,704 + 29,072 tokens, job 2 m 43 s (O1) |
+| 8 | Prompt or model version (`PROMPT_VERSION`, `MODEL_ID`, `PARSER_VERSION` in `ai_label_extraction.py`) | cache key → all 21 AI sections (5 labels) re-sent to Claude → new extractions + labeled reactions → monitoring cache rate | `ai_label_extraction` (Force) → signals → tail; then `check_gold.py` | Nothing on screen unless the AI terms change a label status | Only if `ai_labels_checked` changes (`label_check` keeps `ai_v1`; the prompt version is not hashed) | No: show the code + `from_cache` | 21 model calls (not measured as one run; the 9 v1-pilot sections took 41,704 + 29,072 tokens, job 2 m 43 s, O1; the 12 semaglutide sections 44,869 + 26,226 tokens, O1b) |
 | 9 | A Workshop variable (e.g. *Changes last 30 days*) | that card / table only | **none** (save + publish module) | Card 3 number | n/a | Show the definition only; do not save | seconds |
 
 ---
@@ -79,7 +79,7 @@ When a later build gives a signal a new `evaluation_id` (row 1, 3, 4, 5 or 8 bel
 | **How long** | Clean FAERS: 32 s full, 88 s incremental (O2). Raw download, signals and the tail: not measured |
 | **Note** | FAERS moved to AEMS in March 2026 (DQ20). How future quarters will arrive is not verified |
 
-## 4 · An identity row: a drug is added (D018, D020; D027 proposed)
+## 4 · An identity row: a drug is added (D018, D020, D027)
 
 | | |
 |---|---|
@@ -90,12 +90,12 @@ When a later build gives a signal a new `evaluation_id` (row 1, 3, 4, 5 or 8 bel
 | **Show it** | Not live. Diagram 37; local test: suspect rows 79,270 → 77,677 → 79,270 when identity was changed and restored (diagram 37 source) |
 | **How long** | not measured (the DailyMed pull alone is 1 m 23 s after O3) |
 
-## 5 · DailyMed publishes a new label version (D019, D047 proposed)
+## 5 · DailyMed publishes a new label version (D019, D047)
 
 | | |
 |---|---|
 | **Edit** | none: it arrives from the source |
-| **Ripple** | `raw_dailymed_spl_index` lists the new (setid, version) → `raw_dailymed_spl_xml` downloads only that XML (the rest is reused, O3) → `clean_label_versions` / `clean_label_sections` → `clean_label_product_map` (reference label per product) → `ontology_label_labels`: new `label_key` = `setid|v<new>` → if the setid is one of the 2 `PILOT_SETIDS`: the version is part of the cache key, so **every** section of that label gets a new key and a model call, not only the changed ones (`ai_label_extraction.py` l.85–86, l.140) → `ontology_labeled_reactions` → `ontology_signals` re-runs the label check on the new text: a reaction now mentioned leaves the signal list → change events: one build-dated `snapshot_diff` event "spl version: n → n+1" for the setid. **No new source-dated "version_effective" event**, because the setid was already seen (key fact 3); a signal that leaves shows as `gone` |
+| **Ripple** | `raw_dailymed_spl_index` lists the new (setid, version) → `raw_dailymed_spl_xml` downloads only that XML (the rest is reused, O3) → `clean_label_versions` / `clean_label_sections` → `clean_label_product_map` (reference label per product) → `ontology_label_labels`: new `label_key` = `setid|v<new>` → if the setid is one of the 5 `PILOT_SETIDS` (2 oxycodone, 3 semaglutide): the version is part of the cache key, so **every** section of that label gets a new key and a model call, not only the changed ones (`ai_label_extraction.py` l.85–86, l.140) → `ontology_labeled_reactions` → `ontology_signals` re-runs the label check on the new text: a reaction now mentioned leaves the signal list → change events: one build-dated `snapshot_diff` event "spl version: n → n+1" for the setid. **No new source-dated "version_effective" event**, because the setid was already seen (key fact 3); a signal that leaves shows as `gone` |
 | **Builds** | `raw_dailymed_spl` → `clean_labels` → `clean_label_product_map` → `ontology_objects` → `ai_label_extraction` → `ontology_signal_signals` → tail |
 | **Officer sees** | Page 3: "spl version: n → n+1", dated the build day; maybe one signal fewer on page 1 |
 | **Show it** | **Live, no build:** page 3 → Entity type = label, Change = version_effective (1,231 such events, all from the first build: the 1,231 of 1,321 label versions that carry an effective date, `ontology_changes.py` l.90). Point at "liraglutide label version 11 effective, Oct 30" |
@@ -131,13 +131,13 @@ When a later build gives a signal a new `evaluation_id` (row 1, 3, 4, 5 or 8 bel
 | | |
 |---|---|
 | **Edit** | `ai_label_extraction.py`: `PROMPT_VERSION = "p2"` → `"p3"`, or `MODEL_ID`, or `PARSER_VERSION`. A new model also needs a new RID in `GenericCompletionLanguageModelInput(...)`, and the model must be **imported into the project** first (DECISIONS learning 2026-11-04) |
-| **Ripple** | `cache_key` = setid, version, section, content hash, parser, prompt, model → every key is new → all 9 pilot sections are sent to Claude again → `ai_label_section_extractions`: `from_cache = false`, new `called_at`, tokens → `ontology_labeled_reactions`: new keys (they end in `model.prompt`) → MSSM Labeled Reaction → `ontology_signals` re-reads AI terms (check 1) → `monitoring_checks`: `ai.cache_hit_rate` drops to 0 for that build (expected); `ai.grounded_rate` re-checked (fail < 0.95) |
+| **Ripple** | `cache_key` = setid, version, section, content hash, parser, prompt, model → every key is new → all 21 AI sections (5 labels) are sent to Claude again → `ai_label_section_extractions`: `from_cache = false`, new `called_at`, tokens → `ontology_labeled_reactions`: new keys (they end in `model.prompt`) → MSSM Labeled Reaction → `ontology_signals` re-reads AI terms (check 1) → `monitoring_checks`: `ai.cache_hit_rate` drops to 0 for that build (expected); `ai.grounded_rate` re-checked (fail < 0.95) |
 | **Accept only after** | `check_gold.py` re-scores against the frozen answer key (35 items, Boxed Warning + Contraindications of the 2 oxycodone labels, [eval](../../../eval/ai-eval-v1.md)) |
 | **Builds** | `ai_label_section_extractions` (dataset page, Build ▾ Force) → `ontology_signal_signals` → tail |
 | **Officer sees** | Usually nothing: today the AI terms do not change any label status (A012) |
 | **Honest note** | `label_check` says `ai_v1` whatever the prompt version, so a decision cannot tell which prompt's terms it saw |
 | **Show it** | H9: `PROMPT_VERSION`, `MODEL_ID` in code ([hood-code-ai-label-extraction.jpg](../screens/hood-code-ai-label-extraction.jpg)), `from_cache = true` in the SQL result |
-| **How long** | 9 model calls; first run 41,704 prompt + 29,072 completion tokens (numbers.json); job 2 m 43 s (O1) |
+| **How long** | 21 model calls (not measured as one run). Measured parts: the 9 v1-pilot sections, first run 41,704 prompt + 29,072 completion tokens, job 2 m 43 s (O1); the 12 semaglutide sections, 44,869 + 26,226 tokens (O1b; numbers.json `ai.d041_v2`) |
 
 ## 9 · A Workshop variable
 
@@ -145,6 +145,6 @@ When a later build gives a signal a new `evaluation_id` (row 1, 3, 4, 5 or 8 bel
 |---|---|
 | **Edit** | Workshop module **MSSM Safety Officer** → Edit mode → Variables: e.g. *Changes last 30 days* (Event Date from 30 days ago, relative to today), *Ranked signals* (Is Ranked = true), *Active recalls* (Is Active = true) |
 | **Ripple** | Only widgets reading that variable: card 3, or card 1 + page 1 table + drug filter, or card 2 + page 2. No data changes, no build |
-| **Publish** | Save, then publish a new module version (v0.9.0 today) |
+| **Publish** | Save, then publish a new module version (v0.10.0 today) |
 | **Show it** | Only if asked: open Edit mode and show the definition. **Do not save** a published module during the demo. The safe live version is the page 3 date filter (A7) |
 | **How long** | seconds |

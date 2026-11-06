@@ -16,8 +16,8 @@ META = {
     "title": "The application",
     "short": "Application",
     "subtitle": "the safety officer's morning in Workshop, click by click, and how it was built",
-    "version": "1.1",
-    "date": "5 November 2026",
+    "version": "1.2",
+    "date": "6 November 2026",
 }
 
 SHOT = "docs/11-handin/screens/"
@@ -82,7 +82,7 @@ def build(r):
         ("Reference label", "The official US label text, from DailyMed (the National Library of Medicine's label "
                             "library). One reference label version per product."),
         ("Signal", "A drug and reaction pair that is reported unusually often (the Evans rule: 3+ reports, PRR 2+, "
-                   "chi-squared 4+; D006, proposed) and is not found in the drug's reference labels, or only "
+                   "chi-squared 4+; D006) and is not found in the drug's reference labels, or only "
                    "possibly in label ({{n:signals.possibly_in_label}}: found only through a medium-band synonym)."),
         ("Ranked signal", "A signal in the review queue: not in label, a clinical reaction (not, for example, an "
                           "efficacy complaint), and not mostly from mass reports."),
@@ -90,12 +90,13 @@ def build(r):
     r.h("What she gets")
     r.p("A Workshop module called **MSSM Safety Officer**, published as {{n:app.workshop_version}}. It has "
         "{{n:app.pages}} pages, switched by tabs in the header:")
-    r.table(["Page", "Answers", "What she sees on 5 November 2026"], [
+    r.table(["Page", "Answers", "What she sees on 6 November 2026"], [
         ("0 · Morning brief", "All three, at a glance",
          "{{n:signals.ranked}} ranked signals · {{n:recalls.active}} active recalls · {{n:changes.last_30_days}} "
          "changes in the last 30 days, plus an as-of date for each source"),
         ("1 · Not in label", "Question 1", "Ranked signals per drug; the evidence record; the label versions that "
-                                           "were searched, with DailyMed links; the button *Triage this signal*"),
+                                           "were searched, with DailyMed links; what the AI read in those labels, "
+                                           "quoted word for word; the button *Triage this signal*"),
         ("2 · Recalls", "Question 2", "{{n:recalls.total}} recalls for our drugs, filterable to active; detail of "
                                       "the selected recall"),
         ("3 · What changed", "Question 3", "Dated changes to labels and recalls (and signals, after a data refresh); "
@@ -111,16 +112,17 @@ def build(r):
     r.key([
         "**Fast to open.** Measured by a script in View mode: the Morning brief is fully loaded in "
         "{{n:app.timing_s.morning_brief_load}} s (including Foundry start-up), and each page switch takes "
-        "{{n:app.timing_s.switch_what_changed}} to {{n:app.timing_s.switch_signals_with_labels}} s. Her reading "
-        "time was not measured.",
+        "{{n:app.timing_s.switch_what_changed}} to {{n:app.timing_s.switch_signals_with_labels}} s (timed on "
+        "v0.9.0; {{n:app.workshop_version|raw}} only adds one table below the fold on page 1, not re-timed). Her "
+        "reading time was not measured.",
         "**Card 3 is not 'since yesterday'.** It counts changes in the last 30 days. For 'since my last review' "
         "she sets the start date on page 3.",
         "**Signals move once a quarter.** New signals appear only when a new FAERS quarter arrives, and FAERS is "
         "about {{n:monitoring.faers_age_days}} days behind. Day to day, page 3 shows new label versions and recalls.",
         "**She can check 'not in label' herself.** For NAION she sees the {{n:app.labels_searched_naion}} label "
-        "versions that were searched and can open each in DailyMed. The AI read 0 semaglutide labels (its pilot "
-        "covered {{n:ai.pilot_labels}} oxycodone labels), so NAION is 'not in label' from the exact-text and "
-        "synonym checks only. AI quotes are not on her screen today. NAION is a *known positive*, not a "
+        "versions that were searched and can open each in DailyMed. Below them she sees what the AI read in "
+        "those labels, quoted word for word: diabetic retinopathy is there, no optic-nerve term is. So exact "
+        "text, synonyms and the AI agree NAION is 'not in label'. NAION is a *known positive*, not a "
         "discovery: EMA PRAC (6 Jun 2025) and a WHO alert (27 Jun 2025) named it, and our 3 US labels do not "
         "mention it (DECISIONS learning 2026-11-05).",
         "**She cannot triage yet.** Only the project owner can submit a Triage Decision today. Giving her role "
@@ -129,9 +131,10 @@ def build(r):
     r.pill_legend()
     r.gate("Summary", [
         ("Required evidence", "All three questions answered from one module; one decision written back and kept."),
-        ("Result", "Met on 5 November 2026 (baseline gate). Machine timing done (brief "
-                   "{{n:app.timing_s.morning_brief_load}} s, switches {{n:app.timing_s.switch_what_changed}} to "
-                   "{{n:app.timing_s.switch_signals_with_labels}} s). A human two-minute walk-through has not been run."),
+        ("Result", "Met on 5 November 2026 (baseline gate) and again on 6 November ({{n:app.workshop_version|raw}}). "
+                   "Machine timing done on v0.9.0 (brief {{n:app.timing_s.morning_brief_load}} s, switches "
+                   "{{n:app.timing_s.switch_what_changed}} to {{n:app.timing_s.switch_signals_with_labels}} s). A "
+                   "human two-minute walk-through has not been run."),
         ("If it fails", "If a question needs another tool, the app has not done its job: add it to a page."),
     ], status="TESTED")
 
@@ -163,13 +166,15 @@ def build(r):
                                                                      "drugs)', CI low, caution flags", "[[TESTED]]"),
         ("let her record a decision?", "Triage button, decision list under the signal (owner-only today)",
          "[[TESTED]]"),
+        ("show her what the AI read in the label?", "Page 1 table *What the AI read in these labels*: reaction, "
+         "section, word-for-word quote, label ({{n:app.workshop_version|raw}})", "[[TESTED]]"),
         ("warn her when the AI might be wrong?", "Not on screen yet. Measured: {{n:ai.grounded}} of "
-         "{{n:ai.reactions}} AI quotes found in the label text; monitoring checks it each build (D046, proposed)", "[[PLANNED]]"),
+         "{{n:ai.reactions}} AI quotes found in the label text; monitoring checks it each build (D046)", "[[PLANNED]]"),
     ], widths=[2.4, 3.4, 0.9])
     r.h("Her test, and where we stand")
     r.table(["Test (from our design canvas)", "Pass if", "Result"], [
         ("Morning in two minutes", "She answers all three questions in two minutes or less",
-         "Machine side: brief loads in {{n:app.timing_s.morning_brief_load}} s, page switches "
+         "Machine side (timed on v0.9.0): brief loads in {{n:app.timing_s.morning_brief_load}} s, page switches "
          "{{n:app.timing_s.switch_what_changed}} to {{n:app.timing_s.switch_signals_with_labels}} s [[OBSERVED]]. "
          "Human walk-through not run [[PLANNED]]"),
         ("Trust check", "Every flag reaches its source in two clicks or less",
@@ -216,11 +221,12 @@ def build(r):
     ], numbered=True)
 
     step(r, "Step 2 · Page 1, Not in label: pick a drug and read the evidence")
-    r.figure(SHOT + "app-1-not-in-label-naion.jpg",
+    r.figure(SHOT + "app-1d-naion-ai-read-3.jpg",
              "Page 1 with semaglutide's top signal selected: NAION (FAERS term 'Optic ischaemic neuropathy'). "
              "Left: the drug filter and the ranked signals. Right: the triage button, past decisions and the "
-             "signal record.",
-             source=SHOT + "app-1-not-in-label-naion.jpg (Workshop, 2026-11-05)", max_height=300)
+             "signal record, with *Labels also read by AI* = {{n:app.labels_read_by_ai_naion}} and evaluation id "
+             "{{n:signals.naion.evaluation_id_v2}}.",
+             source=SHOT + "app-1d-naion-ai-read-3.jpg (Workshop {{n:app.workshop_version|raw}}, 2026-11-06)", max_height=300)
     r.bullets([
         "Click the tab *1 · Not in label*.",
         "Click the pill *Ingredient Name* (the drug filter). It lists the drugs with the number of ranked signals "
@@ -230,7 +236,8 @@ def build(r):
         "Click the row. The right side, *Evidence and triage*, shows the signal record: {{n:signals.naion.a}} "
         "reports, PRR {{n:signals.naion.prr}} (reported about that many times more often than with other drugs), "
         "lower 95% bound {{n:signals.naion.prr_ci_low}}, label status *not_in_label*, *Reference labels searched* "
-        "{{n:app.labels_searched_naion}}, *Labels also read by AI* 0, and the label check method.",
+        "{{n:app.labels_searched_naion}}, *Labels also read by AI* {{n:app.labels_read_by_ai_naion}}, and the "
+        "label check method.",
     ], numbered=True)
 
     step(r, "Step 3 · Page 1: open the labels that were searched")
@@ -247,10 +254,25 @@ def build(r):
         "Click a DailyMed link. The exact label version opens on the DailyMed site. This is the trust rule on "
         "screen: the flag says 'not found in these three labels', and she can check it herself.",
     ], numbered=True)
-    r.note("How the panel finds the labels: it follows existing Ontology links from the selected signal, "
-           "Signal → Drug → Products → Reference Label (A016). There is no dedicated Signal → Label link type yet. "
-           "*Labels also read by AI* is 0 here because the AI pilot read only {{n:ai.pilot_labels}} oxycodone labels.",
-           title="Behind the panel")
+    r.bullets([
+        "Back in the app, keep scrolling the right side to the table *What the AI read in these labels (every "
+        "line is quoted word for word from the label)*. Columns: reaction, section, quote, label key "
+        "({{n:app.ai_quotes_panel_rows_naion}} rows for semaglutide).",
+        "Look for the eyes: the AI found diabetic-retinopathy terms, and no optic-nerve or NAION term. That "
+        "agrees with the flag: the label talks about the retina, not the optic nerve.",
+    ], numbered=True)
+    r.figure(SHOT + "app-1e-ai-quotes-panel-naion.jpg",
+             "Page 1, right side scrolled down: *Reference labels searched* (3 labels with DailyMed links) and, "
+             "below it, *What the AI read in these labels*: reaction · section · word-for-word quote · label key.",
+             source=SHOT + "app-1e-ai-quotes-panel-naion.jpg (Workshop {{n:app.workshop_version|raw}}, 2026-11-06)",
+             max_height=300)
+    r.note("How the panels find the labels: they follow existing Ontology links from the selected signal, "
+           "Signal → Drug → Products → Reference Label, and then Label → Labeled Reactions for the AI table "
+           "(A016, A019). There is no dedicated Signal → Label link type yet. *Labels also read by AI* is "
+           "{{n:app.labels_read_by_ai_naion}} here because the AI reads the 3 semaglutide labels since D041 v2 "
+           "(6 Nov). The AI table shows every reaction the AI found in those labels, not only the ones that match "
+           "a signal.",
+           title="Behind the panels")
 
     step(r, "Step 4 · Page 1: record a triage decision")
     r.figure(SHOT + "app-1b-triage-action-form.jpg",
@@ -295,7 +317,7 @@ def build(r):
         "Click the tab *3 · What changed*.",
         "Under *Event Date*, click the start-date box and pick the day of your last review (or a preset such as "
         "*Past month*). That is what 'since yesterday' means here: since *my* last look, because the sources do "
-        "not all update daily (D045, proposed).",
+        "not all update daily (D045).",
         "Check the count. With *Past month* the table holds {{n:changes.last_30_days}} events, 15 label versions "
         "and 11 recalls (`screens/README.md`): the same number as card 3 on the Morning brief.",
         "Narrow with the other filters: *Ingredient Name*, *Entity Type* (label, recall, signal) and *Change* "
@@ -308,9 +330,10 @@ def build(r):
         ("Result", "Met: tabs switch pages, the drug filter narrows page 1, the labels panel lists the searched "
                    "labels with working DailyMed links, recalls filter by linked drug, changes sort newest first, "
                    "the cards read {{n:signals.ranked}} · {{n:recalls.active}} · {{n:changes.last_30_days}} (A016). "
-                   "Times: brief {{n:app.timing_s.morning_brief_load}} s; switches {{n:app.timing_s.switch_recalls}}, "
-                   "{{n:app.timing_s.switch_what_changed}} and {{n:app.timing_s.switch_signals_with_labels}} s "
-                   "[[OBSERVED]]."),
+                   "Times (on v0.9.0): brief {{n:app.timing_s.morning_brief_load}} s; switches "
+                   "{{n:app.timing_s.switch_recalls}}, {{n:app.timing_s.switch_what_changed}} and "
+                   "{{n:app.timing_s.switch_signals_with_labels}} s [[OBSERVED]]. In {{n:app.workshop_version|raw}} "
+                   "the AI table lists the semaglutide quotes and the triage button keeps its height."),
         ("If it fails", "If a card and its page disagree, the card's object set and the page's object set have "
                         "drifted apart: they must start from the same set."),
     ], status="TESTED")
@@ -347,15 +370,18 @@ def build(r):
         ("PRR 95% CI low / high", "The range the PRR is likely in, given the counts. A low bound well above 1 means "
          "the excess is not a small-numbers accident. It does not rule out reporting bias.",
          "{{n:signals.naion.prr_ci_low}} / {{n:signals.naion.prr_ci_high}}"),
-        ("Chi² (Yates)", "How surprising the count is. Evans rule (D006, proposed): 3+ reports, PRR 2+, chi² 4+",
+        ("Chi² (Yates)", "How surprising the count is. Evans rule (D006): 3+ reports, PRR 2+, chi² 4+",
          "{{n:signals.naion.chi2_yates}}"),
         ("Label status", "not_in_label, possibly_in_label (found only through a medium synonym) or in_label",
          "not_in_label"),
         ("Reference labels searched", "How many reference label versions of this drug were searched; the panel "
          "below lists them", "{{n:app.labels_searched_naion}}"),
-        ("Labels also read by AI", "How many of those labels the AI pilot also read", "0"),
+        ("Labels also read by AI", "How many of those labels the AI also read (D041 v2)", "{{n:app.labels_read_by_ai_naion}}"),
         ("Label check method", "The rule versions in force (AI v1, text, synonyms v2); it does not say which "
-         "checks found or ran on this signal (for NAION the AI ran on 0 labels)", "text+ai_v1+syn_v2"),
+         "check found what on this signal", "text+ai_v1+syn_v2"),
+        ("Evaluation id", "A fingerprint of the numbers above; a triage decision stores it. It changed for every "
+         "semaglutide signal when the AI began reading their labels (no decision was on them)",
+         "{{n:signals.naion.evaluation_id_v2}}"),
         ("Bucket", "Only clinical is ranked; efficacy, product use, abuse and others are tagged (D016 v3). Reports "
                    "with 30+ drugs are set aside and counted separately (D023 v2)", "clinical"),
     ], widths=[2, 3.6, 1.4])
@@ -391,7 +417,8 @@ def build(r):
         ("Filter list", "Left side of pages 1 to 3", "Narrows the table by drug, active, class, date, type",
          "Set its input to the **unfiltered** object set, pick the properties to filter on (or a linked object's "
          "property, as for Drug on page 2) and the display (pills, or a list with counts and a histogram)"),
-        ("Object table", "Pages 0 to 3", "Lists signals, recalls, changes, sources, decisions, labels searched",
+        ("Object table", "Pages 0 to 3", "Lists signals, recalls, changes, sources, decisions, labels searched, "
+                                          "AI quotes",
          "Set the input variable, the columns and their order, the default sort, and the row height (use "
          "*Absolute*: *Flex* collapses in a crowded section, learning 2026-11-04)"),
         ("Property list", "Right side of pages 1 and 2", "Shows every field of the selected signal or recall",
@@ -418,6 +445,8 @@ def build(r):
         ("All changes → Changes for chosen filters", "MSSM Change Event ({{n:changes.total}}) → + the change filters",
          "Page 3 filter, then table"),
         ("Changes last 30 days", "All changes where Event Date is from 30 days ago, relative to today", "Card 3"),
+        ("AI reactions quoted from labels searched", "*Reference labels searched…* → MSSM Labeled Reaction "
+         "({{n:app.workshop_version|raw}})", "Page 1 AI table"),
     ], widths=[2.1, 2.9, 1.9])
     r.p("Source for both tables: `foundry/ontology/README.md` (Workshop module) and A016.", style="small")
 
@@ -487,14 +516,19 @@ def build(r):
         ("Step 11", "One page: question 1 only", "Morning brief plus one page per question",
          "All three questions, from one place", "A016"),
         ("Step 11", "No freshness anywhere", "'Data as of' table per source", "'Nothing changed' needs a date",
-         "A016, D045 (proposed)"),
+         "A016, D045"),
         ("Step 11", "Pull time blank for FAERS and RxNorm", "FAERS: 'quarterly file (no pull time)'; RxNorm: the "
                     "pull time", "A blank cell looks like a fault", "`ontology_changes.py` l.152, l.158"),
         ("Step 11", "Recall class as a code", "\"Class (I = most serious)\"", "No lookup needed", "A016"),
         ("Step 11", "'Since yesterday' undefined", "Start date on page 3 = since my last review",
-         "Sources are not daily", "D045 (proposed)"),
+         "Sources are not daily", "D045"),
         ("Step 11", "Record showed only how many labels were searched", "Panel *Reference labels searched* with "
                     "version, date, sections and DailyMed link", "\"Show me where it says that\"", "A016"),
+        ("6 Nov", "AI quotes only in Object Explorer; AI read 2 oxycodone labels", "Page 1 table *What the AI read "
+                  "in these labels* for the selected drug; AI also reads the 3 semaglutide labels "
+                  "({{n:app.workshop_version|raw}})", "\"What does the label say about the eyes?\"", "A019, D041 v2"),
+        ("6 Nov", "A fixed-height table squeezed the column; *Triage this signal* was cut off", "*Enable scrolling* "
+                  "on the Evidence and triage section", "The button must always be there", "Learning 2026-11-06"),
     ], widths=[0.7, 1.6, 2, 1.6, 0.9])
     r.p("The ranking itself also changed for her sake. Non-harm terms (efficacy complaints, product handling, "
         "procedures) moved out of the ranked queue into tagged buckets, and a reviewed synonym table removed "
@@ -504,7 +538,7 @@ def build(r):
         "[[OBSERVED]].")
     r.gate("Usability changes", [
         ("Required evidence", "Each change has a before, an after and a reason tied to the officer."),
-        ("Result", "Met for the ten changes above. None was tested with a real officer."),
+        ("Result", "Met for the twelve changes above. None was tested with a real officer."),
         ("If it fails", "If a change cannot be tied to one of her questions or the trust rule, revert it."),
     ], status="TESTED")
 
@@ -517,8 +551,8 @@ def build(r):
          "Her reading time is unmeasured", "Run it with the safety-officer persona, then a real officer"),
         ("Only the owner can submit a decision", "page 1", "The officer cannot use the write-back yet",
          "Grant the officer role on the Action"),
-        ("AI evidence not on screen", "page 1", "AI quotes are only in Object Explorer, and only for "
-         "{{n:ai.pilot_labels}} oxycodone labels", "Show AI quotes for labels that have them"),
+        ("AI quotes for two drugs only", "page 1", "The AI reads {{n:ai.pilot_labels}} labels (oxycodone and "
+         "semaglutide); for the other drugs the AI table is empty", "Widen the AI after a pharmacist checks the key"),
         ("Reviewer shows a user ID, not a name", "page 1 decisions", "Harder to read the history",
          "Show the user's display name"),
         ("No help text ('Matched to our products: 0', what the cards count)", "pages 0, 2",
@@ -542,8 +576,8 @@ def build(r):
         ("'Evidence changed since your decision' flag", "A decision made on old numbers should be re-looked at",
          "Compare the decision's evaluation id with the signal's current one (both are on screen today)",
          "[[PLANNED]]"),
-        ("AI quotes on page 1", "'Show me where it says that' for labels the AI read",
-         "A table of AI terms and quotes for the selected drug's labels; more labels read by the AI", "[[PLANNED]]"),
+        ("AI quotes for the other drugs", "'Show me where it says that' for every drug, not only oxycodone and "
+         "semaglutide", "The AI reads the other drugs' reference labels (after the pharmacist check)", "[[PLANNED]]"),
         ("Health page", "She (and IT) see a stale source or a failed check before trusting the numbers",
          "A key column and an object type for `monitoring_checks` ({{n:monitoring.checks_per_build}} checks per "
          "build)", "[[PLANNED]]"),
@@ -554,7 +588,7 @@ def build(r):
     r.gate("Ready for a pilot user", [
         ("Required evidence", "A real officer completes the morning routine unaided in two minutes and can trace "
                               "a flag to its source."),
-        ("Result", "Not yet: the module answers all three questions and the machine timings are fast (brief "
+        ("Result", "Not yet: the module answers all three questions and the machine timings are fast (v0.9.0: brief "
                    "{{n:app.timing_s.morning_brief_load}} s, switches {{n:app.timing_s.switch_what_changed}} to "
                    "{{n:app.timing_s.switch_signals_with_labels}} s), but the human timed test and the real-user "
                    "test are still to do, and she cannot submit a decision yet."),
@@ -575,8 +609,9 @@ def build(r):
         ("PRR 1 decimal, CI 2, chi² 1 (was 12 decimals)", "A012; foundry/ontology/README.md (Polish, v0.3)"),
         ("Decisions table row height Absolute 160 px; Flex collapses", "foundry/ontology/README.md; learning 2026-11-04"),
         ("About 10 clicks per column; about 60 clicks for 22 properties", "Learnings 2026-11-05 and 2026-11-04"),
-        ("Evans rule: 3+ reports, PRR 2+, chi² 4+", "D006 (proposed)"),
+        ("Evans rule: 3+ reports, PRR 2+, chi² 4+", "D006"),
         ("Mass reports: 30+ drugs per report", "D023 v2"),
-        ("Labels also read by AI: 0 (NAION)", "Screenshot app-1-not-in-label-naion.jpg; rubric-check"),
+        ("AI found diabetic-retinopathy terms, no optic-nerve term (NAION)", "A019; screenshot app-1e-ai-quotes-panel-naion.jpg"),
+        ("Triage button cut off by a fixed-height table; fixed with Enable scrolling", "DECISIONS learning 2026-11-06; A019"),
     ], widths=[300, 204])
     r.numbers_appendix()

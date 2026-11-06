@@ -1,0 +1,206 @@
+{
+ "id": "02-semaglutide-cyclic-vomiting",
+ "drug": "semaglutide",
+ "faers_pt": "Cyclic vomiting syndrome",
+ "event_terms": [
+  "cyclic vomiting",
+  "cyclical vomiting"
+ ],
+ "pubmed_v1": {
+  "hits": 1,
+  "pmids": [
+   "42481928"
+  ]
+ },
+ "europe_pmc": {
+  "query": "(semaglutide OR \"GLP-1\") AND (\"cyclic vomiting\" OR \"cyclical vomiting\")",
+  "hits": 70,
+  "preprints": 0,
+  "papers": [
+   {
+    "id": "42481928",
+    "source": "MED",
+    "year": "2026",
+    "title": "Safety Signals of GLP-1 Receptor Agonists: A Multi-Method Pharmacovigilance Analysis of FAERS (2018-2025) With Sensitivity-Stratified Prioritisation, Notoriety-Bias Assessment, and Cross-Database Vali",
+    "pubtype": [
+     "research-article",
+     "Journal Article"
+    ],
+    "open_access": false,
+    "retracted": false,
+    "drug_and_event_in_abstract": true,
+    "abstract": "BackgroundGLP-1 receptor agonists (GLP-1 RAs) are widely prescribed for type 2 diabetes and obesity, but their post-marketing safety profile-particularly psychiatric, vascular, neoplastic and rare ophthalmic events-remains incompletely characterised and is vulnerable to confounding by indication, secondary-suspect attribution and notoriety bias.MethodsWe analysed 32 quarterly FAERS files (2018Q1-2025Q4): 288408 unique GLP-1 RA reports versus 11 319 150 non-GLP-1 RA reports. Disproportionality used four methods (reporting odds ratio [ROR]; proportional reporting ratio [PRR]; Bayesian Confidence Propagation Neural Network information component, lower 95% bound [BCPNN IC025]; Multi-item Gamma Poisson Shrinker empirical Bayes lower 5th-percentile bound [MGPS EB05]; signal = ≥ 3 of 4). The top 30 ROR-ranked signals were stratified by primary-suspect (PS) sensitivity. Triangulation included active-comparator, intra-class psychiatric comparison, interrupted time-series assessment of reporting around the 2023 EMA announcement, Weber-effect evaluation with Cochran-Armitage trend testing, and external validation in JADER.ResultsOf 22 059 PT-class pairs, 544 met the ≥ 3-of-4 criterion. PS-stratification retained 21 of the top 30 signals and demoted 9 as secondary-suspect-driven (e.g., capillaritis ROR 18.6 → 0.27; heart sounds 84.3 → 0.55). PS-stable headline signals were dominated by gastrointestinal/hepatobiliary effects: cyclic vomiting syndrome (ROR 64.8; semaglutide-dominant), gall"
+   },
+   {
+    "id": "PMC13664990",
+    "source": "PMC",
+    "year": "2026",
+    "title": "Recognizing and Differentiating Area Postrema Syndrome Across NMOSD, MOGAD, and GFAP Astrocytopathy",
+    "pubtype": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": ""
+   },
+   {
+    "id": "39518332",
+    "source": "MED",
+    "year": "2024",
+    "title": "Role of Point-of-Care Gastric Ultrasound in Advancing Perioperative Fasting Guidelines.",
+    "pubtype": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Pulmonary aspiration in the perioperative period carries the risk of significant morbidity and mortality. As such, guidelines have been developed with the hopes of minimizing this risk by recommending fasting from solids and liquids over a specified amount of time. Point-of-care ultrasound has altered the landscape of perioperative medicine; specifically, gastric ultrasound plays a pivotal role in perioperative assessment. Further, the advent of glucagon-like-peptide-1 receptor agonists, the widespread use of cannabis, and Enhanced Recovery program carbohydrate beverage presents new challenges when attempting to standardize fasting guidelines. This review synthesizes the literature surrounding perioperative fasting guidelines specifically with regard to the use of point-of-care ultrasound in assessing for gastric contents and minimizing the risk of aspiration."
+   },
+   {
+    "id": "41953700",
+    "source": "MED",
+    "year": "2026",
+    "title": "Sex hormones and functional gastrointestinal disorders in menopausal women.",
+    "pubtype": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Functional gastrointestinal diseases (FGIDs)/disorders of gut-brain interaction (DGBI) that manifest during menopause are characterized by chronic recurrent gastrointestinal (GI) symptoms associated with fluctuations in sex hormones. Current research indicates that the regulatory influence of sex hormones on GI function is multifaceted, involving a complex endocrine regulatory network across multiple organs and systems. Various types of sex hormones exert both direct and indirect effects on GI function through their specific receptors located within the GI tract, the central nervous system, pancreatic islets, and thyroid tissue. This interplay contributes to the pathological and physiological mechanisms underlying the onset of menopausal FGIDs/DGBI. Simultaneously, these interactions create a complex pathological feedback loop with climacteric syndrome, depression/anxiety, and sleep disorders. In this study, we present a comprehensive narrative review detailing the molecular mechanisms by which sex hormones regulate GI function-both directly and indirectly-as well as examining the impact of clinical hormone replacement therapy on GI functionality. Our objective is to elucidate potential pathogenesis pathways for FGIDs/DGBI in menopausal women linked to changes in sex hormone levels, further clarify the relationship between hormonal fluctuations and GI function, and propose new therapeutic strategies for managing FGIDs/DGBI. Additionally, alterations in gut microbiota may play"
+   },
+   {
+    "id": "38477667",
+    "source": "MED",
+    "year": "2024",
+    "title": "The antiemetic actions of GIP receptor agonism.",
+    "pubtype": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": false,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Nausea and vomiting are primitive aspects of mammalian physiology and behavior that ensure survival. Unfortunately, both are ubiquitously present side effects of drug treatments for many chronic diseases with negative consequences on pharmacotherapy tolerance, quality of life, and prognosis. One of the most critical clinical examples is the profound emesis and nausea that occur in patients undergoing chemotherapy, which continue to be among the most distressing side effects, even with the use of modern antiemetic medications. Similarly, antiobesity/diabetes medications that target the glucagon-like peptide-1 system, despite their remarkable metabolic success, also cause nausea and vomiting in a significant number of patients. These side effects hinder the ability to administer higher dosages for optimal glycemic and weight management and represent the major reasons for treatment discontinuation. Our inability to effectively control these side effects highlights the need to anatomically, molecularly, and functionally characterize novel neural substrates that drive and inhibit nausea and emesis. Here, we discuss clinical and preclinical evidence that highlights the glucose-dependent insulinotropic peptide receptor system as a novel therapeutic central target for the management of nausea and emesis."
+   },
+   {
+    "id": "40979004",
+    "source": "MED",
+    "year": "2025",
+    "title": "Cannabinoid Hyperemesis Syndrome Treated With Fosaprepitant: A Case Report.",
+    "pubtype": [
+     "Journal Article",
+     "Case Reports",
+     "case-report"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Cannabinoid hyperemesis syndrome (CHS) is a condition in which users of marijuana experience symptoms of nausea and vomiting. Due to the nature of the condition, patients may ultimately be admitted to the hospital for complications such as weakness and fluid loss. The usual treatment options for nausea and vomiting include fluids and a combination of metoclopramide, ondansetron, promethazine, or prochlorperazine. We present a case where fosaprepitant was utilized for intractable nausea and vomiting when other treatment modalities failed for CHS."
+   },
+   {
+    "id": "40724523",
+    "source": "MED",
+    "year": "2025",
+    "title": "Refractory Nausea and Vomiting Due to Central Nervous System Injury: A Focused Review.",
+    "pubtype": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "The area postrema (AP) is a circumventricular organ (CVO) at the base of the fourth ventricle. It has a crucial role in regulating nausea and vomiting due to its unique blood-brain barrier (BBB)-permeability and extensive neural connectivity. Here, we present two cases of area postrema syndrome (APS), a rare condition of intractable nausea and vomiting resulting from direct AP injury. Our cases each occurred in the context of infratentorial neoplasms or their treatment. Using these cases as a framework, we review the literature on central emetic pathways and propose a treatment algorithm for managing refractory nausea and vomiting of central origin. We also highlight other targets beyond conventional serotonergic, dopaminergic, or histaminergic blockade and their roles in central hyperemesis. Our literature review suggests that APS is due to the disruption of the baseline inhibitory tone of outgoing AP signals. When other options fail, our algorithm culminates in the off-label use of combined serotonergic and neurokinin-1 blockade, which is otherwise used to manage chemotherapy-induced nausea and vomiting (CINV). We believe multimodal CNS receptor blockade is efficacious in APS because it addresses the underlying central neural dysregulation, rather than solely targeting peripheral emetic triggers."
+   },
+   {
+    "id": "39754724",
+    "source": "MED",
+    "year": "2025",
+    "title": "European Guideline on Chronic Nausea and Vomiting-A UEG and ESNM Consensus for Clinical Management.",
+    "pubtype": [
+     "other",
+     "Research Support, Non-U.S. Gov't",
+     "Practice Guideline",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "IntroductionChronic nausea and vomiting are symptoms of a wide range of gastrointestinal and non-gastrointestinal conditions. Diagnosis can be challenging and requires a systematic and well-structured approach. If the initial investigation for structural, toxic and metabolic disorders is negative, digestive motility and gut-brain interaction disorders should be assessed. United European Gastroenterology (UEG) and the European Society for Neurogastroenterology and Motility (ESNM) identified the need for an updated, evidence-based clinical guideline for the management of chronic nausea and vomiting.MethodsA multidisciplinary team of experts in the field, including European specialists and national societies, participated in the development of the guideline. Relevant questions were addressed through a literature review and statements were developed and voted on according to a Delphi process.ResultsNinety-eight statements were identified and voted following the Delphi process. Overall agreement was high, although the grade of scientific evidence was low in many areas. Disagreement was more evident for some pharmacological treatment options. A diagnostic algorithm was developed, focussing on the differentiating features between gastrointestinal motility and gut-brain interaction disorders with predominant nausea and vomiting.ConclusionThese guidelines provide an evidence-based framework for the evaluation and treatment of patients with chronic nausea and vomiting."
+   },
+   {
+    "id": "41261563",
+    "source": "MED",
+    "year": "2026",
+    "title": "Combined Gastric Alimetry and Gastric Emptying Scintigraphy Testing Increases Clinician Certainty in the Diagnosis and Management of Suspected Gastroparesis.",
+    "pubtype": [
+     "research-article",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Background/aims: Gastric emptying scintigraphy (GES) is the reference standard test for diagnosing gastroparesis. Body surface gastric mapping (BSGM) via Gastric Alimetry is a new test of gastric function that combines non-invasive assessment of gastric electrophysiology and validated symptom profiling. This randomized, prospective pilot study evaluated the impact of GES vs BSGM test results on clinical decision-making.Methods: Patients with chronic gastroduodenal symptoms from a tertiary center referred for GES were recruited. Subjects separately underwent baseline assessment with GES and BSGM testing. Two motility-specialists were first asked to devise a management plan after reviewing a test result (GES or BSGM, in random order). They were then asked to repeat the management plan after reviewing the other test result (BSGM or GES). Clinician-perceived certainty measures were assessed.Results: Sixteen patients, 13 (81.0%) female, median age 30 years, median body mass index 22.5 kg/m2, were recruited. At baseline, a diagnosis was established in 2/16 (12.5%) and increased to 8/16 (50.0%) with both tests. Abnormal test results were found in 11 patients. In patients with normal results, BSGM symptom profiling phenotyped 5 additional patients. All patients received an intervention following the first unblinding, with subsequent management changes made in 75.0% (BSGM) and 62.5% (GES) of patients. The combined GES and BSGM results significantly increased diagnostic and management "
+   },
+   {
+    "id": "42936312",
+    "source": "MED",
+    "year": "2026",
+    "title": "Gut consciousness: a perspective on visceral phenomenal awareness.",
+    "pubtype": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "The proposition that the enteric nervous system sustains a form of consciousness is seldom entertained in mainstream neuroscience, yet it follows from a disciplined reading of contemporary theories of mind. We argue that the 400-600 million neurons embedded in the mammalian gastrointestinal wall, taken together with the vast interoceptive surface they supervise, the enteroendocrine-immune interface, and the microbial community they co-regulate, constitute a substrate that satisfies, on several of the leading theories of consciousness, the criteria those theories use to attribute experience elsewhere. We synthesize evidence on enteric autonomy, chemo- and mechanosensory resolution, vagal and humoral signalling, self/non-self-discrimination at the epithelial-immune boundary, comparative data from invertebrates whose nervous systems are dominated by gut-like plexuses, and convergent clinical signatures (irritable bowel syndrome, food intolerances, psychedelic nausea, glucagon-like peptide-1 signalling) that are difficult to accommodate under a purely sensorimotor account. Throughout we distinguish two claims that are easily conflated: that the gut makes a large and underappreciated contribution to the single consciousness of the whole animal, and that enteric processing constitutes a second, much simpler locus of experience of its own. Most of the available evidence bears on the first, and we set out five lines of investigation that would discriminate between them. We conclude t"
+   }
+  ]
+ },
+ "new_vs_pubmed": [],
+ "fda_potential_signals": {
+  "rows_for_drug_or_class": 11,
+  "event_hits": [],
+  "drug_or_class_rows": [
+   "April - June 2020: Glucagon-like peptide 1 (GLP-1) Receptor Agonists Adlyxin (l → Hypoglycemia",
+   "April - June 2022: Glucagon-like peptide 1 (GLP-1) receptor agonists Adlyxin (l → Intestinal obstruction",
+   "April - June 2025: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Intestinal obstruction and fecal impaction",
+   "January - March 2021: Glucagon-like peptide-1 (GLP-1) analogues Adlyxin (lixisenat → Drug-induced liver injury",
+   "January - March 2024: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Dysaesthesia",
+   "July - September 2021: Glucagon-like peptide-1 (GLP-1) analogues Adlyxin (lixisenat → Gallbladder related disorders",
+   "July - September 2023: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Alopecia",
+   "July - September 2023: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Aspiration",
+   "July - September 2023: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Suicidal ideation",
+   "October - December 2019: Glucagon-like peptide-1 (GLP-1) receptor agonists (RAs) Adly → Diabetic ketoacidosis",
+   "October - December 2024: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Non-arteritic anterior ischemic optic neuropathy (NAION)"
+  ]
+ },
+ "onsides": {
+  "labels_by_region": {
+   "US": 2,
+   "UK": 3,
+   "EU": 3
+  },
+  "matching_effects": {},
+  "high_confidence_matches": []
+ },
+ "metrics": {
+  "seconds": 1.4,
+  "api_calls": 2,
+  "abstract_chars_kept": 1500,
+  "approx_tokens_kept": 375,
+  "papers_kept": 1,
+  "papers_dropped_gate": 9
+ }
+}

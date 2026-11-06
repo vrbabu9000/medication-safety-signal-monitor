@@ -1,0 +1,220 @@
+{
+ "id": "01-semaglutide-naion",
+ "drug": "semaglutide",
+ "faers_pt": "Optic ischaemic neuropathy",
+ "event_terms": [
+  "optic ischaemic neuropathy",
+  "optic ischemic neuropathy",
+  "ischemic optic neuropathy",
+  "ischaemic optic neuropathy",
+  "naion"
+ ],
+ "pubmed_v1": "see sample 01 page",
+ "europe_pmc": {
+  "query": "semaglutide AND (\"ischemic optic neuropathy\" OR \"ischaemic optic neuropathy\" OR NAION)",
+  "hits": 276,
+  "preprints": 8,
+  "papers": [
+   {
+    "id": "42890826",
+    "source": "MED",
+    "year": "2026",
+    "title": "Semaglutide Use and Risk of Diabetic Retinopathy and Non-Arteritic Anterior Ischemic Optic Neuropathy in Type 2 Diabetes: A Single-Center Retrospective Cohort Study.",
+    "pubtype": [
+     "Journal Article"
+    ],
+    "open_access": false,
+    "retracted": false,
+    "drug_and_event_in_abstract": true,
+    "abstract": "BackgroundGlucagon-like peptide-1 receptor agonists (GLP-1RAs), including semaglutide, are increasingly adopted for type 2 diabetes mellitus (T2DM) due to improvements in glycemic control and weight loss. Although concerns have been raised about a potential association with non-arteritic anterior ischemic optic neuropathy (NAION), this relationship remains uncertain.Objective and methodIn this single-center retrospective cohort study, we reviewed patients with T2DM treated with semaglutide at Rajavithi Hospital. A Kaplan-Meier time-to-event analysis was conducted to estimate the incidence of NAION and proliferative diabetic retinopathy (PDR) progression.ResultsAmong 100 patients with T2DM treated with semaglutide, no cases of NAION were observed over 299 person-years of follow-up (crude incidence rate: 0 per 1,000 person-years; 95% CI: 0-6.17). PDR and diabetic macular edema (DME) were the main findings, accounting for 10.00% and 3.00%, respectively. Ophthalmic complications group (13 patients) demonstrated higher body mass index (23.72 ± 1.38 vs 21.18 ± 2.51 kg/m2; p 60 months) was modestly associated with better survival (log-rank p = 0.049). By contrast, other demographic, optic disc characteristics, and concomitant systemic vascular diseases were not significantly linked to ophthalmic complication.ConclusionsNo NAION events were observed over 299 person-years; however, the limited sample size precludes definitive conclusions about NAION risk. A modest trend toward higher "
+   },
+   {
+    "id": "42857401",
+    "source": "MED",
+    "year": "2026",
+    "title": "Current review of glucagon-like peptide 1 receptor agonists and risk of nonarteritic anterior ischemic optic neuropathy.",
+    "pubtype": [
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": false,
+    "retracted": false,
+    "drug_and_event_in_abstract": true,
+    "abstract": "Emerging data has identified a potential association between glucagon-like peptide-1 receptor agonists (GLP-1RAs) and nonarteritic anterior ischemic optic neuropathy (NAION), a typically sudden, painless, and irreversible cause of optic nerve-mediated vision loss. This review synthesizes the current clinical, epidemiologic, and potential mechanism linking GLP-1RA-based therapies to NAION risk, informing balanced risk assessment and interdisciplinary clinical decision-making. A structured PubMed search was performed using terms including \"GLP-1 receptor agonist,\" \"semaglutide,\" \"liraglutide,\" \"tirzepatide,\" and \"nonarteritic anterior ischemic optic neuropathy,\" in addition to NAION risk factors, including disc-at-risk anatomy, type 2 diabetes, obstructive sleep apnea, hypertension, hyperlipidemia, renal disease, and ischemic heart disease. A small cup-to-disc ratio (\"disc-at-risk\") was found to be the most robust anatomical predictor of NAION. Systemic microvascular disease (diabetes, hypertension, hyperlipidemia) and conditions such as obstructive sleep apnea and end-stage renal disease were also linked to increased susceptibility to optic nerve head ischemia. Although data across electronic health records, national registries, and pharmacovigilance analyses suggest a very low absolute incidence of NAION, the use of GLP-1RAs demonstrates a statistically significant association with NAION development, yielding relative risk estimates between 1.2 and 4.3. At this time, the pote"
+   },
+   {
+    "id": "42556433",
+    "source": "MED",
+    "year": "2026",
+    "title": "Cup-To-Disc Ratio in Glucagon-Like Peptide 1 Receptor Agonist-Associated Nonarteritic Anterior Ischemic Optic Neuropathy.",
+    "pubtype": [
+     "Multicenter Study",
+     "Journal Article",
+     "Observational Study"
+    ],
+    "open_access": false,
+    "retracted": false,
+    "drug_and_event_in_abstract": true,
+    "abstract": "PurposeTo determine whether the cup-to-disc ratio (CDR) of patients with glucagon-like peptide 1 receptor agonist (GLP-1 RA) -associated nonarteritic anterior ischemic optic neuropathy (NAION) is similar to the CDR of patients with NAION without GLP-1 RA exposure and to stratify the odds of developing NAION based on CDR.DesignA retrospective, multicenter, case-control study of the CDR of NAION cases diagnosed between 2018 and 2024.Subjects and controlsThe Disc-at-Risk Study Group included 16 neuro-ophthalmology centers that reviewed medical records of 1812 unaffected fellow eyes from 2169 consecutive patients with NAION. The control group included both eyes of 465 patients.MethodsThe study compared the unaffected fellow eyes of 3 groups of patients with NAION: semaglutide users (117 eyes), nonsemaglutide GLP-1 RA users (83 eyes), and No GLP-1 RA medications (1612 eyes). Control eyes defined the distribution of CDR in the general population.Main outcome measuresThe CDR of unaffected fellow eyes of patients with NAION with and without exposure to GLP-1 RA medications.ResultsThe average provider-estimated CDR in unaffected fellow eyes of patients with NAION was 0.13, with no significant difference among the 3 groups. A measured CDR ≤ 0.40 was found in 94% of fellow eyes but only 56% of controls (P  0.20 and ≤0.40 had more modest odds (odds ratio = 6.8; 95% confidence interval, 3.5-13.2) compared with eyes with a measured CDR > 0.40.ConclusionsPatients with NAION with and without"
+   },
+   {
+    "id": "42773534",
+    "source": "MED",
+    "year": "2026",
+    "title": "Nonarteritic anterior ischemic optic neuropathy after rapid weight loss during semaglutide therapy: a case report.",
+    "pubtype": [
+     "Journal Article",
+     "Case Reports",
+     "case-report"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": true,
+    "abstract": "Semaglutide, a glucagon-like peptide-1 receptor agonist, is increasingly used for obesity management; however, concerns have recently emerged regarding potential ocular adverse events, including nonarteritic anterior ischemic optic neuropathy (NAION). Herein, we report a case of NAION that developed after marked, rapid weight loss during semaglutide therapy in a young man with multiple vascular risk factors. A 42-year-old man presented with acute visual disturbance in the right eye after losing approximately 40 kg over 2 months while receiving semaglutide (Wegovy) for obesity treatment. The patient's medical history included diabetes mellitus, hypertension, dyslipidemia, and a history of smoking. Ophthalmic examination revealed right optic disc edema and a corresponding inferior visual field defect. Magnetic resonance imaging and laboratory investigations revealed no other definite causes of optic neuropathy. He was diagnosed with NAION, which was temporally associated with semaglutide therapy and rapid weight reduction. Semaglutide was discontinued, and high-dose intravenous methylprednisolone was administered. At 6 months, the optic disc edema had resolved, leaving mild disc pallor, though the visual field defect persisted. Although causality cannot be established from a single case, this report highlights the need for clinical vigilance regarding optic neuropathy in patients receiving semaglutide, particularly in the setting of rapid weight loss."
+   },
+   {
+    "id": "42132708",
+    "source": "MED",
+    "year": "2026",
+    "title": "Glucagon-Like Peptide-1 Receptor Agonists and the Risk of Non-Arteritic Anterior Ischemic Optic Neuropathy: A Consensus Statement by the North American Neuro-Ophthalmology Society and the American Aca",
+    "pubtype": [
+     "Consensus Statement",
+     "Journal Article"
+    ],
+    "open_access": false,
+    "retracted": false,
+    "drug_and_event_in_abstract": true,
+    "abstract": "Recent studies have reported a possible association between glucagon-like peptide-1 receptor agonists (GLP-1 RAs) and non-arteritic anterior ischemic optic neuropathy (NAION). The North American Neuro-Ophthalmology Society and the American Academy of Ophthalmology provide consensus expert opinion and clinical guidance about this association. Currently available evidence primarily includes retrospective observational studies, many of which rely on analysis of electronic health record and administrative claims data and are subject to limitations. Although many report a small possible increased risk of NAION in patients taking GLP-1 RAs such as semaglutide, some studies report no correlation, and the overall magnitude of the risk of NAION remains low. Shared decision-making between each patient and their care team is warranted to decide whether to start, continue, or discontinue GLP-1 RAs. FINANCIAL DISCLOSURE(S): The author(s) have no proprietary or commercial interest in any materials discussed in this article."
+   },
+   {
+    "id": "PMC13650476",
+    "source": "PMC",
+    "year": "2026",
+    "title": "Current review of glucagon-like peptide 1 receptor agonists and risk of nonarteritic anterior ischemic optic neuropathy",
+    "pubtype": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": ""
+   },
+   {
+    "id": "42626023",
+    "source": "MED",
+    "year": "2026",
+    "title": "Anti-obesity medications impacting the eye: An emerging concern - a narrative review.",
+    "pubtype": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Obesity has reached epidemic proportions globally, with projections indicating that by 2050, nearly 3.8 billion adults will be overweight or obese. Despite the critical need for effective interventions, current obesity treatments ranging from lifestyle changes to bariatric surgery are often limited in efficacy or suitability. Pharmacotherapy is increasingly utilized for individuals with significant obesity or related comorbidities. However, some anti-obesity medications have been linked to ocular complications such as non-arteritic anterior ischemic optic neuropathy and diabetic retinopathy progression. This review analyzes currently approved anti-obesity medications, emphasizing their potential ocular adverse effects and the underlying mechanisms by which these occur. A comprehensive literature search identified the historical evolution, classification, and spectrum of ocular effects associated with these agents. The findings underscore the importance of evaluating both the risks and benefits of anti-obesity pharmacotherapy and highlight the need for vigilant clinical assessment of ocular health in patients undergoing such treatments."
+   },
+   {
+    "id": "42201355",
+    "source": "MED",
+    "year": "2026",
+    "title": "Semaglutide and risk of Non-Arteritic Anterior Ischemic Optic Neuropathy (NAION) in type 2 diabetes mellitus: A systematic review and meta-analysis.",
+    "pubtype": [
+     "Meta-Analysis",
+     "Systematic Review",
+     "Journal Article"
+    ],
+    "open_access": false,
+    "retracted": false,
+    "drug_and_event_in_abstract": true,
+    "abstract": "BackgroundThe use of Glucagon-like peptide-1 receptor agonists (GLP-1RAs) has expanded dramatically worldwide, with semaglutide being one of the most widely utilized agents. Nonarteritic anterior ischemic optic neuropathy (NAION) has been associated with GLP-1RAs use from emerging pharmacovigilance data. This systematic review and meta-analysis sought to evaluate the risk of NAION in patients with type 2 diabetes mellitus (T2DM).MethodsA literature search was made up to September 2025 (PROSPERO: CRD420251155026). Results were synthesized following the PRISMA guidelines and are presented as pooled Hazard Ratios (HR) with 95% confidence intervals (CI).ResultsTwelve studies were included; eight retrospective cohorts (14,255,247 participants) were meta-analyzed, with a mean age of 59.3 ± 15.9 years and 32.7% males. Patients with T2DM using semaglutide compared to non-GLP-1RAs showed an increased risk of NAION at 1-year follow-up with a pooled HR of 3.36 (95% CI: 1.44-7.84; p 2 = 97%). At 2-year follow-up, the pooled HR was 2.37 (95% CI: 1.46-3.85; p ConclusionThis meta-analysis indicates a significant association between semaglutide use and NAION in patients with T2DM compared to non-GLP-1RAs, with this association remaining significant even after 5-years of semaglutide use."
+   },
+   {
+    "id": "42612051",
+    "source": "MED",
+    "year": "2026",
+    "title": "Semaglutide-Induced Nonarteritic Anterior Ischemic Optic Neuropathy: A Systematic Review and Meta-Analysis.",
+    "pubtype": [
+     "Meta-Analysis",
+     "Systematic Review",
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": false,
+    "retracted": false,
+    "drug_and_event_in_abstract": true,
+    "abstract": "Despite the recent reports of the potential association between semaglutide and nonarteritic anterior ischemic optic neuropathy (NAION), available evidence remains inconclusive. We aimed to evaluate the relative effect (RE) of NAION in individuals treated with semaglutide compared to the control group. The results of this systematic review and meta-analysis were reported according to the PRISMA guidelines. The study protocol was prospectively registered in PROSPERO with ID: CRD42025649542. A systematic search was performed on the PubMed, Embase, and Cochrane Library databases until May 18, 2026. Meta-analysis of REs with 95% confidence intervals (CI) was calculated using random-effects models. Eight observational cohort studies, involving a total of 5,916,559 participants, were included in the meta-analysis. Of these, 1,870,346 patients received semaglutide treatment, while 4,046,213 were administered non-semaglutide treatment. Compared to non-semaglutide-treated patients, semaglutide users had a higher risk of NAION (RE, 1.93; 95% CI, 1.22-3.08; I2, 91%; P  =  .01). There was a significant association between NAION risk and semaglutide use in individuals with diabetes (RE, 1.84; 95% CI, 1.21-2.80; I2, 88.26%; P  2, 83.98%; P  =  .23). The current meta-analysis suggests a possible association between semaglutide and risk of NAION. Further randomized clinical trials are required to draw a clear conclusion."
+   },
+   {
+    "id": "42060879",
+    "source": "MED",
+    "year": "2026",
+    "title": "Glucagon-like Peptide-1 Receptor Agonists and Risk of Nonarteritic Anterior Ischemic Optic Neuropathy: Systematic Review and Meta-Analysis.",
+    "pubtype": [
+     "Meta-Analysis",
+     "Systematic Review",
+     "Journal Article"
+    ],
+    "open_access": false,
+    "retracted": false,
+    "drug_and_event_in_abstract": true,
+    "abstract": "Background and objectivesRecent observational studies have reported conflicting evidence regarding an association between glucagon-like peptide-1 receptor agonists (GLP-1RAs), particularly semaglutide, and nonarteritic anterior ischemic optic neuropathy (NAION). We aimed to synthesize the pooled evidence assessing the association between GLP-1RA use and NAION risk.MethodsEmbase, Medline, and Cochrane CENTRAL databases were searched from inception to April 5, 2025. Observational studies and randomized controlled trials comparing NAION risk in GLP-1RA users with non-GLP-1RA users were included. Title/abstract and full-text screening were conducted in duplicate by 2 independent reviewers. Discrepancies were resolved through discussion or adjudication by a third reviewer. Risk of bias was assessed using the Risk of Bias In Nonrandomized Studies of Interventions (ROBINS-I) tool, and the certainty of evidence was evaluated using the Grading of Recommendations Assessment, Development, and Evaluation framework. Pooled relative risks (RRs) were estimated using Bayesian random-effects models, incorporating half-normal, between-study, and weakly informative priors. The RR with 95% credible interval (CrI) was computed to analyze the development of NAION associated with GLP-1RA exposure.ResultsFive studies were included in the primary analysis, encompassing 1,593,554 patients (682,456 semaglutide users and 911,098 non-GLP-1RA users). Semaglutide use was associated with a high probability "
+   }
+  ]
+ },
+ "new_vs_pubmed": [],
+ "fda_potential_signals": {
+  "rows_for_drug_or_class": 11,
+  "event_hits": [
+   {
+    "quarter": "October - December 2024",
+    "product": "Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (lixisenatide) injection Bydureon (exenatide) for extended-release injectable suspension Bydureon BCise (exenatide extended-release) injectable suspension Byetta (exenatide) injection Mounjaro (tirzepatide) injection Ozempic (semaglutide) injection Rybelsus (semaglutide) tablets Saxenda (liraglutide) injection Soliqua 100/33 (insulin glargine and lixisenatide) injection Trulicity (dulaglutide) injection Victoza (liraglutide) injection Wegovy (semaglutide) injection Xultophy 100/3.6 (insulin degludec and liraglutide) injection Zepbound (tirzepatide) injection",
+    "signal": "Non-arteritic anterior ischemic optic neuropathy (NAION)",
+    "status": "FDA is evaluating the need for regulatory action.",
+    "url": "https://www.fda.gov/drugs/fda-adverse-event-monitoring-system-aems/october-december-2024-new-safety-information-or-potential-signals-serious-risks-identified-fda"
+   }
+  ],
+  "drug_or_class_rows": [
+   "April - June 2020: Glucagon-like peptide 1 (GLP-1) Receptor Agonists Adlyxin (l → Hypoglycemia",
+   "April - June 2022: Glucagon-like peptide 1 (GLP-1) receptor agonists Adlyxin (l → Intestinal obstruction",
+   "April - June 2025: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Intestinal obstruction and fecal impaction",
+   "January - March 2021: Glucagon-like peptide-1 (GLP-1) analogues Adlyxin (lixisenat → Drug-induced liver injury",
+   "January - March 2024: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Dysaesthesia",
+   "July - September 2021: Glucagon-like peptide-1 (GLP-1) analogues Adlyxin (lixisenat → Gallbladder related disorders",
+   "July - September 2023: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Alopecia",
+   "July - September 2023: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Aspiration",
+   "July - September 2023: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Suicidal ideation",
+   "October - December 2019: Glucagon-like peptide-1 (GLP-1) receptor agonists (RAs) Adly → Diabetic ketoacidosis",
+   "October - December 2024: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Non-arteritic anterior ischemic optic neuropathy (NAION)"
+  ]
+ },
+ "onsides": {
+  "labels_by_region": {
+   "US": 2,
+   "UK": 3,
+   "EU": 3
+  },
+  "matching_effects": {
+   "NAION": {
+    "regions": {
+     "UK": 3
+    },
+    "sections": [
+     "NA"
+    ]
+   }
+  },
+  "high_confidence_matches": []
+ },
+ "metrics": {
+  "seconds": 1.7,
+  "api_calls": 2,
+  "abstract_chars_kept": 11217,
+  "approx_tokens_kept": 2804,
+  "papers_kept": 8,
+  "papers_dropped_gate": 2
+ }
+}

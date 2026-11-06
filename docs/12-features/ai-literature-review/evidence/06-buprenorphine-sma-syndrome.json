@@ -1,0 +1,28 @@
+{
+  "id": "06-buprenorphine-sma-syndrome",
+  "query": "(buprenorphine[tiab] OR opioid*[tiab]) AND \"superior mesenteric artery syndrome\"[tiab]",
+  "hits": 1,
+  "papers": [
+    {
+      "pmid": "27004394",
+      "year": "2016",
+      "journal": "Masui",
+      "title": "[Superior Mesenteric Artery Syndrome following Scoliosis Surgery during Intravenous Patient Controlled Analgesia (IV-PCA) with Fentanyl: A Case Report].",
+      "pubtype": [
+        "Case Reports",
+        "Journal Article"
+      ],
+      "retracted": false
+    }
+  ],
+  "abstracts_kept": [
+    "27004394"
+  ],
+  "metrics": {
+    "api_calls": 3,
+    "seconds": 2.0,
+    "abstract_chars": 1751,
+    "approx_tokens": 437,
+    "retracted_dropped": 0
+  }
+}

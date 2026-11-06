@@ -11,27 +11,27 @@ Read this first. It keeps the reports, the deck, the demo and the diagrams one s
 ## Sources of truth (never invent)
 - Numbers: **`docs/11-handin/numbers.json`** only (captured from Foundry at the baseline gate, `baseline-gate.md`). In ReportLab reports use `{{n:key.path}}`. If a number you need is missing, say "not measured" — do not compute or guess one.
 - What was built: `foundry/README.md`, `foundry/pipelines/*/README.md`, `foundry/ontology/README.md`, `foundry/monitoring/README.md`.
-- Why: `docs/06-decisions/DECISIONS.md` (decisions D001–D047, decision changes, learnings), `docs/05-approaches/A000–A017` (what we tried, kept, dropped), `docs/07-data-quality/data-issues-register.md` (DQ01–DQ42), `docs/08-optimization-log/optimization-log.md` (O1–O3a), `eval/ai-eval-v1.md`, `docs/09-roadmap/` (pilot-to-production, ideas, another-month research), `COMPASS.md`, `ACTIVITY-LOG.md`.
-- Pictures: diagrams `docs/diagrams/png/30…38-handin-*` — use the newest version listed in `docs/diagrams/README-handin.md` (v2 for 30, 32, 33, 36, 37) (+ pdf, + drawio for 30/31/36), index `docs/diagrams/README-handin.md`; screenshots `docs/11-handin/screens/*.jpg`.
+- Why: `docs/06-decisions/DECISIONS.md` (decisions D001–D048, decision changes, learnings; D041 v2 and the 6 Nov batch acceptance), `docs/05-approaches/A000–A019` (what we tried, kept, dropped), `docs/07-data-quality/data-issues-register.md` (DQ01–DQ43), `docs/08-optimization-log/optimization-log.md` (O1–O3a), `eval/ai-eval-v1.md`, `docs/09-roadmap/` (pilot-to-production, ideas, another-month research), `COMPASS.md`, `ACTIVITY-LOG.md`.
+- Pictures: diagrams `docs/diagrams/png/30…38-handin-*` — use the newest version listed in `docs/diagrams/README-handin.md` (2026-11-06: 30 v3, 31 v2, 32 v3, 33 v3, 35 v2, 36 v3, 37 v3, 38 v2) (+ pdf, + drawio for 30/31/36), index `docs/diagrams/README-handin.md`; screenshots `docs/11-handin/screens/*.jpg`.
 - Style: `tools/handin/README.md` (ReportLab builder `tools/handin/build_report.py`, style `tools/handin/style.py`), BlueJay reference `/Users/vigneshrbabu/Documents/Git/bluejay-night-ride-optimizer`.
 
 ## Honesty rules (they are part of the grade)
 - Label evidence: OBSERVED (measured in Foundry), DERIVED (computed from observed), ASSUMED, DESIGNED (a choice).
-- Say what did not work: O2 incremental FAERS was **slower** (88 s vs 32 s); O3a column pruning did not help; the AI does not change the signal list today; the answer key is Claude-written, pharmacist pending; drift is a historical replay; the duplicate Signal→Drug link type is a mistake left for the owner.
+- Say what did not work: O2 incremental FAERS was **slower** (88 s vs 32 s); O3a column pruning did not help; the AI does not change the signal list today; the answer key is Claude-written, pharmacist pending; drift is a historical replay; the semaglutide label sections are not scored (no answer key); machine timings were measured on Workshop v0.9.0. History note only: a duplicate Signal → Drug link type was deleted on 6 Nov after checking nothing used it.
 - "1,073 ranked signals" is a review queue, not 1,073 findings. A signal is disproportionate reporting + not found in the label, not proof of causation.
-- Proposed decisions (D045–D047) are labelled proposed.
+- Decisions: the 12 formerly proposed ones (D006, D015 target only, D025–D029, D037, D045–D048) and D041 v2 were accepted on 6 Nov 2026 (batch). Do not label them proposed. D043 syn_v3 is still proposed and is not in the hand-in numbers.
 
 ## The 20-minute demo (one agenda for deck, script and navigation guide)
 | Time | Part | Where | Proves (rubric row) |
 |---|---|---|---|
 | 0:00–1:30 | The officer's problem: 3 questions, trust rule, 13 drugs (8 opioids + 5 GLP-1s), public data only | slides | Communication |
 | 1:30–3:00 | **Morning brief**: three numbers + "data as of" | app page 0 | Application |
-| 3:00–6:00 | **1 · Not in label**: drug filter → semaglutide → NAION #1 → evidence panel (PRR, CI, labels searched, method) → *Triage this signal* (Action, write-back) | app page 1 | Application, AI reliability (trace) |
+| 3:00–6:00 | **1 · Not in label**: drug filter → semaglutide → NAION #1 → evidence panel (PRR, CI, labels searched, method) → DailyMed "optic" → *What the AI read in these labels* (retinopathy yes, optic nerve no) → *Triage this signal* (Action, write-back) | app page 1 | Application, AI reliability (trace) |
 | 6:00–7:30 | **2 · Recalls**: active filter, newest D-0040-2027 (compounded tirzepatide, matches none of our products — said honestly) ; **3 · What changed**: date range = since my last review | app pages 2–3 | Application |
 | 7:30–9:30 | Architecture in one picture: sources → raw → clean (identity resolved once) → curated → ontology → app; then Data Lineage live | diagram 30, Data Lineage | Architecture |
 | 9:30–11:30 | Ontology: objects, links, the create-only Action; Object Explorer on the NAION signal | diagram 31, Ontology Manager, Object Explorer | Architecture |
 | 11:30–13:30 | From one FAERS report to a ranked signal: D022 versions/deletes, D021 roles, D020 identity, D023 v2 duplicates, PRR/Evans, 3-step label check (AI term → exact text → synonyms, code order), buckets | diagram 32, code repo | Data judgment, AI reliability |
-| 13:30–15:30 | AI reliability: grounded 448/448, F1 0.97 on a small Claude-written key vs target 0.85, cache = 0 model calls on rebuild; monitoring catches regressions | eval, monitoring datasets | AI reliability |
+| 13:30–15:30 | AI reliability: grounded 745/745 over 5 labels (2 oxycodone + 3 semaglutide, D041 v2), F1 0.97 on a small Claude-written oxycodone key vs target 0.85 (semaglutide sections not scored), cache = 0 model calls on a forced rebuild; the AI found retinopathy and no optic-nerve term for NAION; monitoring catches regressions | eval, monitoring datasets | AI reliability |
 | 15:30–17:30 | Optimization log: O1 cache (helped), O2 incremental FAERS (did not, and why), O3 DailyMed XML reuse (3 m 23 s → 1 m 23 s, 1,321 → 2 downloads), O3a (did not) | diagram 33, optimization log | Optimization |
 | 17:30–19:00 | Data judgment + what we chose not to do: phantom rows (DQ36), mass polypharmacy cluster (D023 v2), reporter type 34%→72% (DQ38), DailyMed "None" (DQ42); no MedDRA licence, no patient data | slides, monitoring | Data judgment |
 | 19:00–20:00 | Another month: pharmacist review loop (+ sources researched), schedules, live drift, health page | slides | Communication |

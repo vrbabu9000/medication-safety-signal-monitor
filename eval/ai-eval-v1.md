@@ -23,7 +23,12 @@
 - **Small and short.** 4 sections, 35 answer-key items, 2 labels. The long sections (Warnings and Precautions, Adverse Reactions: ~411 of 448 items) are not scored.
 - **The answer key was written by Claude**, frozen before the model ran, but not yet checked by a pharmacist (D041; [another-month plan](../docs/09-roadmap/another-month-sources-and-pharmacist-review.md)).
 - **Grounding ≠ correctness.** A quote can be real and still be the wrong item (e.g. a mechanism, not a reaction). Grounding catches invented text; the answer key catches wrong or missing items.
-- **The AI does not change the signal list today.** Text matching already covers the AI's terms for the 2 pilot labels (A012). Its value now is the exact quote shown as evidence.
+- **The AI does not change the signal list today.** Text matching already covers the AI's terms for the 5 labels it reads (A012; re-checked after D041 v2). Its value now is the exact quote shown as evidence.
+
+## D041 v2 update (2026-11-06): the AI now reads the demo drug's labels
+- Widened to the 3 semaglutide reference labels (Ozempic v20, Wegovy v19, oral Ozempic/Rybelsus v14): **21 sections, 745 reactions, 745 / 745 quotes found word for word** (was 9 / 448 / 448). 12 model calls for the new sections; a forced rebuild made **0** calls ([A019](../docs/05-approaches/A019-widen-ai-to-semaglutide.md)).
+- The AI found diabetic-retinopathy terms in those labels and **no optic-nerve or NAION term**, which independently agrees with "NAION not in label".
+- **Not scored:** the answer key still covers only the 4 short oxycodone sections, so F1 0.97 is unchanged and says nothing about the semaglutide sections. Signals did not change (1,952 / 1,073).
 
 ## How we would notice if it got worse (stretch goal)
 1. Every build: `ai.grounded_rate` (fail < 0.95), `ai.section_errors`, `ai.cache_hit_rate` in `monitoring_checks` (A017).

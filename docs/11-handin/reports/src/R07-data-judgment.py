@@ -14,8 +14,8 @@ META = {
     "title": "Data judgment",
     "short": "Data judgment",
     "subtitle": "the problems we found in public drug-safety data, what we fixed, and what we left",
-    "version": "1.1",
-    "date": "5 November 2026",
+    "version": "1.2",
+    "date": "6 November 2026",
 }
 
 PNG = "docs/diagrams/png/"
@@ -103,8 +103,9 @@ def build(r):
         "to {{n:monitoring.reporter_type_blank_q2|.0%}} blank (DQ38), which we watch every build.",
         "**Only the project owner can submit a triage decision today.** Giving the officer that permission is "
         "a production step.",
-        "**The AI's quote is not on her screen.** The AI read {{n:ai.pilot_labels}} oxycodone labels only; the label check she "
-        "sees rests on exact text and the reviewed synonym table (report R08).",
+        "**The AI's quotes are on her screen, for two drugs.** The AI reads {{n:ai.pilot_labels}} labels "
+        "(oxycodone and semaglutide); page 1 shows what it quoted. For the other drugs the label check she sees "
+        "rests on exact text and the reviewed synonym table (report R08).",
     ], title="What this means for Dana (the safety officer)")
     r.gate("Chapter 1: problems sorted by what they would do to the officer", [
         ("Required evidence", "Every fix has a rule (D number) and a before/after count on the same data."),
@@ -153,11 +154,11 @@ def build(r):
         "positive, because it looks like a finding.")
     r.table(["Problem", "What we saw", "Rule"], [
         ("DQ33 wrong product's label", "openFDA tagged injection-era semaglutide reports as the oral tablet and linked the tablet label; "
-                                       "injection-site pain then looked unlabeled", "Reference label per product (application), D024 / D027 (proposed)"),
+                                       "injection-site pain then looked unlabeled", "Reference label per product (application), D024 / D027"),
         ("DQ07 many labels per drug", "Brands, generics, repackagers each have labels", "One reference label per product = the application owner's (G3)"),
         ("DQ28 stale label copy", "openFDA's label copy lagged DailyMed by months (Ozempic)", "DailyMed is the label source of truth (D019)"),
         ("DQ19, DQ40 section codes", "Old labels use separate Warnings/Precautions; sub-sections use a generic code",
-         "Six safety section codes; fold everything nested (D037, proposed)"),
+         "Six safety section codes; fold everything nested (D037)"),
         ("DQ27 version numbers", "Version numbers run from 1 to 3,540 and mean nothing across labels", "Compare versions only within one label (setid)"),
     ], widths=[110, 230, 164])
     r.h("DQ42: an HTTP 200 that is not a label (handled)", 3)
@@ -229,13 +230,14 @@ def build(r):
     r.p("Note on DQ38: {{n:monitoring.reporter_type_blank_q1|.0%}} is the Foundry value at the baseline gate "
         "(`monitoring_checks`). The register's first profile on 20 October said 35%; this report uses the "
         "Foundry value.", style="small")
-    r.figure(PNG + "35-handin-monitoring-v1.png",
-             "Monitoring: {{n:monitoring.checks_per_build}} computed checks per build, the drift replay, and "
-             "{{n:monitoring.data_health_checks}} Foundry Data Health checks, with first-run results.",
-             source="docs/diagrams/png/35-handin-monitoring-v1.png")
+    r.figure(PNG + "35-handin-monitoring-v2.png",
+             "Monitoring (v2): {{n:monitoring.checks_per_build}} computed checks per build, the drift replay, and "
+             "{{n:monitoring.data_health_checks}} Foundry Data Health checks, with first-run results (AI row "
+             "updated after D041 v2).",
+             source="docs/diagrams/png/35-handin-monitoring-v2.png")
     r.how_we_know("Both warnings on the first Foundry run are real, which is the best evidence the checks work. "
                   "The drift series is a **historical replay** from source dates, not weeks of live builds; live "
-                  "history accumulates with each build; there is no build schedule yet (D046, proposed).")
+                  "history accumulates with each build; there is no build schedule yet (D046).")
 
     # ------------------------------------------------------------------ 06 recalls
     r.chapter("Recall problems", new_page=False)
@@ -274,14 +276,14 @@ def build(r):
         ("**Residue in the duplicate fold** (DQ37)", "The same patient with age 43 in one filing and 44 in another is not folded",
          "Small double counts remain; the 30-drug cut catches the worst"),
         ("**Polydrug confounding** (DQ17)", "No adjustment model; role filter and mass-report cut only", "A co-prescribed drug's effect can show up"),
-        ("**AI long sections not scored** (DQ10)", "Answer key covers only Boxed Warning + Contraindications of {{n:ai.pilot_labels}} oxycodone labels "
-         "(4 short sections); Claude-written, pharmacist pending",
+        ("**AI long sections not scored** (DQ10)", "Answer key covers only Boxed Warning + Contraindications of {{n:ai.v1_pilot.labels}} oxycodone labels "
+         "(4 short sections); Claude-written, pharmacist pending. The {{n:ai.d041_v2.new_sections}} semaglutide sections are not scored",
          "Unknown accuracy on Adverse Reactions tables; the AI does not change the list today"),
         ("**Synonym bands not reviewed**", "No pharmacist named yet", "A wrong *high* band hides a real signal"),
         ("**Only two FAERS quarters** (2026 Q1–Q2)", "Pilot scope; enough for PRR, not for trends", "No *new this quarter* trend yet"),
     ], widths=[140, 200, 164])
-    r.warning("One modelling mistake is also left visible: a duplicate Signal → Drug link type created by mistake "
-              "on 2026-11-05. Nothing uses it; deleting it is the owner's decision.", title="Not data, but honest")
+    r.note("History, not data: a duplicate Signal → Drug link type created by mistake on 2026-11-05 was deleted "
+           "on 6 Nov after checking nothing used it.", title="One modelling mistake, fixed")
 
     # ------------------------------------------------------------------ 08 more time
     r.chapter("What we would do with more time", new_page=False)
@@ -293,7 +295,8 @@ def build(r):
         ("**More FAERS quarters**", "DQ04 stimulated reporting; *new this quarter* trends; re-measure incremental FAERS at 4+ quarters",
          "Trends need history"),
         ("**Schedules and live drift**", "Freshness checks fire on their own; 3–4 week live drift window (D009)", "Replay becomes real monitoring"),
-        ("**Widen the AI** to all reference labels", "DQ10; quotes for every *in label* decision", "Only after the answer key is signed off"),
+        ("**Widen the AI** to the other drugs' reference labels (today oxycodone and semaglutide)", "DQ10; quotes for every *in label* decision", "Only after the answer key is signed off"),
+        ("**Score the long sections with a pharmacist**", "DQ10; the semaglutide and Adverse Reactions sections are unscored", "Turns grounding into accuracy"),
         ("**Second opinions**", "SrLC label changes, FDA Drug Safety Communications, OnSIDES, PubMed and ClinicalTrials.gov in the packet",
          "Researched in `docs/09-roadmap/another-month-sources-and-pharmacist-review.md`"),
     ], widths=[170, 210, 124])
@@ -323,14 +326,14 @@ def build(r):
         ("DQ11", "Recall product in free text", "Suspected", "Handled: NDC from text + confidence"),
         ("DQ12", "Compounded products recalled", "Suspected", "Shown under the drug; 0 product matches"),
         ("DQ13", "Ingredient vs salt names", "Suspected", "Handled: salt strip (D020)"),
-        ("DQ14", "Sources on different clocks", "Suspected", "Handled: as-of per source (D045, proposed)"),
+        ("DQ14", "Sources on different clocks", "Suspected", "Handled: as-of per source (D045)"),
         ("DQ15", "Abuse/overdose dominate opioid reports", "Confirmed", "Tagged, not ranked (D016)"),
         ("DQ16", "Combination products", "Suspected", "Flagged; each ingredient counted"),
         ("DQ17", "Polydrug confounding", "Suspected", "Left: role filter + mass cut only"),
         ("DQ18", "Litigation-style terms", "Confirmed", "Left: reporter type unreliable (DQ38)"),
-        ("DQ19", "Old vs new Warnings section codes", "Confirmed", "Handled: both codes (D037, proposed)"),
+        ("DQ19", "Old vs new Warnings section codes", "Confirmed", "Handled: both codes (D037)"),
         ("DQ20", "FAERS replaced by AEMS (Mar 2026)", "Confirmed", "Quarterly files used; future feed unverified"),
-        ("DQ21", "Lawyers filed most 2021 oxycodone reports", "Confirmed", "Left: D025 (proposed) monitors fill rate"),
+        ("DQ21", "Lawyers filed most 2021 oxycodone reports", "Confirmed", "Left: D025 monitors fill rate"),
         ("DQ22", "\"Hyperalgesia\" has 0 reports", "Confirmed", "Left: needs MedDRA grouping"),
         ("DQ23", "Our drug often only concomitant", "Confirmed", "Handled: bulk files + D021"),
         ("DQ24", "openFDA enrichment is a name match", "Confirmed", "Avoided: bulk files + own identity"),
@@ -342,7 +345,7 @@ def build(r):
         ("DQ30", "Recalls Ongoing for years", "Confirmed", "Active = Ongoing; newest first"),
         ("DQ31", "ATC class misses our drugs", "Confirmed", "Handled: explicit 13-RxCUI list (D018)"),
         ("DQ32", "Trials data noisy for safety", "Confirmed", "Source cut from the pilot (D031)"),
-        ("DQ33", "Tablet vs injection label", "Confirmed", "Handled: product-level label (D024; D027, proposed)"),
+        ("DQ33", "Tablet vs injection label", "Confirmed", "Handled: product-level label (D024; D027)"),
         ("DQ34", "Substring drug matching", "Measured", "Handled: D020"),
         ("DQ35", "SS role repeats PS", "Measured", "Handled: D021, once per case"),
         ("DQ36", "Case versions and deletes: phantom rows", "Measured", "Handled: D022"),

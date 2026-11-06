@@ -1,0 +1,121 @@
+{
+  "id": "04-tirzepatide-allodynia",
+  "query": "tirzepatide[tiab] AND (allodynia[tiab] OR dysesthesia[tiab] OR dysaesthesia[tiab] OR hyperesthesia[tiab] OR hyperaesthesia[tiab] OR \"skin sensitivity\"[tiab] OR \"skin pain\"[tiab])",
+  "hits": 9,
+  "papers": [
+    {
+      "pmid": "42168638",
+      "year": "2026",
+      "journal": "Eur J Clin Pharmacol",
+      "title": "Dysesthesia associated with GLP-1 agonist therapies: data-mining analysis and literature review.",
+      "pubtype": [
+        "Journal Article",
+        "Review"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "41210042",
+      "year": "2025",
+      "journal": "Cureus",
+      "title": "Allodynia and Dysesthesia Associated With Semaglutide and Tirzepatide.",
+      "pubtype": [
+        "Case Reports",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "41053816",
+      "year": "2025",
+      "journal": "Cardiovasc Diabetol Endocrinol Rep",
+      "title": "From needles to pills: oral GLP-1 therapy enters the obesity arena.",
+      "pubtype": [
+        "Editorial"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "40413246",
+      "year": "2025",
+      "journal": "Sci Rep",
+      "title": "Pharmacovigilance analysis of neurological adverse events associated with GLP-1 receptor agonists based on the FDA Adverse Event Reporting System.",
+      "pubtype": [
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "41001580",
+      "year": "2025",
+      "journal": "Sex Med",
+      "title": "The use of tirzepatide to successfully treat persistent genital arousal disorder/genitopelvic dysesthesia: a case report.",
+      "pubtype": [
+        "Case Reports",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "42101979",
+      "year": "2026",
+      "journal": "Am J Case Rep",
+      "title": "Cutaneous Allodynia Associated With GLP-1RA Tirzepatide for Weight Management: A Case Series.",
+      "pubtype": [
+        "Journal Article",
+        "Case Reports"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "42930571",
+      "year": "2026",
+      "journal": "Med Sci (Basel)",
+      "title": "Cutaneous Adverse Events Associated with Semaglutide, Liraglutide and Tirzepatide: A Systematic Review.",
+      "pubtype": [
+        "Journal Article",
+        "Systematic Review",
+        "Review"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "42356493",
+      "year": "2026",
+      "journal": "Pharmaceuticals (Basel)",
+      "title": "Incretin-Based Drugs for Obesity: Common and Drug-Specific Reporting Patterns of Adverse Drug Reactions-A Comparative Disproportionality Analysis Using EudraVigilance Reports Integrating SmPC Data.",
+      "pubtype": [
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "42959996",
+      "year": "2026",
+      "journal": "Cureus",
+      "title": "Treatment-Induced Neuropathy Presenting as Thoracic Radiculopathy and Abdominal Wall Protrusion After Marked Glycemic Improvement With Tirzepatide.",
+      "pubtype": [
+        "Case Reports",
+        "Journal Article"
+      ],
+      "retracted": false
+    }
+  ],
+  "abstracts_kept": [
+    "42168638",
+    "41210042",
+    "41053816",
+    "40413246",
+    "41001580",
+    "42101979",
+    "42930571",
+    "42356493"
+  ],
+  "metrics": {
+    "api_calls": 3,
+    "seconds": 2.1,
+    "abstract_chars": 23486,
+    "approx_tokens": 5871,
+    "retracted_dropped": 0
+  }
+}

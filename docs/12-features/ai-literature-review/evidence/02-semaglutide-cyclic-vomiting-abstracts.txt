@@ -1,0 +1,50 @@
+1. Diabetes Obes Metab. 2026 Oct;28(10):9251-9264. doi: 10.1111/dom.71138. Epub 
+2026 Jul 21.
+
+Safety Signals of GLP-1 Receptor Agonists: A Multi-Method Pharmacovigilance 
+Analysis of FAERS (2018-2025) With Sensitivity-Stratified Prioritisation, 
+Notoriety-Bias Assessment, and Cross-Database Validation.
+
+Xu S(1).
+
+Author information:
+(1)Capital Medical University, Beijing, China.
+
+BACKGROUND: GLP-1 receptor agonists (GLP-1 RAs) are widely prescribed for type 2 
+diabetes and obesity, but their post-marketing safety profile-particularly 
+psychiatric, vascular, neoplastic and rare ophthalmic events-remains 
+incompletely characterised and is vulnerable to confounding by indication, 
+secondary-suspect attribution and notoriety bias.
+METHODS: We analysed 32 quarterly FAERS files (2018Q1-2025Q4): 288408 unique 
+GLP-1 RA reports versus 11 319 150 non-GLP-1 RA reports. Disproportionality used 
+four methods (reporting odds ratio [ROR]; proportional reporting ratio [PRR]; 
+Bayesian Confidence Propagation Neural Network information component, lower 95% 
+bound [BCPNN IC025]; Multi-item Gamma Poisson Shrinker empirical Bayes lower 
+5th-percentile bound [MGPS EB05]; signal = ≥ 3 of 4). The top 30 ROR-ranked 
+signals were stratified by primary-suspect (PS) sensitivity. Triangulation 
+included active-comparator, intra-class psychiatric comparison, interrupted 
+time-series assessment of reporting around the 2023 EMA announcement, 
+Weber-effect evaluation with Cochran-Armitage trend testing, and external 
+validation in JADER.
+RESULTS: Of 22 059 PT-class pairs, 544 met the ≥ 3-of-4 criterion. 
+PS-stratification retained 21 of the top 30 signals and demoted 9 as 
+secondary-suspect-driven (e.g., capillaritis ROR 18.6 → 0.27; heart sounds 
+84.3 → 0.55). PS-stable headline signals were dominated by 
+gastrointestinal/hepatobiliary effects: cyclic vomiting syndrome (ROR 64.8; 
+semaglutide-dominant), gallbladder injury (84.2), impaired gastric emptying 
+(45.1), plus liraglutide-concentrated medullary thyroid cancer (41.1) and 
+semaglutide-concentrated optic ischaemic neuropathy (26.5). Only semaglutide 
+carried a class-level suicidal-ideation signal (ROR 2.30). Interrupted time 
+series detected no level (p = 0.39) or slope change (p = 0.75) at the 2023 EMA 
+announcement; psychiatric time-to-onset (median 47 days) aligned with early GI 
+reactions. Sixteen of 17 priority signals (94.1%) replicated in JADER. As 
+disproportionality analyses, these are hypothesis-generating safety signals and 
+cannot establish incidence, relative risk, or causality.
+
+© 2026 John Wiley & Sons Ltd.
+
+DOI: 10.1111/dom.71138
+PMCID: PMC13538726
+PMID: 42481928 [Indexed for MEDLINE]
+
+Conflict of interest statement: The author declares no conflicts of interest.

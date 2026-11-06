@@ -1,0 +1,56 @@
+---
+title: "Monitoring v2 (D046, A017): computed checks + drift replay + Foundry Data Health → who finds out (first Foundry run 2026-11-05; AI row updated after D041 v2, 2026-11-06)"
+config:
+  flowchart:
+    wrappingWidth: 330
+---
+flowchart TB
+%% handin-theme
+  classDef pipeline fill:#FFFFFF,stroke:#13324B,color:#263746
+  classDef incr fill:#FFFFFF,stroke:#087F8C,stroke-width:2.5px,stroke-dasharray:7 4,color:#263746
+  classDef ai fill:#EEEDFE,stroke:#534AB7,color:#3C3489
+  classDef done fill:#E1F5EE,stroke:#0F6E56,color:#085041
+  classDef app fill:#13324B,stroke:#13324B,color:#FFFFFF
+  classDef risk fill:#FFF3D6,stroke:#B7791F,color:#7A4B00
+  classDef neutral fill:#F1EFE8,stroke:#5F5E5A,color:#444441
+  classDef planned fill:#F1EFE8,stroke:#5F5E5A,stroke-dasharray:5 4,color:#444441
+
+  subgraph WATCH["What is watched"]
+    CU["<b>Curated datasets</b><br/>signals · recalls · labels<br/>change events"]:::pipeline
+    SRCS["<b>Source dates</b><br/>openFDA · DailyMed · FAERS"]:::pipeline
+    FQ["<b>FAERS</b><br/>cases + incremental log"]:::pipeline
+    AIX["<b>ai_label_section_extractions</b><br/>quotes, errors, from_cache"]:::ai
+  end
+
+  MP["<b>monitoring.py</b><br/>runs with each build"]:::pipeline
+
+  subgraph CHK["monitoring_checks · 21 rows appended per build (history kept)"]
+    K1["<b>Keys + rows</b> (12)<br/>4 datasets × unique, not null,<br/>row drop ≤ 20% vs last build<br/>→ all pass"]:::done
+    K2["<b>Freshness</b> (3)<br/>openFDA 8 d (≤ 14) · DailyMed 0 d (≤ 7)<br/>FAERS 130 d after quarter (≤ 200)<br/>→ pass"]:::done
+    K3["<b>AI</b> (3)<br/>after D041 v2 (5 labels, 21 sections):<br/>grounded 745 / 745 (≥ 0.95) → pass<br/>cache hit 0.429 in the widening build<br/>(12 new sections; info only)"]:::done
+    K4["<b>Data judgment</b> (3)<br/>FAERS quarters in state = files<br/>ranked without a label = 0<br/>reporter type blank 72% → <b>warn</b> (DQ38)"]:::risk
+  end
+
+  DR["<b>monitoring_drift</b> · historical replay (D009)<br/>7 series: weekly from source dates,<br/>per FAERS quarter · last 4 wk vs 4 before<br/>ratio > 2 or < 0.5 = warn<br/>recalls reported 10 vs 3 → <b>warn</b>"]:::risk
+
+  DH["<b>Foundry Data Health</b> (4 checks)<br/>build status + primary key on<br/>ontology_signal_signals and<br/>clean_faers_cases_current"]:::done
+
+  OWN["<b>Project owner</b><br/>Foundry notification on failure"]:::app
+  ENG["<b>Builder reads</b> the check rows<br/>(dataset SQL) after each build"]:::neutral
+  TODO["<b>Not yet</b><br/>Workshop Health page ·<br/>schedules · pharmacist-scored<br/>AI accuracy check"]:::planned
+
+  CU --> MP
+  SRCS --> MP
+  FQ --> MP
+  AIX --> MP
+  MP --> K1
+  MP --> K2
+  MP --> K3
+  MP --> K4
+  MP --> DR
+  CU -. "signals" .-> DH
+  FQ -. "FAERS cases" .-> DH
+  DH -- "alert" --> OWN
+  CHK --> ENG
+  DR --> ENG
+  ENG -.-> TODO

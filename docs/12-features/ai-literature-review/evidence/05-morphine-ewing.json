@@ -1,0 +1,111 @@
+{
+  "id": "05-morphine-ewing",
+  "query": "morphine[tiab] AND ewing*[tiab]",
+  "hits": 8,
+  "papers": [
+    {
+      "pmid": "14125891",
+      "year": "1964",
+      "journal": "Am J Trop Med Hyg",
+      "title": "THE EFFECT OF MORPHINE AND RELATED SUBSTANCES ON THE TOXICITY OF VENOMS. I. CENTRUROIDES SCULPTURATUS EWING SCORPION VENOM.",
+      "pubtype": [
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "29440819",
+      "year": "2018",
+      "journal": "Indian J Palliat Care",
+      "title": "Intravenous Lignocaine Infusion for Intractable Pain in Ewing's Sarcoma.",
+      "pubtype": [
+        "Case Reports",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "35946186",
+      "year": "2022",
+      "journal": "Indian J Cancer",
+      "title": "Refractory cancer pain in young child at end-of-life: Can we alleviate the suffering?",
+      "pubtype": [
+        "Case Reports",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "34941790",
+      "year": "2021",
+      "journal": "Toxics",
+      "title": "Forensic Toxicological and Medico-Legal Evaluation in a Case of Incongruous Drug Administration in Terminal Cancer Patients.",
+      "pubtype": [
+        "Case Reports",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "27281724",
+      "year": "2016",
+      "journal": "Reg Anesth Pain Med",
+      "title": "In-Plane Ultrasound-Guided Lumbar Plexus Block Using Catheter-Over-Needle Technique in a 14-Month-Old Baby.",
+      "pubtype": [
+        "Case Reports",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "24498783",
+      "year": "2013",
+      "journal": "Masui",
+      "title": "[Three successful cases of relieved abdominal fullness by thoracic epidural analgesia].",
+      "pubtype": [
+        "Case Reports",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "10780056",
+      "year": "2000",
+      "journal": "Schweiz Med Wochenschr",
+      "title": "[Single and double high-dose chemotherapy with autologous stem cell transplantation in children with advanced solid tumors: first experiences].",
+      "pubtype": [
+        "Clinical Trial",
+        "English Abstract",
+        "Journal Article"
+      ],
+      "retracted": false
+    },
+    {
+      "pmid": "41572388",
+      "year": "2026",
+      "journal": "J Cannabis Res",
+      "title": "Ewing sarcoma-related pain: potential role of medical cannabis monotherapy in symptom management - a case report.",
+      "pubtype": [
+        "Journal Article"
+      ],
+      "retracted": false
+    }
+  ],
+  "abstracts_kept": [
+    "14125891",
+    "29440819",
+    "35946186",
+    "34941790",
+    "27281724",
+    "24498783",
+    "10780056",
+    "41572388"
+  ],
+  "metrics": {
+    "api_calls": 3,
+    "seconds": 2.1,
+    "abstract_chars": 15047,
+    "approx_tokens": 3761,
+    "retracted_dropped": 0
+  }
+}

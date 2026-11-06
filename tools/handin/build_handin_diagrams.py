@@ -1,4 +1,4 @@
-"""Editable draw.io versions (Visio-ready) of the three key hand-in diagrams (30 v2, 31 v1, 36 v2).
+"""Editable draw.io versions (Visio-ready) of the three key hand-in diagrams (30 v3, 31 v2, 36 v3).
 
 Writes, for each diagram:
   docs/diagrams/drawio/<name>.drawio            open in draw.io; File > Export as > VSDX for Visio
@@ -9,7 +9,9 @@ The rendered PNG/PDF used in reports come from the Mermaid sources with the same
 drawio/preview/ so they never overwrite the Mermaid renders and do not enter diagram-book.pdf twice.
 
 Run:  .venv/bin/python tools/handin/build_handin_diagrams.py
-Numbers: as of 2026-11-05 (Compass v35); see docs/diagrams/README-handin.md for sources.
+Numbers: as of 2026-11-06 (D041 v2: AI reads 5 labels, 745 / 745 grounded; duplicate Signal -> Drug link
+deleted, 10 MSSM link types; Workshop v0.10.0); see docs/diagrams/README-handin.md for sources.
+Older versions (30 v2, 31 v1, 36 v2) stay on disk; this script no longer writes them.
 """
 import sys
 from pathlib import Path
@@ -46,7 +48,7 @@ def legend(d, y, items, x0=30, gap=14, h=36):
 
 # ----------------------------------------------------------------------------------------------------- 30 data flow
 def data_flow():
-    d = Diagram("30-handin-data-flow-v2", 1760, 820, title="Data flow as built (pilot, 13 drugs, 2026-11-05)")
+    d = Diagram("30-handin-data-flow-v3", 1760, 820, title="Data flow as built v3 (pilot, 13 drugs, 2026-11-06)")
     H = 80
     r = {0: 70, 1: 180, 2: 290, 3: 400, 4: 510}          # row tops
     C0, C1, C2, C3, C4, C5, C6 = 25, 245, 490, 755, 1005, 1270, 1515
@@ -79,7 +81,7 @@ def data_flow():
 
     d.box("sy", C3, r[1], 220, H, "label_synonyms", ["syn_v2 · 258 reviewed rows"], kind="pipeline")
     d.box("obj", C3, r[3], 220, H, "ontology_objects", ["drugs · products · labels", "recalls · link tables"], kind="pipeline")
-    d.box("ai", C3, r[4], 220, H, "AI label extraction", ["Claude Sonnet 5.5, cached", "448 / 448 quotes grounded"],
+    d.box("ai", C3, r[4], 220, H, "AI label extraction", ["Sonnet 5.5, cached · 5 labels", "745 / 745 quotes grounded"],
           kind="ai", dashed=True, sw=2)
 
     d.box("sg", C4, r[1] - 5, 220, 90, "ontology_signals", ["reads FAERS, label sections,", "AI terms, synonyms",
@@ -90,10 +92,11 @@ def data_flow():
 
     d.box("on", C5, 175, 210, 415, "Ontology", ["10 MSSM object types:", "Drug · Product · Label", "Recall · Labeled Reaction",
                                               "AE Stat · Signal", "Change Event", "Source Status", "Triage Decision",
-                                              "+ link types"], kind="ontology")
+                                              "+ 10 MSSM link types"], kind="ontology")
     d.box("dh", C5, 640, 180, 60, "Data Health: 4 checks", ["build status + primary key"], kind="neutral")
-    d.box("ws", C6, 190, 220, 110, "Workshop", ["MSSM Safety Officer", "0 Morning brief", "1 Not in label · 2 Recalls",
-                                                    "3 What changed"], kind="app")
+    d.box("ws", C6, 190, 220, 110, "Workshop v0.10.0", ["MSSM Safety Officer", "0 Morning brief",
+                                                         "1 Not in label + AI quotes", "2 Recalls · 3 What changed"],
+          kind="app")
     d.box("ac", C6, r[3], 220, H, "Action", ["Create Triage Decision", "write-back: new object"], kind="ontology", sw=2)
     d.box("own", C6, 640, 220, 60, "Project owner", ["Foundry notification"], kind="app")
 
@@ -138,7 +141,7 @@ def data_flow():
 
 # ----------------------------------------------------------------------------------------------------- 31 ontology
 def ontology():
-    d = Diagram("31-handin-ontology-v1", 1500, 860, title="Ontology as built: 10 MSSM object types, links, one Action")
+    d = Diagram("31-handin-ontology-v2", 1500, 860, title="Ontology as built v2: 10 object types, 10 link types, one Action")
     W, H = 230, 92
     d.box("ac", 30, 30, W, 110, "Action", ["Create MSSM Triage Decision", "create-only", "officer: decision + rationale",
                                           "system: id, reviewer, time"], kind="app")
@@ -151,16 +154,14 @@ def ontology():
     d.box("pr", 770, 680, W, H, "Product", ["key: product_key", "= application number", "658"], kind="ontology")
     d.box("la", 1150, 680, W, H, "Label", ["key: label_key", "setid | version", "1,321"], kind="ontology")
     d.box("lr", 1150, 470, W, H, "Labeled Reaction", ["key: labeled_reaction_key", "AI term + exact quote",
-                                                      "448 (2 pilot labels)"], kind="ai")
-    d.box("cap", 400, 250, 610, 110, "How to read this", ["counts = rows in the backing dataset (13 drugs, 2026-11-05)",
+                                                      "745 (5 labels read by AI)"], kind="ai")
+    d.box("cap", 400, 250, 610, 110, "How to read this", ["counts = rows in the backing dataset (13 drugs, 2026-11-06)",
                                                        "many : 1 = a foreign key on the 'many' side",
                                                        "many : many = a link dataset (ontology_link_*)",
                                                        "plain lines: links have no direction"], kind="neutral")
     d.group("g_free", 400, 30, 610, 160, "No link types (filtered by drug name on screen)")
     d.box("ce", 420, 70, 270, 100, "Change Event", ["key: event_id (hash)", "2,898 at first build"], kind="ontology")
     d.box("ss", 715, 70, 270, 100, "Source Status", ["key: source", "4 sources, as-of dates"], kind="ontology")
-    d.box("note", 1150, 30, 300, 110, "Open item", ["a duplicate Signal → Drug link", "was added by mistake (step 11);",
-                                                    "unused: delete it"], kind="risk")
 
     d.arrow("ac", "td", label="creates")
     d.arrow("td", "sg", label="many : 1 (subject_key)", arrow=False)
@@ -176,22 +177,22 @@ def ontology():
 
     d.group("g_leg", 30, 795, 1440, 56, "")
     legend(d, 808, [("object type", "ontology", False), ("object built by AI", "ai", False),
-                    ("written by people (thick border)", "ontology", False), ("Action", "app", False),
-                    ("open issue", "risk", False)], x0=45)
+                    ("written by people (thick border)", "ontology", False), ("Action", "app", False)], x0=45)
     d.by_id["leg2"].sw = 3
     save(d)
 
 
 # ----------------------------------------------------------------------------------------------------- 36 demo map
-# v2 (2026-11-05): stop codes A0-A7 / H1-H15 and timings from docs/11-handin/demo/demo-navigation-guide.md
-# (1,200 s in all). Same content as docs/diagrams/src/36-handin-demo-map-v2.mmd. The v1 .drawio stays on disk.
+# v3 (2026-11-06): stop codes A0-A7 / H1-H15 and timings from docs/11-handin/demo/demo-navigation-guide.md
+# (1,200 s in all); A4 now ends on the AI-quotes table. Same content as docs/diagrams/src/36-handin-demo-map-v3.mmd.
+# The v1 and v2 .drawio files stay on disk.
 DEMO_ROWS = [
     ("Part A · the safety officer's morning in the Workshop app (0:00–6:00)", [
         ("A0 · Her 3 questions", "0:00–1:30 · 90 s", "Deck slides 1–2", "Communication", "neutral"),
         ("A1 · Morning brief", "1:30–3:00 · 90 s", "Workshop · 3 cards", "Application · trust", "app"),
         ("A2 · One drug", "3:00–3:40 · 40 s", "Page 1 · semaglutide", "Application", "app"),
         ("A3 · Why NAION", "3:40–4:30 · 50 s", "Page 1 · evidence panel", "Application (trace)", "app"),
-        ("A4 · Labels searched", "4:30–5:20 · 50 s", "Page 1 · 3 labels → DailyMed 'optic'", "Application · AI reliability", "app"),
+        ("A4 · Labels searched", "4:30–5:20 · 50 s", "3 labels → DailyMed → AI quotes", "Application · AI reliability", "app"),
         ("A5 · Triage this signal", "5:20–6:00 · 40 s", "open form → Cancel (default)", "Application · trust", "write"),
     ]),
     ("Part A ends (6:00–7:30) · Part H · under the hood begins (7:30–10:45)", [
@@ -204,7 +205,7 @@ DEMO_ROWS = [
     ]),
     ("Part H · under the hood (10:45–15:30)", [
         ("H5 · Object Explorer", "10:45–11:30 · 45 s", "NAION links, live", "Application · trace", "pipeline"),
-        ("H6 · FAERS → signal", "11:30–12:30 · 60 s", "Slide 8 · diagram 32 v2", "Data judgment", "neutral"),
+        ("H6 · FAERS → signal", "11:30–12:30 · 60 s", "Slide 8 · diagram 32 v3", "Data judgment", "neutral"),
         ("H7 · Signal code", "12:30–12:50 · 20 s", "Code Repo (optional)", "Architecture", "pipeline"),
         ("H8 · Review queue", "12:50–13:30 · 40 s", "Slide 9", "Data judgment", "neutral"),
         ("H9 · AI reliability", "13:30–14:45 · 75 s", "Slide 10 (+ SQL)", "AI · Optimization", "neutral"),
@@ -221,8 +222,8 @@ DEMO_ROWS = [
 
 
 def demo_map():
-    d = Diagram("36-handin-demo-map-v2", 1560, 660,
-                title="Demo map v2: 23 stops, 1,200 s = 20 min (A0-A7 in the app, H1-H15 under the hood)")
+    d = Diagram("36-handin-demo-map-v3", 1560, 660,
+                title="Demo map v3: 23 stops, 1,200 s = 20 min (A0-A7 in the app, H1-H15 under the hood)")
     W, H, X0, GAP = 232, 82, 30, 22
     xs = [X0 + i * (W + GAP) for i in range(6)]
     gys = [20, 160, 300, 440]

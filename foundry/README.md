@@ -8,12 +8,12 @@ Reference: [Foundry conventions](../docs/04-architecture/foundry-conventions/REA
 |---|---|---|---|
 | `pipelines/raw/` | Ingestion transforms (one file per pull) | A | ✅ 6 files, [README](pipelines/raw/README.md) |
 | `pipelines/clean/` | Cleaning, dedup, **shared drug identity** (resolved once) | A | ✅ identity (step 4) + FAERS, labels, recalls (step 5), [README](pipelines/clean/README.md) |
-| `pipelines/ontology/` | Datasets that back Ontology objects | A | ✅ step 6 + 8, [ontology_objects.py](pipelines/ontology/ontology_objects.py), [ontology_signals.py](pipelines/ontology/ontology_signals.py) (run in repo `pipelines_clean`) |
+| `pipelines/ontology/` | Datasets that back Ontology objects | A | ✅ steps 6, 8, 11: [ontology_objects.py](pipelines/ontology/ontology_objects.py), [ontology_signals.py](pipelines/ontology/ontology_signals.py), [ontology_changes.py](pipelines/ontology/ontology_changes.py), [label_synonyms.py](pipelines/ontology/label_synonyms.py) (run in repo `pipelines_clean`) |
 | `ontology/` | Object types, links, Actions (definitions + notes) | A, C | ✅ [README](ontology/README.md) |
 | `ai-function/` | Label-extraction prompts, AIP Logic notes, grounding check | B | superseded by `pipelines/ai/` |
-| `pipelines/ai/` | AI label extraction transform (Claude Sonnet 5.5, cached, grounded) | B | ✅ pilot step 7, [README](pipelines/ai/README.md) |
-| `app/` | Workshop layout notes and screenshots | C | 🟡 module **MSSM Safety Officer** built (step 8); notes in [ontology README](ontology/README.md#workshop-module) |
-| `monitoring/` | Data Health checks set in Foundry (record) · computed checks + drift: `pipelines/monitoring` | D | 🟡 step 11: 4 Data Health checks, 21 computed checks, drift replay |
+| `pipelines/ai/` | AI label extraction transform (Claude Sonnet 5.5, cached, grounded) | B | ✅ 5 labels, 21 sections, 745/745 grounded (D041 v2), [README](pipelines/ai/README.md) |
+| `app/` | Workshop layout notes and screenshots | C | ✅ module **MSSM Safety Officer** v0.10.0, 4 pages (step 11); notes in [ontology README](ontology/README.md#workshop-module), tour in [demo guide](../docs/11-handin/demo/demo-navigation-guide.md) |
+| `monitoring/` | Data Health checks set in Foundry (record) · computed checks + drift: `pipelines/monitoring` | D | ✅ first version (step 11): 4 Data Health checks, 21 computed checks, drift replay |
 | `tools/local_run/` | Run a transform on your machine with stand-ins for Foundry's library | — | ✅ [README](tools/local_run/README.md) |
 
 Naming: `<layer>_<source>_<thing>`, e.g. `clean_faers_cases_current`.

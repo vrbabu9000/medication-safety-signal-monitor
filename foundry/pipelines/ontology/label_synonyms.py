@@ -5,11 +5,12 @@
 # A phrase only counts where it appears in a safety section of that drug's reference label (same text rule as D037).
 # Review: Claude draft from eval/synonyms/candidates-v1.jsonl (209 leads with a short matching phrase) plus a few
 # standard clinical synonyms marked "knowledge". v2 (2026-11-05): leads from the top 12 ranked signals per drug, each phrase
-# checked in that drug's reference labels; marked "v2". Pharmacist review pending.
+# checked in that drug's reference labels; marked "v2". v3 (2026-11-06): Allodynia -> "dysesthesia" (medium), found by the
+# F01 literature review (A018); FDA Potential Signals Q1 2024 lists dysaesthesia for GLP-1s. Pharmacist review pending.
 #
 # Mirror of Foundry repo Pipelines/pipelines_clean,
 #   transforms-python/src/myproject/datasets/label_synonyms.py
-SYN_VERSION = "syn_v2"
+SYN_VERSION = "syn_v3"
 
 _HIGH = [
     ("Impaired gastric emptying", ["delays gastric emptying", "delay gastric emptying", "delayed gastric emptying"], "label states the drug slows gastric emptying"),
@@ -98,6 +99,7 @@ _MEDIUM = [
     ("Disorganised speech", ["speech disorder"], "broader"),
     ("Acute respiratory distress syndrome", ["respiratory distress"], "related, not the same"),
     ("Acute abdomen", ["severe abdominal pain"], "related"),
+    ("Allodynia", ["dysesthesia"], "v3: overlapping sensory ideas, not the same (F01 sample 04)"),
     ("Liver function test abnormal", ["hepatic enzymes"], "vague FAERS term"),
     ("Diverticulitis intestinal perforated", ["exacerbation of diverticulitis"], "related warning"),
     ("Superficial vein thrombosis", ["thrombophlebitis"], "related"),
@@ -151,7 +153,7 @@ _REJECTED = [
     "Hyperthermia", "Hyperlipidaemia", "Hyperbilirubinaemia", "Hepatomegaly", "Head circumference abnormal",
     "Haemorrhage urinary tract", "Functional gastrointestinal disorder", "Dysphoria", "Dissociation", "Discouragement",
     "Alcoholism", "Activities of daily living decreased",
-    "Early satiety", "Allodynia",  # v2: phrase not in that drug's labels
+    "Early satiety",  # v2: phrase not in that drug's labels
 ]
 
 SYNONYMS = ([(pt, ph, "high", note) for pt, phrases, note in _HIGH for ph in phrases]

@@ -14,7 +14,7 @@ Object counts as of the baseline gate, 2026-11-05 (13-drug formulary).
 | MSSM Product | `ontology_product_products` | `product_key` (application number, or `labeler:` key) | `display_name` (e.g. OXYCONTIN (NDA022272)) | 658 | off |
 | MSSM Label | `ontology_label_labels` | `label_key` = `setid|v<version>` | `display_name` (title · v44) | 1,321 | off |
 | MSSM Recall | `ontology_recall_recalls` | `recall_number` | `display_name` (D-0338-2026 · Class II · Ongoing) | 900 | off |
-| MSSM Labeled Reaction | `ontology_labeled_reactions` (built by the AI transform, step 7) | `labeled_reaction_key` | `reaction_text` | 448 (pilot: 2 labels, prompt p2) | off |
+| MSSM Labeled Reaction | `ontology_labeled_reactions` (built by the AI transform, step 7) | `labeled_reaction_key` | `reaction_text` | 745 (5 labels: 2 oxycodone pilot + 3 semaglutide, D041 v2, prompt p2) | off |
 | MSSM AE Stat | `ontology_ae_stats` (step 8) | `stat_key` | `display_name` | 14,921 | off |
 | MSSM Signal | `ontology_signal_signals` (step 8) | `signal_key` (`rxcui|reaction|rule`) | `display_name` (Oxycodone · Myoclonus) | 1,952 (1,073 ranked) | off |
 | MSSM Change Event | `ontology_change_events` (step 11, D045) | `event_id` (hash of type, key, drug, change, detail, date) | `display_name` | 2,898 at first build | off |
@@ -35,9 +35,8 @@ Object counts as of the baseline gate, 2026-11-05 (13-drug formulary).
 | Signal → AE Stat | many-to-one, foreign key `stat_key` | signal dataset | MSSM AE Stat / MSSM Signals |
 | Triage Decision → Signal | many-to-one, foreign key `subject_key` | triage dataset | MSSM Signal / MSSM Triage Decisions |
 | Recall ↔ Drug | many-to-many | `ontology_link_recall_drug` (ingredient named in the recall text) | MSSM Drugs / MSSM Recalls |
-| Signal → Drug (duplicate, step 11) | many-to-one, foreign key `ingredient_rxcui` | signal dataset | Drug of signal (`drugOfSignal`) / Signals of drug (`signalsOfDrug`) |
 
-The last row repeats the earlier Signal → Drug link: it was added by mistake on 2026-11-05 before checking this table. Nothing uses it. It can be deleted in Ontology Manager (Link types → Signals of drug ⇄ Drug of signal → delete); left in place until you decide.
+A duplicate Signal → Drug link type ("Signals of drug" / "Drug of signal", added by mistake on 2026-11-05) was **deleted on 2026-11-06** with the owner's OK. Before deleting, we checked that no Workshop variable used it (the page 1 "Reference labels searched" panel uses the original Signal → Drug link) and that its usage log showed only one Object Explorer read. The Ontology now has **10 MSSM link types**.
 
 ## Action types
 
@@ -53,7 +52,7 @@ How to apply it: in **Object Explorer**, open MSSM Triage Decision → **Actions
 
 ## Workshop module
 
-**MSSM Safety Officer** (header title "MSSM · Morning safety review"; `ri.workshop.main.module.5468606b-d94b-4f0a-b257-a22b207de88d`, project folder `Workshop/`, published v0.6+). Approaches: [A012](../../docs/05-approaches/A012-signal-statistics-and-workshop.md) (page 1), [A016](../../docs/05-approaches/A016-three-question-screen.md) (pages 0, 2, 3) · decisions D042, D045.
+**MSSM Safety Officer** (header title "MSSM · Morning safety review"; `ri.workshop.main.module.5468606b-d94b-4f0a-b257-a22b207de88d`, project folder `Workshop/`, published v0.6+; **v0.10.0** on 2026-11-06). Approaches: [A012](../../docs/05-approaches/A012-signal-statistics-and-workshop.md) (page 1), [A016](../../docs/05-approaches/A016-three-question-screen.md) (pages 0, 2, 3) · decisions D042, D045.
 
 Four pages, switched by a **Tabs** widget in the module header (each tab's on-click event = *Switch to page*). Page names sort alphabetically in the editor, so they carry a number.
 
@@ -75,9 +74,11 @@ How it was built fast: object-table columns and property-list fields were writte
 | Right top: button **Triage this signal** | Action Create MSSM Triage Decision. Defaults: Subject Type = static "signal"; Subject Key = *Selected signal key* (object property of the table's active object); Evaluation Id = *Selected evaluation id*. All three locked (Disabled); the officer picks Decision and writes Rationale |
 | Right middle: decisions for this signal | Variable *Decisions for selected signal* = MSSM Triage Decision where Subject Key = Selected signal key |
 | Right bottom: full signal record | Property list of the active signal: 22 properties in reading order with plain labels. Why flagged → label check → trace |
+| Right, below the record: **Reference labels searched** (step 11) | Variable *Reference labels searched for selected signal* = active signal → MSSM Drug (original Signal → Drug link) → MSSM Product → Reference Label. Columns: label, version, effective, safety sections, DailyMed link |
+| Right, last: **What the AI read in these labels** (2026-11-06, v0.10.0, D041 v2) | Variable *AI reactions quoted from labels searched* = *Reference labels searched…* → MSSM Labeled Reaction. Columns: reaction text, section, quote (word for word from the label), label key. For NAION: 297 rows from the 3 semaglutide labels; no optic-nerve term among them. The **Evidence and triage** section has *Enable scrolling* on, so the triage button keeps its height (a fixed-height table had squeezed it) |
 
 **Polish (2026-11-04, v0.3):** number format on MSSM Signal properties in Ontology Manager (Display → Numeric formatting → Maximum fraction digits: PRR 1, CI low/high 2, χ² 1, mass share 2). Decisions table: row height Absolute 160 px.
 
-Still open: reviewer shows a user ID; section titles on page 2 still read "Section"; links from a signal to the labels that were searched; a Health page for `monitoring_checks` (needs a key column and an object type).
+Still open: reviewer shows a user ID; section titles on page 2 still read "Section"; no dedicated Signal → Label link type (the panels walk existing links); a Health page for `monitoring_checks` (needs a key column and an object type).
 
 Why two variables on page 1: the filter list must read the unfiltered set, or the filter would feed back into itself and every other drug would disappear from its own choices. Pages 2 and 3 follow the same pattern (*All recalls* → *Recalls for chosen drugs*, *All changes* → *Changes for chosen filters*).

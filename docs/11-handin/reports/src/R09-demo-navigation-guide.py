@@ -7,7 +7,10 @@ Markdown twin: docs/11-handin/demo/demo-navigation-guide.md (same stops, same wo
 Agenda (binding): docs/11-handin/AGENT-BRIEF.md. Spoken words: docs/11-handin/deck/speaking_script.md.
 Numbers: docs/11-handin/numbers.json only; other figures cite their record inline.
 Phase D fix pass (2026-11-05): labels-searched stop (A4), triage Cancel by default, H-codes aligned to deck slides 6-16,
-machine timings, 'We pulled it at' values, v0.9.0, diagrams 30/32/33 v2, proposed decisions, rubric-check Q&A.
+machine timings, 'We pulled it at' values, diagrams 30/32/33 v2, rubric-check Q&A.
+Refresh (2026-11-06): D041 v2 (AI reads 5 labels incl. the 3 semaglutide labels; A4 ends on the page-1 AI-quotes
+table), Workshop v0.10.0 (timings were measured on v0.9.0), 12 decisions accepted, duplicate link deleted,
+diagrams 30 v3, 31 v2, 32 v3, 33 v3, 35 v2, 36 v3, 37 v3, 38 v2.
 """
 
 META = {
@@ -15,8 +18,8 @@ META = {
     "title": "Demo navigation guide",
     "short": "Demo navigation guide",
     "subtitle": "the 20-minute demo, click by click",
-    "version": "1.2",
-    "date": "5 November 2026",
+    "version": "1.3",
+    "date": "6 November 2026",
 }
 
 from reportlab.platypus import KeepTogether
@@ -79,9 +82,10 @@ def build(r):
         "NAION is a very rare side effect of semaglutide (WHO alert 27 June 2025); the "
         "{{n:app.labels_searched_naion}} US label versions we search still do not mention it (DECISIONS learning "
         "2026-11-05). A monitor that missed it would be broken.",
-        "**NAION was not checked by the AI.** The AI has read 0 semaglutide labels (the pilot is "
-        "{{n:ai.pilot_labels}} oxycodone labels). The method code `text+ai_v1+syn_v2` names the rule version, not "
-        "which checks ran.",
+        "**The AI checked NAION too.** Since 6 Nov (D041 v2) the AI reads the {{n:app.labels_read_by_ai_naion}} "
+        "semaglutide labels. It found diabetic-retinopathy terms and no optic-nerve term, so exact text, synonyms "
+        "and the AI agree: not in label. Its quotes are on page 1. The method code `text+ai_v1+syn_v2` names the "
+        "rule version, not which check found what.",
         "**'Matched to our products' means the 658 FDA-listed products we track (foundry README), not her shelves.** "
         "We have no inventory data. And she cannot open the {{n:signals.naion.a}} reports from her screen yet.",
         "**Card 3 counts the last 30 days**, not since yesterday. Page 3's date range narrows it to "
@@ -97,7 +101,7 @@ def build(r):
         ("A1 Morning brief", "1:30–3:00", "90", "3", "Application (trust)"),
         ("A2 Noise, then semaglutide", "3:00–3:40", "40", "4", "Application"),
         ("A3 Evidence (NAION)", "3:40–4:30", "50", "4", "Application (trace)"),
-        ("A4 Labels searched + DailyMed", "4:30–5:20", "50", "4", "Application, AI reliability"),
+        ("A4 Labels searched + DailyMed + AI quotes", "4:30–5:20", "50", "4", "Application, AI reliability"),
         ("A5 Triage form (Cancel)", "5:20–6:00", "40", "4", "Application (trust)"),
         ("A6 Recalls + FDA record", "6:00–6:50", "50", "5", "Application, Data judgment"),
         ("A7 What changed", "6:50–7:30", "40", "5", "Application"),
@@ -121,10 +125,10 @@ def build(r):
     r.note("Stop codes are A0–A7 (the app) and H1–H15 (under the hood), so they never clash with the deck's backup "
            "slides B1–B12. Checkpoints: 3:00, 6:00, 7:30, 11:30, 15:30, 19:00. More than 30 s late: drop the optional "
            "switches (H7, H9, H10, H12, H13), then the Object Explorer half of H5, then shorten H12 to one sentence. "
-           "Never cut A4 (labels searched and the DailyMed search), A5 (the Action form), H2 (lineage) or the honest limits in H9.",
+           "Never cut A4 (labels searched, the DailyMed search and the AI quotes), A5 (the Action form), H2 (lineage) or the honest limits in H9.",
            title="Staying on time")
-    r.figure(D + "36-handin-demo-map-v2.png", "The demo map (diagram 36 v2): the officer's path first, then the stops under the hood. Its slot times and rubric rows match the table above.",
-             source="docs/diagrams/png/36-handin-demo-map-v2.png", max_height=330)
+    r.figure(D + "36-handin-demo-map-v3.png", "The demo map (diagram 36 v3): the officer's path first, then the stops under the hood. Its slot times and rubric rows match the table above.",
+             source="docs/diagrams/png/36-handin-demo-map-v3.png", max_height=330)
 
     r.h("Words to explain the first time you use them")
     r.table(["Term", "Say"], [
@@ -140,7 +144,7 @@ def build(r):
         ("FAERS", "The FDA's database of adverse event reports, published as quarterly files"),
         ("PRR", "Proportional reporting ratio: how much more often a reaction is reported with this drug "
          "than with all other drugs"),
-        ("Evans rule", "A signal needs at least 3 reports, PRR at least 2 and chi-square at least 4 (D006, proposed)"),
+        ("Evans rule", "A signal needs at least 3 reports, PRR at least 2 and chi-square at least 4 (D006)"),
         ("MedDRA preferred term (PT)", "The standard medical term FAERS uses for a reaction"),
         ("DailyMed, SPL", "The NIH site for official drug labels; the XML format they come in"),
         ("openFDA", "The FDA's public API: recalls (enforcement), Drugs@FDA and NDC"),
@@ -171,8 +175,10 @@ def build(r):
          "See the note below"),
         ("7", "Rehearse the form by **opening it and pressing Cancel**; never Submit in rehearsal",
          "NAION's decisions table is still empty", "If a decision landed by mistake: keep it, tell the lead"),
-        ("8", "**DailyMed check (A4):** click the Ozempic v20 link on page 1, Cmd+F `optic`",
-         "First hit is not the retinopathy warning; no optic neuropathy found. Note the version DailyMed shows",
+        ("8", "**DailyMed check (A4):** click the Ozempic v20 link on page 1, Cmd+F `optic`; then scroll page 1 to "
+              "*What the AI read in these labels*",
+         "First hit is not the retinopathy warning; no optic neuropathy found. Note the version DailyMed shows. "
+         "The AI table lists retinopathy rows and no optic-nerve row",
          "Use `ischemic optic`. Newer version shown: say so. Screenshot the search as the fallback"),
         ("9", "**Class I count (A6):** page 2, Is Active = Yes, click the Class column",
          "Active Class I count and D-0788-2026's product match written down (**not measured** today)",
@@ -185,7 +191,7 @@ def build(r):
            "one. They are audit evidence that a decision survives a rebuild. Their rationales say STEP 6 ACTION "
            "SAVE TEST (recall D-0338-2026) and STEP 8 WORKSHOP TEST (Oxycodone · Myoclonus). Neither is on NAION, "
            "so neither appears in Part A. Worth checking in rehearsal (not verified): the Myoclonus decision stores "
-           "evaluation id cbcd091262d23bd6 from step 8 (A012); the label check has changed twice since, so the "
+           "evaluation id cbcd091262d23bd6 from step 8 (A012); the label check has changed since, so the "
            "signal's current id should differ. If it does, it is a live example of a decision on older evidence.",
            title="Why keep the two test decisions")
 
@@ -241,7 +247,8 @@ def build(r):
           "on another day. Say so before anyone asks. Our pipeline refreshes only when a build runs: there is no "
           "schedule yet (another month).", title="Data freshness: the exact words")
     r.how_we_know("Machine timing (`app.timing_s`; browser script, time until the expected text is on screen, View "
-                  "mode, 2026-11-05): Morning brief loads in {{n:app.timing_s.morning_brief_load}} s; page switches "
+                  "mode, timed on v0.9.0 on 2026-11-05; {{n:app.workshop_version|raw}} only adds one table below the "
+                  "fold on page 1, not re-timed): Morning brief loads in {{n:app.timing_s.morning_brief_load}} s; page switches "
                   "take {{n:app.timing_s.switch_what_changed}} s (what changed), {{n:app.timing_s.switch_recalls}} s "
                   "(recalls) and {{n:app.timing_s.switch_signals_with_labels}} s (signals with the labels panel). "
                   "Human reading time is not included. These are the **only measured speed numbers**. 'Under two "
@@ -305,7 +312,8 @@ def build(r):
                       "PRR {{n:signals.naion.prr}} · 95% CI {{n:signals.naion.prr_ci_low}} to "
                       "{{n:signals.naion.prr_ci_high}} · Chi² {{n:signals.naion.chi2_yates|raw}} · mass reports 0 · "
                       "label status not_in_label · reference labels searched {{n:app.labels_searched_naion}} · labels "
-                      "also read by AI 0 · method text+ai_v1+syn_v2 · bucket clinical. The decisions table is empty"),
+                      "also read by AI {{n:app.labels_read_by_ai_naion}} · method text+ai_v1+syn_v2 · bucket clinical · "
+                      "evaluation id {{n:signals.naion.evaluation_id_v2|raw}}. The decisions table is empty"),
         ("Say", "\"{{n:signals.naion.a}} reports name semaglutide and NAION, out of "
                 "{{n:signals.naion.all_reports_drug}} semaglutide reports. NAION is about 112 times more common among "
                 "semaglutide's reports than among other drugs' reports: a reporting pattern, not 112 times the risk. "
@@ -313,9 +321,9 @@ def build(r):
                 "inflate it (DQ04). And NAION is not new: EMA's safety committee concluded in June 2025 that it is a "
                 "very rare side effect of semaglutide. We lead with it because a monitor that missed it would be "
                 "broken. Ours ranks it first.\""),
-        ("Point", "Do not read out the engineering fields. At *Label check method* text+ai_v1+syn_v2 say: \"That code "
-                  "names the rule version, not which checks ran. The AI has not read these labels: look at *Labels "
-                  "also read by AI: 0*.\""),
+        ("Point", "Do not read out the engineering fields. At *Labels also read by AI: "
+                  "{{n:app.labels_read_by_ai_naion}}* say: \"The AI read all three of these labels too. I will show "
+                  "you what it found in a moment.\""),
         ("Proves", "Application (trace on screen)"),
         ("Fallback", "This screenshot"),
         ("If asked", "Caused by semaglutide? We do not claim that: 'reported, not on the US label' (A003). Isn't NAION "
@@ -323,36 +331,46 @@ def build(r):
                      "we search do not mention it (DECISIONS learning 2026-11-05). A known positive that the pipeline "
                      "finds at rank 1 from FAERS alone; whether it would have flagged it earlier is unproven (backtest "
                      "cut, D031)"),
-    ], S + "app-1-not-in-label-naion.jpg", "Page 1: ranked signals with the NAION evidence open.")
+    ], S + "app-1d-naion-ai-read-3.jpg", "Page 1 ({{n:app.workshop_version|raw}}): ranked signals with the NAION evidence open; labels also read by AI = {{n:app.labels_read_by_ai_naion}}.")
 
-    stop(r, "A4", "Reference labels searched, then DailyMed itself", "4:30–5:20", 50, [
+    stop(r, "A4", "Reference labels searched, DailyMed itself, then what the AI read", "4:30–5:20", 50, [
         ("Click", "Scroll the right panel to **Reference labels searched**. **Mandatory:** click the **Ozempic v20** "
                   "DailyMed link; Cmd+F `optic` (or `ischemic optic`, per checklist 8); show no optic neuropathy; "
-                  "Cmd+W back to the app"),
+                  "Cmd+W back to the app; scroll down to **What the AI read in these labels**"),
         ("On screen", "{{n:app.labels_searched_naion}} rows: **Ozempic v20** (2026-06-01), **Wegovy v19** "
-                      "(2026-06-18), **oral Ozempic v14** (2026-01-30); safety sections searched; a DailyMed link each"),
+                      "(2026-06-18), **oral Ozempic v14** (2026-01-30); safety sections searched; a DailyMed link each. "
+                      "Below: the AI table (reaction · section · quote · label key), "
+                      "{{n:app.ai_quotes_panel_rows_naion}} rows for semaglutide"),
         ("Say", "\"These are the three labels we searched, by exact version. Our exact-text check and reviewed "
-                "synonym table find NAION in none of them; the AI has not read them. This is Ozempic's label on "
+                "synonym table find NAION in none of them. This is Ozempic's label on "
                 "DailyMed itself. I search for 'optic': no optic neuropathy. She can repeat this check in ten seconds. "
+                "Back in the app, this table is what the AI read in the same three labels, every line quoted word "
+                "for word. It found diabetic retinopathy, which the label does warn about, and nothing about the "
+                "optic nerve. So three independent checks agree. "
                 "What she cannot do yet is open the {{n:signals.naion.a}} reports from this screen: we pull their case "
                 "IDs by query today, and that is the first thing we would add before anyone takes this to P&T.\""),
-        ("Proves", "Application (every flag traces to its source); AI reliability (says what the AI did not do)"),
-        ("Fallback", "This screenshot; the DailyMed search screenshot from rehearsal (checklist 8)"),
+        ("Proves", "Application (every flag traces to its source); AI reliability (the AI's quoted evidence on screen)"),
+        ("Fallback", "This screenshot (labels + AI table); app-1c for the labels alone; the DailyMed search "
+                     "screenshot from rehearsal (checklist 8)"),
         ("If asked", "How does the panel find them? Signal → Drug → Products → Reference Label; no dedicated link "
                      "type yet. Check order? In code: (1) an AI term with a code-found quote, (2) the exact term or "
                      "US spelling in a safety section, (3) a reviewed synonym. Same outcome in any order; only the "
-                     "recorded method differs (`ontology_signals.py` l.163–176). For NAION only (2) and (3) ran. "
+                     "recorded method differs (`ontology_signals.py` l.163–176). For NAION all three ran and none found it. "
                      "Really missing? None of the 36 safety sections in any semaglutide label in DailyMed mention it "
-                     "(A014)"),
-    ], S + "app-1c-labels-searched-naion.jpg",
-        "Page 1: the reference labels searched for NAION, by version, with DailyMed links.")
+                     "(A014). Does the AI score these labels? Grounding only ({{n:ai.grounded}} of {{n:ai.reactions}} quotes "
+                     "found word for word); the answer key covers oxycodone, so the semaglutide sections are not "
+                     "scored"),
+    ], S + "app-1e-ai-quotes-panel-naion.jpg",
+        "Page 1 ({{n:app.workshop_version|raw}}): the reference labels searched for NAION, with DailyMed links, and "
+        "below them what the AI read in those labels, quoted word for word.")
 
     stop(r, "A5", "Triage this signal: the Action form", "5:20–6:00", 40, [
         ("Click", "**Triage this signal**; point at the locked fields; **Cancel** (default). Only if the owner chose "
                   "Submit: Decision **reviewing**, a one-line rationale, **Submit**; the row appears above the record"),
-        ("On screen", "Form Create MSSM Triage Decision. Subject Type, Subject Key and Evaluation Id f55055e199e8e9d3 "
-                      "are filled and locked; Decision (reviewing, dismissed, escalated, monitoring) and Rationale "
-                      "are hers"),
+        ("On screen", "Form Create MSSM Triage Decision. Subject Type, Subject Key and Evaluation Id "
+                      "{{n:signals.naion.evaluation_id_v2|raw}} are filled and locked; Decision (reviewing, dismissed, "
+                      "escalated, monitoring) and Rationale are hers. (The fallback screenshot is from 5 Nov and shows "
+                      "the id before D041 v2, f55055e199e8e9d3.)"),
         ("Say", "\"This is a Foundry Action. The signal and its evaluation id are filled in and locked; she picks a "
                 "decision and writes why. Who and when are set by the system. Submitting creates a new Triage "
                 "Decision object; it never edits an old one, and it survives every rebuild. Today only the project "
@@ -402,7 +420,7 @@ def build(r):
         ("If asked", "False alarms? A rebuild with no new data added {{n:changes.snapshot_diff_after_rebuild}} "
                      "events. No signal changes yet: they come only from comparing builds, so they appear after the next "
                      "FAERS quarter or synonym edit. The start date does not fill itself from her last decision "
-                     "yet (D045, proposed)"),
+                     "yet (D045)"),
     ], S + "app-3b-what-changed-past-month.jpg", "Page 3 with the Past month preset: 26 events, the same as card 3.")
 
     # ------------------------------------------------------------------ 4
@@ -412,7 +430,7 @@ def build(r):
 
     stop(r, "H1", "Architecture in one picture", "7:30–8:30", 60, [
         ("Click", "BACK TO DECK: slide 6, diagram 38 (the one-page architecture picture). Detailed fallback if asked: "
-                  "diagram 30 v2 (`docs/diagrams/png/30-handin-data-flow-v2.png`, every dataset, O3 measured)"),
+                  "diagram 30 v3 (`docs/diagrams/png/30-handin-data-flow-v3.png`, every dataset)"),
         ("Say", "\"Four public sources. Raw keeps exactly what each source sent. Clean checks and de-duplicates it, "
                 "and resolves drug identity once, in one dataset: clean_drug_identity. Curated holds the statistics, "
                 "signals, change events and monitoring. The Ontology sits on top, and the app reads only the "
@@ -438,8 +456,8 @@ def build(r):
         ("Click", "BACK TO DECK: slide 7, diagram 31 (ontology)"),
         ("Say", "\"Ten object types: Drug, Product, Label, Recall, Labeled Reaction, AE Stat, Signal, Change Event, "
                 "Source Status, Triage Decision. Only Triage Decision is written, and only through one create-only "
-                "Action. One mistake is on the picture on purpose: a duplicate Signal-to-Drug link added by "
-                "accident. Nothing uses it; it is left for the owner to delete.\""),
+                "Action. {{n:ontology.link_types_mssm}} link types. One we added by mistake, a duplicate Signal-to-Drug link, was deleted on "
+                "6 November after we checked nothing used it.\""),
         ("Proves", "Architecture"),
     ])
 
@@ -456,8 +474,9 @@ def build(r):
     stop(r, "H5", "Object Explorer: follow one flag to its source", "10:45–11:30", 45, [
         ("Click", "SWITCH: Cmd+4 (search done, NAION selected, Links tab); MSSM AE Stat; back; MSSM Drug, MSSM "
                   "Products, Reference Label (DailyMed link)"),
-        ("On screen", "Links: Drug of signal 1 (the duplicate) · MSSM AE Stat 1 · MSSM Drug 1. No Triage Decisions "
-                      "link, because the form was cancelled (with Submit: MSSM Triage Decisions 1)"),
+        ("On screen", "Links: MSSM AE Stat 1 · MSSM Drug 1. No Triage Decisions link, because the form was cancelled "
+                      "(with Submit: MSSM Triage Decisions 1). The fallback screenshot is from 5 Nov and also shows "
+                      "'Drug of signal', the duplicate link type deleted on 6 Nov"),
         ("Say", "\"The trust rule as data. From the signal to its statistics, the 2-by-2 table of counts. From the "
                 "drug to its products and the reference label, with the DailyMed link: the same path the page 1 "
                 "panel walks.\""),
@@ -477,8 +496,8 @@ def build(r):
                 "tagged.\""),
         ("Proves", "Data judgment"),
         ("Sources", "DQ36 and D022 (versions, deletes), D021 (roles), DQ34 and D020 (identity), D023 v2 (mass "
-                    "reports), D006 (Evans, proposed), D043 (synonyms), D016 v3 (buckets)"),
-    ], D + "32-handin-signal-pipeline-v2.png", "Diagram 32 v2: from one FAERS report to a ranked signal.", fig_h=200)
+                    "reports), D006 (Evans), D043 (synonyms), D016 v3 (buckets)"),
+    ], D + "32-handin-signal-pipeline-v3.png", "Diagram 32 v3: from one FAERS report to a ranked signal.", fig_h=200)
 
     stop(r, "H7", "The signal code (optional)", "12:30–12:50", 20, [
         ("Click", "Optional SWITCH: Cmd+5 (ontology_signals.py, lines 22 to 29). First cut if late"),
@@ -503,27 +522,30 @@ def build(r):
     ])
 
     stop(r, "H9", "AI reliability", "13:30–14:45", 75, [
-        ("Click", "Slide 10. Optional SWITCH: Cmd+6, ai_label_extraction.py lines 16 to 25, then the SQL panel "
-                  "(AI cache query already run)"),
+        ("Click", "Slide 10. Optional SWITCH: Cmd+6, ai_label_extraction.py lines 21 to 26 (GitHub mirror; check the "
+                  "line numbers in Foundry at rehearsal), then the SQL panel (AI cache query already run)"),
         ("On screen", "MODEL_ID \"claude-sonnet-5.5\" · PROMPT_VERSION \"p2\" · PARSER_VERSION \"x1\" · PILOT_SETIDS "
-                      "({{n:ai.pilot_labels}} oxycodone labels). SQL: {{n:ai.sections}} rows, n_reactions = n_grounded, "
-                      "from_cache true"),
-        ("Say", "\"Claude Sonnet 5.5 read {{n:ai.sections}} safety sections of {{n:ai.pilot_labels}} oxycodone pilot "
-                "labels and returned each reaction with an exact quote. Code finds every quote word for word: "
-                "{{n:ai.grounded}} of {{n:ai.reactions}}. On a small answer key, 35 items from the Boxed Warning and "
-                "Contraindications of those 2 labels, written by Claude before the run, it found 35 of 35 answer-key "
-                "items: F1 {{n:ai.gold_f1}} against a target of {{n:ai.d015_target_f1}}. No pharmacist has checked "
-                "the key, and the long sections are not scored. The AI has not read semaglutide labels, and today it "
-                "does not change the signal list. On the last rebuild: {{n:ai.model_calls_on_rebuild}} model "
-                "calls.\""),
-        ("Proves", "AI reliability; Optimization (O1)"),
-        ("Fallback", "This screenshot and hood-code-ai-label-extraction (also deck/assets/ai-cache-sql-crop.png)"),
-    ], S + "hood-ai-extractions-cache-sql.jpg", "SQL on ai_label_section_extractions: every section grounded and served from cache.")
+                      "({{n:ai.pilot_labels}} labels: 2 oxycodone + 3 semaglutide). SQL: {{n:ai.sections}} rows, "
+                      "n_reactions = n_grounded, from_cache true"),
+        ("Say", "\"Claude Sonnet 5.5 read {{n:ai.sections}} safety sections of {{n:ai.pilot_labels}} labels, two for "
+                "oxycodone and the three semaglutide labels behind NAION, and returned each reaction with an exact "
+                "quote. Code finds every quote word for word: {{n:ai.grounded}} of {{n:ai.reactions}}. On a small "
+                "answer key, 35 items from the Boxed Warning and Contraindications of the 2 oxycodone labels, written "
+                "by Claude before the run, it found 35 of 35 answer-key items: F1 {{n:ai.gold_f1}} against a target "
+                "of {{n:ai.d015_target_f1}}. No pharmacist has checked the key; the long sections and the semaglutide "
+                "labels are not scored. The AI does not change the signal list; its value is the quotes you saw on "
+                "page 1. Adding the semaglutide labels cost {{n:ai.d041_v2.model_calls}} model calls once; the "
+                "forced rebuild after it: {{n:ai.model_calls_on_rebuild}}.\""),
+        ("Proves", "AI reliability; Optimization (O1, O1b)"),
+        ("Fallback", "This screenshot (captured 5 Nov, before D041 v2: it shows the 9 oxycodone sections; live SQL now "
+                     "returns {{n:ai.sections}}) and hood-code-ai-label-extraction (also deck/assets/ai-cache-sql-crop.png)"),
+    ], S + "hood-ai-extractions-cache-sql.jpg", "SQL on ai_label_section_extractions on 5 Nov (v1 pilot, before D041 v2): every section grounded and served from cache.")
 
     stop(r, "H10", "Monitoring", "14:45–15:30", 45, [
         ("Click", "Slide 11. Optional SWITCH: Cmd+5, SQL panel (monitoring query already run), or Cmd+7, Health tab"),
         ("On screen", "faers.reporter_type_blank **warn**; ai.grounded_rate 1 pass; ai.section_errors 0 pass; "
-                      "ai.cache_hit_rate 1; key checks pass. Health tab: Build status and Primary key Passed"),
+                      "ai.cache_hit_rate (info: {{n:monitoring.ai_cache_hit_rate_d041_v2_build}} in the D041 v2 build, "
+                      "1 when no label text changed); key checks pass. Health tab: Build status and Primary key Passed"),
         ("Say", "\"Every build appends {{n:monitoring.checks_per_build}} checks: keys, row counts, freshness, AI "
                 "grounding, cache hits; plus {{n:monitoring.data_health_checks}} Foundry Data Health checks. It "
                 "caught two real shifts: reporter type blank went from {{n:monitoring.reporter_type_blank_q1|.0%}} to "
@@ -543,7 +565,7 @@ def build(r):
                 "{{n:optimization.O3.before_downloads}} XML downloads to {{n:optimization.O3.after_downloads}}; the "
                 "index pages are still pulled every build. Helped. O3a, parsing fewer columns: "
                 "{{n:optimization.O3a.local_run_before_s|raw}} s to {{n:optimization.O3a.local_run_after_s}} s, "
-                "locally; reverted. Partitioning: none in the pilot (D048, proposed); we revisit at 8 FAERS quarters "
+                "locally; reverted. Partitioning: none in the pilot (D048); we revisit at 8 FAERS quarters "
                 "or a 5-minute build. Each timing is one run.\""),
         ("Proves", "Optimization (measured, failures included)"),
     ])
@@ -581,8 +603,8 @@ def build(r):
         ("Say", "\"The biggest gap is a named pharmacist. Today only Claude has checked the synonym bands, the answer "
                 "key and the ranked signals. Claude prepares an evidence packet; the pharmacist decides; a "
                 "create-only Action records who, when and on which evidence. Then schedules, live drift over three "
-                "to four weeks, and a health page. Widening the AI to the semaglutide labels is the owner's next "
-                "decision (D041 v2, not written yet).\""),
+                "to four weeks, and a health page. Then score the long label sections with that pharmacist, and "
+                "widen the AI to the other drugs' labels.\""),
         ("Proves", "Communication"),
     ])
 
@@ -591,8 +613,8 @@ def build(r):
         ("Say", "\"It answers her three questions, and every flag traces to its source: the label versions searched "
                 "and the FDA recall record open in one click; the FAERS case reports are reachable by query, not yet "
                 "from her screen. It is built to be extended, and "
-                "we sped up only what we measured. And we say what is not proven yet, including that the AI has not "
-                "read the hero drug's labels.\""),
+                "we sped up only what we measured. And we say what is not proven yet, including that no pharmacist has "
+                "scored the AI or the synonym table.\""),
         ("Proves", "Communication"),
     ])
 
@@ -620,15 +642,17 @@ def build(r):
     r.p("A reviewer is likely to ask these (from `reviews/rubric-check.md`). Each answer is said honestly, and each "
         "has a place to click.")
     r.table(["Question", "Answer", "Where to show it"], [
-        ("Your AI read two labels and does not change the list. What is it doing, and how often is it wrong?",
-         "On purpose, the AI is the evidence layer today, not the decision layer. It has read 0 semaglutide labels, "
-         "so NAION is not in label from the exact-text and synonym checks. Every AI quote is found word for word "
-         "({{n:ai.grounded}} of {{n:ai.reactions}}); on the 35-item Claude-written key (2 oxycodone labels, Boxed "
-         "Warning + Contraindications, no pharmacist yet) it found 35 of 35 answer-key items, F1 {{n:ai.gold_f1}}. "
-         "Widening to semaglutide is a D041 v2 decision for the owner: first a pharmacist-scored sample of the long "
-         "sections, then widen",
-         "Page 1 NAION: labels also read by AI 0. Tab 6: PILOT_SETIDS (line 22). Q&A SQL on "
-         "ontology_labeled_reactions: term, grounding, quote. Deck slide 10"),
+        ("Your AI reads five labels and does not change the list. What is it doing, and how often is it wrong?",
+         "On purpose, the AI is the evidence layer today, not the decision layer. It reads the 3 semaglutide "
+         "labels behind NAION (D041 v2) and 2 oxycodone labels; its quotes are on page 1. For NAION it found "
+         "diabetic-retinopathy terms and no optic-nerve term, agreeing with text and synonyms. Every AI quote is "
+         "found word for word ({{n:ai.grounded}} of {{n:ai.reactions}}); on the 35-item Claude-written key (2 "
+         "oxycodone labels, Boxed Warning + Contraindications, no pharmacist yet) it found 35 of 35 answer-key "
+         "items, F1 {{n:ai.gold_f1}}. The semaglutide sections are not scored. Next: a pharmacist-scored sample "
+         "of the long sections",
+         "Page 1 NAION: labels also read by AI {{n:app.labels_read_by_ai_naion}} and the table *What the AI read "
+         "in these labels*. Tab 6: PILOT_SETIDS. Q&A SQL on ontology_labeled_reactions: term, grounding, quote. "
+         "Deck slide 10"),
         ("Liraglutide's top 'unlabeled' signal is the disease it treats.",
          "Yes: 'Diabetic metabolic decompensation', an indication term (DQ06), left and named. D016 v3 tags some "
          "efficacy words, not this one. With another month: an indication-term list per drug; until then the "
@@ -657,7 +681,7 @@ def build(r):
          "only if label counts change", "page 3 history"),
         ("Recall status change", "card 2, page 2; one build-dated 'status' event", "n/a", "page 3 history"),
         ("Triage decision", "one Ontology object; nothing else; cannot be deleted", "stores it", "form, Cancel"),
-        ("Prompt or model version", "cache key; all pilot sections re-sent", "only if AI label count changes", "code"),
+        ("Prompt or model version", "cache key; all {{n:ai.sections}} AI sections re-sent", "only if AI label count changes", "code"),
         ("Workshop variable", "that card only; no build", "n/a", "definition only"),
     ], widths=[1.8, 2.6, 1.3, 1.3])
     r.note("The decision is not edited and stays linked to its signal (the link uses the signal key). It keeps the "
@@ -665,8 +689,8 @@ def build(r):
            "and the change feed does not watch the evaluation id. A bucket change keeps the id. If the signal leaves "
            "(now in the label), the decision stays in Object Explorer but no longer shows on page 1.",
            title="What happens to an existing triage decision when the evaluation id changes")
-    r.figure(D + "37-handin-ripple-v2.png", "Ripple map (diagram 37 v2): change here, changes there.",
-             source="docs/diagrams/png/37-handin-ripple-v2.png", max_height=300)
+    r.figure(D + "37-handin-ripple-v3.png", "Ripple map (diagram 37 v3): change here, changes there.",
+             source="docs/diagrams/png/37-handin-ripple-v3.png", max_height=300)
 
     r.gate("Demo ready", [
         ("Required evidence", "Two rehearsal passes done (tech run, dress run) with measured seconds per stop; every "

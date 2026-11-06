@@ -3,6 +3,9 @@
 // Every number on a slide is read from docs/11-handin/numbers.json (captured from Foundry at the baseline gate).
 // Pictures: docs/diagrams/png/30-37 (hand-in set), docs/11-handin/screens/*.jpg, and three crops in ./assets
 // (made from those same files; see slide_explanations.md "Assets").
+// Refresh 2026-11-06: D041 v2 (AI reads 5 labels incl. semaglutide; page-1 AI quotes, Workshop v0.10.0; timings were
+// measured on v0.9.0), 12 decisions accepted in one batch, duplicate link deleted; diagrams 30 v3, 31 v2, 32 v3, 33 v3,
+// 35 v2, 36 v3, 37 v3, 38 v2 (img() calls use their real pixel sizes).
 // Agenda (binding): docs/11-handin/AGENT-BRIEF.md "The 20-minute demo". Main slides 1-16, backup divider 17, backups B1-B12 = 18-29.
 // Style: BlueJay midterm v0.4 (evidence pills, status bands, backups) in the hand-in palette (tools/handin/style.py).
 const path = require("path");
@@ -26,6 +29,7 @@ const mmss = (s) => `${Math.floor(s / 60)} m ${s % 60} s`;
 const frac = (s) => s.split("/").map(Number); // "35/37" -> [35, 37]
 const ratio = (a, b, d = 2) => (a / b).toFixed(d);
 const capDate = N._meta.captured_at.slice(0, 10);
+const D2 = AI.d041_v2, V1 = AI.v1_pilot, LCS = SG.label_check_stats;
 const [recN, recD] = frac(AI.gold_recall_strict);
 const [p1N] = frac(AI.gold_recall_strict_p1);
 const [precN, precD] = frac(AI.gold_precision_upper);
@@ -51,7 +55,7 @@ const EVID = { OBSERVED: [C.tealPillF, C.tealPillI], DERIVED: ["E3E8EE", C.ink],
   DESIGNED: [C.stoneF, C.stoneI], "AI OUTPUT": [C.violetF, C.violetI] };
 // Visual system 2: EXECUTION STATUS (white band, coloured border, square corners; dashed = not built / not accepted)
 const STATUS = { TESTED: ["BUILT · TESTED IN FOUNDRY", C.greenE, "solid"], PLANNED: ["PLANNED — NOT BUILT", C.amberE, "dash"],
-  PROPOSED: ["DECISION PROPOSED — NOT YET ACCEPTED", C.red, "dash"], PARTLY: ["BUILT · PARTLY MEASURED", C.amberE, "solid"] };
+  PROPOSED: ["DECISION PROPOSED — NOT YET ACCEPTED", C.red, "dash"], ACCEPTED: ["DECISIONS ACCEPTED · 6 NOV 2026", C.greenE, "solid"], PARTLY: ["BUILT · PARTLY MEASURED", C.amberE, "solid"] };
 
 const pres = new pptxgen();
 pres.layout = "LAYOUT_WIDE"; // 13.33 x 7.5 in
@@ -217,24 +221,24 @@ lead(s, "One look answers all three questions. The table shows how old each sour
 live(s, "Workshop module MSSM Safety Officer · tab “Morning brief” (page 0). Screenshot = fallback if the app is slow.");
 let h = img(s, SCR("app-0-morning-brief.jpg"), 0.5, 2.15, 7.4, 1425, 840);
 evid(s, "OBSERVED", 0.5, 2.25 + h, 1.15);
-txt(s, `Timed (browser script, View mode): brief on screen in ${TM.morning_brief_load} s; page switches ${switchMin}–${switchMax} s. A human two-minute walk-through has not been run.`, { x: 1.75, y: 2.2 + h, w: 6.15, h: 0.4, fontSize: 10.5, color: C.ink, valign: "middle" });
+txt(s, `Timed on v0.9.0 (browser script, View mode): brief on screen in ${TM.morning_brief_load} s; page switches ${switchMin}–${switchMax} s. A human two-minute walk-through has not been run.`, { x: 1.75, y: 2.2 + h, w: 6.15, h: 0.4, fontSize: 10.5, color: C.ink, valign: "middle" });
 tile(s, 8.4, 2.15, 4.43, 1.12, fmt(SG.ranked), "signals not in the label, ranked: a review queue, not findings", "teal", "OBSERVED");
 tile(s, 8.4, 3.37, 4.43, 1.12, fmt(RC.active), `active recalls (status Ongoing) of ${fmt(RC.total)} recalls for our ${SC.drugs_formulary} drugs`, "teal", "OBSERVED");
 tile(s, 8.4, 4.59, 4.43, 1.12, fmt(CH.last_30_days), "change events in the last 30 days (not “since yesterday”; page 3 narrows to “since my last review”)", "teal", "OBSERVED");
 card(s, 8.4, 5.81, 4.43, 0.96, "Data as of",
   `FAERS through 2026Q2 (freshness check: ${MO.faers_age_days} days old); openFDA ${MO.openfda_age_days} days old at capture. Our pipeline refreshes when a build runs: no schedule yet.`, "amber", { t: { fontSize: 10 } });
-source(s, `numbers.json (signals, recalls, changes, monitoring, app.timing_s), ${capDate}; screens/app-0-morning-brief.jpg; D045 proposed. The 30-day count is live.`);
+source(s, `numbers.json (signals, recalls, changes, monitoring, app.timing_s; timed on v0.9.0, app now ${APP.workshop_version}), ${capDate}; screens/app-0-morning-brief.jpg; D045. The 30-day count is live.`);
 
 // 4 LIVE: NOT IN LABEL                                                                     3:00–6:00
 s = content("Not in label: from one flag to its evidence to a saved decision", "As the safety officer (live)", "Application · AI reliability", "3:00–6:00 · app page 1",
   `NAION a=${NA.a}, PRR ${NA.prr} (95% CI ${NA.prr_ci_low}–${NA.prr_ci_high}), chi2 ${NA.chi2_yates}.`);
 lead(s, "NAION is semaglutide's top-ranked signal. Every number in its record traces to FAERS rows and the labels searched.");
-live(s, "Page 1 → name the noise → semaglutide → NAION → Ozempic v20 on DailyMed, find “optic” → Triage.");
-h = img(s, SCR("app-1c-labels-searched-naion.jpg"), 0.5, 2.15, 7.0, 1425, 840);
+live(s, "Page 1 → name the noise → semaglutide → NAION → Ozempic v20 on DailyMed, find “optic” → AI quotes → Triage.");
+h = img(s, SCR("app-1e-ai-quotes-panel-naion.jpg"), 0.5, 2.15, 7.0, 1512, 806);
 const steps4 = [
   [B("Flag "), T(`Filter to semaglutide; rank is within each drug. NAION (FAERS term “${NA.reaction}”), rank ${NA.rank}: sudden vision loss from poor blood flow to the optic nerve.`)],
   [B("Evidence "), T(`${fmt(NA.a)} of ${fmt(NA.all_reports_drug)} semaglutide reports name NAION. PRR ${NA.prr} (95% CI ${NA.prr_ci_low}–${NA.prr_ci_high}).`)],
-  [B("Trace "), T(`${APP.labels_searched_naion} labels searched (Ozempic v20, Wegovy v19, oral v14): none mention it (exact text + synonyms; AI read 0). Open Ozempic v20 on DailyMed, find “optic”.`)],
+  [B("Trace "), T(`${APP.labels_searched_naion} labels searched (Ozempic v20, Wegovy v19, oral v14): no text or synonym match. Open Ozempic v20 on DailyMed, find “optic”. The AI read all ${APP.labels_read_by_ai_naion}: retinopathy yes, optic nerve no.`)],
   [B("Decide "), T("“Triage this signal”: decision saved with reviewer and time, never overwritten. Only the project owner can submit today.")]];
 steps4.forEach((st, i) => {
   const y = 2.15 + i * 0.71;
@@ -247,7 +251,7 @@ card(s, 7.75, 6.2, 5.08, 0.72, "Not proof of harm; the 394 reports do not open f
 txt(s, "PRR (proportional reporting ratio): how many times more common this reaction is among the drug's reports than among other drugs' reports — a reporting pattern, not risk. Evans rule: at least 3 reports, PRR ≥ 2, χ² ≥ 4.",
   { x: 1.75, y: 2.2 + h, w: 5.75, h: 0.62, fontSize: 10, color: C.gray });
 evid(s, "OBSERVED", 0.5, 2.25 + h, 1.15);
-source(s, "numbers.json signals.naion, app; screens/app-1c-labels-searched-naion.jpg; known positive: EMA/PRAC 6 Jun 2025; WHO 27 Jun 2025 (DECISIONS learning 2026-11-05).");
+source(s, `numbers.json signals.naion, app; screens/app-1e-ai-quotes-panel-naion.jpg (Workshop ${APP.workshop_version}); A019; known positive: EMA/PRAC 6 Jun 2025; WHO 27 Jun 2025 (DECISIONS learning 2026-11-05).`);
 
 // 5 LIVE: RECALLS + WHAT CHANGED                                                           6:00–7:30
 s = content("Recalls, and what changed since my last review", "As the safety officer (live)", "The application", "6:00–7:30 · app pages 2–3");
@@ -262,15 +266,15 @@ card(s, 6.78, yb5, 6.05, 6.9 - yb5, `Question 3 · ${fmt(CH.total)} dated change
   `${fmt(CH.recall_reported)} recalls reported, ${fmt(CH.recall_terminated)} terminated, ${fmt(CH.label_version_effective)} label versions effective (the ${fmt(CH.label_version_effective)} of ${fmt(N.labels.total)} label versions that carry an effective date), dated by the source; “past month” = the brief's ${CH.last_30_days}. A label row says a new version took effect, not what changed in it. Signals change only with each FAERS quarter (~${MO.faers_age_days} days behind).`, "teal", { t: { fontSize: 10.5 } });
 evid(s, "OBSERVED", 5.3, yb5 + 0.06, 1.15);
 evid(s, "OBSERVED", 11.58, yb5 + 0.06, 1.15);
-source(s, "numbers.json recalls, changes, monitoring; 658 products: foundry/ontology/README.md (MSSM Product); screens/app-2-recalls.jpg, app-3b-…jpg; D045 (proposed).");
+source(s, "numbers.json recalls, changes, monitoring; 658 products: foundry/ontology/README.md (MSSM Product); screens/app-2-recalls.jpg, app-3b-…jpg; D045.");
 
 // 6 ARCHITECTURE                                                                           7:30–9:30
 pres.addSection({ title: "Under the hood" });
 s = content("Architecture: drug identity resolved once, reused everywhere", "Under the hood", "Architecture", "7:30–9:30 · diagram 38 + Lineage");
 lead(s, "Four public sources → raw → clean (identity resolved once) → curated → Ontology → Workshop app, with write-back.");
-h = img(s, DIA("38-handin-architecture-onepage-v1.png"), 0.5, 1.62, 5.6, 2220, 2034);
+h = img(s, DIA("38-handin-architecture-onepage-v2.png"), 0.5, 1.62, 5.6, 2220, 2034);
 const layers = [["Raw", "Source replies kept as received: FAERS quarter files, openFDA JSON, DailyMed XML, RxNorm."],
-  ["Clean", "clean_drug_identity maps every FAERS drug name to an RxNorm ingredient (RxCUI), then product (application number) and package (NDC). Done once; everyone joins on it (D020; D027 proposed)."],
+  ["Clean", "clean_drug_identity maps every FAERS drug name to an RxNorm ingredient (RxCUI), then product (application number) and package (NDC). Done once; everyone joins on it (D020, D027)."],
   ["Curated", "Statistics, signals, change events, monitoring: the tables the app needs."],
   ["Ontology", "Business objects on top of curated tables: Drug, Label, Recall, Signal …"],
   ["Workshop", "The app; its button writes a decision back through an Action."]];
@@ -284,30 +288,30 @@ txt(s, "Foundry terms: a dataset is a versioned table; a transform is the Python
 status(s, "TESTED", 6.35, yy + 0.7, 2.6);
 cue(s, "Data Lineage: raw → clean → curated graph", 6.35, yy + 1.1, 6.48);
 link(s, "Fallback screenshot: B12 →", BK.B12, { x: 9.8, y: yy + 1.5, w: 3.0, h: 0.28 });
-source(s, "diagrams/png/38-handin-architecture-onepage-v1.png (from the one-page architecture note); detailed flow: diagram 30 v2; foundry/README.md; DECISIONS D020, D027 (proposed), D036.");
+source(s, "diagrams/png/38-handin-architecture-onepage-v2.png (from the one-page architecture note); detailed flow: diagram 30 v3; foundry/README.md; DECISIONS D020, D027, D036.");
 
 // 7 ONTOLOGY                                                                               9:30–11:30
 s = content("Ontology: objects, links, and one create-only Action", "Under the hood", "Architecture", "9:30–11:30 · diagram 31 + OE");
 lead(s, "The app reads objects, not tables. Links let the officer walk from a signal to its counts, its drug, its products and its labels.");
-h = img(s, DIA("31-handin-ontology-v1.png"), 0.5, 1.62, 8.0, 4752, 2688);
+h = img(s, DIA("31-handin-ontology-v2.png"), 0.5, 1.62, 6.9, 4752, 3162);
 bullets(s, [
   [B("Object type: "), T("a business thing backed by one curated dataset (e.g. MSSM Signal).")],
   [B("Link type: "), T("a typed relation with cardinality, e.g. many signals : 1 drug.")],
   [B("Action: "), T("the only way to write. Create MSSM Triage Decision is create-only: past decisions are never edited.")],
   [B("Survives rebuilds: "), T(`decisions live in their own object, so rebuilding signals does not erase them (${APP.triage_decisions} saved so far).`)],
 ], { x: 8.75, y: 1.62, w: 4.08, h: 3.2, fontSize: 12 });
-card(s, 8.75, 4.88, 4.08, 1.05, "Mistake, left for the owner", "A duplicate Signal → Drug link was added by mistake in step 11. Nothing uses it; it should be deleted.", "amber", { t: { fontSize: 10.5 } });
+card(s, 8.75, 4.88, 4.08, 1.05, `${N.ontology.link_types_mssm} link types`, "History: a duplicate Signal → Drug link added in step 11 was deleted on 6 Nov after checking nothing used it.", "stone", { t: { fontSize: 10.5 } });
 cue(s, "Ontology Manager → MSSM Signal; Object Explorer → NAION → Links", 0.5, 1.75 + h, 8.0);
 status(s, "TESTED", 8.75, 6.05, 2.6);
-source(s, "diagrams/png/31-handin-ontology-v1.png; foundry/ontology/README.md; DECISIONS D040, D042; numbers.json app.triage_decisions.");
+source(s, "diagrams/png/31-handin-ontology-v2.png; foundry/ontology/README.md; DECISIONS D040, D042; numbers.json app.triage_decisions, ontology.");
 
 // 8 SIGNAL PIPELINE                                                                        11:30–12:50
 s = content("From one FAERS report to a ranked signal", "Under the hood", "Data judgment · AI reliability", "11:30–12:50 · diagram 32");
 lead(s, "Clean the reports (A), count and test (B), check the label three ways (C), then sort the queue (D).");
-h = img(s, DIA("32-handin-signal-pipeline-v2.png"), 0.665, 1.6, 12.0, 2352, 963);
-txt(s, "A: D022 latest case version + deletes · D021 suspect roles · D020 exact ingredient · D023 v2 duplicates and mass reports.   B: 2×2 table → PRR + Evans (D006, proposed).   C: AI term with a quote (D041) → exact text (D037, proposed) → reviewed synonym (D043); same outcome in any order.   D: buckets (D016 v3) decide ranked / possibly in label / tagged / caution.",
+h = img(s, DIA("32-handin-signal-pipeline-v3.png"), 0.665, 1.6, 12.0, 4752, 1941);
+txt(s, `A: D022 latest case version + deletes · D021 suspect roles · D020 exact ingredient · D023 v2 duplicates and mass reports.   B: 2×2 table → PRR + Evans (D006).   C: AI term with a quote (D041 v2, ${fmt(LCS.ai_term_exact)} stats) → exact text (D037, ${fmt(LCS.label_text)}) → reviewed synonym (D043, ${LCS.synonym_high} high, ${LCS.synonym_medium} medium); same outcome in any order.   D: buckets (D016 v3) decide ranked / possibly in label / tagged / caution.`,
   { x: 0.5, y: 1.66 + h, w: 12.33, h: 6.98 - (1.66 + h), fontSize: 10, color: C.ink });
-source(s, "diagrams/png/32-handin-signal-pipeline-v2.png (NAION counts from the local run, equal to Foundry, A014); foundry/pipelines/*/README.md.");
+source(s, "diagrams/png/32-handin-signal-pipeline-v3.png (NAION counts from the local run, equal to Foundry, A014; label-check counts from Foundry after D041 v2, numbers.json signals.label_check_stats); foundry/pipelines/*/README.md.");
 
 // 9 QUEUE                                                                                  12:50–13:30
 s = content(`${fmt(SG.ranked)} ranked signals is a review queue, not ${fmt(SG.ranked)} findings`, "Under the hood", "Data judgment", "12:50–13:30 · slide");
@@ -330,11 +334,11 @@ source(s, `numbers.json signals (ae_stats, total, ranked, ranked_history, not_in
 // 10 AI RELIABILITY                                                                        13:30–14:45
 pres.addSection({ title: "AI, monitoring, optimization" });
 s = content("AI extraction: quotes are real; accuracy on a small key", "AI, monitoring, optimization", "AI reliability", "13:30–14:45 · eval + AI dataset");
-lead(s, `Claude Sonnet 5.5 (via AIP) read ${AI.sections} label sections (${AI.pilot_labels} pilot labels), listing each side effect with an exact quote.`);
+lead(s, `Claude Sonnet 5.5 (via AIP) read ${AI.sections} label sections (${AI.pilot_labels} labels: 2 oxycodone + 3 semaglutide), listing each side effect with an exact quote.`);
 tile(s, 0.5, 1.7, 2.95, 1.55, `${AI.grounded} / ${AI.reactions}`, `quotes found word-for-word, all ${AI.sections} sections (no invented quotes)`, "green", "OBSERVED");
 tile(s, 3.6, 1.7, 2.95, 1.55, `${recN} / ${recD}`, `answer-key items found (first prompt: ${p1N} of ${recD})`, "teal", "OBSERVED");
-tile(s, 6.7, 1.7, 2.95, 1.55, `F1 ${AI.gold_f1}`, `only on ${recD} items (${AI.pilot_labels} oxycodone labels, short sections, Claude-written key); proposed target ${AI.d015_target_f1} (D015)`, "teal", "DERIVED");
-tile(s, 9.8, 1.7, 3.03, 1.55, `${AI.model_calls_on_rebuild} calls`, `on rebuild: ${AI.from_cache_on_rebuild} / ${AI.sections} sections served from cache`, "violet", "OBSERVED");
+tile(s, 6.7, 1.7, 2.95, 1.55, `F1 ${AI.gold_f1}`, `only on ${recD} items (${V1.labels} oxycodone labels, short sections, Claude-written key); target ${AI.d015_target_f1} (D015)`, "teal", "DERIVED");
+tile(s, 9.8, 1.7, 3.03, 1.55, `${AI.model_calls_on_rebuild} calls`, `on forced rebuild: ${AI.from_cache_on_rebuild} / ${AI.sections} from cache (adding semaglutide: ${D2.model_calls} calls once)`, "violet", "OBSERVED");
 card(s, 0.5, 3.38, 4.0, 2.3, "How we know", "", "white", { t: { fontSize: 11.5 } });
 bullets(s, [
   [B("Grounding: "), T("code checks each quote is in that section's text. Catches invented text.")],
@@ -344,21 +348,21 @@ bullets(s, [
 card(s, 4.67, 3.38, 4.0, 2.3, "What this does not show", "", "amber", { t: { fontSize: 11.5 } });
 bullets(s, [
   T(`A small key (${recD} reactions, short sections only), written by Claude; no pharmacist has checked it.`),
-  T("The long sections (Warnings and Precautions, Adverse Reactions) are not scored."),
+  T("The long sections and the semaglutide labels are not scored."),
   T("A real quote can still be the wrong item. Grounding is not correctness."),
 ], { x: 4.75, y: 3.68, w: 3.85, h: 2.0, fontSize: 10.5 });
-card(s, 8.84, 3.38, 3.99, 2.3, "Where the AI meets the screen: not yet", "", "amber", { t: { fontSize: 11.5 } });
+card(s, 8.84, 3.38, 3.99, 2.3, "Where the AI meets the screen", "", "green", { t: { fontSize: 11.5 } });
 bullets(s, [
-  T(`The AI read only the ${AI.pilot_labels} oxycodone pilot labels. For NAION the screen says “Labels also read by AI: 0”.`),
-  T("It does not change the signal list today; text matching already finds its terms."),
-  T("Why: we would not widen a model we cannot yet score independently (D041). Widening + a quote panel = D041 v2, your call."),
+  T(`D041 v2: it read the ${APP.labels_read_by_ai_naion} semaglutide labels. NAION: retinopathy terms, ${D2.optic_or_naion_terms_found_by_ai} optic-nerve terms.`),
+  T("Page 1 shows its quotes word for word (“What the AI read in these labels”)."),
+  T("It does not change the signal list: text matching already finds its terms."),
 ], { x: 8.92, y: 3.68, w: 3.85, h: 2.0, fontSize: 10.5 });
 status(s, "TESTED", 0.5, 5.78, 2.7);
 status(s, "PLANNED", 3.35, 5.78, 2.6);
 txt(s, "planned = pharmacist-labelled key incl. long sections", { x: 6.05, y: 5.78, w: 5.0, h: 0.3, fontSize: 10.5, color: C.amberI, valign: "middle" });
 cue(s, "Optional: ai_label_section_extractions in SQL (from_cache = true)", 0.5, 6.25, 6.6);
 link(s, "Details: B5 →", BK.B5, { x: 10.8, y: 6.3, w: 2.0, h: 0.3 });
-source(s, "numbers.json ai; eval/ai-eval-v1.md; DECISIONS D015 (target, proposed), D041; F1 computed from recall and precision.");
+source(s, "numbers.json ai (incl. ai.d041_v2); eval/ai-eval-v1.md; A019; DECISIONS D015 (target), D041 v2; F1 computed from recall and precision.");
 
 // 11 MONITORING                                                                            14:45–15:30
 s = content(`Monitoring: ${MO.checks_per_build} checks per build caught two real shifts`, "AI, monitoring, optimization", "AI reliability · monitoring", "14:45–15:30 · monitoring data");
@@ -377,7 +381,7 @@ card(s, 8.05, 5.05, 4.78, 1.15, "Honest limit", "Drift is a historical replay fr
 status(s, "TESTED", 0.5, 5.85, 2.7);
 cue(s, "monitoring_checks; signals → Health tab", 3.4, 5.83, 4.4);
 link(s, "Diagram: B9 →", BK.B9, { x: 10.8, y: 6.3, w: 2.0, h: 0.3 });
-source(s, `numbers.json monitoring; screens/hood-monitoring-checks-sql.jpg (cropped); DECISIONS D046 (proposed), D009, D025 (proposed); DQ38. ×${driftX} = ${MO.recalls_last4w} / ${MO.recalls_prev4w}.`);
+source(s, `numbers.json monitoring; screens/hood-monitoring-checks-sql.jpg (cropped, 5 Nov); DECISIONS D046, D009, D025; DQ38. ×${driftX} = ${MO.recalls_last4w} / ${MO.recalls_prev4w}.`);
 
 // 12 OPTIMIZATION                                                                          15:30–16:45
 s = content("Optimization log: four measured tries, two helped, two did not", "AI, monitoring, optimization", "Optimization", "15:30–16:45 · optimization log");
@@ -399,11 +403,11 @@ s.addChart(pres.charts.BAR, [
 evid(s, "OBSERVED", 0.5, 4.55, 1.15);
 evid(s, "DERIVED", 1.75, 4.55, 1.15);
 txt(s, "×, % computed from the two numbers", { x: 2.98, y: 4.53, w: 3.5, h: 0.3, fontSize: 10, color: C.gray, valign: "middle" });
-card(s, 0.5, 5.05, 2.95, 1.75, "Where it paid", "Skipping unchanged input: the AI cache (O1) and DailyMed XML reuse (O3, D047 proposed; fewer HTTP 429 risks).", "green", { t: { fontSize: 10.5 } });
+card(s, 0.5, 5.05, 2.95, 1.75, "Where it paid", `Skipping unchanged input: the AI cache (O1; O1b: 0 calls for ${AI.sections} sections) and DailyMed XML reuse (O3, D047; fewer HTTP 429 risks).`, "green", { t: { fontSize: 10.5 } });
 card(s, 3.58, 5.05, 2.95, 1.75, "Where it did not", "O2: at 2 quarters the kept state costs more than it saves. O3a: parsing is not the bottleneck; reverted.", "amber", { t: { fontSize: 10.5 } });
-card(s, 6.66, 5.05, 2.95, 1.75, "Partitioning: not done, on purpose", `Largest table ${fmt(F.case_reactions)} rows; clean builds ≤ ${OP.O2.full_rebuild_s} s. Revisit at 8+ quarters or a 5-minute build (D048, proposed).`, "stone", { t: { fontSize: 10.5 } });
+card(s, 6.66, 5.05, 2.95, 1.75, "Partitioning: not done, on purpose", `Largest table ${fmt(F.case_reactions)} rows; clean builds ≤ ${OP.O2.full_rebuild_s} s. Revisit at 8+ quarters or a 5-minute build (D048).`, "stone", { t: { fontSize: 10.5 } });
 card(s, 9.74, 5.05, 3.09, 1.75, "Caveats", "Each timing is one run. O3's baseline is an earlier build. O3a timed locally only.", "stone", { t: { fontSize: 10.5 } });
-source(s, "numbers.json optimization; docs/08-optimization-log/optimization-log.md (O1–O3a); DECISIONS D044 (accepted), D047, D048 (proposed).");
+source(s, "numbers.json optimization, ai; docs/08-optimization-log/optimization-log.md (O1, O1b, O2, O3, O3a); DECISIONS D044, D047, D048 (accepted).");
 
 // 13 INCREMENTAL FAERS                                                                     16:45–17:30
 s = content("Incremental FAERS: proven correct, but slower at two quarters", "AI, monitoring, optimization", "Optimization", "16:45–17:30 · diagram 33");
@@ -413,7 +417,7 @@ const y13 = 1.65 + h + 0.15;
 card(s, 0.5, y13, 4.0, 6.88 - y13, "Correct", `Same output as the full rebuild, row for row (EXCEPT ALL both ways = 0): ${fmt(F.cases_current)} cases, ${fmt(F.case_reactions)} reactions, ${fmt(F.drug_reaction_rows)} drug-reaction rows.`, "green", { t: { fontSize: 11.5 } });
 card(s, 4.67, y13, 4.0, 6.88 - y13, "Slower", `Adding Q2: state (three state datasets + one quarter log) ${OP.O2.state_s} s + outputs ${OP.O2.outputs_s} s = ${OP.O2.incremental_add_q2_s} s, vs ${OP.O2.full_rebuild_s} s full (×${o2slower}).`, "amber", { t: { fontSize: 11.5 } });
 card(s, 8.84, y13, 3.99, 6.88 - y13, "Next", "Re-measure at 4+ quarters, when re-reading history costs more. Try one build for state + outputs.", "stone", { t: { fontSize: 11.5 } });
-source(s, "diagrams/png/33-handin-incremental-faers-v2.png (FAERS panel, cropped); A015; numbers.json faers, optimization.O2. Full diagram: B2.");
+source(s, "diagrams/png/33-handin-incremental-faers-v2.png (FAERS panel, cropped; unchanged in v3); A015; numbers.json faers, optimization.O2. Full diagram (v3): B2.");
 
 // 14 DATA JUDGMENT                                                                         17:30–19:00
 pres.addSection({ title: "Judgment and next steps" });
@@ -424,8 +428,8 @@ s.addTable([
   ["FAERS sends new versions of old cases and deletes old cases in later quarters. Appending quarters creates phantom rows.",
     `Q2 replaced ${fmt(F.q2_cases_replaced)} Q1 cases and deleted ${fmt(F.q2_cases_deleted)}`, "Keep the latest version per case; apply deletes to the full history", "DQ36 · D022"],
   ["One patient filed by many companies; reports listing dozens of drugs inflate odd signals.", "Fold rule removes them from the main count (diagram 32)", "Person-key fold; reports with 30+ drugs leave the main count but stay as evidence; caution flag", "DQ37 · D023 v2"],
-  ["Reporter type went blank for most reports.", `${pct(MO.reporter_type_blank_q1)} → ${pct(MO.reporter_type_blank_q2)} blank, Q1 → Q2`, "Show “unknown”, do not guess; checked on every build", "DQ38 · D046 (proposed)"],
-  ["DailyMed answered HTTP 200 with the text “None” instead of a label.", `${OP.O3.after_downloads} of ${fmt(RAW.dailymed_labels)} labels`, "Keep the reply as received; mark has_xml = false; retry next build", "DQ42 · D047 (proposed)"],
+  ["Reporter type went blank for most reports.", `${pct(MO.reporter_type_blank_q1)} → ${pct(MO.reporter_type_blank_q2)} blank, Q1 → Q2`, "Show “unknown”, do not guess; checked on every build", "DQ38 · D046"],
+  ["DailyMed answered HTTP 200 with the text “None” instead of a label.", `${OP.O3.after_downloads} of ${fmt(RAW.dailymed_labels)} labels`, "Keep the reply as received; mark has_xml = false; retry next build", "DQ42 · D047"],
   [{ text: "Noise we left: indication terms count as reactions; reports spike after news or lawsuits.", options: { fill: { color: C.amberF } } }, { text: "Liraglutide's rank 1 is “Diabetic metabolic decompensation” (page 1)", options: { fill: { color: C.amberF } } }, { text: "Not handled; the pharmacist's triage decides. NAION's reporter split not measured", options: { fill: { color: C.amberF } } }, { text: "DQ06 · DQ04", options: { fill: { color: C.amberF } } }],
 ], Object.assign({ x: 0.5, y: 1.65, w: 8.4, colW: [3.0, 2.05, 2.35, 1.0], fontSize: 11, rowH: [0.38, 1.0, 1.0, 0.72, 0.72, 0.95] }, TB));
 card(s, 9.1, 1.65, 3.73, 2.4, "What we chose not to do", "", "stone", { t: { fontSize: 12 } });
@@ -455,7 +459,7 @@ loop.forEach(([hh, b], i) => {
 txt(s, `To review: ${fmt(SY.rows)} synonym rows, AI items from the long label sections, the top ranked signals per drug.`, { x: 0.5, y: 3.85, w: 8.9, h: 0.5, fontSize: 12, color: C.ink });
 card(s, 0.5, 4.5, 8.85, 1.1, "Rules", "No patient data in the loop (connectors are not covered by Anthropic's BAA, the HIPAA contract). Hide Claude's draft on a random sample to measure automation bias.", "amber", { t: { fontSize: 11.5 } });
 card(s, 9.6, 1.75, 3.23, 3.4, "Then", "", "white", { t: { fontSize: 12 } });
-bullets(s, ["Schedules: builds run on a timer", "Live drift over 3–4 weeks (D009), not only replay", "Workshop health page", "Re-measure incremental FAERS at 4+ quarters", `Widen AI extraction past the ${AI.pilot_labels} pilot labels`],
+bullets(s, ["Schedules: builds run on a timer", "Live drift over 3–4 weeks (D009), not only replay", "Workshop health page", "Score the long label sections with the pharmacist", `Widen AI extraction to the other drugs (today ${AI.pilot_labels} labels)`],
   { x: 9.7, y: 2.1, w: 3.05, h: 3.0, fontSize: 11.5 });
 status(s, "PLANNED", 9.6, 5.3, 3.23);
 evid(s, "ASSUMED", 9.6, 5.75, 1.15);
@@ -477,9 +481,8 @@ bullets(s, [
   "Parsing fewer columns (O3a) did not help; reverted.",
   "The AI does not change the signal list yet.",
   "Answer key written by Claude; pharmacist review pending.",
-  "A duplicate Signal → Drug link is left for the owner to delete.",
-  "D045 change feed, D046 monitoring, D047 XML reuse, D048 no partitioning: proposed.",
-  "The AI has not read the hero drug's labels; no quote panel on screen yet.",
+  "The semaglutide label sections are not scored (no answer key).",
+  "Machine timings are from v0.9.0; no human walk-through yet.",
 ], { x: 0.62, y: 3.7, w: 5.85, h: 3.05, fontSize: 12 });
 txt(s, "Questions: jump to a backup (type the slide number + Enter in slide show)", { x: 6.8, y: 3.3, w: 6.0, h: 0.35, fontSize: 12, bold: true, color: C.navy });
 const qa = [["Architecture · how to extend", "B1"], ["Optimization · full diagram", "B2"], ["Data judgment · identity rules", "B3"], ["Application · trace + write-back", "B4"],
@@ -489,7 +492,7 @@ qa.forEach(([lab, b], i) => {
   const col = i % 2, row = Math.floor(i / 2);
   link(s, `${b} (${BK[b]}) · ${lab}`, BK[b], { x: 6.8 + col * 3.0, y: 3.72 + row * 0.5, w: 2.95, h: 0.4, align: "left", fontSize: 11 });
 });
-source(s, "numbers.json optimization.O2; DECISIONS D045–D048 (proposed); foundry/ontology/README.md (duplicate link); eval/ai-eval-v1.md.");
+source(s, "numbers.json optimization.O2, app.timing_s; eval/ai-eval-v1.md (D041 v2 update); A019.");
 
 // =====================================================================================================
 // 17 BACKUP DIVIDER
@@ -512,12 +515,12 @@ s = backupTitle("B1", "How another engineer would extend it", "Architecture");
 lead(s, "Each kind of change has one place to make it. The rest follows by rebuild (see the ripple map, B7).");
 s.addTable([
   [hdr("I want to …"), hdr("Change this"), hdr("Where"), hdr("Decision")],
-  ["add a drug to the formulary", "the RxCUI list in clean_drug_identity, and its copies in the 4 raw pull files (raw pulls take no dataset inputs)", "clean_drug_identity.py + raw_*.py", "D018, D020, D027 (proposed), D038"],
+  ["add a drug to the formulary", "the RxCUI list in clean_drug_identity, and its copies in the 4 raw pull files (raw pulls take no dataset inputs)", "clean_drug_identity.py + raw_*.py", "D018, D020, D027, D038"],
   ["add a public source", "a raw pull that stores the reply as received, then a clean transform", "pipelines_raw_ingest → pipelines_clean", "D038, D039 (contracts)"],
   ["say a FAERS term is in the label", "a synonym row with a band (high / medium / rejected)", "label_synonyms.py", "D043"],
   ["stop ranking a kind of reaction", "a bucket keyword (tag, don't remove)", "ontology_signals.py", "D016 v3"],
-  ["change the statistical rule", "rule version in the signal key and evaluation id", "ontology_signals.py", "D006 (proposed), D042"],
-  ["add a check", "one row per check per build", "monitoring.py", "D046 (proposed)"],
+  ["change the statistical rule", "rule version in the signal key and evaluation id", "ontology_signals.py", "D006, D042"],
+  ["add a check", "one row per check per build", "monitoring.py", "D046"],
   ["show a new object in the app", "curated dataset → object type → Workshop widget", "Ontology Manager, Workshop", "D040"],
 ], Object.assign({ x: 0.5, y: 1.7, w: 12.33, colW: [2.9, 4.3, 3.13, 2.0], fontSize: 11.5, rowH: 0.5 }, TB));
 txt(s, "Layers: Data/raw → Data/clean → Data/curated → Ontology → Workshop. Names, grains and keys follow the conventions in A007 / D036.",
@@ -525,13 +528,13 @@ txt(s, "Layers: Data/raw → Data/clean → Data/curated → Ontology → Worksh
 source(s, "foundry/README.md; foundry/pipelines/*/README.md; foundry/ontology/README.md; docs/04-architecture/foundry-conventions; DECISIONS.");
 
 // B2 OPTIMIZATION — FULL DIAGRAM 33
-s = backupTitle("B2", "Incremental pieces in full (diagram 33 v2)", "Optimization");
+s = backupTitle("B2", "Incremental pieces in full (diagram 33 v3)", "Optimization");
 lead(s, "Both incremental pieces, both measured in Foundry: FAERS (O2, correct but slower) and DailyMed XML reuse (O3, faster).");
-h = img(s, DIA("33-handin-incremental-faers-v2.png"), 0.5, 1.6, 8.3, 4752, 2910);
-card(s, 9.05, 1.6, 3.78, 1.9, "O3 in numbers", `XML downloads ${fmt(OP.O3.before_downloads)} → ${OP.O3.after_downloads} (${fmt(OP.O3.reused)} reused); ${mmss(OP.O3.before_s)} → ${mmss(OP.O3.after_s)}. D047 proposed.`, "green", { t: { fontSize: 11 } });
-card(s, 9.05, 3.6, 3.78, 1.6, "O1 in tokens", `First run: ${fmt(AI.run1_tokens_prompt)} prompt + ${fmt(AI.run1_tokens_completion)} completion tokens. Rebuild with unchanged text: ${OP.O1.after_tokens}.`, "green", { t: { fontSize: 11 } });
+h = img(s, DIA("33-handin-incremental-faers-v3.png"), 0.5, 1.6, 8.3, 4752, 2910);
+card(s, 9.05, 1.6, 3.78, 1.9, "O3 in numbers", `XML downloads ${fmt(OP.O3.before_downloads)} → ${OP.O3.after_downloads} (${fmt(OP.O3.reused)} reused); ${mmss(OP.O3.before_s)} → ${mmss(OP.O3.after_s)}. D047 accepted.`, "green", { t: { fontSize: 11 } });
+card(s, 9.05, 3.6, 3.78, 1.6, "O1 in tokens", `First run (${V1.sections} sections): ${fmt(AI.run1_tokens_prompt)} + ${fmt(AI.run1_tokens_completion)} tokens. Rebuild with unchanged text: ${OP.O1.after_tokens}. O1b: same at ${AI.sections} sections.`, "green", { t: { fontSize: 11 } });
 card(s, 9.05, 5.3, 3.78, 1.5, "Freshness unchanged", "The DailyMed index is still pulled every build, so a new label version is fetched the same day.", "white", { t: { fontSize: 11 } });
-source(s, "diagrams/png/33-handin-incremental-faers-v2.png; optimization-log.md O1, O3; numbers.json ai, optimization.");
+source(s, "diagrams/png/33-handin-incremental-faers-v3.png; optimization-log.md O1, O1b, O3; numbers.json ai, optimization.");
 
 // B3 DATA JUDGMENT — IDENTITY AND FAERS RULES
 s = backupTitle("B3", "Drug identity and FAERS counting rules", "Data judgment");
@@ -542,7 +545,7 @@ s.addTable([
   ["D021 suspect roles", "The secondary-suspect role often repeats the primary drug; primary-only drops real reports (DQ35)", "Suspect = primary + secondary + interacting; count each ingredient once per report", "Accepted (G6)"],
   ["D022 versions + deletes", "New case versions and deletes arrive in later quarters (DQ36)", `Keep the latest version; apply deletes to full history (Q2: ${fmt(F.q2_cases_replaced)} replaced, ${fmt(F.q2_cases_deleted)} deleted)`, "Accepted (G6)"],
   ["D023 v2 duplicates", "Same patient filed by many companies; mass polypharmacy re-filings (DQ37)", "Person-key fold; reports with 30+ drugs out of the main count, kept as evidence with a caution", "Accepted"],
-  ["D037 + D043 label check", "“Is it in the label?” is a string question; synonyms differ", "AI term with a code-found quote, exact term or US spelling in 6 safety sections, reviewed synonym (code order)", "D037 proposed (built and running; owner acceptance pending); D043 accepted"],
+  ["D037 + D043 label check", "“Is it in the label?” is a string question; synonyms differ", "AI term with a code-found quote, exact term or US spelling in 6 safety sections, reviewed synonym (code order)", "Accepted (D037 on 6 Nov)"],
 ], Object.assign({ x: 0.5, y: 1.7, w: 12.33, colW: [2.1, 4.1, 4.4, 1.73], fontSize: 11, rowH: 0.75 }, TB));
 source(s, "DECISIONS D020–D023 (accepted for the pilot via D039 G6), D023 v2, D037, D043; data-issues-register DQ34–DQ37; numbers.json faers.");
 
@@ -553,63 +556,63 @@ h = img(s, SCR("app-1b-triage-action-form.jpg"), 0.5, 1.65, 6.05, 1425, 840);
 img(s, SCR("hood-object-explorer-naion-links.jpg"), 6.78, 1.65, 6.05, 1388, 868);
 const y4 = 1.65 + h + 0.2;
 card(s, 0.5, y4, 6.05, 6.88 - y4, "Write-back", `Create-only Action → MSSM Triage Decision. Reviewer and time come from the system. ${APP.triage_decisions} decisions saved; both survived a full rebuild at the baseline gate. App: ${APP.pages} pages, Workshop ${APP.workshop_version}.`, "green", { t: { fontSize: 11.5 } });
-card(s, 6.78, y4, 6.05, 6.88 - y4, "Trace by hand", "At the baseline gate, 5 random ranked signals were re-counted from FAERS rows and their reference labels re-searched: all matched (baseline-gate.md). Object Explorer: Signal → AE Stat → Drug.", "teal", { t: { fontSize: 11.5 } });
+card(s, 6.78, y4, 6.05, 6.88 - y4, "Trace by hand", "At the baseline gate, 5 random ranked signals were re-counted from FAERS rows and their reference labels re-searched: all matched (baseline-gate.md). Object Explorer: Signal → AE Stat → Drug. (Screens from 5 Nov: the form shows NAION's old evaluation id, and 'Drug of signal' is the duplicate link deleted on 6 Nov.)", "teal", { t: { fontSize: 11 } });
 source(s, "screens/app-1b-triage-action-form.jpg, hood-object-explorer-naion-links.jpg; docs/11-handin/baseline-gate.md; numbers.json app.");
 
 // B5 AI RELIABILITY — DETAILS
 s = backupTitle("B5", "AI evaluation details", "AI reliability");
 lead(s, `The first prompt returned long phrases; prompt p2 asks for single terms. Answer-key items found: ${p1N} of ${recD} → ${recN} of ${recD}.`);
 h = img(s, ASSET("ai-cache-sql-crop.png"), 0.5, 1.65, 8.0, 997, 190);
-txt(s, "ai_label_section_extractions: one row per label section; status ok, every reaction grounded, from_cache = true on rebuild.", { x: 0.5, y: 1.7 + h, w: 8.0, h: 0.3, fontSize: 10, color: C.gray });
-card(s, 8.75, 1.65, 4.08, 2.1, "Numbers", `Grounded ${AI.grounded}/${AI.reactions} (all ${AI.sections} sections). On the ${recD}-item key (${AI.pilot_labels} oxycodone labels, short sections, Claude-written): found ${recN} of ${recD}; precision ≥ ${AI.gold_precision_upper}; F1 ${AI.gold_f1} vs target ${AI.d015_target_f1}.`, "teal", { t: { fontSize: 11.5 } });
+txt(s, `ai_label_section_extractions on 5 Nov (v1 pilot, ${V1.sections} sections): status ok, every reaction grounded, from_cache = true on rebuild. Now ${AI.sections} rows.`, { x: 0.5, y: 1.7 + h, w: 8.0, h: 0.3, fontSize: 10, color: C.gray });
+card(s, 8.75, 1.65, 4.08, 2.1, "Numbers", `Grounded ${AI.grounded}/${AI.reactions} (all ${AI.sections} sections, ${AI.pilot_labels} labels). On the ${recD}-item key (${V1.labels} oxycodone labels, short sections, Claude-written): found ${recN} of ${recD}; precision ≥ ${AI.gold_precision_upper}; F1 ${AI.gold_f1} vs target ${AI.d015_target_f1}.`, "teal", { t: { fontSize: 11.5 } });
 card(s, 0.5, 3.7, 6.05, 3.1, "If it got worse, how we would notice", "", "white", { t: { fontSize: 12, valign: "top" } });
 bullets(s, [
   "Every build: grounded rate (fail below 0.95), section errors, cache hit rate in monitoring_checks.",
   "A new model, prompt or parser changes the cache key, so every section is re-extracted and re-scored against the key before it is accepted.",
   "With another month: a pharmacist-labelled sample of long sections, scored each release; drift = F1 drop > 0.05.",
 ], { x: 0.62, y: 4.05, w: 5.85, h: 2.7, fontSize: 11.5 });
-card(s, 6.78, 3.9, 6.05, 2.9, "Limits, said plainly", "Small key, short sections only, written by Claude and frozen before the run, not yet checked by a pharmacist. The model: Claude Sonnet 5.5 via AIP. The AI does not change the signal list today.", "amber", { t: { fontSize: 11.5 } });
-source(s, "eval/ai-eval-v1.md; numbers.json ai; screens/hood-ai-extractions-cache-sql.jpg (cropped); DECISIONS D041, D015 (proposed).");
+card(s, 6.78, 3.9, 6.05, 2.9, "Limits, said plainly", "Small key, short oxycodone sections only, written by Claude and frozen before the run, not yet checked by a pharmacist. The semaglutide sections are not scored. The model: Claude Sonnet 5.5 via AIP. The AI does not change the signal list today.", "amber", { t: { fontSize: 11.5 } });
+source(s, "eval/ai-eval-v1.md; numbers.json ai; screens/hood-ai-extractions-cache-sql.jpg (cropped, 5 Nov); DECISIONS D041 v2, D015.");
 
 // B6 COMMUNICATION — DECISIONS
-s = backupTitle("B6", "Where the reasoning lives, and what is still proposed", "Communication");
+s = backupTitle("B6", "Where the reasoning lives, and what was accepted", "Communication");
 lead(s, "Every choice where the brief was silent is written down. Changed decisions get a new version; nothing is edited in place.");
 s.addTable([
   [hdr("Decision"), hdr("What"), hdr("Status")],
   ["D014 · D018", `Formulary: ${formulary}, as an explicit RxCUI list`, "Accepted"],
   ["D020–D024", "Identity, suspect roles, versions + deletes, duplicates, FAERS → label join", "Accepted (G6)"],
   ["D016 v3 · D043", "Buckets (MedDRA stand-in); label ↔ FAERS synonym table", "Accepted"],
-  ["D005 · D041 · D044", "AI only on new label versions, cached; exact quotes; incremental FAERS beside the full rebuild", "Accepted"],
-  ["D006 · D015 · D025–D029 · D037", `Evans rule; AI target F1 ≥ ${AI.d015_target_f1}; field fill-rate monitoring, bridge sources, two-level identity, since-last-review, FAERS quarterly; label-mention rule (most built and running; owner acceptance pending)`, "Proposed"],
-  ["D045 – D048", "Change feed; monitoring; DailyMed XML reuse; no partitioning", "Proposed"],
+  ["D005 · D041 v2 · D044", "AI only on new label versions, cached; exact quotes; 5 labels incl. semaglutide; incremental FAERS beside the full rebuild", "Accepted (v2 on 6 Nov)"],
+  ["D006 · D015 · D025–D029 · D037", `Evans rule; AI target F1 ≥ ${AI.d015_target_f1} (target only; benchmark stays cut, D031); field fill-rate monitoring, bridge sources, two-level identity, since-last-review, FAERS quarterly; label-mention rule`, "Accepted 6 Nov (batch)"],
+  ["D045 – D048", "Change feed; monitoring; DailyMed XML reuse; no partitioning", "Accepted 6 Nov (batch)"],
 ], Object.assign({ x: 0.5, y: 1.7, w: 8.4, colW: [1.9, 4.6, 1.9], fontSize: 11.5, rowH: 0.55 }, TB));
-status(s, "PROPOSED", 0.5, 6.2, 3.6);
-card(s, 9.15, 1.7, 3.68, 4.25, "Read in this order", "R00 Start here → architecture note (one page) → COMPASS.md → DECISIONS.md (D001–D048, changes, learnings) → approaches A000–A017 (kept and dropped) → data issues DQ01–DQ42 → optimization log → eval/ai-eval-v1.md → roadmap.", "teal", { t: { fontSize: 11.5, valign: "top" } });
+status(s, "ACCEPTED", 0.5, 6.2, 3.6);
+card(s, 9.15, 1.7, 3.68, 4.25, "Read in this order", "R00 Start here → architecture note (one page) → COMPASS.md → DECISIONS.md (D001–D048, changes, learnings) → approaches A000–A019 (kept and dropped) → data issues DQ01–DQ43 → optimization log → eval/ai-eval-v1.md → roadmap.", "teal", { t: { fontSize: 11.5, valign: "top" } });
 source(s, "docs/11-handin/architecture-note/; docs/06-decisions/DECISIONS.md; docs/05-approaches/INDEX.md; COMPASS.md.");
 
 // B7 RIPPLE MAP
 s = backupTitle("B7", "Ripple map: change this here, this changes there", "Architecture");
-h = img(s, DIA("37-handin-ripple-v2.png"), 0.5, 1.1, 10.0, 4752, 2322);
+h = img(s, DIA("37-handin-ripple-v3.png"), 0.5, 1.1, 10.0, 4752, 2361);
 card(s, 10.7, 1.1, 2.13, 2.9, "How to read it", "Nine changes, checked against the code. Existing triage decisions stay linked in every row (by signal key); some end up on an older evaluation id.", "teal", { t: { fontSize: 10.5 } });
 card(s, 10.7, 4.1, 2.13, 1.6, "Known gap", "No stale flag: the screen does not say when a decision's evidence has moved.", "amber", { t: { fontSize: 10.5 } });
 status(s, "PLANNED", 10.7, 5.8, 2.13);
-source(s, "diagrams/png/37-handin-ripple-v2.png (checked against the code); numbers in the diagram from the build history (A014, D016 v3).");
+source(s, "diagrams/png/37-handin-ripple-v3.png (checked against the code); numbers in the diagram from the build history (A014, D016 v3, A019).");
 
 // B8 CHANGE FEED
 s = backupTitle("B8", "Change feed: two ways to know something changed", "The application");
 h = img(s, DIA("34-handin-change-feed-v1.png"), 0.5, 1.1, 9.0, 4752, 2415);
 card(s, 9.75, 1.1, 3.08, 2.4, "Dated by the source", `${fmt(CH.recall_reported)} recalls reported, ${fmt(CH.recall_terminated)} terminated, ${fmt(CH.label_version_effective)} label versions: real history on day one.`, "teal", { t: { fontSize: 11 } });
 card(s, 9.75, 3.6, 3.08, 2.0, "Found by comparing builds", `Signals new / gone / changed. A no-change rebuild added ${CH.snapshot_diff_after_rebuild}.`, "teal", { t: { fontSize: 11 } });
-status(s, "PROPOSED", 9.75, 5.75, 3.08);
+status(s, "TESTED", 9.75, 5.75, 3.08);
 txt(s, "D045, change feed", { x: 9.75, y: 6.1, w: 3.08, h: 0.3, fontSize: 10, color: C.gray });
 source(s, "diagrams/png/34-handin-change-feed-v1.png; numbers.json changes; A016.");
 
 // B9 MONITORING
 s = backupTitle("B9", "Monitoring: what is watched, and who finds out", "AI reliability · monitoring");
-h = img(s, DIA("35-handin-monitoring-v1.png"), 0.5, 1.1, 12.33, 4752, 1995);
+h = img(s, DIA("35-handin-monitoring-v2.png"), 0.5, 1.1, 12.33, 4752, 1956);
 txt(s, `${MO.checks_per_build} computed checks per build + drift replay + ${MO.data_health_checks} Foundry Data Health checks. Only Data Health alerts the owner today; the builder reads the check rows. Not built: health page, schedules, pharmacist-scored AI check.`,
   { x: 0.5, y: 1.2 + h, w: 12.33, h: 0.65, fontSize: 11.5 });
-source(s, "diagrams/png/35-handin-monitoring-v1.png; numbers.json monitoring; A017; D046 (proposed).");
+source(s, "diagrams/png/35-handin-monitoring-v2.png; numbers.json monitoring, ai; A017; D046.");
 
 // B10 ANOTHER MONTH — SOURCES AND RISKS
 s = backupTitle("B10", "Another month: sources researched for the review loop", "Communication");
@@ -634,9 +637,9 @@ source(s, "docs/09-roadmap/another-month-sources-and-pharmacist-review.md §2 (c
 
 // B11 DEMO MAP
 s = backupTitle("B11", "Demo map: the 23 stops", "Communication");
-h = img(s, DIA("36-handin-demo-map-v2.png"), 0.5, 1.1, 9.4, 4752, 2826);
+h = img(s, DIA("36-handin-demo-map-v3.png"), 0.5, 1.1, 9.0, 4752, 2964);
 card(s, 10.1, 1.1, 2.73, 3.0, "How the talk uses it", "A0–A7: the officer's morning (slides 1–5, mostly live in the app). H1–H15: under the hood (slides 6–16, with live Foundry switches).", "teal", { t: { fontSize: 11 } });
-source(s, "diagrams/png/36-handin-demo-map-v2.png; docs/11-handin/AGENT-BRIEF.md agenda; demo navigation guide.");
+source(s, "diagrams/png/36-handin-demo-map-v3.png; docs/11-handin/AGENT-BRIEF.md agenda; demo navigation guide.");
 
 // B12 SCREENSHOTS
 s = backupTitle("B12", "Under the hood: fallback screenshots", "Architecture");

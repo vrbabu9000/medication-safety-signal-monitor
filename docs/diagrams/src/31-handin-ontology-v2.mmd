@@ -1,0 +1,46 @@
+---
+title: "Ontology as built v2: 10 MSSM object types, 10 link types (cardinality on each line) and the one Action (rows = backing dataset, 2026-11-06)"
+config:
+  flowchart:
+    wrappingWidth: 300
+---
+flowchart TB
+%% handin-theme
+  classDef ontology fill:#E1F5EE,stroke:#0F6E56,color:#085041
+  classDef ai fill:#EEEDFE,stroke:#534AB7,color:#3C3489
+  classDef app fill:#13324B,stroke:#13324B,color:#FFFFFF
+  classDef write fill:#E1F5EE,stroke:#0F6E56,stroke-width:3px,color:#085041
+  classDef neutral fill:#F1EFE8,stroke:#5F5E5A,color:#444441
+
+  AC["<b>Action</b><br/>Create MSSM Triage Decision<br/>create-only<br/>officer: decision + rationale<br/>system: id, reviewer, time"]:::app
+  TD["<b>Triage Decision</b><br/>key: decision_id (UUID)<br/>subject_key · evaluation_id<br/>edits ON · Action only"]:::write
+  SG["<b>Signal</b><br/>key: signal_key<br/>rxcui #124; reaction #124; rule<br/>1,952 · 1,073 ranked"]:::ontology
+  ST["<b>AE Stat</b><br/>key: stat_key<br/>a, b, c, d · PRR · χ²<br/>14,921"]:::ontology
+  DR["<b>Drug</b><br/>key: ingredient_rxcui<br/>13 formulary ingredients"]:::ontology
+  RE["<b>Recall</b><br/>key: recall_number<br/>900 · 126 active"]:::ontology
+  PR["<b>Product</b><br/>key: product_key<br/>application number<br/>658"]:::ontology
+  LA["<b>Label</b><br/>key: label_key<br/>setid #124; version<br/>1,321"]:::ontology
+  LR["<b>Labeled Reaction</b><br/>key: labeled_reaction_key<br/>AI term + exact quote<br/>745 (5 labels: 2 oxycodone<br/>+ 3 semaglutide)"]:::ai
+
+  AC -- "creates" --> TD
+  TD --- |"many decisions : 1 signal<br/>(subject_key)"| SG
+  ST --- |"many signals : 1 stat<br/>(stat_key; 1 : 1 in data)"| SG
+  SG --- |"many : 1 drug"| DR
+  ST --- |"many stats : 1 drug"| DR
+  RE --- |"many : many<br/>(drug named in recall)"| DR
+  RE --- |"many : many<br/>(NDC match high/medium)"| PR
+  PR --- |"many : many products"| DR
+  LA --- |"many : many<br/>(approval ids in label)"| PR
+  LA --- |"1 reference label :<br/>many products"| PR
+  LR --- |"many reactions :<br/>1 label"| LA
+
+  CE["<b>Change Event</b><br/>key: event_id (hash)<br/>2,898 at first build<br/>no link type: filtered<br/>by drug name on screen"]:::ontology
+  SS["<b>Source Status</b><br/>key: source<br/>4 sources, as-of dates<br/>no link type"]:::ontology
+
+  subgraph LEG["Legend"]
+    direction LR
+    K1["object type"]:::ontology ~~~ K2["object built by AI"]:::ai ~~~ K3["written by people<br/>(thick border)"]:::write ~~~ K4["Action"]:::app
+  end
+  DR ~~~ CE
+  DR ~~~ SS
+  PR ~~~ LEG

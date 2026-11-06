@@ -1,0 +1,317 @@
+1. Am J Case Rep. 2018 Jul 16;19:833-835. doi: 10.12659/AJCR.909497.
+
+Serotonin Syndrome in the Perioperative Setting.
+
+Smischney NJ(1), Pollard EM(1), Nookala AU(1), Olatoye OO(1).
+
+Author information:
+(1)Department of Anesthesiology and Perioperative Medicine, Mayo Clinic, 
+Rochester, MN, USA.
+
+BACKGROUND Serotonin syndrome is a life-threatening condition that can lead to 
+neurologic complications and is associated with the use of serotonergic 
+medications. As the use of antidepressant medications has increased, the 
+incidence of perioperative serotonin syndrome has transitioned from a rare 
+diagnosis to one that should be considered as a differential diagnosis for any 
+patient displaying signs of neuroexcitation. CASE REPORT A 70-year-old man (ASA 
+2) with a history of vestibular migraines (treated with venlafaxine), 
+gastroesophageal reflux disease, and benign prostatic hyperplasia presented to 
+our institution for photoselective vaporization of the prostate. Upon review of 
+prior anesthetic records, his medical chart was found to list a propofol 
+allergy. In discussion with the patient, he stated the reaction was rigidity. 
+The anesthesiologist and patient agreed this was not an allergy. Thus, the 
+patient was induced with propofol and given ketamine and fentanyl boluses 
+throughout the procedure. During emergence, the patient exhibited myoclonic 
+jerks in the upper and lower extremities. He was given intravenous meperidine 
+for postoperative shivering; minutes after administration, the myoclonic jerks 
+and rigidity worsened. The anesthesia team raised concern about serotonin 
+syndrome. Intravenous midazolam improved the patient's myoclonic jerks and 
+rigidity. CONCLUSIONS Patients with a history of rigidity/movement disorders 
+during the perioperative period may have experienced serotonin toxicity. It is 
+possible, as in our case, for this history to have been labelled as an allergy 
+to a perioperative medication. Clinicians should remain vigilant for patients at 
+risk of developing serotonin syndrome, such as those taking outpatient 
+medications that increase neuronal serotonin.
+
+DOI: 10.12659/AJCR.909497
+PMCID: PMC6061453
+PMID: 30008467 [Indexed for MEDLINE]
+
+Conflict of interest statement: Conflict of interest: None declared
+
+
+2. World J Clin Cases. 2017 Aug 16;5(8):307-323. doi: 10.12998/wjcc.v5.i8.307.
+
+Adjuvants to local anesthetics: Current understanding and future trends.
+
+Swain A(1), Nag DS(1), Sahu S(1), Samaddar DP(1).
+
+Author information:
+(1)Amlan Swain, Deb Sanjay Nag, Seelora Sahu, Devi Prasad Samaddar, Department 
+of Anaesthesia and Critical Care, Tata Main Hospital, Jamshedpur 831001, India.
+
+Although beneficial in acute and chronic pain management, the use of local 
+anaesthetics is limited by its duration of action and the dose dependent adverse 
+effects on the cardiac and central nervous system. Adjuvants or additives are 
+often used with local anaesthetics for its synergistic effect by prolonging the 
+duration of sensory-motor block and limiting the cumulative dose requirement of 
+local anaesthetics. The armamentarium of local anesthetic adjuvants have evolved 
+over time from classical opioids to a wide array of drugs spanning several 
+groups and varying mechanisms of action. A large array of opioids ranging from 
+morphine, fentanyl and sufentanyl to hydromorphone, buprenorphine and tramadol 
+has been used with varying success. However, their use has been limited by their 
+adverse effect like respiratory depression, nausea, vomiting and pruritus, 
+especially with its neuraxial use. Epinephrine potentiates the local anesthetics 
+by its antinociceptive properties mediated by alpha-2 adrenoreceptor activation 
+along with its vasoconstrictive properties limiting the systemic absorption of 
+local anesthetics. Alpha 2 adrenoreceptor antagonists like clonidine and 
+dexmedetomidine are one of the most widely used class of local anesthetic 
+adjuvants. Other drugs like steroids (dexamethasone), anti-inflammatory agents 
+(parecoxib and lornoxicam), midazolam, ketamine, magnesium sulfate and 
+neostigmine have also been used with mixed success. The concern regarding the 
+safety profile of these adjuvants is due to its potential neurotoxicity and 
+neurological complications which necessitate further research in this direction. 
+Current research is directed towards a search for agents and techniques which 
+would prolong local anaesthetic action without its deleterious effects. This 
+includes novel approaches like use of charged molecules to produce local 
+anaesthetic action (tonicaine and n butyl tetracaine), new age delivery 
+mechanisms for prolonged bioavailability (liposomal, microspheres and 
+cyclodextrin systems) and further studies with other drugs (adenosine, 
+neuromuscular blockers, dextrans).
+
+DOI: 10.12998/wjcc.v5.i8.307
+PMCID: PMC5561500
+PMID: 28868303
+
+Conflict of interest statement: Conflict-of-interest statement: The authors 
+declare no conflicts of interest regarding this manuscript.
+
+
+3. Heart Surg Forum. 2004;7(3):E205-10. doi: 10.1532/HSF98.20033014.
+
+Spinal (subarachnoid) morphine for off-pump coronary artery bypass surgery.
+
+Mehta Y(1), Kulkarni V, Juneja R, Sharma KK, Mishra Y, Raizada A, Trehan N.
+
+Author information:
+(1)Department of Anesthesiology and Critical Care, Escorts Heart Institute and 
+Research Centre, New Delhi, India. yatimehta@hotmail.com
+
+OBJECTIVE: To study the effects of 8 microg/kg preoperatively administered 
+intrathecal morphine sulfate on extubation time, postoperative pulmonary 
+function, and postoperative analgesia after off-pump coronary artery bypass 
+grafting (OPCAB).
+DESIGN: A prospective, randomized, double-blind, placebo controlled study.
+PARTICIPANTS: One hundred adult patients scheduled for elective primary OPCAB.
+INTERVENTIONS: Patients were randomized to preoperative administration of 8 
+microg/kg intrathecal morphine sulfate (group 1) with a 25-gauge spinal needle 
+or to receive sterile normal saline placebo subcutaneously (group 2). Anesthetic 
+induction and maintenance were standardized to allow planning for facilitating 
+early tracheal extubation. Multivessel OPCAB was performed with an Octopus 
+stabilizer. Patients were extubated in the intensive care unit by a blinded 
+observer using predefined extubation criteria.
+MEASUREMENTS AND MAIN RESULTS: Postoperative times to extubation were 9.47 +/- 
+3.83 hours in group 1 versus 11.25 +/- 3.94 hours in group 2 (P = .025). 
+Postextubation bedside spirometric lung volumes in percentage of preoperative 
+lung volume showed significant differences in group 1 versus group 2 in forced 
+vital capacity, 39.66% +/- 15.42% versus 31.85% +/- 11.65% (P = .016); forced 
+expiratory volume in the first second, 44.8% +/- 16.18% versus 35.97% +/- 13.32% 
+(P = .013); maximum voluntary ventilation, 39.40% +/- 13.57% versus 33.11% +/- 
+14.80% (P = .056); and expiratory flow rate, 47.76% +/- 24.61% versus 37.37% +/- 
+4.33% (P = .031). The visual analog pain scores at rest and during coughing at 
+time intervals of 6, 12, 24, and 36 hours postoperatively showed significantly 
+better results in group 1 compared with group 2. The total dose of fentanyl 
+citrate required intraoperatively was significantly less in group 1 (P = .00). 
+One patient in group 1 had a low respiratory rate, which responded to injection 
+naloxone. There was no mortality or neurological complication in either group.
+CONCLUSION: Intrathecal morphine provided superior quality of analgesia that 
+translated into better maintenance of postoperative lung volume determined by 
+spirometry. This analgesic method also facilitated earlier tracheal extubation 
+without any major respiratory or neurologic complications.
+
+DOI: 10.1532/HSF98.20033014
+PMID: 15262604 [Indexed for MEDLINE]
+
+
+4. J Feline Med Surg. 2016 Oct;18(10):826-33. doi: 10.1177/1098612X15598185. Epub
+ 2015 Aug 3.
+
+Retrospective assessment of peripheral nerve block techniques used in cats 
+undergoing hindlimb orthopaedic surgery.
+
+Vettorato E(1), Corletto F(2).
+
+Author information:
+(1)Dick White Referrals, Six Mile Bottom, UK ev2@dwr.co.uk.
+(2)Dick White Referrals, Six Mile Bottom, UK.
+
+OBJECTIVES: The aim of this study was to assess retrospectively the efficacy and 
+complication rate of hindlimb peripheral nerve blocks (PNBs) in cats.
+METHODS: Clinical records of cats that received PNBs and underwent hindlimb 
+orthopaedic surgery from February 2010 to October 2014 were examined. Type of 
+PNB, type and dose of local anaesthetic used, end-expiratory fraction of 
+isoflurane (FE'Iso) administered, additional intraoperative analgesia, incidence 
+of hypotension, postoperative opioid requirement, postoperative contralateral 
+limb paralysis and neurological complications at the 6 week re-examination were 
+investigated.
+RESULTS: Eighty-nine records were retrieved but only 69 were analysed. Four 
+combinations of PNBs were used: 34 lateral preiliac (LPI) approach to lumbar 
+plexus (LP) associated with lumbar paravertebral approach to sciatic nerve (SN); 
+20 LPI-LP associated with the lateral approach to SN; three LPI-LP associated 
+with gluteal approach to SN; 12 dorsal-paravertebral (DPV) approach to LP 
+associated with lateral SN. Levobupivacaine was used for the majority of PNBs. 
+The mean intraoperative FE'Iso was 1.15%; hypotension was documented in 55.1% of 
+anaesthetics, while 31.8% of cats received fentanyl and/or ketamine 
+intraoperatively. Postoperatively, 72.7% of cats received at least one dose of 
+opioid, while five cats required further postoperative analgesia (ketamine 
+constant rate infusion and/or gabapentin). No cats showed contralateral limb 
+paralysis and neurological complications at the 6 week re-examination. No 
+differences were found when comparing the different PNBs used.
+CONCLUSIONS AND RELEVANCE: PNBs contributed to perioperative 
+anaesthesia/analgesia in cats undergoing hindlimb orthopaedic surgery. However, 
+the clinical relevance of intraoperative hypotension needs further 
+investigation.
+
+© The Author(s) 2015.
+
+DOI: 10.1177/1098612X15598185
+PMCID: PMC11112211
+PMID: 26239941 [Indexed for MEDLINE]
+
+Conflict of interest statement: The authors do not have any potential conflicts 
+of interest to declare.
+
+
+5. J Fr Ophtalmol. 2000 Nov;23(9):901-6.
+
+[Premedication and sedation complications during ophthalmic anesthesia].
+
+[Article in French]
+
+Haberer JP(1).
+
+Author information:
+(1)Service d'Anesthésie-Réanimation Chirurgicale, Hôtel-Dieu, 1, place du Parvis 
+Notre-Dame, 75004 Paris. haberer@club-internet.fr
+
+Sedation allows patients to tolerate unpleasant procedures while maintaining 
+adequate cardiorespiratory function and the ability to respond purposefully to 
+verbal command. For ophthalmic surgery patient's anxiety and discomfort can be 
+relieved during placement of a peribulbar block and during surgery by 
+intravenous sedation. Intravenous sedation should only be administered by an 
+anesthetist. Three different classes of drugs are used for intravenous sedation: 
+analgesics (fentanyl and alfentanil), benzodiazepines (midazolam) and profofol, 
+an intravenous anesthetic. Sedation may result in ventilatory, cardiovascular 
+and neurologic complications. Excessive sedation can induce hypoventilation from 
+central ventilatory depression or airway obstruction. Uncontrolled and 
+unexpected movements of the head could result in major surgical complications. 
+For the prevention of the complications related to sedation the same monitoring 
+as for general anesthesia is essential.
+
+PMID: 11084450 [Indexed for MEDLINE]
+
+
+6. Masui. 2001 Jan;50(1):62-4.
+
+[Anesthesia for a patient with cardiac sarcoidosis].
+
+[Article in Japanese]
+
+Imai M(1), Hayashi Y, Ono R, Shibata C, Mashimo T.
+
+Author information:
+(1)Department of Anesthesiology, Osaka University Faculty of Medicine, Suita 
+565-0871.
+
+Anesthesia for a 49-year-old man with cardiac sarcoidosis is reported. 
+Preoperative cardiac examination showed left ventricular dysfunction (ejection 
+fraction = 27%) and myocardial conduction defects. In addition, his previous 
+history included atrial fibrillation and cerebral infarction. Transesophageal 
+echocardiography showed thrombus in the left appendage. Anesthesia was induced 
+with fentanyl and diazepam and maintained with fentanyl and isoflurane. 
+Perioperative hemodynamic monitoring included direct arterial pressure, central 
+venous and pulmonary artery pressure and continuous cardiac output. In addition, 
+transesophageal echocardiography was useful for watching thrombus in the left 
+appendage. His hemodynamic condition was stable and no neurological complication 
+was noted after anesthesia.
+
+PMID: 11211755 [Indexed for MEDLINE]
+
+
+7. J Small Anim Pract. 2013 Dec;54(12):630-7. doi: 10.1111/jsap.12146. Epub 2013 
+Oct 24.
+
+Retrospective comparison of two peripheral lumbosacral plexus blocks in dogs 
+undergoing pelvic limb orthopaedic surgery.
+
+Vettorato E(1), De Gennaro C, Okushima S, Corletto F.
+
+Author information:
+(1)Dick White Referrals, Station Farm - London Road, Six Mile Bottom, 
+Cambridgeshire, CB80UH.
+
+OBJECTIVES: To compare the lateral pre-iliac approach to the lumbar plexus 
+combined with lumbar paravertebral sciatic nerve block, and the dorsal 
+paravertebral approach to the lumbar plexus combined with sciatic nerve block in 
+dogs.
+METHODS: Retrospective examination of case records of dogs that received the 
+blocks and underwent pelvic limb orthopaedic surgery between 2010 and 2012. 
+Success rate (intraoperative fentanyl consumption <2·1 µg/kg/hour), type and 
+dose of local anaesthetic used, multiple of minimum alveolar concentration of 
+volatile anaesthetic agent administered, incidence of intraoperative 
+hypotension, postoperative methadone administration, postoperative contralateral 
+limb paralysis and neurological complication at 6 weeks re-examination were 
+analysed.
+RESULTS: Ninety-six and 95 records were retrieved in which lateral pre-iliac - 
+lumbar paravertebral sciatic nerve and dorsal paravertebral - sciatic nerve were 
+used, respectively. Success rates were 82·3% in lateral pre-iliac - lumbar 
+paravertebral sciatic nerve and 74·7% in dorsal paravertebral - sciatic nerve 
+groups. Bupivacaine, levobupivacaine and ropivacaine were used. Total local 
+anaesthetic doses, intraoperative hypotension and postoperative methadone 
+administered were similar between groups; minimum alveolar concentration 
+multiple was significantly (P<0·001) lower in lateral pre-iliac - lumbar 
+paravertebral sciatic nerve group. No neurological complications were noted.
+CLINICAL SIGNIFICANCE: Although success rates and perioperative analgesic 
+requirements were not significantly different, the different exposure to 
+anaesthetic agents suggests that the two techniques may not be equivalent.
+
+© 2013 British Small Animal Veterinary Association.
+
+DOI: 10.1111/jsap.12146
+PMID: 24151941 [Indexed for MEDLINE]
+
+
+8. Urol J. 2013 Winter;10(1):756-61.
+
+General versus spinal anesthesia in percutaneous nephrolithotomy.
+
+Mehrabi S(1), Mousavi Zadeh A, Akbartabar Toori M, Mehrabi F.
+
+Author information:
+(1)Social Determinants of Health Research Center, Yasuj University of Medical 
+Sciences, Yasuj, Iran. sadrollahm@yahoo.com
+
+PURPOSE: To compare efficacy and complications of spinal anesthesia versus 
+general anesthesia in percutaneous nephrolithotomy (PCNL).
+MATERIALS AND METHODS: In a prospective randomized study, 110 patients were 
+randomly assigned into two groups for PCNL; group 1 (n = 52) underwent general 
+anesthesia and group 2 (n = 58) received spinal anesthesia. In group 1, PCNL was 
+performed using standard technique under general anesthesia. In group 2, spinal 
+anesthesia was done by injecting bupivacaine and fentanyl in spinal space L4 in 
+sitting position. Thereafter, a urethral catheter was placed in lithotomy 
+position, head of the bed was tilted down for 5 to 10 minutes, and the level of 
+anesthesia was checked. Then, PCNL was done by standard technique. Complications 
+were recorded and analyzed by SPSS software using Chi-Square and Student's t 
+tests.
+RESULTS: Mean stone size in groups 1 and 2 was 34.2 ± 9.8 mm and 31.3 ± 7.9 mm, 
+respectively. Intra-operative hypotension and postoperative headache and low 
+back pain were more in spinal group than the general group with a significant 
+difference (P < .05). No neurologic complication was observed in both groups. 
+Need to narcotic medications on the day of operation in groups 1 and 2 was 12.4 
+± 3.1 mg and 7.8 ± 2.3 mg of morphine sulphate, respectively (P = .03). The cost 
+of anesthetic drugs was 23 ± 3.7 US $ and 4.5 ± 1.3 US $ in groups 1 and 2, 
+respectively (P = .001).
+CONCLUSION: Spinal anesthesia with combined bupivacaine and fentanyl is a safe, 
+effective, and cost-effective method for performing PCNL in adult patients.
+
+PMID: 23504678 [Indexed for MEDLINE]

@@ -1,0 +1,211 @@
+{
+ "id": "03-fentanyl-anaesthetic-neuro",
+ "drug": "fentanyl",
+ "faers_pt": "Anaesthetic complication neurological",
+ "event_terms": [
+  "anaesthetic complication neurological",
+  "anesthetic complication neurological"
+ ],
+ "pubmed_v1": {
+  "hits": 38,
+  "pmids": [
+   "30008467",
+   "28868303",
+   "15262604",
+   "26239941",
+   "11084450",
+   "11211755",
+   "24151941",
+   "23504678",
+   "24565247",
+   "23931254",
+   "24264554",
+   "37441289",
+   "10027035",
+   "10442965",
+   "19669023",
+   "20548805"
+  ]
+ },
+ "europe_pmc": {
+  "query": "fentanyl AND (anesthesia OR anaesthesia) AND (\"neurological complication\" OR \"neurologic complication\")",
+  "hits": 280,
+  "preprints": 1,
+  "papers": [
+   {
+    "id": "42820242",
+    "source": "MED",
+    "year": "2026",
+    "title": "Artificial Intelligence in Predicting Postoperative Nausea and Vomiting Among Surgical Patients Following General Anesthesia: A Systematic Review.",
+    "pubtype": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Artificial intelligence (AI) may improve perioperative risk prediction by integrating complex clinical and physiological data, but its performance and readiness for clinical use remain uncertain. We evaluated AI models predicting postoperative nausea and vomiting (PONV), perioperative hypotension, prolonged intensive care unit (ICU) stay, in-hospital mortality, and neurological complications after general anesthesia. We searched bibliographic databases from inception to June 2026 for studies developing or validating AI-based prediction models in surgical patients undergoing general anesthesia. Two reviewers independently screened studies, extracted data, and assessed risk of bias and applicability using PROBAST+AI. Owing to heterogeneity in populations, outcomes, prediction horizons, algorithms, and validation methods, findings were synthesized narratively. Of 2,329 records identified, 22 studies were included. Sample sizes ranged from 221 to 106,860 participants. PONV models had area under the receiver operating characteristic curve (AUC) values of 0.561-0.960, whereas hypotension models ranged from 0.630 to 0.950. Models for prolonged ICU stay, mortality, and neurological complications showed AUCs up to 0.920, 0.930, and 0.890, respectively. Higher AUCs were not consistently accompanied by balanced sensitivity and specificity. All studies had high overall risk of bias, principally because of limited external validation, incomplete calibration reporting, and analytical conce"
+   },
+   {
+    "id": "41256043",
+    "source": "MED",
+    "year": "2025",
+    "title": "Case Report: Sulcal artery infarction presenting as incomplete Brown-Séquard syndrome following spinal anesthesia in a 70-year-old female: a rare postoperative neurological complication.",
+    "pubtype": [
+     "Journal Article",
+     "Case Reports",
+     "case-report"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Spinal cord infarction following neuraxial anesthesia is a rare but serious complication. We present the case of a 70-year-old female who developed acute onset of left lower limb weakness immediately following spinal anesthesia administered for total hip replacement. Clinical features were consistent with incomplete Brown-Séquard syndrome. MRI revealed a T2/STIR hyperintense lesion involving the left hemicord at the D12-L1 vertebral level, suggestive of sulcal artery infarction. MRI showed only age-related changes. After a structured physiotherapy program, the patient experienced significant functional improvement and was discharged with stable vitals. This case highlights the importance of early diagnosis and management of spinal cord infarction in the perioperative setting."
+   },
+   {
+    "id": "42416086",
+    "source": "MED",
+    "year": "2026",
+    "title": "Transient foot drop following motor-sparing regional anesthesia technique in total knee arthroplasty: a case report.",
+    "pubtype": [
+     "Journal Article",
+     "Case Reports",
+     "case-report"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Regional anesthesia provides excellent analgesia for total knee arthroplasty (TKA). Foot drop following motor-sparing regional anesthesia techniques is uncommon and typically transient, but it may obscure symptoms and potentially delay the diagnosis and treatment of peroneal nerve injury following TKA. We present a case of transient foot drop following an Infiltration between Popliteal Artery and Capsule of the Knee (iPACK) block in a 69-year-old female who underwent an elective TKA for her tricompartmental osteoarthritis. Although the iPACK block is generally considered motor-sparing, this case highlights a potential temporary neurological complication."
+   },
+   {
+    "id": "42694479",
+    "source": "MED",
+    "year": "2026",
+    "title": "Continuous Spinal Anesthesia in a High-Risk Patient With Pulmonary Hypertension Undergoing Hip Fracture Repair: A Case Report.",
+    "pubtype": [
+     "case-study",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "This report describes the successful use of continuous spinal anesthesia (CSA) in a 70-year-old woman with severe pulmonary hypertension (PH), right ventricular (RV) dysfunction, and obstructive sleep apnea (OSA) undergoing hip fracture repair. The perioperative challenge was to manage a patient at high risk of hemodynamic decompensation and severe gas exchange impairment. CSA allowed preservation of spontaneous ventilation and incremental titration of local anesthetic, while hemodynamic stability was maintained with early norepinephrine support. This case illustrates the importance of individualized, pathophysiology-based anesthetic planning in high-risk cardiopulmonary patients."
+   },
+   {
+    "id": "42736820",
+    "source": "MED",
+    "year": "2026",
+    "title": "Evaluation of delirium frequency and factors affecting it in postanesthesia care unit: A prospective observational study.",
+    "pubtype": [
+     "research-article",
+     "Journal Article",
+     "Observational Study"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Postoperative delirium (POD) is a common but often underrecognized complication after surgery and is associated with increased morbidity and prolonged hospitalization. This study aimed to determine the incidence of POD in the postanesthesia care unit (PACU) and to identify perioperative factors independently associated with its development. This prospective observational study included adult surgical patients admitted to the PACU between August 2021 and January 2023. Delirium assessments were performed daily using the confusion assessment method for the intensive care unit, nursing delirium screening scale, and intensive care delirium screening checklist after extubation and discontinuation of continuous sedative infusions. Demographic characteristics, comorbidities, intraoperative variables, and postoperative biochemical parameters were recorded. Independent predictors of POD were determined using multivariable logistic regression. A total of 314 patients were analyzed, and POD occurred in 22.6% of cases, predominantly hypoactive in subtype (76%). Independent predictors included age ≥65 years (odds ratio [OR]: 3.08; 95% confidence interval [CI]: 1.10 to 8.63; P = .032), higher PACU pain scores (OR: 1.28; 95% CI: 1.03 to 1.59; P = .025), lower hematocrit (OR: 0.89; 95% CI: 0.82 to 0.98; P = .014), reduced glomerular filtration rate (OR: 0.98; 95% CI: 0.97 to 1.00; P = .014), and longer fentanyl infusion duration (OR: 1.09; 95% CI: 1.01 to 1.17; P = .025). Patients with deliri"
+   },
+   {
+    "id": "42614898",
+    "source": "MED",
+    "year": "2026",
+    "title": "Perioperative Anesthetic Management of Kleine-Levin Syndrome: Current Evidence, Mechanistic Rationale, and a Proposed Practice Framework.",
+    "pubtype": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Kleine-Levin syndrome is a rare disorder of central hypersomnolence characterized by relapsing-remitting severe sleepiness associated with cognitive impairment, derealization, apathy, behavioral change, and hyperphagia. Direct perioperative evidence remains limited and is insufficient to establish comparative safety, recurrence risk, or a preferred anesthetic technique. Reports with direct perioperative evidence described favorable immediate perioperative courses, but follow-up was heterogeneous, and the uniformly favorable published outcomes are susceptible to substantial publication bias. Most patients return to normal or near-normal function between episodes, although residual sleep, cognitive, behavioral, or autonomic symptoms persist in a subset. The perioperative period introduces factors that may obscure evaluation or disturb sleep-wake stability, including sleep disruption, physiologic stress, perioperative illness, and exposure to sedative and opioid medications. No specific perioperative trial data are available, so this narrative review synthesizes direct disease-specific evidence, mechanistic rationale, and established perioperative practice to propose a conservative, evidence-mapped framework. Disease-informed considerations include elective scheduling during a stable interepisodic period when feasible, documentation of baseline cognitive and behavioral status with collateral history, and treatment of suspected recurrence as a diagnosis of exclusion. Other consid"
+   },
+   {
+    "id": "41857828",
+    "source": "MED",
+    "year": "2026",
+    "title": "PRECISION study: impact of personalised cardiac anaesthesia and cerebral autoregulation on neurological outcomes in patients undergoing cardiac surgery - protocol for an international, multicentre, pr",
+    "pubtype": [
+     "Clinical Trial Protocol",
+     "research-article",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "IntroductionAdverse neurological complications, including postoperative delirium (POD) and stroke, remain one of the major risks after cardiac surgery. A lack of comprehensive knowledge about their causes and neuroprotective strategies has hindered the development of effective interventions to reduce these events. Personalised cerebral autoregulation (CA)-oriented blood pressure monitoring aims to identify blood pressure targets tailored to each individual patient, thereby reducing brain injury. The PRECISION study aims to assess whether perioperative duration and magnitude of mean arterial pressure (MAP) deviation from an individual's CA limits are associated with adverse neurological complications.Methods and analysisThis international, multicentre, prospective cohort study is conducted at two Swiss and one British hospital. Patients aged 65 years or older undergoing elective primary or re-operative coronary artery bypass graft and/or valvular and/or ascending aorta surgery requiring cardiopulmonary bypass are included. Preoperatively, the patient's baseline of physical, cognitive and mental status is established. Intraoperatively, near-infrared spectroscopy (NIRS) and transcranial Doppler (TCD) are recorded in real-time to generate NIRS-derived and TCD-derived CA indices. The primary endpoint is POD, assessed daily on postoperative days 0 to 7 or up to discharge, whichever occurs earlier with the 3D-Confusion Assessment Method (3D-CAM) or CAM-Intensive Care Unit. Secondary"
+   },
+   {
+    "id": "PMC13642292",
+    "source": "PMC",
+    "year": null,
+    "title": "Optimal prophylaxis for perioperative drug-induced delayed neurocognitive recovery: a Bayesian network meta-analysis of 18 interventions with mechanism-based stratification",
+    "pubtype": [
+     "systematic-review",
+     "Review"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": ""
+   },
+   {
+    "id": "42416955",
+    "source": "MED",
+    "year": "2026",
+    "title": "General Anesthesia for Emergency Cesarean Section in a Parturient With Previously Undiagnosed Neurofibromatosis Type 1: A Case Report.",
+    "pubtype": [
+     "Journal Article",
+     "Case Reports",
+     "case-report"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Neurofibromatosis type 1 (NF1) is an autosomal dominant multisystem disorder that presents significant challenges to the anesthesiologist, particularly in the obstetric setting. The presence of neurofibromas along the airway, potential spinal and intracranial tumors, cardiovascular instability, and altered pharmacological responses collectively complicate anesthetic planning. We report the case of a 42-year-old primigravida at 40 weeks and two days of gestation with previously undiagnosed NF1, admitted for emergency cesarean section under the clinical suspicion of uterine rupture. General examination revealed extensive cutaneous lesions and bilateral breast masses consistent with cutaneous and plexiform neurofibromas. Airway assessment identified a Mallampati grade III classification. Given the strong clinical suspicion of NF1, the absence of prior neuroimaging, and the emergency nature of the procedure, general anesthesia was chosen over neuraxial anesthesia. Rapid sequence induction was performed with propofol and rocuronium, with full difficult airway equipment immediately available. Direct laryngoscopy yielded a Cormack-Lehane grade I view with no glottic lesions identified, and orotracheal intubation was accomplished without difficulty. Anesthesia was maintained with isoflurane in an oxygen/air mixture (fraction of inspired oxygen (FiO2) 0.4). The procedure lasted 45 minutes, hemodynamic stability was maintained throughout without vasopressor support, and a healthy femal"
+   },
+   {
+    "id": "39600455",
+    "source": "MED",
+    "year": "2024",
+    "title": "Superior thyroid artery injury following foreign body ingestion in an intellectually disabled patient: A case report.",
+    "pubtype": [
+     "Journal Article",
+     "Case Reports",
+     "case-report"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "This case report highlights complexities in an intellectually disabled adult who ingested a chicken bone, resulting in a rare complication-superior thyroid artery injury. Presentation, diagnostic challenges, and a multidisciplinary approach are detailed. Initial attempts at esophagoscopy under general anesthesia were hindered by blood coughing, leading to a change of plan. Subsequent findings revealed mucosal edema and continuous bleeding from the site. Challenges in anesthetizing intellectually disabled individuals are emphasized, stressing tailored induction methods. The case concluded with successful embolization but developed neurological complication which was successfully managed showcasing the significance of a collaborative and adaptable approach."
+   }
+  ]
+ },
+ "new_vs_pubmed": [],
+ "fda_potential_signals": {
+  "rows_for_drug_or_class": 1,
+  "event_hits": [],
+  "drug_or_class_rows": [
+   "January - March 2023: Opioids Actiq (fentanyl citrate) Alfentanil Hydrochloride In → Hypoglycemia"
+  ]
+ },
+ "onsides": {
+  "labels_by_region": {
+   "JP": 7,
+   "US": 11,
+   "UK": 4,
+   "EU": 3
+  },
+  "matching_effects": {},
+  "high_confidence_matches": []
+ },
+ "metrics": {
+  "seconds": 1.4,
+  "api_calls": 2,
+  "abstract_chars_kept": 0,
+  "approx_tokens_kept": 0,
+  "papers_kept": 0,
+  "papers_dropped_gate": 10
+ }
+}

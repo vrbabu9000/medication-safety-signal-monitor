@@ -1,0 +1,196 @@
+{
+ "id": "06-buprenorphine-sma-syndrome",
+ "drug": "buprenorphine",
+ "faers_pt": "Superior mesenteric artery syndrome",
+ "event_terms": [
+  "superior mesenteric artery syndrome"
+ ],
+ "pubmed_v1": {
+  "hits": 1,
+  "pmids": [
+   "27004394"
+  ]
+ },
+ "europe_pmc": {
+  "query": "(buprenorphine OR opioid) AND \"superior mesenteric artery syndrome\"",
+  "hits": 76,
+  "preprints": 0,
+  "papers": [
+   {
+    "id": "41892598",
+    "source": "MED",
+    "year": "2026",
+    "title": "The Effect of Traumatic Brain Injury on the Gastrointestinal System: A Comprehensive Review.",
+    "pubtype": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Background/objectivesTraumatic brain injury (TBI) is a significant public health concern resulting in physical, cognitive, and behavioral impairments. Emerging evidence highlights a bidirectional relationship between brain injury and gut health, known as the brain-gut axis. This paper provides a comprehensive review of current literature exploring the relationship between TBI and various gastrointestinal (GI) pathologies, examining how brain injuries contribute to GI dysfunction and how gut health influences neurorecovery.MethodsA comprehensive search of peer-reviewed articles was conducted between March and June 2025 using databases including PubMed, Scopus, and Cochrane. Studies from 2010 onwards involving human subjects were screened. Search terms included combinations of \"traumatic brain injury,\" \"TBI,\" and \"[gastrointestinal pathology].\" Data regarding study design, population, GI outcomes, and proposed mechanisms were analyzed.ResultsTBI triggers secondary injury cascades, including neuroinflammation, dysautonomia, and gut microbiome dysbiosis. The review identifies a wide spectrum of TBI-associated GI disorders, including dysphagia, esophageal disorders, gastric disorders, and intestinal disorders. Bowel dysfunction, manifesting as constipation or incontinence, is prevalent due to neurogenic factors and cognitive impairments. Additionally, metabolic dysregulation following TBI leads to malnutrition, hyperglycemia, and hypoglycemia, all of which impact morbidity.Conclus"
+   },
+   {
+    "id": "42387900",
+    "source": "MED",
+    "year": "2026",
+    "title": "Characterization of patients with medically unexplained intolerance to enteral feeding treated with home parenteral nutrition: A descriptive cohort study.",
+    "pubtype": [
+     "research-article",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Background and aimsDutch intestinal failure centers are increasingly confronted with patients started on total parenteral nutrition because of reported intolerance to enteral feeding without meeting clinical criteria for intestinal failure. This study aimed to describe clinical characteristics, medical consumption, and treatment status of patients with medically unexplained intolerance to enteral feeding treated with home parenteral nutrition.MethodsWe performed a descriptive cohort study in three intestinal failure expert centers in the Netherlands. We identified adult patients on total parenteral nutrition without a medical explanation for intolerance to enteral feeding via an electronic medical record search. We investigated patient characteristics, diagnostic procedures, and treatments these individuals had undergone. We also evaluated the impact of caring for these patients on physicians, using a questionnaire.Results78 patients on total parenteral nutrition and with medically unexplained intolerance to enteral feeding were analyzed. Most patients were female (91%), 80% were ≤45 years at the start of gastrointestinal complaints, 63% were on opioids, and in 83% discontinuation of total parenteral nutrition was not achieved. The impact on treating physicians was rated as at least very burdensome.ConclusionTreating patients with medically unexplained intolerance to enteral feeding with total parenteral nutrition is challenging for involved professionals in Dutch intestinal "
+   },
+   {
+    "id": "39326788",
+    "source": "MED",
+    "year": "2025",
+    "title": "Renal autotransplant as a definitive treatment for nutcracker syndrome: A multicenter retrospective study.",
+    "pubtype": [
+     "research-article",
+     "Multicenter Study",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "ObjectiveNutcracker syndrome is a rare condition that involves mechanical compression of the left renal vein, leading to chronic and debilitating left flank pain. The etiology of the pain is misdiagnosed frequently, and patients usually require long-term opioid use to manage their pain. Multiple therapeutic options for nutcracker syndrome have been described in the literature but the reports are limited by small numbers of patients, and the lack of convincing data demonstrating consistently improved outcomes. Here we report the largest series to date of patients undergoing renal autotransplantation for the treatment of nutcracker syndrome.MethodsWe performed a multicenter retrospective cohort review of patients 105 patients with nutcracker syndrome who underwent renal autotransplantation as a primary or salvage therapy.ResultsDuring the overall study period, 93.1% of patients treated with autotransplantation had durable, complete flank pain relief at 12 months with both open and robotic surgical approach. After autotransplantation, a statistically significant decrease in the percentage of patients using opioids from 48.6% to 17.0% was demonstrated at 12 months. In those patients using opioids before autotransplantation, a statistically significant decrease in morphine milligram equivalents was demonstrated from an alarming 68.9 ± 15.0 per day to 25.0 ± 11.02 morphine milligram equivalents per day.ConclusionsOur findings suggest that renal autotransplantation, as a primary tre"
+   },
+   {
+    "id": "38767157",
+    "source": "MED",
+    "year": "2025",
+    "title": "Effectiveness of a Preoperative Bowel Preparation Protocol for Patients With Adolescent Idiopathic Scoliosis to Decrease Postoperative Gastrointestinal Morbidities and the Hospital Length of Stay.",
+    "pubtype": [
+     "research-article",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Study DesignRandomised controlled trial.ObjectiveThis study aimed to determine the effectiveness of a preoperative bowel preparation protocol comprising bisacodyl to minimize postoperative gastrointestinal morbidities and the hospital length of stay for patients with adolescent idiopathic scoliosis.Summary of Background DataPatients who undergo scoliosis correction surgery frequently experience postoperative gastrointestinal morbidities and a prolonged hospital length of stay. Emesis, paralytic ileus and constipation are the most common gastrointestinal morbidities. Opioid medication is a well-known risk factor for gastrointestinal complications after scoliosis correction surgery.MethodsEighty-seven patients (22 boys [25.3%] and 65 girls [74.7%]) with a mean age of 17.7 years (standard deviation [SD], ±2.2 years) diagnosed with adolescent idiopathic scoliosis were enrolled in this study and randomized into 2 groups. Group A comprised 44 patients who received a preoperative bowel preparation comprising bisacodyl. Group B comprised 43 patients who did not receive any preoperative medication. Demographic data, height, weight, medical and surgical comorbidities, Risser status, number of instrumented levels and preoperative opioid consumption of all patients were evaluated.ResultsGroup A experienced fewer postoperative abdominal symptoms than group B. The mean hospital length of stay was 4.1 days (SD, ±.6 days; median, 4 days; range, 3-5 days) for group A; however, it was 5.3 days"
+   },
+   {
+    "id": "41300599",
+    "source": "MED",
+    "year": "2025",
+    "title": "Perioperative Anesthetic Management in Pediatric Scoliosis Surgery: A Narrative Review with Focus on Neuromuscular Disorders.",
+    "pubtype": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Background/objectivesScoliosis surgery in pediatric patients, particularly those with neuromuscular disorders, is associated with increased perioperative risk due to respiratory insufficiency, cardiovascular comorbidities, and nutritional deficiencies. This review aims to summarize current evidence-based approaches to anesthetic management in this vulnerable population.MethodsA comprehensive literature review was conducted focusing on anesthetic strategies and multidisciplinary protocols used in the perioperative care of children with neuromuscular conditions undergoing scoliosis surgery. Emphasis was placed on intraoperative neurophysiological monitoring (IONM), blood conservation techniques, and Enhanced Recovery After Surgery (ERAS) principles.ResultsKey management strategies include individualized preoperative risk assessment, use of total intravenous anesthesia (TIVA) to preserve IONM signal integrity, and the implementation of blood conservation methods such as antifibrinolytic therapy and intraoperative cell salvage. Additional perioperative considerations include maintaining normothermia, careful positioning, and multimodal analgesia. Postoperative care should incorporate structured respiratory support and early mobilization within the ERAS pathway to promote recovery and reduce complications.ConclusionsThe perioperative care of pediatric patients with neuromuscular scoliosis undergoing spinal surgery requires a multidisciplinary and individualized anesthetic approach"
+   },
+   {
+    "id": "41789393",
+    "source": "MED",
+    "year": "2026",
+    "title": "Benign gastric outlet obstruction: evolving strategies from surgery to endoscopic ultrasound-guided gastrojejunostomy.",
+    "pubtype": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Benign gastric outlet obstruction (bGOO) presents a significant therapeutic challenge, with etiologies ranging from peptic strictures to complex postsurgical or inflammatory conditions. While surgery has historically offered durable outcomes, its morbidity in frail populations underscores the need for effective, less invasive alternatives. This review critically examines the current literature up to April 2025 on surgical, endoscopic, and endoscopic ultrasound-guided interventions for bGOO, evaluating technical success, clinical outcomes, recurrence rates, and adverse events. Endoscopic balloon dilation shows excellent efficacy in simple peptic strictures but has limited efficacy in anatomically complex cases. Fully covered self-expandable metal stents can provide temporary relief but are associated with significant migration risk. Among emerging techniques, endoscopic ultrasound-guided gastrojejunostomy (EUS-GJ) stands out by combining the anatomical efficacy of surgery with the minimal invasiveness of endoscopy. Recent studies report technical and clinical success rates exceeding 95%, with lower recurrence and complication rates compared to traditional approaches. Comparative data increasingly support EUS-GJ as the preferred option in refractory or high-risk patients. Tailoring treatment strategies based on etiology, anatomical complexity, and patient condition is essential. EUS-GJ is redefining the therapeutic landscape of bGOO, offering a minimally invasive and durable al"
+   },
+   {
+    "id": "39381755",
+    "source": "MED",
+    "year": "2024",
+    "title": "Enhanced recovery after adolescent idiopathic scoliosis surgery care pathway: Perioperative strategy to improve outcome.",
+    "pubtype": [
+     "research-article",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "IntroAIS surgery generates a high inflammatory stress response which might influence the outcome in the perioperative period. Enhanced Recovery After Surgery (ERAS) is a global multidisciplinary care pathway aimed to improve patient's recovery.Research questionThe purpose of this article is to expose our actual ERAS protocol for AIS surgery and compare it with the earlier non ERAS management in our institution.Our primary outcome focus on the re-hospitalisation and complications rates at 30 and 90 days postoperatively. Our secondary outcomes focus on the overall morphine consumption, pain scores and side effects during the hospitalisation.MaterialWe compare the results of the ERAS group (2019-2022) with the previous existing classical care pathway (2017-2019). The data were collected in our standard medical files.ResultsOur ERAS care pathway for AIS surgery lead to consequently improve the outcome regarding the VAS scores, the morphine consumption, the LOS and the complication and re hospitalisation rates.DiscussionRegarding our results, ERAS care pathway for AIS surgery appears to be efficient in terms of benefits on complications rates, LOS and opioid consumption.Intrathecal morphine and \"anti-inflammatory\" anaesthesia provides a good quality of pain management and allows the patient to get up early.A superiority trial might be interesting to highlight the role of the ERAS pathway in AIS surgery."
+   },
+   {
+    "id": "34150407",
+    "source": "MED",
+    "year": "2021",
+    "title": "Superior Mesenteric Artery Syndrome: Could it Involve a Potential Familial Pattern?",
+    "pubtype": [
+     "Journal Article",
+     "Case Reports",
+     "case-report"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Superior mesenteric artery (SMA) syndrome often presents with small bowel obstruction due to acute angulation of the SMA, thereby compressing the duodenum. This syndrome is a rare, sporadic disease, which is often caused by rapid weight loss. However, there may be a genetic predisposition to SMA syndrome, due to a congenitally shortened ligament of Treitz or a more distal origination of the SMA on the abdominal aorta. In this study, we present a patient who was diagnosed with SMA syndrome despite not exhibiting the classic weight-loss clinical picture. Interestingly, the patient reported a family history of SMA syndrome in her mother who had experienced a similar presentation."
+   },
+   {
+    "id": "36935474",
+    "source": "MED",
+    "year": "2023",
+    "title": "Minimalistic approach to enhanced recovery after pediatric scoliosis surgery.",
+    "pubtype": [
+     "Research Support, Non-U.S. Gov't",
+     "research-article",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "PurposePrior studies of enhanced recovery protocols (ERP) have been conducted at large institutions with abundant resources. These results may not apply at institutions with less resources directed to quality improvement efforts. The purpose of this study was to assess the value of a minimalistic enhanced recovery protocol in reducing length of stay (LOS) following PSF for adolescent idiopathic scoliosis. We hypothesized that accelerated transition to oral pain medications and mobilization alone could shorten hospital length of stay in the absence of a formal multimodal pain regimen.MethodsAIS patients aged 10-18 who underwent PSF at a tertiary pediatric hospital between January 1, 2014 and December 31, 2017 were reviewed. The study population was further narrowed to consecutive patients from a single surgeon's practice that piloted the modified ERP. Reservation from key stakeholders regarding the feasibility of implementing widespread protocol change led to the minimal alterations made to the postoperative protocol following PSF. Patients were divided into either the Standard Recovery Protocol (SRP) or Enhanced Recovery Protocol (ERP). Primary variables analyzed were hospital LOS, complications, readmissions, and total narcotic requirement.ResultsA total of 92 patients met inclusion criteria. SRP and ERP groups consisted of 44 (47.8%) and 48 (52.2%) patients. There was no difference between the two groups with regard to age, sex, and ASA score (p > 0.05). Fusion levels and E"
+   },
+   {
+    "id": "33145523",
+    "source": "MED",
+    "year": "2020",
+    "title": "Breaking open the case of one patient's acute left flank pain: nutcracker syndrome.",
+    "pubtype": [
+     "Journal Article",
+     "Case Reports",
+     "case-report"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Acute flank and abdominal pain represent a common presenting complaint in the emergency department. The etiology can be broad, ranging from the chest to the groin, from benign to catastrophic. There are common causes such as nephrolithiasis and pyelonephritis for which more than 1 million Americans are diagnosed with in the United States each year.1 Other etiologies are more rare and difficult to diagnose. The following case discusses a rare syndrome involving a young man with flank pain and a few other symptoms."
+   }
+  ]
+ },
+ "new_vs_pubmed": [],
+ "fda_potential_signals": {
+  "rows_for_drug_or_class": 3,
+  "event_hits": [],
+  "drug_or_class_rows": [
+   "April - June 2020: Sublocade (buprenorphine) → Injection site necrosis",
+   "January - March 2023: Opioids Actiq (fentanyl citrate) Alfentanil Hydrochloride In → Hypoglycemia",
+   "October - December 2018: Belbuca (buprenorphine hydrochloride) film Bunavail (bupreno → Drug-induced dental caries"
+  ]
+ },
+ "onsides": {
+  "labels_by_region": {
+   "JP": 3,
+   "US": 84,
+   "UK": 2,
+   "EU": 3
+  },
+  "matching_effects": {},
+  "high_confidence_matches": []
+ },
+ "metrics": {
+  "seconds": 2.3,
+  "api_calls": 2,
+  "abstract_chars_kept": 0,
+  "approx_tokens_kept": 0,
+  "papers_kept": 0,
+  "papers_dropped_gate": 10
+ }
+}

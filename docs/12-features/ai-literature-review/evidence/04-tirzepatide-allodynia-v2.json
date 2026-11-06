@@ -1,0 +1,236 @@
+{
+ "id": "04-tirzepatide-allodynia",
+ "drug": "tirzepatide",
+ "faers_pt": "Allodynia",
+ "event_terms": [
+  "allodynia",
+  "dysaesthesia",
+  "dysesthesia",
+  "hyperaesthesia",
+  "hyperesthesia",
+  "skin pain",
+  "skin sensitivity"
+ ],
+ "pubmed_v1": {
+  "hits": 9,
+  "pmids": [
+   "42168638",
+   "41210042",
+   "41053816",
+   "40413246",
+   "41001580",
+   "42101979",
+   "42930571",
+   "42356493",
+   "42959996"
+  ]
+ },
+ "europe_pmc": {
+  "query": "tirzepatide AND (allodynia OR dysesthesia OR dysaesthesia OR hyperesthesia OR hyperaesthesia OR \"skin pain\" OR \"skin sensitivity\")",
+  "hits": 72,
+  "preprints": 1,
+  "papers": [
+   {
+    "id": "42168638",
+    "source": "MED",
+    "year": "2026",
+    "title": "Dysesthesia associated with GLP-1 agonist therapies: data-mining analysis and literature review.",
+    "pubtype": [
+     "research-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": true,
+    "abstract": "PurposeAn increasing number of anecdotal reports on social media platforms and medical blogs describe dysesthesia, particularly burning skin sensations, in association with glucagon-like peptide-1 receptor (GLP-1R) agonists. We performed a pharmacovigilance data-mining analysis to characterise cases of dysesthesia related to GLP-1R.MethodsWe conducted a disproportionality analysis using VigiBase data on GLP-1R (Anatomical Therapeutic Chemical classification: ATC code A10BJ) and tirzepatide, focusing on the HLT (High Level Term) \"Paraesthesia and dysesthesia\", with the Information Component (IC). Additionally, we reviewed all narratives of dysesthesia cases in the French Pharmacovigilance database to extract clinical and pharmacological characteristics. A literature review complemented this analysis.ResultsExenatide was significantly associated with hypoesthesia or oral paraesthesia, semaglutide and tirzepatide with hyperaesthesia, and semaglutide with dysesthesia and burning sensation. Dysesthesia appears to be dose-dependent, occurring more frequently at higher doses and with more potent GLP-1R, whether used for weight management or type 2 diabetes. Discontinuation was often performed, followed by spontaneous favourable outcomes, and cases of rechallenge were observed. Skin burning sensations represent a distinctive form of dysesthesia.ConclusionPharmacovigilance quantitative and qualitative data strengthens evidence for dysesthesias associated with GLP-1R agonists already o"
+   },
+   {
+    "id": "42101979",
+    "source": "MED",
+    "year": "2026",
+    "title": "Cutaneous Allodynia Associated With GLP-1RA Tirzepatide for Weight Management: A Case Series.",
+    "pubtype": [
+     "research-article",
+     "Journal Article",
+     "Case Reports"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": true,
+    "abstract": "BACKGROUND Cutaneous allodynia is reported as a pain resulting from a stimulus that does not normally provoke or elicit pain and an altered quality of sensation characterized by extreme sensitivity to touch or mild temperature change. Glucagon-like peptide-1 receptor agonists (GLP-1RAs) are widely prescribed for management of diabetes mellitus and for obesity and weight management. Tirzepatide is a synthetic polypeptide and dual agonist for glucagon-like peptide-1 (GLP-1) and glucose-dependent insulinotropic polypeptide receptors. Clinical studies demonstrate that tirzepatide provides robust glycemic control and is highly effective for the treatment of obesity. Review of the tirzepatide U.S. prescribing information revealed hypersensitivity and injection site reactions as the only dermatological adverse events, with no reports of skin pain or allodynia. A recent pharmacovigilance analysis of the U.S. Food and Drug Administration Adverse Event Reporting System evaluating 6 GLP-1RAs, including tirzepatide, identified rare reports of allodynia; however, detailed case-level descriptions remain limited. CASE REPORT In this case series, we report moderate-to-severe allodynia in 2 patients with severe obesity treated with tirzepatide for weight management. Allodynia in these patients varied from static to dynamic in nature; the incidence of allodynia was temporally associated with dose escalation, related to higher doses, and resolved after termination of the drug, demonstrating str"
+   },
+   {
+    "id": "42930571",
+    "source": "MED",
+    "year": "2026",
+    "title": "Cutaneous Adverse Events Associated with Semaglutide, Liraglutide and Tirzepatide: A Systematic Review.",
+    "pubtype": [
+     "Systematic Review",
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": true,
+    "abstract": "Background/objectivesIncretin-based therapies, including glucagon like peptide-1 receptor agonists (GLP-1 RAs) and glucose-dependent insulinotropic polypeptide (GIP)/GLP-1 RAs, are increasingly prescribed for obesity, leading to greater recognition of associated dermatological adverse events (AEs). We aimed to characterize the spectrum, frequency, and clinical characteristics of cutaneous AEs reported with semaglutide, liraglutide and tirzepatide, focusing on these agents because of their established use in both weight management and diabetes mellitus.MethodsA systematic literature search was conducted in MEDLINE (via PubMed), Embase, and Web of Science. Search terms combined skin-related manifestations (e.g., skin, dermatologic, injection-site reactions, pruritus, rash, hypersensitivity, dysesthesia, vasculitis) with GLP-1 RA and GIP/GLP-1 RAs (semaglutide, tirzepatide, liraglutide). Clinical trials, observational studies, pharmacovigilance studies, and case reports reporting skin-related AEs associated with semaglutide, liraglutide and tirzepatide were included.ResultsOne hundred and one studies were included (32 randomized controlled trials, 6 retrospective cohort/cross-sectional studies, 20 pharmacovigilance studies, and 43 case series/reports). Cutaneous AEs ranged from generally common but mild reactions to rare but potentially severe immune-mediated disorders. Injection-site reactions, including erythema, pruritus, and hemorrhage, were reported most frequently with tir"
+   },
+   {
+    "id": "42959996",
+    "source": "MED",
+    "year": "2026",
+    "title": "Treatment-Induced Neuropathy Presenting as Thoracic Radiculopathy and Abdominal Wall Protrusion After Marked Glycemic Improvement With Tirzepatide.",
+    "pubtype": [
+     "Journal Article",
+     "Case Reports",
+     "case-report"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": true,
+    "abstract": "Treatment-induced neuropathy of diabetes (TIND) is an uncommon acute neuropathic complication associated with marked improvement in glycemic control. It typically presents with severe neuropathic pain and may include autonomic dysfunction, although focal presentations have also been described. We report the case of a 67-year-old man with long-standing type 2 diabetes mellitus who developed severe thoracoabdominal neuropathic pain and abdominal wall protrusion following marked improvement in glycemic control after the initiation of tirzepatide. Hemoglobin A1c decreased from 11.0% to 6.6% over seven months, accompanied by a 17-pound weight loss. Several weeks after this metabolic improvement, he developed burning, stabbing, and electric shock-like thoracoabdominal pain with dysesthesia, hyperesthesia, and abdominal wall weakness. Extensive gastrointestinal, surgical, and structural evaluations were unrevealing. Electrodiagnostic testing demonstrated a generalized sensorimotor polyneuropathy, but needle electromyography of the thoracic or abdominal musculature was not performed. The clinical presentation was consistent with thoracic radiculoneuropathy occurring in the setting of marked glycemic improvement, although TIND could not be definitively established. This case highlights a focal truncal presentation temporally associated with glycemic improvement following tirzepatide therapy and emphasizes the diagnostic challenges in distinguishing TIND from spontaneous diabetic thora"
+   },
+   {
+    "id": "41210042",
+    "source": "MED",
+    "year": "2025",
+    "title": "Allodynia and Dysesthesia Associated With Semaglutide and Tirzepatide.",
+    "pubtype": [
+     "Journal Article",
+     "Case Reports",
+     "case-report"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": true,
+    "abstract": "Semaglutide and tirzepatide are two commonly prescribed glucagon-like peptide-1 (GLP-1) and GLP-1/glucose-dependent insulinotropic polypeptide (GLP-1/GIP) receptor agonists used for the treatment of type 2 diabetes and chronic weight management. Allodynia and dysesthesia have been previously reported as effects of semaglutide. This case report adds to the literature on dysesthesia from semaglutide and presents a novel report in a patient taking tirzepatide. This adverse drug reaction occurs in both patients treated for type 2 diabetes and chronic weight management, appears to be dose dependent, and resolves with discontinuation of the drug and may resolve spontaneously after several weeks."
+   },
+   {
+    "id": "42326458",
+    "source": "MED",
+    "year": "2026",
+    "title": "Anterior Cutaneous Nerve Entrapment Syndrome From Glucagon-Like Peptide-1 Receptor Agonist Injection.",
+    "pubtype": [
+     "Journal Article",
+     "Case Reports",
+     "case-report"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Anterior cutaneous nerve entrapment syndrome (ACNES) is an underdiagnosed cause of abdominal pain. We report the first documented ACNES case following subcutaneous administration of glucagon-like peptide-1 receptor agonist. A 44-year-old man developed focal, neuropathic abdominal pain coinciding with initiation of tirzepatide injections. Clinical examination confirmed ACNES diagnosis, and pain improved after relocating injections away from the abdomen and initiating multimodal pharmacotherapy. This case emphasizes the need to consider ACNES in patients endorsing focal abdominal pain with concurrent use of glucagon-like peptide-1 therapy and highlights injection site modification as a simple, effective management strategy while exercising self-restraint with respect to workup."
+   },
+   {
+    "id": "42873503",
+    "source": "MED",
+    "year": "2026",
+    "title": "Self-Reported Adverse Effects Among Social Media Users Taking Nonapproved Retatrutide.",
+    "pubtype": [
+     "research-article",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": ""
+   },
+   {
+    "id": "42757290",
+    "source": "MED",
+    "year": "2026",
+    "title": "Dangers of Injectable Peptides and Other Unregulated \"Biohacking\" Drugs.",
+    "pubtype": [
+     "research-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": false,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Injectable peptides are increasingly used without prescriptions for cosmetic and athletic enhancement, driven by digital marketing and social media. While evidence-based, FDA-approved peptides like semaglutide and tirzepatide offer significant clinical benefits under medical supervision, an expanding illicit market provides easy access without a prescription to many unapproved experimental drugs. These unregulated substances-including the veterinary anabolic steroid trenbolone, investigational triple-agonists like retatrutide, and unapproved peptides such as BPC-157, TB-500, and melanotan-II-lack established human safety profiles. Their use introduces severe potential risks, including product contamination, manufacturing impurities, inaccurate dosing, pathological angiogenesis, carcinogenesis, cardiovascular stress, and supraphysiological hormonal signaling. This review differentiates evidence-based therapeutics from unproven, high-risk compounds and outlines the molecular mechanisms of toxicity associated with popular \"looksmaxxing\" injectables. Clinicians must recognize these trends, and counsel patients on potential long-term health hazards of these potent agents."
+   },
+   {
+    "id": "42792699",
+    "source": "MED",
+    "year": "2026",
+    "title": "Potential Role of the Triple Receptor Agonist Retatrutide in Antipsychotic-Associated Metabolic Dysfunction Among Clozapine- and Olanzapine-Treated Schizophrenia Spectrum Disorders: A Narrative Review",
+    "pubtype": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Antipsychotic-associated metabolic dysfunction contributes substantially to cardiometabolic morbidity and premature mortality in schizophrenia spectrum disorders, with the greatest burden among patients treated with clozapine and olanzapine. This review focuses on patients with schizophrenia spectrum disorders receiving these two agents, in whom the relevant psychiatric evidence is concentrated. Existing pharmacological interventions, including metformin and glucagon-like peptide-1 receptor agonists (GLP-1RAs), produce clinically meaningful but often incomplete benefits. Retatrutide (LY3437943) is a once-weekly triple agonist of the GLP-1, glucose-dependent insulinotropic polypeptide (GIP), and glucagon receptors that produced a mean body-weight reduction of 24.2% at 48 weeks under the efficacy estimand in a Phase 2 obesity trial; company-reported Phase 3 results from four trials, not yet peer-reviewed, describe reductions of up to 28.7%. This narrative review examines the rationale for investigating retatrutide in this setting, drawing on retatrutide trials in non-psychiatric populations, the pathophysiology of antipsychotic-induced weight gain, and emerging evidence for incretin-based therapies in antipsychotic-treated populations. The glucagon component is of particular mechanistic interest because it increases basal energy expenditure, a pathway not engaged by mono- or dual agonists; whether this could partially compensate for the reduced physical activity associated with"
+   },
+   {
+    "id": "42942810",
+    "source": "MED",
+    "year": "2026",
+    "title": "Retatrutide as a Unimolecular GIP/GLP-1/Glucagon Receptor Tri-Agonist: Molecular Design, Pharmaceutical Development and Critical Interpretation of Emerging Phase 3 Evidence.",
+    "pubtype": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Retatrutide (LY3437943) is an investigational, once-weekly, lipidated 39-residue peptide that activates the glucose-dependent insulinotropic polypeptide, glucagon-like peptide-1, and glucagon receptors. Its molecular design combines incretin activity with glucagon receptor engagement while maintaining glycaemic efficacy. This critical narrative review examines molecular engineering, pharmacokinetics, dose escalation, pharmaceutical development, and clinical evidence available through 11 September 2026. Five phase 3 trials have reported positive primary outcomes, but only TRANSCEND-T2D-1 has a full peer-reviewed report; the obesity trials are currently available as sponsor topline disclosures. In those disclosures, efficacy-estimand mean weight reductions of 28.3% at 80 weeks (TRIUMPH-1) and 28.7% at 68 weeks (TRIUMPH-4) were reported, with a TRIUMPH-1 treatment-regimen estimate of 25.0%; these values remain provisional pending full published trial reports. The peer-reviewed TRANSCEND-T2D-1 report supports glycaemic efficacy in early type 2 diabetes. Interpretation requires attention to estimands, population differences, treatment discontinuation and selection into trial extensions. Gastrointestinal adverse events, dysaesthesia, heart-rate changes and the functional consequences of lean-mass loss require further evaluation. Pharmaceutical priorities include scalable synthesis, impurity and potency control, formulation stability, immunogenicity and reliable dose delivery. Retat"
+   }
+  ]
+ },
+ "new_vs_pubmed": [],
+ "fda_potential_signals": {
+  "rows_for_drug_or_class": 12,
+  "event_hits": [
+   {
+    "quarter": "January - March 2024",
+    "product": "Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (lixisenatide) Bydureon (exenatide) Bydureon BCise (exenatide) Byetta (exenatide) Mounjaro (tirzepatide) Ozempic (semaglutide) Rybelsus (semaglutide) Victoza (liraglutide) Saxenda (liraglutide) Soliqua (insulin glargine and lixisenatide) Trulicity (dulaglutide) Wegovy (semaglutide) Xultophy (insulin degludec and liraglutide) Zepbound (tirzepatide)",
+    "signal": "Dysaesthesia",
+    "status": "FDA is evaluating the need for regulatory action.",
+    "url": "https://www.fda.gov/drugs/fda-adverse-event-monitoring-system-aems/january-march-2024-new-safety-information-or-potential-signals-serious-risks-identified-fda-adverse"
+   }
+  ],
+  "drug_or_class_rows": [
+   "April - June 2020: Glucagon-like peptide 1 (GLP-1) Receptor Agonists Adlyxin (l → Hypoglycemia",
+   "April - June 2022: Glucagon-like peptide 1 (GLP-1) receptor agonists Adlyxin (l → Intestinal obstruction",
+   "April - June 2023: Mounjaro (tirzepatide) → Hypersensitivity",
+   "April - June 2025: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Intestinal obstruction and fecal impaction",
+   "January - March 2021: Glucagon-like peptide-1 (GLP-1) analogues Adlyxin (lixisenat → Drug-induced liver injury",
+   "January - March 2024: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Dysaesthesia",
+   "July - September 2021: Glucagon-like peptide-1 (GLP-1) analogues Adlyxin (lixisenat → Gallbladder related disorders",
+   "July - September 2023: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Alopecia",
+   "July - September 2023: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Aspiration",
+   "July - September 2023: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Suicidal ideation",
+   "October - December 2019: Glucagon-like peptide-1 (GLP-1) receptor agonists (RAs) Adly → Diabetic ketoacidosis",
+   "October - December 2024: Glucagon-like peptide-1 (GLP-1) receptor agonists Adlyxin (l → Non-arteritic anterior ischemic optic neuropathy (NAION)"
+  ]
+ },
+ "onsides": {
+  "labels_by_region": {
+   "EU": 1
+  },
+  "matching_effects": {
+   "Dysaesthesia": {
+    "regions": {
+     "EU": 1
+    },
+    "sections": [
+     "NA"
+    ]
+   }
+  },
+  "high_confidence_matches": []
+ },
+ "metrics": {
+  "seconds": 1.5,
+  "api_calls": 2,
+  "abstract_chars_kept": 6698,
+  "approx_tokens_kept": 1674,
+  "papers_kept": 5,
+  "papers_dropped_gate": 5
+ }
+}

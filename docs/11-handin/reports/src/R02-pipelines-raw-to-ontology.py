@@ -16,8 +16,8 @@ META = {
     "title": "Pipelines: raw to ontology",
     "short": "Pipelines",
     "subtitle": "how four public sources become a ranked, traceable review queue",
-    "version": "1.1",
-    "date": "5 November 2026",
+    "version": "1.2",
+    "date": "6 November 2026",
 }
 
 PNG = "docs/diagrams/png/"
@@ -157,7 +157,7 @@ def build(r):
          "`clean_drug_identity`", "{{n:scope.drugs_formulary}} ingredients"),
         ("3 · Clean", "FAERS versions, deletes, roles, duplicates; label safety sections; recalls and NDC matches",
          "`clean_faers_*`, `clean_label_*`, `clean_recall*`", "{{n:faers.cases_current}} current cases"),
-        ("4 · Curated", "One row per object; link tables; AI label reading (pilot)", "`ontology_*`", "10 object types"),
+        ("4 · Curated", "One row per object; link tables; AI label reading ({{n:ai.pilot_labels}} labels)", "`ontology_*`", "10 object types"),
         ("5 · Signals", "2×2 counts, PRR, Evans rule, 3-step label check, buckets, rank",
          "`ontology_signal_signals`", "{{n:signals.total}} signals, {{n:signals.ranked}} ranked"),
         ("6 · Change + health", "Dated change events; source as-of; {{n:monitoring.checks_per_build}} checks per build",
@@ -172,7 +172,7 @@ def build(r):
                "**Keep what you cannot use.** Unmatched names, error replies, mass reports and uncertain label "
                "matches are kept with a reason, never dropped silently."])
     r.key(["A **signal** ({{n:signals.total}}) is a drug–reaction pair that meets the Evans rule (at least 3 "
-           "reports, PRR at least 2, chi-squared at least 4; D006, proposed) **and** whose reaction is not found in any "
+           "reports, PRR at least 2, chi-squared at least 4; D006) **and** whose reaction is not found in any "
            "reference label of that drug ({{n:signals.not_in_label}} *not in label*) or is found only through a "
            "medium-band synonym ({{n:signals.possibly_in_label}} *possibly in label*).",
            "**Ranked** ({{n:signals.ranked}}) is the review queue: signals that are *not in label*, in the "
@@ -187,9 +187,10 @@ def build(r):
             "not verified (DQ20).",
             "**The Morning brief change card counts the last 30 days** ({{n:changes.last_30_days}} events), not "
             "since yesterday. Page 3's date range narrows it to *since my last review*.",
-            "**The AI does not touch her top signal.** The AI read only {{n:ai.pilot_labels}} oxycodone pilot labels; "
-            "for semaglutide × NAION it read none, so *not in label* there comes from the exact-text and synonym "
-            "checks (chapter 8). NAION is a *known positive*, not a discovery: EMA PRAC (6 Jun 2025) and a WHO "
+            "**The AI also checked her top signal.** Since 6 Nov (D041 v2) the AI reads the "
+            "{{n:app.labels_read_by_ai_naion}} semaglutide labels too. For semaglutide × NAION it found "
+            "diabetic-retinopathy terms and no optic-nerve term, so it agrees with the exact-text and synonym "
+            "checks: *not in label* (chapter 8). Its quotes are on page 1. NAION is a *known positive*, not a discovery: EMA PRAC (6 Jun 2025) and a WHO "
             "alert (27 Jun 2025) named it, and our 3 US labels do not mention it (DECISIONS learning 2026-11-05). "
             "Only the project owner can submit a triage decision today."],
            title="What this means for Dana (the safety officer)")
@@ -200,11 +201,11 @@ def build(r):
         ("If it fails", "The baseline gate (`docs/11-handin/baseline-gate.md`) is re-run before any hand-in."),
     ], status="TESTED")
     r.pill_legend()
-    landscape_figure(r, PNG + "30-handin-data-flow-v2.png",
-                     "Data flow as built (v2, O3 measured): public sources → `Data/raw` → `Data/clean` (identity "
+    landscape_figure(r, PNG + "30-handin-data-flow-v3.png",
+                     "Data flow as built (v3, 6 Nov: the AI reads 5 labels): public sources → `Data/raw` → `Data/clean` (identity "
                      "resolved once) → `Data/curated` → Ontology → Workshop. Dashed borders are incremental or cached "
                      "steps. The product count in the identity box comes from the README, not from `numbers.json`.",
-                     "docs/diagrams/png/30-handin-data-flow-v2.png (source docs/diagrams/src/30-handin-data-flow-v2.mmd)")
+                     "docs/diagrams/png/30-handin-data-flow-v3.png (source docs/diagrams/src/30-handin-data-flow-v3.mmd)")
 
     # ------------------------------------------------------------------ 02 sources
     r.chapter("Four sources and the raw contract")
@@ -235,7 +236,7 @@ def build(r):
     r.chapter("Drug identity, resolved once", new_page=False)
     r.p("FAERS names drugs in free text: brands, misspellings, doses inside the name. Labels and recalls belong "
         "to *products*, not ingredients. So identity is built once, in `clean_drug_identity.py`, and every later "
-        "step joins on its outputs [[DESIGNED]] (D020; D027, proposed).")
+        "step joins on its outputs [[DESIGNED]] (D020, D027).")
     r.table(["Output", "Key", "Rule"], [
         ("`clean_drug_ingredients`", "`ingredient_rxcui`", "The D018 formulary: 13 ingredient RxCUIs (an explicit list, because ATC "
                                                            "classes miss methadone and hydrocodone, DQ31)"),
@@ -250,7 +251,7 @@ def build(r):
     r.p("**Why never substring** [[OBSERVED]]: matching *morphine* as a substring also catches apomorphine and "
         "diamorphine (heroin). In the October prototype (local Python scripts that applied the same rules to the "
         "same FAERS files on 20 October, before we had Foundry) that made morphine rows about 50% too high (DQ34).")
-    r.p("**The two levels** (D027, proposed): counts belong to the ingredient (Drug); labels and recalls belong to the "
+    r.p("**The two levels** (D027): counts belong to the ingredient (Drug); labels and recalls belong to the "
         "product (application) and package (NDC). Bulk FAERS carries an application number (`nda_num`), so a "
         "report can reach the right label (D024): for example, injected semaglutide and the oral tablet have "
         "different labels (DQ33).")
@@ -307,20 +308,24 @@ def build(r):
     r.p("**DQ42: a 200 that is not a label** [[OBSERVED]]. For two tramadol repackager labels DailyMed answered "
         "HTTP 200 with the text `None`. The parser crashed. Now raw keeps the reply as received; clean keeps only "
         "text that starts with `<`; the version stays listed with `has_xml = false`.")
-    r.h("The AI reader (pilot)", 3)
+    r.h("The AI reader (D041 v2: 2 oxycodone + 3 semaglutide labels)", 3)
     r.p("`ai_label_extraction.py` sends each safety section to Claude Sonnet 5.5 through AIP and asks for every "
         "reaction with an **exact quote**. Code checks the quote is in the section text. Results: "
         "{{n:ai.pilot_labels}} labels, {{n:ai.sections}} sections, {{n:ai.reactions}} reactions, "
         "{{n:ai.grounded}} grounded [[OBSERVED]]. The cache key is setid + version + section + text hash + "
-        "prompt, parser and model version, so an unchanged label costs {{n:ai.model_calls_on_rebuild}} model calls (O1).")
-    r.warning("The AI is a pilot on 2 oxycodone labels and does not change the signal list today: the text check "
-              "already covers its terms. It read no semaglutide label, and its quote is not on the officer's screen "
-              "yet. Widening it waits for a pharmacist-checked answer key (D041).")
+        "prompt, parser and model version, so an unchanged label costs {{n:ai.model_calls_on_rebuild}} model calls (O1). "
+        "Adding the {{n:ai.d041_v2.semaglutide_labels}} semaglutide labels on 6 Nov sent only the "
+        "{{n:ai.d041_v2.model_calls}} new sections to the model; a forced rebuild then took "
+        "{{n:ai.from_cache_on_rebuild}} of {{n:ai.sections}} sections from cache (O1b).")
+    r.warning("The AI does not change the signal list today: the text check already covers its terms on all "
+              "{{n:ai.pilot_labels}} labels it reads (signals unchanged after D041 v2). Its value is the quoted "
+              "evidence, now on page 1 of the app. In the semaglutide labels it found diabetic-retinopathy terms and "
+              "no optic-nerve term. Widening it to other drugs waits for a pharmacist-checked answer key.")
     r.how_we_know(["Grounding: {{n:ai.grounded}} of {{n:ai.reactions}} quotes found word for word, across all "
                    "{{n:ai.sections}} sections [[OBSERVED]].",
-                   "Accuracy is a smaller test: F1 {{n:ai.gold_f1}} (proposed D015 target {{n:ai.d015_target_f1}}) on a 35-item "
+                   "Accuracy is a smaller test: F1 {{n:ai.gold_f1}} (D015 target {{n:ai.d015_target_f1}}) on a 35-item "
                    "answer key, the Boxed Warning and Contraindications of the 2 oxycodone labels, written by Claude "
-                   "and frozen before the run, no pharmacist yet. The model found " + r.n("ai.gold_recall_strict").replace("/", " of ") + " "
+                   "and frozen before the run, no pharmacist yet. The semaglutide sections are not scored. The model found " + r.n("ai.gold_recall_strict").replace("/", " of ") + " "
                    "answer-key items (`eval/ai-eval-v1.md`).",
                    "Label versions: {{n:labels.total}}, 0 version mismatches against the DailyMed index."])
 
@@ -376,7 +381,7 @@ def build(r):
         "reaction; *b* = this drug, other reactions; *c* = other drugs, this reaction; *d* = the rest. "
         "**PRR** (proportional reporting ratio) = (a / all reports for the drug) ÷ (c / all reports for other "
         "drugs), with a 95% confidence interval and a Yates chi-squared. The **Evans rule** flags a ≥ 3, PRR ≥ 2 "
-        "and chi-squared ≥ 4 (D006, proposed). Output: {{n:signals.ae_stats}} drug × reaction rows (*stats*) in "
+        "and chi-squared ≥ 4 (D006). Output: {{n:signals.ae_stats}} drug × reaction rows (*stats*) in "
         "`ontology_ae_stats`; diagram 32 counts 2,533 of them meeting Evans.")
     r.h("Step C: is it in the label? Three checks", 3)
     r.p("Every stat is checked against the safety sections of the drug's **reference labels** (one per product, "
@@ -385,13 +390,19 @@ def build(r):
         "recorded `label_match_method` differs. The version string `text+ai_v1+syn_v2` names the rule versions, "
         "not the order.")
     r.table(["Check", "Rule", "Outcome"], [
-        ("1 · AI terms (D041)", "An atomic term the AI extracted, with a quote the code found word for word, equals "
-                                "the FAERS term. Only the {{n:ai.pilot_labels}} oxycodone pilot labels have AI terms", "in label"),
-        ("2 · Text (D037, proposed)", "The exact FAERS term or its US spelling appears in a safety section of the "
+        ("1 · AI terms (D041 v2)", "An atomic term the AI extracted, with a quote the code found word for word, equals "
+                                "the FAERS term. Only the {{n:ai.pilot_labels}} AI-read labels (2 oxycodone, 3 semaglutide) "
+                                "have AI terms", "in label"),
+        ("2 · Text (D037)", "The exact FAERS term or its US spelling appears in a safety section of the "
                                       "drug's reference labels", "in label"),
         ("3 · Synonyms (D043)", "A reviewed phrase for the term appears in those sections. Band **high** → in label; "
                                 "**medium** → *possibly in label* (kept, not ranked); **rejected** rows kept for audit", "in / possibly"),
     ], widths=[110, 320, 74])
+    r.p("How many of the {{n:signals.ae_stats}} stats each check matched first (Foundry, after D041 v2): AI "
+        "{{n:signals.label_check_stats.ai_term_exact}} ({{n:ai.d041_v2.stats_matched_by_ai_oxycodone}} oxycodone, "
+        "{{n:ai.d041_v2.stats_matched_by_ai_semaglutide}} semaglutide), text {{n:signals.label_check_stats.label_text}}, "
+        "synonym high {{n:signals.label_check_stats.synonym_high}}, synonym medium "
+        "{{n:signals.label_check_stats.synonym_medium}}, none {{n:signals.label_check_stats.none}} [[OBSERVED]].")
     r.p("The synonym table `label_synonyms.py` (version {{n:synonyms.version}}) has {{n:synonyms.rows}} rows: "
         "{{n:synonyms.high}} high, {{n:synonyms.medium}} medium, {{n:synonyms.rejected}} rejected. A script "
         "proposes leads; a person sets the band (so far Claude; pharmacist pending).")
@@ -414,15 +425,17 @@ def build(r):
         "PRR's lower confidence bound is an alternative we have not tested [[DESIGNED]]. Every signal carries an "
         "`evaluation_id`, a hash of its key, count, PRR, label check, window, number of labels searched and "
         "number of AI-read labels, so a decision is pinned to what the officer saw [[DESIGNED]].")
-    crop_figure(r, PNG + "32-handin-signal-pipeline-v2.png", [(0, 0.04, 0.505, 0.99), (0.515, 0.345, 0.99, 0.685)],
-                "From one FAERS report to a ranked signal (v2), with real numbers for semaglutide × NAION. Top: "
+    crop_figure(r, PNG + "32-handin-signal-pipeline-v3.png", [(0, 0.04, 0.51, 0.99), (0.515, 0.345, 0.995, 0.695)],
+                "From one FAERS report to a ranked signal (v3, label-check counts from Foundry after D041 v2), with "
+                "real numbers for semaglutide × NAION. Top: "
                 "stages A to C. Bottom: stage D. Read two units with care. **Stats** in stage C are all "
-                "{{n:signals.ae_stats}} drug × reaction rows, flagged or not (for example *possibly (211 stats)*). "
+                "{{n:signals.ae_stats}} drug × reaction rows, flagged or not (for example *possibly "
+                "({{n:signals.label_check_stats.synonym_medium}} stats)*). "
                 "**Signals** in stage D are only the Evans rows that are not, or only possibly, in the label (for "
                 "example *possibly in label · {{n:signals.possibly_in_label}}*). The NAION box counts the 3 "
                 "*reference labels* searched; the text below also quotes a wider manual look at all 36 safety "
                 "sections of every semaglutide label in DailyMed (A014).",
-                "docs/diagrams/png/32-handin-signal-pipeline-v2.png (source docs/diagrams/src/32-handin-signal-pipeline-v2.mmd)",
+                "docs/diagrams/png/32-handin-signal-pipeline-v3.png (source docs/diagrams/src/32-handin-signal-pipeline-v3.mmd)",
                 max_height=400)
     r.h("Worked example: semaglutide × NAION", 3)
     r.table(["Item", "Value", "Evidence"], [
@@ -431,8 +444,8 @@ def build(r):
         ("PRR (95% CI)", "{{n:signals.naion.prr}} ({{n:signals.naion.prr_ci_low}} – {{n:signals.naion.prr_ci_high}})", "[[DERIVED]]"),
         ("Chi-squared (Yates)", "{{n:signals.naion.chi2_yates|,.1f}}", "[[DERIVED]]"),
         ("Label check", "Not found in the {{n:app.labels_searched_naion}} reference labels searched (Ozempic v20, "
-                        "Wegovy v19, oral Ozempic v14). The AI read none of them, so this comes from the text and "
-                        "synonym checks. A wider manual look found NAION in none of the 36 safety sections of any "
+                        "Wegovy v19, oral Ozempic v14) by text or synonyms. The AI read all {{n:app.labels_read_by_ai_naion}} and "
+                        "found diabetic-retinopathy terms but no optic-nerve term, so it agrees. A wider manual look found NAION in none of the 36 safety sections of any "
                         "semaglutide label in DailyMed (A014)", "[[OBSERVED]]"),
         ("Rank for semaglutide", "{{n:signals.naion.rank}}", "[[DERIVED]]"),
     ], widths=[170, 270, 64])
@@ -454,7 +467,7 @@ def build(r):
         ("O2", "Incremental FAERS (A015, D044)", "Full rebuild {{n:optimization.O2.full_rebuild_s}} s",
          "Adding Q2: {{n:optimization.O2.state_s}} s state + {{n:optimization.O2.outputs_s}} s outputs = "
          "{{n:optimization.O2.incremental_add_q2_s}} s", "**No**"),
-        ("O3", "DailyMed XML reuse (D047, proposed)", "{{n:optimization.O3.before_downloads}} downloads, {{n:optimization.O3.before_s}} s",
+        ("O3", "DailyMed XML reuse (D047)", "{{n:optimization.O3.before_downloads}} downloads, {{n:optimization.O3.before_s}} s",
          "{{n:optimization.O3.after_downloads}} downloads ({{n:optimization.O3.reused}} reused), {{n:optimization.O3.after_s}} s", "Yes"),
         ("O3a", "FAERS column pruning", "local {{n:optimization.O3a.local_run_before_s}} s", "local {{n:optimization.O3a.local_run_after_s}} s", "**No**"),
     ], widths=[30, 130, 120, 170, 54])
@@ -474,8 +487,8 @@ def build(r):
 
     # ------------------------------------------------------------------ 10 changes + monitoring
     r.chapter("Change feed and monitoring", new_page=False)
-    r.status("PROPOSED", "D045 (change feed) and D046 (monitoring) are built and tested but still await the project "
-                         "owner's OK (the person accountable for this build). Until then they are working pilot features.")
+    r.status("TESTED", "D045 (change feed) and D046 (monitoring) are built, tested and accepted by the project "
+                       "owner (batch decision, 6 Nov 2026).")
     r.p("Figure 5 (sideways, after Figure 4) shows the two ways a change is found.")
     r.p("`ontology_changes.py` writes one row per change to a signal, recall or label. **Source-dated** events give "
         "real history from the first build: {{n:changes.recall_reported}} recalls reported, "
@@ -499,10 +512,10 @@ def build(r):
                    "{{n:monitoring.faers_age_days}} days. For openFDA that is normal for a weekly feed. For FAERS it "
                    "is the normal lag of a quarterly file, and it means the signal list is about four months old "
                    "on any given morning."])
-    landscape_figure(r, PNG + "33-handin-incremental-faers-v2.png",
-                     "Full vs incremental FAERS (top) and DailyMed XML reuse (bottom), v2 with O3 measured. "
+    landscape_figure(r, PNG + "33-handin-incremental-faers-v3.png",
+                     "Full vs incremental FAERS (top) and DailyMed XML reuse (bottom), v3 (O3 measured; D047 accepted). "
                      "*DEMO* is the FAERS case file (one row per case version, with the patient's age and sex).",
-                     "docs/diagrams/png/33-handin-incremental-faers-v2.png (source docs/diagrams/src/33-handin-incremental-faers-v2.mmd)")
+                     "docs/diagrams/png/33-handin-incremental-faers-v3.png (source docs/diagrams/src/33-handin-incremental-faers-v3.mmd)")
     landscape_figure(r, PNG + "34-handin-change-feed-v1.png",
                      "Two ways to know something changed: dates the source carries (A) and comparing this build with "
                      "the last (B). Both feed MSSM Change Event, page 3 and the Morning brief.",
@@ -538,11 +551,11 @@ def build(r):
                "(Build ▾ → Force) and check History.",
                "Record a changed rule as a new decision version in DECISIONS.md; never edit one in place."],
               title="Three habits that save an afternoon")
-    landscape_figure(r, PNG + "37-handin-ripple-v2.png",
-                     "Ripple map v2: nine changes, each traced to what moves downstream, whether the evaluation id moves, "
+    landscape_figure(r, PNG + "37-handin-ripple-v3.png",
+                     "Ripple map v3: nine changes, each traced to what moves downstream, whether the evaluation id moves, "
                      "what the officer sees, and existing triage decisions (they stay linked in every row; there is no "
                      "stale flag yet, a known gap). Checked against the code (docs/11-handin/demo/ripple-table.md).",
-                     "docs/diagrams/png/37-handin-ripple-v2.png")
+                     "docs/diagrams/png/37-handin-ripple-v3.png")
     r.gate("Chapter 11: another engineer can extend it without asking", [
         ("Required evidence", "Each common change names the file to edit, the rebuild order and its side effects."),
         ("Result", "Met for six changes. The ranked queue was {{n:signals.ranked_history.step9}} at step 9; the "
@@ -565,8 +578,9 @@ def build(r):
         ("20 of 31 printed oxycodone recall NDCs not in the directory", "DECISIONS learnings, 2026-11-04"),
         ("Planted change → exactly 3 events", "A016"),
         ("Oxycodone 4,464 → 3,408 equals the October prototype", "DECISIONS learnings, 2026-11-04"),
-        ("2,533 stats meet Evans; 1,427 / 8 / 163 stats in label by text / AI / synonym; 211 stats possibly; "
-         "231 signals with the mass-report caution", "Diagram 32 v2 (docs/diagrams/src/32-handin-signal-pipeline-v2.mmd)"),
-        ("Ozempic v20, Wegovy v19, oral Ozempic v14 (NAION reference labels)", "screens/README.md (app-1c); diagram 32 v2"),
+        ("2,533 stats meet Evans; 231 signals with the mass-report caution",
+         "Diagram 32 v3 (docs/diagrams/src/32-handin-signal-pipeline-v3.mmd; local run, A014)"),
+        ("Ozempic v20, Wegovy v19, oral Ozempic v14 (NAION reference labels)", "screens/README.md (app-1c); diagram 32 v3"),
+        ("AI found diabetic-retinopathy terms, no optic-nerve term, in the semaglutide labels", "A019; eval/ai-eval-v1.md"),
     ], widths=[300, 204])
     r.numbers_appendix()

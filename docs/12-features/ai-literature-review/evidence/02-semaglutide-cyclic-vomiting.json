@@ -1,0 +1,27 @@
+{
+  "id": "02-semaglutide-cyclic-vomiting",
+  "query": "(semaglutide[tiab] OR \"GLP-1\"[tiab]) AND (\"cyclic vomiting\"[tiab] OR \"cannabinoid hyperemesis\"[tiab])",
+  "hits": 1,
+  "papers": [
+    {
+      "pmid": "42481928",
+      "year": "2026",
+      "journal": "Diabetes Obes Metab",
+      "title": "Safety Signals of GLP-1 Receptor Agonists: A Multi-Method Pharmacovigilance Analysis of FAERS (2018-2025) With Sensitivity-Stratified Prioritisation, Notoriety-Bias Assessment, and Cross-Database Validation.",
+      "pubtype": [
+        "Journal Article"
+      ],
+      "retracted": false
+    }
+  ],
+  "abstracts_kept": [
+    "42481928"
+  ],
+  "metrics": {
+    "api_calls": 3,
+    "seconds": 2.0,
+    "abstract_chars": 2753,
+    "approx_tokens": 688,
+    "retracted_dropped": 0
+  }
+}

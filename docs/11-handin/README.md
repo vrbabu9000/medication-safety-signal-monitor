@@ -1,5 +1,7 @@
 # Hand-in plan (approved 2026-11-05) — build → baseline gate → agents → review
 
+> **Status 2026-11-06:** the plan below is done. The owner's batch decision happened on 6 Nov: the 12 proposed decisions (D006, D015, D025–D029, D037, D045–D048) were accepted, plus D041 v2 (the AI also reads the 3 semaglutide labels; page 1 shows its quotes, Workshop v0.10.0). The duplicate Signal → Drug link type was deleted the same day. The hand-in set (R00–R09, architecture note, deck, demo files, diagrams 30 v3 · 31 v2 · 32 v3 · 33 v3 · 35 v2 · 36 v3 · 37 v3 · 38 v2) was refreshed to match. The text below is the original plan, kept as written.
+
 ## Context
 Steps 1–10 are done in Foundry (Compass v34). The brief asks for four hand-ins: the working build, a one-page architecture note, an optimization log, and a 20-minute demo. It also lists six things the reviewers will judge. Your request, organised:
 
@@ -34,7 +36,7 @@ Steps 1–10 are done in Foundry (Compass v34). The brief asks for four hand-ins
 **A2 · "Changed since last review" (question 3, D028).**
 - New `ontology_change_events` dataset, built incrementally: each build compares today's signals, recalls and label versions with the previous snapshot. Kinds: new / gone / changed, with old → new values and source as-of dates.
 - New object type MSSM Change Event, plus a panel on the screen ("since my last decision" = after the officer's latest triage time).
-- New decision **D045** (proposed). I keep building on it and you accept it at the end.
+- New decision **D045** (proposed at the time; accepted in the 6 Nov batch). I keep building on it and you accept it at the end.
 
 **A3 · Source as-of dates + health checks + monitoring.**
 - As-of date per source on the screen.
@@ -103,7 +105,7 @@ New persona files in `.claude/agents/`: `report-writer.md`, `deck-designer.md`, 
 ## Where I would stop and ask you
 - Foundry permissions I can't grant myself (for example Data Health checks).
 - Any password or sign-in.
-- New decisions (D045 onward) are built as Proposed. I list them for one batch "accept" at the end.
+- New decisions (D045 onward) are built as Proposed. I list them for one batch "accept" at the end. (Done 6 Nov: all accepted.)
 - No pharmacist is named, so this stays a documented gap.
 
 ## Verification

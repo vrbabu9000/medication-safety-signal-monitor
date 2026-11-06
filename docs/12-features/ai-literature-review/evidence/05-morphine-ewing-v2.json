@@ -1,0 +1,197 @@
+{
+ "id": "05-morphine-ewing",
+ "drug": "morphine",
+ "faers_pt": "Ewing's sarcoma",
+ "event_terms": [
+  "ewing"
+ ],
+ "pubmed_v1": {
+  "hits": 8,
+  "pmids": [
+   "14125891",
+   "29440819",
+   "35946186",
+   "34941790",
+   "27281724",
+   "24498783",
+   "10780056",
+   "41572388"
+  ]
+ },
+ "europe_pmc": {
+  "query": "morphine AND \"Ewing sarcoma\"",
+  "hits": 231,
+  "preprints": 0,
+  "papers": [
+   {
+    "id": "41572388",
+    "source": "MED",
+    "year": "2026",
+    "title": "Ewing sarcoma-related pain: potential role of medical cannabis monotherapy in symptom management - a case report.",
+    "pubtype": [
+     "Journal Article",
+     "case-report"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": true,
+    "abstract": "BACKGROUND: Persistent, multimodal cancer pain remains a challenge, particularly in long-term survivors facing treatment-related complications. The management of high-dose opioid dependence concurrent with chronic, multi-drug resistant (MDR) periprosthetic infection presents a critical unmet need. This case reports the potential use and sustained efficacy of medical cannabis monotherapy, highlighting an unexpected temporal association with the resolution of inflammatory and infectious symptoms in a highly complex oncologic setting. CASE PRESENTATION: A 27-year-old male, a long-term survivor of high-risk Ewing Sarcoma of the proximal tibia, presented with intractable mixed pain (VAS 9–10) secondary to chronic, recurrent MDR periprosthetic osteomyelitis and multiple surgical revisions (2013–2024). Despite continuous use of high-dose opioids (up to 120 mg/day morphine equivalents), pain levels remained moderate-to-severe (VAS 6–7) and functional status was poor. The patient had previously found temporary relief with self-administered cannabis. In January 2025, after refusing limb amputation, supervised medical cannabis therapy (Bedrocan®, 22% THC, 1% CBD, 1 g/day) was initiated. Pain levels gradually stabilized at VAS 2–3, coinciding with complete opioid discontinuation within four weeks. Over nine months of follow-up, the patient maintained full autonomy and an active lifestyle. Notably, sustained cannabis monotherapy was associated with the complete closure of the chronic drai"
+   },
+   {
+    "id": "42566421",
+    "source": "MED",
+    "year": "2026",
+    "title": "Delayed growth of SK-ES-1 Ewing sarcoma tumor xenografts is associated with reduced Trk and IGF1R pathway markers.",
+    "pubtype": [
+     "research-article",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Copyright: &copy; 2026 dos Santos et al. This is an open access article distributed under the terms of the Creative Commons Attribution License (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited. Ewing sarcoma (ES) is an aggressive childhood tumor. We have previously shown that tropomyosin receptor kinase (Trk) neurotrophin receptors regulate viability, and the Trk and multi-kinase inhibitor K252a restores sensitivity to chemotherapy, in ES cells. Here, we show that administration of K252a in mice transiently delays ES tumor growth and reduces expression and phosphorylation of multiple targets. BALB/c nu/nu nude mice inoculated with SK-ES-1 ES cells were given daily intraperitoneal (i.p.) injections of K252a for 18 days. Immunohistochemical analysis of tumors was performed to quantify the expression and phosphorylation of Trk receptors, phosphoinositide 3-kinase (PI3K), and insulin-like growth factor 1 receptor (IGF1R). Treatment with K252a led to a partial and transient delay in ES tumor growth and reduced the expression and phosphorylation of TrkA, TrkB, PI3K, and IGF1R. Combined treatment with K252a and the IGF1R inhibitor NVP-ADW742 was more effective in reducing ES cell viability than each compound alone. Associations between genes encoding Trks, PI3K, and IGF1R and overall survival (OS) in patients with ES was examined. Significant associations between expression of NTRK genes a"
+   },
+   {
+    "id": "41669600",
+    "source": "MED",
+    "year": "2026",
+    "title": "Radiologically Occult Desmoplastic Small Round Cell Tumor in a 36-Year-Old Man: A Case Report.",
+    "pubtype": [
+     "Journal Article",
+     "Case Reports",
+     "case-report"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Desmoplastic small round cell tumor (DSRCT) is a rare and aggressive mesenchymal malignancy that typically affects adolescents and young adults. We report an unusual case of a 36-year-old man who presented with persistent left flank pain. Initial investigations, including colonoscopy and abdominal computed tomography, were unremarkable. One year later, repeat imaging revealed a large intra-abdominal mass associated with liver metastases. Histopathological examination and immunohistochemical analysis confirmed the diagnosis of DSRCT. This case highlights the diagnostic challenges of DSRCT, particularly when it occurs outside the usual age range and presents with non-specific symptoms. Persistent or unexplained symptoms should prompt repeat and advanced imaging, as well as early tissue diagnosis, to facilitate timely multidisciplinary management."
+   },
+   {
+    "id": "40953311",
+    "source": "MED",
+    "year": "2025",
+    "title": "Off-label Use of Dinutuximab Beta in Combination With Chemotherapy in Patients With Ewing Sarcoma: A Retrospective Single-center Case Series.",
+    "pubtype": [
+     "research-article",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Surface expression of the disialoganglioside subtype GD2 has been observed on Ewing sarcoma (ES) cells, making it a suitable target for immunotherapy with the anti-GD2 antibody dinutuximab beta (DB). Here we report our experience of using DB in a cohort of 13 patients with GD2-positive, metastatic ES, in both the frontline (n=9) and relapsed/refractory (n=4) settings, when added to standard chemotherapeutic regimens. Outcomes were compared with 24 patients, primarily with localized ES, who were also treated at our center with standard therapy alone (without DB). Patients treated with DB had a median overall survival (OS) of 1877 days in the frontline setting and 810 days in the relapsed/refractory setting. Median time to progression was 1811 days and 782 days, respectively. In contrast, those treated with standard therapy alone in our center demonstrated a median OS of 1547 days and 210 days in the frontline and relapsed/refractory setting, respectively, with median times of progression of 1261 days and 113 days. DB treatment was well tolerated, with no new or unexpected adverse events reported. Anti-GD2 immunotherapy with DB represents a promising therapeutic option to improve outcomes in patients with metastatic ES, in both the frontline and relapsed/refractory settings."
+   },
+   {
+    "id": "41488266",
+    "source": "MED",
+    "year": "2025",
+    "title": "Recurrent Ewing's Sarcoma of the Chest Wall in an Adolescent Male Patient: A Complex Multimodal Management and Progressive Disease Course.",
+    "pubtype": [
+     "Journal Article",
+     "Case Reports",
+     "case-report"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "Ewing's sarcoma is a rare, aggressive malignant tumor of bone and soft tissue that predominantly affects adolescents and young adults. Chest wall involvement, though uncommon, presents unique surgical and oncologic challenges. We report a 17-year-old male patient who initially presented with thoracic pain and swelling. Imaging revealed a posterior chest wall mass consistent with Ewing's sarcoma. He underwent surgical resection with rib removal, followed by multiple lines of chemotherapy (vincristine, adriamycin (doxorubicin), and cyclophosphamide/ifosfamide and etoposide (VAC/IE) ×15 cycles; cyclophosphamide/topotecan ×4 cycles; etoposide, vincristine, adriamycin (doxorubicin), ifosfamide, and actinomycin D (EVAIA) ×2 cycles; and gemcitabine/docetaxel ×3 cycles). Despite aggressive multimodal therapy, the disease demonstrated rapid progression with extensive local invasion, spinal canal involvement, and pleural metastases. The patient ultimately developed systemic progression with recurrent infections and succumbed to his disease in August 2024. This case highlights the aggressive nature and chemoresistance of recurrent Ewing's sarcoma, emphasizing the importance of multidisciplinary care and early palliative involvement in advanced stages."
+   },
+   {
+    "id": "42221986",
+    "source": "MED",
+    "year": "2026",
+    "title": "Surgical techniques for patients with cancer-related neuropathic pain.",
+    "pubtype": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "In this manuscript, we discuss the use of neuromodulatory techniques such as intrathecal therapy (IT) and spinal cord stimulation (SCS) for cancer pain in neuro-oncology patients. Currently, cancer pain management relies on oral opioids, which have a number of systemic side effects particularly in a chronic setting. An escalation of pain therapy for pain relief, such as neuromodulation, is necessary to improve neuro-oncology patients' quality of life. The paper highlights the need for more comprehensive pain management for patients during and after receiving cancer therapies. IT allows analgesics to bypass the blood-brain barrier (BBB), generating rapid and effective analgesia with fewer side effects than oral drug administration. SCS can interrupt pain signals via electrical stimulation of the dorsal columns of the spinal cord. Here we present rationale and highlight individualized treatment options for these neuromodulatory techniques' use in a neuro-oncological setting."
+   },
+   {
+    "id": "39240372",
+    "source": "MED",
+    "year": "2024",
+    "title": "Decoding pediatric spinal tumors: a single-center retrospective case series on etiology, presentation, therapeutic strategies, and outcomes.",
+    "pubtype": [
+     "research-article",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "IntroductionSpinal tumors (ST) often result in dire prognosis, carrying risks such as permanent paralysis, sensory loss, and sphincter dysfunction. Data on their incidence and etiology in pediatric populations are markedly scant. Our study investigates the etiology, clinical manifestation, treatment, and outcomes of pediatric ST.MethodsWe conducted a retrospective review of our institutional pediatric oncology and neurosurgery database, examining 14 patients under 18 years admitted with ST due to oncological diseases since 2005. We analyzed the clinical presentations, evaluations, molecular diagnostics and treatments for these patients.ResultsThe study spanned 15 years and included 14 pediatric patients, each diagnosed with distinct spinal tumor entity. The mean patient age was approximately 19.6 ± 10.1 months. Severe axial pain along the vertebral column was observed in 13 patients, while acute neurological deterioration manifested in 7 patients. As a first-line intervention, 13 patients underwent decompressive surgery through laminectomy and tumor resection, and only one patient received chemotherapy solely. Before surgery, seven patients were unable to walk; post-surgery, six of them regained their ability to ambulate. The diagnosis encompassed a range of neoplasms: two instances of Ewing sarcoma, 3 instances of teratoma, one case presenting an atypical teratoid Rhabdoid tumor, two instances each of low-grade astrocytoma and neuroblastoma, and single instances of ependymom"
+   },
+   {
+    "id": "42711284",
+    "source": "MED",
+    "year": "2026",
+    "title": "Laryngeal NUT Carcinoma With BRD4::NUTM1 Fusion: A 4-Year Clinical Course Highlighting the Limitations of Current Multimodal Therapy.",
+    "pubtype": [
+     "case-study",
+     "Journal Article",
+     "Case Reports"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "BackgroundNuclear protein in testis (NUT) carcinoma is a rare, aggressive malignancy driven by NUTM1 rearrangement, often misdiagnosed as squamous cell carcinoma, with no established standard therapy. This report describes the clinical course and treatment resistance in primary laryngeal NUT carcinoma and provides insights into potential mechanism-based therapeutic approaches.CaseA 30-year-old man with a laryngeal tumor was initially treated for poorly differentiated squamous cell carcinoma. Recurrent disease prompted re-evaluation; NUT carcinoma was diagnosed by NUT immunohistochemistry, and the BRD4::NUTM1 fusion was confirmed by molecular analysis. A bromodomain and extra-terminal (BET) inhibitor and alternating vincristine, doxorubicin, and cyclophosphamide (VDC)/ifosfamide and etoposide (IE) chemotherapy induced transient tumor regression, whereas vorinostat, immune checkpoint inhibitors, and other systemic therapies were ineffective. Disease progression was ultimately driven by uncontrolled locoregional recurrence. Autopsy revealed a massive infiltrative tumor with extensive locoregional invasion, whereas distant metastatic disease was limited to minute pulmonary nodules; death resulted from overwhelming infection secondary to uncontrolled locoregional progression rather than systemic metastasis.ConclusionEarly molecular diagnosis and biologically informed multimodal strategies are essential for managing laryngeal NUT carcinoma and overcoming treatment resistance."
+   },
+   {
+    "id": "41855442",
+    "source": "MED",
+    "year": "2026",
+    "title": "Treatment Decision Making at Diagnosis for Children Presenting With Advanced Cancer in Low- and Middle-Income Countries.",
+    "pubtype": [
+     "research-article",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "PurposeAlthough most children diagnosed with cancer live in low- and middle-income countries (LMICs), research exploring decision making in these settings remains sparse. When children present with advanced cancer in LMICs, local centers may lack resources to provide treatment required to achieve cure. Existing treatment guidelines often do not account for contextual and resource variations influencing decision making. This qualitative study sought to understand physician approaches to treatment decision making for children presenting with advanced cancer at diagnosis in LMICs.MethodsSemistructured interviews were conducted with 36 physicians caring for children with cancer across all world regions and representing diverse income levels. Interviews were conducted in English, audio-recorded, and transcribed. Inductive content analysis focused on decision-making approaches.ResultsMost participants were female (n = 24; 67%), older than 36 years (n = 32; 89%), and practiced at centers caring for >100 new childhood cancer cases annually (n = 26; 72%) in lower-middle-income countries (n = 20; 55%). A spectrum of cancers were reported as advanced at diagnosis, with no single diagnosis predominating. Physicians generally recommended four treatment approaches (eg, curative-intent, non-curative-intent, referral, or limited chemotherapy trial), resulting in seven outcome pathways based on whether a family accepted, challenged, or declined the proposed treatment. Four decision-making app"
+   },
+   {
+    "id": "36626440",
+    "source": "MED",
+    "year": "2022",
+    "title": "Pain management of newly diagnosed sarcoma patients at a single center.",
+    "pubtype": [
+     "research-article",
+     "Journal Article"
+    ],
+    "open_access": true,
+    "retracted": false,
+    "drug_and_event_in_abstract": false,
+    "abstract": "BackgroundSystematic pain management of children is insufficient in China, and there is no literature on pain in children with sarcoma.MethodsClinical data of 188 patients with newly diagnosed sarcoma admitted to the Medical Oncology Department of Beijing Children's Hospital was collected from October 2018 to December 2020. Children experiencing pain received analgesic treatment and regular assessment.ResultsThirty-seven patients (19.7%) suffered from pain. Six cases (16.2%) had mild pain, 17 (46.0%) moderate, and 14 (37.8%) severe. Daily lives of 31 patients were affected by pain. Twenty-six cases had bone invasion. The analgesic rate was 54.1% before admission and 89.2% after admission. Nine cases were treated with oral morphine regularly, and their pain was relieved before chemotherapy; the dose of morphine was 0.14 ± 0.034 mg/kgQ4H when the target was reached. No serious adverse reactions were observed. The period of morphine application after chemotherapy was 5 to 9 days, and there was no withdrawal reaction.ConclusionPain in children with newly diagnosed sarcoma was mainly moderate to severe, and the incidence of pain in sarcoma with bone invasion was higher, with greater intensity. Patients who received standardized pain assessment and regular analgesics reached pain relief quickly, and no serious adverse reactions were observed within the recommended dosage."
+   }
+  ]
+ },
+ "new_vs_pubmed": [],
+ "fda_potential_signals": {
+  "rows_for_drug_or_class": 1,
+  "event_hits": [],
+  "drug_or_class_rows": [
+   "January - March 2023: Opioids Actiq (fentanyl citrate) Alfentanil Hydrochloride In → Hypoglycemia"
+  ]
+ },
+ "onsides": {
+  "labels_by_region": {
+   "JP": 4,
+   "US": 87,
+   "UK": 13
+  },
+  "matching_effects": {},
+  "high_confidence_matches": []
+ },
+ "metrics": {
+  "seconds": 1.2,
+  "api_calls": 2,
+  "abstract_chars_kept": 1500,
+  "approx_tokens_kept": 375,
+  "papers_kept": 1,
+  "papers_dropped_gate": 9
+ }
+}

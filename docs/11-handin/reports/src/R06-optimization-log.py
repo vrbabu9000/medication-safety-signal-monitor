@@ -3,7 +3,7 @@
 Build:  .venv/bin/python tools/handin/build_report.py R06-optimization-log
 Output: docs/11-handin/reports/pdf/R06-optimization-log.pdf
 
-Sources: docs/08-optimization-log/optimization-log.md (O1-O3a), A011, A015, A017, D041, D044, D047,
+Sources: docs/08-optimization-log/optimization-log.md (O1, O1b, O2, O3, O3a), A011, A015, A017, A019, D041 (v2), D044, D047,
 eval/ai-eval-v1.md, docs/04-architecture/foundry-conventions/project-build-order-v1.md.
 Every number is a {{n:...}} lookup in docs/11-handin/numbers.json, or computed here from two lookups
 (marked DERIVED in the text).
@@ -14,8 +14,8 @@ META = {
     "title": "Optimization log",
     "short": "Optimization log",
     "subtitle": "measure, change, measure again, and say what did not help",
-    "version": "1.1",
-    "date": "5 November 2026",
+    "version": "1.2",
+    "date": "6 November 2026",
 }
 
 
@@ -49,7 +49,7 @@ def build(r):
                f"({_mmss(o3_before)} to {_mmss(o3_after)}). Two did not: incremental FAERS was correct but "
                f"{o2_ratio:.2f} times slower, and column pruning made no real difference.")],
         is_=["The optimization log the brief asks for (hand-in item 3), written out in full",
-             "Four entries, O1 to O3a, each with baseline, change, after, method and threats to validity",
+             "Four entries, O1 to O3a (O1 re-checked as O1b after D041 v2), each with baseline, change, after, method and threats to validity",
              "The deliberate choices behind them: incremental or full rebuild, partitioning, where the LLM step sits"],
         is_not=["A claim that the pilot is fast or cheap at production scale",
                 "A cost report in dollars: we measured tokens and seconds, not invoices",
@@ -82,6 +82,10 @@ def build(r):
          "{{n:optimization.O1.before_calls}} model calls, {{n:optimization.O1.before_tokens}} tokens",
          "{{n:optimization.O1.after_calls}} calls, {{n:optimization.O1.after_tokens}} tokens on rebuild",
          "**Yes**", "[[OBSERVED]]"),
+        ("O1b", "Same cache after D041 v2 ({{n:ai.pilot_labels}} labels)",
+         "Without a cache: all {{n:ai.sections}} sections re-sent each build",
+         "Widening build {{n:ai.d041_v2.model_calls}} calls (new sections only); forced rebuild "
+         "{{n:ai.model_calls_on_rebuild}} calls", "**Yes**", "[[OBSERVED]]"),
         ("O2", "FAERS clean: incremental by quarter",
          "Full rebuild {{n:optimization.O2.full_rebuild_s}} s",
          "Incremental {{n:optimization.O2.incremental_add_q2_s}} s (same rows)",
@@ -108,14 +112,16 @@ def build(r):
         "feed will arrive is unverified (DQ20).",
         "**A new label still reaches her the same day.** XML reuse (O3) keeps pulling the DailyMed index "
         "every build, so a new label version is fetched as soon as it is listed.",
-        "**The AI cache (O1) costs her nothing and hides nothing.** The AI's exact quote is not on her "
-        "screen today, and the AI does not change her signal list yet (report R08).",
+        "**The AI cache (O1, O1b) costs her nothing and hides nothing.** The AI's exact quotes are on her "
+        "page 1 since 6 Nov, and a label refresh with the same text costs no model call. The AI does not "
+        "change her signal list (report R08).",
         "**Only the project owner can submit a triage decision today.** Giving the officer that permission "
         "is a production step (report R04).",
     ], title="What this means for Dana (the safety officer)")
     r.gate("Brief requirement met", [
         ("Required evidence", "At least one pipeline measured, improved, with before and after; failures shown."),
-        ("Result", "Met twice (O1 LLM cost, O3 build time). Two non-gains reported with their reasons (O2, O3a)."),
+        ("Result", "Met twice (O1 LLM cost, re-checked as O1b at 2.3 times the size; O3 build time). Two "
+                   "non-gains reported with their reasons (O2, O3a)."),
         ("If it fails", "Re-run O3 back-to-back before quoting it as the headline number (chapter 5)."),
     ], status="TESTED")
 
@@ -142,7 +148,7 @@ def build(r):
         ("Wall-clock, not compute", "The Builds page shows elapsed time, not compute-seconds (machine time "
          "used). We did not capture compute-seconds.", "We cannot state a compute or money saving."),
         ("Pilot size", "Two FAERS quarters, {{n:scope.drugs_formulary}} drugs, "
-         "{{n:labels.total}} labels, {{n:ai.pilot_labels}} labels read by the AI.",
+         "{{n:labels.total}} labels, {{n:ai.pilot_labels}} labels read by the AI ({{n:ai.sections}} sections).",
          "Results may change at scale; chapter 8 says what to re-measure."),
     ], widths=[95, 245, 140])
     r.gate("Method written down", [
@@ -156,8 +162,10 @@ def build(r):
     r.status("TESTED", "Helped. A rebuild with unchanged label text made "
              "{{n:optimization.O1.after_calls}} model calls (was {{n:optimization.O1.before_calls}}).")
     r.p("**The pipeline.** The AI transform sends each safety section of a drug label to Claude Sonnet "
-        "(through AIP) and gets back every reaction it names, each with an exact quote (decision D041). The "
-        "pilot reads {{n:ai.pilot_labels}} labels, {{n:ai.sections}} sections. Calling an LLM costs tokens "
+        "(through AIP) and gets back every reaction it names, each with an exact quote (decision D041). O1 was "
+        "measured on the first pilot: {{n:ai.v1_pilot.labels}} oxycodone labels, {{n:ai.v1_pilot.sections}} "
+        "sections. Since D041 v2 it reads {{n:ai.pilot_labels}} labels, {{n:ai.sections}} sections (O1b below). "
+        "Calling an LLM costs tokens "
         "(pieces of text the model reads and writes) and time, so doing it twice for the same text is pure waste.")
     r.table(["", "Value", "Evidence"], [
         ("**Baseline** (run 1)", f"{{{{n:optimization.O1.before_calls}}}} model calls; "
@@ -168,8 +176,14 @@ def build(r):
          "the transform looks the key up in its own previous output (an incremental transform).", "[[DESIGNED]]"),
         ("**After** (rebuild after an upstream refresh, same text)",
          "{{n:optimization.O1.after_calls}} model calls, {{n:optimization.O1.after_tokens}} tokens; "
-         "{{n:ai.from_cache_on_rebuild}} of {{n:ai.sections}} sections served from cache; same output rows",
+         "all {{n:ai.v1_pilot.sections}} sections served from cache; same output rows",
          "[[OBSERVED]]"),
+        ("**O1b** (6 Nov, D041 v2: add {{n:ai.d041_v2.semaglutide_labels}} semaglutide labels)",
+         "Widening build: {{n:ai.d041_v2.model_calls}} model calls, only the new sections "
+         "({{n:ai.d041_v2.new_prompt_tokens}} prompt + {{n:ai.d041_v2.new_completion_tokens}} completion tokens); "
+         "{{n:ai.d041_v2.cached_sections_in_that_build}} old sections reused. Forced rebuild with unchanged "
+         "text: {{n:ai.model_calls_on_rebuild}} calls, {{n:ai.from_cache_on_rebuild}} of {{n:ai.sections}} "
+         "sections from cache", "[[OBSERVED]]"),
         ("**Method**", "`from_cache` = true and `called_at` unchanged on every section row after the "
          "rebuild", "[[OBSERVED]]"),
     ], widths=[120, 300, 64])
@@ -185,13 +199,16 @@ def build(r):
     ])
     r.how_we_know(["The cache key includes the prompt and model version. When we moved from prompt p1 to "
                    "p2, the key changed and all sections were extracted again (A011, run 2). So the cache "
-                   "saves calls when nothing changed, and does **not** hide a change that should be re-scored."],
+                   "saves calls when nothing changed, and does **not** hide a change that should be re-scored.",
+                   "O1b needed a **forced** build: the repository Build button and the dataset Build button both "
+                   "skipped the unchanged AI dataset as 'already up to date' (DECISIONS learning 2026-11-06). "
+                   "Build ▾ → Force ran it, and every section came from the cache."],
                   title="How we know the cache is safe, not just cheap")
     r.gate("O1 closed", [
         ("Required evidence", "Model calls and tokens before and after, same output."),
         ("Result", "Met: {{n:optimization.O1.before_tokens}} tokens to {{n:optimization.O1.after_tokens}} on "
-                   "rebuild."),
-        ("Measure next", "Job wall time, back-to-back; tokens per label when the AI widens past the pilot."),
+                   "rebuild; O1b confirms it at {{n:ai.sections}} sections."),
+        ("Measure next", "Job wall time, back-to-back; dollars per label before widening the AI to other drugs."),
     ], status="TESTED")
 
     # ------------------------------------------------------------------ 4 O2
@@ -229,9 +246,9 @@ def build(r):
     r.bullets(["Re-measure with 4 or more quarters before switching signals to the incremental outputs (D044).",
                "Cut the fixed cost (not tried): write the outputs in the same build as the state (one start-up), "
                "and keep the state as one table instead of three."])
-    r.figure("docs/diagrams/png/33-handin-incremental-faers-v2.png",
+    r.figure("docs/diagrams/png/33-handin-incremental-faers-v3.png",
              "Full vs incremental FAERS (top) and DailyMed XML reuse (bottom), with the measured results.",
-             source="docs/diagrams/png/33-handin-incremental-faers-v2.png (source: docs/diagrams/src/33-handin-incremental-faers-v2.mmd)")
+             source="docs/diagrams/png/33-handin-incremental-faers-v3.png (source: docs/diagrams/src/33-handin-incremental-faers-v3.mmd)")
     r.gate("O2 closed", [
         ("Required evidence", "Same rows both ways; build time for both paths."),
         ("Result", f"Correct, not faster ({o2_ratio:.2f} times slower). Signals stay on the full rebuild (D044)."),
@@ -245,7 +262,7 @@ def build(r):
     r.p("**The pipeline.** `raw_dailymed_spl` first pulls the DailyMed index (which label versions exist for "
         "our drugs), then downloads each label's XML. Before this change it downloaded all "
         "{{n:labels.total}} XML files on every build, even though almost none had changed. This was our "
-        "slowest build. Decision D047 records the change; it is **proposed**, not yet accepted.")
+        "slowest build. Decision D047 records the change; the owner accepted it on 6 November 2026.")
     r.table(["", "Value", "Evidence"], [
         ("**Baseline**", f"Full pull every build: {{{{n:optimization.O3.before_downloads}}}} XML downloads, "
          f"**{_mmss(o3_before)}** ({{{{n:optimization.O3.before_s}}}} s)", "[[OBSERVED]]"),
@@ -314,7 +331,7 @@ def build(r):
          "Proven equal (O2). Switch only when it is measured faster (D044). Replays all quarters if drug "
          "identity changes, because old drug matches may then be wrong."),
         ("DailyMed raw pull", "Full snapshot, reusing held XML",
-         "Fast (O3) but keeps the full-snapshot contract: every build lists every label version (D047, proposed)."),
+         "Fast (O3) but keeps the full-snapshot contract: every build lists every label version (D047)."),
         ("AI label extraction", "Incremental (cache)", "The expensive step. Never re-call for the same text (O1)."),
         ("Change feed (`ontology_changes`)", "Incremental (keeps last snapshot)",
          "Needs yesterday's state to say \"what changed since yesterday\"."),
@@ -336,10 +353,10 @@ def build(r):
         "**Scoped out on purpose.** The build plan puts partition tuning after the pilot, with its own "
         "measurements (project build order v1, section 4).",
     ])
-    r.note("Recorded as decision D048 (**proposed**, waiting for the owner): every dataset is written "
+    r.note("Recorded as decision D048 (accepted 6 Nov 2026): every dataset is written "
            "unpartitioned in the pilot. Revisit (partition FAERS by quarter, signals by drug) when FAERS holds "
            "8+ quarters or a single build passes 5 minutes. The same choice is a row in the hand-in log "
-           "`docs/08-optimization-log/optimization-log.md` (D048, proposed). How much of each build is Foundry "
+           "`docs/08-optimization-log/optimization-log.md` (D048). How much of each build is Foundry "
            "start-up is not measured separately.", title="Decision record")
     r.h("Where the LLM step sits, so it is not re-run")
     r.p("The AI transform sits **after** the labels are cleaned and split into sections, and **before** the "
@@ -357,7 +374,7 @@ def build(r):
     ])
     r.gate("Choices are explained", [
         ("Required evidence", "Each pipeline has a mode and a reason; partitioning and LLM placement explained."),
-        ("Result", "Met (D048, proposed). Partitioning is recorded with its revisit trigger."),
+        ("Result", "Met (D048, accepted). Partitioning is recorded with its revisit trigger."),
         ("If it fails", "A reviewer cannot tell a deliberate choice from a default."),
     ], status="TESTED")
 
@@ -372,7 +389,7 @@ def build(r):
         ("429 replies per DailyMed build", "Show the rate-limit benefit with a number", "Not measured"),
         ("O1 job wall time, like for like", "Turn \"tokens saved\" into \"time saved\"", "Not measured"),
         ("LLM cost in dollars, per label", "Needed before widening the AI past "
-         "{{n:ai.pilot_labels}} labels", "Not measured"),
+         "{{n:ai.pilot_labels}} labels to other drugs", "Not measured"),
         ("Foundry start-up time on its own", "Explains part of O2's gap", "Not measured"),
     ], widths=[170, 230, 80])
     r.key("Two optimizations helped and two did not, and each claim has a before and after number. The "
@@ -389,7 +406,9 @@ def build(r):
         ("About 30 DailyMed index pages still pulled every build", "O3, optimization log"),
         ("2 remaining downloads are DailyMed \"None\" replies", "DQ42; O3"),
         ("O3 baseline from the step 9 build (not back-to-back)", "O3, optimization log"),
-        ("Partition revisit at 8+ FAERS quarters or a build over 5 minutes", "D048 (proposed)"),
+        ("Partition revisit at 8+ FAERS quarters or a build over 5 minutes", "D048"),
+        ("O1b: 2.3 times the size; Build button skips an unchanged incremental dataset", "Optimization log O1b; "
+         "DECISIONS learning 2026-11-06"),
         ("Partition tuning after the pilot", "project build order v1, section 4"),
     ], widths=[300, 204])
     r.numbers_appendix()

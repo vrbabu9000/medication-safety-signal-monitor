@@ -18,8 +18,8 @@ META = {
     "title": "Start here",
     "short": "Start here",
     "subtitle": "what this is, what to read first, and what the words mean",
-    "version": "1.0",
-    "date": "5 November 2026",
+    "version": "1.1",
+    "date": "6 November 2026",
 }
 
 TIGHT = dict(pad=2.2, font=7.5)   # compact tables: this page is a look-up sheet
@@ -109,7 +109,7 @@ def build(r):
                       "this reaction; *d* = the rest."),
         ("PRR", "Proportional reporting ratio = (a ÷ the drug's reports) ÷ (c ÷ other drugs' reports): how "
                 "much more often the reaction comes with this drug."),
-        ("Evans rule", "A common screen: 3+ reports, PRR ≥ 2, chi-squared ≥ 4 (D006, proposed)."),
+        ("Evans rule", "A common screen: 3+ reports, PRR ≥ 2, chi-squared ≥ 4 (D006)."),
         ("DailyMed / SPL", "The official US label site / its XML format (Structured Product Labeling). Our "
                            "label truth (D019)."),
         ("Label section", "A titled part of a label. We search Boxed Warning, Contraindications, Warnings "
@@ -131,13 +131,14 @@ def build(r):
     # ------------------------------------------------------------------ 4 ID codes
     r.h("4 · Key to the ID codes")
     r.table(["Code", "Means", "Look it up in"], [
-        ("D###", "A decision (where the brief is silent). `D016 v3` = third version; old ones kept. 12 are still "
-                 "*proposed* (D006, D015, D025–D029, D037, D045–D048), many already built; the owner accepts them in one batch.", "`docs/06-decisions/DECISIONS.md` (D001–D048)"),
+        ("D###", "A decision (where the brief is silent). `D016 v3` = third version; old ones kept. The owner "
+                 "accepted the last 12 open ones in one batch on 6 Nov 2026 (D006, D015, D025–D029, D037, "
+                 "D045–D048), plus D041 v2 (the AI also reads the semaglutide labels).", "`docs/06-decisions/DECISIONS.md` (D001–D048)"),
         ("A###", "An approach we tried, with its verdict: kept, dropped or parked.",
-         "`docs/05-approaches/INDEX.md` (A000–A017)"),
+         "`docs/05-approaches/INDEX.md` (A000–A019)"),
         ("DQ##", "A data-quality issue found in the public data.",
-         "`docs/07-data-quality/data-issues-register.md` (DQ01–DQ42)"),
-        ("O#", "An optimization, measured before and after (O1, O2, O3, O3a).",
+         "`docs/07-data-quality/data-issues-register.md` (DQ01–DQ43)"),
+        ("O#", "An optimization, measured before and after (O1, O1b, O2, O3, O3a).",
          "`docs/08-optimization-log/optimization-log.md`"),
         ("G1–G6", "Gate defaults in the dataset contracts, accepted via D039.",
          "`docs/04-architecture/dataset-contracts-v1.md`"),
@@ -147,8 +148,9 @@ def build(r):
         ("Baseline gate", "The full rebuild where every hand-in number was frozen.",
          "`docs/11-handin/baseline-gate.md`"),
         ("R##", "A hand-in report, R00 (this page) to R09.", "`docs/11-handin/reports/pdf/`"),
-        ("30–38", "Diagrams: 30 data flow (v2), 31 ontology, 32 signal pipeline, 33 incremental (v2), 34 "
-                  "change feed, 35 monitoring, 36 demo map, 37 ripple map, 38 one-page architecture.",
+        ("30–38", "Diagrams: 30 data flow (v3), 31 ontology (v2), 32 signal pipeline (v3), 33 incremental (v3), "
+                  "34 change feed, 35 monitoring (v2), 36 demo map (v3), 37 ripple map (v3), 38 one-page "
+                  "architecture (v2). Older versions are kept.",
          "`docs/diagrams/README-handin.md`"),
     ], widths=[44, 222, 238], **TIGHT)
 
@@ -180,15 +182,15 @@ def build(r):
          "*Not terminated* (that would add Completed).", "[[OBSERVED]]"),
         ("**{{n:changes.last_30_days}}** changes",
          "Change events (signal, recall, label) in the **last 30 days** (Morning brief card). Page 3's date "
-         "range gives *since my last review* (D045, proposed).",
+         "range gives *since my last review* (D045).",
          "Changes since yesterday.", "[[DERIVED]]"),
         ("**F1 {{n:ai.gold_f1}}**",
          "AI label reading on a " + key_size + "-item answer key (Boxed Warning + Contraindications of "
-         "{{n:ai.pilot_labels}} oxycodone labels; written by Claude, frozen before the run, no pharmacist yet); "
-         "found " + found + " of " + key_size + " items; target {{n:ai.d015_target_f1}} (D015, proposed). Separately "
+         "{{n:ai.v1_pilot.labels}} oxycodone labels; written by Claude, frozen before the run, no pharmacist yet); "
+         "found " + found + " of " + key_size + " items; target {{n:ai.d015_target_f1}} (D015). Separately "
          "**{{n:ai.grounded}}/{{n:ai.reactions}}** extracted terms are grounded (quote found) over all "
-         "{{n:ai.sections}} sections.",
-         "A score for all {{n:ai.reactions}} terms, or for any GLP-1 label.", "[[DERIVED]]"),
+         "{{n:ai.sections}} sections of {{n:ai.pilot_labels}} labels (2 oxycodone, 3 semaglutide).",
+         "A score for all {{n:ai.reactions}} terms, or for the semaglutide labels (not scored).", "[[DERIVED]]"),
     ], widths=[70, 270, 104, 60], **TIGHT)
 
     r.key([
@@ -197,11 +199,11 @@ def build(r):
         "**FAERS moved to AEMS in March 2026** (DQ20). Where future quarters will come from is not verified yet.",
         "**Only the project owner can submit a Triage Decision today** (R03 ch. 5); giving Dana that right "
         "is a production step.",
-        "**The AI's quote is not on her screen** (R04 ch. 7); a *not in label* signal has nothing to quote "
-        "anyway (R03 ch. 6).",
-        "**The hero drug had 0 AI-read labels.** The AI read only {{n:ai.pilot_labels}} oxycodone labels, so "
-        "NAION is *not in label* from the exact-text and synonym checks on {{n:app.labels_searched_naion}} "
-        "semaglutide labels.",
+        "**The AI's quotes are on her screen** (page 1, *What the AI read in these labels*, Workshop "
+        "{{n:app.workshop_version|raw}}; R04 ch. 7).",
+        "**Three checks agree NAION is not in the label.** Exact text and synonyms found nothing in the "
+        "{{n:app.labels_searched_naion}} semaglutide labels, and the AI, which read all "
+        "{{n:app.labels_read_by_ai_naion}}, found diabetic-retinopathy terms but no optic-nerve term.",
         "**The Morning brief *changes* card is the last 30 days**, not since yesterday. Use page 3's date range.",
     ], title="What this means for Dana (the safety officer)")
 

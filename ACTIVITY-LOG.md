@@ -5,7 +5,7 @@
 |---|---|
 | **Last session** | 2026-11-06 — README rewritten for outside reviewers, repo-wide link/number check, reviewer sharing guide (Compass v39) |
 | **Where we are** | Pilot built and refreshed: the AI now reads the demo drug's labels and its quotes are on page 1 (Workshop v0.10.0). Hand-in set: [R00 Start here](docs/11-handin/reports/pdf/R00-start-here.pdf) → [architecture note](docs/11-handin/architecture-note/architecture-note.pdf) → [deck](docs/11-handin/deck/MSSM-demo-deck.pdf) + [script](docs/11-handin/deck/speaking_script.md) → [demo guide](docs/11-handin/demo/demo-navigation-guide.md) → reports R01–R09 |
-| **Next 3 actions** | 1. (you) 5-minute Foundry sharing check ([guide](docs/10-delivery/sharing-with-reviewers.md)), then send Etter the repo + resume email, ask for Mon Nov 9, 12 PM · 2. (you) One commit + push · 3. (you + Claude) Rehearsal with the 3 checks |
+| **Next 3 actions** | 1. (you) Invite Etter in Foundry ([guide](docs/10-delivery/sharing-with-reviewers.md)), then send Etter the repo + resume email, ask for Mon Nov 9, 12 PM · 2. (you) One commit + push · 3. (you + Claude) Rehearsal with the 3 checks |
 | **Waiting on** | A rehearsal against live Foundry · pharmacist reviewer |
 | **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS; help me rehearse the demo against live Foundry."_ |
 
@@ -16,7 +16,7 @@
 ### 2026-11-06 (13) — README for outside reviewers + repo check (Compass v39)
 - **README rewritten** ([README.md](README.md)): "Reviewing this project? Start here" path (R00 → note → R02 → R06 → R07 → R09), headline numbers from [numbers.json](docs/11-handin/numbers.json), a data engineering table, "Run it yourself", known gaps (pharmacist, self-scored AI, syn_v3 ahead of Foundry). Old status was Compass v22.
 - **Repo check:** every relative link in .md files resolves, except in the archived `proposals/2026-10-28-codex-draft/` (not adopted; left as is) and COMPASS history snapshots (root-relative links; archival). Stale numbers fixed: [rehearsal-plan.md](docs/11-handin/demo/rehearsal-plan.md) "AI on 2 labels" → 5; [foundry/README.md](foundry/README.md) status table; COMPASS "(proposed)" labels on decisions accepted 6 Nov, and a duplicate v38 change-log row (now v39).
-- **New:** [sharing-with-reviewers.md](docs/10-delivery/sharing-with-reviewers.md). Developer Tier sign-ups paused 23 Oct 2026, so live Foundry access for an outsider is unconfirmed; fallback = repo + PDFs + screen-share.
+- **New:** [sharing-with-reviewers.md](docs/10-delivery/sharing-with-reviewers.md). Checked in Foundry: plan allows 5 users; invite via Control Panel → Manage users → Add new user; org `kestrel` gets Viewer on the project by default; Workshop link recorded.
 - **Not changed:** numbers.json, hand-in PDFs, Foundry.
 
 ### 2026-11-06 — Reusable kickoff prompt for a website project

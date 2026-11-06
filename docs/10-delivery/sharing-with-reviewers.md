@@ -1,40 +1,24 @@
 # Sharing the project with an outside reviewer
 
-_Written 2026-11-06 for sharing with Etter. Web research only. **Not yet tried in our Foundry enrollment.**_
+_Checked in our Foundry enrollment on 2026-11-06 (v2; v1 was web research only and wrongly guessed sharing was not possible)._
 
 ## TL;DR
-- **GitHub repo:** easy. Add the reviewer as a collaborator (if the repo is private) and send the link. The README starts with a reviewer path.
-- **Live Foundry app:** unsure. We are on the free **AIP Developer Tier**. Palantir **paused new Developer Tier sign-ups on 23 Oct 2026**, so the reviewer probably cannot create an account. Without an account in our enrollment, a Foundry link will not open for them.
-- **Recommended:** send the repo + PDFs now, and show the live app on a screen-share. Separately, try the in-product check below (5 minutes) to see whether Foundry offers to add an outside user.
+Invite the reviewer as a user in our enrollment. They get **Viewer** on the project automatically. Then send the Workshop link.
 
-## What we found (sources at the bottom)
-
-| Question | Answer | Confidence |
-|---|---|---|
-| Can new people sign up for Developer Tier? | No. Online sign-ups paused 23 Oct 2026; existing accounts work as usual | High (Palantir announcement) |
-| Can I invite someone into my enrollment? | Not documented for Developer Tier. One guide says Developer Tier has no sharing with other users | Low, unverified |
-| If the person **is** a user in my enrollment, how do I give access? | Project-level roles: Owner, Editor, Viewer, Discoverer. Open the project → its **access panel** → add the user or group as **Viewer** | Medium (Foundry docs; exact button label not confirmed in our UI) |
-| Can a viewer request access? | Yes. "Request access" sends a role request to the project owner | Medium (docs) |
-
-## 5-minute check in our Foundry (you)
-1. Open the project `/kestrel-01f4ab/Medication Safety Signal Monitor`.
-2. Open the project's access / sharing panel (top right of the project page).
-3. Try to add the reviewer's email as **Viewer**.
-   - If Foundry finds or invites them → give **Viewer** on the project only. Then send the Workshop link for **MSSM Safety Officer**.
-   - If it only searches existing users and finds nobody → outside sharing is not possible on this tier. Use the fallback.
-4. Also check the enrollment's user settings (Control Panel / Settings → Users) for an "invite user" option.
-
-Do **not** give Editor or Owner. Exports are off on every source (D038). Keep them off.
-
-## Fallback (works today)
-| Give them | How |
+## Facts (seen in Foundry)
+| Item | Value |
 |---|---|
-| The code and every write-up | GitHub repo link; README → "Reviewing this project? Start here" |
-| What the app looks like | [screens/](../11-handin/screens/README.md) screenshots, [R09 demo guide](../11-handin/reports/pdf/R09-demo-navigation-guide.pdf), [demo deck](../11-handin/deck/MSSM-demo-deck.pdf) |
-| The live app | A screen-share call where you drive Foundry |
-| A recording | Optional: a 5–10 minute screen recording of the 4 Workshop pages |
+| Plan | AIP Developer Tier: **5 users** max (1 used today) |
+| Invite | Control Panel → Manage user directory → Manage users → **Add new user** (first name, last name, email → *Send invite*). They get an email to create their account |
+| Project access | Project panel → 🔒 Access → Roles → Manage: **default role = Viewer for everyone in org `kestrel`**. A new user joins `kestrel`, so they can view the project with no extra step |
+| Workshop app link | https://kestrel.usw-16.palantirfoundry.com/workspace/module/view/latest/ri.workshop.main.module.5468606b-d94b-4f0a-b257-a22b207de88d |
 
-## Sources
-- [A quick update on AIP Developer Tier (Palantir community, 23 Oct 2026)](https://community.palantir.com/t/a-quick-update-on-aip-developer-tier/7404)
-- [Adding users from another organization to a Developer Tier account (community thread)](https://community.palantir.com/t/i-want-to-add-palantir-user-with-different-organization-in-my-developer-tier-account-with-role-based-access-control/6363)
-- [Projects and roles (Foundry docs)](https://www.palantir.com/docs/foundry/security/projects-and-roles)
+## Steps (you)
+1. Go to `kestrel.usw-16.palantirfoundry.com/workspace/control-panel/` → **Manage user directory** → **Manage users** → **Add new user**.
+2. Enter the reviewer's name and email → **Send invite**.
+3. Send the Workshop link once they have accepted the invite.
+4. Do **not** make them Editor or Owner. Remove the user after the review (same page).
+
+## Not verified
+- Whether a Viewer can see every dataset the Workshop page reads (the default Viewer role covers the whole project, so it should work).
+- Whether Palantir's pause on new Developer Tier sign-ups (23 Oct 2026, [announcement](https://community.palantir.com/t/a-quick-update-on-aip-developer-tier/7404)) blocks invites. It is about public sign-ups; invites are a separate flow.

@@ -12,6 +12,11 @@ Mirrors of [ontology_objects.py](ontology_objects.py) (step 6), [ontology_signal
 
 | `ontology_signals.compute` (step 8; buckets D016 v3, [A012](../../../docs/05-approaches/A012-signal-statistics-and-workshop.md)) | `ontology_ae_stats`: per drug × reaction a/b/c/d, PRR, 95% CI, Yates χ², Evans flag (D006), label status + match evidence (D037 text + AI terms) · `ontology_signal_signals`: Evans **and** not in label, bucket (D016 v2), `is_ranked`, `rank_in_bucket`, caution, `evaluation_id` | `stat_key` · `signal_key` |
 
+| [ontology_changes.py](ontology_changes.py) `compute_changes` (step 11, D045, [A016](../../../docs/05-approaches/A016-three-question-screen.md); incremental) | `ontology_change_events`: one row per change to a signal, recall or label. `found_by` = `source_date` (recall reported/terminated, label version effective: real history from the first build) or `snapshot_diff` (this build vs the previous build's snapshot: new / gone / changed field, dated by the build) · `ontology_change_snapshot`: the watched fields per entity, read back as "previous" next build | `event_id` · (`entity_type`, `entity_key`, `ingredient_name`) |
+| `compute_source_status` | `ontology_source_status`: as-of per source (FAERS latest quarter, openFDA last update, DailyMed newest effective label, RxNorm release) | `source` |
+
+Watched fields: signal = label status, ranked, bucket, caution; recall = status, class; label = version. First Foundry build: 2,898 source-dated events (900 reported, 767 terminated, 1,231 label versions); a second build with no data change added 0 (tested). Locally, a planted change produced exactly the expected events.
+
 Label check `text+ai_v1+syn_v2`: (1) AI atomic term, (2) exact term or US spelling in a safety section (D037), (3) reviewed synonym phrase (D043): high → `in_label`, medium → `possibly_in_label` (signal kept, not ranked). The table is also written to `ontology_label_synonyms`.
 
 Rule `prr_evans_v2`: reports with ≥30 drugs (`MAX_DRUG_ROWS`) are left out of the primary population and counted in `a_mass_reports` (D023 v2, accepted).

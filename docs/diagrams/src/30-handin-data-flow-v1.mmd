@@ -1,0 +1,87 @@
+---
+title: "Data flow as built (pilot, 13 drugs, 2026-11-05): public sources → raw → clean → curated → Ontology → Workshop"
+config:
+  flowchart:
+    wrappingWidth: 300
+---
+flowchart TB
+%% handin-theme
+  classDef source fill:#EAF3F5,stroke:#087F8C,color:#13324B
+  classDef pipeline fill:#FFFFFF,stroke:#13324B,color:#263746
+  classDef incr fill:#FFFFFF,stroke:#087F8C,stroke-width:2.5px,stroke-dasharray:7 4,color:#263746
+  classDef ontology fill:#E1F5EE,stroke:#0F6E56,color:#085041
+  classDef ai fill:#EEEDFE,stroke:#534AB7,stroke-width:2.5px,stroke-dasharray:7 4,color:#3C3489
+  classDef app fill:#13324B,stroke:#13324B,color:#FFFFFF
+  classDef risk fill:#FFF3D6,stroke:#B7791F,color:#7A4B00
+  classDef neutral fill:#F1EFE8,stroke:#5F5E5A,color:#444441
+
+  subgraph TOP["① Ingest and clean: public sources → Data/raw → Data/clean (drug identity resolved once)"]
+    direction LR
+    F["<b>FAERS</b><br/>quarterly files<br/>2026Q1 + Q2"]:::source
+    OF["<b>openFDA</b><br/>recalls · Drugs@FDA · NDC"]:::source
+    DM["<b>DailyMed</b><br/>label SPL XML"]:::source
+    RX["<b>RxNorm</b><br/>RxNav API"]:::source
+    RF["<b>raw_faers_quarter_*</b><br/>37 files + manifest"]:::pipeline
+    ROF["<b>raw_openfda_*</b><br/>930 · 663 · 1,824 rows"]:::pipeline
+    RDM["<b>raw_dailymed_spl_*</b><br/>1,321 labels<br/>XML reuse: O3, measuring"]:::incr
+    RRX["<b>raw_rxnorm_*</b><br/>13 ingredients"]:::pipeline
+    ID["<b>clean_drug_identity</b><br/>identity resolved ONCE<br/>39 names → 13 ingredients<br/>658 products"]:::pipeline
+    FF["<b>clean_faers</b> full rebuild<br/>792,346 current cases<br/>feeds signals (D044)"]:::pipeline
+    FI["<b>clean_faers_incremental</b><br/>state + per-quarter log<br/>= full rebuild, row for row"]:::incr
+    LB["<b>clean_labels</b><br/>1,321 versions<br/>5,431 safety sections"]:::pipeline
+    RC["<b>clean_recalls</b><br/>900 recalls · 126 active<br/>+ product match"]:::pipeline
+    F --> RF
+    OF --> ROF
+    DM --> RDM
+    RX --> RRX
+    RRX --> ID
+    ROF --> ID
+    RF --> FF
+    RF --> FI
+    ID --> FF
+    ID -. "identity change<br/>→ replay" .-> FI
+    ROF --> RC
+    ID --> RC
+    RDM --> LB
+    ID --> LB
+  end
+
+  subgraph BOT["② Curate, check, show: Data/curated → Ontology → Workshop (+ monitoring)"]
+    direction LR
+    IN["<b>from ①</b><br/>FAERS full rebuild<br/>label sections · recalls<br/>identity + products"]:::neutral
+    OBJ["<b>ontology_objects</b><br/>drugs · products · labels<br/>recalls · link tables"]:::pipeline
+    AI["<b>AI label extraction</b><br/>Claude Sonnet 5.5, cached<br/>448 / 448 quotes grounded"]:::ai
+    SY["<b>label_synonyms</b><br/>syn_v2 · 258 rows"]:::pipeline
+    SG["<b>ontology_signals</b><br/>PRR + Evans<br/>3-step label check<br/>1,952 signals · 1,073 ranked"]:::pipeline
+    CE["<b>ontology_changes</b><br/>2,898 change events<br/>+ source as-of"]:::incr
+    MO["<b>monitoring</b><br/>21 checks per build<br/>+ drift replay"]:::incr
+    DH["<b>Foundry Data Health</b><br/>4 checks → owner alert"]:::neutral
+    ON["<b>Ontology</b><br/>10 MSSM object types<br/>+ link types"]:::ontology
+    WS["<b>Workshop</b><br/>MSSM Safety Officer<br/>0 Morning brief<br/>1 Not in label · 2 Recalls<br/>3 What changed"]:::app
+    AC["<b>Action</b><br/>Create Triage Decision<br/>(write-back)"]:::ontology
+    IN --> OBJ
+    IN -- "safety sections" --> AI
+    IN --> SG
+    AI --> SG
+    SY --> SG
+    OBJ --> CE
+    SG --> CE
+    SG -.-> MO
+    AI -.-> MO
+    SG -.-> DH
+    OBJ --> ON
+    AI --> ON
+    SG --> ON
+    CE --> ON
+    ON --> WS
+    WS --> AC
+    AC -. "new Triage<br/>Decision object" .-> ON
+  end
+
+  TOP --> BOT
+
+  subgraph LEG["Legend"]
+    direction LR
+    L1["public source"]:::source ~~~ L2["Foundry dataset"]:::pipeline ~~~ L3["incremental or cached<br/>(dashed border)"]:::incr ~~~ L4["AI step, cached"]:::ai ~~~ L5["Ontology"]:::ontology ~~~ L6["Workshop screen"]:::app
+  end
+  BOT ~~~ LEG

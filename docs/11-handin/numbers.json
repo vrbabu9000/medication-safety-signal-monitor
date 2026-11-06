@@ -1,0 +1,151 @@
+{
+  "_meta": {
+    "captured_at": "2026-11-05T07:50Z",
+    "source": "Foundry SQL (repo SQL panel) after the baseline-gate rebuild of the whole downstream chain: raw_dailymed_spl → clean_labels → clean_label_product_map → ontology_objects → ai_label_extraction → ontology_signals → ontology_changes → monitoring. Build durations from the Foundry Builds page. Query: docs/11-handin/baseline-gate.md",
+    "provisional": false,
+    "note": "Single source for every number in reports, deck, demo script and diagrams. Values marked 'local' in a key name come from the local runner (equal to Foundry where both exist, A014)."
+  },
+  "scope": {
+    "drugs_formulary": 13,
+    "drugs_with_signals": 12,
+    "opioids": 8,
+    "glp1": 5,
+    "faers_quarters": "2026Q1-2026Q2"
+  },
+  "raw": {
+    "recall_rows": 930,
+    "recalls": 900,
+    "drugsfda_rows": 663,
+    "ndc_rows": 1824,
+    "dailymed_labels": 1321,
+    "openfda_requests_approx": 50
+  },
+  "faers": {
+    "cases_current": 792346,
+    "case_reactions": 2554017,
+    "drug_reaction_rows": 373522,
+    "q1_cases": 397224,
+    "q2_demo_rows": 422459,
+    "q2_cases_replaced": 26681,
+    "q2_cases_deleted": 655,
+    "q1_deletes_file": 6135,
+    "q2_deletes_file": 4217
+  },
+  "signals": {
+    "ae_stats": 14921,
+    "total": 1952,
+    "ranked": 1073,
+    "not_in_label": 1844,
+    "possibly_in_label": 108,
+    "ranked_history": {
+      "step9": 1355,
+      "syn_v1": 1210,
+      "d016_v3": 1115,
+      "syn_v2": 1073
+    },
+    "naion": {
+      "drug": "semaglutide",
+      "reaction": "Optic ischaemic neuropathy",
+      "rank": 1,
+      "a": 394,
+      "prr": 112.5,
+      "prr_ci_low": 92.19,
+      "prr_ci_high": 137.24,
+      "chi2_yates": 10653.8,
+      "all_reports_drug": 20892
+    }
+  },
+  "synonyms": {
+    "version": "syn_v2",
+    "rows": 258,
+    "high": 69,
+    "medium": 72,
+    "rejected": 117
+  },
+  "recalls": {
+    "total": 900,
+    "active": 126,
+    "newest": "D-0040-2027",
+    "newest_reported": "2026-10-21"
+  },
+  "labels": {
+    "total": 1321
+  },
+  "changes": {
+    "events_first_build": 2898,
+    "total": 2898,
+    "source_date": 2898,
+    "snapshot_diff_after_rebuild": 0,
+    "recall_reported": 900,
+    "recall_terminated": 767,
+    "label_version_effective": 1231,
+    "last_30_days": 26
+  },
+  "ai": {
+    "pilot_labels": 2,
+    "sections": 9,
+    "reactions": 448,
+    "grounded": 448,
+    "from_cache_on_rebuild": 9,
+    "model_calls_on_rebuild": 0,
+    "gold_recall_strict": "35/35",
+    "gold_recall_strict_p1": "11/35",
+    "gold_precision_upper": "35/37",
+    "gold_f1": 0.97,
+    "d015_target_f1": 0.85,
+    "run1_tokens_prompt": 41704,
+    "run1_tokens_completion": 29072
+  },
+  "monitoring": {
+    "checks_per_build": 21,
+    "runs": 2,
+    "data_health_checks": 4,
+    "reporter_type_blank_q1": 0.343,
+    "reporter_type_blank_q2": 0.721,
+    "recalls_last4w": 10,
+    "recalls_prev4w": 3,
+    "openfda_age_days": 8,
+    "faers_age_days": 130
+  },
+  "optimization": {
+    "O1": {
+      "before_calls": 9,
+      "after_calls": 0,
+      "before_tokens": 70776,
+      "after_tokens": 0
+    },
+    "O2": {
+      "full_rebuild_s": 32,
+      "incremental_add_q2_s": 88,
+      "state_s": 62,
+      "outputs_s": 26,
+      "helped": false
+    },
+    "O3": {
+      "before_s": 203,
+      "after_s": 83,
+      "before_downloads": 1321,
+      "after_downloads": 2,
+      "reused": 1319,
+      "helped": true
+    },
+    "O3a": {
+      "local_run_before_s": "12.3-13.0",
+      "local_run_after_s": 12.2,
+      "helped": false
+    }
+  },
+  "app": {
+    "pages": 4,
+    "workshop_version": "v0.9.0",
+    "triage_decisions": 2,
+    "timing_s": {
+      "morning_brief_load": 11.5,
+      "switch_recalls": 1.1,
+      "switch_what_changed": 0.8,
+      "switch_signals_with_labels": 2.4,
+      "method": "browser script, time until the expected text is on screen, View mode, 2026-11-05; human reading time not included"
+    },
+    "labels_searched_naion": 3
+  }
+}

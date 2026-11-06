@@ -13,7 +13,7 @@ Reference: [Foundry conventions](../docs/04-architecture/foundry-conventions/REA
 | `ai-function/` | Label-extraction prompts, AIP Logic notes, grounding check | B | superseded by `pipelines/ai/` |
 | `pipelines/ai/` | AI label extraction transform (Claude Sonnet 5.5, cached, grounded) | B | ✅ pilot step 7, [README](pipelines/ai/README.md) |
 | `app/` | Workshop layout notes and screenshots | C | 🟡 module **MSSM Safety Officer** built (step 8); notes in [ontology README](ontology/README.md#workshop-module) |
-| `monitoring/` | Data expectations, health checks, drift checks | D | ⚪ |
+| `monitoring/` | Data Health checks set in Foundry (record) · computed checks + drift: `pipelines/monitoring` | D | 🟡 step 11: 4 Data Health checks, 21 computed checks, drift replay |
 | `tools/local_run/` | Run a transform on your machine with stand-ins for Foundry's library | — | ✅ [README](tools/local_run/README.md) |
 
 Naming: `<layer>_<source>_<thing>`, e.g. `clean_faers_cases_current`.

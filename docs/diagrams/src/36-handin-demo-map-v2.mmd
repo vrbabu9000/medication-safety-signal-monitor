@@ -1,0 +1,66 @@
+---
+title: "Demo map v2: 23 stops, 1,200 s = 20 min · A0–A7 in the app (450 s) · H1–H15 under the hood (750 s) · each stop: time slot · screen · rubric row"
+config:
+  flowchart:
+    wrappingWidth: 230
+    nodeSpacing: 22
+    rankSpacing: 30
+    padding: 10
+    subGraphTitleMargin:
+      top: 6
+      bottom: 14
+---
+flowchart TB
+%% handin-theme
+  classDef pipeline fill:#FFFFFF,stroke:#13324B,color:#263746
+  classDef app fill:#13324B,stroke:#13324B,color:#FFFFFF
+  classDef write fill:#E1F5EE,stroke:#0F6E56,stroke-width:3px,color:#085041
+  classDef deck fill:#F1EFE8,stroke:#5F5E5A,color:#444441
+  classDef legend fill:#FFFFFF,stroke:#B4B2A9,stroke-dasharray:4 3,color:#263746
+
+  subgraph P1["Part A · the safety officer's morning in the Workshop app (0:00–6:00)"]
+    direction LR
+    A0["<b>A0 · Her 3 questions</b><br/>0:00–1:30 · 90 s<br/>Deck slides 1–2<br/><i>Communication</i>"]:::deck
+    A1["<b>A1 · Morning brief</b><br/>1:30–3:00 · 90 s<br/>Workshop · 3 cards<br/><i>Application · trust</i>"]:::app
+    A2["<b>A2 · One drug</b><br/>3:00–3:40 · 40 s<br/>Page 1 · semaglutide<br/><i>Application</i>"]:::app
+    A3["<b>A3 · Why NAION</b><br/>3:40–4:30 · 50 s<br/>Page 1 · evidence panel<br/><i>Application (trace)</i>"]:::app
+    A4["<b>A4 · Labels searched</b><br/>4:30–5:20 · 50 s<br/>Page 1 · 3 labels → DailyMed 'optic'<br/><i>Application · AI reliability</i>"]:::app
+    A5["<b>A5 · Triage this signal</b><br/>5:20–6:00 · 40 s<br/>open form → Cancel (default)<br/><i>Application · trust</i>"]:::write
+    A0 --> A1 --> A2 --> A3 --> A4 --> A5
+  end
+
+  subgraph P2["Part A ends (6:00–7:30) · Part H · under the hood begins (7:30–10:45)"]
+    direction LR
+    A6["<b>A6 · Recalls</b><br/>6:00–6:50 · 50 s<br/>Page 2 · 126 active → openFDA, Class I<br/><i>Application · Data judgment</i>"]:::app
+    A7["<b>A7 · What changed</b><br/>6:50–7:30 · 40 s<br/>Page 3 · past month<br/><i>Application</i>"]:::app
+    H1["<b>H1 · Architecture</b><br/>7:30–8:30 · 60 s<br/>Slide 6 · diagram 38<br/><i>Architecture</i>"]:::deck
+    H2["<b>H2 · Data Lineage</b><br/>8:30–9:30 · 60 s<br/>Foundry lineage, live<br/><i>Architecture</i>"]:::pipeline
+    H3["<b>H3 · Ontology picture</b><br/>9:30–10:15 · 45 s<br/>Slide 7 · diagram 31<br/><i>Architecture</i>"]:::deck
+    H4["<b>H4 · Ontology Manager</b><br/>10:15–10:45 · 30 s<br/>MSSM Signal, live<br/><i>Architecture</i>"]:::pipeline
+    A6 --> A7 --> H1 --> H2 --> H3 --> H4
+  end
+
+  subgraph P3["Part H · under the hood (10:45–15:30)"]
+    direction LR
+    H5["<b>H5 · Object Explorer</b><br/>10:45–11:30 · 45 s<br/>NAION links, live<br/><i>Application · trace</i>"]:::pipeline
+    H6["<b>H6 · FAERS → signal</b><br/>11:30–12:30 · 60 s<br/>Slide 8 · diagram 32 v2<br/><i>Data judgment</i>"]:::deck
+    H7["<b>H7 · Signal code</b><br/>12:30–12:50 · 20 s<br/>Code Repo (optional)<br/><i>Architecture</i>"]:::pipeline
+    H8["<b>H8 · Review queue</b><br/>12:50–13:30 · 40 s<br/>Slide 9<br/><i>Data judgment</i>"]:::deck
+    H9["<b>H9 · AI reliability</b><br/>13:30–14:45 · 75 s<br/>Slide 10 (+ SQL)<br/><i>AI · Optimization</i>"]:::deck
+    H10["<b>H10 · Monitoring</b><br/>14:45–15:30 · 45 s<br/>Slide 11 (+ SQL)<br/><i>AI · Data judgment</i>"]:::deck
+    H5 --> H6 --> H7 --> H8 --> H9 --> H10
+  end
+
+  subgraph P4["Part H (cont.) · optimization, judgment, close (15:30–20:00)"]
+    direction LR
+    H11["<b>H11 · Optimization</b><br/>15:30–16:45 · 75 s<br/>Slide 12 · O1–O3<br/><i>Optimization</i>"]:::deck
+    H12["<b>H12 · Incremental</b><br/>16:45–17:30 · 45 s<br/>Slide 13 (+ inc log)<br/><i>Optimization</i>"]:::deck
+    H13["<b>H13 · Data judgment</b><br/>17:30–19:00 · 90 s<br/>Slide 14<br/><i>Data judgment</i>"]:::deck
+    H14["<b>H14 · Another month</b><br/>19:00–19:40 · 40 s<br/>Slide 15<br/><i>Communication</i>"]:::deck
+    H15["<b>H15 · Take away</b><br/>19:40–20:00 · 20 s<br/>Slide 16<br/><i>Communication</i>"]:::deck
+    T["<b>Box colour = screen</b><br/>navy = Workshop app, live<br/>white = Foundry tool, live<br/>green = Action form<br/>stone = deck slide<br/>(+ …) = optional switch"]:::legend
+    H11 --> H12 --> H13 --> H14 --> H15 ~~~ T
+  end
+
+  P1 --> P2 --> P3 --> P4
+

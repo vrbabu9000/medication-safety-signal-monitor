@@ -95,7 +95,7 @@ All under project `/kestrel-01f4ab/Medication Safety Signal Monitor`. Code mirro
 | `foundry/` | Mirrors of Foundry code + resource map + local test harness | [foundry/README.md](foundry/README.md) |
 | `eval/`, `proposals/2026-11-02-gold-set-v2/` | Reference set v2 (30 cross-source traces) for evaluation | [A008](docs/05-approaches/A008-gold-set-v2-cross-source-traces.md) |
 | `prototypes/` | Local experiments (bulk data git-ignored under `prototypes/data/`) | — |
-| `tools/` | `render_diagrams.sh` | — |
+| `tools/` | `render_diagrams.sh`; `handin/` = hand-in PDF + diagram style kit | [tools/handin/README.md](tools/handin/README.md) |
 | `.claude/agents/` | Persona definitions (Architect, Data Eng, AI Eng, PV SME, Safety Officer, Design Lead, Compliance, Evaluator, Delivery Lead) | — |
 
 Other `proposals/` folders are drafts that were **not adopted** (see COMPASS). Don't build from them.

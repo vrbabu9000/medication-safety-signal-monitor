@@ -11,9 +11,13 @@ mkdir -p "$D/png" "$D/pdf"
 shopt -s nullglob
 for src in "$D"/src/*.mmd; do
   name="$(basename "$src" .mmd)"
+  cfg="$CFG"
+  # Opt-in hand-in palette: a line "%% handin-theme" anywhere in the .mmd selects _handin-theme.json
+  # (see tools/handin/diagram_style.md). Files without that line render exactly as before.
+  if grep -q '^%% handin-theme' "$src"; then cfg="$D/src/_handin-theme.json"; fi
   echo "render $name"
-  "${MMDC[@]}" -q -i "$src" -o "$D/png/$name.png" -c "$CFG" -b white -s 3 -w 1600
-  "${MMDC[@]}" -q -i "$src" -o "$D/pdf/$name.pdf" -c "$CFG" -b white -f
+  "${MMDC[@]}" -q -i "$src" -o "$D/png/$name.png" -c "$cfg" -b white -s 3 -w 1600
+  "${MMDC[@]}" -q -i "$src" -o "$D/pdf/$name.pdf" -c "$cfg" -b white -f
 done
 pdfs=("$D"/pdf/*.pdf)
 if command -v pdfunite >/dev/null && ((${#pdfs[@]})); then

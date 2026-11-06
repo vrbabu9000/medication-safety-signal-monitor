@@ -3,15 +3,51 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
-| **Last session** | 2026-11-05 — Step 10 done; D044 accepted (Compass v34) |
-| **Where we are** | Phase 2, steps 1–10 done. 1,952 signals for 12 drugs, 1,073 ranked. Incremental FAERS correct but slower at 2 quarters (88 s vs 32 s), so signals still read the full rebuild. D044 accepted. |
-| **Next 3 actions** | 1. (Claude) Step 11: recall status + "changed since last review" on the screen, health checks · 2. (Claude) Add retry/back-off to the DailyMed pull before any schedule · 3. (you) Name the pharmacist reviewer |
-| **Waiting on** | Pharmacist reviewer · tell boss the demo date is open |
-| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and COMPASS, connect Chrome, open Foundry, and continue with build-order step 11."_ |
+| **Last session** | 2026-11-05 — Hand-in Phase D done: 5 reviews, all fixes applied, everything rebuilt (Compass v37) |
+| **Where we are** | Pilot built; hand-in set complete: [R00 Start here](docs/11-handin/reports/pdf/R00-start-here.pdf) → [architecture note](docs/11-handin/architecture-note/architecture-note.pdf) → [deck](docs/11-handin/deck/MSSM-demo-deck.pdf) + [script](docs/11-handin/deck/speaking_script.md) → [demo guide](docs/11-handin/demo/demo-navigation-guide.md) → reports R01–R09. Evaluator v2: Architecture 4 · Optimization 3 · Data judgment 4 · Application 3 · AI reliability 3 · Communication 4 ([rubric-check-v2](docs/11-handin/reviews/rubric-check-v2.md)) |
+| **Next 3 actions** | 1. (you) Batch decision: accept the 12 proposed decisions; D041 v2 yes/no; delete duplicate Signal→Drug link; name a pharmacist · 2. (you + Claude) Rehearsal with the 3 checks (DailyMed "optic", Class I count, stopwatch) · 3. (you) One commit of everything (commands in the last chat reply) |
+| **Waiting on** | Your batch decision · a rehearsal against live Foundry · pharmacist reviewer |
+| **Say this to Claude to restart** | _"Read ACTIVITY-LOG, COMPASS and docs/11-handin/reviews/rubric-check-v2.md; help me rehearse the demo."_ |
 
 ---
 
 ## Log (newest first)
+
+### 2026-11-05 (evening, 11) — F01 run v2: 3 more public sources
+- **Re-ran the 6 samples** with Europe PMC, FDA "Potential Signals of Serious Risks" (70 quarterly pages, 785 rows) and OnSIDES v3.1.1 (85 MB, CC BY 4.0). New tool [research_sources.py](tools/lit_review/research_sources.py). Results: [rerun-v2-multi-source.md](docs/12-features/ai-literature-review/samples/rerun-v2-multi-source.md).
+- **Result:** no verdict flipped. FDA listed NAION (Q4 2024) and Dysaesthesia (Q1 2024) for the GLP-1 class, so samples 01 and 04 are stronger. Europe PMC: 0 new on-topic papers.
+- **Learned:** FDA's list is the best add-on. FDA wording ≠ MedDRA terms, so a formulary-wide check needs a mapping table (like A014). OnSIDES has thin GLP-1 coverage (tirzepatide: 0 US labels).
+- Compass not bumped (exploration only).
+
+### 2026-11-05 (evening, 10) — Exploring F01: AI review backed by papers
+- **Idea:** no pharmacist reviewer is available, so: an AI reads PubMed for the officer's watch list and writes a cited verdict; a pharmacist signs it later. New [feature folder](docs/12-features/ai-literature-review/README.md), [A018](docs/05-approaches/A018-ai-literature-review.md) (Trying, not in pilot scope).
+- **Samples (6):** 2 real (semaglutide NAION, tirzepatide allodynia) · 1 plausible, FAERS evidence only (semaglutide cyclic vomiting) · 3 noise or not enough evidence (fentanyl anaesthesia-context term, morphine Ewing's = confounding by indication, buprenorphine SMA syndrome). [FINDINGS](docs/12-features/ai-literature-review/FINDINGS.md).
+- **Learned:** tirzepatide · Allodynia is probably a synonym miss (Zepbound label lists "dysesthesia"); syn_v3 row proposed, not added (DECISIONS learning).
+- **Cost:** ~$0.09/review on Opus 5.5 (estimate); 25-signal watch list ≈ $2.20 + ~50 pharmacist minutes ([cost-estimate](docs/12-features/ai-literature-review/cost-estimate.md)).
+- **New tool:** [tools/lit_review/fetch_evidence.py](tools/lit_review/fetch_evidence.py) (NCBI E-utilities, free). PubMed connector not connected; same database.
+- Compass not bumped (exploration only; no phase, scope or decision change).
+
+### 2026-11-05 (day, 9) — Hand-in Phase D: review → fix loop (Compass v37)
+- **Reviews** (all in [docs/11-handin/reviews](docs/11-handin/reviews/)): first-time reader (no front door, mixed label meanings, no drug-safety primer); fact-check (6 wrong · 17 stale · 7 inconsistent · 3 unsourced); 💊 safety officer (traces stopped one click short of the source; recall wording implied inventory data; unmeasured "under two minutes"); cohesion check (17 wording mismatches, all numbers consistent); evaluator re-score v2.
+- **Fixed:** one wording for every term ([phase-d-fix-brief](docs/11-handin/reviews/phase-d-fix-brief.md)); new [R00 Start here](docs/11-handin/reports/pdf/R00-start-here.pdf); R01 drug-safety primer; R04 now a click-by-click user guide + editor guide; label legend fixed in the style kit; architecture note corrected (still 1 page); deck: DailyMed click + openFDA tab are now required trace stops; demo guide: ripple table checked against the code.
+- **Diagrams v2:** 30 (O3 measured), 32 (label checks in code order), 36 (demo map, 23 stops), 37 (ripple map: decisions stay linked, no stale flag = known gap).
+- **Learned:** NAION is a known positive — EMA PRAC (6 Jun 2025) and WHO (27 Jun 2025) call it a very rare semaglutide side effect; our 3 US labels do not mention it (DECISIONS learning). The real proposed list is 12 decisions, not 6. An existing triage decision gets no "stale" flag when its evidence changes.
+- **Register:** DQ04 and DQ06 marked "left as a known gap"; DQ38 34% (Foundry) vs 35% (profile) noted. Optimization log: partitioning row (D048, proposed).
+- **Moved:** style sample PDF to [tools/handin/sample](tools/handin/sample/R00-sample.pdf), out of the hand-in folder.
+
+### 2026-11-05 (morning, 8) — Baseline gate passed; O3; hand-in agents (Compass v36)
+- **O3 (D047):** DailyMed pull reuses XML already held for the same setid + version → 1 m 23 s (was 3 m 23 s), 2 downloads (was 1,321). O3a column pruning tried, no real gain, reverted. [Optimization log](docs/08-optimization-log/optimization-log.md).
+- **AI eval:** [eval/ai-eval-v1.md](eval/ai-eval-v1.md): strict recall 35/35, precision ≤ 35/37, F1 0.97 (target 0.85), grounded 448/448; limits stated.
+- **Gate:** full downstream rebuild (8 builds) → counts equal, 0 new change events, AI 0 model calls, 2 triage decisions survive, Data Health checks passed; 5/5 random flags traced to FAERS rows and label text. [baseline-gate.md](docs/11-handin/baseline-gate.md), [numbers.json](docs/11-handin/numbers.json), 13 [screenshots](docs/11-handin/screens/README.md).
+- **Workshop v0.8.0:** module title MSSM, page 2 section titles.
+- **Agents:** style kit done ([tools/handin](tools/handin/README.md)); diagram set v1 done ([README-handin](docs/diagrams/README-handin.md), 30–37 + draw.io); running: rubric check, reports R01–R08, architecture note, deck, demo guide ([shared brief](docs/11-handin/AGENT-BRIEF.md)).
+
+### 2026-11-05 (early, 7) — Step 11: three-question screen + monitoring (Compass v35)
+- **Change feed (D045):** [ontology_changes.py](foundry/pipelines/ontology/ontology_changes.py) → 2,898 dated events (recalls reported/terminated, label versions) + build-to-build diff of signals/recalls/labels; `ontology_source_status`. No-change build adds 0; planted change gives exactly 3 events. New objects MSSM Change Event, MSSM Source Status.
+- **Screen:** pages 0 · Morning brief (metric cards 1,073 · 126 · 26 + as-of table), 2 · Recalls (filter through the Recall↔Drug link), 3 · What changed (date range = since my last review); header tabs. [foundry/ontology README](foundry/ontology/README.md).
+- **Monitoring (D046):** [monitoring.py](foundry/pipelines/monitoring/monitoring.py): 21 checks per build + drift replay; grounded 448/448; warnings: reporter type blank 34%→72% (DQ38), recalls ×3.3 in 4 weeks. 4 Foundry Data Health checks ([record](foundry/monitoring/README.md)). DailyMed pull retries 429s (committed in Foundry, not yet rebuilt).
+- **Mistake:** a duplicate Signal→Drug link type was created; recorded, not deleted.
+- **Agents:** research on sources + pharmacist review done → [another-month file](docs/09-roadmap/another-month-sources-and-pharmacist-review.md); style kit running. New persona files in `.claude/agents/` (researcher, report-writer, deck-designer, demo-director, first-time-reader, fact-checker).
 
 ### 2026-11-05 (early, 6) — D044 accepted (Compass v34)
 - You accepted D044 (incremental FAERS beside the full rebuild; signals keep the full rebuild until incremental is measured faster). No code change.

@@ -17,3 +17,4 @@ Good ideas that are **not in pilot scope**. Kept so they aren't lost, and so we 
 - **Link to this project:** our signal monitor could be one "app" on such a platform. Example: a CDS Hook that warns a prescriber about an active opioid recall.
 
 **Open questions for a future conversation:** Who are the users: hospitals, vendors, or devices? Is the goal edge devices (lightweight) or the data-center core? What does "crazy efficient" mean here: latency, cost, or ease of integration?
+| Pharmacist review loop with Claude-built evidence packets (PubMed / ClinicalTrials.gov connectors) and a Foundry Action that records the pharmacist's band | Fixes the biggest trust gap (synonym bands, gold set, top signals reviewed only by Claude) | [research](another-month-sources-and-pharmacist-review.md) | another month |

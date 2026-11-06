@@ -1,6 +1,6 @@
 # 🧭 COMPASS — Where we are, where we're going
 
-**Compass v34** · _Last updated: 2026-11-05_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
+**Compass v37** · _Last updated: 2026-11-05_ · History: [docs/00-compass/history](docs/00-compass/history/) · Tracker: [BACKLOG](docs/10-delivery/BACKLOG.md) (run the ⏱️ Delivery Lead to refresh)
 
 ## North Star
 _Purpose (boss, 2026-10-13): an exploratory showcase of design thinking, system design and usefulness. The reasoning trail is half the deliverable._
@@ -13,11 +13,11 @@ and can click any flag to see the exact source behind it.
 | | |
 |---|---|
 | 📍 **Phase** | 2 · Pilot build (started 2026-11-04, built with Claude over Claude in Chrome) |
-| 🔨 **Step** | **Step 10 done** ([A015](docs/05-approaches/A015-incremental-faers.md), D044 accepted): incremental FAERS equals the full rebuild row for row (792,346 cases, 2,554,017 reactions, 373,522 drug-reaction rows; 0 differences both ways); Q2 replaced 26,681 cases and deleted 655. **Not faster at 2 quarters** (88 s vs 32 s), so signals still read the full rebuild. Earlier: steps 1–9 done, plus the label ↔ FAERS **synonym table** ([A014](docs/05-approaches/A014-label-faers-synonym-table.md), D043 accepted): ranked queue **1,355 → 1,210** (−10.7%), 72 signals now "possibly in label"; then D016 v3 buckets (accepted) → **1,115 ranked**; synonym v2 → **1,073 ranked**, 108 possibly in label; NAION #1 for semaglutide; GLP-1 gastric-emptying false positives gone; NAION confirmed not in any semaglutide label (ranked 2nd). Foundry = local. Before: step 9 → [A013](docs/05-approaches/A013-widen-to-formulary.md) |
-| 🎯 **Next milestone** | step 11: finish the three-question screen (recall status, "changed since last review") + health checks + human-reviewed AI evaluation |
-| ⛔ **Blockers** | Pharmacist reviewer not named (now: long label sections, 125+ ranked signals **and** the synonym bands) · `OpenFdaApiKey` unused (fine at ~50 calls) |
+| 🔨 **Step** | **Hand-in Phase D done (review → fix loop):** first-time reader, fact-checker (6 wrong · 17 stale · 7 inconsistent, all fixed), 💊 safety officer (demo trace now ends at the source: DailyMed label + openFDA record), cohesion check and evaluator re-score ([reviews](docs/11-handin/reviews/)). New [R00 Start here](docs/11-handin/reports/pdf/R00-start-here.pdf); R01–R09 rebuilt; [architecture note](docs/11-handin/architecture-note/architecture-note.pdf) one page; [deck](docs/11-handin/deck/MSSM-demo-deck.pdf) 29 slides + script; [demo guide](docs/11-handin/demo/demo-navigation-guide.md) 23 stops. Diagrams 30, 32, 36, 37 → v2. **NAION reframed as a known positive** (EMA PRAC 6 Jun 2025; WHO 27 Jun 2025; our 3 US labels do not mention it). New D048 (no partitioning, proposed). Earlier: step 11 done, baseline gate passed ([baseline-gate.md](docs/11-handin/baseline-gate.md)), numbers frozen ([numbers.json](docs/11-handin/numbers.json)); steps 1–10 done (see v36) |
+| 🎯 **Next milestone** | Rehearsal: three checks (DailyMed "optic" search, active Class I count, a human stopwatch walk-through), then your one batch decision and one commit |
+| ⛔ **Blockers** | Your batch decision: accept the 12 proposed decisions (D006, D015, D025–D029, D037, D045–D048) · D041 v2 (widen the AI to more labels) yes/no · delete the duplicate Signal→Drug link type · pharmacist reviewer not named |
 | ⏱️ **Time** | **No fixed demo date** (D031 v4, 2026-11-04): build at our own pace. Old Nov 4 plan is historical → [prior game plan](docs/10-delivery/game-plan-v1-oct27-to-nov4.md). BACKLOG hours not yet re-estimated |
-| ⚠️ **Top risk** | False positives now at scale: 1,355 ranked items; for GLP-1s the top ones are synonyms (impaired vs delayed gastric emptying) and efficacy terms (weight loss poor, hunger). Second: Foundry speed per step |
+| ⚠️ **Top risk** | The AI and the screen barely meet: the AI read 0 semaglutide labels, so the hero signal is cleared by text + synonyms only; said plainly on slide 10 and R08 (fix = D041 v2, your call). Second: the queue is noisy (indication terms DQ06, e.g. liraglutide rank 1; stimulated reporting DQ04), shown as "review queue, not findings" |
 
 ## Phase map
 📊 **Diagram:** [00-compass-phase-map-v1.png](docs/diagrams/png/00-compass-phase-map-v1.png) · [PDF](docs/diagrams/pdf/00-compass-phase-map-v1.pdf) · _source: [00-compass-phase-map-v1.mmd](docs/diagrams/src/00-compass-phase-map-v1.mmd)_
@@ -26,9 +26,9 @@ and can click any flag to see the exact source behind it.
 |---|---|---|
 | 0 · Discover | Brief understood, questions asked, users understood | ✅ Done (2026-10-13) |
 | 1 · Define | Scope, formulary, signal rule, "label mentions" definition decided; sources profiled | 🟡 In progress |
-| 2 · Pilot build | 4+ sources raw→clean→ontology, 1 incremental pipeline, AI extraction, Workshop app with write-back | 🟡 Started 2026-11-04 — raw ✅ clean ✅ ontology + write-back ✅ AI extraction ✅ (pilot) statistics ✅ Workshop ✅ (first screen) 13-drug formulary ✅ incremental FAERS ✅ (correct; not yet faster); recalls + "since last review" on screen to go |
+| 2 · Pilot build | 4+ sources raw→clean→ontology, 1 incremental pipeline, AI extraction, Workshop app with write-back | 🟡 Started 2026-11-04 — raw ✅ clean ✅ ontology + write-back ✅ AI extraction ✅ (pilot) statistics ✅ Workshop ✅ (first screen) 13-drug formulary ✅ incremental FAERS ✅ (correct; not yet faster) recalls + what-changed + as-of on screen ✅ monitoring ✅ (first version) |
 | 3 · Harden + Monitor | Gold set labeled, hallucination rate measured, 1 pipeline optimized; **full monitoring live (pipeline + AI + 3–4 wk drift)** | ⚪ |
-| 4 · Demo + Note | Demo rehearsed, architecture note done | ⚪ |
+| 4 · Demo + Note | Demo rehearsed, architecture note done | 🟡 Note ✅ · reports R00–R09 ✅ · deck + script ✅ · demo guide ✅ · reviews ✅ · rehearsal ⚪ |
 | 5 · Scale | Production roadmap written (not built) | ⚪ |
 
 ## Prior schedule to the demo (D031 v3 — historical; superseded by D031 v4 "no fixed date", 2026-11-04) — detail in [game plan v1](docs/10-delivery/game-plan-v1-oct27-to-nov4.md)
@@ -46,9 +46,11 @@ and can click any flag to see the exact source behind it.
 **Cut list v3 stays the default scope under D031 v4; any cut can be restored later by a new decision.** Original wording: **all 6 cuts applied now** (Trials, OnSIDES, gold set 6, 1 rehearsal, no daily FAERS/SrLC backtest, 11 drugs) **+ decision review 5 h → 1 h + gold-set draft check folded into B8.** **Never cut:** identity · Part B accuracy · recalls · write-back · monitoring.
 
 ## Key decisions so far
-See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active decision IDs: 34 (D001–D031 + D036–D038; D032–D035 reserved in the non-adopted proposal) · Changes: see "Decision changes" at the top of DECISIONS (5 changed on 2026-10-20). Latest: D044 incremental FAERS (accepted) · D016 v3 wider buckets (accepted) · D043 synonym table (accepted) · D031 v5 13-drug scope (accepted via G1) · D042 step 8 signal + Workshop · D023 v2 ≥30-drug reports out of main count · D016 v2 wider buckets (all accepted 2026-11-04) · D041 AI extraction · D040 Ontology path · D038 openFDA via REST API source + Python external transform (kept) · D031 v4 no fixed demo date · D037 reference set v2 + dataset "label mentions" rule (proposed) · D036 conventions reference + dependency roadmap (documentation only) · D026 add Drugs@FDA/NDC/SrLC · D027 two-level identity · D028 "since last review" · D029 FAERS quarterly · D030 tracking · D031 freeze + cuts · D016 focus rule · D017 diagrams as PNG/PDF · D018 formulary = 13 RxCUIs · D019 DailyMed = label truth · D014 hybrid class (accepted) · D015 AI F1 ≥ 0.85 target (proposed) · D007 opioids · D008 monitoring must · D009 3–4 wk drift · D010 Developer Tier · D011 showcase purpose · D012 profile sources first.
+See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active decision IDs: 34 (D001–D031 + D036–D038; D032–D035 reserved in the non-adopted proposal) · Changes: see "Decision changes" at the top of DECISIONS (5 changed on 2026-10-20). Latest: D048 no partitioning (proposed) · D047 DailyMed XML reuse (proposed) · D046 monitoring (proposed) · D045 change feed (proposed) · D044 incremental FAERS (accepted) · D016 v3 wider buckets (accepted) · D043 synonym table (accepted) · D031 v5 13-drug scope (accepted via G1) · D042 step 8 signal + Workshop · D023 v2 ≥30-drug reports out of main count · D016 v2 wider buckets (all accepted 2026-11-04) · D041 AI extraction · D040 Ontology path · D038 openFDA via REST API source + Python external transform (kept) · D031 v4 no fixed demo date · D037 reference set v2 + dataset "label mentions" rule (proposed) · D036 conventions reference + dependency roadmap (documentation only) · D026 add Drugs@FDA/NDC/SrLC · D027 two-level identity · D028 "since last review" · D029 FAERS quarterly · D030 tracking · D031 freeze + cuts · D016 focus rule · D017 diagrams as PNG/PDF · D018 formulary = 13 RxCUIs · D019 DailyMed = label truth · D014 hybrid class (accepted) · D015 AI F1 ≥ 0.85 target (proposed) · D007 opioids · D008 monitoring must · D009 3–4 wk drift · D010 Developer Tier · D011 showcase purpose · D012 profile sources first.
 
 ## Active approach
+[A016 — Three-question screen](docs/05-approaches/A016-three-question-screen.md) and [A017 — Monitoring](docs/05-approaches/A017-monitoring-and-health-checks.md) (kept). Hand-in plan: [approved plan](docs/11-handin/README.md) (Phase A build → B baseline gate → C agents → D review).
+
 [A015 — Incremental FAERS](docs/05-approaches/A015-incremental-faers.md) (kept; identical to the full rebuild, slower at 2 quarters: re-measure at 4+).
 
 [A014 — Label ↔ FAERS synonym table](docs/05-approaches/A014-label-faers-synonym-table.md) (kept; pharmacist review pending).
@@ -68,6 +70,9 @@ See [docs/06-decisions/DECISIONS.md](docs/06-decisions/DECISIONS.md). Active dec
 ## Change log of the compass
 | Ver | Date | What moved | Decisions changed |
 |---|---|---|---|
+| v37 | 2026-11-05 | Phase D done: 5 reviews run and fixed across R00–R09, note, deck, demo guide; diagrams 30/32/36/37 v2; NAION framed as a known positive; true proposed list is 12 decisions. Next: rehearsal checks, your batch decision, one commit. | New D048 (proposed) |
+| v36 | 2026-11-05 | Baseline gate passed; O3 measured (helped); numbers.json frozen; Phase C agents launched (reports, note, deck, demo guide). Next: Phase D reviews. | New D047 (proposed) |
+| v35 | 2026-11-05 | Step 11 mostly built: 4-page screen, change feed, source as-of, monitoring + Data Health checks, DailyMed retry. Next: finish step 11, baseline gate, hand-in agents. | New D045, D046 (proposed) |
 | v34 | 2026-11-05 | D044 accepted by you. No change to step or plan. | D044 → Accepted |
 | v33 | 2026-11-05 | Step 10 done: incremental FAERS identical to the full rebuild; 88 s vs 32 s at 2 quarters (O2), so signals keep the full rebuild. Next: step 11. | New D044 (proposed) |
 | v32 | 2026-11-05 | Synonym table syn_v2 live: ranked 1,115 → 1,073, possibly-in-label 108. Next: step 10 incremental FAERS. | D043 data v2 (no rule change) |

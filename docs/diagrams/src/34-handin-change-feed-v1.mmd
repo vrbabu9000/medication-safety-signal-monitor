@@ -1,0 +1,55 @@
+---
+title: "Change feed (D045, A016): two ways to know something changed → MSSM Change Event → page 3 and the Morning brief"
+config:
+  flowchart:
+    wrappingWidth: 320
+---
+flowchart LR
+%% handin-theme
+  classDef source fill:#EAF3F5,stroke:#087F8C,color:#13324B
+  classDef pipeline fill:#FFFFFF,stroke:#13324B,color:#263746
+  classDef incr fill:#FFFFFF,stroke:#087F8C,stroke-width:2.5px,stroke-dasharray:7 4,color:#263746
+  classDef ontology fill:#E1F5EE,stroke:#0F6E56,color:#085041
+  classDef app fill:#13324B,stroke:#13324B,color:#FFFFFF
+  classDef risk fill:#FFF3D6,stroke:#B7791F,color:#7A4B00
+  classDef neutral fill:#F1EFE8,stroke:#5F5E5A,color:#444441
+
+  subgraph IN["Inputs (this build)"]
+    RC["<b>Recalls</b><br/>report date · termination date<br/>status · class"]:::pipeline
+    LB["<b>Labels</b><br/>version effective date"]:::pipeline
+    SG["<b>Signals</b><br/>label status · ranked<br/>bucket · caution"]:::pipeline
+  end
+
+  subgraph A["A · Dated by the source: real history on day 1"]
+    SD["<b>found_by = source_date</b><br/>900 recalls reported<br/>767 recalls terminated<br/>1,231 label versions effective"]:::pipeline
+  end
+
+  subgraph B["B · Found by comparing builds"]
+    SN["<b>ontology_change_snapshot</b><br/>watched fields of every signal,<br/>recall and label (previous build)"]:::incr
+    DF["<b>found_by = snapshot_diff</b><br/>new · gone · field changed<br/>old → new value, dated by the build"]:::incr
+    T["<b>Tests</b><br/>first build: nothing to compare<br/>no-change build: +0 events<br/>planted change (local): exactly 3"]:::risk
+  end
+
+  CE["<b>ontology_change_events</b><br/>incremental (dashed = keeps<br/>its previous output)<br/>event_id = hash of type, key,<br/>drug, change, detail, date<br/>2,898 at first build"]:::incr
+  SS["<b>ontology_source_status</b><br/>as-of per source<br/>FAERS: through 2026Q2<br/>openFDA: updated 2026-10-28<br/>DailyMed: newest 2026-10-30<br/>RxNorm: release 02-Nov-2026"]:::pipeline
+  OCE["<b>MSSM Change Event</b>"]:::ontology
+  OSS["<b>MSSM Source Status</b>"]:::ontology
+  P3["<b>3 · What changed</b><br/>filters: drug · event date<br/>(start date = since my last review)<br/>· entity type · change"]:::app
+  P0["<b>0 · Morning brief</b><br/>26 changes in the last 30 days<br/>(on 2026-11-05)<br/>+ as-of table per source"]:::app
+
+  RC --> SD
+  LB --> SD
+  SG --> DF
+  RC --> DF
+  LB --> DF
+  SN -- "previous" --> DF
+  DF -- "this build becomes<br/>next build's previous" --> SN
+  DF -.- T
+  SD --> CE
+  DF --> CE
+  CE --> OCE
+  SS --> OSS
+  OCE --> P3
+  OCE --> P0
+  OSS --> P0
+

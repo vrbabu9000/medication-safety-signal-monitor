@@ -1,0 +1,53 @@
+---
+title: "Demo map: the officer's morning on screen, then the stops under the hood (rubric row each stop supports)"
+config:
+  flowchart:
+    wrappingWidth: 330
+---
+flowchart TB
+%% handin-theme
+  classDef pipeline fill:#FFFFFF,stroke:#13324B,color:#263746
+  classDef ontology fill:#E1F5EE,stroke:#0F6E56,color:#085041
+  classDef ai fill:#EEEDFE,stroke:#534AB7,color:#3C3489
+  classDef app fill:#13324B,stroke:#13324B,color:#FFFFFF
+  classDef write fill:#E1F5EE,stroke:#0F6E56,stroke-width:3px,color:#085041
+  classDef neutral fill:#F1EFE8,stroke:#5F5E5A,color:#444441
+
+  subgraph OFF["Part 1 · As the safety officer (Workshop module MSSM Safety Officer) · question 1"]
+    direction LR
+    S1["<b>1 · Morning brief</b><br/>1,073 ranked · 126 active recalls<br/>26 changes in 30 days<br/>+ as-of date per source"]:::app
+    S2["<b>2 · Page 1 Not in label</b><br/>drug filter: semaglutide<br/>→ NAION is rank 1"]:::app
+    S3["<b>3 · Signal record</b><br/>why flagged (a = 394, PRR 112.5)<br/>label check: 0 mentions in<br/>3 reference labels<br/>trace to source"]:::app
+    S4["<b>4 · Triage this signal</b><br/>Action: subject + evaluation id<br/>locked; officer picks decision,<br/>writes a rationale"]:::write
+    S5["<b>5 · Decision saved</b><br/>MSSM Triage Decision object<br/>reviewer + time set by system<br/>survives a rebuild"]:::write
+    S1 --> S2 --> S3 --> S4 --> S5
+  end
+
+  subgraph OFF2["Part 1 (cont.) · questions 2 and 3"]
+    direction LR
+    S6["<b>6 · Page 2 Recalls</b><br/>active · class · linked drug<br/>detail panel + openFDA record"]:::app
+    S7["<b>7 · Page 3 What changed</b><br/>start date = since my last review<br/>label versions · recalls · signals"]:::app
+    S6 --> S7
+  end
+
+  subgraph HOOD1["Part 2 · Under the hood: how the data gets there"]
+    direction LR
+    H1["<b>8 · Data Lineage</b><br/>raw → clean → curated graph<br/>identity resolved once<br/><i>Architecture</i>"]:::pipeline
+    H2["<b>9 · Code Repositories</b><br/>pipelines_raw_ingest · pipelines_clean<br/>ontology_signals.py · incremental FAERS<br/><i>Architecture · Optimization</i>"]:::pipeline
+    H3["<b>10 · A dataset + SQL</b><br/>ontology_signal_signals<br/>counts and key checks<br/><i>Data judgment</i>"]:::pipeline
+    H4["<b>11 · Ontology Manager</b><br/>10 MSSM object types, link types,<br/>the create-only Action<br/><i>Architecture</i>"]:::ontology
+    H1 --> H2 --> H3 --> H4
+  end
+
+  subgraph HOOD2["Part 3 · Under the hood: objects, AI and monitoring"]
+    direction LR
+    H5["<b>12 · Object Explorer</b><br/>Signal → AE Stat → Drug<br/>the saved Triage Decision<br/><i>Application · trust</i>"]:::ontology
+    H6["<b>13 · AIP model + AI dataset</b><br/>Claude Sonnet 5.5<br/>ai_label_section_extractions:<br/>exact quotes, from_cache<br/><i>AI reliability · Optimization (O1)</i>"]:::ai
+    H7["<b>14 · Monitoring</b><br/>monitoring_checks (21 per build)<br/>monitoring_drift (replay)<br/>dataset Health tab (4 checks)<br/><i>AI reliability · monitoring</i>"]:::pipeline
+    H5 --> H6 --> H7
+  end
+
+  OFF --> OFF2 --> HOOD1 --> HOOD2
+
+  NOTE["Rubric rows in italics are a suggestion; the demo director (C6) sets the final order, timing and words."]:::neutral
+  HOOD2 ~~~ NOTE

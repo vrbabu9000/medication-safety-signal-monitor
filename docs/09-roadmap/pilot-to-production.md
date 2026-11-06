@@ -15,3 +15,5 @@ The pilot proves the pattern on one drug class. Production makes it safe, multi-
 | Notifications | In-app | Email digest | Integrations (EHR alerts, ticketing) |
 | Governance | Decision log | Change control | Audit trail, validation docs, security review |
 | Cost | Measured once | Budget per tenant | Cost monitoring + optimization loop |
+
+**With another month (research, 2026-11-05):** pharmacist review loop and outside sources (ClinicalTrials.gov, Orange Book, DrugBank, NIDA, OnSIDES, Claude healthcare connectors) → [another-month-sources-and-pharmacist-review.md](another-month-sources-and-pharmacist-review.md).

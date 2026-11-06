@@ -1,0 +1,68 @@
+---
+title: "Ripple map: change this here → this changes there (four changes we made or can make, traced to the screen)"
+config:
+  flowchart:
+    wrappingWidth: 300
+---
+flowchart TB
+%% handin-theme
+  classDef source fill:#EAF3F5,stroke:#087F8C,color:#13324B
+  classDef pipeline fill:#FFFFFF,stroke:#13324B,color:#263746
+  classDef incr fill:#FFFFFF,stroke:#087F8C,stroke-width:2.5px,stroke-dasharray:7 4,color:#263746
+  classDef ontology fill:#E1F5EE,stroke:#0F6E56,color:#085041
+  classDef app fill:#13324B,stroke:#13324B,color:#FFFFFF
+  classDef edit fill:#FFF3D6,stroke:#B7791F,stroke-width:2.5px,color:#7A4B00
+  classDef keep fill:#E1F5EE,stroke:#0F6E56,stroke-width:2.5px,color:#085041
+
+  subgraph R1["1 · A synonym row (D043, A014)"]
+    direction LR
+    A1["<b>Edit label_synonyms.py</b><br/>add or re-band a row<br/>new version syn_v3"]:::edit
+    A2["<b>ontology_signals</b><br/>label status flips<br/>label_check = text+ai_v1+syn_v3"]:::pipeline
+    A3["<b>evaluation_id</b> changes<br/>for every signal<br/>(label_check is in the hash)"]:::pipeline
+    A4["<b>Ranked queue moves</b><br/>syn_v2 did 1,115 → 1,073<br/>possibly in label 72 → 108"]:::pipeline
+    A5["<b>Change events</b><br/>snapshot_diff: label status,<br/>ranked"]:::incr
+    A6["<b>Screen</b><br/>page 1 queue · page 3 feed<br/>old decisions keep the<br/>old evaluation id"]:::app
+    A1 --> A2 --> A3 --> A4 --> A5 --> A6
+  end
+
+  subgraph R2["2 · A new FAERS quarter (D022, D044)"]
+    direction LR
+    B1["<b>New quarter files</b><br/>raw_faers_quarter_files"]:::edit
+    B2["<b>Incremental state</b><br/>adds that quarter only<br/>+ 1 log row (replaced, deleted)"]:::incr
+    B3["<b>Full rebuild</b> re-reads all<br/>quarters → clean_faers_*<br/>(signals read this one)"]:::pipeline
+    B4["<b>AE stats + signals</b><br/>a, b, c, d, PRR, window move<br/>→ new evaluation ids"]:::pipeline
+    B5["<b>Change events</b> + <b>monitoring</b><br/>signal new / gone / changed<br/>FAERS freshness, quarters, drift"]:::incr
+    B6["<b>Screen</b><br/>Morning brief counts<br/>page 1 · page 3 · as-of"]:::app
+    B1 --> B2
+    B1 --> B3 --> B4 --> B5 --> B6
+    B2 -. "proven equal,<br/>not yet used" .-> B3
+  end
+
+  subgraph R3["3 · A drug identity row (D020)"]
+    direction LR
+    C1["<b>Edit clean_drug_identity</b><br/>e.g. a new salt or name"]:::edit
+    C2["<b>Identity hash changes</b><br/>incremental FAERS replays<br/>all quarters (new generation)"]:::incr
+    C3["<b>Suspect rows change</b><br/>local test: 79,270 → 77,677<br/>and back to 79,270"]:::pipeline
+    C4["<b>Stats and signals</b><br/>re-derived (the full rebuild<br/>re-resolves names too)"]:::pipeline
+    C5["<b>Screen</b><br/>every page that<br/>filters by drug"]:::app
+    C1 --> C2 --> C3 --> C4 --> C5
+  end
+
+  subgraph R4["4 · A bucket keyword (D016 v3)"]
+    direction LR
+    D1["<b>Edit a bucket regex</b><br/>in ontology_signals.py"]:::edit
+    D2["<b>bucket + is_ranked</b> only<br/>signals 1,959 → 1,959<br/>(tagged, not removed)"]:::pipeline
+    D3["<b>evaluation_id unchanged</b><br/>bucket is not in the hash<br/>→ decisions stay linked"]:::keep
+    D4["<b>Ranked queue moves</b><br/>D016 v3: 1,210 → 1,115"]:::pipeline
+    D5["<b>Change events</b><br/>snapshot_diff: bucket, ranked"]:::incr
+    D6["<b>Screen</b><br/>page 1 queue"]:::app
+    D1 --> D2 --> D3 --> D4 --> D5 --> D6
+  end
+
+  R1 ~~~ R2 ~~~ R3 ~~~ R4
+
+  subgraph LEG["Legend"]
+    direction LR
+    K1["the edit"]:::edit ~~~ K2["dataset / transform"]:::pipeline ~~~ K3["incremental (dashed)"]:::incr ~~~ K4["stays the same"]:::keep ~~~ K5["what the officer sees"]:::app
+  end
+  R4 ~~~ LEG

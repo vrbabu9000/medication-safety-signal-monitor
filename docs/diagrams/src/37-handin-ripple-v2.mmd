@@ -1,0 +1,90 @@
+---
+title: "Ripple map v2: change this here → this changes there (9 changes, checked against the code) · existing triage decisions in every row"
+config:
+  flowchart:
+    wrappingWidth: 330
+    nodeSpacing: 10
+    rankSpacing: 34
+    padding: 8
+---
+flowchart LR
+%% handin-theme
+  classDef hdr fill:#F1EFE8,stroke:#5F5E5A,color:#444441
+  classDef edit fill:#FFF3D6,stroke:#B7791F,stroke-width:2px,color:#7A4B00
+  classDef source fill:#EAF3F5,stroke:#087F8C,color:#13324B
+  classDef pipeline fill:#FFFFFF,stroke:#13324B,color:#263746
+  classDef moves fill:#FFFFFF,stroke:#B7791F,stroke-width:2px,color:#7A4B00
+  classDef same fill:#E1F5EE,stroke:#0F6E56,stroke-width:2px,color:#085041
+  classDef app fill:#13324B,stroke:#13324B,color:#FFFFFF
+  classDef keep fill:#E1F5EE,stroke:#0F6E56,stroke-width:2px,color:#085041
+  classDef gap fill:#FFF3D6,stroke:#B7791F,stroke-width:2px,stroke-dasharray:6 3,color:#7A4B00
+
+  X1["<b>Change this here</b><br/>amber = we edit · teal = source sends"]:::hdr
+  X2["<b>What moves downstream</b><br/>then the common tail:<br/>Ontology → change feed → monitoring"]:::hdr
+  X3["<b>Evaluation id moves?</b><br/>amber = yes · green = no<br/>hashed: signal key · a · PRR · label_check<br/>window · labels searched · labels read by AI"]:::hdr
+  X4["<b>What the officer sees</b><br/>Workshop pages and cards"]:::app
+  X5["<b>Existing triage decisions</b><br/>unchanged · linked by subject_key, not the id<br/>no stale flag: known gap, PLANNED"]:::gap
+  X1 ~~~ X2 ~~~ X3 ~~~ X4 ~~~ X5
+
+  E1["<b>1 · Synonym row</b><br/>label_synonyms.py + bump SYN_VERSION"]:::edit
+  M1["label status flips → signals in / out<br/>build-dated snapshot_diff events"]:::pipeline
+  V1["<b>Yes, every signal</b>, but only if<br/>SYN_VERSION is bumped (always bump)"]:::moves
+  S1["Card 1 + page 1 queue shrink<br/>page 3: signal events (build day)"]:::app
+  T1["Stays linked · now on an older id<br/>no stale flag"]:::keep
+  E1 --> M1 --> V1 --> S1 --> T1
+
+  E2["<b>2 · Bucket keyword</b><br/>BUCKETS in ontology_signals.py"]:::edit
+  M2["bucket, is_ranked, rank → ranked queue<br/>build-dated snapshot_diff events"]:::pipeline
+  V2["<b>No</b>: bucket is not hashed"]:::same
+  S2["Page 1 queue · card 1"]:::app
+  T2["Stays linked · id still current"]:::keep
+  E2 --> M2 --> V2 --> S2 --> T2
+
+  E3["<b>3 · New FAERS quarter</b><br/>QUARTERS + WINDOW (hand-set)"]:::edit
+  M3["deletes, a/b/c/d, PRR, every AE Stat key<br/>signals new / gone · freshness, drift"]:::pipeline
+  V3["<b>Yes</b> (a, PRR, window)"]:::moves
+  S3["Page 1 counts + ranks · card 1<br/>FAERS as-of row"]:::app
+  T3["Stays linked · now on an older id<br/>no stale flag"]:::keep
+  E3 --> M3 --> V3 --> S3 --> T3
+
+  E4["<b>4 · Add a drug</b><br/>INGREDIENTS (4 raw files) + FORMULARY"]:::edit
+  M4["new RxCUI everywhere → its signals<br/>incremental FAERS replays all quarters"]:::pipeline
+  V4["<b>New ids</b> for its signals<br/>others only if their PRR moves"]:::moves
+  S4["New drug in every filter<br/>cards 1 and 2 grow"]:::app
+  T4["Stays linked · older id only<br/>where PRR moved · no stale flag"]:::keep
+  E4 --> M4 --> V4 --> S4 --> T4
+
+  E5["<b>5 · New label version</b><br/>DailyMed publishes it"]:::source
+  M5["1 new XML · label re-checked · pilot label:<br/>all its sections re-sent to the model<br/>one build-dated snapshot_diff event"]:::pipeline
+  V5["<b>Only if</b> labels searched or read by AI<br/>change: version and text not hashed"]:::moves
+  S5["Page 3: 'spl version n → n+1'<br/>(build day) · maybe a signal gone"]:::app
+  T5["Stays linked · looks current even<br/>if the label changed · no stale flag"]:::keep
+  E5 --> M5 --> V5 --> S5 --> T5
+
+  E6["<b>6 · Recall status</b><br/>openFDA: Ongoing → Terminated"]:::source
+  M6["is_active → active count<br/>one build-dated status event"]:::pipeline
+  V6["n/a: recalls carry no id"]:::same
+  S6["Card 2 drops · page 2 · page 3 event"]:::app
+  T6["Stays linked · untouched"]:::keep
+  E6 --> M6 --> V6 --> S6 --> T6
+
+  E7["<b>7 · Officer submits a decision</b><br/>Action (demo default: Cancel)"]:::edit
+  M7["new MSSM Triage Decision object<br/>(Ontology edit) · no build"]:::pipeline
+  V7["Stores the current id"]:::same
+  S7["Row in page 1 decisions table<br/>link in Object Explorer"]:::app
+  T7["Older ones stay linked, untouched<br/>(create-only, no delete)"]:::keep
+  E7 --> M7 --> V7 --> S7 --> T7
+
+  E8["<b>8 · Prompt or model version</b><br/>PROMPT_VERSION, MODEL_ID, PARSER_VERSION"]:::edit
+  M8["new cache key → 9 pilot sections re-sent<br/>cache hit rate 0 that build · re-score gold"]:::pipeline
+  V8["<b>No</b>: prompt not in the id<br/>(label_check stays ai_v1)"]:::same
+  S8["Usually nothing"]:::app
+  T8["Stays linked · cannot tell<br/>which prompt it saw"]:::keep
+  E8 --> M8 --> V8 --> S8 --> T8
+
+  E9["<b>9 · Workshop variable</b><br/>e.g. Changes last 30 days"]:::edit
+  M9["that card / table only · no build<br/>(save + publish the module)"]:::pipeline
+  V9["n/a"]:::same
+  S9["Card 3 number"]:::app
+  T9["Stays linked · untouched"]:::keep
+  E9 --> M9 --> V9 --> S9 --> T9

@@ -1,0 +1,57 @@
+---
+title: "From one FAERS report to a ranked signal (rule prr_evans_v2, label check ai_v1 → text → syn_v2) · example: semaglutide × NAION"
+config:
+  flowchart:
+    wrappingWidth: 330
+---
+flowchart LR
+%% handin-theme
+  classDef source fill:#EAF3F5,stroke:#087F8C,color:#13324B
+  classDef pipeline fill:#FFFFFF,stroke:#13324B,color:#263746
+  classDef ontology fill:#E1F5EE,stroke:#0F6E56,color:#085041
+  classDef ai fill:#EEEDFE,stroke:#534AB7,color:#3C3489
+  classDef app fill:#13324B,stroke:#13324B,color:#FFFFFF
+  classDef risk fill:#FFF3D6,stroke:#B7791F,color:#7A4B00
+  classDef neutral fill:#F1EFE8,stroke:#5F5E5A,color:#444441
+
+  subgraph A["A · Clean the reports (Data/clean)"]
+    direction TB
+    A0["<b>One FAERS report</b><br/>caseid + caseversion<br/>drugs + reactions"]:::source
+    A1["<b>Case version · D022</b><br/>keep max caseversion,<br/>then apply deletes<br/>Q2 replaced 26,681 · deleted 655<br/>→ 792,346 current cases"]:::pipeline
+    A2["<b>Suspect roles · D021</b><br/>PS + SS + I, once per case<br/>concomitant never counts<br/>(PS only would miss 56%<br/>of oxycodone cases)"]:::pipeline
+    A3["<b>Identity · D020</b><br/>prod_ai → exact RxNorm name<br/>→ salt strip; never substring<br/>39 names → 13 ingredients"]:::pipeline
+    A4["<b>Duplicates + mass reports · D023 v2</b><br/>person-key fold: oxycodone<br/>4,464 → 3,408 cases;<br/>then reports with ≥ 30 drugs<br/>leave the main count (465 for<br/>oxycodone; kept as a_mass_reports)"]:::pipeline
+    A0 --> A1 --> A2 --> A3 --> A4
+  end
+
+  subgraph B["B · Count and test (ontology_ae_stats)"]
+    direction TB
+    B1["<b>2 × 2 table</b> · semaglutide × NAION<br/>a = 394 (drug + reaction)<br/>b = 20,498 (drug, other)<br/>c = 128 (other drugs + reaction)<br/>d = 763,308 (other, other)"]:::pipeline
+    B2["<b>PRR + Evans · D006 (proposed)</b><br/>PRR = 112.5 (95% CI 92.19–137.24)<br/>χ² Yates = 10,653.8<br/>Evans: a ≥ 3, PRR ≥ 2, χ² ≥ 4 → yes"]:::pipeline
+    B3["14,921 drug × reaction stats<br/>2,533 meet Evans"]:::neutral
+    B1 --> B2 --> B3
+  end
+
+  subgraph C["C · Is it in the label? (3 checks in code order; same result in any order)"]
+    direction TB
+    C1["<b>2 · Text · D037 (proposed)</b><br/>exact term or US spelling<br/>in 6 safety sections<br/>→ in label (1,427 stats)"]:::pipeline
+    C2["<b>1 · AI terms · D041</b><br/>atomic term, quote found by code<br/>2 pilot oxycodone labels only<br/>→ in label (8 stats)"]:::ai
+    C3["<b>3 · Synonyms · D043</b><br/>high → in label (163 stats)<br/>medium → possibly (211 stats)<br/>e.g. Impaired gastric emptying<br/>= 'delays gastric emptying'"]:::pipeline
+    C4["<b>NAION</b>: 3 reference labels searched<br/>(Ozempic v20 · Wegovy v19 · oral v14)<br/>0 safety sections mention it;<br/>AI read none of them → not in label"]:::neutral
+    C2 --> C1 --> C3 --> C4
+  end
+
+  subgraph D["D · Sort the queue (ontology_signal_signals)"]
+    direction TB
+    D0["<b>Signal</b> = Evans and not in label<br/>(or only possibly in label)<br/>1,952 signals"]:::ontology
+    D1["<b>Ranked</b> · clinical bucket,<br/>by χ² within drug<br/>1,073 ranked<br/>NAION = rank 1 for semaglutide"]:::app
+    D2["<b>Possibly in label</b><br/>kept, not ranked · 108<br/>e.g. GI hypomotility (a = 450)"]:::risk
+    D3["<b>Tagged, not ranked · D016 v3</b><br/>efficacy, product use, abuse,<br/>social, pregnancy, admin …<br/>e.g. Weight loss poor (a = 702)"]:::neutral
+    D4["<b>Caution, not ranked</b><br/>≥ 50% from mass reports · 231"]:::neutral
+    D0 --> D1
+    D0 --> D2
+    D0 --> D3
+    D0 --> D4
+  end
+
+  A --> B --> C --> D

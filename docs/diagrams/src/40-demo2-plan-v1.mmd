@@ -1,0 +1,14 @@
+---
+title: "Demo 2 plan v1: six milestone gates (no fixed date)"
+---
+flowchart LR
+  D1["Demo 1 feedback<br/>5 points"] --> M1
+  D1 --> M3
+  M1["M1 Trust<br/>outlier traced<br/>robust ranking<br/>NAION stays"] --> M2["M2 Cost<br/>run log · ripple cost<br/>incremental crossover<br/>monthly estimate"]
+  M3["M3 Workflow<br/>officer research<br/>journey map<br/>clicks + minutes saved"] --> M5
+  M2 --> M4["M4 Ontology<br/>decision walk<br/>1 refactor measured"]
+  M4 --> M5["M5 UI<br/>React + OSDK in Foundry<br/>counters · colours · ?<br/>outlier · lineage · cost panels"]
+  M5 --> M6["M6 Demo 2<br/>new story · hard questions<br/>2 rehearsals"]
+  G{{"T5.0 feasibility<br/>OSDK on Developer Tier?"}} -.->|no| W["Workshop v2<br/>fallback"]
+  M5 -.- G
+  W -.-> M6

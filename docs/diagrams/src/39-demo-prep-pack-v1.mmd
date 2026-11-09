@@ -1,0 +1,15 @@
+---
+title: "Demo-prep pack v1 (local branch demo-prep): one content file → screens, cue card, tutorial, skill"
+---
+flowchart LR
+  F["Foundry (read-only)<br/>Claude in Chrome<br/>32 captures, 8 Nov"] --> R["shots/raw/*.jpg"]
+  O["Hand-in screens<br/>docs/11-handin/screens<br/>(5 reused)"] --> C
+  R --> C["tools/demo_prep/content.py<br/>SHOTS + red boxes<br/>23 STOPS · 12 CHAPTERS"]
+  N["numbers.json<br/>demo guide · DECISIONS<br/>DQ register · opt log"] --> C
+  C --> B["build_all.py"]
+  B --> A["shots/annotated/*.png<br/>36 screens"]
+  B --> J["stops.json · chapters.json<br/>shots.json"]
+  B --> Q["cuecard.html<br/>2nd screen, ← →, timer"]
+  B --> T["tutorial.html + .pdf<br/>12 chapters"]
+  J --> S["Skill: foundry-demo<br/>'prep me for H6'<br/>'teach me step 4'"]
+  M["narrative.md<br/>+ 5 explainers"] --> S

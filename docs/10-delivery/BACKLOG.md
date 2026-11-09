@@ -1,19 +1,33 @@
 # Backlog — every task to the demo
 
-_Owner of this file: ⏱️ Delivery Lead ([.claude/agents/delivery-lead.md](../../.claude/agents/delivery-lead.md)). Updated: 2026-11-05 · Compass v37_
+_Owner of this file: ⏱️ Delivery Lead ([.claude/agents/delivery-lead.md](../../.claude/agents/delivery-lead.md)). Updated: 2026-11-09 · Compass v42_
 
 **Demo: no fixed date** (D031 v4, 2026-11-04: build at our own pace). The old Wed Nov 4 plan is historical → [game plan v1](game-plan-v1-oct27-to-nov4.md).
 Status: ⚪ Not started · 🟡 In progress · ✅ Done · ✂️ Cut · ⏸️ Waiting on a decision
 
-## Capacity (your hours) — v4, 2026-11-05
+## Capacity (your hours) — v5, 2026-11-09
 | | Hours |
 |---|---|
 | Your time | ~25 h / week. No demo date, so "hours left to the demo" cannot be computed |
-| Your work left (open items below) | **~4.3 h** (~3.8 h if D041 v2 is declined) |
-| Claude work left | **~7 h** (~2 h if D041 v2 is declined) |
-| **Load** | **Not computable** (no date). Against one week of your time: 4.3 / 25 h ≈ **17% · Green** _(assumption: the demo is at least a week away)_ |
+| Your work left (open items below) | **~18 h** for Demo 2 (v5, 2026-11-09) + H4 commit |
+| Claude work left | **~80 h** for Demo 2 (rough; Foundry build time is the limit) |
+| **Load** | **Not computable** (no date). Your 18 h ≈ 0.7 of a 25 h week · **Green** if Demo 2 is ≥ 2 weeks away _(assumption)_ |
 
 Historical: v3 (2026-10-27) was ~41 h of your work against ~54 h = 76% Green. v2 (2026-10-20) was 110% Amber.
+
+## Open — Demo 2 (added 2026-11-09 from the [Demo 1 feedback](../03-meetings/2026-11-09-demo1-boss-feedback.md))
+Full plan with gates: [demo2-plan-v1.md](demo2-plan-v1.md). No fixed date; done when the gate passes. Order: M1 → M2 → M4 → M5 → M6, with M3 in parallel to M1/M2.
+
+| ID | Task | Owner | You h | Claude h | Gate | Status |
+|---|---|---|---|---|---|---|
+| T3.1–T3.L | **M1 Trust:** trace the top-PRR outlier, PV note on outlier types, robust ranking (lower CI / shrinkage / small-count flag), A021 + new decision, push to Foundry, teach-back | Claude (you approve) | 2.25 | 10.25 | M1 | ⚪ |
+| T1.1–T1.L | **M2 Cost:** what Developer Tier shows, run-log dataset, ripple-cost table, incremental crossover at 4–8 quarters, cost model pilot vs scale, teach-back | Claude | 2.25 | 14.75 | M2 | ⚪ |
+| T4.1–T4.L | **M3 Workflow:** officer workflow research (ISMP, ASHP, recalls), journey map, feature list scored by clicks and minutes saved, persona test, teach-back | Claude (researcher, design lead) | 2 | 8.25 | M3 | ⚪ |
+| T2.1–T2.L | **M4 Ontology:** decision walk-through + diagram v2, cost per object type, 1–2 refactors measured, teach-back | Claude (architect) | 1.75 | 9.25 | M4 | ⚪ |
+| T5.0 | **M5 UI feasibility spike:** OSDK app on Developer Tier (go = React, no-go = Workshop v2) | Claude + you | 1 | 2 | M5 | ⚪ |
+| T5.1–T5.L | **M5 UI build:** design system, 4 worklist pages, outlier / lineage / cost panels, recall review Action, click + stopwatch test, teach-back | Claude | 4.5 | 26.25 | M5 | ⚪ |
+| T6.1–T6.5 | **M6 Demo 2:** new narrative, cue card + skill + deck, red team + hard-question drill, 2 rehearsals, commit | Claude + you | 4.25 | 9 | M6 | ⚪ |
+| | **Total Demo 2** | | **~18** | **~80** | | |
 
 ## Open — to finish the hand-in (added 2026-11-05)
 Estimates are rough. Order = do-in order.
@@ -21,7 +35,7 @@ Estimates are rough. Order = do-in order.
 | ID | Task | Owner | You h | Claude h | Due | Status |
 |---|---|---|---|---|---|---|
 | H1 | **Batch decision:** accept or reject the 12 proposed decisions (D006, D015, D025–D029, D037, D045–D048) · D041 v2 (widen the AI) yes / no · delete the duplicate Signal→Drug link type in Ontology Manager (~15 min) · name a pharmacist reviewer or keep it as a documented gap. Claude then logs each outcome in DECISIONS and bumps the Compass | You (Claude logs) | 1.5 | 0.5 | — | ✅ Done 2026-11-06 (Compass v38) |
-| H2 | **Rehearsal with the 3 checks:** (8) DailyMed Ozempic v20, Cmd+F `optic`; (9) count of active Class I recalls on page 2; (10) a person walks the morning flow with a stopwatch. One timed run of the 20-minute script; fill checklist #8–10 in the [demo guide](../11-handin/demo/demo-navigation-guide.md); capture the missing fallback screenshots (A4 DailyMed search, A6 openFDA record, A6 Class I sort) | You + Claude | 2 | 1.5 | — | ⚪ |
+| H2 | **Rehearsal with the 3 checks:** (8) DailyMed Ozempic v20, Cmd+F `optic`; (9) count of active Class I recalls on page 2; (10) a person walks the morning flow with a stopwatch. One timed run of the 20-minute script; fill checklist #8–10 in the [demo guide](../11-handin/demo/demo-navigation-guide.md); capture the missing fallback screenshots (A4 DailyMed search, A6 openFDA record, A6 Class I sort) | You + Claude | 2 | 1.5 | — | ✂️ Superseded 2026-11-09: Demo 1 held without it; rehearsals now T6.4 |
 | H3 | **If D041 v2 is accepted:** run the cached AI extractor on the 3 semaglutide reference labels (Ozempic v20, Wegovy v19, oral Ozempic v14); add a Labeled Reactions panel (reaction · quote · section · version) beside the labels-searched panel; rebuild; refresh numbers.json and the deck / R04 / R08 / note / script wording | Claude (you approve model calls) | 0.5 | 5 | — | ✅ Done 2026-11-06 (Compass v38) |
 | H4 | **One commit** of everything (message and commands from Claude's last reply) | You | 0.25 | 0 | after H2 (or now) | ⚪ |
 | | **Total open** | | **4.25** | **7** | | |

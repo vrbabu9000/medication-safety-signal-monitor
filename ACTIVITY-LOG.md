@@ -3,6 +3,24 @@
 ## ⏩ Pick up here (always current)
 | | |
 |---|---|
+| **Last session** | 2026-11-09 — Demo 1 debrief logged; Demo 2 plan v1 made (Compass v42) |
+| **Where we are** | Demo 1 done. Boss feedback in the [meeting note](docs/03-meetings/2026-11-09-demo1-boss-feedback.md). Demo 2 = 6 gates in [demo2-plan-v1](docs/10-delivery/demo2-plan-v1.md) ([diagram](docs/diagrams/png/40-demo2-plan-v1.png)) |
+| **Next 3 actions** | 1. (you) Confirm the Demo 1 date and add any missing boss points to the meeting note · 2. (you) Commit on `demo2` (branch created 2026-11-09, D051) · 3. (Claude) Start M1: trace the top-PRR outlier in Foundry (read-only SQL) and, in parallel, M3 officer-workflow research |
+| **Waiting on** | D050 OK after the T5.0 OSDK spike · pharmacist reviewer |
+| **Say this to Claude to restart** | _"Read ACTIVITY-LOG and the Demo 2 plan; start M1: find and trace the top-PRR outlier."_ |
+
+---
+
+### Previous pick-up box (2026-11-08)
+| | |
+|---|---|
+| **Last session** | 2026-11-08 — grand tutorial book + live SQL cookbook on local branch `demo-prep` (Compass v41) |
+| **Where we are** | Hand-in set unchanged on main. On `demo-prep`: [cue card](docs/12-demo-prep/cuecard.html) (open on 2nd screen, ← →), [narrative](docs/12-demo-prep/narrative.md), [tutorial](docs/12-demo-prep/tutorial.pdf), skill `foundry-demo` |
+| **Next 3 actions** | 0. (you) Read the [book](docs/12-demo-prep/book/book.pdf) track by track; decide the 5 open items in [00-review.md](docs/12-demo-prep/book/00-review.md) · 1. (you) Rehearse once with the cue card against live Foundry (the 3 checks: DailyMed "optic", Class I count, stopwatch) · 2. (you) Fix the Foundry project description ("opioids" → 13 drugs) · 3. (you) Commit on `demo-prep` (local only); main still needs its own commit + push |
+| **Waiting on** | A rehearsal against live Foundry · pharmacist reviewer |
+| **Say this to Claude to restart** | _"Use the foundry-demo skill: rehearse the demo with me, one stop at a time."_ |
+
+---|---|
 | **Last session** | 2026-11-06 — README rewritten for outside reviewers, repo-wide link/number check, reviewer sharing guide (Compass v39) |
 | **Where we are** | Pilot built and refreshed: the AI now reads the demo drug's labels and its quotes are on page 1 (Workshop v0.10.0). Hand-in set: [R00 Start here](docs/11-handin/reports/pdf/R00-start-here.pdf) → [architecture note](docs/11-handin/architecture-note/architecture-note.pdf) → [deck](docs/11-handin/deck/MSSM-demo-deck.pdf) + [script](docs/11-handin/deck/speaking_script.md) → [demo guide](docs/11-handin/demo/demo-navigation-guide.md) → reports R01–R09 |
 | **Next 3 actions** | 1. (you) Invite Etter in Foundry ([guide](docs/10-delivery/sharing-with-reviewers.md)), then send Etter the repo + resume email, ask for Mon Nov 9, 12 PM · 2. (you) One commit + push · 3. (you + Claude) Rehearsal with the 3 checks |
@@ -12,6 +30,25 @@
 ---
 
 ## Log (newest first)
+
+### 2026-11-09 — Demo 1 debrief + Demo 2 plan v1 (Compass v42)
+- **Logged:** boss feedback ([meeting note](docs/03-meetings/2026-11-09-demo1-boss-feedback.md)): incremental setup + compute cost per change; ontology in depth + cost refactor; PRR outlier (sorted by PRR) and how we know metrics are right; data-engineering cost; officer workflow UI (colours, "X of Y reviewed", critical flags, "?" help, outlier/cost/lineage reachable, React linked to Palantir).
+- **Decided (your answers):** UI = React + OSDK (new **D050**, proposed until the T5.0 spike); no fixed Demo 2 date; Claude finds the outlier row.
+- **Made:** [demo2-plan-v1.md](docs/10-delivery/demo2-plan-v1.md) (6 gates, ~18 h you, ~80 h Claude) · diagram [40 v1](docs/diagrams/png/40-demo2-plan-v1.png) · BACKLOG v5 (Demo 2 rows; H2 superseded) · 2 learnings in DECISIONS · Compass v42 (history v41 saved).
+- **Branch (D051):** Demo 2 work on `demo2` from main; the project record (Compass, decisions, logs, approaches, diagrams) copied over from `demo-prep`; the demo-prep pack itself stays on local `demo-prep`. Links into `docs/12-demo-prep/` only work on that branch.
+- **Git gotcha:** after `git switch` was refused (dirty files), `git checkout demo-prep -- <files>` silently overwrote the uncommitted D051 edits; Claude re-applied them on `demo2`.
+- **Not changed:** Foundry, numbers.json, hand-in set.
+
+### 2026-11-08 (2) — Grand tutorial book + live SQL (Compass v41)
+- **Book** ([book.html](docs/12-demo-prep/book/book.html) · [book.pdf](docs/12-demo-prep/book/book.pdf), 263 pages): 01 ground zero · 02 data sources attempt by attempt · 03 every transform · 04 ontology in depth · 05 how our thinking changed · 06 AIP/LLM before vs after · 07 SQL cookbook. Written by 7 parallel agents; 1 reviewer fixed 25 issues and left 5 open ([00-review.md](docs/12-demo-prep/book/00-review.md)). Builder [build_book.py](tools/demo_prep/build_book.py) (markdown 3.7 added to .venv).
+- **SQL live (read-only, Claude in Chrome):** 20 queries, screenshots in `docs/12-demo-prep/shots/sql/`. All match numbers.json except: Class I active = 6 (new), 20 vs 22 change events (time zone?), `method` reserved alias.
+- **Cue card:** timer and Start button removed; shows stop N / 23. A6 now says 6 Class I.
+
+### 2026-11-08 — Demo-prep pack on local branch `demo-prep` (Compass v40)
+- **Made** ([A020](docs/05-approaches/A020-demo-prep-skill-and-cue-card.md), D049): skill [foundry-demo](.claude/skills/foundry-demo/SKILL.md); single content file [content.py](tools/demo_prep/content.py) + builder [build_all.py](tools/demo_prep/build_all.py); [cuecard.html](docs/12-demo-prep/cuecard.html) (23 stops, timer); [tutorial.html](docs/12-demo-prep/tutorial.html) / [.pdf](docs/12-demo-prep/tutorial.pdf) (12 chapters); [narrative.md](docs/12-demo-prep/narrative.md) + 5 [explainers](docs/12-demo-prep/explainers/); diagram [39 v1](docs/diagrams/png/39-demo-prep-pack-v1.png).
+- **Foundry (read-only, Claude in Chrome):** 32 captures; triage form opened and cancelled; nothing built, saved or edited.
+- **Seen:** card 3 = 22 (was 26 on 5 Nov; rolling 30 days); project description still says "Pilot focus: opioids"; 2 object types at project root. 3 learnings added.
+- **Not changed:** numbers.json, hand-in PDFs, deck.
 
 ### 2026-11-06 (13) — README for outside reviewers + repo check (Compass v39)
 - **README rewritten** ([README.md](README.md)): "Reviewing this project? Start here" path (R00 → note → R02 → R06 → R07 → R09), headline numbers from [numbers.json](docs/11-handin/numbers.json), a data engineering table, "Run it yourself", known gaps (pharmacist, self-scored AI, syn_v3 ahead of Foundry). Old status was Compass v22.
